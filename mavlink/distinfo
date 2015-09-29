@@ -1,3 +1,3 @@
-SHA1 (mavlink-20150326.tar.gz) = 173e60d59e5d3c1b788d0f879e56fa97472a244e
-RMD160 (mavlink-20150326.tar.gz) = 60008b61234467791e0ad0c153a745777894ba1e
-SHA1 (patch-cmake) = 99e7836e33990af23eda3957d45a398f67b67a67
+SHA1 (mavlink-20150929.tar.gz) = b2f15e15c6b9f597974beeddc5a13bef019102b1
+RMD160 (mavlink-20150929.tar.gz) = 9dc09cc87ecf37ec6f8ce108358e6891008c014f
+SHA1 (patch-dont-install-pymavlink) = 6c13ab0095bbd18d76861b5cf3a2c7b5d497b742

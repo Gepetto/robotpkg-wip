@@ -3,10 +3,10 @@
 #
 
 DISTNAME= 		mavlink-${VERSION}
-VERSION=		20150326
+VERSION=		20150929
 CATEGORIES=		middleware
 
-COMMIT= 			7a7ce3362706dd0164377d6182ce73f22f4d41ef
+COMMIT= 			9fff38f4561b7a6ff32ee71d41e67cf956e541bd
 FETCH_METHOD= 		git
 MASTER_SITES=		https://github.com/mavlink/mavlink.git@${COMMIT}
 MASTER_REPOSITORY=	https://github.com/mavlink/mavlink.git

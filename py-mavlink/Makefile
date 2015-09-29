@@ -4,10 +4,10 @@
 
 DISTNAME= 		pymavlink-${VERSION}
 PKGNAME=		${PKGTAG.python}-mavlink-${VERSION}
-VERSION=		1.1.50
+VERSION=		1.1.62
 CATEGORIES=		middleware
 
-COMMIT= 			54e826fb8037dfa8dcdd2ce0de6d9bf5dd783048
+COMMIT= 			9fff38f4561b7a6ff32ee71d41e67cf956e541bd
 FETCH_METHOD= 		git
 MASTER_SITES=		https://github.com/mavlink/mavlink.git@${COMMIT}
 MASTER_REPOSITORY=	https://github.com/mavlink/mavlink.git

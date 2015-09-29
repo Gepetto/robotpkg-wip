@@ -1,10 +1,11 @@
-@comment Sun Mar 29 18:49:38 CEST 2015
+@comment Tue Sep 29 14:44:42 CEST 2015
 bin/MPU6KSearch.py
 bin/magfit.py
 bin/magfit_delta.py
 bin/magfit_gps.py
 bin/magfit_motors.py
 bin/mavextract.py
+bin/mavfft.py
 bin/mavflightmodes.py
 bin/mavflighttime.py
 bin/mavgen.py
@@ -23,7 +24,7 @@ bin/mavsummarize.py
 bin/mavtogpx.py
 bin/mavtomfile.py
 ${PYTHON_SITELIB}/mavnative.so
-${PYTHON_SITELIB}/pymavlink-1.1.51-py${PYTHON_VERSION}.egg-info
+${PYTHON_SITELIB}/pymavlink-${PKGVERSION}-py${PYTHON_VERSION}.egg-info
 ${PYTHON_SITELIB}/pymavlink/DFReader.py
 ${PYTHON_SITELIB}/pymavlink/__init__.py
 ${PYTHON_SITELIB}/pymavlink/dialects/__init__.py
@@ -125,3 +126,4 @@ ${PYTHON_SITELIB}/pymavlink/mavutil.py
 ${PYTHON_SITELIB}/pymavlink/mavwp.py
 ${PYTHON_SITELIB}/pymavlink/quaternion.py
 ${PYTHON_SITELIB}/pymavlink/rotmat.py
+@pkgdir share/mavlink

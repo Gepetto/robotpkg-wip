@@ -1,5 +1,6 @@
-@comment Mon Oct 13 11:25:26 CEST 2014
+@comment Fri Oct 9 09:13:37 CEST 2015
 bin/CertiCheckHostAndIP
+bin/CertiCheckXML
 bin/CertiProcessus_A
 bin/CertiProcessus_B
 bin/CertiTestFederate-HLA13
@@ -87,6 +88,9 @@ include/libhla/HLAvariableArray.hh
 include/libhla/HLAvariantRecord.hh
 include/libhla/MessageBuffer.hh
 include/libhla/MsgBuffer.h
+include/libhla/MurmurHash2.h
+include/libhla/MurmurHash3.h
+include/libhla/PMurHash.h
 include/libhla/PosixClock.hh
 include/libhla/SHM.hh
 include/libhla/SHMPosix.hh

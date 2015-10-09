@@ -2,8 +2,7 @@
 # Created:			Arnaud Degroote on Tue, 12 Mar 2013
 #
 
-PKG_VERSION=	3.4.3
-PKGREVISION=    1
+PKG_VERSION=	3.5.1
 DISTNAME= 		CERTI-${PKG_VERSION}-Source
 PKGNAME= 		certi-${PKG_VERSION}
 CATEGORIES=		architecture

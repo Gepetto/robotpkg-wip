@@ -17,7 +17,6 @@ SUBDIR+=	dptu-genom3
 SUBDIR+=	dynamic-graph-bridge
 SUBDIR+=	dynamic-graph-bridge-msgs
 SUBDIR+=	gdalwrap
-SUBDIR+=	genom3-openprs
 SUBDIR+=	gest-genom
 SUBDIR+=	gladys
 SUBDIR+=	hatpconsole

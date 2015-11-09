@@ -12,7 +12,6 @@ SUBDIR+= 	certi
 SUBDIR+=	chilitags
 SUBDIR+= 	clara
 SUBDIR+=	daqflex-libs
-SUBDIR+= 	demo-genom3
 SUBDIR+=	dptu-genom3
 SUBDIR+=	dynamic-graph-bridge
 SUBDIR+=	dynamic-graph-bridge-msgs

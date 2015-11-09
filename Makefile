@@ -66,7 +66,6 @@ SUBDIR+=	msgconnector
 SUBDIR+=	mumps
 SUBDIR+= 	octovis
 SUBDIR+= 	ompl
-SUBDIR+=	optitrack-genom3
 SUBDIR+=	oro-view
 SUBDIR+=	orocos-bfl
 SUBDIR+=	orocos-dot_service

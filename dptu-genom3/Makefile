@@ -14,6 +14,6 @@ LICENSE=		isc
 include ../../architecture/genom3/module.mk
 
 include ../../pkgtools/pkg-config/depend.mk
-include ../../wip/openrobots-idl/depend.mk
+include ../../interfaces/openrobots-idl/depend.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

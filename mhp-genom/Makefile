@@ -2,7 +2,7 @@
 # Created:			Severin Lemaignan on Tue, 31 Aug 2010
 #
 
-DISTNAME=		mhp-genom-3.14
+DISTNAME=		mhp-genom-3.15
 CATEGORIES=		path
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=mhp-genom/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_OPENROBOTS_TRAC}mhp-genom
@@ -119,7 +119,7 @@ define PKG_OPTION_SET.mightability
   GENOM_ARGS+= -DUSE_MIGHTABILITY_MAPS
 endef
 
-PKG_SUGGESTED_OPTIONS+=	mightability
+#PKG_SUGGESTED_OPTIONS+=	mightability
 
 
 

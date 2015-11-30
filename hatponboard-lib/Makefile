@@ -38,6 +38,10 @@ endef
 # Find Antlr binary name and pass it to CMake 
 CMAKE_ARGS+= -DAntlr_INCLUDE=${ANTLR_INCLUDE} -DAntlr_BIN=${ANTLR_BIN} -DAntlr_LIB=${ANTLR_LIB}
 
+# Pass the option to find msgconnector
+CMAKE_ARGS+= -DCMAKE_MODULE_PATH=${PREFIX.msgconnector}/share/cmake/Modules
+
+include ../../wip/msgconnector/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../wip/antlr2/depend.mk

@@ -3,7 +3,7 @@
 #
 
 DISTNAME=		hatponboard-lib-${VERSION}
-VERSION=		3.3.0
+VERSION=		3.4.0
 PKGREVISION=		
 CATEGORIES=		planning
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=hatponboard-lib/}

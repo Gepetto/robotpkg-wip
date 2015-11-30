@@ -20,6 +20,7 @@ include/hatponboard-lib/PlanStockManager.hh
 include/hatponboard-lib/PlanTree.hh
 include/hatponboard-lib/PlanTreeTaskList.hh
 include/hatponboard-lib/PlanTreeTaskListNode.hh
+include/hatponboard-lib/RequestLexer.hh
 include/hatponboard-lib/SocialRuleBase.hh
 include/hatponboard-lib/SocialRuleData.hh
 include/hatponboard-lib/Substitution.hh
@@ -34,6 +35,7 @@ include/hatponboard-lib/WastedTimeData.hh
 include/hatponboard-lib/WorldBase.hh
 include/hatponboard-lib/WorldBaseAgent.hh
 include/hatponboard-lib/WorldBaseReport.hh
+include/hatponboard-lib/WorldBaseUpdater.hh
 include/hatponboard-lib/hatpPlanningSession.hh
 include/hatponboard-lib/msgTypesTrait.hh
 include/hatponboard-lib/tools.hh

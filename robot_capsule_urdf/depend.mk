@@ -19,7 +19,7 @@ SYSTEM_SEARCH.robot-capsule-robot-urdf=\
 DEPEND_USE+=		robot-capsule-robot-urdf
 
 DEPEND_ABI.robot-capsule-robot-urdf?=	robot-capsule-robot-urdf>=1.0.0
-DEPEND_DIR.robot-capsule-robot-urdf?=	../../robots/robot-capsule-robot-urdf
+DEPEND_DIR.robot-capsule-robot-urdf?=	../robot-capsule-robot-urdf
 
 endif # ROBOT_CAPSULE_URDF_DEPEND_MK -------------------------------------------------
 

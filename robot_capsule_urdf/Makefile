@@ -15,6 +15,7 @@ MAINTAINER=		hpp@laas.fr
 
 DYNAMIC_PLIST_DIRS+=	share/doc/robot_capsule_urdf
 
+include ../../graphics/urdfdom/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

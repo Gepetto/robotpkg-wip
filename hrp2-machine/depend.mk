@@ -20,7 +20,7 @@ DEPEND_USE+=		hrp2-machine
 ROS_DEPEND_USER+=	hrp2-machine
 
 DEPEND_ABI.hrp2-machine?=	hrp2-machine>=1.0.0
-DEPEND_DIR.hrp2-machine?=	../../robots/hrp2-machine
+DEPEND_DIR.hrp2-machine?=	../../wip/hrp2-machine
 
 endif # HRP2_MACHINE_DEPEND_MK -------------------------------------------------
 

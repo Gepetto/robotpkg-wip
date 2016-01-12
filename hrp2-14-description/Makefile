@@ -1,10 +1,12 @@
 # robotpkg Makefile for:	robots/hrp2-14-description
 # Created:			Olivier Stasse on Wed, 17 Jun 2015
 #
-VERSION=		1.0.0
+VERSION=		1.0.1
 ROS_PKG=		hrp2_14_description
-ROS_VERSION=		${VERSION}
+ROS_VERSION=		${ROS_PKG}-${VERSION}
 DISTNAME=		hrp2_14_description
+PKGNAME=		hrp2_14_description
+WRKSRC=			${WRKDIR}/${ROS_VERSION}
 CATEGORIES=		robots
 MASTER_SITES=		${MASTER_SITE_JRL}ros/${ROS_PKG}/
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_JRL}robots/ros-hrp2/hrp2-14-description

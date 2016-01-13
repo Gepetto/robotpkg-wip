@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	motion/dynamic-graph-bridge
 #
 
-VERSION=		2.0.0
+VERSION=		2.0.1
 DISTNAME=		dynamic_graph_bridge-${VERSION}
 PKGNAME=		dynamic-graph-bridge-${VERSION}
 
@@ -44,3 +44,4 @@ include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/robotpkg.mk
+

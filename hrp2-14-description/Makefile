@@ -39,8 +39,3 @@ include ../../mk/sysdep/pdflatex.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk
-
-CONFIGURE_ENV+=      ROS_ROOT=$(call quote,/opt/openrobots/share/ros)
-CONFIGURE_ENV+=      ROS_PACKAGE_PATH=$(call quote,/opt/openrobots/share:/opt/openrobots/stacks)
-CONFIGURE_ENV+=      ROS_MASTER_URI=$(call quote,http://localhost:11311)
-CONFIGURE_ENV+=      ROS_DISTRO=$(call quote,${PREFER.ros})

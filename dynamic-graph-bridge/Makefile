@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	motion/dynamic-graph-bridge
 #
 
-VERSION=		2.0.1
+VERSION=		2.0.2
 DISTNAME=		dynamic_graph_bridge-${VERSION}
 PKGNAME=		dynamic-graph-bridge-${VERSION}
 

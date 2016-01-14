@@ -5,9 +5,6 @@ include/dynamic_graph_bridge/deprecated.hh
 include/dynamic_graph_bridge/ros_init.hh
 include/dynamic_graph_bridge/ros_interpreter.hh
 include/dynamic_graph_bridge/warning.hh
-lib/dynamic_graph_bridge/robot_pose_publisher
-lib/dynamic_graph_bridge/run_command
-lib/dynamic_graph_bridge/tf_publisher
 lib/librobot_model.so
 lib/libros_bridge.so
 lib/libros_interpreter.so
@@ -34,3 +31,5 @@ share/dynamic_graph_bridge/cmake/dynamic_graph_bridgeConfig-version.cmake
 share/dynamic_graph_bridge/cmake/dynamic_graph_bridgeConfig.cmake
 share/dynamic_graph_bridge/package.xml
 share/dynamic_graph_bridge/run_command
+share/dynamic_graph_bridge/robot_pose_publisher
+share/dynamic_graph_bridge/geometric_simu

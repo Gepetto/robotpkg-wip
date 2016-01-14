@@ -1,6 +1,3 @@
-SHA1 (dynamic_graph_bridge-2.0.1.tar.gz) = 494a90b6cfe389578f9c5ae6e14d9c5e7c77d7ae
-RMD160 (dynamic_graph_bridge-2.0.1.tar.gz) = 5a525c83c6a5ae05eadf1b7450bfdf2d2e482d66
-Size (dynamic_graph_bridge-2.0.1.tar.gz) = 752704 bytes
-SHA1 (patch-aa) = a8378c7f6f80aa1d3f3ab4f59d54f6cff65c4d5f
-SHA1 (patch-ac) = e22fbd7cfd2deb1698f6204b4718f7e39c0883e1
-SHA1 (patch-ad) = e824aa27467ef11cb0a75223c984f46899c82cab
+SHA1 (dynamic_graph_bridge-2.0.2.tar.gz) = c0fdf29e0789bd77a1716327e1873b8de63cf8ac
+RMD160 (dynamic_graph_bridge-2.0.2.tar.gz) = 1c4ba62f69ed9d4da083e1e446b9bfd7dec823d7
+Size (dynamic_graph_bridge-2.0.2.tar.gz) = 752715 bytes

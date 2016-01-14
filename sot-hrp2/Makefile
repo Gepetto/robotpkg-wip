@@ -12,13 +12,16 @@ MAINTAINER=		hpp@laas.fr
 
 DYNAMIC_PLIST_DIRS+=	share/doc/sot-hrp2
 
+include ../../robots/hrp2-14/depend.mk
+include ../../wip/hrp2-machine/depend.mk
+include ../../wip/hrp2-computer-monitor/depend.mk
+include ../../wip/hrp2-14-description/depend.mk
+include ../../motion/sot-pattern-generator/depend.mk
+include ../../wip/sot-dyninv/depend.mk
 include ../../wip/dynamic-graph-bridge-msgs/depend.mk
 include ../../wip/dynamic-graph-bridge/depend.mk
 include ../../robots/hrp2-14/depend.mk
 include ../../math/hrp2-dynamics/depend.mk
-include ../../math/jrl-dynamics/depend.mk
-include ../../math/jrl-mathtools/depend.mk
-include ../../interfaces/jrl-mal/depend.mk
 include ../../motion/sot-dynamic/depend.mk
 include ../../motion/py-sot-tools/depend.mk
 include ../../motion/sot-core/depend.mk

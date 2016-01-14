@@ -16,6 +16,7 @@ LICENSE=	gnu-lgpl-v3
 
 DYNAMIC_PLIST_DIRS+=	share/doc/sot-dyninv
 
+include ../../wip/soth/depend.mk
 include ../../interfaces/jrl-mal/depend.mk
 include ../../motion/py-dynamic-graph/depend.mk
 include ../../motion/sot-core/depend.mk

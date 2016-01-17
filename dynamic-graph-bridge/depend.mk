@@ -28,7 +28,7 @@ SYSTEM_SEARCH.dynamic-graph-bridge=\
   'include/dynamic_graph_bridge/config.h'\
   'lib/pkgconfig/dynamic_graph_bridge.pc'\
   'lib/librobot_model.so'\
-  'lib/dynamic_graph_bridge/robot_pose_publisher'\
+  'share/dynamic_graph_bridge/robot_pose_publisher'\
   '${PYTHON_SITELIB}/dynamic_graph/ros/ros.py'
 
 endif # ROS_REALTIMETOOLS_DEPEND_MK --------------------------------------------

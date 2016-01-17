@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	robots/hrp2-14-description
 # Created:			Olivier Stasse on Wed, 17 Jun 2015
 #
-VERSION=		1.0.1
+VERSION=		1.0.2
 ROS_PKG=		hrp2_14_description
 ROS_VERSION=		${ROS_PKG}-${VERSION}
 DISTNAME=		hrp2_14_description
@@ -21,6 +21,7 @@ NO_PUBLIC_BIN=	${RESTRICTED}
 
 DYNAMIC_PLIST_DIRS+=	share/doc/hrp2_14_description
 
+MAKE_ENV+= ${ROS_PACKAGE_PATH}
 
 include ../../meta-pkgs/ros-base/Makefile.common
 

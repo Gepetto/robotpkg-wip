@@ -1,10 +1,12 @@
 # robotpkg Makefile for:	robots/hrp2-machine
 # Created:			Olivier Stasse on Wed, 17 Jun 2015
 #
-VERSION=		1.0.0
+VERSION=		1.0.1
 ROS_PKG=		hrp2_machine
-ROS_VERSION=		${VERSION}
+ROS_VERSION=		${ROS_PKG}-${VERSION}
 DISTNAME=		hrp2_machine
+PKGNAME=		hrp2_machine
+WRKSRC=			${WRKDIR}/${ROS_VERSION}
 CATEGORIES=		robots
 MASTER_SITES=		${MASTER_SITE_JRL}ros/${ROS_PKG}/
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_JRL}robots/ros-hrp2/hrp2-machine

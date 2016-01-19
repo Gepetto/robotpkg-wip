@@ -3,10 +3,8 @@
 #
 VERSION=		1.0.2
 ROS_PKG=		hrp2_14_description
-ROS_VERSION=		${ROS_PKG}-${VERSION}
-DISTNAME=		hrp2_14_description
-PKGNAME=		hrp2_14_description
-WRKSRC=			${WRKDIR}/${ROS_VERSION}
+ROS_VERSION=		${VERSION}
+DISTNAME=		hrp2_14_description-${VERSION}
 CATEGORIES=		robots
 MASTER_SITES=		${MASTER_SITE_JRL}ros/${ROS_PKG}/
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_JRL}robots/ros-hrp2/hrp2-14-description
@@ -20,10 +18,6 @@ NO_PUBLIC_SRC=	${RESTRICTED}
 NO_PUBLIC_BIN=	${RESTRICTED}
 
 DYNAMIC_PLIST_DIRS+=	share/doc/hrp2_14_description
-
-MAKE_ENV+= ${ROS_PACKAGE_PATH}
-
-include ../../meta-pkgs/ros-base/Makefile.common
 
 include ../robot_capsule_urdf/depend.mk
 include ../../graphics/urdfdom/depend.mk

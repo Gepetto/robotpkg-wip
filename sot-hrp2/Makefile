@@ -17,6 +17,7 @@ include ../../wip/hrp2-machine/depend.mk
 include ../../wip/hrp2-computer-monitor/depend.mk
 include ../../wip/hrp2-14-description/depend.mk
 include ../../motion/sot-pattern-generator/depend.mk
+include ../../wip/sot-application/depend.mk
 include ../../wip/sot-dyninv/depend.mk
 include ../../wip/dynamic-graph-bridge-msgs/depend.mk
 include ../../wip/dynamic-graph-bridge/depend.mk

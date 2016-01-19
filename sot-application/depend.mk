@@ -14,12 +14,12 @@ ifeq (+,$(SOT_APPLICATION_DEPEND_MK)) # ----------------------------------------
 PREFER.sot-application?=	robotpkg
 
 SYSTEM_SEARCH.sot-application=\
-	'lib/pkgconfig/sot-romeo.pc:/Version/s/[^0-9.]//gp'
+	'lib/pkgconfig/sot-application.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		sot-application
 
-DEPEND_ABI.sot-romeo?=	sot-application>=1.0.0
-DEPEND_DIR.sot-romeo?=	../../robots/sot-application
+DEPEND_ABI.sot-application?=	sot-application>=1.0.0
+DEPEND_DIR.sot-application?=	../../wip/sot-application
 
 endif # SOT_ROMEO_DEPEND_MK -------------------------------------------------
 

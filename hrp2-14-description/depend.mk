@@ -9,7 +9,7 @@ ifeq (+,$(DEPEND_DEPTH))
 DEPEND_PKG+=		hrp2-14-description
 endif
 
-ifeq (+,$(ROMEO_DEPEND_MK)) # -------------------------------------------
+ifeq (+,$(HRP2_14_DESCRIPTION_DEPEND_MK)) # -------------------------------------------
 
 PREFER.hrp2-14-description?=	robotpkg
 

@@ -9,7 +9,7 @@ ifeq (+,$(DEPEND_DEPTH))
 DEPEND_PKG+=		sot-dyninv
 endif
 
-ifeq (+,$(SOT-DYNINV_DEPEND_MK)) # -------------------------------------------
+ifeq (+,$(SOT_DYNINV_DEPEND_MK)) # -------------------------------------------
 
 PREFER.sot-dyninv?=	robotpkg
 

@@ -2,9 +2,9 @@
 # Created:			Olivier Stasse on Fri, 19 Jun 2015
 #
 VERSION=		1.0.1
-DISTNAME=		robot_capsule_urdf-${VERSION}
-PKGNAME=		robot_capsule_urdf-${VERSION}
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=robot_capsule_urdf/}
+PKGNAME=		robot-capsule-urdf-${VERSION}
+DISTNAME=		robot-capsule-urdf-${VERSION}
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=robot-capsule-urdf/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}laas/robot_capsule_urdf
 
 CATEGORIES=		graphics
@@ -13,7 +13,7 @@ COMMENT=		Provides capsule description of the robots
 LICENSE=		2-clause-bsd
 MAINTAINER=		hpp@laas.fr
 
-DYNAMIC_PLIST_DIRS+=	share/doc/robot_capsule_urdf
+DYNAMIC_PLIST_DIRS+=	share/doc/robot-capsule-urdf
 
 include ../../graphics/urdfdom/depend.mk
 include ../../devel/ros-catkin/depend.mk

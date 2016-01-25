@@ -14,7 +14,7 @@ ifeq (+,$(SOTH_DEPEND_MK)) # -------------------------------------------
 PREFER.soth?=	robotpkg
 
 SYSTEM_SEARCH.soth=\
-	include/sot/config.h				\
+	include/soth/config.h				\
 	lib/libsoth.so					\
 	'lib/pkgconfig/soth.pc:/Version/s/[^0-9.]//gp'
 

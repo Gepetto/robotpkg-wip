@@ -14,7 +14,7 @@ ifeq (+,$(ROBOT_CAPSULE_URDF_DEPEND_MK)) # -------------------------------------
 PREFER.robot-capsule-urdf?=	robotpkg
 
 SYSTEM_SEARCH.robot-capsule-urdf=\
-	'lib/pkgconfig/robot-capsule-urdf.pc:/Version/s/[^0-9.]//gp'
+	'lib/pkgconfig/robot_capsule_urdf.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		robot-capsule-urdf
 

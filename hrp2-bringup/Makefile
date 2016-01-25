@@ -5,7 +5,7 @@ VERSION=		1.0.4
 ROS_PKG=		hrp2-bringup
 ROS_VERSION=		${VERSION}
 DISTNAME=		hrp2-bringup-${VERSION}
-CATEGORIES=		robots
+CATEGORIES=		wip	
 MASTER_SITES=		${MASTER_SITE_JRL}ros/${ROS_PKG}/
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_JRL}robots/ros-hrp2/hrp2-bringup
 

@@ -14,7 +14,7 @@ ifeq (+,$(HRP2_COMPUTER_MONITOR_DEPEND_MK)) # ----------------------------------
 PREFER.hrp2-computer-monitor?=	robotpkg
 
 SYSTEM_SEARCH.hrp2-computer-monitor=\
-	'lib/pkgconfig/hrp2-computer-monitor.pc:/Version/s/[^0-9.]//gp'
+	'lib/pkgconfig/hrp2_computer_monitor.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		hrp2-computer-monitor
 ROS_DEPEND_USER+=	ros-hrp2-computer-monitor

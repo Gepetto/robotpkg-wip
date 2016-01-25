@@ -2,9 +2,9 @@
 # Created:			Olivier Stasse on Wed, 17 Jun 2015
 #
 VERSION=		1.0.0
-ROS_PKG=		hrp2_computer_monitor
+ROS_PKG=		hrp2-computer-monitor
 ROS_VERSION=		${VERSION}
-DISTNAME=		hrp2_computer_monitor
+DISTNAME=		hrp2-computer-monitor
 CATEGORIES=		robots
 MASTER_SITES=		${MASTER_SITE_JRL}ros/${ROS_PKG}/
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_JRL}robots/ros-hrp2/hrp2-computer-monitor
@@ -12,6 +12,7 @@ MASTER_REPOSITORY=	${MASTER_REPOSITORY_JRL}robots/ros-hrp2/hrp2-computer-monitor
 MAINTAINER=		gepetto@laas.fr
 COMMENT=		Hrp2 ros monitoring package
 LICENSE=		openhrp-grx-license
+WRKSRC=			${WRKDIR}/hrp2_computer_monitor-${VERSION}
 
 RESTRICTED=	Redistribution of repackaged binaries not permitted
 NO_PUBLIC_SRC=	${RESTRICTED}

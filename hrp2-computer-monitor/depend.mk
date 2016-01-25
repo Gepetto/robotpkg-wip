@@ -9,7 +9,7 @@ ifeq (+,$(DEPEND_DEPTH))
 DEPEND_PKG+=		hrp2-computer-monitor
 endif
 
-ifeq (+,$(ROMEO_DEPEND_MK)) # -------------------------------------------
+ifeq (+,$(HRP2_COMPUTER_MONITOR_DEPEND_MK)) # -------------------------------------------
 
 PREFER.hrp2-computer-monitor?=	robotpkg
 

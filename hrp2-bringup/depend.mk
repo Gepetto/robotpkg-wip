@@ -9,7 +9,7 @@ ifeq (+,$(DEPEND_DEPTH))
 DEPEND_PKG+=		hrp2-bringup
 endif
 
-ifeq (+,$(ROMEO_DEPEND_MK)) # -------------------------------------------
+ifeq (+,$(HRP2_BRINGUP_DEPEND_MK)) # -------------------------------------------
 
 PREFER.hrp2-bringup?=	robotpkg
 

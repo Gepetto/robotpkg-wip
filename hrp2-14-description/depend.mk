@@ -14,13 +14,13 @@ ifeq (+,$(HRP2_14_DESCRIPTION_DEPEND_MK)) # ------------------------------------
 PREFER.hrp2-14-description?=	robotpkg
 
 SYSTEM_SEARCH.hrp2-14-description=\
-	'lib/pkgconfig/hrp2-14-description.pc:/Version/s/[^0-9.]//gp'
+	'lib/pkgconfig/hrp2_14_description.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		hrp2-14-description
 ROS_DEPEND_USER+=	ros-hrp2-14-description
 
 DEPEND_ABI.hrp2-14-description?=	hrp2-14-description>=1.0.0
-DEPEND_DIR.hrp2-14-description?=	../hrp2-14-description
+DEPEND_DIR.hrp2-14-description?=	../../wip/hrp2-14-description
 
 endif # HRP2_14_DESCRIPTION_DEPEND_MK -------------------------------------------------
 

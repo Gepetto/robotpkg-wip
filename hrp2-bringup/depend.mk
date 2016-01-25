@@ -14,7 +14,7 @@ ifeq (+,$(HRP2_BRINGUP_DEPEND_MK)) # -------------------------------------------
 PREFER.hrp2-bringup?=	robotpkg
 
 SYSTEM_SEARCH.hrp2-bringup=\
-	'lib/pkgconfig/hrp2-bringup.pc:/Version/s/[^0-9.]//gp'
+	'lib/pkgconfig/hrp2_bringup.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		hrp2-bringup
 ROS_DEPEND_USER+=	hrp2-bringup

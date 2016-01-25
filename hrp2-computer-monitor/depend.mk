@@ -17,10 +17,10 @@ SYSTEM_SEARCH.hrp2-computer-monitor=\
 	'lib/pkgconfig/hrp2-computer-monitor.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		hrp2-computer-monitor
-ROS_DEPEND_USER+=	hrp2-computer-monitor
+ROS_DEPEND_USER+=	ros-hrp2-computer-monitor
 
 DEPEND_ABI.hrp2-computer-monitor?=	hrp2-computer-monitor>=1.0.0
-DEPEND_DIR.hrp2-computer-monitor?=	../../robots/hrp2-computer-monitor
+DEPEND_DIR.hrp2-computer-monitor?=	../../wip/hrp2-computer-monitor
 
 endif # HRP2_COMPUTER_MONITOR_DEPEND_MK -------------------------------------------------
 

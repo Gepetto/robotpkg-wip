@@ -9,12 +9,12 @@ ifeq (+,$(DEPEND_DEPTH))
 DEPEND_PKG+=		hrp2-machine
 endif
 
-ifeq (+,$(ROMEO_DEPEND_MK)) # -------------------------------------------
+ifeq (+,$(HRP2_MACHINE_DEPEND_MK)) # -------------------------------------------
 
 PREFER.hrp2-machine?=	robotpkg
 
 SYSTEM_SEARCH.hrp2-machine=\
-	'lib/pkgconfig/hrp2-machine.pc:/Version/s/[^0-9.]//gp'
+	'lib/pkgconfig/hrp2_machine.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		hrp2-machine
 ROS_DEPEND_USER+=	hrp2-machine

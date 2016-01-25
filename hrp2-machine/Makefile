@@ -2,11 +2,11 @@
 # Created:			Olivier Stasse on Wed, 17 Jun 2015
 #
 VERSION=		1.0.1
-ROS_PKG=		hrp2_machine
+ROS_PKG=		hrp2-machine
 ROS_VERSION=		${ROS_PKG}-${VERSION}
-DISTNAME=		hrp2_machine
-PKGNAME=		hrp2_machine
-WRKSRC=			${WRKDIR}/${ROS_VERSION}
+DISTNAME=		hrp2-machine
+PKGNAME=		hrp2-machine
+WRKSRC=			${WRKDIR}/hrp2_machine-${VERSION}
 CATEGORIES=		robots
 MASTER_SITES=		${MASTER_SITE_JRL}ros/${ROS_PKG}/
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_JRL}robots/ros-hrp2/hrp2-machine

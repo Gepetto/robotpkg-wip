@@ -13,6 +13,7 @@ MAINTAINER=		hpp@laas.fr
 DYNAMIC_PLIST_DIRS+=	share/doc/sot-hrp2
 
 include ../../robots/hrp2-14/depend.mk
+include ../../wip/hrp2-bringup/depend.mk
 include ../../wip/hrp2-machine/depend.mk
 include ../../wip/hrp2-computer-monitor/depend.mk
 include ../../wip/hrp2-14-description/depend.mk

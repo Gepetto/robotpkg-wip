@@ -85,6 +85,7 @@ share/hrp2_14_description/meshes/convex/RLEG_LINK5.dae
 share/hrp2_14_description/meshes/emblem.gif
 share/hrp2_14_description/package.xml
 share/hrp2_14_description/rcpdf/hrp2_14.rcpdf
+share/hrp2_14_description/sot/hrp2_14.yaml
 share/hrp2_14_description/srdf/hrp2_14.srdf
 share/hrp2_14_description/srdf/hrp2_14_capsule.srdf
 share/hrp2_14_description/srdf/hrp2_14_manipulation.srdf

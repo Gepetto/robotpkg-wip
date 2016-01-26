@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	robots/hrp2-bringup
 # Created:			Olivier Stasse on Wed, 14 Jav 2015
 #
-VERSION=		1.0.4
+VERSION=		1.0.5
 ROS_PKG=		hrp2-bringup
 ROS_VERSION=		${VERSION}
 DISTNAME=		hrp2-bringup-${VERSION}

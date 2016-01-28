@@ -5,7 +5,7 @@ DISTNAME=		sot-hrp2-1.1.2
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-hrp2/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/sot-hrp2
 
-CATEGORIES=		robots
+CATEGORIES=		wip
 COMMENT=		This packages provides a generic Stack Of Tasks library for the humanoid robot HRP-2.
 LICENSE=		gnu-lgpl-v3
 MAINTAINER=		hpp@laas.fr

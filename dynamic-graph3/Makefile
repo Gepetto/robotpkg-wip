@@ -25,6 +25,7 @@ CMAKE_ARGS+=		-DMANDIR=${PREFIX}/${PKGMANDIR}
 # library location
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
+PATCH_STRIP?=		-p1
 include ../../math/eigen3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

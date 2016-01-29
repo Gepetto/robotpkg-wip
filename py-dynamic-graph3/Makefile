@@ -4,6 +4,8 @@
 
 DISTNAME=		dynamic-graph-python-${VERSION}
 VERSION=		3.0.0
+PKGREVISION=		1
+
 PKGNAME=		${PKGTAG.python-}dynamic-graph-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=dynamic-graph-python/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/proyan/dynamic-graph-python
@@ -29,6 +31,7 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 # fixed here
 CMAKE_ARGS+=		-DCXX_DISABLE_WERROR=yes
 
+PATCH_STRIP?=		-p1
 DEPEND_ABI.python+=	python<3
 
 include ../../wip/dynamic-graph3/depend.mk

@@ -1,7 +1,7 @@
-diff --git a/include/sot/core/op-point-modifier.hh b/include/sot/core/op-point-modifier.hh
+diff --git include/sot/core/op-point-modifier.hh include/sot/core/op-point-modifier.hh
 index 5d83a0c..b72b1e0 100644
---- a/include/sot/core/op-point-modifier.hh
-+++ b/include/sot/core/op-point-modifier.hh
+--- include/sot/core/op-point-modifier.hh
++++ include/sot/core/op-point-modifier.hh
 @@ -78,9 +78,9 @@ public:
  
    dg::Matrix& jacobianSOUT_function( dg::Matrix& res,const int& time );
@@ -14,10 +14,10 @@ index 5d83a0c..b72b1e0 100644
  
    virtual void commandLine( const std::string& cmdLine,
  			    std::istringstream& cmdArgs,
-diff --git a/src/math/op-point-modifier.cpp b/src/math/op-point-modifier.cpp
+diff --git src/math/op-point-modifier.cpp src/math/op-point-modifier.cpp
 index 88655a4..8c006d3 100644
---- a/src/math/op-point-modifier.cpp
-+++ b/src/math/op-point-modifier.cpp
+--- src/math/op-point-modifier.cpp
++++ src/math/op-point-modifier.cpp
 @@ -55,14 +55,14 @@ OpPointModifier( const std::string& name )
    sotDEBUGIN(15);
  

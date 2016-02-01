@@ -5,7 +5,7 @@
 PKGNAME=		sot-core-${VERSION}
 DISTNAME=		sot-core-${VERSION}
 VERSION=		3.0.0
-PKGREVISION=		1
+PKGREVISION=		2
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-core/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/proyan/sot-core
@@ -30,7 +30,6 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 CONFIGURE_DIRS=		_build
 CMAKE_ARG_PATH=		..
 
-PATCH_STRIP?=		-p1
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/eigen3/depend.mk

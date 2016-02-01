@@ -1,0 +1,33 @@
+PKG_DBDIR="@PKG_DBDIR@"
+MKDIR="@MKDIR@"
+TEST="@TEST@"
+LOCALPKGNAME="@LOCALPKGNAME@"
+
+case $2 in
+
+  POST-INSTALL)
+    if ${TEST} -f ${PKG_PREFIX}/lib/RtcStackOfTasks.so; then
+      ln -s ${PKG_PREFIX}/lib/RtcStackOfTasks.so /opt/grx/lib/RtcStackOfTasks.so
+    fi    
+    if ${TEST} -f ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/bin/rtc-stack-of-tasks-comp; then
+      ln -s ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/bin/rtc-stack-of-tasks-comp /opt/grx/HRP2LAAS/bin/rtc-stack-of-tasks-comp
+    fi
+    if ${TEST} -f ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/bin/RtcStackOfTasksComp/rtc.conf; then
+      ln -s ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/bin/RtcStackOfTasksComp/rtc.conf /opt/grx/HRP2LAAS/bin/RtcStackOfTasksComp/rtc.confp
+    fi
+    if ${TEST} -f ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/script/guisot.py; then
+      ln -s ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/script/guisot.py /opt/grx/HRP2LAAS/script/guisot.py
+    fi
+    if ${TEST} -f ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/script/guiinfosot.py; then
+      ln -s ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/script/guiinfosot.py /opt/grx/HRP2LAAS/script/guiinfosot.py
+    fi
+    if ${TEST} -f ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/script/sot.py; then
+      ln -s ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/script/sot.py /opt/grx/HRP2LAAS/script/sot.py
+    fi
+    if ${TEST} -f ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/script/sotinfo.py; then
+      ln -s ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/script/sotinfo.py /opt/grx/HRP2LAAS/script/sotinfo.py
+    fi    
+
+    ;;
+esac
+        

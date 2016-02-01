@@ -1,8 +1,9 @@
 # robotpkg Makefile for:	wip/sot-hrprtc-hrp2
 # Created:			Olivier Stasse, on Wed. 28th January, 2016
 #
-VERSION=		1.2.0
-DISTNAME=		sot-hrprtc-hrp2-${VERSION}
+VERSION=		1.2.1
+LOCALPKGNAME=		sot-hrprtc-hrp2
+DISTNAME=		${LOCALPKGNAME}-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-hrprtc-hrp2/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/sot-hrprtc-hrp2
 
@@ -12,7 +13,11 @@ COMMENT=		This packages embeds the HRP-2 stack of tasks inside a RTC component
 LICENSE=		gnu-lgpl-v3
 MAINTAINER=		hpp@laas.fr
 
+INSTALL_VARS+= 		MKDIR PKG_DBDIR TEST LOCALPKGNAME
+
 DYNAMIC_PLIST_DIRS+=	share/doc/sot-hrprtc-hrp2
+
+CMAKE_ARGS+=		-DROBOTPKG=ON
 
 include ../../wip/sot-hrp2/depend.mk
 include ../../robots/hrp2-14/depend.mk

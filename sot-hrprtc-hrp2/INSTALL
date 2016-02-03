@@ -13,7 +13,7 @@ case $2 in
       ln -s ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/bin/rtc-stack-of-tasks-comp /opt/grx/HRP2LAAS/bin/rtc-stack-of-tasks-comp
     fi
     if ${TEST} -f ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/bin/RtcStackOfTasksComp/rtc.conf; then
-      ln -s ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/bin/RtcStackOfTasksComp/rtc.conf /opt/grx/HRP2LAAS/bin/RtcStackOfTasksComp/rtc.confp
+      ln -s ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/bin/RtcStackOfTasksComp/rtc.conf /opt/grx/HRP2LAAS/bin/RtcStackOfTasksComp/rtc.conf
     fi
     if ${TEST} -f ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/script/guisot.py; then
       ln -s ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/script/guisot.py /opt/grx/HRP2LAAS/script/guisot.py

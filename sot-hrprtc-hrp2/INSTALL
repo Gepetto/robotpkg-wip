@@ -12,6 +12,7 @@ case $2 in
     if ${TEST} -f ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/bin/rtc-stack-of-tasks-comp; then
       ln -sf ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/bin/rtc-stack-of-tasks-comp /opt/grx/HRP2LAAS/bin/rtc-stack-of-tasks-comp
     fi
+    mkdir -p /opt/grx/HRP2LAAS/bin/RtcStackOfTasksComp
     if ${TEST} -f ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/bin/RtcStackOfTasksComp/rtc.conf; then
       ln -sf ${PKG_PREFIX}/share/${LOCALPKGNAME}/HRP2LAAS/bin/RtcStackOfTasksComp/rtc.conf /opt/grx/HRP2LAAS/bin/RtcStackOfTasksComp/rtc.conf
     fi

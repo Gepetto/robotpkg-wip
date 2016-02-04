@@ -23,6 +23,7 @@ CMAKE_ARGS+=		-DPYTHON_SITELIB=${PYTHON_SITELIB}
 DEPEND_ABI.python+=	python<3
 
 include ../../mk/sysdep/python.mk
+include ../../mk/sysdep/py-numpy.mk
 include ../../math/eigen3/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

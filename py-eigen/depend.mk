@@ -3,26 +3,25 @@
 #
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH}+
-PY_EIGEN_DEPEND_MK:=	${PY_EIGEN_DEPEND_MK}+
+EIGENPY_DEPEND_MK:=	${EIGENPY_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
-DEPEND_PKG+=		py-eigen
+DEPEND_PKG+=		eigenpy
 endif
 
-ifeq (+,$(PY_EIGEN_DEPEND_MK)) # -------------------------------------------
+ifeq (+,$(EIGENPY_DEPEND_MK)) # -------------------------------------------
 
-PREFER.py-eigen?=	robotpkg
+PREFER.eigenpy?=	robotpkg
 
-SYSTEM_SEARCH.py-eigen=\
+SYSTEM_SEARCH.eigenpy=\
 	'lib/pkgconfig/eigenpy.pc:/Version/s/[^0-9.]//gp'
 
-DEPEND_USE+=		py-eigen
-
-DEPEND_ABI.py-eigen?=	eigen3
-DEPEND_DIR.py-eigen?=	../../wip/py-eigen
+DEPEND_USE+=		eigenpy
+DEPEND_ABI.eigenpy?=	eigenpy>=1.3.0
+DEPEND_DIR.eigenpy?=	../../wip/py-eigen
 
 include ../../mk/sysdep/python.mk
 
-endif # PY_EIGEN_DEPEND_MK -------------------------------------------------
+endif # EIGENPY_DEPEND_MK -------------------------------------------------
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}

@@ -71,6 +71,7 @@ SUBDIR+=	oro-view
 SUBDIR+=	orocos-bfl
 SUBDIR+=	orocos-dot_service
 SUBDIR+=	orocos-yarp_transport
+SUBDIR+=	pinocchio
 SUBDIR+=	poisson
 SUBDIR+=	pr2-pick-object
 SUBDIR+= 	py-flann

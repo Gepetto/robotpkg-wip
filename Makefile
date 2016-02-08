@@ -52,6 +52,7 @@ SUBDIR+= 	mavlink
 SUBDIR+=	metapod
 SUBDIR+=	mhp-genom
 SUBDIR+=	morse-hla
+SUBDIR+=	morse-mavlink
 SUBDIR+=	morse-pocolibs
 SUBDIR+=	morse-ros
 SUBDIR+=	move3d-assets

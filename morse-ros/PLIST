@@ -1,4 +1,4 @@
-@comment Mon May 11 09:14:36 CEST 2015
+@comment Mon Feb 8 10:23:23 CET 2016
 ${PYTHON_SITELIB}/morse/middleware/ros/__init__.py
 ${PYTHON_SITELIB}/morse/middleware/ros/abstract_ros.py
 ${PYTHON_SITELIB}/morse/middleware/ros/accelerometer.py
@@ -8,14 +8,11 @@ ${PYTHON_SITELIB}/morse/middleware/ros/depth_camera.py
 ${PYTHON_SITELIB}/morse/middleware/ros/destination.py
 ${PYTHON_SITELIB}/morse/middleware/ros/force_torque.py
 ${PYTHON_SITELIB}/morse/middleware/ros/gps.py
-${PYTHON_SITELIB}/morse/middleware/ros/helpers.py
 ${PYTHON_SITELIB}/morse/middleware/ros/imu.py
 ${PYTHON_SITELIB}/morse/middleware/ros/infrared.py
 ${PYTHON_SITELIB}/morse/middleware/ros/jido_posture.py
-${PYTHON_SITELIB}/morse/middleware/ros/jointpositions.py
 ${PYTHON_SITELIB}/morse/middleware/ros/jointstate.py
 ${PYTHON_SITELIB}/morse/middleware/ros/jointtrajectorycontrollers.py
-${PYTHON_SITELIB}/morse/middleware/ros/kuka_jointpositions.py
 ${PYTHON_SITELIB}/morse/middleware/ros/kuka_jointstate.py
 ${PYTHON_SITELIB}/morse/middleware/ros/kuka_jointstate_pub.py
 ${PYTHON_SITELIB}/morse/middleware/ros/laserscanner.py

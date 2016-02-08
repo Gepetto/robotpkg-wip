@@ -15,11 +15,11 @@ CMAKE_ARGS+=		-DBUILD_ROS_SUPPORT=ON
 CMAKE_ARGS+=		-DBUILD_YARP_SUPPORT=OFF
 CMAKE_ARGS+=		-DBUILD_MOOS_SUPPORT=OFF
 CMAKE_ARGS+=		-DBUILD_HLA_SUPPORT=OFF
+CMAKE_ARGS+=		-DBUILD_MAVLINK_SUPPORT=OFF
 CMAKE_ARGS+= 		-DPYMORSE_SUPPORT=OFF
 
 #include ../../interfaces/ros-common-msgs/depend.mk
 include ../../wip/py-yaml/depend.mk
-include ../../sysutils/py-rospkg/depend.mk
 include ../../sysutils/py-catkin-pkg/depend.mk
 include ../../simulation/morse/depend.mk
 include ../../mk/robotpkg.mk

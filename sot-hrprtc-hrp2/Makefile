@@ -18,13 +18,13 @@ DYNAMIC_PLIST_DIRS+=	share/doc/sot-hrprtc-hrp2
 
 CMAKE_ARGS+=		-DROBOTPKG=ON
 
-include ../../wip/mk/sysdep/openrtm-aist.mk
 include ../../wip/sot-hrp2/depend.mk
 include ../../robots/hrp2-14/depend.mk
 include ../../wip/hrp2-bringup/depend.mk
 include ../../wip/hrp2-machine/depend.mk
 include ../../wip/hrp2-computer-monitor/depend.mk
 include ../../wip/hrp2-14-description/depend.mk
+include ../../middleware/openrtm-aist/depend.mk
 include ../../motion/sot-pattern-generator/depend.mk
 include ../../wip/sot-application/depend.mk
 include ../../wip/sot-dyninv/depend.mk

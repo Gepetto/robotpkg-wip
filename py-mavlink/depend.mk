@@ -14,10 +14,10 @@ PREFER.py-mavlink?=	robotpkg
 
 DEPEND_USE+=		py-mavlink
 
-DEPEND_ABI.py-mavlink?=	py-mavlink>=1.0.11
+DEPEND_ABI.py-mavlink?=	${PKGTAG.python-}mavlink>=1.1.62
 DEPEND_DIR.py-mavlink?=	../../wip/py-mavlink
 
-SYSTEM_SEARCH.mavlink=\
+SYSTEM_SEARCH.py-mavlink=\
 	'${PYTHON_SYSLIBSEARCH}/pymavlink/__init__.py'
 
 include ../../wip/mavlink/depend.mk

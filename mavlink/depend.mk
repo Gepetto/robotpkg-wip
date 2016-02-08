@@ -14,11 +14,11 @@ PREFER.mavlink?=	robotpkg
 
 DEPEND_USE+=		mavlink
 
-DEPEND_ABI.mavlink?=	mavlink>=1.0.11
+DEPEND_ABI.mavlink?=	mavlink>=1.0.9
 DEPEND_DIR.mavlink?=	../../wip/mavlink
 
 SYSTEM_SEARCH.mavlink=\
-	include/mavlink/config.h
+	include/mavlink/config.h\
 	'lib/pkgconfig/mavlink.pc:/Version/s/[^0-9.]//gp'
 endif
 

@@ -1,8 +1,12 @@
-@comment Thu Feb 4 06:40:14 CET 2016
+@comment Wed Feb 10 00:00:28 CET 2016
 include/pinocchio/algorithm/center-of-mass.hpp
+include/pinocchio/algorithm/center-of-mass.hxx
 include/pinocchio/algorithm/cholesky.hpp
+include/pinocchio/algorithm/collisions.hpp
 include/pinocchio/algorithm/crba.hpp
+include/pinocchio/algorithm/energy.hpp
 include/pinocchio/algorithm/jacobian.hpp
+include/pinocchio/algorithm/jacobian.hxx
 include/pinocchio/algorithm/joint-limits.hpp
 include/pinocchio/algorithm/kinematics.hpp
 include/pinocchio/algorithm/non-linear-effects.hpp
@@ -15,11 +19,15 @@ include/pinocchio/exception.hpp
 include/pinocchio/math/sincos.hpp
 include/pinocchio/multibody/constraint.hpp
 include/pinocchio/multibody/force-set.hpp
+include/pinocchio/multibody/geometry.hpp
+include/pinocchio/multibody/geometry.hxx
 include/pinocchio/multibody/joint.hpp
 include/pinocchio/multibody/joint/joint-base.hpp
+include/pinocchio/multibody/joint/joint-dense.hpp
 include/pinocchio/multibody/joint/joint-free-flyer.hpp
 include/pinocchio/multibody/joint/joint-generic.hpp
 include/pinocchio/multibody/joint/joint-planar.hpp
+include/pinocchio/multibody/joint/joint-prismatic-unaligned.hpp
 include/pinocchio/multibody/joint/joint-prismatic.hpp
 include/pinocchio/multibody/joint/joint-revolute-unaligned.hpp
 include/pinocchio/multibody/joint/joint-revolute.hpp
@@ -28,16 +36,27 @@ include/pinocchio/multibody/joint/joint-spherical.hpp
 include/pinocchio/multibody/joint/joint-translation.hpp
 include/pinocchio/multibody/joint/joint-variant.hpp
 include/pinocchio/multibody/model.hpp
+include/pinocchio/multibody/model.hxx
+include/pinocchio/multibody/parser/from-collada-to-fcl.hpp
 include/pinocchio/multibody/parser/sample-models.hpp
+include/pinocchio/multibody/parser/urdf-with-geometry.hpp
+include/pinocchio/multibody/parser/urdf-with-geometry.hxx
 include/pinocchio/multibody/parser/urdf.hpp
+include/pinocchio/multibody/parser/urdf.hxx
+include/pinocchio/multibody/parser/utils.hpp
 include/pinocchio/multibody/visitor.hpp
 include/pinocchio/python/algorithms.hpp
 include/pinocchio/python/data.hpp
 include/pinocchio/python/eigen_container.hpp
 include/pinocchio/python/explog.hpp
 include/pinocchio/python/force.hpp
+include/pinocchio/python/geometry-data.hpp
+include/pinocchio/python/geometry-model.hpp
 include/pinocchio/python/handler.hpp
 include/pinocchio/python/inertia.hpp
+include/pinocchio/python/joint-dense.hpp
+include/pinocchio/python/joints-models.hpp
+include/pinocchio/python/joints-variant.hpp
 include/pinocchio/python/model.hpp
 include/pinocchio/python/motion.hpp
 include/pinocchio/python/parsers.hpp
@@ -46,6 +65,7 @@ include/pinocchio/python/se3.hpp
 include/pinocchio/simulation/compute-all-terms.hpp
 include/pinocchio/spatial/act-on-set.hpp
 include/pinocchio/spatial/explog.hpp
+include/pinocchio/spatial/fcl-pinocchio-conversions.hpp
 include/pinocchio/spatial/force.hpp
 include/pinocchio/spatial/fwd.hpp
 include/pinocchio/spatial/inertia.hpp
@@ -57,3 +77,10 @@ include/pinocchio/tools/timer.hpp
 include/pinocchio/warning.hh
 lib/libpinocchio.so
 lib/pkgconfig/pinocchio.pc
+${PYTHON_SITELIB}/pinocchio/__init__.py
+${PYTHON_SITELIB}/pinocchio/explog.py
+${PYTHON_SITELIB}/pinocchio/libpinocchio_pywrap.so
+${PYTHON_SITELIB}/pinocchio/robot_wrapper.py
+${PYTHON_SITELIB}/pinocchio/romeo_wrapper.py
+${PYTHON_SITELIB}/pinocchio/rpy.py
+${PYTHON_SITELIB}/pinocchio/utils.py

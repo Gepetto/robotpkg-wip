@@ -18,10 +18,8 @@ SYSTEM_SEARCH.pinocchio=\
 
 DEPEND_USE+=		pinocchio
 
-DEPEND_ABI.pinocchio?=	pinocchio>1.0.2
+DEPEND_ABI.pinocchio?=	pinocchio>=1.1.0
 DEPEND_DIR.pinocchio?=	../../wip/pinocchio
-
-include ../../mk/sysdep/python.mk
 
 endif # PINOCCHIO_DEPEND_MK -------------------------------------------------
 

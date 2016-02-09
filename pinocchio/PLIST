@@ -28,8 +28,6 @@ include/pinocchio/multibody/joint/joint-spherical.hpp
 include/pinocchio/multibody/joint/joint-translation.hpp
 include/pinocchio/multibody/joint/joint-variant.hpp
 include/pinocchio/multibody/model.hpp
-include/pinocchio/multibody/parser/lua.hpp
-include/pinocchio/multibody/parser/lua/lua_tables.hpp
 include/pinocchio/multibody/parser/sample-models.hpp
 include/pinocchio/multibody/parser/urdf.hpp
 include/pinocchio/multibody/visitor.hpp
@@ -55,7 +53,6 @@ include/pinocchio/spatial/motion.hpp
 include/pinocchio/spatial/se3.hpp
 include/pinocchio/spatial/skew.hpp
 include/pinocchio/spatial/symmetric3.hpp
-include/pinocchio/tools/matrix-comparison.hpp
 include/pinocchio/tools/timer.hpp
 include/pinocchio/warning.hh
 lib/libpinocchio.so

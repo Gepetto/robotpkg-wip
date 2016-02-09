@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse, Feb 4th 2016
 #
 
-VERSION=		1.0.2
+VERSION=		1.1.0
 DISTNAME=		pinocchio-${VERSION}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=pinocchio/}
@@ -14,6 +14,7 @@ COMMENT=	Efficient rigid body dynamics
 LICENSE=	gnu-lgpl-v3
 
 DYNAMIC_PLIST_DIRS+=	share/doc/pinocchio
+USE_BOOST_LIBS:= python filesystem unit_test_framework
 
 include ../../wip/py-eigen/depend.mk
 include ../../math/eigen3/depend.mk
@@ -21,6 +22,7 @@ include ../../graphics/urdfdom/depend.mk
 include ../../graphics/urdfdom-headers/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
+include ../../path/hpp-fcl/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

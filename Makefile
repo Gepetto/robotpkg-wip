@@ -75,6 +75,7 @@ SUBDIR+=	orocos-yarp_transport
 SUBDIR+=	pinocchio
 SUBDIR+=	poisson
 SUBDIR+=	pr2-pick-object
+SUBDIR+= 	py-eigen
 SUBDIR+= 	py-flann
 SUBDIR+= 	py-jsbsim
 SUBDIR+= 	py-hla

@@ -15,6 +15,7 @@ SUBDIR+=	daqflex-libs
 SUBDIR+=	dptu-genom3
 SUBDIR+=	dynamic-graph-bridge
 SUBDIR+=	dynamic-graph-bridge-msgs
+SUBDIR+=	eigenpy
 SUBDIR+=	gdalwrap
 SUBDIR+=	gest-genom
 SUBDIR+=	gladys

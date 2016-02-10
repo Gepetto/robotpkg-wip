@@ -16,6 +16,11 @@ LICENSE=	gnu-lgpl-v3
 DYNAMIC_PLIST_DIRS+=	share/doc/pinocchio
 USE_BOOST_LIBS:= python filesystem unit_test_framework
 
+CMAKE_ARGS+=    -DPYTHON_EXECUTABLE=${PYTHON}
+CMAKE_ARGS+=    -DPYTHON_INCLUDE_DIR=${PYTHON_INCLUDE}
+CMAKE_ARGS+=    -DPYTHON_LIBRARY=${PYTHON_LIB}
+CMAKE_ARGS+=    -DPYTHON_SITELIB=${PYTHON_SITELIB}
+
 DEPEND_ABI.python += python<3
 DEPEND_ABI.assimp += assimp>=3.0
 DEPEND_ABI.eigenpy += eigenpy>=1.3.0

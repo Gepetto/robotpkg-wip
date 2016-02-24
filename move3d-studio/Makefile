@@ -4,7 +4,7 @@
 
 PKGNAME=		move3d-studio-${VERSION}
 DISTNAME=		move3d-studio-${VERSION}
-VERSION=		1.3
+VERSION=		1.4
 PKGREVISION=		3
 
 CATEGORIES=		path

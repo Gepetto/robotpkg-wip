@@ -21,6 +21,8 @@ DEPEND_ABI.eigenpy?=	eigenpy>=1.3.0
 DEPEND_DIR.eigenpy?=	../../wip/py-eigen
 
 include ../../mk/sysdep/python.mk
+include ../../mk/sysdep/py-numpy.mk
+include ../../math/eigen3/depend.mk
 
 endif # EIGENPY_DEPEND_MK -------------------------------------------------
 

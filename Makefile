@@ -94,7 +94,6 @@ SUBDIR+=	sot-romeo
 SUBDIR+=	soth
 SUBDIR+=	spark-genom
 SUBDIR+=	sparkyarp-genom
-SUBDIR+=	tcl-genomix
 SUBDIR+= 	track-target-genom
 SUBDIR+=	trajectory-monitor-genom
 SUBDIR+=	urbi

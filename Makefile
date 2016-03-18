@@ -28,7 +28,6 @@ SUBDIR+=	hyper-viewer
 SUBDIR+=	icu-genom
 SUBDIR+=	jafar-lgl
 SUBDIR+=	jafar-qdisplay
-SUBDIR+=	jafar-rednav
 SUBDIR+=	jafar-rtslam
 SUBDIR+=	jointStateMapper
 SUBDIR+=	joystick-genom

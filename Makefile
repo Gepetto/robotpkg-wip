@@ -79,7 +79,6 @@ SUBDIR+= 	py-hla
 SUBDIR+= 	py-laaswm
 SUBDIR+= 	py-mavlink
 SUBDIR+= 	py-morse
-SUBDIR+=	rednav-genom
 SUBDIR+=	rfid-genom
 SUBDIR+=	robotModelParser-libs
 SUBDIR+=	robot-viewer

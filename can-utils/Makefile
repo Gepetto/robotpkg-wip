@@ -2,23 +2,29 @@
 # Created:			Matthieu Herrb on Fri, 21 Feb 2014
 #
 
-DISTNAME=	can-utils-20140201
+DISTNAME=	can-utils-${VERSION}
+VERSION=	20160229
 CATEGORIES=	hardware
 
-DISTFILES=		110af11db13d7ab62684da5c0fd03fbb497645c9.tar.gz
-MASTER_SITES=		https://gitorious.org/linux-can/can-utils/archive/
-MASTER_REPOSITORY=	git git://gitorious.org/linux-can/can-utils.git
+COMMIT=			c68980320412a9e9a93d35bff9f73abe6385347c
+FETCH_METHOD=		git
+MASTER_SITES=		https://github.com/linux-can/can-utils.git@${COMMIT}
+MASTER_REPOSITORY=	git https://github.com/linux-can/can-utils.git
 
 MAINTAINER=	matthieu.herrb@laas.fr
-HOMEPAGE=	https://gitorious.org/linux-can/can-utils/
+HOMEPAGE=	https://github.com/linux-can/can-utils
 COMMENT=	Linux Socket-CAN userspace utilities and tools
 
-LICENSE=	modified-bsd
+LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/linux-can-can-utils/
+WRKSRC=		${WRKDIR}/can-utils-${VERSION}/
 
-MAKE_FLAGS=		PREFIX=${PREFIX}
 ONLY_FOR_PLATFORM=	Linux-%
 
+pre-configure: autoreconf
+
+include ../../mk/sysdep/automake.mk
+include ../../mk/sysdep/autoconf.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk
+

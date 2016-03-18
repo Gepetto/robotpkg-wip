@@ -1,4 +1,4 @@
-@comment Fri Feb 21 18:06:34 CET 2014
+@comment Fri Mar 18 13:31:14 CET 2016
 bin/asc2log
 bin/bcmserver
 bin/can-calc-bit-timing
@@ -12,6 +12,7 @@ bin/canplayer
 bin/cansend
 bin/cansniffer
 bin/isotpdump
+bin/isotpperf
 bin/isotprecv
 bin/isotpsend
 bin/isotpserver

@@ -10,7 +10,6 @@ SUBDIR+=	attentional-genom
 SUBDIR+=	can-utils
 SUBDIR+= 	certi
 SUBDIR+=	chilitags
-SUBDIR+= 	clara
 SUBDIR+=	daqflex-libs
 SUBDIR+=	dptu-genom3
 SUBDIR+=	dynamic-graph-bridge

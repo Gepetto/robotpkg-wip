@@ -2,8 +2,8 @@ Patch for inputing Eigen::Transform as Matrix4d
 
 diff --git a/src/convert-dg-to-py.cc b/src/convert-dg-to-py.cc
 index 0c9cc61..446dba0 100644
---- a/src/convert-dg-to-py.cc
-+++ b/src/convert-dg-to-py.cc
+--- src/convert-dg-to-py.cc
++++ src/convert-dg-to-py.cc
 @@ -49,6 +49,24 @@ namespace dynamicgraph {
  				   "a floating point number.");
  	}
@@ -115,8 +115,8 @@ index 0c9cc61..446dba0 100644
  	}
 diff --git a/src/convert-dg-to-py.hh b/src/convert-dg-to-py.hh
 index 62d6fc2..13f114f 100644
---- a/src/convert-dg-to-py.hh
-+++ b/src/convert-dg-to-py.hh
+--- src/convert-dg-to-py.hh
++++ src/convert-dg-to-py.hh
 @@ -26,6 +26,7 @@ namespace dynamicgraph {
  				   const command::Value::Type& valueType);
        PyObject* vectorToPython(const Vector& vector);

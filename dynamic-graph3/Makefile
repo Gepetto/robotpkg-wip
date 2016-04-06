@@ -4,6 +4,7 @@
 PKG_NAME=		dynamic-graph
 VERSION=		3.0.0
 DISTNAME=		${PKG_NAME}-${VERSION}
+PKGREVISION=		1
 
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=dynamic-graph/}
@@ -25,7 +26,6 @@ CMAKE_ARGS+=		-DMANDIR=${PREFIX}/${PKGMANDIR}
 # library location
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
-PATCH_STRIP?=		-p1
 include ../../math/eigen3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

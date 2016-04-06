@@ -3,8 +3,8 @@ Patch for inputing Eigen::Transform as Matrix4d
 
 diff --git a/include/dynamic-graph/value.h b/include/dynamic-graph/value.h
 index d8adc30..ffa43c0 100644
---- a/include/dynamic-graph/value.h
-+++ b/include/dynamic-graph/value.h
+--- include/dynamic-graph/value.h
++++ include/dynamic-graph/value.h
 @@ -30,8 +30,6 @@ namespace dynamicgraph {
      class Value;
      class DYNAMIC_GRAPH_DLLAPI EitherType {
@@ -63,8 +63,8 @@ index d8adc30..ffa43c0 100644
      };
 diff --git a/src/command/command.cpp b/src/command/command.cpp
 index 7cd2b51..350a6af 100644
---- a/src/command/command.cpp
-+++ b/src/command/command.cpp
+--- src/command/command.cpp
++++ src/command/command.cpp
 @@ -50,7 +50,7 @@ namespace dynamicgraph {
        for (unsigned int iParam=0; iParam < values.size(); iParam++) {
  	if (values[iParam].type() != paramTypes[iParam]) {
@@ -76,8 +76,8 @@ index 7cd2b51..350a6af 100644
  	  throw ExceptionAbstract(ExceptionAbstract::TOOLS, ss.str());
 diff --git a/src/command/value.cpp b/src/command/value.cpp
 index ed77090..4ff3123 100644
---- a/src/command/value.cpp
-+++ b/src/command/value.cpp
+--- src/command/value.cpp
++++ src/command/value.cpp
 @@ -61,9 +61,14 @@ namespace dynamicgraph {
      {
        return value_->vectorValue();

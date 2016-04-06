@@ -2,7 +2,7 @@
 # Created:			Xavier Broquere on Tue, 26 Oct 2010
 #
 
-VERSION=		1.2
+VERSION=		1.3
 DISTNAME=		kukaFri-libs-${VERSION}
 CATEGORIES=		hardware
 COMMENT=		Package based on the Fast Research Interface (FRI) provided by Kuka

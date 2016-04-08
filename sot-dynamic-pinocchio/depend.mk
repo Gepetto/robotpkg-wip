@@ -1,0 +1,28 @@
+# robotpkg Makefile for:	wip/sot-dynamic-pinocchio
+# Created:			Rohan Budhiraja on Fri, 8 Apr 2016
+#
+
+DEPEND_DEPTH:=		${DEPEND_DEPTH}+
+SOT_DYNAMIC_DEPEND_MK:=	${SOT_DYNAMIC_DEPEND_MK}+
+
+ifeq (+,$(DEPEND_DEPTH))
+DEPEND_PKG+=		sot-dynamic
+endif
+
+ifeq (+,$(SOT_DYNAMIC_DEPEND_MK)) # --------------------------------------
+
+PREFER.sot-dynamic?=	robotpkg
+
+SYSTEM_SEARCH.sot-dynamic=\
+	include/sot-dynamic/dynamic.h \
+	'lib/pkgconfig/sot-dynamic.pc:Version/s/[^0-9.]//gp' \
+	lib/plugin/dynamic.so
+
+DEPEND_USE+=		sot-dynamic
+
+DEPEND_ABI.sot-dynamic?=	sot-dynamic>=3.1
+DEPEND_DIR.sot-dynamic?=	../../wip/sot-dynamic-pinocchio
+
+endif # SOT_DYNAMIC_DEPEND_MK --------------------------------------------
+
+DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}

@@ -4,6 +4,7 @@
 VERSION=		3.0.0
 DISTNAME=		dynamic_graph_bridge-${VERSION}
 PKGNAME=		dynamic-graph-bridge-${VERSION}
+PKGREVISION=		1
 
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=dynamic-graph-bridge/}

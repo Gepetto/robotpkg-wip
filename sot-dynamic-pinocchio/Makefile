@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-dynamic/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}proyan/sot-dynamic/tree/topic/sot-pinocchio
 
 MAINTAINER=	gepetto@laas.fr
-CATEGORIES=	motion
+CATEGORIES=	wip
 LICENSE=	gnu-lgpl-v3
 COMMENT=	Create entities to compute a robot dynamics properties
 

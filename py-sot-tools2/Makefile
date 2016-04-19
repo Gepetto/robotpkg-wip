@@ -10,9 +10,9 @@ MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-tools2/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/proyan/sot-tools
 
 MAINTAINER=		gepetto@laas.fr
-CATEGORIES=		motion
+CATEGORIES=		wip
 LICENSE=		gnu-lgpl-v3
-COMMENT=		Python tools for motion/sot-core package
+COMMENT=		Python tools for wip/sot-core3 package
 
 CONFLICTS+=		py[0-9][0-9]-sot-tools-[0-9]*
 DYNAMIC_PLIST_DIRS+=	share/doc/sot-tools

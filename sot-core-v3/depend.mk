@@ -21,7 +21,7 @@ SYSTEM_SEARCH.sot-core-v3=\
 DEPEND_USE+=		sot-core-v3
 
 DEPEND_ABI.sot-core-v3?=	sot-core-v3>=3.0.0
-DEPEND_DIR.sot-core-v3?=	../../wip/sot-core-v33
+DEPEND_DIR.sot-core-v3?=	../../wip/sot-core-v3
 
 endif # SOT_CORE_DEPEND_MK -------------------------------------------------
 

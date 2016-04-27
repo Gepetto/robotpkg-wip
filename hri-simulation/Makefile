@@ -31,9 +31,6 @@ include ../../hardware/platine-genom/depend.mk
 REQD_BUILD_OPTIONS.viman-genom+=python
 include ../../image/viman-genom/depend.mk
 
-REQD_BUILD_OPTIONS.lwr-genom+=python
-include ../../wip/lwr-genom/depend.mk
-
 REQD_BUILD_OPTIONS.genPos-genom+=python
 include ../../interfaces/genPos-genom/depend.mk
 

@@ -33,21 +33,6 @@ define PKG_OPTION_SET.hrp2
 endef
 
 ##
-## Jido
-##
-PKG_OPTION_DESCR.jido=	Compile MHP for Jido
-
-define PKG_OPTION_SET.jido
-  GENOM_ARGS+= -DJIDO
-  GENOM_ARGS+= -DUSE_GLUT
-  include ../../localization/pom-genom/depend.mk
-  include ../../math/gbM/depend.mk
-  include ../../wip/lwr-genom/depend.mk
-  include ../../motion/pilo-genom/depend.mk
-endef
-
-PKG_SUGGESTED_OPTIONS+=	jido
-##
 ## Simulation
 ##
 
@@ -70,17 +55,6 @@ define PKG_OPTION_SET.hri_costspace
   GENOM_ARGS+= -DHRI_COSTSPACE                                                                       
   include ../../wip/libmove3d-planners/depend.mk                                                     
 endef    
-
-
-##
-## Attentional
-##
-PKG_SUPPORTED_OPTIONS+=	attentional
-PKG_OPTION_DESCR.attentional=	Compile MHP with the attentional plugin
-define PKG_OPTION_SET.attentional
-  GENOM_ARGS+= -DATTENTIONAL
-  include ../../wip/attentional-genom/depend.mk
-endef   
 
 ##
 ## Pr2

@@ -5,6 +5,7 @@ include/dynamic_graph_bridge/deprecated.hh
 include/dynamic_graph_bridge/ros_init.hh
 include/dynamic_graph_bridge/ros_interpreter.hh
 include/dynamic_graph_bridge/warning.hh
+include/dynamic_graph_bridge/sot_loader.hh
 lib/librobot_model.so
 lib/libros_bridge.so
 lib/libros_interpreter.so
@@ -12,6 +13,7 @@ lib/libros_joint_state.so
 lib/libros_publish.so
 lib/libros_subscribe.so
 lib/libros_time.so
+lib/libsot_loader.so
 lib/pkgconfig/dynamic_graph_bridge.pc
 ${PYTHON_SITELIB}/dynamic_graph/ros/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/ros/robot_model/__init__.py

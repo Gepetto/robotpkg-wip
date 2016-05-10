@@ -35,7 +35,6 @@ SUBDIR+=	jsbsim
 SUBDIR+=	kukaFri-libs
 SUBDIR+= 	laas-rackham
 SUBDIR+= 	laaswm-gui
-SUBDIR+=	libANN
 SUBDIR+=	libfreenect
 SUBDIR+=	libhatp
 SUBDIR+=	libmove3d

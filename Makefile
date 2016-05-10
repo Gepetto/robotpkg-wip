@@ -9,7 +9,6 @@ SUBDIR+= 	atlaas-genom
 SUBDIR+=	can-utils
 SUBDIR+= 	certi
 SUBDIR+=	chilitags
-SUBDIR+=	daqflex-libs
 SUBDIR+=	dptu-genom3
 SUBDIR+=	dynamic-graph-v3
 SUBDIR+=	dynamic-graph-bridge

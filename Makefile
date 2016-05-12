@@ -81,7 +81,6 @@ SUBDIR+= 	py-morse
 SUBDIR+=	rfid-genom
 SUBDIR+=	robotModelParser-libs
 SUBDIR+=	robot-viewer
-SUBDIR+=	romeo-description
 SUBDIR+=	ros-realtime-tools
 SUBDIR+=	sot-application
 SUBDIR+=	sot-core-v3

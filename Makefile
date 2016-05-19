@@ -94,7 +94,6 @@ SUBDIR+=	soth
 SUBDIR+=	spark-genom
 SUBDIR+=	sparkyarp-genom
 SUBDIR+= 	track-target-genom
-SUBDIR+=	urbi
 SUBDIR+= 	urg
 SUBDIR+=	visuserv-genom
 SUBDIR+= 	vnet-yarp

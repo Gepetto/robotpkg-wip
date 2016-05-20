@@ -1,7 +1,8 @@
-@comment Wed Apr 2 09:56:04 CEST 2014
+@comment Fri May 20 10:40:06 CEST 2016
 include/atlaas/atlaas.hpp
 include/atlaas/common.hpp
 include/atlaas/io.hpp
 include/atlaas/pcd.hpp
+include/atlaas/region.hpp
 lib/libatlaas.so
 lib/pkgconfig/atlaas.pc

@@ -4,7 +4,6 @@ bin/gladysplay
 bin/region_from_rgba
 bin/region_graph
 bin/region_weight
-include/atlaas/region.hpp
 include/gladys/bresenham.hpp
 include/gladys/cache.hpp
 include/gladys/dstar.hpp

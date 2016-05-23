@@ -1,0 +1,11 @@
+--- ./etc/980039-FRI-Driver.init.orig	2011-11-19 21:07:18.000000000 +0100
++++ ./etc/980039-FRI-Driver.init	2016-05-23 17:57:02.808782000 +0200
+@@ -16,5 +16,5 @@
+ 
+ [Logging]
+ NumberOfLoggingFileEntries=60000
+-LoggingPath=/home/lwrcontrol/output
+-LoggingFileName=LWR-Scope.dat
+\ No newline at end of file
++LoggingPath=/tmp
++LoggingFileName=LWR-Scope.dat

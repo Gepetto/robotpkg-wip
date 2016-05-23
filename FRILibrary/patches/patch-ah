@@ -1,0 +1,11 @@
+--- ./src/FastResearchInterfaceLibrary/UDPSocket.cpp.orig	2014-12-03 09:27:36.000000000 +0100
++++ ./src/FastResearchInterfaceLibrary/UDPSocket.cpp	2016-05-23 18:27:33.082396000 +0200
+@@ -157,7 +157,7 @@
+ 		}
+ 		else
+ 		{
+-			fprintf(stderr, "ERROR: Data size incorrect (received: %d, expected %d)\n", DataReceived, sizeof(FRIDataReceivedFromKRC));
++			fprintf(stderr, "ERROR: Data size incorrect (received: %d, expected %zu)\n", DataReceived, sizeof(FRIDataReceivedFromKRC));
+ 			fflush(stderr);
+ 		}
+ 	}

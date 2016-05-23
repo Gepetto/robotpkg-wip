@@ -1,0 +1,17 @@
+--- ./src/FastResearchInterfaceLibrary/FastResearchInterface.cpp.orig	2014-12-03 09:27:36.000000000 +0100
++++ ./src/FastResearchInterfaceLibrary/FastResearchInterface.cpp	2016-05-23 18:26:01.337261000 +0200
+@@ -240,12 +240,12 @@
+ 	}
+ 	else
+ 	{
+-		sprintf(this->LoggingPath, ".%s\0", OS_FOLDER_SEPARATOR);
++		sprintf(this->LoggingPath, ".%s", OS_FOLDER_SEPARATOR);
+ 	}
+ 
+ 	if (strlen(this->LoggingFileName) == 0)
+ 	{
+-		sprintf(this->LoggingFileName, "FRI.dat\0");
++		sprintf(this->LoggingFileName, "FRI.dat");
+ 	}
+ 
+ 	this->DataLogger	=	new DataLogging(	this->RobotName

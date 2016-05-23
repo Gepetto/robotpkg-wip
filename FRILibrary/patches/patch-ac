@@ -1,0 +1,11 @@
+--- ./src/LWRGettingStartedExamples/LWRCartImpedanceControlExample.cpp.orig	2014-12-03 09:27:36.000000000 +0100
++++ ./src/LWRGettingStartedExamples/LWRCartImpedanceControlExample.cpp	2016-05-23 17:54:55.458384000 +0200
+@@ -91,7 +91,7 @@
+ 
+ 	LWRCartImpedanceController	*Robot;
+ 
+-	Robot	=	new LWRCartImpedanceController("/home/lwrcontrol/etc/980039-FRI-Driver.init");
++	Robot	=	new LWRCartImpedanceController(PREFIX "/etc/980039-FRI-Driver.init");
+ 
+ 	fprintf(stdout, "RobotCartImpedanceController object created. Starting the robot...\n");
+ 

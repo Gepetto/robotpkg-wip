@@ -1,0 +1,23 @@
+The Fast Research Interface Library intends to provide a simple user
+interface to the KUKA Light-Weight Robot IV and hides all
+communication and set-up issues behind interface. It is only an
+interface and it does not contain any control functionalities. Without
+much installation efforts, access to different controller interfaces
+of the KUKA system is provided:
+
+    Joint position controller,
+    Cartesian impedance controller, and
+    Joint position controller.
+
+The Fast Research Interface Library runs on a remote PC node with is
+connected to the KRC (KUKA Robot Controller) via an Ethernet
+connection. In intervals of 1 to 100 milliseconds, UDP packages are
+periodically sent from the KRC unit to the remote host. These packages
+contain a complete set of robot control and status data (e.g., joint
+positions, joint torques, drive FRIDriveTemperatures, etc.; cf. FRI
+User Documentation). Users become able to set-up own control
+architectures and/or application-specific controllers for the
+light-weight arm as it is often desired at research institutions.
+
+KRL files (to be installed on the KRC) are installed in 
+${PREFIX}/share/FRILibrary 

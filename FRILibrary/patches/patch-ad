@@ -1,0 +1,11 @@
+--- ./src/LWRGettingStartedExamples/LWRJointImpedanceControlExample.cpp.orig	2014-12-03 09:27:36.000000000 +0100
++++ ./src/LWRGettingStartedExamples/LWRJointImpedanceControlExample.cpp	2016-05-23 18:56:00.196563000 +0200
+@@ -81,7 +81,7 @@
+ 
+ 	LWRJointImpedanceController	*Robot;
+ 
+-	Robot	=	new LWRJointImpedanceController("/home/lwrcontrol/etc/980039-FRI-Driver.init");
++	Robot	=	new LWRJointImpedanceController(PREFIX "/etc/980039-FRI-Driver.init");
+ 
+ 	fprintf(stdout, "RobotJointImpedanceController object created. Starting the robot...\n");
+ 

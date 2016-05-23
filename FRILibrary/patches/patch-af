@@ -1,0 +1,11 @@
+--- ./src/LWRGettingStartedExamples/LWRLoggingExample.cpp.orig	2014-12-03 09:27:36.000000000 +0100
++++ ./src/LWRGettingStartedExamples/LWRLoggingExample.cpp	2016-05-23 17:56:15.514740000 +0200
+@@ -87,7 +87,7 @@
+ 
+ 	LWRJointPositionController	*Robot;
+ 
+-	Robot	=	new LWRJointPositionController("/home/lwrcontrol/etc/980039-FRI-Driver.init");
++	Robot	=	new LWRJointPositionController(PREFIX "/etc/980039-FRI-Driver.init");
+ 
+ 	fprintf(stdout, "RobotJointPositionController object created. Starting the robot...\n");
+ 

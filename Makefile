@@ -14,6 +14,7 @@ SUBDIR+=	dynamic-graph-v3
 SUBDIR+=	dynamic-graph-bridge
 SUBDIR+=	dynamic-graph-bridge-v3
 SUBDIR+=	dynamic-graph-bridge-msgs
+SUBDIR+=	FRILibrary
 SUBDIR+=	gdalwrap
 SUBDIR+=	gest-genom
 SUBDIR+=	gladys

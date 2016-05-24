@@ -34,3 +34,5 @@ lib/libFastResearchInterfaceLibrary.a
 lib/libTypeIRML.a
 share/FRILibrary/KRL/FRIControl.dat
 share/FRILibrary/KRL/FRIControl.src
+@pkgdir etc
+@pkgdir share/FRILibrary

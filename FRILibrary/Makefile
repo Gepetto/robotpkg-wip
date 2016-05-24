@@ -51,7 +51,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/FRILibrary/KRL
 	cd ${WRKSRC}/KRL && \
 		${PAX} -rwp ma . ${PREFIX}/share/FRILibrary/KRL
-	${INSTALL_DATA_DIR} ${PREFIX}/share/FRILibrary/conf
+	${INSTALL_DATA_DIR} ${PREFIX}/etc
 	cd ${WRKSRC}/etc && \
 		${PAX} -rwp ma . ${PREFIX}/etc
 

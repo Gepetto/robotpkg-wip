@@ -29,7 +29,7 @@ PREFER.assimp = robotpkg
 
 # We must use eigen from robotpkg at least for Ubuntu 16.04
 ifeq (Ubuntu,${OPSYS})
-  ifneq (,$(filter 16.04,${OS_VERSION}))
+  ifeq (,$(filter 16.04,${OS_VERSION}))
     PREFER.eigen = robotpkg
   else
     PREFER.eigen = system

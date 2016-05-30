@@ -27,6 +27,15 @@ DEPEND_ABI.eigenpy += eigenpy>=1.3.0
 DEPEND_ABI.hpp-fcl += hpp-fcl>=0.4.1
 PREFER.assimp = robotpkg
 
+# We must use eigen from robotpkg at least for Ubuntu 16.04
+ifeq (Ubuntu,${OPSYS})
+  ifneq (,$(filter 16.04,${OS_VERSION}))
+    PREFER.eigen = robotpkg
+  else
+    PREFER.eigen = system
+  endif
+endif
+
 include ../../wip/py-eigen/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../graphics/urdfdom/depend.mk

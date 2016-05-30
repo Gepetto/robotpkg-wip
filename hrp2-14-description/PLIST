@@ -1,3 +1,8 @@
+@comment Mon May 30 12:18:34 CEST 2016
+include/hrp2/14/description/config.h
+include/hrp2/14/description/config.hh
+include/hrp2/14/description/deprecated.hh
+include/hrp2/14/description/warning.hh
 lib/pkgconfig/hrp2_14_description.pc
 share/hrp2_14_description/capsule/hrp2_14_capsule_param.csv
 share/hrp2_14_description/meshes/BODY.dae

@@ -18,7 +18,7 @@ SYSTEM_SEARCH.pinocchio=\
 
 DEPEND_USE+=		pinocchio
 
-DEPEND_ABI.pinocchio?=	pinocchio>=1.1.0
+DEPEND_ABI.pinocchio?=	pinocchio>=1.1.2
 DEPEND_DIR.pinocchio?=	../../wip/pinocchio
 
 endif # PINOCCHIO_DEPEND_MK -------------------------------------------------

@@ -95,15 +95,6 @@ include/pinocchio/tools/file-explorer.hpp
 include/pinocchio/tools/string-generator.hpp
 include/pinocchio/tools/timer.hpp
 include/pinocchio/warning.hh
-include/src/angle-axis.hpp
-include/src/details.hpp
-include/src/eigenpy.hpp
-include/src/exception.hpp
-include/src/fwd.hpp
-include/src/geometry.hpp
-include/src/map.hpp
-include/src/memory.hpp
-include/src/quaternion.hpp
 lib/libpinocchio.so
 lib/pkgconfig/pinocchio.pc
 ${PYTHON_SITELIB}/pinocchio/__init__.py

@@ -1,20 +1,20 @@
 # robotpkg Makefile for:	wip/pinocchio
 # Created:			Olivier Stasse, Feb 4th 2016
-#
+# Updated:      Justin Carpentier, May 30th 2016
 
-VERSION=		1.1.0
+VERSION=		1.1.2
 DISTNAME=		pinocchio-${VERSION}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=pinocchio/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/pinocchio
 
-MAINTAINER=	hpp@laas.fr
+MAINTAINER=	pinocchio@laas.fr
 CATEGORIES=	wip
 COMMENT=	Efficient rigid body dynamics
 LICENSE=	gnu-lgpl-v3
 
 DYNAMIC_PLIST_DIRS+=	share/doc/pinocchio
-USE_BOOST_LIBS:= python filesystem unit_test_framework
+USE_BOOST_LIBS:= python system filesystem unit_test_framework
 
 CMAKE_ARGS+=    -DPYTHON_EXECUTABLE=${PYTHON}
 CMAKE_ARGS+=    -DPYTHON_INCLUDE_DIR=${PYTHON_INCLUDE}
@@ -24,6 +24,7 @@ CMAKE_ARGS+=    -DPYTHON_SITELIB=${PYTHON_SITELIB}
 DEPEND_ABI.python += python<3
 DEPEND_ABI.assimp += assimp>=3.0
 DEPEND_ABI.eigenpy += eigenpy>=1.3.0
+DEPEND_ABI.hpp-fcl += hpp-fcl>=0.4.1
 PREFER.assimp = robotpkg
 
 include ../../wip/py-eigen/depend.mk

@@ -1,22 +1,21 @@
 # robotpkg Makefile for:	graphics/robot_capsule_urdf
 # Created:			Olivier Stasse on Fri, 19 Jun 2015
 #
+PKGREVISION=		1
 VERSION=		1.0.1
-PKGNAME=		robot-capsule-urdf-${VERSION}
 DISTNAME=		robot-capsule-urdf-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=robot-capsule-urdf/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}laas/robot_capsule_urdf
 
 CATEGORIES=		graphics
 COMMENT=		Provides capsule description of the robots
-# (model copyright hold by Aldebaran Robotics) 
 LICENSE=		2-clause-bsd
 MAINTAINER=		hpp@laas.fr
 
-DYNAMIC_PLIST_DIRS+=	share/doc/robot-capsule-urdf
+DYNAMIC_PLIST_DIRS+=	share/doc/robot_capsule_urdf
 
-include ../../graphics/urdfdom/depend.mk
 include ../../devel/ros-catkin/depend.mk
+include ../../graphics/urdfdom/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk

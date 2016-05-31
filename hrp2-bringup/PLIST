@@ -1,3 +1,9 @@
+@comment Tue May 31 15:38:22 CEST 2016
+include/hrp2/bringup/config.h
+include/hrp2/bringup/config.hh
+include/hrp2/bringup/deprecated.hh
+include/hrp2/bringup/warning.hh
+lib/pkgconfig/hrp2_bringup.pc
 share/hrp2_bringup/config/chrony/README
 share/hrp2_bringup/config/chrony/chrony.conf.hrp2014c
 share/hrp2_bringup/config/chrony/chrony.conf.hrp2014v

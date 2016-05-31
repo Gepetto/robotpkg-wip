@@ -2,12 +2,10 @@
 # Created:			Olivier Stasse on Wed, 17 Jun 2015
 #
 VERSION=		1.0.1
-ROS_PKG=		hrp2-computer-monitor
-ROS_VERSION=		${VERSION}
 DISTNAME=		hrp2-computer-monitor-${VERSION}
-CATEGORIES=		wip	
-MASTER_SITES=		${MASTER_SITE_JRL}ros/${ROS_PKG}/
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_JRL}robots/ros-hrp2/hrp2-computer-monitor
+CATEGORIES=		sysutils
+MASTER_SITES=		${MASTER_SITE_JRL}ros/${PKGBASE}/
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_JRL}robots/ros-hrp2/${PKGBASE}
 
 MAINTAINER=		gepetto@laas.fr
 COMMENT=		Hrp2 ros monitoring package

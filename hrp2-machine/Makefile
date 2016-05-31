@@ -2,8 +2,6 @@
 # Created:			Olivier Stasse on Wed, 17 Jun 2015
 #
 VERSION=		1.0.1
-ROS_PKG=		hrp2-machine
-ROS_VERSION=		${VERSION}
 DISTNAME=		hrp2-machine-${VERSION}
 CATEGORIES=		robots
 MASTER_SITES=		${MASTER_SITE_JRL}ros/${ROS_PKG}/
@@ -19,8 +17,8 @@ RESTRICTED=	Redistribution of repackaged binaries not permitted
 NO_PUBLIC_SRC=	${RESTRICTED}
 NO_PUBLIC_BIN=	${RESTRICTED}
 
+CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 DYNAMIC_PLIST_DIRS+=	share/doc/hrp2_machine
-
 
 include ../../devel/ros-catkin/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk

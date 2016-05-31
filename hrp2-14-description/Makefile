@@ -17,6 +17,8 @@ RESTRICTED=		Redistribution of repackaged binaries not permitted
 NO_PUBLIC_SRC=		${RESTRICTED}
 NO_PUBLIC_BIN=		${RESTRICTED}
 
+CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
+
 WRKSRC=			${WRKDIR}/hrp2_14_description-${VERSION}
 DYNAMIC_PLIST_DIRS+=	share/doc/hrp2_14_description
 

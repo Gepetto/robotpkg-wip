@@ -1,4 +1,4 @@
-@comment Mon May 30 10:23:55 CEST 2016
+@comment Wed Jun 1 16:41:11 CEST 2016
 include/pinocchio/algorithm/aba.hpp
 include/pinocchio/algorithm/aba.hxx
 include/pinocchio/algorithm/center-of-mass.hpp
@@ -51,8 +51,6 @@ include/pinocchio/multibody/joint/joint-variant.hpp
 include/pinocchio/multibody/model.hpp
 include/pinocchio/multibody/model.hxx
 include/pinocchio/multibody/parser/from-collada-to-fcl.hpp
-include/pinocchio/multibody/parser/lua.hpp
-include/pinocchio/multibody/parser/lua/lua_tables.hpp
 include/pinocchio/multibody/parser/sample-models.hpp
 include/pinocchio/multibody/parser/srdf.hpp
 include/pinocchio/multibody/parser/urdf-with-geometry.hpp

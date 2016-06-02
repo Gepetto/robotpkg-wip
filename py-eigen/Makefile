@@ -2,6 +2,7 @@
 # Created:			Olivier Stasse, Feb 3rd 2016
 #
 
+PKGREVISION=		1
 VERSION=		1.3.0
 DISTNAME=		eigenpy-${VERSION}
 
@@ -20,18 +21,19 @@ CMAKE_ARGS+=		-DPYTHON_INCLUDE_DIR=${PYTHON_INCLUDE}
 CMAKE_ARGS+=		-DPYTHON_LIBRARY=${PYTHON_LIB}
 CMAKE_ARGS+=		-DPYTHON_SITELIB=${PYTHON_SITELIB}
 
-USE_BOOST_LIBS:= python
+USE_BOOST_LIBS=		python
 
-DEPEND_ABI.python+=	python<3
-
-include ../../mk/sysdep/python.mk
-include ../../mk/sysdep/py-numpy.mk
-include ../../math/eigen3/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
+include ../../math/eigen3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
+include ../../mk/sysdep/py-numpy.mk
+include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
+
+DEPEND_ABI.python+=	python<3
+
 include ../../mk/robotpkg.mk

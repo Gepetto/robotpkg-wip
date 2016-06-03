@@ -95,7 +95,6 @@ SUBDIR+=	sot-hrprtc-hrp2
 SUBDIR+=	sot-romeo-v3
 SUBDIR+=	soth
 SUBDIR+=	spark-genom
-SUBDIR+=	sparkyarp-genom
 SUBDIR+= 	track-target-genom
 SUBDIR+= 	urg
 SUBDIR+=	visuserv-genom

@@ -83,7 +83,6 @@ SUBDIR+=	py-morse
 SUBDIR+=	py-sot-tools-v3
 SUBDIR+=	rfid-genom
 SUBDIR+=	robot-capsule-urdf
-SUBDIR+=	robot-viewer
 SUBDIR+=	robotModelParser-libs
 SUBDIR+=	sot-application
 SUBDIR+=	sot-core-v3

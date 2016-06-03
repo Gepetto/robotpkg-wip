@@ -87,7 +87,6 @@ SUBDIR+=	rfid-genom
 SUBDIR+=	robot-capsule-urdf
 SUBDIR+=	robot-viewer
 SUBDIR+=	robotModelParser-libs
-SUBDIR+=	ros-realtime-tools
 SUBDIR+=	sot-application
 SUBDIR+=	sot-core-v3
 SUBDIR+=	sot-dynamic-pinocchio-v3

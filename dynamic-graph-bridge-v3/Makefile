@@ -27,7 +27,7 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
 include ../../sysutils/ros-rospack/depend.mk
 include ../../wip/dynamic-graph-bridge-msgs/depend.mk
-include ../../wip/ros-realtime-tools/depend.mk
+include ../../devel/ros-realtime-tools/depend.mk
 include ../../simulation/bullet/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk

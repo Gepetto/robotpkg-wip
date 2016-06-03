@@ -10,8 +10,6 @@ endif
 
 ifeq (+,$(ROS_DYNAMICGRAPHBRIDGE_V3_DEPEND_MK)) # --------------------------------------
 
-include ../../wip/dynamic-graph-bridge-msgs/depend.mk
-
 DEPEND_USE+=			dynamic-graph-bridge-v3
 ROS_DEPEND_USE+=		dynamic-graph-bridge-v3
 

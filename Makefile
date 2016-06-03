@@ -11,7 +11,6 @@ SUBDIR+= 	certi
 SUBDIR+=	chilitags
 SUBDIR+=	dptu-genom3
 SUBDIR+=	dynamic-graph-v3
-SUBDIR+=	dynamic-graph-bridge
 SUBDIR+=	dynamic-graph-bridge-v3
 SUBDIR+=	FRILibrary
 SUBDIR+=	gdalwrap

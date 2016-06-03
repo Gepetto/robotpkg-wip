@@ -12,7 +12,7 @@ MAINTAINER=		hpp@laas.fr
 
 DYNAMIC_PLIST_DIRS+=	share/doc/sot-romeo
 
-include ../../wip/dynamic-graph-bridge/depend.mk
+include ../../motion/dynamic-graph-bridge/depend.mk
 include ../../motion/sot-dynamic/depend.mk
 include ../../motion/py-sot-tools/depend.mk
 include ../../motion/sot-core/depend.mk

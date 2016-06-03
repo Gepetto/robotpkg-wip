@@ -29,7 +29,7 @@ include ../../motion/sot-pattern-generator/depend.mk
 include ../../wip/sot-application/depend.mk
 include ../../wip/sot-dyninv/depend.mk
 include ../../motion/dynamic-graph-bridge-msgs/depend.mk
-include ../../wip/dynamic-graph-bridge/depend.mk
+include ../../motion/dynamic-graph-bridge/depend.mk
 include ../../robots/hrp2-14/depend.mk
 include ../../math/hrp2-dynamics/depend.mk
 include ../../motion/sot-dynamic/depend.mk

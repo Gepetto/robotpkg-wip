@@ -92,7 +92,6 @@ SUBDIR+=	sot-dyninv
 SUBDIR+=	sot-hrp2
 SUBDIR+=	sot-hrp2-v3
 SUBDIR+=	sot-hrprtc-hrp2
-SUBDIR+=	sot-romeo
 SUBDIR+=	sot-romeo-v3
 SUBDIR+=	soth
 SUBDIR+=	spark-genom

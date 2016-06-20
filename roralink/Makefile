@@ -12,8 +12,9 @@ COMMENT=	Network tunnel to allow seamless wire/wireless connections
 
 ONLY_FOR_PLATFORM=      Linux-%
 
-NO_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/roralink
+NO_CONFIGURE=	yes
+INSTALLATION_DIRS=	${PREFIX}/bin
 
 do-install:
 		cd ${WRKSRC} && ${CP} roraclient ${DESTDIR}${PREFIX}/bin/

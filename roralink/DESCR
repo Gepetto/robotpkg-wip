@@ -1,0 +1,8 @@
+Roralink is a tunnel application that allows seamless switches between
+a Wifi connection and a wired connection. 
+
+It was inspired by Willow Garage's robot-forward + wg-openvpn packages
+for the PR2, but aims at beeing lighter to deploy.
+
+For now this package only contains the client (robot side) component.
+

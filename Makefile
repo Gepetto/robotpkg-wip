@@ -83,6 +83,7 @@ SUBDIR+=	py-morse
 SUBDIR+=	py-sot-tools-v3
 SUBDIR+=	rfid-genom
 SUBDIR+=	robot-capsule-urdf
+SUBDIR+=	roralink
 SUBDIR+=	sot-application
 SUBDIR+=	sot-core-v3
 SUBDIR+=	sot-dynamic-pinocchio-v3

@@ -50,5 +50,17 @@ include ../../mk/language/c++.mk
 
 DEPEND_ABI.python +=		python<3
 DEPEND_ABI.urdfdom-headers +=	urdfdom-headers>=0.3
+DEPEND_ABI.urdfdom +=	urdfdom>=0.3
+
+ifeq (Ubuntu,${OPSYS})
+  ifneq (,$(filter 14.04,${OS_VERSION})) # liburdfdom>=0.3.0 not satisfied on 14.04
+    PREFER.urdfdom-headers = system
+    PREFER.urdfdom = system
+  endif
+
+  ifneq (,$(filter 16.04,${OS_VERSION})) # eigen is developmental version on 16.04
+    PREFER.eigen3 = system
+  endif
+endif
 
 include ../../mk/robotpkg.mk

@@ -2,6 +2,7 @@
 # Created:			Olivier Stasse on Thu, 4 Feb 2016
 #
 
+PKGREVISION=		2
 VERSION=		1.1.2
 DISTNAME=		pinocchio-${VERSION}
 
@@ -36,7 +37,6 @@ USE_BOOST_LIBS=		python system filesystem unit_test_framework
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../graphics/assimp/depend.mk
-include ../../graphics/urdfdom-headers/depend.mk
 include ../../graphics/urdfdom/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../path/hpp-fcl/depend.mk
@@ -49,18 +49,6 @@ include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 
 DEPEND_ABI.python +=		python<3
-DEPEND_ABI.urdfdom-headers +=	urdfdom-headers>=0.3
-DEPEND_ABI.urdfdom +=	urdfdom>=0.3
-
-ifeq (Ubuntu,${OPSYS})
-  ifneq (,$(filter 14.04,${OS_VERSION})) # liburdfdom>=0.3.0 not satisfied on 14.04
-    PREFER.urdfdom-headers = system
-    PREFER.urdfdom = system
-  endif
-
-  ifneq (,$(filter 16.04,${OS_VERSION})) # eigen is developmental version on 16.04
-    PREFER.eigen3 = system
-  endif
-endif
+DEPEND_ABI.urdfdom +=	urdfdom>=0.2.3
 
 include ../../mk/robotpkg.mk

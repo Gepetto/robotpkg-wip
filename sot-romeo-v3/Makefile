@@ -17,7 +17,7 @@ MAINTAINER=		hpp@laas.fr
 
 DYNAMIC_PLIST_DIRS+=	share/doc/sot-romeo-v3
 
-
+include ../../sysutils/ros-rospack/depend.mk
 include ../../wip/dynamic-graph-bridge-v3/depend.mk
 include ../../motion/dynamic-graph-bridge-msgs/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk

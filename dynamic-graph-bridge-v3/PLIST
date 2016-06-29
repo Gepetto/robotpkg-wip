@@ -2,7 +2,6 @@
 include/dynamic_graph_bridge/RunPythonFile.h
 include/dynamic_graph_bridge/RunPythonFileRequest.h
 include/dynamic_graph_bridge/RunPythonFileResponse.h
-include/dynamic_graph_bridge/config.h
 include/dynamic_graph_bridge/config.hh
 include/dynamic_graph_bridge/deprecated.hh
 include/dynamic_graph_bridge/ros_init.hh

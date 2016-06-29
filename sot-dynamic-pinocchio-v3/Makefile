@@ -3,16 +3,18 @@
 #
 
 VERSION=		3.1.0
+PKGREVISION=		1
 DISTNAME=		sot-dynamic-pinocchio-v3-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-dynamic-pinocchio-v3/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}proyan/sot-dynamic/tree/topic/sot-pinocchio
+
 
 MAINTAINER=	gepetto@laas.fr
 CATEGORIES=	wip
 LICENSE=	gnu-lgpl-v3
 COMMENT=	Create entities to compute a robot dynamics properties
 
-DYNAMIC_PLIST_DIRS+=	share/doc/sot-dynamic-pinocchio-v3
+DYNAMIC_PLIST_DIRS+=	share/doc/sot-dynamic
 CMAKE_ARGS+=		-DPYTHON_SITELIB=${PYTHON_SITELIB}
 CMAKE_ARGS+=		-DPYTHON_INCLUDE_PATH=${PYTHON_INCLUDE}
 CMAKE_ARGS+=		-DPYTHON_LIBRARY=${PYTHON_LIB}

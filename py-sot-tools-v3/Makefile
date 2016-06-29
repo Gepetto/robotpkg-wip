@@ -16,7 +16,7 @@ COMMENT=		Python tools for wip/sot-core-v3 package
 
 CONFLICTS+=		py[0-9][0-9]-sot-tools-v3-[0-9]*
 CONFLICTS+=		py[0-9][0-9]-sot-tools-[0-9]*
-DYNAMIC_PLIST_DIRS+=	share/doc/sot-tools-v3
+DYNAMIC_PLIST_DIRS+=	share/doc/sot-tools
 
 CMAKE_ARGS+=		-DPYTHON_EXECUTABLE=${PYTHON}
 CMAKE_ARGS+=		-DPYTHON_INCLUDE_DIR=${PYTHON_INCLUDE}

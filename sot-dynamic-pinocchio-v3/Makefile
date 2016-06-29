@@ -36,6 +36,7 @@ include ../../wip/py-sot-tools-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
+include ../../mk/sysdep/tinyxml.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/graphviz.mk
 include ../../mk/sysdep/pdflatex.mk

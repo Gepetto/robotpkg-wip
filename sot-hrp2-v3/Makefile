@@ -15,7 +15,7 @@ COMMENT=		This packages provides a generic Stack Of Tasks library for the humano
 LICENSE=		gnu-lgpl-v3
 MAINTAINER=		hpp@laas.fr
 
-DYNAMIC_PLIST_DIRS+=	share/doc/sot-hrp2-v3
+DYNAMIC_PLIST_DIRS+=	share/doc/sot-hrp2
 
 
 include ../../wip/dynamic-graph-bridge-v3/depend.mk

@@ -18,7 +18,6 @@ MAINTAINER=		hpp@laas.fr
 
 DYNAMIC_PLIST_DIRS+=	share/doc/sot-romeo-v3
 
-include ../../sysutils/ros-rospack/depend.mk
 include ../../wip/dynamic-graph-bridge-v3/depend.mk
 include ../../motion/dynamic-graph-bridge-msgs/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
@@ -27,6 +26,10 @@ include ../../wip/sot-core-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 
+include ../../sysutils/ros-rospack/depend.mk
+include ../../sysutils/console-bridge/depend.mk
+include ../../devel/boost-headers/depend.mk
+include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

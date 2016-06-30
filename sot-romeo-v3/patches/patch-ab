@@ -1,0 +1,13 @@
+diff --git src/CMakeLists.txt src/CMakeLists.txt
+index 91cd64f..db40b6f 100644
+--- src/CMakeLists.txt
++++ src/CMakeLists.txt
+@@ -71,7 +71,7 @@ PKG_CONFIG_USE_DEPENDENCY(${CONTROLLER_NAME} "dynamic-graph")
+ PKG_CONFIG_USE_DEPENDENCY(${CONTROLLER_NAME} "dynamic-graph-python")
+ PKG_CONFIG_USE_DEPENDENCY(${CONTROLLER_NAME} "sot-core")
+ 
+-ROSPACK_USE_DEPENDENCY(${CONTROLLER_NAME} "dynamic_graph_bridge")
++PKG_CONFIG_USE_DEPENDENCY(${CONTROLLER_NAME} "dynamic_graph_bridge")
+ 
+ 
+ IF(UNIX AND NOT APPLE)

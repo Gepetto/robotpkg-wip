@@ -13,3 +13,6 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/hrp2/sot_hrp2_device/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/hrp2_14/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/hrp2_14/prologue.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/hrp2_14/robot.py
+${PYTHON_SITELIB}/dynamic_graph/sot/hrp2_10/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/hrp2_10/prologue.py
+${PYTHON_SITELIB}/dynamic_graph/sot/hrp2_10/robot.py

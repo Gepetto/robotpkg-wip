@@ -16,7 +16,7 @@ LICENSE=		gnu-lgpl-v3
 MAINTAINER=		gepetto@laas.fr
 
 CONFLICTS+=		dynamic-graph
-DYNAMIC_PLIST_DIRS+=	share/doc/dynamic-graph-v3
+DYNAMIC_PLIST_DIRS+=	share/doc/dynamic-graph
 
 # disable -Werror because of x86_64 warnings (must be fixed upstream) and
 # boost + gcc that don't cohabit well depending on their respective versions

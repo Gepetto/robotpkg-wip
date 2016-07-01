@@ -20,7 +20,8 @@ CONFLICTS+=		py-dynamic-graph-v3-[0-9]*
 CONFLICTS+=		py-dynamic-graph-[0-9]*
 CONFLICTS+=		py[0-9][0-9]-dynamic-graph-[0-9]*
 CONFLICTS+=		py[0-9][0-9]-dynamic-graph-v3-[0-9]*
-DYNAMIC_PLIST_DIRS+=	share/doc/dynamic-graph-python-v3
+
+DYNAMIC_PLIST_DIRS+=	share/doc/dynamic-graph-python
 
 CMAKE_ARGS+=		-DPYTHON_EXECUTABLE=${PYTHON}
 CMAKE_ARGS+=		-DPYTHON_INCLUDE_DIR=${PYTHON_INCLUDE}

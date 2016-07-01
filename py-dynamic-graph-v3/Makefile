@@ -37,7 +37,7 @@ CMAKE_ARGS+=		-DCXX_DISABLE_WERROR=yes
 DEPEND_ABI.python+=	python<3
 
 include ../../wip/dynamic-graph-v3/depend.mk
-include ../../math/eigen3.mk
+include ../../math/eigen3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

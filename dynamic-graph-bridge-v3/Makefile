@@ -14,7 +14,7 @@ COMMENT=		This ROS package binds together the ROS framework with the dynamic-gra
 LICENSE=		gnu-lgpl-v3
 MAINTAINER=		hpp@laas.fr
 
-DYNAMIC_PLIST_DIRS+=	share/doc/dynamic_graph_bridge
+DYNAMIC_PLIST_DIRS+=	share/doc/doxygen-html
 
 # disable -Werror because of x86_64 warnings (must be fixed upstream) and
 # boost + gcc that don't cohabit well depending on their respective versions

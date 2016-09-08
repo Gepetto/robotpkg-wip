@@ -1,0 +1,14 @@
+Hack: Take the root joint as freeflyer.
+(This patch assumes that the robot being loaded has no fixed root joint.)
+
+--- src/sot-dynamic.cpp	2016-04-15 15:25:59.000000000 +0200
++++ src/sot-dynamic.cpp	2016-09-08 17:30:26.605146524 +0200
+@@ -410,7 +410,7 @@
+ void Dynamic::parseUrdfFile() {
+   sotDEBUGIN(15);
+   if (m_urdfPath.empty()) std::cerr<<"Set input file first"<<std::endl;
+-  m_model = se3::urdf::buildModel(this->m_urdfPath, false);
++  m_model = se3::urdf::buildModel(this->m_urdfPath, se3::JointModelFreeFlyer(), false);
+   if (m_data) delete m_data;
+   m_data = new se3::Data(m_model);
+   init=true;

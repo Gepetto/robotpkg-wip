@@ -2,8 +2,7 @@
 # Created:			Olivier Stasse, Feb 3rd 2016
 #
 
-PKGREVISION=		1
-VERSION=		1.3.0
+VERSION=		1.3.1
 DISTNAME=		eigenpy-${VERSION}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=eigenpy/}

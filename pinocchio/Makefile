@@ -2,8 +2,7 @@
 # Created:			Olivier Stasse on Thu, 4 Feb 2016
 #
 
-PKGREVISION=		2
-VERSION=		1.1.2
+VERSION=		1.2.0
 DISTNAME=		pinocchio-${VERSION}
 
 MASTER_SITES=		${MASTER_OPENROBOTS:=${PKGBASE}/}

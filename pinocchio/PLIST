@@ -84,8 +84,6 @@ include/pinocchio/multibody/joint/joint.hpp
 include/pinocchio/multibody/model.hpp
 include/pinocchio/multibody/model.hxx
 include/pinocchio/multibody/visitor.hpp
-include/pinocchio/parsers/lua.hpp
-include/pinocchio/parsers/lua/lua_tables.hpp
 include/pinocchio/parsers/python.hpp
 include/pinocchio/parsers/sample-models.hpp
 include/pinocchio/parsers/srdf.hpp

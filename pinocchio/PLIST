@@ -1,24 +1,4 @@
-@comment Wed Sep 28 15:08:13 CEST 2016
-include/pinocchio/SUBPATH/algorithms.hpp
-include/pinocchio/SUBPATH/data.hpp
-include/pinocchio/SUBPATH/eigen_container.hpp
-include/pinocchio/SUBPATH/explog.hpp
-include/pinocchio/SUBPATH/force.hpp
-include/pinocchio/SUBPATH/frame.hpp
-include/pinocchio/SUBPATH/geometry-data.hpp
-include/pinocchio/SUBPATH/geometry-model.hpp
-include/pinocchio/SUBPATH/geometry-object.hpp
-include/pinocchio/SUBPATH/handler.hpp
-include/pinocchio/SUBPATH/inertia.hpp
-include/pinocchio/SUBPATH/joint-derived.hpp
-include/pinocchio/SUBPATH/joint.hpp
-include/pinocchio/SUBPATH/joints-models.hpp
-include/pinocchio/SUBPATH/joints-variant.hpp
-include/pinocchio/SUBPATH/model.hpp
-include/pinocchio/SUBPATH/motion.hpp
-include/pinocchio/SUBPATH/parsers.hpp
-include/pinocchio/SUBPATH/python.hpp
-include/pinocchio/SUBPATH/se3.hpp
+@comment Wed Sep 28 19:33:15 CEST 2016
 include/pinocchio/algorithm/aba.hpp
 include/pinocchio/algorithm/aba.hxx
 include/pinocchio/algorithm/center-of-mass.hpp
@@ -129,16 +109,10 @@ include/pinocchio/warning.hh
 lib/libpinocchio.so
 lib/pkgconfig/pinocchio.pc
 lib/pkgconfig/pinocchiopy.pc
-${PYTHON_SITELIB}/pinocchio/libpinocchio_pywrap.so
 ${PYTHON_SITELIB}/pinocchio/__init__.py
 ${PYTHON_SITELIB}/pinocchio/explog.py
+${PYTHON_SITELIB}/pinocchio/libpinocchio_pywrap.so
 ${PYTHON_SITELIB}/pinocchio/robot_wrapper.py
 ${PYTHON_SITELIB}/pinocchio/romeo_wrapper.py
 ${PYTHON_SITELIB}/pinocchio/rpy.py
 ${PYTHON_SITELIB}/pinocchio/utils.py
-${PYTHON_SITELIB}/pinocchio/__init__.pyc
-${PYTHON_SITELIB}/pinocchio/explog.pyc
-${PYTHON_SITELIB}/pinocchio/robot_wrapper.pyc
-${PYTHON_SITELIB}/pinocchio/romeo_wrapper.pyc
-${PYTHON_SITELIB}/pinocchio/rpy.pyc
-${PYTHON_SITELIB}/pinocchio/utils.pyc

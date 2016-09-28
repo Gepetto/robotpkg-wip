@@ -30,12 +30,12 @@ CMAKE_ARGS+=		BUILD_UNIT_TESTS=ON
 CMAKE_ARGS+=		BUILD_UTILS=OFF
 CMAKE_ARGS+=		BUILD_TESTS_WITH_HPP=OFF
 CMAKE_ARGS+=		BUILD_PYTHON_INTERFACE=ON
+CMAKE_ARGS+=    -DCMAKE_INSTALL_LIBDIR=lib
 
 USE_BOOST_LIBS=		python system filesystem unit_test_framework
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
-include ../../graphics/assimp/depend.mk
 include ../../graphics/urdfdom/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../path/hpp-fcl/depend.mk

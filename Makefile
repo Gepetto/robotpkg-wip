@@ -28,7 +28,6 @@ SUBDIR+=	hrp2-machine
 SUBDIR+=	hyper
 SUBDIR+=	hyper-genom-plugin
 SUBDIR+=	hyper-viewer
-SUBDIR+=	icu-genom
 SUBDIR+=	jafar-lgl
 SUBDIR+=	jafar-qdisplay
 SUBDIR+=	jafar-rtslam

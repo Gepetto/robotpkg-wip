@@ -98,7 +98,6 @@ SUBDIR+=	soth
 SUBDIR+=	spark-genom
 SUBDIR+= 	track-target-genom
 SUBDIR+= 	urg
-SUBDIR+=	visuserv-genom
 SUBDIR+= 	vnet-yarp
 
 include ../mk/robotpkg.subdir.mk

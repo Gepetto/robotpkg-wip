@@ -1,0 +1,51 @@
+diff --git src/CMakeLists.txt src/CMakeLists.txt
+index db40b6f..dc75a50 100644
+--- src/CMakeLists.txt
++++ src/CMakeLists.txt
+@@ -39,7 +39,7 @@ FUNCTION(COMPILE_PLUGIN NAME SOURCES ENTITIES)
+ ENDFUNCTION()
+ 
+ # Compile plug-ins.
+-COMPILE_PLUGIN(dynamic-romeo dynamic-romeo.cpp DynamicRomeo)
++# COMPILE_PLUGIN(dynamic-romeo dynamic-romeo.cpp DynamicRomeo)
+ 
+ 
+ ## 
+diff --git src/dynamic-romeo.cpp src/dynamic-romeo.cpp
+index 9d9daa8..b419cfd 100644
+--- src/dynamic-romeo.cpp
++++ src/dynamic-romeo.cpp
+@@ -35,7 +35,6 @@ namespace dynamicgraph
+ 	: Dynamic (name)
+       {
+ 	sotDEBUGIN(15);
+-	DynamicRomeo::createRobot();
+ 	sotDEBUGOUT(15);
+       }
+ 
+diff --git src/dynamic_graph/sot/romeo/robot.py src/dynamic_graph/sot/romeo/robot.py
+index e9ea89f..9fce636 100644
+--- src/dynamic_graph/sot/romeo/robot.py
++++ src/dynamic_graph/sot/romeo/robot.py
+@@ -16,7 +16,7 @@
+ 
+ from dynamic_graph.sot.dynamics.humanoid_robot import AbstractHumanoidRobot
+ from dynamic_graph.ros import RosRobotModel
+-
++import pinocchio as se3
+ from rospkg import RosPack
+ 
+ # Sot model for the romeo_small.urdf (with gripper, no fingers)
+@@ -204,6 +204,12 @@ class Robot (AbstractHumanoidRobot):
+         self.dynamic = RosRobotModel("{0}_dynamic".format(name))
+         for i in self.jointMap:
+             self.dynamic.addJointMapping(i, self.jointMap[i])
++
++        self.pinocchioModel = se3.buildModelFromUrdf(self.urdfDir + self.urdfName,
++                                                     se3.JointModelFreeFlyer())
++        self.pinocchioData = self.pinocchioModel.createData()
++        self.dynamic.setModel(self.pinocchioModel)
++        self.dynamic.setData(self.pinocchioData)
+         self.dynamic.loadUrdf(self.urdfDir + self.urdfName)
+ 
+         # complete feet position (TODO: move it into srdf file)

@@ -3,3 +3,5 @@ RMD160 (dynamic_graph_bridge-v3-3.0.0.tar.gz) = ecf35dc5c50c24a8aa2ba9b53fc2d497
 Size (dynamic_graph_bridge-v3-3.0.0.tar.gz) = 742833 bytes
 SHA1 (patch-aa) = f1a950bd8ccf882c49dc2de373f12db07b5be852
 SHA1 (patch-ab) = c30d3ad301b8e7911908e12398f8da00e0ad57bd
+SHA1 (patch-ac) = f44cf390bd8e05cfaa73a24429d405c0b3125d27
+SHA1 (patch-ad) = d5eb291f46f3aa9a48d121736954d028c938d2d9

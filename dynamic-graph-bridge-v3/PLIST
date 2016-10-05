@@ -13,14 +13,11 @@ lib/libros_bridge.so
 lib/libros_interpreter.so
 lib/libsot_loader.so
 lib/pkgconfig/dynamic_graph_bridge.pc
-lib/plugin/robot_model.so
 lib/plugin/ros_joint_state.so
 lib/plugin/ros_publish.so
 lib/plugin/ros_subscribe.so
 lib/plugin/ros_time.so
 ${PYTHON_SITELIB}/dynamic_graph/ros/__init__.py
-${PYTHON_SITELIB}/dynamic_graph/ros/robot_model/__init__.py
-${PYTHON_SITELIB}/dynamic_graph/ros/robot_model/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/ros/ros.py
 ${PYTHON_SITELIB}/dynamic_graph/ros/ros_joint_state/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/ros/ros_joint_state/wrap.so

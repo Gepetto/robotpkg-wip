@@ -1,0 +1,134 @@
+diff -Naurb src/dynamic_graph/ros/__init__.py src/dynamic_graph/ros/__init__.py
+--- src/dynamic_graph/ros/__init__.py	2016-04-14 14:43:12.000000000 +0200
++++ src/dynamic_graph/ros/__init__.py	2016-10-05 11:11:51.222830312 +0200
+@@ -1,12 +1,34 @@
++from dynamic_graph.sot.dynamics import Dynamic
+ from ros_publish import RosPublish
+ from ros_subscribe import RosSubscribe
+ from ros_joint_state import RosJointState
+-from robot_model import RosRobotModel
+ 
+ from ros import Ros
+ 
+ # aliases, for retro compatibility
+-ros_import = ros_publish
+-ros_export = ros_subscribe
+ from ros import RosPublish as RosImport
+ from ros import RosSubscribe as RosExport
++
++
++class RosRobotModel(Dynamic):
++    def __init__(self, name):
++        Dynamic.__init__(self, name)
++        self.namespace = "sot_controller"
++        self.jointsParameterName_ = "jrl_map"
++
++    def setJointsNamesParameter(self):
++        import rospy
++        if self.model is not None:
++            parameter_name = self.namespace + "/" + jointsParameterName_
++            jointsName = []
++            for i in xrange(self.model.njoints):
++                jointsName.append(self.model.names[i])
++            rospy.set_param(parameter_name,jointsName)
++        return
++
++    def setNamespace(self, ns):
++        self.namespace = ns
++        return
++
++    def curConf(self):
++        return self.position.value
+diff -Naurb src/robot_model.cpp src/robot_model.cpp
+--- src/robot_model.cpp	2016-04-14 14:43:12.000000000 +0200
++++ src/robot_model.cpp	2016-10-05 11:11:51.222830312 +0200
+@@ -58,13 +58,6 @@
+ 
+ void RosRobotModel::loadUrdf (const std::string& filename)
+ {
+-  // jrl::dynamics::urdf::Parser parser;
+-
+-  //TODO: Specific rep name. link them to the operational frames in pinocchio
+-  //  std::map<std::string, std::string>::const_iterator it = specialJoints_.begin();
+-  //  for (;it!=specialJoints_.end();++it) {
+-  //    parser.specifyREPName(it->first, it->second);
+-  //  }
+   rosInit (false);
+   m_model = se3::urdf::buildModel(filename);
+   this->m_urdfPath = filename;
+@@ -89,13 +82,6 @@
+ 
+ void RosRobotModel::loadFromParameterServer()
+ {
+-  //jrl::dynamics::urdf::Parser parser;
+-
+-  //TODO: Specific rep name. link them to the operational frames in pinocchio
+-  //    std::map<std::string, std::string>::const_iterator it = specialJoints_.begin();
+-  //    for (;it!=specialJoints_.end();++it) {
+-  //        parser.specifyREPName(it->first, it->second);
+-  //    }
+     rosInit (false);
+     std::string robotDescription;
+     ros::param::param<std::string> ("/robot_description", robotDescription, "");
+@@ -119,7 +105,8 @@
+     
+     XmlRpc::XmlRpcValue JointsNamesByRank_;
+     JointsNamesByRank_.setSize(m_model.names.size());
+-    std::vector<std::string>::const_iterator it = m_model.names.begin()+2; //first joint is universe, second is freeflyer
++    //first joint is universe, second is freeflyer
++    std::vector<std::string>::const_iterator it = m_model.names.begin()+2;
+     for (int i=0;it!=m_model.names.end();++it, ++i) JointsNamesByRank_[i]= (*it);
+     nh.setParam(jointsParameterName_, JointsNamesByRank_);
+ }
+diff -Naurb src/ros_joint_state.cpp src/ros_joint_state.cpp
+--- src/ros_joint_state.cpp	2016-10-05 11:33:23.580811195 +0200
++++ src/ros_joint_state.cpp	2016-10-05 11:11:51.210829997 +0200
+@@ -36,23 +36,23 @@
+ }
+ 
+     namespace {
+-      void  buildJointNames (sensor_msgs::JointState& jointState, se3::Model& robot_model) {
++      void  buildJointNames (sensor_msgs::JointState& jointState, se3::Model* robot_model) {
+ 	int cnt = 0;
+-	for (int i=1;i<robot_model.nbody;i++) {	  
++	for (int i=1;i<robot_model->njoints;i++) {
+ 	  // Ignore anchors.
+-	  if (se3::nv(robot_model.joints[i]) != 0) {
++	  if (se3::nv(robot_model->joints[i]) != 0) {
+ 	    // If we only have one dof, the dof name is the joint name.
+-	    if (se3::nv(robot_model.joints[i]) == 1) {
+-	      jointState.name[cnt] =  robot_model.names[i];
++	    if (se3::nv(robot_model->joints[i]) == 1) {
++	      jointState.name[cnt] =  robot_model->names[i];
+ 	      cnt++;
+ 	    }
+ 	    else {
+ 	      // ...otherwise, the dof name is the joint name on which
+ 	      // the dof id is appended.
+-	      int joint_dof = se3::nv(robot_model.joints[i]);
++	      int joint_dof = se3::nv(robot_model->joints[i]);
+ 	      for(int j = 0; j<joint_dof; j++) {
+ 		boost::format fmt("%1%_%2%");
+-		fmt % robot_model.names[i];
++		fmt % robot_model->names[i];
+ 		fmt % j;
+ 		jointState.name[cnt + j] =  fmt.str();
+ 	      }
+@@ -85,14 +85,14 @@
+ 	  return Value ();
+ 	}
+ 
+-      se3::Model& robot_model = dynamic->m_model;
+-      if (robot_model.nbody == 1)
++      se3::Model* robot_model = dynamic->m_model;
++      if (robot_model->njoints == 1)
+ 	{
+ 	  std::cerr << "no robot in the dynamic entity" << std::endl;
+ 	  return Value ();
+ 	}
+ 
+-      entity.jointState ().name.resize (robot_model.nv);
++      entity.jointState ().name.resize (robot_model->nv);
+       buildJointNames (entity.jointState (), robot_model);
+       return Value ();
+     }

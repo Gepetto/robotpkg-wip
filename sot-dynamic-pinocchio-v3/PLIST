@@ -1,6 +1,5 @@
 @comment Fri Dec 6 09:25:38 CET 2013
 include/sot-dynamic/angle-estimator.h
-include/sot-dynamic/config.h
 include/sot-dynamic/config.hh
 include/sot-dynamic/deprecated.hh
 include/sot-dynamic/dynamic.h

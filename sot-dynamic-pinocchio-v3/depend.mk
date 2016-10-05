@@ -20,7 +20,7 @@ SYSTEM_SEARCH.sot-dynamic-pinocchio-v3=\
 
 DEPEND_USE+=		sot-dynamic-pinocchio-v3
 
-DEPEND_ABI.sot-dynamic-pinocchio-v3?=	sot-dynamic-pinocchio-v3>=3.1
+DEPEND_ABI.sot-dynamic-pinocchio-v3?=	sot-dynamic-pinocchio-v3>=3.1.1
 DEPEND_DIR.sot-dynamic-pinocchio-v3?=	../../wip/sot-dynamic-pinocchio-v3
 
 endif # SOT_DYNAMIC_DEPEND_MK --------------------------------------------

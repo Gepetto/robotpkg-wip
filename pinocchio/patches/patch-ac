@@ -1,0 +1,10 @@
+--- CMakeLists.txt~	2016-10-07 00:45:39.662400798 +0200
++++ CMakeLists.txt	2016-10-07 00:45:50.130528490 +0200
+@@ -25,6 +25,7 @@
+ SET(PROJECT_NAME pinocchio)
+ SET(PROJECT_DESCRIPTION "Rigid multi body dynamics algorithms")
+ SET(PROJECT_URL "http://github.com/stack-of-tasks/pinocchio")
++OPTION(INSTALL_DOCUMENTATION "Generate and install the documentation" ON)
+ 
+ SET(DOXYGEN_USE_MATHJAX YES)
+ 

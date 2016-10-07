@@ -48,7 +48,7 @@
      ENDFOREACH()
      FOREACH(FLAG ${${PREFIX}_CFLAGS_OTHER})
 -      SET(CFLAGS "${CFLAGS};$<$<NOT:$<CONFIG:Debug>>:${FLAG}>")
-+      LIST(APPEND CFLAGS "$;$<$<NOT:$<CONFIG:Debug>>:${FLAG}>")
++      LIST(APPEND CFLAGS "$<$<NOT:$<CONFIG:Debug>>:${FLAG}>")
      ENDFOREACH()
    ELSE()
      FOREACH(FLAG ${${PREFIX}_CFLAGS_OTHER})

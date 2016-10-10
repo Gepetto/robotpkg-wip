@@ -1,0 +1,727 @@
+diff --git benchmark/CMakeLists.txt benchmark/CMakeLists.txt
+index 1d254b4..a2db32c 100644
+--- benchmark/CMakeLists.txt
++++ benchmark/CMakeLists.txt
+@@ -30,17 +30,6 @@ ELSE(BUILD_BENCHMARK)
+   ADD_EXECUTABLE(timings EXCLUDE_FROM_ALL timings.cpp)
+ ENDIF(BUILD_BENCHMARK)
+ TARGET_LINK_LIBRARIES (timings ${PROJECT_NAME})
+-PKG_CONFIG_USE_DEPENDENCY(timings eigen3)
+-IF(BUILD_PYTHON_INTERFACE)
+-  TARGET_LINK_LIBRARIES(timings ${PYTHON_LIBRARIES})
+-ENDIF(BUILD_PYTHON_INTERFACE)
+-IF(${URDFDOM_FOUND})
+-  PKG_CONFIG_USE_DEPENDENCY(timings urdfdom)
+-ENDIF(${URDFDOM_FOUND})
+-IF(HPP_FCL_FOUND)
+-  PKG_CONFIG_USE_DEPENDENCY(timings hpp-fcl)
+-  ADD_TEST_CFLAGS(timings "-DWITH_HPP_FCL")
+-ENDIF(HPP_FCL_FOUND)
+ SET_TARGET_PROPERTIES (timings PROPERTIES COMPILE_DEFINITIONS PINOCCHIO_SOURCE_DIR="${${PROJECT_NAME}_SOURCE_DIR}")
+ 
+ # timings-eigen
+@@ -62,7 +51,6 @@ IF(URDFDOM_FOUND AND HPP_FCL_FOUND)
+     ADD_EXECUTABLE(geomTimings EXCLUDE_FROM_ALL timings-geometry.cpp)
+   ENDIF(BUILD_BENCHMARK)
+ 
+-    ADD_TEST_CFLAGS(geomTimings "-DWITH_HPP_FCL")
+     IF(BUILD_TESTS_WITH_HPP)
+       ADD_OPTIONAL_DEPENDENCY("hpp-model-urdf")
+       IF(HPP_MODEL_URDF_FOUND)
+@@ -70,12 +58,9 @@ IF(URDFDOM_FOUND AND HPP_FCL_FOUND)
+         ADD_TEST_CFLAGS(geomTimings "-DWITH_HPP_MODEL_URDF")
+       ENDIF(HPP_MODEL_URDF_FOUND)
+     ENDIF(BUILD_TESTS_WITH_HPP)
+-  PKG_CONFIG_USE_DEPENDENCY(geomTimings hpp-fcl)
+ 
+   TARGET_LINK_LIBRARIES (geomTimings ${PROJECT_NAME})
+-  IF(BUILD_PYTHON_INTERFACE)
+-    TARGET_LINK_LIBRARIES(geomTimings ${PYTHON_LIBRARIES})
+-  ENDIF(BUILD_PYTHON_INTERFACE)
++  PKG_CONFIG_USE_DEPENDENCY(geomTimings hpp-fcl)
+   SET_TARGET_PROPERTIES (geomTimings PROPERTIES COMPILE_DEFINITIONS PINOCCHIO_SOURCE_DIR="${${PROJECT_NAME}_SOURCE_DIR}")
+ ENDIF(URDFDOM_FOUND AND HPP_FCL_FOUND)
+ 
+diff --git unittest/CMakeLists.txt unittest/CMakeLists.txt
+index 1e426ac..368f852 100644
+--- unittest/CMakeLists.txt
++++ unittest/CMakeLists.txt
+@@ -18,6 +18,11 @@
+ # --- MACROS ------------------------------------------------------------------
+ # --- MACROS ------------------------------------------------------------------
+ # --- MACROS ------------------------------------------------------------------
++
++MACRO(ADD_TEST_CFLAGS target flag)
++  SET_PROPERTY(TARGET ${target} APPEND_STRING PROPERTY COMPILE_FLAGS " ${flag}")
++ENDMACRO(ADD_TEST_CFLAGS)
++
+ MACRO(ADD_UNIT_TEST NAME PKGS)
+   IF (BUILD_UNIT_TESTS)
+     ADD_EXECUTABLE(${NAME} ${NAME})
+@@ -25,6 +30,10 @@ MACRO(ADD_UNIT_TEST NAME PKGS)
+     ADD_EXECUTABLE(${NAME} EXCLUDE_FROM_ALL ${NAME})
+   ENDIF (BUILD_UNIT_TESTS)
+   SET_TARGET_PROPERTIES(${NAME} PROPERTIES LINKER_LANGUAGE CXX)
++  ADD_TEST_CFLAGS(${NAME} "-DBOOST_TEST_DYN_LINK") 
++  SET(MODULE_NAME "${NAME}Test")
++  STRING(REGEX REPLACE "-" "_" MODULE_NAME ${MODULE_NAME})
++  ADD_TEST_CFLAGS(${NAME} "-DBOOST_TEST_MODULE=${MODULE_NAME}") 
+ 
+   FOREACH(PKG ${PKGS})
+     PKG_CONFIG_USE_DEPENDENCY(${NAME} ${PKG})
+@@ -32,7 +41,6 @@ MACRO(ADD_UNIT_TEST NAME PKGS)
+ 
+   IF(HPP_FCL_FOUND)
+     PKG_CONFIG_USE_DEPENDENCY(${NAME} hpp-fcl)
+-    ADD_TEST_CFLAGS(${NAME} "-DWITH_HPP_FCL")
+   ENDIF(HPP_FCL_FOUND)
+ 
+   TARGET_LINK_LIBRARIES(${NAME} ${PROJECT_NAME})
+@@ -42,10 +50,6 @@ MACRO(ADD_UNIT_TEST NAME PKGS)
+   ADD_DEPENDENCIES(check ${NAME})
+ ENDMACRO(ADD_UNIT_TEST)
+ 
+-MACRO(ADD_TEST_CFLAGS target flag)
+-  SET_PROPERTY(TARGET ${target} APPEND_STRING PROPERTY COMPILE_FLAGS " ${flag}")
+-ENDMACRO(ADD_TEST_CFLAGS)
+-
+ # --- RULES -------------------------------------------------------------------
+ # --- RULES -------------------------------------------------------------------
+ # --- RULES -------------------------------------------------------------------
+@@ -104,7 +108,11 @@ IF(BUILD_PYTHON_INTERFACE)
+   ELSE (BUILD_UNIT_TESTS)
+     ADD_EXECUTABLE(python_parser EXCLUDE_FROM_ALL python_parser.cpp)
+   ENDIF (BUILD_UNIT_TESTS)
++  ADD_TEST_CFLAGS(python_parser "-DBOOST_TEST_DYN_LINK") 
+   ADD_TEST_CFLAGS(python_parser '-DPINOCCHIO_SOURCE_DIR=\\\"${${PROJECT_NAME}_SOURCE_DIR}\\\"')
++  SET(MODULE_NAME "python_parserTest")
++  ADD_TEST_CFLAGS(python_parser "-DBOOST_TEST_MODULE=${MODULE_NAME}") 
++
+   TARGET_LINK_LIBRARIES(python_parser ${PYWRAP})
+   TARGET_LINK_LIBRARIES(python_parser ${PYTHON_LIBRARIES})
+   TARGET_LINK_LIBRARIES(python_parser ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
+diff --git unittest/aba.cpp unittest/aba.cpp
+index 89b6f73..24baa25 100644
+--- unittest/aba.cpp
++++ unittest/aba.cpp
+@@ -29,12 +29,10 @@
+ 
+ #include <iostream>
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE AbaTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+-BOOST_AUTO_TEST_SUITE ( Aba )
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_aba_simple )
+ {
+diff --git unittest/algo-check.cpp unittest/algo-check.cpp
+index 9fafdc7..e8a47ed 100644
+--- unittest/algo-check.cpp
++++ unittest/algo-check.cpp
+@@ -10,8 +10,6 @@
+ 
+ using namespace se3;
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE AlgoCheckTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+@@ -21,7 +19,7 @@ struct Check1 : public AlgorithmCheckerBase<Check1>
+   bool checkModel_impl( const Model& ) const { return true; }
+ };
+ 
+-BOOST_AUTO_TEST_SUITE ( AlgoCheck )
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_check )
+ {
+diff --git unittest/cholesky.cpp unittest/cholesky.cpp
+index a0ca681..7a8cb48 100644
+--- unittest/cholesky.cpp
++++ unittest/cholesky.cpp
+@@ -34,13 +34,11 @@
+ #  include <Eigen/Cholesky>
+ #endif
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE CholeskyTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+ 
+-BOOST_AUTO_TEST_SUITE ( CholeskyTest)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_cholesky )
+ {
+diff --git unittest/com.cpp unittest/com.cpp
+index 200f8e4..09e656f 100644
+--- unittest/com.cpp
++++ unittest/com.cpp
+@@ -25,13 +25,10 @@
+ 
+ #include <iostream>
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE ComTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+-
+-BOOST_AUTO_TEST_SUITE ( ComTest)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_com )
+ {
+diff --git unittest/compute-all-terms.cpp unittest/compute-all-terms.cpp
+index 9f8c9cb..a703820 100644
+--- unittest/compute-all-terms.cpp
++++ unittest/compute-all-terms.cpp
+@@ -26,8 +26,6 @@
+ #include "pinocchio/parsers/sample-models.hpp"
+ #include "pinocchio/tools/timer.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE CATTests
+ #include <boost/test/unit_test.hpp>
+ 
+ #include <iostream>
+@@ -39,7 +37,7 @@
+ #endif
+ 
+ 
+-BOOST_AUTO_TEST_SUITE ( ComputeAllTerms )
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_against_algo )
+ {
+diff --git unittest/constraint.cpp unittest/constraint.cpp
+index 571d4fe..4fdc1a5 100644
+--- unittest/constraint.cpp
++++ unittest/constraint.cpp
+@@ -25,12 +25,10 @@
+ #include "pinocchio/multibody/force-set.hpp"
+ #include "pinocchio/multibody/joint/joint-revolute.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE ConstraintTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+-BOOST_AUTO_TEST_SUITE ( Constraint )
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_ForceSet )
+ {
+diff --git unittest/crba.cpp unittest/crba.cpp
+index a2ea0bd..bd05bba 100644
+--- unittest/crba.cpp
++++ unittest/crba.cpp
+@@ -32,12 +32,10 @@
+ 
+ #include <iostream>
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE CrbaTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+-BOOST_AUTO_TEST_SUITE ( CrbaTest)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_crba )
+ {
+diff --git unittest/dynamics.cpp unittest/dynamics.cpp
+index 1b0ae86..5ef8668 100644
+--- unittest/dynamics.cpp
++++ unittest/dynamics.cpp
+@@ -24,13 +24,10 @@
+ 
+ #include <iostream>
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE DynamicTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+-
+-BOOST_AUTO_TEST_SUITE ( DynamicsTest)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_FD )
+ {
+diff --git unittest/energy.cpp unittest/energy.cpp
+index 59e74aa..7532a0e 100644
+--- unittest/energy.cpp
++++ unittest/energy.cpp
+@@ -20,13 +20,11 @@
+ 
+ #include "pinocchio/parsers/sample-models.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE ComTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ #include <boost/test/floating_point_comparison.hpp>
+ 
+-BOOST_AUTO_TEST_SUITE(EnergyTest)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE(test_kinetic_energy)
+ {
+diff --git unittest/explog.cpp unittest/explog.cpp
+index d82e380..d44ef9d 100644
+--- unittest/explog.cpp
++++ unittest/explog.cpp
+@@ -16,8 +16,6 @@
+ // Pinocchio If not, see
+ // <http://www.gnu.org/licenses/>.
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE JointConfigurationsTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+@@ -25,7 +23,7 @@
+ 
+ using namespace se3;
+ 
+-BOOST_AUTO_TEST_SUITE(ExpLog)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE(exp)
+ {
+diff --git unittest/finite-differences.cpp unittest/finite-differences.cpp
+index b37d82a..9c02670 100644
+--- unittest/finite-differences.cpp
++++ unittest/finite-differences.cpp
+@@ -15,8 +15,6 @@
+ // Pinocchio If not, see
+ // <http://www.gnu.org/licenses/>.
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE JointConfigurationsTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+@@ -169,7 +167,7 @@ void FiniteDiffJoint::operator()< JointModelComposite > (JointModelBase<JointMod
+   // BOOST_CHECK(S.isApprox(S_ref,eps*1e1)); //@TODO Uncomment to test once JointComposite maths are ok
+ }
+ 
+-BOOST_AUTO_TEST_SUITE(FiniteDifferences)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE(increment)
+ {
+diff --git unittest/frames.cpp unittest/frames.cpp
+index 2bd2261..0d3ac4d 100644
+--- unittest/frames.cpp
++++ unittest/frames.cpp
+@@ -25,12 +25,10 @@
+ 
+ #include <iostream>
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE FramesTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+-BOOST_AUTO_TEST_SUITE ( FramesTest)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_kinematics )
+ {
+diff --git unittest/fusion.cpp unittest/fusion.cpp
+index e0c8911..ba2214b 100644
+--- unittest/fusion.cpp
++++ unittest/fusion.cpp
+@@ -29,8 +29,6 @@
+ #include "pinocchio/tools/timer.hpp"
+ #include <Eigen/Core>
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE FusionTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+@@ -151,8 +149,7 @@ namespace boost {
+   }}
+ 
+ 
+-
+-BOOST_AUTO_TEST_SUITE ( FusionTest)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_fusion )
+ {
+diff --git unittest/geom.cpp unittest/geom.cpp
+index 724368b..83e2974 100644
+--- unittest/geom.cpp
++++ unittest/geom.cpp
+@@ -37,8 +37,6 @@
+ #include <hpp/model/urdf/util.hh>
+ #endif
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE GeomTest
+ #include <boost/test/unit_test.hpp>
+ 
+ using namespace se3;
+@@ -134,8 +132,7 @@ void loadHumanoidPathPlanerModel (const hpp::model::HumanoidRobotPtr_t& robot,
+ 
+ #endif
+ 
+-
+-BOOST_AUTO_TEST_SUITE ( GeomTest )
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( GeomNoFcl )
+ {
+diff --git unittest/jacobian.cpp unittest/jacobian.cpp
+index c664eed..1145aa7 100644
+--- unittest/jacobian.cpp
++++ unittest/jacobian.cpp
+@@ -24,12 +24,10 @@
+ 
+ #include <iostream>
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE JacobianTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+-BOOST_AUTO_TEST_SUITE ( JacobianTest)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_jacobian )
+ {
+diff --git unittest/joint-composite.cpp unittest/joint-composite.cpp
+index 8a16f8c..ad348f7 100644
+--- unittest/joint-composite.cpp
++++ unittest/joint-composite.cpp
+@@ -28,8 +28,6 @@
+ #include <iostream>
+ #include <cmath>
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE JointCompositeTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+@@ -135,9 +133,7 @@ struct TestJointComposite{
+ };
+ 
+ 
+-
+-
+-BOOST_AUTO_TEST_SUITE ( JointCompositeTest)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ // Test that a composite joint can contain any type of joint
+ BOOST_AUTO_TEST_CASE ( test_all_joints )
+diff --git unittest/joint-configurations.cpp unittest/joint-configurations.cpp
+index c9a9123..49be051 100644
+--- unittest/joint-configurations.cpp
++++ unittest/joint-configurations.cpp
+@@ -19,8 +19,6 @@
+ #include "pinocchio/algorithm/joint-configuration.hpp"
+ #include "pinocchio/math/quaternion.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE JointConfigurationsTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+@@ -71,7 +69,7 @@ void buildModel(Model & model)
+   addJointAndBody(model,JointModelPlanar(),model.getJointId("translation_joint"),SE3::Identity(),"planar",Inertia::Random());
+ }
+ 
+-BOOST_AUTO_TEST_SUITE ( JointConfigurationsTest )
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ struct TestIntegrationJoint
+ {
+diff --git unittest/joint.cpp unittest/joint.cpp
+index 1b3dc7b..9c2398a 100644
+--- unittest/joint.cpp
++++ unittest/joint.cpp
+@@ -18,8 +18,6 @@
+ #include "pinocchio/multibody/joint/joint-composite.hpp"
+ #include "pinocchio/multibody/joint/joint.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE JointTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+@@ -125,7 +123,7 @@ struct TestJoint{
+ };
+ 
+ 
+-BOOST_AUTO_TEST_SUITE ( JointTest)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_all_joints )
+ {
+diff --git unittest/joints.cpp unittest/joints.cpp
+index 8f7ba4c..43577b5 100644
+--- unittest/joints.cpp
++++ unittest/joints.cpp
+@@ -38,8 +38,6 @@
+ #include "pinocchio/algorithm/jacobian.hpp"
+ #include "pinocchio/algorithm/compute-all-terms.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE JointsTest
+ #include <boost/test/unit_test.hpp>
+ 
+ //#define VERBOSE
+@@ -79,7 +77,7 @@ void addJointAndBody(Model & model, const JointModelBase<D> & jmodel, const Mode
+   model.appendBodyToJoint(idx,Y);
+ }
+ 
+-BOOST_AUTO_TEST_SUITE (JointRevoluteUnaligned)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE (vsRX)
+ {
+diff --git unittest/lua.cpp unittest/lua.cpp
+index 39cef00..af99431 100644
+--- unittest/lua.cpp
++++ unittest/lua.cpp
+@@ -20,12 +20,10 @@
+ #include "pinocchio/multibody/model.hpp"
+ #include "pinocchio/parsers/lua.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE LuaTest
+ #include <boost/test/unit_test.hpp>
+ 
+ 
+-BOOST_AUTO_TEST_SUITE ( ParsingLuaFile )
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( buildModel )
+ {
+diff --git unittest/model.cpp unittest/model.cpp
+index eac27fe..a53fd55 100644
+--- unittest/model.cpp
++++ unittest/model.cpp
+@@ -15,8 +15,6 @@
+ // Pinocchio If not, see
+ // <http://www.gnu.org/licenses/>.
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE JointTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+@@ -25,7 +23,7 @@
+ 
+ using namespace se3;
+ 
+-BOOST_AUTO_TEST_SUITE(Modeltest)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE(test_model_subtree)
+ {
+diff --git unittest/python_parser.cpp unittest/python_parser.cpp
+index 6512cb6..69f7c54 100644
+--- unittest/python_parser.cpp
++++ unittest/python_parser.cpp
+@@ -20,12 +20,9 @@
+ #include "pinocchio/multibody/model.hpp"
+ #include "pinocchio/parsers/python.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE PythonTest
+ #include <boost/test/unit_test.hpp>
+ 
+-
+-BOOST_AUTO_TEST_SUITE ( ParsingPythonFile )
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( buildModel )
+ {
+diff --git unittest/rnea.cpp unittest/rnea.cpp
+index 7398e97..a0e12ae 100644
+--- unittest/rnea.cpp
++++ unittest/rnea.cpp
+@@ -39,12 +39,10 @@
+ #include <pmmintrin.h>
+ #endif
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE RneaTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+-BOOST_AUTO_TEST_SUITE ( Rnea )
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_rnea )
+ {
+diff --git unittest/srdf.cpp unittest/srdf.cpp
+index 6fec8b5..0b748de 100644
+--- unittest/srdf.cpp
++++ unittest/srdf.cpp
+@@ -21,14 +21,12 @@
+ #include "pinocchio/parsers/urdf.hpp"
+ #include "pinocchio/parsers/srdf.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE UrdfTest
+ #include <boost/test/unit_test.hpp>
+ 
+ using namespace se3;
+ using namespace std;
+ 
+-BOOST_AUTO_TEST_SUITE(SRDF)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE(removeCollisionPairs)
+ {
+diff --git unittest/symmetric.cpp unittest/symmetric.cpp
+index b636eb3..d8560fe 100644
+--- unittest/symmetric.cpp
++++ unittest/symmetric.cpp
+@@ -41,8 +41,6 @@
+ 
+ #include "pinocchio/spatial/symmetric3.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE symmetricTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+@@ -85,7 +83,7 @@ void timeSelfAdj( const Eigen::Matrix3d & A,
+     = A * S * A.transpose();
+ }
+ 
+-BOOST_AUTO_TEST_SUITE ( symmetricTest)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ /* --- PINOCCHIO ------------------------------------------------------------ */
+ /* --- PINOCCHIO ------------------------------------------------------------ */
+diff --git unittest/tspatial.cpp unittest/tspatial.cpp
+index b64e7ef..5c65967 100644
+--- unittest/tspatial.cpp
++++ unittest/tspatial.cpp
+@@ -24,12 +24,10 @@
+ #include "pinocchio/spatial/act-on-set.hpp"
+ #include "pinocchio/spatial/explog.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE tspatialTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+-BOOST_AUTO_TEST_SUITE ( tspatialTest)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_SE3 )
+ {
+diff --git unittest/udut.cpp unittest/udut.cpp
+index ba97730..2b1d3ef 100644
+--- unittest/udut.cpp
++++ unittest/udut.cpp
+@@ -19,8 +19,6 @@
+ #include <Eigen/Core>
+ #include <pinocchio/spatial/skew.hpp>
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE UdutTest
+ #include <boost/test/unit_test.hpp>
+ 
+ template<int N>
+@@ -47,7 +45,7 @@ void udut( Eigen::Matrix<double,N,N> & M )
+       }
+   }
+ 
+-BOOST_AUTO_TEST_SUITE ( Udut )
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( udut )
+ {
+diff --git unittest/urdf.cpp unittest/urdf.cpp
+index a63dc41..c7504a0 100644
+--- unittest/urdf.cpp
++++ unittest/urdf.cpp
+@@ -20,12 +20,10 @@
+ #include "pinocchio/multibody/model.hpp"
+ #include "pinocchio/parsers/urdf.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE UrdfTest
+ #include <boost/test/unit_test.hpp>
+ 
+ 
+-BOOST_AUTO_TEST_SUITE ( ParsingUrdfFile )
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( buildModel )
+ {
+diff --git unittest/value.cpp unittest/value.cpp
+index 4ac8022..8cccf31 100644
+--- unittest/value.cpp
++++ unittest/value.cpp
+@@ -36,12 +36,9 @@
+ #include "pinocchio/algorithm/rnea.hpp"
+ #include "pinocchio/algorithm/kinematics.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE ValueTest
+ #include <boost/test/unit_test.hpp>
+ 
+-
+-BOOST_AUTO_TEST_SUITE ( RneaRevoluteJoints )
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_000 )
+ {
+diff --git unittest/variant.cpp unittest/variant.cpp
+index 360a43f..105a3fe 100644
+--- unittest/variant.cpp
++++ unittest/variant.cpp
+@@ -23,12 +23,10 @@
+ 
+ #include "pinocchio/tools/timer.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE VariantTest
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+-BOOST_AUTO_TEST_SUITE ( VariantTest)
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_variant )
+ {
+diff --git unittest/visitor.cpp unittest/visitor.cpp
+index bd33615..60b2568 100644
+--- unittest/visitor.cpp
++++ unittest/visitor.cpp
+@@ -21,9 +21,6 @@
+ #include <pinocchio/multibody/model.hpp>
+ #include "pinocchio/multibody/visitor.hpp"
+ 
+-#define BOOST_TEST_DYN_LINK
+-#define BOOST_TEST_MODULE   ModuleTestVisitor
+-
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
+@@ -75,7 +72,7 @@ namespace se3
+  * joint model revolute unaligned. 
+  */
+ 
+-BOOST_AUTO_TEST_SUITE ( TestVisitor )
++BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE ( test_runal )
+ {

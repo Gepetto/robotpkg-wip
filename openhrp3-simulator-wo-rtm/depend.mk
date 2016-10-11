@@ -13,8 +13,7 @@ ifeq (+,$(OPENHRP3_SIMULATOR_WO_RTM_DEPEND_MK)) # ------------------------------
 
 PREFER.openhrp3_simulator_wo_rtm?=	robotpkg
 
-SYSTEM_SEARCH.openhrp3_simulator_wo_rtm=\
-  'lib/pkgconfig/openhrp3-simulator-wo-rtm.pc:/Version/s/[^0-9.]//gp'
+SYSTEM_SEARCH.openhrp3-simulator-wo-rtm='lib/pkgconfig/openhrp3-simulator-wo-rtm.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		openhrp3-simulator-wo-rtm
 

@@ -1,0 +1,29 @@
+diff --git src/dynamic_graph/sot/romeo/robot.py src/dynamic_graph/sot/romeo/robot.py
+index 9fce636..d543666 100644
+--- src/dynamic_graph/sot/romeo/robot.py
++++ src/dynamic_graph/sot/romeo/robot.py
+@@ -168,8 +168,6 @@ class Robot (AbstractHumanoidRobot):
+         #0.0,
+     )
+ 
+-    jointMap = { }
+-    jointMap['BODY'] = 'body'
+ 
+     def __init__(self, name, 
+                  device = None,
+@@ -202,15 +200,12 @@ class Robot (AbstractHumanoidRobot):
+ 
+         # correct the name of the body link
+         self.dynamic = RosRobotModel("{0}_dynamic".format(name))
+-        for i in self.jointMap:
+-            self.dynamic.addJointMapping(i, self.jointMap[i])
+ 
+         self.pinocchioModel = se3.buildModelFromUrdf(self.urdfDir + self.urdfName,
+                                                      se3.JointModelFreeFlyer())
+         self.pinocchioData = self.pinocchioModel.createData()
+         self.dynamic.setModel(self.pinocchioModel)
+         self.dynamic.setData(self.pinocchioData)
+-        self.dynamic.loadUrdf(self.urdfDir + self.urdfName)
+ 
+         # complete feet position (TODO: move it into srdf file)
+         #ankle =self.dynamic.getAnklePositionInFootFrame()

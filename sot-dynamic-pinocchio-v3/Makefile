@@ -14,6 +14,9 @@ CATEGORIES=	wip
 LICENSE=	gnu-lgpl-v3
 COMMENT=	Create entities to compute a robot dynamics properties
 
+# parallel builds would consume all memory because of the g++ process size
+MAKE_JOBS_SAFE=		no
+
 DYNAMIC_PLIST_DIRS+=	share/doc/sot-dynamic
 CMAKE_ARGS+=		-DPYTHON_SITELIB=${PYTHON_SITELIB}
 CMAKE_ARGS+=		-DPYTHON_INCLUDE_PATH=${PYTHON_INCLUDE}

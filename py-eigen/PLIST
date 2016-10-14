@@ -1,4 +1,4 @@
-@comment Thu Sep 22 19:15:48 CEST 2016
+@comment Fri Oct 14 15:16:28 CEST 2016
 include/eigenpy/angle-axis.hpp
 include/eigenpy/config.hh
 include/eigenpy/deprecated.hh
@@ -11,14 +11,5 @@ include/eigenpy/map.hpp
 include/eigenpy/memory.hpp
 include/eigenpy/quaternion.hpp
 include/eigenpy/warning.hh
-include/src/angle-axis.hpp
-include/src/details.hpp
-include/src/eigenpy.hpp
-include/src/exception.hpp
-include/src/fwd.hpp
-include/src/geometry.hpp
-include/src/map.hpp
-include/src/memory.hpp
-include/src/quaternion.hpp
 lib/libeigenpy.so
 lib/pkgconfig/eigenpy.pc

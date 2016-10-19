@@ -1,0 +1,5 @@
+@comment Wed Oct 19 16:15:31 CEST 2016
+share/simple_humanoid_description/package.xml
+share/simple_humanoid_description/srdf/simple_humanoid.srdf
+share/simple_humanoid_description/urdf/simple_humanoid.urdf
+lib/pkgconfig/simple_humanoid_description.pc

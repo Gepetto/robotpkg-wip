@@ -1,0 +1,14 @@
+@comment Fri Mar 1 14:23:47 CET 2013
+lib/pkgconfig/jrl-walkgen.pc
+include/jrl/walkgen/patterngeneratorinterface.hh
+include/jrl/walkgen/pgtypes.hh
+include/jrl/walkgen/pinocchiorobot.hh
+lib/libjrl-walkgen.so.${PKGVERSION}
+lib/libjrl-walkgen.so
+share/jrl/dynamics/examples/TestFootPrintPGInterfaceData.cpp
+share/jrl/dynamics/examples/TestFootPrintPGInterfaceData.h
+share/jrl/dynamics/examples/TestFootPrintPGInterface.cpp
+share/jrl/dynamics/examples/TestHerdt2010.cpp
+share/jrl/dynamics/examples/CommonTools.cpp
+share/jrl/dynamics/examples/CommonTools.hh
+share/jrl/dynamics/examples/examples.CMakeList

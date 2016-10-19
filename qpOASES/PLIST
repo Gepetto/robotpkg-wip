@@ -1,6 +1,5 @@
 lib/libqpOASES.a
 include/qpOASES.hpp
-include/qpOASES
 include/qpOASES/Types.hpp
 include/qpOASES/Flipper.hpp
 include/qpOASES/Bounds.hpp
@@ -13,7 +12,6 @@ include/qpOASES/Indexlist.ipp
 include/qpOASES/ConstraintProduct.hpp
 include/qpOASES/Options.hpp
 include/qpOASES/SQProblem.hpp
-include/qpOASES/extras
 include/qpOASES/extras/SolutionAnalysis.ipp
 include/qpOASES/extras/OQPinterface.hpp
 include/qpOASES/extras/SolutionAnalysis.hpp

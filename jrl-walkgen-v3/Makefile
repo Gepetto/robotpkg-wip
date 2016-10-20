@@ -4,7 +4,7 @@
 
 DISTNAME=	jrl-walkgen-v3-${VERSION}
 PKGNAME=	jrl-walkgen-v3-${VERSION}
-VERSION=	4.0.0
+VERSION=	4.0.1
 
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=jrl-walkgen-v3/}

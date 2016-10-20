@@ -20,6 +20,12 @@ DYNAMIC_PLIST_DIRS+=	share/doc/simple_humanoid_description
 # boost + gcc that don't cohabit well depending on their respective versions
 CMAKE_ARGS+=		-DCXX_DISABLE_WERROR=yes
 
+CMAKE_ARGS+=		-DCXX_DISABLE_WERROR=yes
+
+# Install in lib by default to deal with Fedora systems. TODO: use the cmake install dir variable in depend.mk
+CMAKE_ARGS+=    	-DCMAKE_INSTALL_LIBDIR=lib
+
+
 # man pages location
 CMAKE_ARGS+=		-DMANDIR=${PREFIX}/${PKGMANDIR}
 # library location

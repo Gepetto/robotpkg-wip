@@ -15,3 +15,5 @@ share/jrl/dynamics/examples/TestHerdt2010.cpp
 share/jrl/dynamics/examples/CommonTools.cpp
 share/jrl/dynamics/examples/CommonTools.hh
 share/jrl/dynamics/examples/examples.CMakeList
+include/jrl/walkgen/config.h
+lib/libsublapack.so

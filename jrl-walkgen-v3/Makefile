@@ -23,6 +23,7 @@ PKG_OPTION_SET.debug:=	CMAKE_ARGS+= -DCMAKE_BUILD_TYPE=Debug
 # Build the package in a separate directory
 CONFIGURE_DIRS=		_build
 CMAKE_ARG_PATH=		..
+CMAKE_ARGS+=    -DCMAKE_INSTALL_LIBDIR=lib
 
 pre-configure:
 	${RUN}${MKDIR} ${WRKSRC}/_build

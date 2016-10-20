@@ -7,6 +7,9 @@ bin/openhrp-collision-detector
 bin/openhrp-model-loader
 example/openhrp3-simulator-wo-rtm/scheduler/scheduler
 example/openhrp3-simulator-wo-rtm/scheduler/scheduler.sh
+example/openhrp3-simulator-wo-rtm/scheduler/schedulerproject
+example/openhrp3-simulator-wo-rtm/scheduler/schedulerproject-sample1-bush.sh
+example/openhrp3-simulator-wo-rtm/scheduler/schedulerproject.sh
 hrpCollision/Opcode/Ice/IceAABB.h
 hrpCollision/Opcode/Ice/IceAxes.h
 hrpCollision/Opcode/Ice/IceBoundingSphere.h
@@ -141,3 +144,7 @@ lib/python2.7/dist-packages/ViewSimulator_idl.py
 lib/python2.7/dist-packages/World_idl.py
 share/openhrp3-simulator-wo-rtm/model/longfloor.wrl
 share/openhrp3-simulator-wo-rtm/model/sample.wrl
+share/openhrp3-simulator-wo-rtm/model/sample1_bush.wrl
+share/openhrp3-simulator-wo-rtm/model/springJoint.wrl
+share/openhrp3-simulator-wo-rtm/project/SpringJoint.xml
+share/openhrp3-simulator-wo-rtm/project/sample1_bush.xml

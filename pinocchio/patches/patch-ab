@@ -1,0 +1,1942 @@
+diff --git bindings/python/multibody/model.hpp bindings/python/multibody/model.hpp
+index 36c047c..8dbc219 100644
+--- bindings/python/multibody/model.hpp
++++ bindings/python/multibody/model.hpp
+@@ -116,7 +116,7 @@ namespace se3
+         .def_readwrite("frames",&Model::frames,"Vector of frames contained in the model.")
+ 
+         .def_readwrite("subtrees",
+-                       &Model::frames,
++                       &Model::subtrees,
+                        "Vector of subtrees. subtree[j] corresponds to the subtree supported by the joint j.")
+         
+         .def_readwrite("gravity",&Model::gravity,"Motion vector corresponding to the gravity field expressed in the world Frame.")
+@@ -132,8 +132,8 @@ namespace se3
+           .def("getJointId",&Model::getJointId, bp::args("name"), "Return the index of a joint given by its name")
+           .def("existJointName", &Model::existJointName, bp::args("name"), "Check if a joint given by its name exists")
+         
+-        .def("getFrameId",&Model::getFrameId,existFrame_overload(bp::arg("name"),"Returns the index of the frame given by its name. If the frame is not in the frames vector, it returns the current size of the frames vector."))
+-        .def("getFrameId",&Model::getFrameId,existFrame_overload(bp::args("name","type"),"Returns the index of the frame given by its name and its type. If the frame is not in the frames vector, it returns the current size of the frames vector."))
++        .def("getFrameId",&Model::getFrameId,getFrameId_overload(bp::arg("name"),"Returns the index of the frame given by its name. If the frame is not in the frames vector, it returns the current size of the frames vector."))
++        .def("getFrameId",&Model::getFrameId,getFrameId_overload(bp::args("name","type"),"Returns the index of the frame given by its name and its type. If the frame is not in the frames vector, it returns the current size of the frames vector."))
+        
+         .def("existFrame",&Model::existFrame,existFrame_overload(bp::arg("name"),"Returns true if the frame given by its name exists inside the Model.")) 
+         .def("existFrame",&Model::existFrame,existFrame_overload(bp::args("name","type"),"Returns true if the frame given by its name exists inside the Model with the given type."))
+diff --git bindings/python/spatial/inertia.hpp bindings/python/spatial/inertia.hpp
+index 85f303c..3a76f9c 100644
+--- bindings/python/spatial/inertia.hpp
++++ bindings/python/spatial/inertia.hpp
+@@ -84,6 +84,7 @@ namespace se3
+         .def(bp::self + bp::self)
+         .def(bp::self * bp::other<Motion>() )
+         .add_property("np",&Inertia::matrix)
++        .def("vxiv",&Inertia::vxiv,bp::arg("Motion v"),"Returns the result of v x Iv.")
+         
+         .def("Identity",&Inertia::Identity,"Returns the identity Inertia.")
+         .staticmethod("Identity")
+diff --git src/multibody/constraint.hpp src/multibody/constraint.hpp
+index f3c87ae..7965f6b 100644
+--- src/multibody/constraint.hpp
++++ src/multibody/constraint.hpp
+@@ -32,19 +32,18 @@ namespace se3
+ {
+   template<int _Dim, typename _Scalar, int _Options=0> class ConstraintTpl;
+ 
+-  template< class Derived>
++  template<class Derived>
+   class ConstraintBase
+   {
+   protected:
+-    typedef Derived  Derived_t;
+-    SPATIAL_TYPEDEF_TEMPLATE(Derived_t);
+-    typedef typename traits<Derived_t>::JointMotion JointMotion;
+-    typedef typename traits<Derived_t>::JointForce JointForce;
+-    typedef typename traits<Derived_t>::DenseBase DenseBase;
++    typedef typename traits<Derived>::Scalar Scalar;
++    typedef typename traits<Derived>::JointMotion JointMotion;
++    typedef typename traits<Derived>::JointForce JointForce;
++    typedef typename traits<Derived>::DenseBase DenseBase;
+ 
+   public:
+-    Derived_t & derived() { return *static_cast<Derived_t*>(this); }
+-    const Derived_t& derived() const { return *static_cast<const Derived_t*>(this); }
++    Derived & derived() { return *static_cast<Derived*>(this); }
++    const Derived& derived() const { return *static_cast<const Derived*>(this); }
+ 
+     Motion operator* (const JointMotion& vj) const { return derived().__mult__(vj); }
+ 
+@@ -52,7 +51,12 @@ namespace se3
+     const DenseBase & matrix() const  { return derived().matrix_impl(); }
+     int nv() const { return derived().nv_impl(); }
+     
+-    void disp(std::ostream & os) const { static_cast<const Derived_t*>(this)->disp_impl(os); }
++    template<class OtherDerived>
++    bool isApprox(const ConstraintBase<OtherDerived> & other,
++                  const Scalar & prec = Eigen::NumTraits<Scalar>::dummy_precision()) const
++    { return matrix().isApprox(other.matrix(),prec); }
++    
++    void disp(std::ostream & os) const { static_cast<const Derived*>(this)->disp_impl(os); }
+     friend std::ostream & operator << (std::ostream & os,const ConstraintBase<Derived> & X)
+     {
+       X.disp(os);
+@@ -188,7 +192,7 @@ namespace se3
+     }
+ 
+     void disp_impl(std::ostream & os) const { os << "S =\n" << S << std::endl;}
+-
++    
+   protected:
+     DenseBase S;
+   }; // class ConstraintTpl
+diff --git src/multibody/frame.hpp src/multibody/frame.hpp
+index 4d0b01b..ef55e67 100644
+--- src/multibody/frame.hpp
++++ src/multibody/frame.hpp
+@@ -18,19 +18,15 @@
+ #ifndef __se3_frame_hpp__
+ #define __se3_frame_hpp__
+ 
+-#include "pinocchio/spatial/fwd.hpp"
+ #include "pinocchio/spatial/se3.hpp"
+ #include "pinocchio/multibody/fwd.hpp"
+-#include "pinocchio/tools/string-generator.hpp"
+-#include "pinocchio/container/aligned-vector.hpp"
+ 
+-#include <Eigen/StdVector>
+ #include <string>
+ 
+ namespace se3
+ {
+   ///
+-  /// \brief Enum on the possible type of frame
++  /// \brief Enum on the possible types of frame
+   ///
+   enum FrameType
+   {
+@@ -44,15 +40,19 @@ namespace se3
+   ///
+   /// \brief A Plucker coordinate frame attached to a parent joint inside a kinematic tree
+   ///
+-  struct Frame
++  template<typename _Scalar, int _Options>
++  struct FrameTpl
+   {
+     EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+     typedef se3::JointIndex JointIndex;
++    enum { Options = _Options };
++    typedef _Scalar Scalar;
++    typedef SE3Tpl<Scalar,Options> SE3;
+     
+     ///
+     /// \brief Default constructor of a frame.
+     ///
+-    Frame() : name(randomStringGenerator(8)), parent(), placement(), type() {} // needed by std::vector
++    FrameTpl() : name(), parent(), placement(), type() {} // needed by std::vector
+     
+     ///
+     /// \brief Builds a frame defined by its name, its joint parent id, its placement and its type.
+@@ -63,7 +63,11 @@ namespace se3
+     /// \param[in] placement Placement of the frame wrt the parent joint frame.
+     /// \param[in] type The type of the frame, see the enum FrameType
+     ///
+-    Frame(const std::string & name, const JointIndex parent, const FrameIndex previousFrame, const SE3 & frame_placement, const FrameType type)
++    FrameTpl(const std::string & name,
++             const JointIndex parent,
++             const FrameIndex previousFrame,
++             const SE3 & frame_placement,
++             const FrameType type)
+     : name(name)
+     , parent(parent)
+     , previousFrame(previousFrame)
+@@ -76,7 +80,8 @@ namespace se3
+     ///
+     /// \param[in] other The frame to which the current frame is compared.
+     ///
+-    bool operator == (const Frame & other) const
++    template<typename S2, int O2>
++    bool operator == (const FrameTpl<S2,O2> & other) const
+     {
+       return name == other.name && parent == other.parent
+       && previousFrame == other.previousFrame
+@@ -99,9 +104,10 @@ namespace se3
+     /// \brief Type of the frame
+     FrameType type;
+ 
+-  }; // struct Frame
++  }; // struct FrameTpl
+ 
+-  inline std::ostream & operator << (std::ostream& os, const Frame & f)
++  template<typename Scalar, int Options>
++  inline std::ostream & operator << (std::ostream& os, const FrameTpl<Scalar,Options> & f)
+   {
+     os << "Frame name:" << f.name  << "paired to (parent joint/ previous frame)" << "(" <<f.parent << "/" << f.previousFrame << ")"<< std::endl;
+     os << "with relative placement wrt parent joint:\n" << f.placement << std::endl;
+diff --git src/multibody/fwd.hpp src/multibody/fwd.hpp
+index aacff9a..24a02ab 100644
+--- src/multibody/fwd.hpp
++++ src/multibody/fwd.hpp
+@@ -28,11 +28,13 @@ namespace se3
+   typedef Index FrameIndex;
+   typedef Index PairIndex;
+   
+-  struct Frame;
++  template<typename _Scalar, int _Options=0> struct FrameTpl;
+   struct Model;
+   struct Data;
+   struct GeometryModel;
+   struct GeometryData;
++  
++  typedef FrameTpl<double> Frame;
+ 
+ 
+   // Forward declaration needed for Model::check
+diff --git src/multibody/joint/joint-base.hpp src/multibody/joint/joint-base.hpp
+index d8452b3..6561fe2 100644
+--- src/multibody/joint/joint-base.hpp
++++ src/multibody/joint/joint-base.hpp
+@@ -19,51 +19,12 @@
+ #ifndef __se3_joint_base_hpp__
+ #define __se3_joint_base_hpp__
+ 
+-#include "pinocchio/spatial/se3.hpp"
+-#include "pinocchio/spatial/motion.hpp"
+-#include "pinocchio/spatial/force.hpp"
+-#include "pinocchio/spatial/inertia.hpp"
+-#include "pinocchio/multibody/constraint.hpp"
+ #include "pinocchio/multibody/fwd.hpp"
+-#include <limits>
++
++#include <Eigen/Core>
+ 
+ namespace se3
+ {
+-  // template<class C> struct traits {};
+-
+-  /* RNEA operations
+-   *
+-   * *** FORWARD ***
+-   * J::calc(q,vq)
+-   * SE3    = SE3 * J::SE3
+-   * Motion = J::Motion
+-   * Motion = J::Constraint*J::JointMotion + J::Bias + Motion^J::Motion
+-   * Force  = Inertia*Motion  + Inertia.vxiv(Motion)
+-   *
+-   * *** BACKWARD *** 
+-   * J::JointForce = J::Constraint::Transpose*J::Force
+-   */
+-
+-  /* CRBA operations
+-   *
+-   * *** FORWARD ***
+-   * J::calc(q)
+-   * Inertia = Inertia
+-   *
+-   * *** BACKWARD *** 
+-   * Inertia += SE3::act(Inertia)
+-   * F = Inertia*J::Constraint
+-   * JointInertia.block = J::Constraint::Transpose*F
+-   * *** *** INNER ***
+-   *     F = SE3::act(f)
+-   *     JointInertia::block = J::Constraint::Transpose*F
+-   */
+-
+-  /* Jacobian operations
+-   *
+-   * internal::ActionReturn<Constraint>::Type
+-   * Constraint::se3Action
+-   */
+ #ifdef __clang__
+ 
+ #define SE3_JOINT_TYPEDEF_ARG(prefix)              \
+@@ -167,45 +128,30 @@ namespace se3
+   using Base::idx_v
+ 
+ 
+-  template<typename _JointData>
++  template<typename Derived>
+   struct JointDataBase
+   {
+-    typedef _JointData Derived;
+-    typedef JointDataBase<_JointData> Base;
+-    
+-    typedef typename traits<_JointData>::JointDerived JointDerived;
++    typedef typename traits<Derived>::JointDerived JointDerived;
+     SE3_JOINT_TYPEDEF_TEMPLATE;
+ 
+-    JointDataDerived& derived() { return *static_cast<JointDataDerived*>(this); }
+-    const JointDataDerived& derived() const { return *static_cast<const JointDataDerived*>(this); }
++    JointDataDerived& derived() { return *static_cast<Derived*>(this); }
++    const JointDataDerived& derived() const { return *static_cast<const Derived*>(this); }
+ 
+-    const Constraint_t     & S() const  { return static_cast<const JointDataDerived*>(this)->S;   }
+-    const Transformation_t & M() const  { return static_cast<const JointDataDerived*>(this)->M;   }
+-    const Motion_t         & v() const  { return static_cast<const JointDataDerived*>(this)->v;   }
+-    const Bias_t           & c() const  { return static_cast<const JointDataDerived*>(this)->c;   }
+-    F_t & F()        { return static_cast<      JointDataDerived*>(this)->F; }
++    const Constraint_t     & S() const  { return derived().S;   }
++    const Transformation_t & M() const  { return derived().M;   }
++    const Motion_t         & v() const  { return derived().v;   }
++    const Bias_t           & c() const  { return derived().c;   }
++    F_t & F()        { return derived().F; }
+     
+-    // [ABA CCRBA]
+-    const U_t & U() const { return static_cast<const JointDataDerived*>(this)->U; }
+-    U_t & U() { return static_cast<JointDataDerived*>(this)->U; }
+-    const D_t & Dinv() const { return static_cast<const JointDataDerived*>(this)->Dinv; }
+-    const UD_t & UDinv() const { return static_cast<const JointDataDerived*>(this)->UDinv; }
++    const U_t & U() const { return derived().U; }
++    U_t & U() { return derived().U; }
++    const D_t & Dinv() const { return derived().Dinv; }
++    const UD_t & UDinv() const { return derived().UDinv; }
+ 
+   protected:
+-    /// Default constructor: protected.
+-    /// 
+-    /// Prevent the construction of stand-alone JointDataBase.
+-    inline JointDataBase() {} // TODO: default value should be set to -1
+-    /// Copy constructor: protected.
+-    ///
+-    /// Copy of stand-alone JointDataBase are prevented, but can be used from inhereting
+-    /// objects. Copy is done by calling copy operator.
+-    inline JointDataBase( const JointDataBase& clone) { *this = clone; }
+-    /// Copy operator: protected.
+-    ///
+-    /// Copy of stand-alone JointDataBase are prevented, but can be used from inhereting
+-    /// objects. 
+-    inline JointDataBase& operator= (const JointDataBase&) { return *this; }
++    
++    /// \brief Default constructor: protected.
++    inline JointDataBase() {}
+ 
+   }; // struct JointDataBase
+ 
+@@ -242,12 +188,10 @@ namespace se3
+     };
+   };
+ 
+-  template<typename _JointModel>
++  template<typename Derived>
+   struct JointModelBase
+   {
+-    typedef _JointModel Derived;
+-    typedef JointModelBase<_JointModel> Base;
+-    typedef typename traits<_JointModel>::JointDerived JointDerived;
++    typedef typename traits<Derived>::JointDerived JointDerived;
+     SE3_JOINT_TYPEDEF_TEMPLATE;
+   
+ 
+@@ -257,12 +201,12 @@ namespace se3
+     JointDataDerived createData() const { return derived().createData(); }
+     
+     void calc(JointDataDerived& data,
+-              const Eigen::VectorXd & qs ) const
++              const Eigen::VectorXd & qs) const
+     { derived().calc(data,qs); }
+     
+     void calc(JointDataDerived& data,
+               const Eigen::VectorXd & qs,
+-              const Eigen::VectorXd & vs ) const
++              const Eigen::VectorXd & vs) const
+     { derived().calc(data,qs,vs); }
+     
+     void calc_aba(JointDataDerived & data,
+@@ -276,7 +220,8 @@ namespace se3
+     ///
+     /// \returns The finite difference increment.
+     ///
+-    typename ConfigVector_t::Scalar finiteDifferenceIncrement() const { return derived().finiteDifferenceIncrement(); }
++    typename ConfigVector_t::Scalar finiteDifferenceIncrement() const
++    { return derived().finiteDifferenceIncrement(); }
+ 
+     /**
+      * @brief      Integrate joint's configuration for a tangent vector during one unit time
+@@ -323,7 +268,8 @@ namespace se3
+      *
+      * @return     The joint configuration
+      */
+-    ConfigVector_t randomConfiguration(const ConfigVector_t & lower_pos_limit, const ConfigVector_t & upper_pos_limit) const
++    ConfigVector_t randomConfiguration(const ConfigVector_t & lower_pos_limit,
++                                       const ConfigVector_t & upper_pos_limit) const
+     { return derived().randomConfiguration_impl(lower_pos_limit, upper_pos_limit); } 
+ 
+     
+@@ -492,10 +438,11 @@ namespace se3
+     /// objects. 
+     inline JointModelBase& operator= (const JointModelBase& clone) 
+     {
++//      setIndexes(clone.id(),clone.idx_q(),clone.idx_v());
+       i_id = clone.i_id;
+       i_q = clone.i_q;
+       i_v = clone.i_v;
+-      return *this; 
++      return *this;
+     }
+ 
+   }; // struct JointModelBase
+diff --git src/multibody/joint/joint-basic-visitors.hpp src/multibody/joint/joint-basic-visitors.hpp
+index bcaf830..76f3172 100644
+--- src/multibody/joint/joint-basic-visitors.hpp
++++ src/multibody/joint/joint-basic-visitors.hpp
+@@ -74,7 +74,7 @@ namespace se3
+   ///
+   /// \returns The finite diffrence increment.
+   ///
+-  inline double finiteDifferenceIncrement(const JointDataVariant & jmodel);
++  inline double finiteDifferenceIncrement(const JointModelVariant & jmodel);
+   
+   /**
+    * @brief      Visit a JointModelVariant through JointIntegrateVisitor to integrate joint's configuration 
+diff --git src/multibody/joint/joint-composite.hpp src/multibody/joint/joint-composite.hpp
+index 4ce6648..b8695bb 100644
+--- src/multibody/joint/joint-composite.hpp
++++ src/multibody/joint/joint-composite.hpp
+@@ -18,18 +18,17 @@
+ #ifndef __se3_joint_composite_hpp__
+ #define __se3_joint_composite_hpp__
+ 
+-#include "pinocchio/assert.hpp"
++#include "pinocchio/multibody/joint/fwd.hpp"
+ #include "pinocchio/multibody/joint/joint-variant.hpp"
+ #include "pinocchio/multibody/joint/joint-basic-visitors.hpp"
++#include "pinocchio/container/aligned-vector.hpp"
++#include "pinocchio/spatial/act-on-set.hpp"
+ 
+-#include <Eigen/StdVector>
+ 
+ namespace se3
+ {
+ 
+   struct JointComposite;
+-  struct JointModelComposite;
+-  struct JointDataComposite;
+ 
+   template<>
+   struct traits<JointComposite>
+@@ -39,6 +38,7 @@ namespace se3
+       NQ = Eigen::Dynamic,
+       NV = Eigen::Dynamic
+     };
++    
+     typedef double Scalar;
+     typedef JointDataComposite JointDataDerived;
+     typedef JointModelComposite JointModelDerived;
+@@ -57,226 +57,239 @@ namespace se3
+     typedef Eigen::Matrix<double,Eigen::Dynamic,1> TangentVector_t;
+   };
+   
+-  template<> struct traits<JointDataComposite> { typedef JointComposite JointDerived; };
+-  template<> struct traits<JointModelComposite> { typedef JointComposite JointDerived; };
++  template<> struct traits< JointDataComposite > { typedef JointComposite JointDerived; };
++  template<> struct traits< JointModelComposite > { typedef JointComposite JointDerived; };
+ 
+-  struct JointDataComposite : public JointDataBase<JointDataComposite> 
++  struct JointDataComposite : public JointDataBase< JointDataComposite >
+   {
+     EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+     
++    typedef JointDataBase<JointDataComposite> Base;
+     typedef JointComposite Joint;
+-    typedef JointDataVariant JointData;
+-    typedef std::vector<JointData, Eigen::aligned_allocator<JointData> > JointDataVector;
+-    SE3_JOINT_TYPEDEF;
++    typedef container::aligned_vector<JointDataVariant> JointDataVector;
++//    typedef boost::array<JointDataVariant,njoints> JointDataVector;
++    
++    typedef Base::Transformation_t Transformation_t;
++    typedef Base::Motion_t Motion_t;
++    typedef Base::Bias_t Bias_t;
++    typedef Base::Constraint_t Constraint_t;
++    typedef Base::U_t U_t;
++    typedef Base::D_t D_t;
++    typedef Base::UD_t UD_t;
+ 
++    // JointDataComposite()  {} // can become necessary if we want a vector of JointDataComposite ?
++    
++    JointDataComposite(const JointDataVector & joint_data, const int /*nq*/, const int nv)
++    : joints(joint_data), iMlast(joint_data.size())
++    , S(nv)
++    , M(), v(), c()
++    , U(6,nv), Dinv(nv,nv), UDinv(6,nv)
++    {}
++    
++    /// \brief Vector of joints
+     JointDataVector joints;
+-    int nq_composite,nv_composite;
+-
++   
++    /// \brief Transform from the joint i to the last joint
++    container::aligned_vector<Transformation_t> iMlast;
++//    boost::array<Transformation_t,_njoints> liMi;
+     Constraint_t S;
+-    std::vector<Transformation_t, Eigen::aligned_allocator<Transformation_t> > ljMj;
+     Transformation_t M;
+     Motion_t v;
+     Bias_t c;
+-
+     
+     // // [ABA] specific data
+     U_t U;
+     D_t Dinv;
+     UD_t UDinv;
+ 
+-
+-    // JointDataComposite()  {} // can become necessary if we want a vector of JointDataComposite ?
+-    JointDataComposite( JointDataVector & joints, int nq, int nv )
+-    : joints(joints)
+-    , nq_composite(nq)
+-    , nv_composite(nv)
+-    , S(Eigen::MatrixXd::Zero(6, nv_composite))
+-    , ljMj(joints.size())
+-    , M(Transformation_t::Identity())
+-    , v(Motion_t::Zero())
+-    , c(Bias_t::Zero())
+-    , U(Eigen::MatrixXd::Zero(6, nv_composite))
+-    , Dinv(Eigen::MatrixXd::Zero(nv_composite, nv_composite))
+-    , UDinv(Eigen::MatrixXd::Zero(6, nv_composite))
+-    {}
+-
+   };
+ 
+-  struct JointModelComposite : public JointModelBase<JointModelComposite> 
++  struct JointModelComposite : public JointModelBase< JointModelComposite >
+   {
+     EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+     
+-    typedef JointComposite Joint;
+-    SE3_JOINT_TYPEDEF;
+-    SE3_JOINT_USE_INDEXES;
++    enum
++    {
++      NV = traits<JointComposite>::NV,
++      NQ = traits<JointComposite>::NQ
++    };
+     
+-    typedef JointModelVariant JointModel;
+-    typedef std::vector<JointModel, Eigen::aligned_allocator<JointModel> > JointModelVector;
++    typedef traits<JointComposite>::Scalar Scalar;
++    typedef JointModelBase<JointModelComposite> Base;
++    typedef JointDataComposite JointData;
++    typedef container::aligned_vector<JointModelVariant> JointModelVector;
++//    typedef boost::array<JointModelVariant,njoints> JointModelVector;
++    typedef traits<JointComposite>::Transformation_t Transformation_t;
++    typedef traits<JointComposite>::Constraint_t Constraint_t;
++    typedef traits<JointComposite>::ConfigVector_t ConfigVector_t;
++    typedef traits<JointComposite>::TangentVector_t TangentVector_t;
+     
+-    typedef JointDataVariant JointData;
+-    typedef std::vector<JointData, Eigen::aligned_allocator<JointData> > JointDataVector;
++    using Base::id;
++    using Base::idx_q;
++    using Base::idx_v;
++    using Base::setIndexes;
++    using Base::nq;
++    using Base::nv;
++
++    /// \brief Empty contructor
++    JointModelComposite()
++    : joints()
++    , jointPlacements()
++    , m_nq(0)
++    , m_nv(0)
++    , max_nv(0)
++    {}
+     
+-    using JointModelBase<JointModelComposite>::id;
+-    using JointModelBase<JointModelComposite>::setIndexes;
+-
+-    std::size_t max_joints;
+-    JointModelVector joints;
+-    int nq_composite,nv_composite;
+-
+-    // Same as JointModelComposite(1)
+-    JointModelComposite() : max_joints(1)
+-                          , joints(0)
+-                          , nq_composite(0)
+-                          , nv_composite(0)
+-                          {} 
+-    JointModelComposite(std::size_t max_number_of_joints) : max_joints(max_number_of_joints)
+-                                                          , joints(0)
+-                                                          , nq_composite(0)
+-                                                          , nv_composite(0)
+-                                                          {} 
++    ///
++    /// \brief Default constructor with at least one joint
++    ///
++    /// \param jmodel Model of the first joint.
++    /// \param placement Placement of the first joint wrt the joint origin
++    ///
++    template<typename JointModel>
++    JointModelComposite(const JointModelBase<JointModel> & jmodel, const SE3 & placement = SE3::Identity())
++    : joints(1,jmodel.derived())
++    , jointPlacements(1,placement)
++    , m_nq(jmodel.nq())
++    , m_nv(jmodel.nv())
++    , m_idx_q(1), m_nqs(1,jmodel.nq())
++    , m_idx_v(1), m_nvs(1,jmodel.nv())
++    , max_nv(jmodel.nv())
++    {}
+     
+-    template <typename D1>
+-    JointModelComposite(const JointModelBase<D1> & jmodel1) : max_joints(1)
+-                                                            , joints(0)
+-                                                            , nq_composite(jmodel1.nq())
+-                                                            , nv_composite(jmodel1.nv())
+-    {
+-        joints.push_back(JointModel(jmodel1.derived()));
+-    }
+-
+-    template <typename D1, typename D2 >
+-    JointModelComposite(const JointModelBase<D1> & jmodel1, const JointModelBase<D2> & jmodel2)
+-    : max_joints(2)
+-    , joints(0)
+-    , nq_composite(jmodel1.nq() + jmodel2.nq())
+-    , nv_composite(jmodel1.nv() + jmodel2.nv())
+-    {
+-      joints.push_back(JointModel(jmodel1.derived()));
+-      joints.push_back(JointModel(jmodel2.derived()));
+-    }
++    ///
++    /// \brief Copy constructor
++    ///
++    /// \param other Model to copy.
++    ///
++    JointModelComposite(const JointModelComposite & other)
++    : Base(other)
++    , joints(other.joints)
++    , jointPlacements(other.jointPlacements)
++    , m_nq(other.m_nq)
++    , m_nv(other.m_nv)
++    , m_idx_q(other.m_idx_q), m_nqs(other.m_nqs)
++    , m_idx_v(other.m_idx_v), m_nvs(other.m_nvs)
++    , max_nv(other.max_nv)
++    {}
+     
+-    template <typename D1, typename D2, typename D3 >
+-    JointModelComposite(const JointModelBase<D1> & jmodel1,
+-                        const JointModelBase<D2> & jmodel2,
+-                        const JointModelBase<D3> & jmodel3)
+-    : max_joints(3)
+-    , joints(0)
+-    , nq_composite(jmodel1.nq() + jmodel2.nq() + jmodel3.nq())
+-    , nv_composite(jmodel1.nv() + jmodel2.nv() + jmodel3.nv())
+-    {
+-      joints.push_back(JointModel(jmodel1.derived()));
+-      joints.push_back(JointModel(jmodel2.derived()));
+-      joints.push_back(JointModel(jmodel3.derived()));
+-    }
+-
+-    // JointModelComposite( const JointModelVector & models ) : max_joints(models.size()) , joints(models) {}
+     
+-    template < typename D>
+-    std::size_t addJointModel(const JointModelBase<D> & jmodel)
+-    {
+-      std::size_t nb_joints = joints.size();
+-      if (!isFull())
+-      {
+-        joints.push_back(JointModel(jmodel.derived()));
+-        nq_composite += jmodel.nq();
+-        nv_composite += jmodel.nv();
+-        nb_joints = joints.size();
+-      }
+-      return nb_joints;
+-    }
+-
+-    bool isFull() const
++    ///
++    /// \brief Add a joint to the composition of joints
++    ///
++    /// \param jmodel Model of the joint to add.
++    /// \param placement Placement of the joint relatively to its predecessor
++    ///
++    template<typename JointModel>
++    void addJoint(const JointModelBase<JointModel> & jmodel, const SE3 & placement = SE3::Identity())
+     {
+-      return joints.size() == max_joints ; 
++      joints.push_back(jmodel.derived());
++      jointPlacements.push_back(placement);
++      
++      m_nq += jmodel.nq(); m_nv += jmodel.nv();
++      max_nv = std::max(max_nv,jmodel.nv());
++      
++      updateJointIndexes();
+     }
+-
+-    bool isEmpty() const
+-    {
+-      return joints.size() <= 0 ; 
+-    }
+-    JointDataDerived createData() const
++    
++    JointData createData() const
+     {
+-      JointDataVector res;
+-      for (JointModelVector::const_iterator i = joints.begin(); i != joints.end(); ++i)
+-      {
+-        res.push_back(::se3::createData(*i));
+-      }
+-      return JointDataDerived(res, nq_composite, nv_composite);
++      JointData::JointDataVector jdata(joints.size());
++      for (int i = 0; i < (int)joints.size(); ++i)
++        jdata[(size_t)i] = ::se3::createData(joints[(size_t)i]);
++      return JointDataDerived(jdata,nq(),nv());
+     }
+ 
+-
+-    void calc (JointDataDerived & data,
+-               const Eigen::VectorXd & qs) const
++    void EIGEN_DONT_INLINE
++    calc(JointData & data, const Eigen::VectorXd & qs) const
+     {
+-      data.M.setIdentity();
+-      for (JointDataVector::iterator i = data.joints.begin(); i != data.joints.end(); ++i)
++      assert(joints.size() > 0);
++      assert(data.joints.size() == joints.size());
++      
++      Transformation_t M_tmp;
++      Constraint_t::DenseBase S_tmp(6,max_nv);
++      
++      for (int k = (int)(joints.size()-1); k >= 0; --k)
+       {
+-        JointDataVector::iterator::difference_type index = i - data.joints.begin();
+-        calc_zero_order(joints[(std::size_t)index], *i, qs);
+-        data.ljMj[(std::size_t)index] = joint_transform(*i);
+-        data.M =  data.M * data.ljMj[(std::size_t)index];
++        const JointModelVariant & jmodel = joints[(size_t)k];
++        const JointDataVariant & jdata = data.joints[(size_t)k];
++        calc_zero_order(jmodel,data.joints[(size_t)k],qs);
++        
++        const int idx_v = m_idx_v[(size_t)k] - m_idx_v[0];
++        if(k == (int)(joints.size()-1))
++        {
++          data.iMlast[(size_t)k].setIdentity();
++          data.S.matrix().middleCols(idx_v,m_nvs[(size_t)k]) = constraint_xd(jdata).matrix();
++        }
++        else
++        {
++          M_tmp = jointPlacements[(size_t)k+1] * joint_transform(data.joints[(size_t)k+1]);
++          data.iMlast[(size_t)k] = M_tmp * data.iMlast[(size_t)k+1];
++          
++          S_tmp.leftCols(m_nvs[(size_t)k]) = constraint_xd(jdata).matrix();
++          motionSet::se3Action(data.iMlast[(size_t)k].inverse(),
++                               S_tmp.leftCols(m_nvs[(size_t)k]),
++                               data.S.matrix().middleCols(idx_v,m_nvs[(size_t)k]));
++        }
+       }
++      
++      M_tmp = jointPlacements[0] * joint_transform(data.joints[0]);
++      data.M = M_tmp * data.iMlast[0];
+     }
+ 
+-    void calc (JointDataDerived & data,
+-               const Eigen::VectorXd & qs,
+-               const Eigen::VectorXd & vs ) const
++    void EIGEN_DONT_INLINE
++    calc(JointData & data,
++         const Eigen::VectorXd & qs,
++         const Eigen::VectorXd & vs) const
+     {
+-      data.M.setIdentity();
+-      data.v.setZero();
+-      data.c.setZero();
+-      data.S.matrix().setZero();
+-      for (JointDataVector::iterator i = data.joints.begin(); i != data.joints.end(); ++i)
++      Transformation_t M_tmp;
++      Motion v_tmp;
++      Motion bias_tmp;
++      Constraint_t::DenseBase S_tmp(6,max_nv);
++      
++      
++      for (int k = (int)(joints.size()-1); k >= 0; --k)
+       {
+-        JointDataVector::iterator::difference_type index = i - data.joints.begin();
+-        calc_first_order(joints[(std::size_t)index], *i, qs, vs);
+-        data.ljMj[(std::size_t)index] = joint_transform(*i);
+-        data.M = data.M * data.ljMj[(std::size_t)index];
+-        data.v = motion(*i);
+-        if (i == data.joints.begin())
+-        {}
+-        else 
++        const JointDataVariant & jdata = data.joints[(size_t)k];
++        calc_first_order(joints[(size_t)k],data.joints[(size_t)k],qs,vs);
++        
++        const int idx_v = m_idx_v[(size_t)k] - m_idx_v[0];
++        if(k == (int)(joints.size()-1))
+         {
+-          data.v += data.ljMj[(std::size_t)index].actInv(motion(*(i-1)));
++          data.iMlast[(size_t)k].setIdentity();
++          data.v = motion(jdata);
++          data.c = bias(jdata);
++          data.S.matrix().middleCols(idx_v,m_nvs[(size_t)k]) = constraint_xd(jdata).matrix();
++        }
++        else
++        {
++          M_tmp = jointPlacements[(size_t)k+1] * joint_transform(data.joints[(size_t)k+1]);
++          data.iMlast[(size_t)k] = M_tmp * data.iMlast[(size_t)k+1];
++          v_tmp = data.iMlast[(size_t)k].actInv(motion(jdata));
++          data.v += v_tmp;
++          data.c -= data.v.cross(v_tmp);
++          
++          bias_tmp = bias(jdata);
++          data.c += data.iMlast[(size_t)k].actInv(bias_tmp);
++          
++          S_tmp.leftCols(m_nvs[(size_t)k]) = constraint_xd(jdata).matrix();
++          motionSet::se3Action(data.iMlast[(size_t)k].inverse(),
++                               S_tmp.leftCols(m_nvs[(size_t)k]),
++                               data.S.matrix().middleCols(idx_v,m_nvs[(size_t)k]));
+         }
+       }
+-
+-      data.c = bias(data.joints[joints.size()-1]);
+-      int start_col = nv_composite;
+-      int sub_constraint_dimension = (int)constraint_xd(data.joints[joints.size()-1]).matrix().cols();
+-      start_col -= sub_constraint_dimension;
+-      data.S.matrix().middleCols(start_col,sub_constraint_dimension) = constraint_xd(data.joints[joints.size()-1]).matrix();
+-
+-      SE3 iMcomposite(SE3::Identity());
+-      for (JointDataVector::reverse_iterator i = data.joints.rbegin()+1; i != data.joints.rend(); ++i)
+-      {
+-        sub_constraint_dimension = (int)constraint_xd(*i).matrix().cols();
+-        start_col -= sub_constraint_dimension;
+-
+-        iMcomposite = joint_transform(*(i+0)) * iMcomposite;
+-        data.S.matrix().middleCols(start_col,sub_constraint_dimension) = iMcomposite.actInv(constraint_xd(*(i+0)));
+-
+-        Motion acceleration_d_entrainement_coriolis = Motion::Zero(); // TODO: compute
+-        data.c += iMcomposite.actInv(bias(*i)) + acceleration_d_entrainement_coriolis;
+-      }
++      
++      M_tmp = jointPlacements[0] * joint_transform(data.joints[0]);
++      data.M = M_tmp * data.iMlast[0];
+     }
+    
+     
+-    void calc_aba(JointDataDerived & data, Inertia::Matrix6 & I, const bool update_I) const
++    void calc_aba(JointData & data, Inertia::Matrix6 & I, const bool update_I) const
+     {
+-    // calc has been called previously in abaforwardstep1 so data.M, data.v are up to date
+-      data.U.setZero();
+-      data.Dinv.setZero();
+-      data.UDinv.setZero();
+-      for (JointDataVector::iterator i = data.joints.begin(); i != data.joints.end(); ++i)
+-      {
+-        JointDataVector::iterator::difference_type index = i - data.joints.begin();
+-        ::se3::calc_aba(joints[(std::size_t)index], *i, I, false);
+-      }
+-      data.U = I * data.S;
+-      Eigen::MatrixXd tmp = data.S.matrix().transpose() * I * data.S.matrix();
++      data.U.noalias() = I * data.S;
++      Eigen::MatrixXd tmp (data.S.matrix().transpose() * data.U);
+       data.Dinv = tmp.inverse();
+-      data.UDinv = data.U * data.Dinv;
++      data.UDinv.noalias() = data.U * data.Dinv;
+ 
+       if (update_I)
+         I -= data.UDinv * data.U.transpose();
+@@ -284,60 +297,80 @@ namespace se3
+ 
+     Scalar finiteDifferenceIncrement() const
+     {
+-      using std::sqrt;
+-      return 2.*sqrt(sqrt(Eigen::NumTraits<Scalar>::epsilon()));
++      using std::max;
++      Scalar eps = 0;
++      for(JointModelVector::const_iterator it = joints.begin();
++          it != joints.end(); ++it)
++        eps = max((Scalar)::se3::finiteDifferenceIncrement(*it),eps);
++      
++      return eps;
+     }
+ 
+     ConfigVector_t integrate_impl(const Eigen::VectorXd & qs,const Eigen::VectorXd & vs) const
+     {
+-      ConfigVector_t result(Eigen::VectorXd::Zero(nq_composite));
+-      for (JointModelVector::const_iterator i = joints.begin(); i != joints.end(); ++i)
++      ConfigVector_t result(nq());
++      for (size_t i = 0; i < joints.size(); ++i)
+       {
+-        result.segment(::se3::idx_q(*i),::se3::nq(*i)) += ::se3::integrate(*i,qs,vs);
++        const JointModelVariant & jmodel = joints[i];
++        const int idx_q = m_idx_q[i];
++        const int nq = m_nqs[i];
++        result.segment(idx_q,nq) = ::se3::integrate(jmodel,qs,vs);
+       }
+       return result;
+     }
+ 
+     ConfigVector_t interpolate_impl(const Eigen::VectorXd & q0,const Eigen::VectorXd & q1, const double u) const
+     {
+-      ConfigVector_t result(Eigen::VectorXd::Zero(nq_composite));
+-      for (JointModelVector::const_iterator i = joints.begin(); i != joints.end(); ++i)
++      ConfigVector_t result(nq());
++      for (size_t i = 0; i < joints.size(); ++i)
+       {
+-        result.segment(::se3::idx_q(*i),::se3::nq(*i)) += ::se3::interpolate(*i,q0,q1,u);
++        const JointModelVariant & jmodel = joints[i];
++        const int idx_q = m_idx_q[i];
++        const int nq = m_nqs[i];
++        result.segment(idx_q,nq) = ::se3::interpolate(jmodel,q0,q1,u);
+       }
+       return result;
+     }
+ 
+     ConfigVector_t random_impl() const
+     { 
+-      ConfigVector_t result(Eigen::VectorXd::Zero(nq_composite));
+-      for (JointModelVector::const_iterator i = joints.begin(); i != joints.end(); ++i)
++      ConfigVector_t result(nq());
++      for (size_t i = 0; i < joints.size(); ++i)
+       {
+-        result.segment(::se3::idx_q(*i),::se3::nq(*i)) += ::se3::random(*i);
++        const JointModelVariant & jmodel = joints[i];
++        const int idx_q = m_idx_q[i];
++        const int nq = m_nqs[i];
++        result.segment(idx_q,nq) = ::se3::random(jmodel);
+       }
+       return result;
+     } 
+ 
+-    ConfigVector_t randomConfiguration_impl(const ConfigVector_t & lower_pos_limit, const ConfigVector_t & upper_pos_limit ) const throw (std::runtime_error)
++    ConfigVector_t randomConfiguration_impl(const ConfigVector_t & lb,
++                                            const ConfigVector_t & ub) const throw (std::runtime_error)
+     { 
+-      ConfigVector_t result(Eigen::VectorXd::Zero(nq_composite));
+-      for (JointModelVector::const_iterator i = joints.begin(); i != joints.end(); ++i)
++      ConfigVector_t result(nq());
++      for (size_t i = 0; i < joints.size(); ++i)
+       {
+-        result.segment(::se3::idx_q(*i),::se3::nq(*i)) += 
+-                                ::se3::randomConfiguration(*i,
+-                                                          lower_pos_limit.segment(::se3::idx_q(*i), ::se3::nq(*i)),
+-                                                          upper_pos_limit.segment(::se3::idx_q(*i), ::se3::nq(*i))
+-                                                          );
++        const JointModelVariant & jmodel = joints[i];
++        const int idx_q = m_idx_q[i];
++        const int nq = m_nqs[i];
++        result.segment(idx_q,nq) =
++        ::se3::randomConfiguration(jmodel,
++                                   lb.segment(idx_q,nq),
++                                   ub.segment(idx_q,nq));
+       }
+       return result;
+-    } 
++    }
+ 
+     TangentVector_t difference_impl(const Eigen::VectorXd & q0,const Eigen::VectorXd & q1) const
+     { 
+-      TangentVector_t result(Eigen::VectorXd::Zero(nv_composite));
+-      for (JointModelVector::const_iterator i = joints.begin(); i != joints.end(); ++i)
++      TangentVector_t result(nv());
++      for(size_t i = 0; i < joints.size(); ++i)
+       {
+-        result.segment(::se3::idx_v(*i),::se3::nv(*i)) += ::se3::difference(*i,q0,q1);
++        const JointModelVariant & jmodel = joints[i];
++        const int idx_v = m_idx_v[i];
++        const int nv = m_nvs[i];
++        result.segment(idx_v,nv) = ::se3::difference(jmodel,q0,q1);
+       }
+       return result;
+     } 
+@@ -349,23 +382,25 @@ namespace se3
+ 
+     void normalize_impl(Eigen::VectorXd & q) const
+     {
+-      for (JointModelVector::const_iterator i = joints.begin(); i != joints.end(); ++i)
+-      {
+-        ::se3::normalize(*i,q);
+-      } 
++      for (JointModelVector::const_iterator it = joints.begin(); it != joints.end(); ++it)
++        ::se3::normalize(*it,q);
+     }
+ 
+     ConfigVector_t neutralConfiguration_impl() const
+     { 
+-      ConfigVector_t result(Eigen::VectorXd::Zero(nq_composite));
+-      for (JointModelVector::const_iterator i = joints.begin(); i != joints.end(); ++i)
++      ConfigVector_t result(nq());
++      for (size_t i = 0; i < joints.size(); ++i)
+       {
+-        result.segment(::se3::idx_q(*i),::se3::nq(*i)) += ::se3::neutralConfiguration(*i);
++        const JointModelVariant & jmodel = joints[i];
++        const int idx_q = m_idx_q[i];
++        const int nq = m_nqs[i];
++        result.segment(idx_q,nq) = ::se3::neutralConfiguration(jmodel);
+       }
+       return result;
+     } 
+ 
+-    bool isSameConfiguration_impl(const Eigen::VectorXd& q1, const Eigen::VectorXd& q2, const Scalar & = Eigen::NumTraits<Scalar>::dummy_precision()) const
++    bool isSameConfiguration_impl(const Eigen::VectorXd & q1, const Eigen::VectorXd & q2,
++                                  const Scalar & = Eigen::NumTraits<Scalar>::dummy_precision()) const
+     {
+       for (JointModelVector::const_iterator i = joints.begin(); i != joints.end(); ++i)
+       {
+@@ -375,106 +410,123 @@ namespace se3
+       return true;
+     }
+ 
+-    int     nv_impl() const { return nv_composite; }
+-    int     nq_impl() const { return nq_composite; }
++    int     nv_impl() const { return m_nv; }
++    int     nq_impl() const { return m_nq; }
+ 
+ 
+     /**
+      * @brief      Update the indexes of subjoints in the stack 
+      */
+-    void updateComponentsIndexes()
+-    {
+-      int current_idx_q, current_idx_v;
+-      int next_idx_q = idx_q();
+-      int next_idx_v = idx_v();
+-
+-      for (JointModelVector::iterator i = joints.begin(); i != joints.end(); ++i)
+-      {
+-        current_idx_q = next_idx_q;
+-        current_idx_v = next_idx_v;
+-        ::se3::setIndexes(*i,id(),current_idx_q, current_idx_v);
+-        next_idx_q = current_idx_q + ::se3::nq(*i);
+-        next_idx_v = current_idx_v + ::se3::nv(*i);
+-      }
+-    }
+-
+     void setIndexes_impl(JointIndex id, int q, int v)
+     {
+-      JointModelBase<JointModelComposite>::setIndexes_impl(id, q, v);
+-      updateComponentsIndexes();
++      Base::setIndexes_impl(id, q, v);
++      updateJointIndexes();
+     }
+ 
+     static std::string classname() { return std::string("JointModelComposite"); }
+     std::string shortname() const { return classname(); }
+ 
+-    template <class D>
+-    bool operator == (const JointModelBase<D> &) const
++    JointModelComposite & operator=(const JointModelComposite & other)
+     {
+-      return false;
++      Base::operator=(other);
++      m_nq = other.m_nq;
++      m_nv = other.m_nv;
++      joints = other.joints;
++      jointPlacements = other.jointPlacements;
++      
++        
++      return *this;
+     }
+     
+-    bool operator == (const JointModelBase<JointModelComposite> & jmodel) const
+-    {
+-      return jmodel.id() == id()
+-              && jmodel.idx_q() == idx_q()
+-              && jmodel.idx_v() == idx_v();
+-    }
+-
+-    // see http://en.cppreference.com/w/cpp/language/copy_assignment#Copy-and-swap_idiom
+-    void swap(JointModelComposite & other) {
+-      max_joints   = other.max_joints;
+-      nq_composite = other.nq_composite;
+-      nv_composite = other.nv_composite;
+-
+-      joints.swap(other.joints);
+-    }
+-
+-    JointModelComposite& operator=(JointModelComposite other)
+-    {
+-        swap(other);
+-        return *this;
+-    }
++    /// \brief Vector of joints contained in the joint composite.
++    JointModelVector joints;
++    /// \brief Vector of joint placements. Those placements correspond to the origin of the joint relatively to their parent.
++    container::aligned_vector<SE3> jointPlacements;
++    /// \brief Dimensions of the config and tangent space of the composite joint.
++    int m_nq,m_nv;
+ 
+     template<typename D>
+     typename SizeDepType<NQ>::template SegmentReturn<D>::ConstType
+-    jointConfigSelector(const Eigen::MatrixBase<D>& a) const { return a.segment(i_q,nq_composite); }
++    jointConfigSelector(const Eigen::MatrixBase<D>& a) const { return a.segment(i_q,nq()); }
+     template<typename D>
+     typename SizeDepType<NQ>::template SegmentReturn<D>::Type
+-    jointConfigSelector( Eigen::MatrixBase<D>& a) const { return a.segment(i_q,nq_composite); }
++    jointConfigSelector( Eigen::MatrixBase<D>& a) const { return a.segment(i_q,nq()); }
+ 
+     template<typename D>
+     typename SizeDepType<NV>::template SegmentReturn<D>::ConstType
+-    jointVelocitySelector(const Eigen::MatrixBase<D>& a) const { return a.segment(i_v,nv_composite);  }
++    jointVelocitySelector(const Eigen::MatrixBase<D>& a) const { return a.segment(i_v,nv());  }
+     template<typename D>
+     typename SizeDepType<NV>::template SegmentReturn<D>::Type
+-    jointVelocitySelector( Eigen::MatrixBase<D>& a) const { return a.segment(i_v,nv_composite);  }
++    jointVelocitySelector( Eigen::MatrixBase<D>& a) const { return a.segment(i_v,nv());  }
+ 
+     template<typename D>
+     typename SizeDepType<NV>::template ColsReturn<D>::ConstType 
+-    jointCols(const Eigen::MatrixBase<D>& A) const { return A.segment(i_v,nv_composite);  }
++    jointCols(const Eigen::MatrixBase<D>& A) const { return A.segment(i_v,nv());  }
+     template<typename D>
+     typename SizeDepType<NV>::template ColsReturn<D>::Type 
+-    jointCols(Eigen::MatrixBase<D>& A) const { return A.segment(i_v,nv_composite);  }
++    jointCols(Eigen::MatrixBase<D>& A) const { return A.segment(i_v,nv());  }
+ 
+     template<typename D>
+     typename SizeDepType<Eigen::Dynamic>::template SegmentReturn<D>::ConstType
+-    jointConfigSelector_impl(const Eigen::MatrixBase<D>& a) const { return a.segment(i_q,nq_composite); }
++    jointConfigSelector_impl(const Eigen::MatrixBase<D>& a) const { return a.segment(i_q,nq()); }
+     template<typename D>
+     typename SizeDepType<Eigen::Dynamic>::template SegmentReturn<D>::Type
+-    jointConfigSelector_impl(Eigen::MatrixBase<D>& a) const { return a.segment(i_q,nq_composite); }
++    jointConfigSelector_impl(Eigen::MatrixBase<D>& a) const { return a.segment(i_q,nq()); }
+     template<typename D>
+     typename SizeDepType<Eigen::Dynamic>::template SegmentReturn<D>::ConstType
+-    jointVelocitySelector_impl(const Eigen::MatrixBase<D>& a) const { return a.segment(i_v,nv_composite); }
++    jointVelocitySelector_impl(const Eigen::MatrixBase<D>& a) const { return a.segment(i_v,nv()); }
+     template<typename D>
+     typename SizeDepType<Eigen::Dynamic>::template SegmentReturn<D>::Type
+-    jointVelocitySelector_impl(Eigen::MatrixBase<D>& a) const { return a.segment(i_v,nv_composite); }
++    jointVelocitySelector_impl(Eigen::MatrixBase<D>& a) const { return a.segment(i_v,nv()); }
+ 
+     template<typename D>
+     typename SizeDepType<Eigen::Dynamic>::template ColsReturn<D>::ConstType 
+-    jointCols_impl(const Eigen::MatrixBase<D>& A) const { return A.middleCols(i_v,nv_composite); }
++    jointCols_impl(const Eigen::MatrixBase<D>& A) const { return A.middleCols(i_v,nv()); }
+     template<typename D>
+     typename SizeDepType<Eigen::Dynamic>::template ColsReturn<D>::Type 
+-    jointCols_impl(Eigen::MatrixBase<D>& A) const { return A.middleCols(i_v,nv_composite); }
++    jointCols_impl(Eigen::MatrixBase<D>& A) const { return A.middleCols(i_v,nv()); }
++    
++    
++    
++  protected:
++    
++    /// \brief Update the indexes of the joints contained in the composition according
++    /// to the position of the joint composite.
++    void updateJointIndexes()
++    {
++      int idx_q = this->idx_q();
++      int idx_v = this->idx_v();
++      
++      m_idx_q.resize(joints.size());
++      m_idx_v.resize(joints.size());
++      m_nqs.resize(joints.size());
++      m_nvs.resize(joints.size());
++      
++      for(size_t i = 0; i < joints.size(); ++i)
++      {
++        JointModelVariant & joint = joints[i];
++        
++        m_idx_q[i] = idx_q; m_idx_v[i] = idx_v;
++        ::se3::setIndexes(joint,i,idx_q,idx_v);
++        m_nqs[i] = ::se3::nq(joint);
++        m_nvs[i] = ::se3::nv(joint);
++        idx_q += m_nqs[i]; idx_v += m_nvs[i];
++      }
++    }
++    
++    /// Keep information of both the dimension and the position of the joints in the composition.
++    
++    /// \brief Index in the config vector
++    std::vector<int> m_idx_q;
++    /// \brief Dimension of the segment in the config vector
++    std::vector<int> m_nqs;
++    /// \brief Index in the tangent vector
++    std::vector<int> m_idx_v;
++    /// \brief Dimension of the segment in the tangent vector
++    std::vector<int> m_nvs;
++    
++    /// \brief Max nv dimensions for all joints contained in joints.
++    int max_nv;
+ 
+   };
+   
+@@ -483,10 +535,9 @@ namespace se3
+   {
+     typedef JointModelComposite::JointModelVector JointModelVector;
+     os << "JointModelComposite containing following models:\n" ;
+-    for (JointModelVector::const_iterator i = jmodel.joints.begin(); i != jmodel.joints.end(); ++i)
+-    {
+-      os << shortname(*i) << std::endl;
+-    }
++    for (JointModelVector::const_iterator it = jmodel.joints.begin();
++         it != jmodel.joints.end(); ++it)
++      os << "  " << shortname(*it) << std::endl;
+     return os;
+   }
+ 
+diff --git src/multibody/joint/joint-revolute.hpp src/multibody/joint/joint-revolute.hpp
+index f5bd4a9..31398bd 100644
+--- src/multibody/joint/joint-revolute.hpp
++++ src/multibody/joint/joint-revolute.hpp
+@@ -21,6 +21,7 @@
+ 
+ #include "pinocchio/math/sincos.hpp"
+ #include "pinocchio/spatial/inertia.hpp"
++#include "pinocchio/multibody/constraint.hpp"
+ #include "pinocchio/multibody/joint/joint-base.hpp"
+ 
+ #include <stdexcept>
+diff --git src/spatial/act-on-set.hpp src/spatial/act-on-set.hpp
+index 5ec1d5c..e5b5b35 100644
+--- src/spatial/act-on-set.hpp
++++ src/spatial/act-on-set.hpp
+@@ -1,5 +1,5 @@
+ //
+-// Copyright (c) 2015 CNRS
++// Copyright (c) 2015-2016 CNRS
+ //
+ // This file is part of Pinocchio
+ // Pinocchio is free software: you can redistribute it
+@@ -31,7 +31,7 @@ namespace se3
+     template<typename Mat,typename MatRet>
+     static void se3Action( const SE3 & m, 
+ 			   const Eigen::MatrixBase<Mat> & iF,
+-			   Eigen::MatrixBase<MatRet> & jF );
++			   Eigen::MatrixBase<MatRet> const & jF);
+   }  // namespace forceSet
+ 
+   namespace motionSet
+@@ -41,7 +41,7 @@ namespace se3
+     template<typename Mat,typename MatRet>
+     static void se3Action( const SE3 & m, 
+ 			   const Eigen::MatrixBase<Mat> & iV,
+-			   Eigen::MatrixBase<MatRet> & jV );
++			   Eigen::MatrixBase<MatRet> const & jV);
+   }  // namespace MotionSet
+ 
+   /* --- DETAILS --------------------------------------------------------- */
+@@ -58,7 +58,7 @@ namespace se3
+        * operation and should not be used. */ 
+       static void run( const SE3 & m, 
+ 		       const Eigen::MatrixBase<Mat> & iF,
+-		       Eigen::MatrixBase<MatRet> & jF );
++		       Eigen::MatrixBase<MatRet> const & jF );
+       // {
+       //   typename Mat::template ConstNRowsBlockXpr<3>::Type linear  = iF.template topRows<3>();
+       //   typename MatRet::template ConstNRowsBlockXpr<3>::Type angular = iF.template bottomRows<3>();
+@@ -76,18 +76,18 @@ namespace se3
+     {
+       /* Compute jF = jXi * iF, where jXi is the dual action matrix associated with m,
+        * and iF, jF are vectors. */
+-      static void run( const SE3 & m, 
+-		       const Eigen::MatrixBase<Mat> & iF,
+-		       Eigen::MatrixBase<MatRet> & jF )
++      static void run(const SE3 & m,
++                      const Eigen::MatrixBase<Mat> & iF,
++                      Eigen::MatrixBase<MatRet> const & jF)
+       { 
+-	EIGEN_STATIC_ASSERT_VECTOR_ONLY(Mat);
+-	EIGEN_STATIC_ASSERT_VECTOR_ONLY(MatRet);
+-	Eigen::VectorBlock<const Mat,3> linear = iF.template head<3>();
+-	Eigen::VectorBlock<const Mat,3> angular = iF.template tail<3>();
+-	
+-	jF.template head <3>() = m.rotation()*linear;
+-	jF.template tail <3>() = (m.translation().cross(jF.template head<3>())
+-				  + m.rotation()*angular);
++        EIGEN_STATIC_ASSERT_VECTOR_ONLY(Mat);
++        EIGEN_STATIC_ASSERT_VECTOR_ONLY(MatRet);
++        Eigen::VectorBlock<const Mat,3> linear = iF.template head<3>();
++        Eigen::VectorBlock<const Mat,3> angular = iF.template tail<3>();
++        
++        const_cast<Eigen::MatrixBase<MatRet> &>(jF).template head <3>() = m.rotation()*linear;
++        const_cast<Eigen::MatrixBase<MatRet> &>(jF).template tail <3>() = (m.translation().cross(jF.template head<3>())
++                                  + m.rotation()*angular);
+       }
+     };
+ 
+@@ -96,15 +96,16 @@ namespace se3
+      * not understand why. */
+     template<typename Mat,typename MatRet,int NCOLS>
+     void ForceSetSe3Action<Mat,MatRet,NCOLS>::
+-    run( const SE3 & m, 
+-	 const Eigen::MatrixBase<Mat> & iF,
+-	 Eigen::MatrixBase<MatRet> & jF )
++    run(const SE3 & m,
++        const Eigen::MatrixBase<Mat> & iF,
++        Eigen::MatrixBase<MatRet> const & jF)
+     {
+       for(int col=0;col<jF.cols();++col) 
+-	{
+-	  typename MatRet::ColXpr jFc = jF.col(col);
+-	  forceSet::se3Action(m,iF.col(col),jFc);
+-	}
++      {
++        typename MatRet::ColXpr jFc
++        = const_cast<Eigen::MatrixBase<MatRet> &>(jF).col(col);
++        forceSet::se3Action(m,iF.col(col),jFc);
++      }
+     }
+ 
+   } // namespace internal
+@@ -113,8 +114,8 @@ namespace se3
+   {
+     template<typename Mat,typename MatRet>
+     static void se3Action( const SE3 & m, 
+-			   const Eigen::MatrixBase<Mat> & iF,
+-			   Eigen::MatrixBase<MatRet> & jF )
++                          const Eigen::MatrixBase<Mat> & iF,
++                          Eigen::MatrixBase<MatRet> const & jF)
+     {
+       internal::ForceSetSe3Action<Mat,MatRet,Mat::ColsAtCompileTime>::run(m,iF,jF);
+     }
+@@ -132,9 +133,9 @@ namespace se3
+        * with m, and iF, jF are matrices whose columns are motions. The resolution
+        * is done by block operation. It is less efficient than the colwise
+        * operation and should not be used. */ 
+-      static void run( const SE3 & m, 
+-		       const Eigen::MatrixBase<Mat> & iF,
+-		       Eigen::MatrixBase<MatRet> & jF );
++      static void run(const SE3 & m,
++                      const Eigen::MatrixBase<Mat> & iF,
++                      Eigen::MatrixBase<MatRet> const & jF);
+       // {
+       //   typename Mat::template ConstNRowsBlockXpr<3>::Type linear  = iF.template topRows<3>();
+       //   typename MatRet::template ConstNRowsBlockXpr<3>::Type angular = iF.template bottomRows<3>();
+@@ -152,19 +153,20 @@ namespace se3
+     {
+       /* Compute jV = jXi * iV, where jXi is the action matrix associated with m,
+        * and iV, jV are 6D vectors representing spatial velocities. */
+-      static void run( const SE3 & m, 
+-		       const Eigen::MatrixBase<Mat> & iV,
+-		       Eigen::MatrixBase<MatRet> & jV )
++      static void run(const SE3 & m,
++                      const Eigen::MatrixBase<Mat> & iV,
++                      Eigen::MatrixBase<MatRet> const & jV)
+       { 
+-	EIGEN_STATIC_ASSERT_VECTOR_ONLY(Mat);
+-	EIGEN_STATIC_ASSERT_VECTOR_ONLY(MatRet);
+-	Eigen::VectorBlock<const Mat,3> linear = iV.template head<3>();
+-	Eigen::VectorBlock<const Mat,3> angular = iV.template tail<3>();
+-	
+-	/* ( R*v + px(Rw),  Rw ) */
+-	jV.template tail <3>() = m.rotation()*angular;
+-	jV.template head <3>() = (m.translation().cross(jV.template tail<3>())
+-				  + m.rotation()*linear);
++        EIGEN_STATIC_ASSERT_VECTOR_ONLY(Mat);
++        EIGEN_STATIC_ASSERT_VECTOR_ONLY(MatRet);
++        Eigen::VectorBlock<const Mat,3> linear = iV.template head<3>();
++        Eigen::VectorBlock<const Mat,3> angular = iV.template tail<3>();
++        
++        /* ( R*v + px(Rw),  Rw ) */
++        const_cast<Eigen::MatrixBase<MatRet> &>(jV).template tail <3>()
++        = m.rotation()*angular;
++        const_cast<Eigen::MatrixBase<MatRet> &>(jV).template head <3>()
++        = (m.translation().cross(jV.template tail<3>()) + m.rotation()*linear);
+       }
+     };
+ 
+@@ -173,15 +175,16 @@ namespace se3
+      * not understand why. */
+     template<typename Mat,typename MatRet,int NCOLS>
+     void MotionSetSe3Action<Mat,MatRet,NCOLS>::
+-    run( const SE3 & m, 
+-	 const Eigen::MatrixBase<Mat> & iV,
+-	 Eigen::MatrixBase<MatRet> & jV )
++    run(const SE3 & m,
++        const Eigen::MatrixBase<Mat> & iV,
++        Eigen::MatrixBase<MatRet> const & jV)
+     {
+-      for(int col=0;col<jV.cols();++col) 
+-	{
+-	  typename MatRet::ColXpr jVc = jV.col(col);
+-	  motionSet::se3Action(m,iV.col(col),jVc);
+-	}
++      for(int col=0;col<jV.cols();++col)
++      {
++        typename MatRet::ColXpr jVc
++        = const_cast<Eigen::MatrixBase<MatRet> &>(jV).col(col);
++        motionSet::se3Action(m,iV.col(col),jVc);
++      }
+     }
+ 
+   } // namespace internal
+@@ -189,9 +192,9 @@ namespace se3
+   namespace motionSet
+   {
+     template<typename Mat,typename MatRet>
+-    static void se3Action( const SE3 & m, 
+-			   const Eigen::MatrixBase<Mat> & iV,
+-			   Eigen::MatrixBase<MatRet> & jV )
++    static void se3Action(const SE3 & m,
++                          const Eigen::MatrixBase<Mat> & iV,
++                          Eigen::MatrixBase<MatRet> const & jV)
+     {
+       internal::MotionSetSe3Action<Mat,MatRet,Mat::ColsAtCompileTime>::run(m,iV,jV);
+     }
+@@ -202,4 +205,3 @@ namespace se3
+ } // namespace se3
+ 
+ #endif // ifndef __se3_act_on_set_hpp__
+-
+diff --git src/tools/file-explorer.hpp src/tools/file-explorer.hpp
+index 74a8574..9078771 100644
+--- src/tools/file-explorer.hpp
++++ src/tools/file-explorer.hpp
+@@ -41,6 +41,8 @@ namespace se3
+     if (env_var_value != NULL)
+     {
+       std::string policyStr (env_var_value);
++      // Add a separator at the end so that last path is also retrieved
++      policyStr += std::string (":");
+       size_t lastOffset = 0;
+       
+       while(true)
+diff --git unittest/finite-differences.cpp unittest/finite-differences.cpp
+index 9c02670..6c57cd7 100644
+--- unittest/finite-differences.cpp
++++ unittest/finite-differences.cpp
+@@ -88,11 +88,11 @@ struct FiniteDiffJoint
+     jmodel.calc(jdata,q);
+     SE3 M_ref(jdata.M);
+     
+-    CV q_int;
+-    TV v; v.setZero();
++    CV q_int(jmodel.nq());
++    TV v(jmodel.nv()); v.setZero();
+     double eps = 1e-4;
+     
+-    Eigen::Matrix<double,6,JointModel::NV> S, S_ref(ConstraintXd(jdata.S).matrix());
++    Eigen::Matrix<double,6,JointModel::NV> S(6,jmodel.nv()), S_ref(ConstraintXd(jdata.S).matrix());
+     
+     eps = jmodel.finiteDifferenceIncrement();
+     for(int k=0;k<jmodel.nv();++k)
+@@ -125,48 +125,54 @@ void FiniteDiffJoint::init<JointModelPrismaticUnaligned>(JointModelBase<JointMod
+ }
+ 
+ template<>
+-void FiniteDiffJoint::operator()< JointModelComposite > (JointModelBase<JointModelComposite> & ) const
++void FiniteDiffJoint::init<JointModelComposite>(JointModelBase<JointModelComposite> & jmodel)
+ {
+-  typedef typename JointModel::ConfigVector_t CV;
+-  typedef typename JointModel::TangentVector_t TV;
+-  
+-  se3::JointModelComposite jmodel((se3::JointModelRX())/*, (se3::JointModelRY())*/);
+-  jmodel.setIndexes(0,0,0);
+-  jmodel.updateComponentsIndexes();
+-
+-  se3::JointModelComposite::JointDataDerived jdata = jmodel.createData();
+-
+-  CV q = jmodel.random();
+-  jmodel.calc(jdata,q);
+-  SE3 M_ref(jdata.M);
+-  
+-  CV q_int;
+-  TV v(Eigen::VectorXd::Random(jmodel.nv())); v.setZero();
+-  double eps = 1e-4;
+-  
+-  assert(q.size() == jmodel.nq()&& "nq false");
+-  assert(v.size() == jmodel.nv()&& "nv false");
+-  Eigen::MatrixXd S(6,jmodel.nv()), S_ref(ConstraintXd(jdata.S).matrix());
+-
+-  eps = jmodel.finiteDifferenceIncrement();
+-  for(int k=0;k<jmodel.nv();++k)
+-  {
+-    v[k] = eps;
+-    q_int = jmodel.integrate(q,v);
+-    jmodel.calc(jdata,q_int);
+-    SE3 M_int = jdata.M;
+-    
+-    S.col(k) = log6(M_ref.inverse()*M_int).toVector();
+-    S.col(k) /= eps;
+-    
+-    v[k] = 0.;
+-  }
+-  
+-  std::cout << "S\n" << S << std::endl;
+-  std::cout << "S_ref\n" << S_ref << std::endl;
+-  // BOOST_CHECK(S.isApprox(S_ref,eps*1e1)); //@TODO Uncomment to test once JointComposite maths are ok
++  jmodel.derived().addJoint(JointModelRX());
++  jmodel.derived().addJoint(JointModelRZ());
+ }
+ 
++//template<>
++//void FiniteDiffJoint::operator()< JointModelComposite > (JointModelBase<JointModelComposite> & ) const
++//{
++//  typedef typename JointModel::ConfigVector_t CV;
++//  typedef typename JointModel::TangentVector_t TV;
++//  
++//  se3::JointModelComposite jmodel((se3::JointModelRX())/*, (se3::JointModelRY())*/);
++//  jmodel.setIndexes(0,0,0);
++//
++//  se3::JointModelComposite::JointDataDerived jdata = jmodel.createData();
++//
++//  CV q = jmodel.random();
++//  jmodel.calc(jdata,q);
++//  SE3 M_ref(jdata.M);
++//  
++//  CV q_int;
++//  TV v(Eigen::VectorXd::Random(jmodel.nv())); v.setZero();
++//  double eps = 1e-4;
++//  
++//  assert(q.size() == jmodel.nq()&& "nq false");
++//  assert(v.size() == jmodel.nv()&& "nv false");
++//  Eigen::MatrixXd S(6,jmodel.nv()), S_ref(ConstraintXd(jdata.S).matrix());
++//
++//  eps = jmodel.finiteDifferenceIncrement();
++//  for(int k=0;k<jmodel.nv();++k)
++//  {
++//    v[k] = eps;
++//    q_int = jmodel.integrate(q,v);
++//    jmodel.calc(jdata,q_int);
++//    SE3 M_int = jdata.M;
++//    
++//    S.col(k) = log6(M_ref.inverse()*M_int).toVector();
++//    S.col(k) /= eps;
++//    
++//    v[k] = 0.;
++//  }
++//  
++//  std::cout << "S\n" << S << std::endl;
++//  std::cout << "S_ref\n" << S_ref << std::endl;
++//  // BOOST_CHECK(S.isApprox(S_ref,eps*1e1)); //@TODO Uncomment to test once JointComposite maths are ok
++//}
++
+ BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+ BOOST_AUTO_TEST_CASE(increment)
+diff --git unittest/joint-composite.cpp unittest/joint-composite.cpp
+index ad348f7..a186618 100644
+--- unittest/joint-composite.cpp
++++ unittest/joint-composite.cpp
+@@ -15,116 +15,117 @@
+ // Pinocchio If not, see
+ // <http://www.gnu.org/licenses/>.
+ 
+-#include "pinocchio/tools/timer.hpp"
+-
+-// #include "pinocchio/multibody/joint/joint-accessor.hpp"
+ #include "pinocchio/multibody/joint/joint-composite.hpp"
+-#include "pinocchio/multibody/model.hpp"
+-#include "pinocchio/algorithm/aba.hpp"
+ #include "pinocchio/algorithm/joint-configuration.hpp"
+-#include "pinocchio/algorithm/compute-all-terms.hpp"
+-#include "pinocchio/algorithm/jacobian.hpp"
+-
+-#include <iostream>
+-#include <cmath>
+ 
+ #include <boost/test/unit_test.hpp>
+ #include <boost/utility/binary.hpp>
+ 
++using namespace se3;
++using namespace Eigen;
+ 
+-template <typename T>
+-void test_joint_methods (T & jmodel)
+-{
+-  using namespace se3;
+-
+-  typename T::JointDataDerived jdata = jmodel.createData();
++template<typename JointModel>
++void test_joint_methods(const JointModelBase<JointModel> & jmodel, JointModelComposite & jmodel_composite);
+ 
++template<typename JointModel>
++void test_joint_methods(const JointModelBase<JointModel> & jmodel)
++{
+   JointModelComposite jmodel_composite(jmodel);
+-  jmodel_composite.setIndexes(jmodel.id(), jmodel.idx_q(), jmodel.idx_v());
+-  jmodel_composite.updateComponentsIndexes();
++  test_joint_methods(jmodel,jmodel_composite);
++}
+ 
++template<typename JointModel>
++void test_joint_methods(const JointModelBase<JointModel> & jmodel, JointModelComposite & jmodel_composite)
++{
++  typedef typename JointModelBase<JointModel>::JointDataDerived JointData;
++  JointData jdata = jmodel.createData();
++  
+   JointDataComposite jdata_composite = jmodel_composite.createData();
+-
+-  Eigen::VectorXd q1(Eigen::VectorXd::Random (jmodel.nq()));jmodel_composite.normalize(q1);
+-  Eigen::VectorXd q1_dot(Eigen::VectorXd::Random (jmodel.nv()));
+-  Eigen::VectorXd q2(Eigen::VectorXd::Random (jmodel.nq()));jmodel_composite.normalize(q2);
+-  double u = 0.3;
+-  se3::Inertia::Matrix6 Ia(se3::Inertia::Random().matrix());
+-  bool update_I = false;
+-
+-  jmodel.calc(jdata, q1, q1_dot);
+-  jmodel_composite.calc(jdata_composite, q1, q1_dot);
+-
+-
+-  std::string error_prefix("Joint Model Composite on " + jmodel.shortname());
+-
+-  BOOST_CHECK_MESSAGE(jmodel.nq() == jmodel_composite.nq() ,std::string(error_prefix + " - nq "));
+-  BOOST_CHECK_MESSAGE(jmodel.nv() == jmodel_composite.nv() ,std::string(error_prefix + " - nv "));
+-
+-  BOOST_CHECK_MESSAGE(jmodel.idx_q() == jmodel_composite.idx_q() ,std::string(error_prefix + " - Idx_q "));
+-  BOOST_CHECK_MESSAGE(jmodel.idx_v() == jmodel_composite.idx_v() ,std::string(error_prefix + " - Idx_v "));
+-  BOOST_CHECK_MESSAGE(jmodel.id() == jmodel_composite.id() ,std::string(error_prefix + " - JointId "));
+-
+-  BOOST_CHECK_MESSAGE(jmodel.integrate(q1,q1_dot).isApprox(jmodel_composite.integrate(q1,q1_dot)) ,std::string(error_prefix + " - integrate "));
+-  BOOST_CHECK_MESSAGE(jmodel.interpolate(q1,q2,u).isApprox(jmodel_composite.interpolate(q1,q2,u)) ,std::string(error_prefix + " - interpolate "));
+-  BOOST_CHECK_MESSAGE(jmodel.randomConfiguration( -1 * Eigen::VectorXd::Ones(jmodel.nq()),
+-                                              Eigen::VectorXd::Ones(jmodel.nq())).size()
+-                                  == jmodel_composite.randomConfiguration(-1 * Eigen::VectorXd::Ones(jmodel.nq()),
+-                                                            Eigen::VectorXd::Ones(jmodel.nq())).size()
+-                      ,std::string(error_prefix + " - RandomConfiguration dimensions "));
+-
+-  BOOST_CHECK_MESSAGE(jmodel.difference(q1,q2).isApprox(jmodel_composite.difference(q1,q2)) ,std::string(error_prefix + " - difference "));
+-  BOOST_CHECK_MESSAGE(fabs(jmodel.distance(q1,q2) - jmodel_composite.distance(q1,q2)) <= 1e-6 ,std::string(error_prefix + " - distance "));
+-
+-  BOOST_CHECK_MESSAGE(((ConstraintXd)jdata.S).matrix().isApprox((jdata_composite.S.matrix())),std::string(error_prefix + " - ConstraintXd "));
+-  BOOST_CHECK_MESSAGE(jdata.M == jdata_composite.M, std::string(error_prefix + " - Joint transforms ")); // ==  or isApprox ?
+-  BOOST_CHECK_MESSAGE((Motion)jdata.v == jdata_composite.v, std::string(error_prefix + " - Joint motions "));
+-  BOOST_CHECK_MESSAGE((Motion)jdata.c == jdata_composite.c, std::string(error_prefix + " - Joint bias "));
+   
+-  jmodel.calc_aba(jdata, Ia, update_I);
+-  jmodel_composite.calc_aba(jdata_composite, Ia, update_I);
+-
+-  BOOST_CHECK_MESSAGE((jdata.U).isApprox(jdata_composite.U), std::string(error_prefix + " - Joint U inertia matrix decomposition "));
+-  BOOST_CHECK_MESSAGE((jdata.Dinv).isApprox(jdata_composite.Dinv), std::string(error_prefix + " - Joint DInv inertia matrix decomposition "));
+-  BOOST_CHECK_MESSAGE((jdata.UDinv).isApprox(jdata_composite.UDinv), std::string(error_prefix + " - Joint UDInv inertia matrix decomposition "));
+-
+- 
++  jmodel_composite.setIndexes(jmodel.id(), jmodel.idx_q(), jmodel.idx_v());
++  
++  typedef typename JointModel::ConfigVector_t ConfigVector_t;
++  typedef typename JointModel::TangentVector_t TangentVector_t;
++  
++  ConfigVector_t ql(ConfigVector_t::Constant(jmodel.nq(),-M_PI));
++  ConfigVector_t qu(ConfigVector_t::Constant(jmodel.nq(),M_PI));
++  ConfigVector_t q = jmodel.randomConfiguration(ql,qu);
++  
++  jmodel.calc(jdata,q);
++  
++  BOOST_CHECK(jmodel.nv() == jmodel_composite.nv());
++  BOOST_CHECK(jmodel.nq() == jmodel_composite.nq());
++  
++  jmodel_composite.calc(jdata_composite,q);
++  BOOST_CHECK(jdata_composite.M.isApprox((SE3)jdata.M));
++  
++  q = jmodel.randomConfiguration(ql,qu);
++  TangentVector_t v = TangentVector_t::Random(jmodel.nv());
++  jmodel.calc(jdata,q,v);
++  jmodel_composite.calc(jdata_composite,q,v);
++  
++  BOOST_CHECK(jdata_composite.M.isApprox((SE3)jdata.M));
++  BOOST_CHECK(jdata_composite.v.isApprox((Motion)jdata.v));
++  BOOST_CHECK(jdata_composite.c.isApprox((Motion)jdata.c));
++  
++  {
++    VectorXd q1(jmodel.random());
++    jmodel.normalize(q1);
++    VectorXd q2(jmodel.random());
++    jmodel.normalize(q2);
++    VectorXd v(VectorXd::Random(jmodel.nv()));
++    
++    BOOST_CHECK(jmodel_composite.integrate(q1,v).isApprox(jmodel.integrate(q1,v)));
++    BOOST_CHECK(jmodel_composite.difference(q1,q2).isApprox(jmodel.difference(q1,q2)));
++    
++    const double alpha = 0.2;
++    BOOST_CHECK(jmodel_composite.interpolate(q1,q2,alpha).isApprox(jmodel.interpolate(q1,q2,alpha)));
++    BOOST_CHECK(std::fabs(jmodel_composite.distance(q1,q2)-jmodel.distance(q1,q2))<= NumTraits<double>::dummy_precision());
++  }
++  
++  Inertia::Matrix6 I(Inertia::Random().matrix());
++  jmodel.calc_aba(jdata,I,false);
++  jmodel_composite.calc_aba(jdata_composite,I,false);
++  
++  BOOST_CHECK(jdata.U.isApprox(jdata_composite.U));
++  BOOST_CHECK(jdata.Dinv.isApprox(jdata_composite.Dinv));
++  BOOST_CHECK(jdata.UDinv.isApprox(jdata_composite.UDinv));
++  
+ }
+ 
+ struct TestJointComposite{
+ 
+-  template <typename T>
+-  void operator()(const T ) const
++  template <typename JointModel>
++  void operator()(const JointModelBase<JointModel> &) const
+   {
+-    T jmodel;
++    JointModel jmodel;
+     jmodel.setIndexes(0,0,0);
+ 
+     test_joint_methods(jmodel);    
+   }
+ 
+-  void operator()(const se3::JointModelComposite & ) const
++  void operator()(const JointModelBase<JointModelComposite> &) const
+   {
+-    se3::JointModelComposite jmodel_composite_rx(2);
+-    jmodel_composite_rx.addJointModel(se3::JointModelRX());
+-    jmodel_composite_rx.addJointModel(se3::JointModelRY());
+-    jmodel_composite_rx.setIndexes(1,0,0);
+-    jmodel_composite_rx.updateComponentsIndexes();
++    JointModelComposite jmodel_composite;
++    jmodel_composite.addJoint(se3::JointModelRX());
++    jmodel_composite.addJoint(se3::JointModelRY());
++    jmodel_composite.setIndexes(0,0,0);
+ 
+-    test_joint_methods(jmodel_composite_rx);
++    test_joint_methods(jmodel_composite);
+ 
+   }
+ 
+-  void operator()(const se3::JointModelRevoluteUnaligned & ) const
++  void operator()(const JointModelBase<JointModelRevoluteUnaligned> &) const
+   {
+-    se3::JointModelRevoluteUnaligned jmodel(1.5, 1., 0.);
++    JointModelRevoluteUnaligned jmodel(1.5, 1., 0.);
+     jmodel.setIndexes(0,0,0);
+ 
+     test_joint_methods(jmodel);
+   }
+ 
+-  void operator()(const se3::JointModelPrismaticUnaligned & ) const
++  void operator()(const JointModelBase<JointModelPrismaticUnaligned> &) const
+   {
+-    se3::JointModelPrismaticUnaligned jmodel(1.5, 1., 0.);
++    JointModelPrismaticUnaligned jmodel(1.5, 1., 0.);
+     jmodel.setIndexes(0,0,0);
+ 
+     test_joint_methods(jmodel);
+@@ -132,177 +133,73 @@ struct TestJointComposite{
+ 
+ };
+ 
+-
+ BOOST_AUTO_TEST_SUITE ( BOOST_TEST_MODULE )
+ 
+-// Test that a composite joint can contain any type of joint
+-BOOST_AUTO_TEST_CASE ( test_all_joints )
++BOOST_AUTO_TEST_CASE(test_basic)
+ {
+-  using namespace Eigen;
+-  using namespace se3;
+-
+   boost::mpl::for_each<JointModelVariant::types>(TestJointComposite());
+-
+ }
+ 
+-
+-
+-BOOST_AUTO_TEST_CASE ( test_recursive_variant)
++BOOST_AUTO_TEST_CASE(test_equivalent)
+ {
+-  // functional test. Test if one can create a composite joint containing composite joint
+-
+-  using namespace Eigen;
+-  using namespace se3;
++  {
++    JointModelSphericalZYX jmodel_spherical;
++    jmodel_spherical.setIndexes(0,0,0);
++    
++    JointModelComposite jmodel_composite((JointModelRZ()));
++    jmodel_composite.addJoint(JointModelRY());
++    jmodel_composite.addJoint(JointModelRX());
++    
++    test_joint_methods(jmodel_spherical, jmodel_composite);
++  }
++  
++  {
++    JointModelTranslation jmodel_translation;
++    jmodel_translation.setIndexes(0,0,0);
++    
++    JointModelComposite jmodel_composite((JointModelPX()));
++    jmodel_composite.addJoint(JointModelPY());
++    jmodel_composite.addJoint(JointModelPZ());
++    
++    test_joint_methods(jmodel_translation, jmodel_composite);
++  }
++}
+ 
++BOOST_AUTO_TEST_CASE (test_recursive_variant)
++{
+   /// Create joint composite with two joints,
+-  JointModelComposite jmodel_composite_two_rx(2);
+-  jmodel_composite_two_rx.addJointModel(JointModelRX());
+-  jmodel_composite_two_rx.addJointModel(JointModelRY());
++  JointModelComposite jmodel_composite_two_rx((JointModelRX()));
++  jmodel_composite_two_rx.addJoint(JointModelRY());
+ 
+   /// Create Joint composite with three joints, and add a composite in it, to test the recursive_wrapper
+-  JointModelComposite jmodel_composite_recursive(3);
+-  jmodel_composite_recursive.addJointModel(JointModelFreeFlyer());
+-  jmodel_composite_recursive.addJointModel(JointModelPlanar());
+-  jmodel_composite_recursive.addJointModel(jmodel_composite_two_rx);
+-  
++  JointModelComposite jmodel_composite_recursive((JointModelFreeFlyer()));
++  jmodel_composite_recursive.addJoint(JointModelPlanar());
++  jmodel_composite_recursive.addJoint(jmodel_composite_two_rx);
+ }
+ 
+ 
+-BOOST_AUTO_TEST_CASE (TestCopyComposite)
++BOOST_AUTO_TEST_CASE(test_copy)
+ {
+-
+-  using namespace Eigen;
+-  using namespace se3;
+-
+-  JointModelComposite jmodel_composite_planar(3);
+-  jmodel_composite_planar.addJointModel(JointModelPX());
+-  jmodel_composite_planar.addJointModel(JointModelPY());
+-  jmodel_composite_planar.addJointModel(JointModelRZ());
+-  jmodel_composite_planar.setIndexes(1,0,0);
+-  jmodel_composite_planar.updateComponentsIndexes();
+-
++  JointModelComposite jmodel_composite_planar((JointModelPX()));
++  jmodel_composite_planar.addJoint(JointModelPY());
++  jmodel_composite_planar.addJoint(JointModelRZ());
++  jmodel_composite_planar.setIndexes(0,0,0);
+ 
+   JointDataComposite jdata_composite_planar = jmodel_composite_planar.createData();
+ 
+-  Eigen::VectorXd q1(Eigen::VectorXd::Random(3));
+-  Eigen::VectorXd q1_dot(Eigen::VectorXd::Random(3));
++  VectorXd q1(VectorXd::Random(3));
++  VectorXd q1_dot(VectorXd::Random(3));
+ 
+   JointModelComposite model_copy = jmodel_composite_planar;
+   JointDataComposite data_copy = model_copy.createData();
+   
+-  BOOST_CHECK_MESSAGE( model_copy.max_joints == jmodel_composite_planar.max_joints, "Test Copy Composite, max_joints are differents");
+   BOOST_CHECK_MESSAGE( model_copy.nq() == jmodel_composite_planar.nq(), "Test Copy Composite, nq are differents");
+   BOOST_CHECK_MESSAGE( model_copy.nv() == jmodel_composite_planar.nv(), "Test Copy Composite, nv are differents");
+ 
+-  BOOST_CHECK_MESSAGE( model_copy.max_joints == jmodel_composite_planar.max_joints, "Test Copy Composite, max_joints are differents");
+-
+   jmodel_composite_planar.calc(jdata_composite_planar,q1, q1_dot);
+   model_copy.calc(data_copy,q1, q1_dot);
+ 
+ }
+ 
+-
+-BOOST_AUTO_TEST_CASE ( test_R3xSO3)
+-{
+-  std::cout << " Testing R3xSO3 vs jointcomposite<R3 - SO3>" << std::endl;
+-  using namespace Eigen;
+-  using namespace se3;
+-
+-  Model model_composite;
+-  Model model_zero_mass;
+-  Model model_ff;
+-
+-
+-
+-  Inertia body_inertia(Inertia::Random());
+-  SE3 placement(SE3::Identity());
+-
+-  model_zero_mass.addJoint(model_zero_mass.getJointId("universe"),JointModelTranslation(), placement, "R3_joint");
+-  model_zero_mass.addJoint(model_zero_mass.getJointId("R3_joint"), JointModelSpherical(), SE3::Identity(), "SO3_joint");
+-  model_zero_mass.appendBodyToJoint(model_zero_mass.getJointId("SO3_joint"), body_inertia, SE3::Identity());
+-
+-  JointModelComposite jmodel_composite(2);
+-  jmodel_composite.addJointModel(JointModelTranslation());
+-  jmodel_composite.addJointModel(JointModelSpherical());
+-  
+-  model_composite.addJoint(model_composite.getJointId("universe"),jmodel_composite, placement, "composite_R3xSO3_joint");
+-  model_composite.appendBodyToJoint(model_composite.getJointId("composite_R3xSO3_joint"), body_inertia, SE3::Identity());
+-
+-  model_ff.addJoint(model_ff.getJointId("universe"),JointModelFreeFlyer(), placement, "ff_joint");
+-  model_ff.appendBodyToJoint(model_ff.getJointId("ff_joint"), body_inertia, SE3::Identity());
+-
+-  BOOST_CHECK_MESSAGE(model_composite.nq == model_zero_mass.nq ,"Model with R3 - SO3 vs composite <R3xSO3> - dimensions nq are not equal");
+-  BOOST_CHECK_MESSAGE(model_composite.nq == model_zero_mass.nq ,"Model with R3 - SO3 vs composite <R3xSO3> - dimensions nv are not equal");
+-
+-
+-  Data data_zero_mass(model_zero_mass);
+-  Data data_composite(model_composite);
+-  Data data_ff(model_ff);
+-
+-  Eigen::VectorXd q(Eigen::VectorXd::Random(model_zero_mass.nq));normalize(model_zero_mass,q);
+-  Eigen::VectorXd q_dot(Eigen::VectorXd::Random(model_zero_mass.nv));
+-  Eigen::VectorXd q_ddot(Eigen::VectorXd::Random(model_zero_mass.nv));
+-  Eigen::VectorXd q1(Eigen::VectorXd::Random(model_zero_mass.nq));normalize(model_zero_mass,q1);
+-  Eigen::VectorXd q2(Eigen::VectorXd::Random(model_zero_mass.nq));normalize(model_zero_mass,q2);
+-  Eigen::VectorXd tau(Eigen::VectorXd::Random(model_zero_mass.nq));
+-  double u = 0.3;
+-
+-
+-
+-  aba(model_composite,data_composite, q,q_dot, tau);
+-  centerOfMass(model_composite, data_composite,q,q_dot,q_ddot,true,false);
+-  forwardKinematics(model_composite,data_composite, q, q_dot, q_ddot);
+-  computeAllTerms(model_zero_mass,data_zero_mass,q,q_dot);
+-
+-  forwardKinematics(model_zero_mass, data_zero_mass, q, q_dot, q_ddot);
+-  computeAllTerms(model_composite,data_composite,q,q_dot);
+-
+-
+-  Model::Index index_joint_R3xSO3 = (Model::Index) model_zero_mass.njoints-1;
+-  Model::Index index_joint_composite = (Model::Index) model_composite.njoints-1;
+-
+-
+-  BOOST_CHECK_MESSAGE(data_composite.oMi[index_joint_composite]
+-                          .isApprox(data_zero_mass.oMi[index_joint_R3xSO3]) , "composite<R3xSO3> vs R3-SO3 - oMi last joint not equal");
+-
+-
+-  BOOST_CHECK_MESSAGE(data_composite.v[index_joint_composite]
+-                          == data_zero_mass.v[index_joint_R3xSO3] , "composite<R3xSO3> vs R3-SO3 - v last joint not equal");
+-
+-  // BOOST_CHECK_MESSAGE(data_composite.a[index_joint_composite] //@TODO Uncommente to test once JointComposite maths are ok
+-  //                         == data_zero_mass.a[index_joint_R3xSO3] , "composite planar joint vs PxPyRz - a last joint not equal");
+-
+-  // BOOST_CHECK_MESSAGE(data_composite.f[index_joint_composite] //@TODO Uncommente to test once JointComposite maths are ok
+-  //                         == data_zero_mass.f[index_joint_R3xSO3] , "composite planar joint vs PxPyRz - f last joint not equal");
+-
+-  BOOST_CHECK_MESSAGE(data_composite.com[index_joint_composite]
+-                          .isApprox(data_zero_mass.com[index_joint_R3xSO3]) , "composite<R3xSO3> vs R3-SO3 - com last joint not equal");
+-
+-  BOOST_CHECK_MESSAGE(data_composite.vcom[index_joint_composite]
+-                          .isApprox(data_zero_mass.vcom[index_joint_R3xSO3]) , "composite<R3xSO3> vs R3-SO3 - vcom last joint not equal");
+-
+-  BOOST_CHECK_MESSAGE(data_composite.mass[index_joint_composite]
+-                          == data_zero_mass.mass[index_joint_R3xSO3] , "composite<R3xSO3> vs R3-SO3 - mass last joint not equal"); 
+-
+-  BOOST_CHECK_MESSAGE(data_composite.kinetic_energy
+-                          == data_zero_mass.kinetic_energy , "composite<R3xSO3> vs R3-SO3 - kinetic energy not equal");
+-
+-  BOOST_CHECK_MESSAGE(data_composite.potential_energy
+-                          == data_zero_mass.potential_energy , "composite<R3xSO3> vs R3-SO3 - potential energy not equal");                          
+-
+-  // BOOST_CHECK_MESSAGE(data_composite.nle //@TODO Uncommente to test once JointComposite maths are ok
+-  //                         .isApprox(data_zero_mass.nle) , "composite planar joint vs PxPyRz - nle not equal");
+-
+-  // BOOST_CHECK_MESSAGE(data_composite.M //@TODO Uncommente to test once JointComposite maths are ok
+-  //                         .isApprox(data_zero_mass.M) , "composite planar joint vs PxPyRz - Mass Matrix not equal");
+-
+-  
+-  BOOST_CHECK_MESSAGE(integrate(model_composite, q,q_dot).isApprox(integrate(model_zero_mass ,q,q_dot)) ,std::string(" composite<R3xSO3> vs R3-SO3 - integrate model error "));
+-  BOOST_CHECK_MESSAGE(interpolate(model_composite, q1,q2,u).isApprox(interpolate(model_zero_mass ,q1,q2,u)) ,std::string(" composite<R3xSO3> vs R3-SO3 - interpolate model error "));
+-  BOOST_CHECK_MESSAGE(differentiate(model_composite, q1,q2).isApprox(differentiate(model_zero_mass ,q1,q2)) ,std::string(" composite<R3xSO3> vs R3-SO3 - differentiate model error "));
+-  BOOST_CHECK_MESSAGE(fabs(distance(model_composite, q1,q2).norm() - distance(model_zero_mass ,q1,q2).norm()) <= 1e-6 ,std::string(" composite<R3xSO3> vs R3-SO3 - distance model error "));
+-
+-}
+-
+ BOOST_AUTO_TEST_SUITE_END ()
+ 
+diff --git unittest/joint-configurations.cpp unittest/joint-configurations.cpp
+index 49be051..1fa3ed7 100644
+--- unittest/joint-configurations.cpp
++++ unittest/joint-configurations.cpp
+@@ -124,9 +124,9 @@ void TestIntegrationJoint::operator()< JointModelSphericalZYX >(JointModelBase<
+ template<>
+ void TestIntegrationJoint::operator()< JointModelComposite >(JointModelBase< JointModelComposite > & /*jmodel*/)
+ {
+-  se3::JointModelComposite jmodel((se3::JointModelRX()), (se3::JointModelRY()));
++  se3::JointModelComposite jmodel((se3::JointModelRX()));
++  jmodel.addJoint(se3::JointModelRY());
+   jmodel.setIndexes(1,0,0);
+-  jmodel.updateComponentsIndexes();
+ 
+   se3::JointModelComposite::JointDataDerived jdata = jmodel.createData();
+ 
+diff --git unittest/joint.cpp unittest/joint.cpp
+index 9c2398a..c932c1c 100644
+--- unittest/joint.cpp
++++ unittest/joint.cpp
+@@ -93,9 +93,9 @@ struct TestJoint{
+     // jmodel.addJointModel(se3::JointModelRX());
+     // jmodel.addJointModel(se3::JointModelRY());
+ 
+-    se3::JointModelComposite jmodel((se3::JointModelRX()), (se3::JointModelRY()));
++    se3::JointModelComposite jmodel((se3::JointModelRX()));
++    jmodel.addJoint(se3::JointModelRY());
+     jmodel.setIndexes(0,0,0);
+-    jmodel.updateComponentsIndexes();
+ 
+     se3::JointModelComposite::JointDataDerived jdata = jmodel.createData();
+ 

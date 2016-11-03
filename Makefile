@@ -14,6 +14,7 @@ SUBDIR+=	dynamic-graph-v3
 SUBDIR+=	dynamic-graph-bridge-v3
 SUBDIR+=	FRILibrary
 SUBDIR+=	gdalwrap
+SUBDIR+= 	gerard-bauzil
 SUBDIR+=	gest-genom
 SUBDIR+=	gladys
 SUBDIR+=	hatpconsole

@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	mapping/gerard-bauzil
 # Created:			Olivier Stasse on Thurs., 3 Nov 2016
 #
-VERSION=		1.0.0
+VERSION=		1.0.1
 DISTNAME=		gerard-bauzil-${VERSION}
 
 CATEGORIES=		mapping

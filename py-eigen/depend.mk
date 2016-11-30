@@ -21,7 +21,9 @@ DEPEND_ABI.eigenpy?=	eigenpy>=1.3.0
 DEPEND_DIR.eigenpy?=	../../wip/py-eigen
 
 include ../../devel/boost-headers/depend.mk
+include ../../devel/boost-libs/depend.mk
 include ../../math/eigen3/depend.mk
+include ../../mk/sysdep/py-numpy.mk 
 
 endif # EIGENPY_DEPEND_MK -------------------------------------------------
 

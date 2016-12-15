@@ -1,0 +1,2 @@
+This is a minimal packaging of the COLLADA (DAE) module of OpenSceneGraph. It is designed to compile the DAE module only, while relying on the system version of OSG for the core functionnality.
+NB: Collada is not a system dependancy. Consequently the system version of OSG does not provide the DAE module. Alternatively, the DAE module would be automatically compiled if installing OSG from source (as long as COLLADA is properly detected on the system).

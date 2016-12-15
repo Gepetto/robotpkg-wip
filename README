@@ -13,3 +13,5 @@ Memo on URLs:
     (read-only, or read-write if you have a login)
 - ssh://git@git.openrobots.org/robots/robotpkg
     (read-write, requires a login + ssh key)
+- ssh://ftp.openrobots.org:/var/ftp/pub/openrobots/
+    (r-w, login with ssh key): put your tgz there, in package-dedicated repository.

@@ -1,7 +1,3 @@
-SHA1 (dynamic_graph_bridge-v3-3.0.0.tar.gz) = ab511444894614eb2b6cec86fc10d189fbb09d73
-RMD160 (dynamic_graph_bridge-v3-3.0.0.tar.gz) = ecf35dc5c50c24a8aa2ba9b53fc2d4972e58ddae
-Size (dynamic_graph_bridge-v3-3.0.0.tar.gz) = 742833 bytes
-SHA1 (patch-aa) = f1a950bd8ccf882c49dc2de373f12db07b5be852
-SHA1 (patch-ab) = c30d3ad301b8e7911908e12398f8da00e0ad57bd
-SHA1 (patch-ac) = f44cf390bd8e05cfaa73a24429d405c0b3125d27
-SHA1 (patch-ad) = d5eb291f46f3aa9a48d121736954d028c938d2d9
+SHA1 (dynamic_graph_bridge-v3-3.0.1.tar.gz) = dd9139f4f2cb002080f16f234bd76ce6d82cfbae
+RMD160 (dynamic_graph_bridge-v3-3.0.1.tar.gz) = b585ff67ca74b4fbd71169a72632773e6ae35099
+Size (dynamic_graph_bridge-v3-3.0.1.tar.gz) = 767044 bytes

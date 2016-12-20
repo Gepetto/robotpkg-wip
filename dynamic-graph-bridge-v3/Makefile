@@ -1,14 +1,13 @@
 # robotpkg Makefile for:	wip/dynamic-graph-bridge
 #
 
-VERSION=		3.0.0
+VERSION=		3.0.1
 DISTNAME=		dynamic_graph_bridge-v3-${VERSION}
 PKGNAME=		dynamic-graph-bridge-v3-${VERSION}
-PKGREVISION=		5
 
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=dynamic-graph-bridge-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}proyan/dynamic_graph_bridge/
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/dynamic_graph_bridge/
 
 COMMENT=		This ROS package binds together the ROS framework with the dynamic-graph real-time control architecture.
 LICENSE=		gnu-lgpl-v3

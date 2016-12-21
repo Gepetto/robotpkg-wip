@@ -8,7 +8,7 @@ PKGREVISION=		2
 
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=dynamic-graph-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/proyan/dynamic-graph
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/dynamic-graph
 CHECKOUT_VCS_OPTS=	--recursive
 
 COMMENT=		Efficient data-flow C++ library for robotics

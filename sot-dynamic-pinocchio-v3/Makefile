@@ -2,11 +2,10 @@
 # Created:			Rohan Budhiraja on Fri, 8 Apr 2016
 #
 
-VERSION=		3.1.1
-PKGREVISION=		2
+VERSION=		3.1.3
 DISTNAME=		sot-dynamic-pinocchio-v3-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-dynamic-pinocchio-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}proyan/sot-dynamic/
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/sot-dynamic-pinocchio/
 
 
 MAINTAINER=	gepetto@laas.fr

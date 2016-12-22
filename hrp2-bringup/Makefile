@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	robots/hrp2-bringup
 # Created:			Olivier Stasse on Wed, 14 Jav 2015
 #
-VERSION=		1.0.5
+VERSION=		1.0.6
 DISTNAME=		hrp2-bringup-${VERSION}
 CATEGORIES=		motion
 MASTER_SITES=		${MASTER_SITE_JRL}ros/${PKGBASE}/

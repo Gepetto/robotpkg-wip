@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	robots/hrp2-computer-monitor
 # Created:			Olivier Stasse on Wed, 17 Jun 2015
 #
-VERSION=		1.0.1
+VERSION=		1.0.2
 DISTNAME=		hrp2-computer-monitor-${VERSION}
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_JRL}ros/${PKGBASE}/

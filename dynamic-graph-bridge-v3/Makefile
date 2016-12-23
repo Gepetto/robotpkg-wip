@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/dynamic-graph-bridge
 #
 
-VERSION=		3.0.2
+VERSION=		3.0.3
 DISTNAME=		dynamic_graph_bridge-v3-${VERSION}
 PKGNAME=		dynamic-graph-bridge-v3-${VERSION}
 PKGREVISION=		2

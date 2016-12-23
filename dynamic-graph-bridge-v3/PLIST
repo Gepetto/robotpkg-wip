@@ -7,6 +7,7 @@ include/dynamic_graph_bridge/deprecated.hh
 include/dynamic_graph_bridge/ros_init.hh
 include/dynamic_graph_bridge/ros_interpreter.hh
 include/dynamic_graph_bridge/sot_loader.hh
+include/dynamic_graph_bridge/sot_loader_basic.hh
 include/dynamic_graph_bridge/warning.hh
 lib/libros_bridge.so
 lib/libros_interpreter.so

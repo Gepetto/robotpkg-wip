@@ -2,7 +2,7 @@
 # Created:			Rohan Budhiraja on Thu, 25 Aug 2016
 #
 
-VERSION=		1.1.0
+VERSION=		1.1.1
 DISTNAME=		sot-application-v3-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-application-v3/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/sot-application

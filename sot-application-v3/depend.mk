@@ -18,7 +18,7 @@ SYSTEM_SEARCH.sot-application-v3=\
 
 DEPEND_USE+=		sot-application-v3
 
-DEPEND_ABI.sot-application-v3?=	sot-application>=1.1.0
+DEPEND_ABI.sot-application-v3?=	sot-application-v3>=1.1.0
 DEPEND_DIR.sot-application-v3?=	../../wip/sot-application-v3
 
 endif # SOT_APPLICATION_DEPEND_MK -------------------------------------------------

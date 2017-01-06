@@ -3,7 +3,7 @@
 #
 
 VERSION=		3.0.0
-
+PKG_REVISION=		1.0
 DISTNAME=		sot-pattern-generator-v3-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-pattern-generator-v3/}
 MASTER_REPOSITORY=\
@@ -27,6 +27,7 @@ include ../../devel/boost-libs/depend.mk
 include ../../wip/pinocchio/depend.mk
 include ../../wip/jrl-walkgen-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
+include ../../wip/sot-application-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

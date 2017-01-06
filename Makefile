@@ -89,6 +89,7 @@ SUBDIR+=	roralink
 SUBDIR+=	robotModelParser-libs
 SUBDIR+=	simple-humanoid-description
 SUBDIR+=	sot-application
+SUBDIR+=        sot-application-v3
 SUBDIR+=	sot-core-v3
 SUBDIR+=	sot-dynamic-pinocchio-v3
 SUBDIR+=	sot-dyninv

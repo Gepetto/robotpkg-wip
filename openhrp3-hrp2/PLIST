@@ -15,7 +15,6 @@ include/openhrp3/hrp2/deprecated.hh
 include/openhrp3/hrp2/warning.hh
 lib/pkgconfig/openhrp3-hrp2.pc
 share/customizer/HRP2_bush_customizer_param.conf
-share/customizer/sample1_bush_customizer_param.conf
-share/customizer/springJoint_param.conf
 share/openhrp3-hrp2/project/simulationMode.xml
 share/openhrp3-hrp2/project/simulationModeNoBush.xml
+share/openhrp3-hrp2/project/simulationModeNoBushSeq.xml

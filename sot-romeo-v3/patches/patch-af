@@ -1,7 +1,5 @@
-Look for sot-dynamic-pinocchio instead of sot-dynamic
-
---- CMakeLists.txt
-+++ CMakeLists.txt
+--- CMakeLists.txt	2017-02-02 14:42:54.429473773 +0100
++++ CMakeLists.txt.new	2017-02-02 14:43:26.486211731 +0100
 @@ -43,7 +43,7 @@
  ADD_REQUIRED_DEPENDENCY("dynamic-graph-python >=3.0")
  ADD_REQUIRED_DEPENDENCY("sot-core >= 3.0")
@@ -9,5 +7,5 @@ Look for sot-dynamic-pinocchio instead of sot-dynamic
 -ADD_REQUIRED_DEPENDENCY("sot-dynamic >= 3.1")
 +ADD_REQUIRED_DEPENDENCY("sot-dynamic-pinocchio >= 3.1")
  
- ADD_ROSPACK_DEPENDENCY("dynamic_graph_bridge >= 3.0.0")
+ ADD_REQUIRED_DEPENDENCY("dynamic_graph_bridge >= 3.0.0")
  # Search for dependencies.

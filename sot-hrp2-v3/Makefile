@@ -3,7 +3,7 @@
 #
 
 VERSION=		2.0.0
-PKGREVISION=		1
+PKGREVISION=		2
 DISTNAME=		sot-hrp2-v3-${VERSION}
 PKGNAME=		sot-hrp2-v3-${VERSION}
 

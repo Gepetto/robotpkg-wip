@@ -94,6 +94,7 @@ SUBDIR+=        sot-application-v3
 SUBDIR+=	sot-core-v3
 SUBDIR+=	sot-dynamic-pinocchio-v3
 SUBDIR+=	sot-dyninv
+SUBDIR+=	sot-dyninv-v3
 SUBDIR+=	sot-hrp2
 SUBDIR+=	sot-hrp2-v3
 SUBDIR+=	sot-hrprtc-hrp2

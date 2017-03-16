@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Mon, 15 Apr 2013
 #
 
-VERSION=		2.0.1
+VERSION=		2.0.2
 DISTNAME=		sot-tools-v3-${VERSION}
 PKGNAME=		${PKGTAG.python-}sot-tools-v3-${VERSION}
 

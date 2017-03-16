@@ -14,7 +14,7 @@ ifeq (+,$(SOT_DYNINV_v3_DEPEND_MK)) # ------------------------------------------
 PREFER.sot-dyninv-v3?=	robotpkg
 
 SYSTEM_SEARCH.sot-dyninv-v3=\
-	include/sot-dyninv/config.h				\
+	include/sot-dyninv/config.hh				\
 	'lib/pkgconfig/sot-dyninv.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		sot-dyninv-v3

@@ -1,8 +1,4 @@
 @comment Wed Jun 29 12:35:43 CEST 2016
-include/sot/tools/config.h
-include/sot/tools/config.hh
-include/sot/tools/deprecated.hh
-include/sot/tools/warning.hh
 lib/libsot-tools.so
 lib/libsot-tools.so.${PKGVERSION}
 lib/pkgconfig/sot-tools.pc

@@ -19,7 +19,7 @@ DEPEND_USE+=		talos_ros_control
 ROS_DEPEND_USE+=	talos_ros_control
 
 DEPEND_ABI.talos_ros_control?=	ros-talos-ros-control>=0.2
-DEPEND_DIR.talos_ros_control?=	../../wip/talos_ros_control
+DEPEND_DIR.talos_ros_control?=	../../wip/talos-ros-control
 
 SYSTEM_SEARCH.talos_ros_control=\
 	include/controller_manager/controller_loader.h		\

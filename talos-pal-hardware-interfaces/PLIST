@@ -1,0 +1,7 @@
+@comment Wed Mar 29 18:32:40 CEST 2017
+include/pal_hardware_interfaces/actuator_temperature_interface.h
+include/pal_hardware_interfaces/current_limit_interface.h
+lib/pkgconfig/pal_hardware_interfaces.pc
+share/pal_hardware_interfaces/cmake/pal_hardware_interfacesConfig-version.cmake
+share/pal_hardware_interfaces/cmake/pal_hardware_interfacesConfig.cmake
+share/pal_hardware_interfaces/package.xml

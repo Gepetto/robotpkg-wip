@@ -105,9 +105,6 @@ ${PYTHON_SITELIB}/controller_manager_tests/controller_manager_dummy.py
 ${PYTHON_SITELIB}/rqt_controller_manager-${PKGVERSION}-py${PYTHON_VERSION}.egg-info
 ${PYTHON_SITELIB}/rqt_controller_manager/__init__.py
 ${PYTHON_SITELIB}/rqt_controller_manager/controller_manager_gui.py
-setup.bash
-setup.sh
-setup.zsh
 share/common-lisp/ros/controller_manager_msgs/msg/ControllerState.lisp
 share/common-lisp/ros/controller_manager_msgs/msg/ControllerStatistics.lisp
 share/common-lisp/ros/controller_manager_msgs/msg/ControllersStatistics.lisp

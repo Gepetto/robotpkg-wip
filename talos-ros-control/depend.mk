@@ -22,7 +22,7 @@ DEPEND_ABI.talos_ros_control?=	ros-talos-ros-control>=0.2
 DEPEND_DIR.talos_ros_control?=	../../wip/talos_ros_control
 
 SYSTEM_SEARCH.talos_ros_control=\
-	include/controller_interface/controller_loader.h		\
+	include/controller_manager/controller_loader.h		\
 	lib/libcontroller_manager.so						\
 	'share/ros_control/package.xml:/<version>/s/[^0-9.]//gp'		\
 	'lib/pkgconfig/controller_interface.pc:/Version/s/[^0-9.]//gp'

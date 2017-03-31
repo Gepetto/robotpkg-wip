@@ -103,6 +103,7 @@ SUBDIR+=	sot-pattern-generator-v3
 SUBDIR+=	sot-romeo-v3
 SUBDIR+=	soth
 SUBDIR+=	spark-genom
+SUBDIR+=	talos-pal-hardware-interfaces
 SUBDIR+=	talos-ros-control
 SUBDIR+= 	track-target-genom
 SUBDIR+= 	urg

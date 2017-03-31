@@ -1,3 +1,4 @@
+@comment Fri Mar 31 14:47:34 CEST 2017
 include/controller_interface/controller.h
 include/controller_interface/controller_base.h
 include/controller_manager/controller_loader.h
@@ -151,6 +152,12 @@ share/controller_manager_tests/cmake/controller_manager_testsConfig-version.cmak
 share/controller_manager_tests/cmake/controller_manager_testsConfig.cmake
 share/controller_manager_tests/package.xml
 share/controller_manager_tests/test_controllers_plugin.xml
+share/hardware_interface/cmake/hardware_interfaceConfig-version.cmake
+share/hardware_interface/cmake/hardware_interfaceConfig.cmake
+share/hardware_interface/package.xml
+share/joint_limits_interface/cmake/joint_limits_interfaceConfig-version.cmake
+share/joint_limits_interface/cmake/joint_limits_interfaceConfig.cmake
+share/joint_limits_interface/package.xml
 share/ros_control/package.xml
 share/rqt_controller_manager/cmake/rqt_controller_managerConfig-version.cmake
 share/rqt_controller_manager/cmake/rqt_controller_managerConfig.cmake

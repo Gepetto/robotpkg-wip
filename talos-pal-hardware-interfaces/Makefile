@@ -25,7 +25,7 @@ include ../../interfaces/ros-std-msgs/depend.mk
 include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../middleware/ros-comm/depend.mk
-include ../../motion/ros-control/depend.mk
+include ../../wip/talos-ros-control/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

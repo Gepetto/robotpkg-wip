@@ -15,7 +15,7 @@ PREFER.talos-ros-control?=	robotpkg
 
 DEPEND_USE+=			talos-ros-control
 
-DEPEND_ABI.talos-ros-control?=	talos-ros-control>=0.2
+DEPEND_ABI.talos-ros-control?=	talos-ros-control>=0.2.0
 DEPEND_DIR.talos-ros-control?=	../../wip/talos-ros-control
 
 SYSTEM_SEARCH.talos-ros-control=\

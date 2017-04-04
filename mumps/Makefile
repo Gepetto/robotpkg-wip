@@ -21,16 +21,10 @@ LIBRARY_DIRS.lapack=	lib
 RPATH_DIRS.lapack=	lib
 LDFLAGS.lapack=		-llapack
 
-INCLUDE_DIRS.blas=	include
-LIBRARY_DIRS.blas=	lib
-RPATH_DIRS.blas=	lib
-LDFLAGS.blas=		-lblas
-
 # require f90 compiler
 DEPEND_ABI.gcc-fortran+=	gcc-fortran>=4
 
 include ../../math/lapack/depend.mk
-include ../../math/blas/depend.mk
 include ../../mk/sysdep/autoconf.mk
 include ../../mk/sysdep/automake.mk
 include ../../mk/language/c.mk

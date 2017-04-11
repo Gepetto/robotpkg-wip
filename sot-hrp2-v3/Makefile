@@ -2,8 +2,7 @@
 # Created:			Rohan Budhiraja, on Wed. 14th April 2016
 #
 
-VERSION=		2.0.0
-PKGREVISION=		2
+VERSION=		2.0.1
 DISTNAME=		sot-hrp2-v3-${VERSION}
 PKGNAME=		sot-hrp2-v3-${VERSION}
 

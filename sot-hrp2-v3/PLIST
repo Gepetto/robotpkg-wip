@@ -1,4 +1,3 @@
-include/sot-hrp2/config.h
 include/sot-hrp2/config.hh
 include/sot-hrp2/deprecated.hh
 include/sot-hrp2/warning.hh

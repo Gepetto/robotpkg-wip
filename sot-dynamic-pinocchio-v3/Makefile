@@ -3,7 +3,7 @@
 #
 
 VERSION=		3.1.4
-PKGREVISION=		1
+PKGREVISION=		2
 DISTNAME=		sot-dynamic-pinocchio-v3-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-dynamic-pinocchio-v3/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/sot-dynamic-pinocchio/

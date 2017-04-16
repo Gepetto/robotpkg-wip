@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Wed, 29 Mar 2017
 #
 
-VERSION=	0.2.4
+VERSION=	0.2.5
 PKGNAME=	talos-ros-control-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 

@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Thu, 30 Mar 2017
 #
 
-VERSION=	0.0.2
+VERSION=	0.0.3
 PKGNAME=	talos-pal-hardware-interfaces-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 
@@ -16,6 +16,8 @@ NO_PUBLIC_SRC=  ${RESTRICTED}
 NO_PUBLIC_BIN=  ${RESTRICTED}
 
 USE_BOOST_LIBS=	thread
+
+CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

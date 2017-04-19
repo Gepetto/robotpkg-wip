@@ -21,9 +21,9 @@ DEPEND_DIR.talos-pal-hardware-interfaces?=\
 	../../wip/talos-pal-hardware-interfaces
 
 SYSTEM_SEARCH.talos-pal-hardware-interfaces=\
-  'include/pal_hardware_interfaces/actuator_temperature_interface.h'	\
-  'share/pal_hardware_interfaces/package.xml:/<version>/s/[^0-9.]//gp'	\
-  'lib/pkgconfig/pal_hardware_interfaces.pc:/Version/s/[^0-9.]//gp'
+  'include/talos_pal_hardware_interfaces/actuator_temperature_interface.h'	\
+  'share/talos_pal_hardware_interfaces/package.xml:/<version>/s/[^0-9.]//gp'	\
+  'lib/pkgconfig/talos_pal_hardware_interfaces.pc:/Version/s/[^0-9.]//gp'
 
 endif # TALOS_PAL_HWIFACES_DEPEND_MK ---------------------------------------
 

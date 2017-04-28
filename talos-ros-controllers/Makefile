@@ -19,10 +19,8 @@ RESTRICTED=     Redistribution of repackaged binaries not permitted
 NO_PUBLIC_SRC=  ${RESTRICTED}
 NO_PUBLIC_BIN=  ${RESTRICTED}
 
-$(info Display something for talos-ros-controllers before Makefile.common ${CMAKE_PREFIX_PATH})
 include ../../meta-pkgs/ros-base/Makefile.common
 CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
-$(info Display something for talos-ros-controllers ${CMAKE_PREFIX_PATH})
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

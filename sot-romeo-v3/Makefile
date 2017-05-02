@@ -3,14 +3,13 @@
 #
 
 
-VERSION=		2.0.0
+VERSION=		2.0.1
 DISTNAME=		sot-romeo-v3-${VERSION}
 PKGNAME=		sot-romeo-v3-${VERSION}
-PKGREVISION=		3
 
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-romeo-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}proyan/sot-romeo
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/sot-romeo
 
 COMMENT=		This packages provides a generic Stack Of Tasks library for the humanoid robot Romeo.
 LICENSE=		gnu-lgpl-v3

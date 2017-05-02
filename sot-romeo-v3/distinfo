@@ -1,9 +1,3 @@
-SHA1 (sot-romeo-v3-2.0.0.tar.gz) = dbf6eb4885962467c11bf1b14e2343797d3487b2
-RMD160 (sot-romeo-v3-2.0.0.tar.gz) = aaa2db1de593d3da0a41bb63647c8347cb06855e
-Size (sot-romeo-v3-2.0.0.tar.gz) = 105021 bytes
-SHA1 (patch-aa) = 0319ccbe6c1622c7708972f6fa4fde3e9361002c
-SHA1 (patch-ab) = f9980b73a906658126092a370fe79eb41f08dbb4
-SHA1 (patch-ac) = 655321720aa1e96b8d24f515ecd4b60233061802
-SHA1 (patch-ad) = 839d787b1ffb62cdba5a6620dda07c3cedd0e9fb
-SHA1 (patch-ae) = bc58ebeb3b3ad06f0747ce7760e290481004ec35
-SHA1 (patch-af) = fec847fd48e14388ed51a485187a03e6a704be67
+SHA1 (sot-romeo-v3-2.0.1.tar.gz) = cf8af22c3abee4440f6ff4bbee227d615b24be42
+RMD160 (sot-romeo-v3-2.0.1.tar.gz) = c6a0900a0fce48bab39ffd36d0e49520fd311e5c
+Size (sot-romeo-v3-2.0.1.tar.gz) = 760350 bytes

@@ -21,7 +21,7 @@ PKG_DATE=	20120125
 DISTNAME=	${PKGNAME}
 
 MASTER_SITES=	${MASTER_SITE_OPENROBOTS:=move3d-assets/}
-MASTER_REPOSITORY=	git http://git.openrobots.org/git/robots/move3d-assets.git
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_OPENROBOTS}move3d/move3d-assets
 
 CATEGORIES=	wip
 LICENSE=	isc

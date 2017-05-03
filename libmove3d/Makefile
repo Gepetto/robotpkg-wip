@@ -6,7 +6,7 @@ DISTNAME=			libmove3d-3.22.0
 PKGREVISION=			1
 CATEGORIES=			path
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=libmove3d/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_OPENROBOTS_TRAC}libmove3d.git
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_OPENROBOTS}move3d/libmove3d
 
 MAINTAINER=			biomove3dgitrepo@laas.fr
 COMMENT=			Library for motion planning and geometric reasonning

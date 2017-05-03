@@ -9,7 +9,7 @@ PKGREVISION=		3
 
 CATEGORIES=		path
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=move3d-studio/}
-MASTER_REPOSITORY=	git git://trac.laas.fr/robots/move3d-studio.git
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_OPENROBOTS}move3d/move3d-studio
 
 MAINTAINER=		biomove3dgitrepo@laas.fr
 COMMENT=		The BioMove3D development studio

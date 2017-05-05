@@ -21,7 +21,7 @@ DEPEND_DIR.talos-pal-hardware-gazebo?=\
 	../../wip/talos-pal-hardware-gazebo
 
 SYSTEM_SEARCH.talos-pal-hardware-gazebo=\
-  'include/talos_pal_hardware_gazebo/actuator_temperature_interface.h'	\
+  'include/talos_pal_hardware_gazebo/pal_hardware_gazebo.h'	\
   'share/talos_pal_hardware_gazebo/package.xml:/<version>/s/[^0-9.]//gp'	\
   'lib/pkgconfig/talos_pal_hardware_gazebo.pc:/Version/s/[^0-9.]//gp'
 

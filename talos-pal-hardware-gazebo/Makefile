@@ -5,6 +5,7 @@
 VERSION=	0.0.9
 PKGNAME=	talos-pal-hardware-gazebo-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+PKG_REVISION=	1
 
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_JRL:=talos/$(subst -,_,${PKGBASE})/}

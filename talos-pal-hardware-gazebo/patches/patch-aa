@@ -1,0 +1,11 @@
+--- package.xml	2017-05-05 13:27:39.006122753 +0200
++++ package.xml	2017-04-13 15:08:03.000000000 +0200
+@@ -1,7 +1,7 @@
+ <?xml version="1.0"?>
+ <package format="2">
+   <name>talos_pal_hardware_gazebo</name>
+-  <version>0.0.8</version>
++  <version>0.0.9</version>
+   <description>The pal_hardware_gazebo package</description>
+ 
+   <maintainer email="hilario.tome@pal-robotics.com">Hilario Tome</maintainer>

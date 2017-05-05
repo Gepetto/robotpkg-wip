@@ -1,6 +1,3 @@
-SHA1 (dynamic-graph-python-v3-3.0.1.tar.gz) = e10ab558b4c30bd104ea79852227badabfb19e77
-RMD160 (dynamic-graph-python-v3-3.0.1.tar.gz) = a59e232747d4930f9c2a14ec9a5e18aa7ba005e3
-Size (dynamic-graph-python-v3-3.0.1.tar.gz) = 791709 bytes
-SHA1 (patch-aa) = 538c46d0eaeb6c032b4f54a9627f6b411cb02fef
-SHA1 (patch-ab) = d97f989705499ed8014985217a99f42eefd39fcd
-SHA1 (patch-ac) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (dynamic-graph-python-v3-3.0.2.tar.gz) = 15a52dcf69135f06dbc073618294397a58b9a171
+RMD160 (dynamic-graph-python-v3-3.0.2.tar.gz) = 6e02715f3652ccb6caf7beddd5b4ab30f14702d0
+Size (dynamic-graph-python-v3-3.0.2.tar.gz) = 792032 bytes

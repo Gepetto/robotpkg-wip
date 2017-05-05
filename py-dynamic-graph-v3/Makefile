@@ -3,8 +3,7 @@
 #
 
 DISTNAME=		dynamic-graph-python-v3-${VERSION}
-VERSION=		3.0.1
-#PKGREVISION=		2
+VERSION=		3.0.2
 
 PKGNAME=		${PKGTAG.python-}dynamic-graph-v3-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=dynamic-graph-python-v3/}

@@ -66,3 +66,10 @@ share/talos_hardware_gazebo/config/pids.yaml
 share/talos_hardware_gazebo/config/talos_full_pal_hardware_gazebo_config.yaml
 share/talos_hardware_gazebo/package.xml
 share/talos_simulation/package.xml
+share/talos_controller_configuration_gazebo/package.xml
+share/talos_controller_configuration_gazebo/config/offsets.yaml
+share/talos_controller_configuration_gazebo/config/walking_controller.yaml
+share/talos_controller_configuration_gazebo/config/walking_params.yaml
+share/talos_controller_configuration_gazebo/launch/default_controllers.launch
+share/talos_controller_configuration_gazebo/launch/walking_controller.launch
+

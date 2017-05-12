@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Wed, 29 Mar 2017
 #
 
-VERSION=	0.2.6
+VERSION=	0.2.7
 PKGNAME=	talos-ros-control-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 
@@ -32,6 +32,7 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
+include ../../sysutils/py-rospkg/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

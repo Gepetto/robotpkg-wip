@@ -79,10 +79,10 @@ lib/pkgconfig/talos_controller_manager_tests.pc
 lib/pkgconfig/talos_hardware_interface.pc
 lib/pkgconfig/talos_joint_limits_interface.pc
 lib/pkgconfig/talos_transmission_interface.pc
-${PYTHON_SITELIB}/controller_manager_tests/__init__.py
-${PYTHON_SITELIB}/controller_manager_tests/controller_manager_dummy.py
-${PYTHON_SITELIB}/rqt_controller_manager/__init__.py
-${PYTHON_SITELIB}/rqt_controller_manager/controller_manager_gui.py
+${PYTHON_SITELIB}/talos_controller_manager_tests/__init__.py
+${PYTHON_SITELIB}/talos_controller_manager_tests/controller_manager_dummy.py
+${PYTHON_SITELIB}/rqt_talos_controller_manager/__init__.py
+${PYTHON_SITELIB}/rqt_talos_controller_manager/controller_manager_gui.py
 ${PYTHON_SITELIB}/rqt_talos_controller_manager-0.2.4-py${PYTHON_VERSION}.egg-info
 ${PYTHON_SITELIB}/talos_controller_manager-0.2.4-py${PYTHON_VERSION}.egg-info
 ${PYTHON_SITELIB}/talos_controller_manager/__init__.py

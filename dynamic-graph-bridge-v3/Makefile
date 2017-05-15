@@ -4,6 +4,7 @@
 VERSION=		3.0.6
 DISTNAME=		dynamic_graph_bridge-v3-${VERSION}
 PKGNAME=		dynamic-graph-bridge-v3-${VERSION}
+PKGREVISION=		1
 
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=dynamic-graph-bridge-v3/}
@@ -29,6 +30,7 @@ include ../../motion/dynamic-graph-bridge-msgs/depend.mk
 include ../../devel/ros-realtime-tools/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../math/ros-geometry/depend.mk
+include ../../math/ros-geometry-experimental/depend.mk
 include ../../simulation/bullet/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk

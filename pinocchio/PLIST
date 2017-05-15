@@ -84,6 +84,13 @@ include/pinocchio/multibody/joint/joint-spherical.hpp
 include/pinocchio/multibody/joint/joint-translation.hpp
 include/pinocchio/multibody/joint/joint-variant.hpp
 include/pinocchio/multibody/joint/joint.hpp
+include/pinocchio/multibody/liegroup/cartesian-product.hpp
+include/pinocchio/multibody/liegroup/liegroup.hpp
+include/pinocchio/multibody/liegroup/operation-base.hpp
+include/pinocchio/multibody/liegroup/operation-base.hxx
+include/pinocchio/multibody/liegroup/special-euclidean.hpp
+include/pinocchio/multibody/liegroup/special-orthogonal.hpp
+include/pinocchio/multibody/liegroup/vector-space.hpp
 include/pinocchio/multibody/model.hpp
 include/pinocchio/multibody/model.hxx
 include/pinocchio/multibody/visitor.hpp

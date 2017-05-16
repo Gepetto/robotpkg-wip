@@ -17,7 +17,7 @@ SYSTEM_SEARCH.eigenpy=\
 	'lib/pkgconfig/eigenpy.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		eigenpy
-DEPEND_ABI.eigenpy?=	eigenpy>=1.3.0
+DEPEND_ABI.eigenpy?=	eigenpy>=1.3.1
 DEPEND_DIR.eigenpy?=	../../wip/py-eigen
 
 include ../../devel/boost-headers/depend.mk

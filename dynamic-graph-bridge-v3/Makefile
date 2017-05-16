@@ -4,7 +4,7 @@
 VERSION=		3.0.6
 DISTNAME=		dynamic_graph_bridge-v3-${VERSION}
 PKGNAME=		dynamic-graph-bridge-v3-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=dynamic-graph-bridge-v3/}
@@ -25,24 +25,23 @@ CMAKE_ARGS+=		-DMANDIR=${PREFIX}/${PKGMANDIR}
 # library location
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
-include ../../sysutils/ros-rospack/depend.mk
-include ../../motion/dynamic-graph-bridge-msgs/depend.mk
+include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-realtime-tools/depend.mk
+include ../../devel/ros-roscpp-core/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
+include ../../math/ros-geometry2/depend.mk
 include ../../math/ros-geometry/depend.mk
-include ../../math/ros-geometry-experimental/depend.mk
+include ../../motion/dynamic-graph-bridge-msgs/depend.mk
+include ../../pkgtools/pkg-config/depend.mk
 include ../../simulation/bullet/depend.mk
+include ../../simulation/bullet/depend.mk
+include ../../sysutils/ros-rospack/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
-include ../../simulation/bullet/depend.mk
-include ../../devel/ros-roscpp-core/depend.mk
-include ../../devel/ros-catkin/depend.mk
-include ../../pkgtools/pkg-config/depend.mk
+include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
-include ../../mk/sysdep/cmake.mk
 include ../../mk/robotpkg.mk
-

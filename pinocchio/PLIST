@@ -30,6 +30,9 @@ include/pinocchio/assert.hpp
 include/pinocchio/bindings/python/algorithm/algorithms.hpp
 include/pinocchio/bindings/python/fwd.hpp
 include/pinocchio/bindings/python/multibody/data.hpp
+include/pinocchio/bindings/python/multibody/fcl/collision-geometry.hpp
+include/pinocchio/bindings/python/multibody/fcl/collision-result.hpp
+include/pinocchio/bindings/python/multibody/fcl/contact.hpp
 include/pinocchio/bindings/python/multibody/frame.hpp
 include/pinocchio/bindings/python/multibody/geometry-data.hpp
 include/pinocchio/bindings/python/multibody/geometry-model.hpp

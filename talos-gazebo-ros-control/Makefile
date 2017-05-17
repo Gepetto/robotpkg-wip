@@ -21,8 +21,9 @@ CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
+include ../../wip/talos-ros-control/depend.mk
 include ../../devel/ros-catkin/depend.mk
-include ../../devel/ros-roscpp-core/depend.mk
+include ../../middleware/ros-comm/depend.mk
 include ../../devel/ros-pluginlib/depend.mk
 include ../../devel/ros-ros/depend.mk
 include ../../graphics/ros-robot-model/depend.mk

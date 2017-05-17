@@ -28,6 +28,7 @@ include ../../interfaces/ros-std-msgs/depend.mk
 include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../middleware/ros-comm/depend.mk
+include ../../wip/talos-pal-hardware-interfaces/depend.mk
 include ../../wip/talos-gazebo-ros-control/depend.mk
 include ../../wip/talos-ros-control/depend.mk
 include ../../mk/language/c++.mk

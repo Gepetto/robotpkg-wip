@@ -17,8 +17,6 @@ NO_PUBLIC_BIN=  ${RESTRICTED}
 
 USE_BOOST_LIBS=	thread
 
-CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
-
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../devel/ros-catkin/depend.mk

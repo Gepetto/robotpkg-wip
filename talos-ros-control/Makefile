@@ -2,6 +2,7 @@
 # Created:			Olivier Stasse on Wed, 29 Mar 2017
 #
 
+PKGREVISION=	1
 VERSION=	0.2.9
 PKGNAME=	talos-ros-control-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
@@ -24,6 +25,7 @@ include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-pluginlib/depend.mk
 include ../../devel/ros-ros/depend.mk
 include ../../graphics/ros-robot-model/depend.mk
+include ../../graphics/ros-rqt/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../interfaces/ros-std-msgs/depend.mk
 include ../../lang/ros-message-generation/depend.mk

@@ -4,6 +4,7 @@
 VERSION=	0.0.14
 PKGNAME=	talos-data-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+PKGREVISION=	1
 
 MASTER_SITES=		${MASTER_SITE_JRL:=talos/talos_data/}
 MASTER_REPOSITORY=	https://redmine.laas.fr/laas/users/

@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Wed, 29 Mar 2017
 #
 
-PKGREVISION=	1
+PKGREVISION=	2
 VERSION=	0.2.9
 PKGNAME=	talos-ros-control-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
@@ -22,6 +22,7 @@ USE_BOOST_LIBS=	thread
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../devel/ros-catkin/depend.mk
+include ../../devel/ros-cmake-modules/depend.mk
 include ../../devel/ros-pluginlib/depend.mk
 include ../../devel/ros-ros/depend.mk
 include ../../graphics/ros-robot-model/depend.mk

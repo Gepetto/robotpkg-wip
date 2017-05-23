@@ -22,6 +22,7 @@ DEPEND_DIR.talos-pal-hardware-interfaces?=\
 
 SYSTEM_SEARCH.talos-pal-hardware-interfaces=\
   'include/talos_pal_hardware_interfaces/actuator_temperature_interface.h'	\
+  'share/talos_pal_hardware_interfaces/cmake/talos_pal_hardware_interfacesConfig.cmake'	\
   'share/talos_pal_hardware_interfaces/package.xml:/<version>/s/[^0-9.]//gp'	\
   'lib/pkgconfig/talos_pal_hardware_interfaces.pc:/Version/s/[^0-9.]//gp'
 

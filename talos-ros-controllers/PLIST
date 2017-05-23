@@ -52,7 +52,6 @@ lib/pkgconfig/talos_mode_state_controller.pc
 lib/pkgconfig/talos_position_controllers.pc
 lib/pkgconfig/talos_temperature_sensor_controller.pc
 lib/pkgconfig/talos_velocity_controllers.pc
-${PYTHON_SITELIB}/rqt_joint_trajectory_controller-0.${PYTHON_VERSION}-py${PYTHON_VERSION}.egg-info
 ${PYTHON_SITELIB}/talos_diff_drive_controller/__init__.py
 ${PYTHON_SITELIB}/talos_diff_drive_controller/msg/_WheelData.py
 ${PYTHON_SITELIB}/talos_diff_drive_controller/msg/__init__.py

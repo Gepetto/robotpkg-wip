@@ -30,8 +30,6 @@ share/doc/talos_data/doxygen-html/search/search.js
 share/doc/talos_data/doxygen-html/search/search_l.png
 share/doc/talos_data/doxygen-html/search/search_m.png
 share/doc/talos_data/doxygen-html/search/search_r.png
-share/doc/talos_data/doxygen-html/search/searchdata.js
-share/doc/talos_data/doxygen-html/splitbar.png
 share/doc/talos_data/doxygen-html/sync_off.png
 share/doc/talos_data/doxygen-html/sync_on.png
 share/doc/talos_data/doxygen-html/tab_a.png
@@ -40,17 +38,12 @@ share/doc/talos_data/doxygen-html/tab_h.png
 share/doc/talos_data/doxygen-html/tab_s.png
 share/doc/talos_data/doxygen-html/tabs.css
 share/doc/talos_data/doxygen-html/talos_data.doxytag
-share/doc/talos_data/doxygen-html/arrowdown.png
-share/doc/talos_data/doxygen-html/arrowright.png
 share/doc/talos_data/doxygen-html/bc_s.png
 share/doc/talos_data/doxygen-html/bdwn.png
 share/doc/talos_data/doxygen-html/closed.png
-share/doc/talos_data/doxygen-html/doc.png
 share/doc/talos_data/doxygen-html/doxygen.css
 share/doc/talos_data/doxygen-html/doxygen.png
 share/doc/talos_data/doxygen-html/dynsections.js
-share/doc/talos_data/doxygen-html/folderclosed.png
-share/doc/talos_data/doxygen-html/folderopen.png
 share/doc/talos_data/doxygen-html/graph_legend.html
 share/doc/talos_data/doxygen-html/graph_legend.md5
 share/doc/talos_data/doxygen-html/graph_legend.svg

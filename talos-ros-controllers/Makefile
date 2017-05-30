@@ -1,9 +1,10 @@
 # robotpkg Makefile for:	wip/talos-ros-controllers
 # Created:			Olivier Stasse on Wed, 29 Mar 2017
 #
-VERSION=	0.2.9
+VERSION=	0.2.10
 PKGNAME=	talos-ros-controllers-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+
 
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_ros_controllers/}

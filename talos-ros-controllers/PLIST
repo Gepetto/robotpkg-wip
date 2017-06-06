@@ -61,7 +61,6 @@ ${PYTHON_SITELIB}/talos_mode_state_controller/msg/__init__.py
 ${PYTHON_SITELIB}/talos_temperature_sensor_controller/__init__.py
 ${PYTHON_SITELIB}/talos_temperature_sensor_controller/msg/_ActuatorTemperatureState.py
 ${PYTHON_SITELIB}/talos_temperature_sensor_controller/msg/__init__.py
-lib/talos_rqt_joint_trajectory_controller/talos_rqt_joint_trajectory_controller
 share/common-lisp/ros/talos_diff_drive_controller/msg/WheelData.lisp
 share/common-lisp/ros/talos_diff_drive_controller/msg/_package.lisp
 share/common-lisp/ros/talos_diff_drive_controller/msg/_package_WheelData.lisp

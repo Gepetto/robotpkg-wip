@@ -37,6 +37,8 @@ include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
 include ../../wip/talos-pal-hardware-gazebo/depend.mk
 include ../../wip/talos-robot/depend.mk
+include ../../wip/talos-moveit-config/depend.mk
+include ../../wip/talos-roboticsgroup-gazebo-plugins/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

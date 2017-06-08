@@ -2,9 +2,9 @@
 # Created:			Rohan Budhiraja on Fri,  25 Jan 2016
 #
 PKG_NAME=		dynamic-graph-v3
-VERSION=		3.0.0
+VERSION=		3.0.1
 DISTNAME=		${PKG_NAME}-${VERSION}
-PKGREVISION=		2
+PKGREVISION=		0
 
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=dynamic-graph-v3/}

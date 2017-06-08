@@ -2,13 +2,9 @@
 # Created:			Olivier Stasse on Mer, 3 May 2017
 #
 VERSION=	0.0.14
-PKGBASE=	talos-simulation
-PKGNAME=	${PKGBASE}-${VERSION}
+PKGNAME=	talos-simulation-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-PKG_REVISION=	1
-
-ROS_GITTAG=	${DISTNAME}
-WRKSRC=		${WRKDIR}/${ROS_GITTAG}
+PKGREVISION=	1
 
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_simulation/}
@@ -19,7 +15,6 @@ NO_PUBLIC_SRC=  ${RESTRICTED}
 NO_PUBLIC_BIN=  ${RESTRICTED}
 
 ROS_METAPKG=	yes
-CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
@@ -43,4 +38,3 @@ include ../../wip/talos-pal-gazebo-plugins/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk
-

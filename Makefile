@@ -37,7 +37,6 @@ SUBDIR+=	joystick-genom
 SUBDIR+=	jrl-walkgen-v3
 SUBDIR+=	jsbsim
 SUBDIR+=	kukaFri-libs
-SUBDIR+= 	laas-rackham
 SUBDIR+= 	laaswm-gui
 SUBDIR+=	libfreenect
 SUBDIR+=	libhatp

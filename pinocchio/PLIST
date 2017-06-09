@@ -101,6 +101,7 @@ include/pinocchio/parsers/python.hpp
 include/pinocchio/parsers/sample-models.hpp
 include/pinocchio/parsers/srdf.hpp
 include/pinocchio/parsers/urdf.hpp
+include/pinocchio/parsers/urdf/types.hpp
 include/pinocchio/parsers/urdf/utils.hpp
 include/pinocchio/parsers/utils.hpp
 include/pinocchio/spatial/act-on-set.hpp

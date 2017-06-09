@@ -68,7 +68,6 @@ SUBDIR+= 	octovis
 SUBDIR+= 	ompl
 SUBDIR+= 	openhrp3-simulator-wo-rtm
 SUBDIR+= 	openhrp3-hrp2
-SUBDIR+=	oro-view
 SUBDIR+=	orocos-bfl
 SUBDIR+=	orocos-dot_service
 SUBDIR+=	orocos-yarp_transport

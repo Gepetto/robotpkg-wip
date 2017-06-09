@@ -19,18 +19,7 @@ LICENSE=		gnu-gpl-v2
 #######################
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	robot
-PKG_OPTIONS_GROUP.robot=	hrp2 pr2
-
-##
-## HRP2
-##
-PKG_OPTION_DESCR.hrp2=	Compile SPARK with support for HRP2
-
-define PKG_OPTION_SET.hrp2
-  GENOM_ARGS+= -DHRP2
-  include ../../wip/gest-genom/depend.mk
-  include ../../robots/hrp2-genom/depend.mk
-endef
+PKG_OPTIONS_GROUP.robot=	pr2
 
 ##
 ## PR2

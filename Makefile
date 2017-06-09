@@ -16,7 +16,6 @@ SUBDIR+=	eigen-quadprog
 SUBDIR+=	FRILibrary
 SUBDIR+=	gdalwrap
 SUBDIR+= 	gerard-bauzil
-SUBDIR+=	gest-genom
 SUBDIR+=	gladys
 SUBDIR+=	hatpconsole
 SUBDIR+=	hatponboard-lib

@@ -81,7 +81,6 @@ SUBDIR+=	py-mavlink
 SUBDIR+=	py-morse
 SUBDIR+=	py-sot-tools-v3
 SUBDIR+= 	qpOASES
-SUBDIR+=	robot-capsule-urdf
 SUBDIR+=	roralink
 SUBDIR+=	robotModelParser-libs
 SUBDIR+=	simple-humanoid-description

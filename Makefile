@@ -100,6 +100,7 @@ SUBDIR+=	soth
 SUBDIR+=	spark-genom
 SUBDIR+=	talos-data
 SUBDIR+=	talos-gazebo-ros-control
+SUBDIR+=	talos-moveit-config
 SUBDIR+=	talos-pal-gazebo-plugins
 SUBDIR+=	talos-pal-hardware-gazebo
 SUBDIR+=	talos-pal-hardware-interfaces

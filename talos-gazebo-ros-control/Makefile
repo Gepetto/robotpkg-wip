@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/talos-gazebo-ros-control
 # Created:			Olivier Stasse on Mer, 3 May 2017
 #
-VERSION=	2.6.5
+VERSION=	2.6.6
 PKGNAME=	talos-gazebo-ros-control-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 
@@ -33,7 +33,7 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
-include ../../mk/sysdep/gazebo.mk
+#include ../../mk/sysdep/gazebo.mk
 include ../../mk/sysdep/libogre.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

@@ -2,12 +2,8 @@
 # Created:			Olivier Stasse on Fri, 21 Apr 2017
 #
 VERSION=	0.0.3
-PKGBASE=	talos-roboticsgroup-gazebo-plugins
-PKGNAME=	${PKGBASE}-${VERSION}
+PKGNAME=	talos-roboticsgroup-gazebo-plugins-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-
-ROS_GITTAG=	${DISTNAME}
-WRKSRC=		${WRKDIR}/${ROS_GITTAG}
 
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_roboticsgroup_gazebo_plugins/}
@@ -17,7 +13,9 @@ RESTRICTED=     Redistribution of repackaged binaries not permitted
 NO_PUBLIC_SRC=  ${RESTRICTED}
 NO_PUBLIC_BIN=  ${RESTRICTED}
 
-CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
+CMAKE_ARGS+=\
+  -Dgazebo_INCLUDE_DIRS=$(filter include/%,${SYSTEM_SEARCH.gazebo})	\
+  -Dgazebo_LIBRARIES=$(filter %.so,${SYSTEM_SEARCH.gazebo})
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
@@ -32,9 +30,10 @@ include ../../lang/ros-message-runtime/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
-include ../../wip/talos-pal-hardware-interfaces/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
+include ../../simulation/gazebo-ros-pkgs/depend.mk
+include ../../wip/talos-pal-hardware-interfaces/depend.mk
+include ../../mk/sysdep/gazebo.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk
-

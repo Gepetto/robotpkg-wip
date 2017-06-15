@@ -3,10 +3,9 @@
 #
 
 VERSION=		3.1.5
-DISTNAME=		sot-dynamic-pinocchio-v3-${VERSION}
+DISTNAME=		sot-dynamic-pinocchio-v3-${VERSION}b
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-dynamic-pinocchio-v3/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/sot-dynamic-pinocchio/
-PKGREVISION=		1
 
 MAINTAINER=	gepetto@laas.fr
 CATEGORIES=	wip

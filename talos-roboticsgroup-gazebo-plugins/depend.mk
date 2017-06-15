@@ -19,7 +19,6 @@ DEPEND_ABI.talos-roboticsgroup-gazebo-plugins?=	talos-roboticsgroup-gazebo-plugi
 DEPEND_DIR.talos-roboticsgroup-gazebo-plugins?=	../../wip/talos-roboticsgroup-gazebo-plugins
 
 SYSTEM_SEARCH.talos-roboticsgroup-gazebo-plugins=\
-  'include/talos_roboticsgroup_gazebo_plugins/mimic_joint_plugin.h' \
   'lib/libtalos_roboticsgroup_gazebo_disable_link_plugin.so' \
   'share/talos_roboticsgroup_gazebo_plugins/package.xml:/<version>/s/[^0-9.]//gp'	\
   'lib/pkgconfig/talos_roboticsgroup_gazebo_plugins.pc:/Version/s/[^0-9.]//gp'

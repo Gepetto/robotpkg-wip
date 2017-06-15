@@ -111,6 +111,7 @@ SUBDIR+=	talos-ros-control
 SUBDIR+= 	talos-ros-controllers
 SUBDIR+=	talos-ros-control-sot
 SUBDIR+=	talos-simulation
+SUBDIR+=	tsid
 SUBDIR+= 	track-target-genom
 SUBDIR+= 	urg
 SUBDIR+= 	vnet-yarp

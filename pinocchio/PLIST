@@ -58,6 +58,7 @@ include/pinocchio/config.hh
 include/pinocchio/container/aligned-vector.hpp
 include/pinocchio/deprecated.hh
 include/pinocchio/exception.hpp
+include/pinocchio/macros.hpp
 include/pinocchio/math/fwd.hpp
 include/pinocchio/math/matrix.hpp
 include/pinocchio/math/quaternion.hpp

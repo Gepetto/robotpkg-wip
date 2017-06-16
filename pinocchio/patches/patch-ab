@@ -1,0 +1,410 @@
+diff --git CMakeLists.txt CMakeLists.txt
+index e9a253f..a0be71e 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -87,6 +87,11 @@ IF(EIGEN3_FOUND)
+     ADD_DEFINITIONS(-DEIGEN3_FUTURE)
+     SET(EIGEN3_FUTURE TRUE)
+     PKG_CONFIG_APPEND_CFLAGS("-DEIGEN3_FUTURE")
++    IF(${EIGEN3_VERSION} VERSION_LESS "3.3.0")
++      ADD_DEFINITIONS(-DEIGEN3_BETA_3_2_9x)
++      SET(EIGEN3_FUTURE TRUE)
++      PKG_CONFIG_APPEND_CFLAGS("-DEIGEN3_BETA_3_2_9x")
++    ENDIF(${EIGEN3_VERSION} VERSION_LESS "3.3.0")
+   ELSE(${EIGEN3_VERSION} VERSION_GREATER "3.2.10")
+     SET(EIGEN3_FUTURE FALSE)
+   ENDIF(${EIGEN3_VERSION} VERSION_GREATER "3.2.10")
+@@ -310,6 +315,7 @@ SET(HEADERS
+   ${${PROJECT_NAME}_CONTAINER_HEADERS}
+   exception.hpp
+   assert.hpp
++  macros.hpp
+  )
+ LIST(REMOVE_DUPLICATES HEADERS)
+ 
+diff --git src/macros.hpp src/macros.hpp
+new file mode 100644
+index 0000000..689a435
+--- /dev/null
++++ src/macros.hpp
+@@ -0,0 +1,36 @@
++//
++// Copyright (c) 2017 CNRS
++//
++// This file is part of Pinocchio
++// Pinocchio is free software: you can redistribute it
++// and/or modify it under the terms of the GNU Lesser General Public
++// License as published by the Free Software Foundation, either version
++// 3 of the License, or (at your option) any later version.
++//
++// Pinocchio is distributed in the hope that it will be
++// useful, but WITHOUT ANY WARRANTY; without even the implied warranty
++// of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
++// General Lesser Public License for more details. You should have
++// received a copy of the GNU Lesser General Public License along with
++// Pinocchio If not, see
++// <http://www.gnu.org/licenses/>.
++
++#ifndef __se3_macros_hpp__
++#define __se3_macros_hpp__
++
++#include <Eigen/Core>
++
++#ifdef EIGEN3_BETA_3_2_9x
++namespace se3
++{
++  namespace internal
++  {
++    template<typename XprType> struct size_of_xpr_at_compile_time
++    {
++      enum { ret = Eigen::internal::size_at_compile_time<Eigen::internal::traits<XprType>::RowsAtCompileTime,Eigen::internal::traits<XprType>::ColsAtCompileTime>::ret };
++    };
++  }
++}
++#endif
++
++#endif // ifndef __se3_macros_hpp__
+diff --git src/multibody/constraint.hpp src/multibody/constraint.hpp
+index 7965f6b..6efd2f9 100644
+--- src/multibody/constraint.hpp
++++ src/multibody/constraint.hpp
+@@ -1,5 +1,5 @@
+ //
+-// Copyright (c) 2015-2016 CNRS
++// Copyright (c) 2015-2017 CNRS
+ // Copyright (c) 2016 Wandercraft, 86 rue de Paris 91400 Orsay, France.
+ //
+ // This file is part of Pinocchio
+@@ -20,6 +20,7 @@
+ #define __se3_constraint_hpp__
+ 
+ 
++#include "pinocchio/macros.hpp"
+ #include "pinocchio/spatial/fwd.hpp"
+ #include "pinocchio/spatial/motion.hpp"
+ 
+@@ -125,9 +126,7 @@ namespace se3
+     {
+       // There is currently a bug in Eigen/Core/util/StaticAssert.h in the use of the full namespace path
+       // TODO
+-#ifndef EIGEN3_FUTURE
+       EIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE(DenseBase, D);
+-#endif
+     }
+ 
+     ConstraintTpl() : S() 
+diff --git src/multibody/joint/joint-free-flyer.hpp src/multibody/joint/joint-free-flyer.hpp
+index 64b7730..7c2781e 100644
+--- src/multibody/joint/joint-free-flyer.hpp
++++ src/multibody/joint/joint-free-flyer.hpp
+@@ -1,5 +1,5 @@
+ //
+-// Copyright (c) 2015-2016 CNRS
++// Copyright (c) 2015-2017 CNRS
+ // Copyright (c) 2015-2016 Wandercraft, 86 rue de Paris 91400 Orsay, France.
+ //
+ // This file is part of Pinocchio
+@@ -19,6 +19,7 @@
+ #ifndef __se3_joint_free_flyer_hpp__
+ #define __se3_joint_free_flyer_hpp__
+ 
++#include "pinocchio/macros.hpp"
+ #include "pinocchio/spatial/inertia.hpp"
+ #include "pinocchio/multibody/joint/joint-base.hpp"
+ #include "pinocchio/multibody/constraint.hpp"
+diff --git src/multibody/joint/joint-planar.hpp src/multibody/joint/joint-planar.hpp
+index a03d48e..e8e49e5 100644
+--- src/multibody/joint/joint-planar.hpp
++++ src/multibody/joint/joint-planar.hpp
+@@ -1,5 +1,5 @@
+ //
+-// Copyright (c) 2015-2016 CNRS
++// Copyright (c) 2015-2017 CNRS
+ // Copyright (c) 2015-2016 Wandercraft, 86 rue de Paris 91400 Orsay, France.
+ //
+ // This file is part of Pinocchio
+@@ -19,6 +19,7 @@
+ #ifndef __se3_joint_planar_hpp__
+ #define __se3_joint_planar_hpp__
+ 
++#include "pinocchio/macros.hpp"
+ #include "pinocchio/multibody/joint/joint-base.hpp"
+ #include "pinocchio/multibody/constraint.hpp"
+ #include "pinocchio/math/sincos.hpp"
+diff --git src/multibody/joint/joint-prismatic-unaligned.hpp src/multibody/joint/joint-prismatic-unaligned.hpp
+index 053df11..00f57b9 100644
+--- src/multibody/joint/joint-prismatic-unaligned.hpp
++++ src/multibody/joint/joint-prismatic-unaligned.hpp
+@@ -1,5 +1,5 @@
+ //
+-// Copyright (c) 2015-2016 CNRS
++// Copyright (c) 2015-2017 CNRS
+ // Copyright (c) 2016 Wandercraft, 86 rue de Paris 91400 Orsay, France.
+ //
+ // This file is part of Pinocchio
+@@ -19,6 +19,7 @@
+ #ifndef __se3_joint_prismatic_unaligned_hpp__
+ #define __se3_joint_prismatic_unaligned_hpp__
+ 
++#include "pinocchio/macros.hpp"
+ #include "pinocchio/multibody/joint/joint-base.hpp"
+ #include "pinocchio/multibody/constraint.hpp"
+ #include "pinocchio/spatial/inertia.hpp"
+diff --git src/multibody/joint/joint-prismatic.hpp src/multibody/joint/joint-prismatic.hpp
+index af9d54f..50b1562 100644
+--- src/multibody/joint/joint-prismatic.hpp
++++ src/multibody/joint/joint-prismatic.hpp
+@@ -1,5 +1,5 @@
+ //
+-// Copyright (c) 2015-2016 CNRS
++// Copyright (c) 2015-2017 CNRS
+ // Copyright (c) 2015-2016 Wandercraft, 86 rue de Paris 91400 Orsay, France.
+ //
+ // This file is part of Pinocchio
+@@ -19,6 +19,7 @@
+ #ifndef __se3_joint_prismatic_hpp__
+ #define __se3_joint_prismatic_hpp__
+ 
++#include "pinocchio/macros.hpp"
+ #include "pinocchio/multibody/joint/joint-base.hpp"
+ #include "pinocchio/multibody/constraint.hpp"
+ #include "pinocchio/spatial/inertia.hpp"
+diff --git src/multibody/joint/joint-revolute-unaligned.hpp src/multibody/joint/joint-revolute-unaligned.hpp
+index 3f9d3b3..e0dd44e 100644
+--- src/multibody/joint/joint-revolute-unaligned.hpp
++++ src/multibody/joint/joint-revolute-unaligned.hpp
+@@ -1,5 +1,5 @@
+ //
+-// Copyright (c) 2015-2016 CNRS
++// Copyright (c) 2015-2017 CNRS
+ // Copyright (c) 2015-2016 Wandercraft, 86 rue de Paris 91400 Orsay, France.
+ //
+ // This file is part of Pinocchio
+@@ -19,6 +19,7 @@
+ #ifndef __se3_joint_revolute_unaligned_hpp__
+ #define __se3_joint_revolute_unaligned_hpp__
+ 
++#include "pinocchio/macros.hpp"
+ #include "pinocchio/multibody/joint/joint-base.hpp"
+ #include "pinocchio/multibody/constraint.hpp"
+ #include "pinocchio/spatial/inertia.hpp"
+diff --git src/multibody/joint/joint-spherical-ZYX.hpp src/multibody/joint/joint-spherical-ZYX.hpp
+index e00beed..9121609 100644
+--- src/multibody/joint/joint-spherical-ZYX.hpp
++++ src/multibody/joint/joint-spherical-ZYX.hpp
+@@ -1,5 +1,5 @@
+ //
+-// Copyright (c) 2015-2016 CNRS
++// Copyright (c) 2015-2017 CNRS
+ // Copyright (c) 2015-2016 Wandercraft, 86 rue de Paris 91400 Orsay, France.
+ //
+ // This file is part of Pinocchio
+@@ -19,6 +19,7 @@
+ #ifndef __se3_joint_spherical_ZYX_hpp__
+ #define __se3_joint_spherical_ZYX_hpp__
+ #include <iostream>
++#include "pinocchio/macros.hpp"
+ #include "pinocchio/multibody/joint/joint-base.hpp"
+ #include "pinocchio/multibody/constraint.hpp"
+ #include "pinocchio/math/sincos.hpp"
+diff --git src/multibody/joint/joint-spherical.hpp src/multibody/joint/joint-spherical.hpp
+index 01b3790..8ba1744 100644
+--- src/multibody/joint/joint-spherical.hpp
++++ src/multibody/joint/joint-spherical.hpp
+@@ -19,6 +19,7 @@
+ #ifndef __se3_joint_spherical_hpp__
+ #define __se3_joint_spherical_hpp__
+ 
++#include "pinocchio/macros.hpp"
+ #include "pinocchio/multibody/joint/joint-base.hpp"
+ #include "pinocchio/multibody/constraint.hpp"
+ #include "pinocchio/math/sincos.hpp"
+diff --git src/multibody/joint/joint-translation.hpp src/multibody/joint/joint-translation.hpp
+index 7a1e15d..28b1b04 100644
+--- src/multibody/joint/joint-translation.hpp
++++ src/multibody/joint/joint-translation.hpp
+@@ -19,6 +19,7 @@
+ #ifndef __se3_joint_translation_hpp__
+ #define __se3_joint_translation_hpp__
+ 
++#include "pinocchio/macros.hpp"
+ #include "pinocchio/multibody/joint/joint-base.hpp"
+ #include "pinocchio/multibody/constraint.hpp"
+ #include "pinocchio/spatial/inertia.hpp"
+diff --git src/multibody/liegroup/operation-base.hxx src/multibody/liegroup/operation-base.hxx
+index a596ff0..3c21836 100644
+--- src/multibody/liegroup/operation-base.hxx
++++ src/multibody/liegroup/operation-base.hxx
+@@ -1,5 +1,5 @@
+ //
+-// Copyright (c) 2016 CNRS
++// Copyright (c) 2016-2017 CNRS
+ //
+ // This file is part of Pinocchio
+ // Pinocchio is free software: you can redistribute it
+@@ -18,6 +18,8 @@
+ #ifndef __se3_lie_group_operation_base_hxx__
+ #define __se3_lie_group_operation_base_hxx__
+ 
++#include "pinocchio/macros.hpp"
++
+ namespace se3 {
+ 
+   // --------------- API with return value as argument ---------------------- //
+diff --git src/multibody/liegroup/special-euclidean.hpp src/multibody/liegroup/special-euclidean.hpp
+index 1b6e378..27ba71f 100644
+--- src/multibody/liegroup/special-euclidean.hpp
++++ src/multibody/liegroup/special-euclidean.hpp
+@@ -20,13 +20,14 @@
+ 
+ #include <limits>
+ 
+-#include <pinocchio/spatial/fwd.hpp>
+-#include <pinocchio/spatial/se3.hpp>
+-#include <pinocchio/multibody/liegroup/operation-base.hpp>
+-
+-#include <pinocchio/multibody/liegroup/vector-space.hpp>
+-#include <pinocchio/multibody/liegroup/cartesian-product.hpp>
+-#include <pinocchio/multibody/liegroup/special-orthogonal.hpp>
++#include <pinocchio/macros.hpp>
++#include "pinocchio/spatial/fwd.hpp"
++#include "pinocchio/spatial/se3.hpp"
++#include "pinocchio/multibody/liegroup/operation-base.hpp"
++
++#include "pinocchio/multibody/liegroup/vector-space.hpp"
++#include "pinocchio/multibody/liegroup/cartesian-product.hpp"
++#include "pinocchio/multibody/liegroup/special-orthogonal.hpp"
+ 
+ namespace se3
+ {
+diff --git src/spatial/act-on-set.hpp src/spatial/act-on-set.hpp
+index e5b5b35..fa1b5a4 100644
+--- src/spatial/act-on-set.hpp
++++ src/spatial/act-on-set.hpp
+@@ -1,5 +1,5 @@
+ //
+-// Copyright (c) 2015-2016 CNRS
++// Copyright (c) 2015-2017 CNRS
+ //
+ // This file is part of Pinocchio
+ // Pinocchio is free software: you can redistribute it
+@@ -19,7 +19,7 @@
+ #define __se3_act_on_set_hpp__
+ 
+ #include <Eigen/Core>
+-#include <Eigen/Geometry>
++#include "pinocchio/macros.hpp"
+ #include "pinocchio/spatial/fwd.hpp"
+ 
+ namespace se3
+diff --git src/spatial/explog.hpp src/spatial/explog.hpp
+index dc94c64..f391dc3 100644
+--- src/spatial/explog.hpp
++++ src/spatial/explog.hpp
+@@ -1,5 +1,5 @@
+ //
+-// Copyright (c) 2015 - 2016 CNRS
++// Copyright (c) 2015-2017 CNRS
+ // Copyright (c) 2015 Wandercraft, 86 rue de Paris 91400 Orsay, France.
+ //
+ // This file is part of Pinocchio
+@@ -21,6 +21,7 @@
+ 
+ # include <Eigen/Geometry>
+ 
++# include "pinocchio/macros.hpp"
+ # include "pinocchio/math/sincos.hpp"
+ # include "pinocchio/spatial/motion.hpp"
+ # include "pinocchio/spatial/skew.hpp"
+@@ -170,4 +171,4 @@ namespace se3
+   }
+ } // namespace se3
+ 
+-#endif //#ifndef __math_explog_hpp__
++#endif //#ifndef __spatial_explog_hpp__
+diff --git src/spatial/force.hpp src/spatial/force.hpp
+index 56f68f3..c70d3ee 100644
+--- src/spatial/force.hpp
++++ src/spatial/force.hpp
+@@ -20,8 +20,8 @@
+ #define __se3_force_hpp__
+ 
+ #include <Eigen/Core>
+-#include <Eigen/Geometry>
+ #include "pinocchio/spatial/fwd.hpp"
++#include "pinocchio/macros.hpp"
+ #include "pinocchio/spatial/se3.hpp"
+ 
+ /** \addtogroup Force_group Force
+diff --git src/spatial/motion.hpp src/spatial/motion.hpp
+index 6ba2c49..b6a588e 100644
+--- src/spatial/motion.hpp
++++ src/spatial/motion.hpp
+@@ -20,8 +20,8 @@
+ #define __se3_motion_hpp__
+ 
+ #include <Eigen/Core>
+-#include <Eigen/Geometry>
+ #include "pinocchio/spatial/fwd.hpp"
++#include "pinocchio/macros.hpp"
+ #include "pinocchio/spatial/se3.hpp"
+ #include "pinocchio/spatial/force.hpp"
+ 
+diff --git src/spatial/se3.hpp src/spatial/se3.hpp
+index 96bb2a5..625e61e 100644
+--- src/spatial/se3.hpp
++++ src/spatial/se3.hpp
+@@ -22,7 +22,7 @@
+ #include <Eigen/Geometry>
+ #include "pinocchio/spatial/fwd.hpp"
+ #include "pinocchio/spatial/skew.hpp"
+-
++#include "pinocchio/macros.hpp"
+ 
+ namespace se3
+ {
+diff --git src/spatial/skew.hpp src/spatial/skew.hpp
+index 330f5e4..186299b 100644
+--- src/spatial/skew.hpp
++++ src/spatial/skew.hpp
+@@ -18,6 +18,8 @@
+ #ifndef __se3_skew_hpp__
+ #define __se3_skew_hpp__
+ 
++#include "pinocchio/macros.hpp"
++
+ namespace se3
+ {
+   
+diff --git src/spatial/symmetric3.hpp src/spatial/symmetric3.hpp
+index 894c5ad..4fe601f 100644
+--- src/spatial/symmetric3.hpp
++++ src/spatial/symmetric3.hpp
+@@ -1,5 +1,5 @@
+ //
+-// Copyright (c) 2014_2016 CNRS
++// Copyright (c) 2014-2017 CNRS
+ //
+ // This file is part of Pinocchio
+ // Pinocchio is free software: you can redistribute it
+@@ -24,10 +24,10 @@
+ // the Free Software Foundation, either version 3 of the License, or
+ // (at your option) any later version.
+ 
+-#ifndef __se3__symmetric3_hpp__
+-#define __se3__symmetric3_hpp__
++#ifndef __se3_symmetric3_hpp__
++#define __se3_symmetric3_hpp__
+ 
+-#include <ostream>
++#include "pinocchio/macros.hpp"
+ 
+ namespace se3
+ {
+@@ -343,5 +343,5 @@ namespace se3
+ 
+ } // namespace se3
+ 
+-#endif // ifndef __se3__symmetric3_hpp__
++#endif // ifndef __se3_symmetric3_hpp__
+ 

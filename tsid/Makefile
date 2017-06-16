@@ -37,5 +37,6 @@ include ../../mk/language/c++.mk
 
 DEPEND_ABI.python +=		python<3
 DEPEND_ABI.pinocchio +=	pinocchio>=1.2.4
+DEPEND_ABI.eigen3 += eigen3>=3.2.0
 
 include ../../mk/robotpkg.mk

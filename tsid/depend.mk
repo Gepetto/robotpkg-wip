@@ -18,7 +18,7 @@ SYSTEM_SEARCH.tsid=\
 
 DEPEND_USE+=		tsid
 
-DEPEND_ABI.tsid?=	tsid>=1.1.2
+DEPEND_ABI.tsid?=	tsid>=1.0.0
 DEPEND_DIR.tsid?=	../../wip/tsid
 
 endif # TSID_DEPEND_MK ------------------------------------------------

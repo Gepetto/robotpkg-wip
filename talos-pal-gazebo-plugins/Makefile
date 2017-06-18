@@ -5,7 +5,7 @@ VERSION=	1.1.5
 PKGBASE=	talos-pal-gazebo-plugins
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-PKGVERSION=	1
+PKGVERSION=	2
 ROS_GITTAG=	${DISTNAME}
 WRKSRC=		${WRKDIR}/${ROS_GITTAG}
 
@@ -33,6 +33,7 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
+include ../../wip/pal-msgs/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

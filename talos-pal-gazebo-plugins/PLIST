@@ -15,4 +15,3 @@ lib/pkgconfig/talos_pal_gazebo_plugins.pc
 share/talos_pal_gazebo_plugins/cmake/talos_pal_gazebo_pluginsConfig-version.cmake
 share/talos_pal_gazebo_plugins/cmake/talos_pal_gazebo_pluginsConfig.cmake
 share/talos_pal_gazebo_plugins/package.xml
-share/talos_simulation/package.xml

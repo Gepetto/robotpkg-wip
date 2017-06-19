@@ -70,6 +70,7 @@ SUBDIR+=	orocos-bfl
 SUBDIR+=	orocos-dot_service
 SUBDIR+=	orocos-yarp_transport
 SUBDIR+=	osg-dae
+SBUDIR+=	pal-msgs
 SUBDIR+=	pinocchio
 SUBDIR+=	pr2-pick-object
 SUBDIR+=	py-dynamic-graph-v3

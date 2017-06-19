@@ -7,7 +7,7 @@ PKGNAME=	pal-msgs-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_:=pal-msgs/}
+MASTER_SITES=	${MASTER_SITE_OPENROBOTS:=${PKGBASE}/}
 COMMENT=	Commonly used messages, services and action in PAL
 LICENSE=	original-bsd
 

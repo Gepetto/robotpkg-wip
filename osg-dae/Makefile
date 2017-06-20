@@ -25,7 +25,7 @@ USE_BOOST_LIBS=		system filesystem
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
-#include ../../mk/sysdep/colladadom.mk
+include ../../graphics/collada-dom/depend.mk
 include ../../mk/sysdep/openscenegraph.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

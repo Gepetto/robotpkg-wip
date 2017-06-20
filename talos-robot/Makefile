@@ -5,6 +5,7 @@
 VERSION=	0.0.14
 PKGNAME=	talos-robot-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+PKGREVISION=	1
 
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_robot/}

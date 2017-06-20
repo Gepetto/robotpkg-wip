@@ -18,7 +18,8 @@ NO_PUBLIC_BIN=  ${RESTRICTED}
 
 USE_BOOST_LIBS=	thread
 
-CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
+CMAKE_PREFIX_PATH+=${ROBOTPKG_BASE}
+$(info Display CMAKE_PREFIX_PATH for talos-pal-hardware-gazebo: ${CMAKE_PREFIX_PATH})
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
@@ -31,6 +32,7 @@ include ../../middleware/ros-comm/depend.mk
 include ../../wip/talos-pal-hardware-interfaces/depend.mk
 include ../../wip/talos-gazebo-ros-control/depend.mk
 include ../../wip/talos-ros-control/depend.mk
+include ../../motion/ros-control-toolbox/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

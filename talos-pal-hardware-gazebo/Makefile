@@ -5,7 +5,7 @@
 VERSION=	0.0.9
 PKGNAME=	talos-pal-hardware-gazebo-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-PKG_REVISION=	1
+PKGREVISION=	1
 
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_JRL:=talos/$(subst -,_,${PKGBASE})/}
@@ -17,9 +17,6 @@ NO_PUBLIC_SRC=  ${RESTRICTED}
 NO_PUBLIC_BIN=  ${RESTRICTED}
 
 USE_BOOST_LIBS=	thread
-
-CMAKE_PREFIX_PATH+=${ROBOTPKG_BASE}
-$(info Display CMAKE_PREFIX_PATH for talos-pal-hardware-gazebo: ${CMAKE_PREFIX_PATH})
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

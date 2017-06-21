@@ -11,7 +11,9 @@ MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/sot-dynamic-pinocch
 MAINTAINER=	gepetto@laas.fr
 CATEGORIES=	wip
 LICENSE=	gnu-lgpl-v3
-COMMENT=	Create entities to compute a robot dynamics properties
+COMMENT=	Create entities to compute a robot dynamics properties using pinocchio
+PKGREVISION=	1
+
 
 # parallel builds would consume all memory because of the g++ process size
 MAKE_JOBS_SAFE=		no

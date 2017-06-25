@@ -32,6 +32,8 @@ CMAKE_ARGS+=		-DBUILD_TESTS_WITH_HPP=OFF
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=ON
 CMAKE_ARGS+=    -DINSTALL_DOCUMENTATION=OFF
 
+CHECKOUT_VCS_OPTS = --recursive 
+
 USE_BOOST_LIBS=		python system filesystem unit_test_framework
 
 include ../../devel/boost-headers/depend.mk

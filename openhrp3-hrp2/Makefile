@@ -1,8 +1,9 @@
 # robotpkg Makefile for:	robots/openhrp3-hrp2
 # Created:			Olivier Stasse on 30, 30 Sep. 2016
 #
-VERSION=		1.0.4
-DISTNAME=		openhrp3-hrp2-${VERSION}
+VERSION=		1.0.5
+PKGNAME=		openhrp3-hrp2-${VERSION}
+DISTNAME=		$(subst -,_,${PKGBASE})-${VERSION}
 
 CATEGORIES=		robots
 MASTER_SITES=		${MASTER_SITE_JRL}/openhrp3-hrp2/
@@ -18,8 +19,8 @@ NO_PUBLIC_BIN=		${RESTRICTED}
 
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
-WRKSRC=			${WRKDIR}/openhrp3-hrp2-${VERSION}
-DYNAMIC_PLIST_DIRS+=	share/doc/openhrp3-hrp2
+WRKSRC=			${WRKDIR}/openhrp3_hrp2-${VERSION}
+DYNAMIC_PLIST_DIRS+=	share/doc/openhrp3_hrp2
 
 include ../../wip/openhrp3-simulator-wo-rtm/depend.mk
 include ../../wip/dynamic-graph-bridge-v3/depend.mk

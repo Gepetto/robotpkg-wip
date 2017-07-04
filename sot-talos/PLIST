@@ -12,5 +12,5 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/talos/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/talos/sot_talos_device/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/talos/sot_talos_device/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/talos/talos.py
-sot-talos/tests/katana_holding.py
-sot-talos/tests/kinetalos.py
+share/sot-talos/tests/katana_holding.py
+share/sot-talos/tests/kinetalos.py

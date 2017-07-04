@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/sot-talos
 # Created:			Olivier Stasse, on Tue. 9th May, 2017
 #
-DISTNAME=		sot-talos-0.0.1
+DISTNAME=		sot-talos-0.0.2
 MASTER_SITES=		${MASTER_SITE_JRL:=talos/sot-talos/}
 MASTER_REPOSITORY=	https://redmine.laas.fr/laas/users/
 

@@ -4,6 +4,7 @@
 VERSION=		1.1.3
 PKGNAME=		openhrp3-simulator-wo-rtm-${VERSION}
 DISTNAME=		$(subst -,_,${PKGBASE})-${VERSION}
+PKGREVISION=		1
 
 CATEGORIES=		simulation
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=openhrp3-simulator-wo-rtm/}
@@ -17,6 +18,7 @@ USE_BOOST_LIBS=		thread
 
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
+include ../../graphics/gepetto-viewer/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-roscpp-core/depend.mk
 include ../../interfaces/ros-std-msgs/depend.mk

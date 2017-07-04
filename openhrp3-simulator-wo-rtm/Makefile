@@ -4,7 +4,7 @@
 VERSION=		1.1.3
 PKGNAME=		openhrp3-simulator-wo-rtm-${VERSION}
 DISTNAME=		$(subst -,_,${PKGBASE})-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 
 CATEGORIES=		simulation
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=openhrp3-simulator-wo-rtm/}

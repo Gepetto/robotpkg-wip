@@ -13,7 +13,10 @@ ifeq (+,$(OPENHRP3_SIMULATOR_WO_RTM_DEPEND_MK)) # ------------------------------
 
 PREFER.openhrp3_simulator_wo_rtm?=	robotpkg
 
-SYSTEM_SEARCH.openhrp3-simulator-wo-rtm='lib/pkgconfig/openhrp3-simulator-wo-rtm.pc:/Version/s/[^0-9.]//gp'
+SYSTEM_SEARCH.openhrp3-simulator-wo-rtm=\
+  'lib/pkgconfig/openhrp3_simulator_wo_rtm.pc:/Version/s/[^0-9.]//gp'		\
+  'share/openhrp3_simulator_wo_rtm/package.xml:/<version>/s/[^0-9.]//gp'	\
+  'share/openhrp3_simulator_wo_rtm/cmake/openhrp3_simulator_wo_rtmConfig.cmake' 
 
 DEPEND_USE+=		openhrp3-simulator-wo-rtm
 

@@ -130,6 +130,11 @@ lib/libhrpUtil-3.1.3.so
 lib/libhrpUtil-3.1.3.so.0
 lib/libhrpUtil-3.1.3.so.0.0.0
 lib/libzlib.so
+lib/openhrp3_simulator_wo_rtm/openhrp-aist-dynamics-simulator
+lib/openhrp3_simulator_wo_rtm/openhrp-collision-detector
+lib/openhrp3_simulator_wo_rtm/openhrp-model-loader
+lib/openhrp3_simulator_wo_rtm/schedulerproject
+lib/openhrp3_simulator_wo_rtm/start_hrpsys_viewer
 lib/pkgconfig/openhrp3_simulator_wo_rtm.pc
 lib/python2.7/dist-packages/CollisionDetector_idl.py
 lib/python2.7/dist-packages/Controller_idl.py
@@ -142,9 +147,12 @@ lib/python2.7/dist-packages/OpenHRPCommon_idl.py
 lib/python2.7/dist-packages/OpenHRP__POA/__init__.py
 lib/python2.7/dist-packages/ViewSimulator_idl.py
 lib/python2.7/dist-packages/World_idl.py
+share/openhrp3_simulator_wo_rtm/cmake/openhrp3_simulator_wo_rtmConfig.cmake
+share/openhrp3_simulator_wo_rtm/cmake/openhrp3_simulator_wo_rtmConfig-version.cmake
 share/openhrp3_simulator_wo_rtm/model/longfloor.wrl
 share/openhrp3_simulator_wo_rtm/model/sample.wrl
 share/openhrp3_simulator_wo_rtm/model/sample1_bush.wrl
 share/openhrp3_simulator_wo_rtm/model/springJoint.wrl
+share/openhrp3_simulator_wo_rtm/package.xml
 share/openhrp3_simulator_wo_rtm/project/SpringJoint.xml
 share/openhrp3_simulator_wo_rtm/project/sample1_bush.xml

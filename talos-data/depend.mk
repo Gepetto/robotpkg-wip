@@ -15,7 +15,7 @@ PREFER.talos-data?=	robotpkg
 
 SYSTEM_SEARCH.talos-data=\
 	'share/talos_data/urdf/talos_reduced.urdf'				\
-	'lib/pkgconfig/talos-data.pc:/Version/s/[^0-9.]//gp'
+	'lib/pkgconfig/talos_data.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		talos-data
 

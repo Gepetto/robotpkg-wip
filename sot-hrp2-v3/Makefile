@@ -2,14 +2,13 @@
 # Created:			Rohan Budhiraja, on Wed. 14th April 2016
 #
 
-VERSION=		2.0.1
+VERSION=		2.0.2
 DISTNAME=		sot-hrp2-v3-${VERSION}
 PKGNAME=		sot-hrp2-v3-${VERSION}
-PKGREVISION=		2
 
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-hrp2-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}proyan/sot-hrp2
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/sot-hrp2
 
 COMMENT=		This packages provides a generic Stack Of Tasks library for the humanoid robot HRP-2.
 LICENSE=		gnu-lgpl-v3

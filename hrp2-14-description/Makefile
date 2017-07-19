@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	robots/hrp2-14-description
 # Created:			Olivier Stasse on Wed, 17 Jun 2015
 #
-VERSION=		1.0.3
+VERSION=		1.0.4
 DISTNAME=		hrp2-14-description-${VERSION}
 
 CATEGORIES=		robots

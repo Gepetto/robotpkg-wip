@@ -3,7 +3,7 @@
 #
 VERSION=		1.0.6
 PKGNAME=		openhrp3-hrp2-${VERSION}
-DISTNAME=		$(subst -,_,${PKGBASE})-${VERSION}
+DISTNAME=		openhrp3_hrp2-${VERSION}
 PKGVERSION=		1
 
 CATEGORIES=		robots

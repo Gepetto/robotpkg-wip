@@ -1,0 +1,21 @@
+diff --git server/SotController/CMakeLists.txt server/SotController/CMakeLists.txt
+index 40b2741..86f86d4 100644
+--- server/SotController/CMakeLists.txt
++++ server/SotController/CMakeLists.txt
+@@ -61,9 +61,11 @@ if(UNIX)
+ 
+ endif()
+ 
+-install(TARGETS controller-hrp2 DESTINATION bin CONFIGURATIONS Release Debug RelWithDebInfo)
++SET(binaries_to_install controller-hrp2 seqplay-hrp2)
++
++install(TARGETS ${binaries_to_install} DESTINATION bin CONFIGURATIONS Release Debug RelWithDebInfo)
++install(TARGETS ${binaries_to_install} DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}/${PROJECT_NAME} CONFIGURATIONS Release Debug RelWithDebInfo)
+ if(TORQUE_CONTROL)
+   install(TARGETS torque-controller-hrp2 DESTINATION bin CONFIGURATIONS Release Debug RelWithDebInfo)
+ endif(TORQUE_CONTROL)
+ 
+-install(TARGETS seqplay-hrp2 DESTINATION bin CONFIGURATIONS Release Debug RelWithDebInfo)
+-- 
+1.9.1
+

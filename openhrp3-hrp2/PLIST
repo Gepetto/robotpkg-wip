@@ -17,7 +17,7 @@ include/openhrp3/hrp2/warning.hh
 lib/openhrp3_hrp2/controller-hrp2
 lib/openhrp3_hrp2/seqplay-hrp2
 lib/pkgconfig/openhrp3_hrp2.pc
-lib/start_openhrp_aist_dynamics_simulator
+lib/openhrp3_hrp2/start_openhrp_aist_dynamics_simulator
 share/customizer/HRP2_bush_customizer_param.conf
 share/openhrp3_hrp2/cmake/openhrp3_hrp2Config-version.cmake
 share/openhrp3_hrp2/cmake/openhrp3_hrp2Config.cmake

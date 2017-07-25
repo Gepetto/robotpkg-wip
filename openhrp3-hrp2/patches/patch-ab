@@ -1,0 +1,26 @@
+diff --git CMakeLists.txt CMakeLists.txt
+index 1e5d7f7..1a9fbef 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -56,6 +56,6 @@ add_subdirectory(server)
+ add_subdirectory(project)
+ add_subdirectory(data)
+ add_subdirectory(scripts)
++add_subdirectory(launch)
+ 
+-install(DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+ setup_project_finalize()
+\ No newline at end of file
+diff --git launch/CMakeLists.txt launch/CMakeLists.txt
+new file mode 100644
+index 0000000..d751ad1
+--- /dev/null
++++ launch/CMakeLists.txt
+@@ -0,0 +1,3 @@
++# Generate the configure file for openhrp2_launch
++configure_file( ${CMAKE_SOURCE_DIR}/launch/openhrp3_hrp2.launch.in ${CMAKE_BINARY_DIR}/launch/openhrp3_hrp2.launch)
++install(FILES ${CMAKE_BINARY_DIR}/launch/openhrp3_hrp2.launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
+\ No newline at end of file
+-- 
+1.9.1
+

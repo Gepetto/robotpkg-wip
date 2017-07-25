@@ -4,7 +4,7 @@
 VERSION=		1.0.7
 PKGNAME=		openhrp3-hrp2-${VERSION}
 DISTNAME=		openhrp3_hrp2-${VERSION}
-PKGVERSION=		3
+PKGVERSION=		4
 
 CATEGORIES=		robots
 MASTER_SITES=		${MASTER_SITE_JRL}/openhrp3-hrp2/

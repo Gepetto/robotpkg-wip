@@ -14,7 +14,7 @@ ifeq (+,$(SOT_HRP2_V3_DEPEND_MK)) # -------------------------------------------
 PREFER.sot-hrp2-v3?=	robotpkg
 
 SYSTEM_SEARCH.sot-hrp2-v3=\
-	include/sot-hrp2/config.h				\
+	include/sot-hrp2/config.hh				\
 	'lib/pkgconfig/sot-hrp2.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		sot-hrp2-v3

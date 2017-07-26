@@ -2,9 +2,9 @@
 # Created:			Olivier Stasse on 30, 30 Sep. 2016
 #
 VERSION=		1.0.7
-PKGNAME=		openhrp3-hrp2-${VERSION}
-DISTNAME=		openhrp3_hrp2-${VERSION}
 PKGVERSION=		4
+PKGNAME=		openhrp3-hrp2-${VERSION}-r${PKGVERSION}
+DISTNAME=		openhrp3_hrp2-${VERSION}-r${PKGVERSION}
 
 CATEGORIES=		robots
 MASTER_SITES=		${MASTER_SITE_JRL}/openhrp3-hrp2/

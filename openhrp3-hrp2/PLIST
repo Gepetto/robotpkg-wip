@@ -22,6 +22,9 @@ share/customizer/HRP2_bush_customizer_param.conf
 share/openhrp3_hrp2/cmake/openhrp3_hrp2Config-version.cmake
 share/openhrp3_hrp2/cmake/openhrp3_hrp2Config.cmake
 share/openhrp3_hrp2/launch/openhrp3_hrp2.launch
+share/openhrp3_hrp2/launch/openhrp3_hrp2_bush.launch
+share/openhrp3_hrp2/launch/openhrp3_hrp2_nobush.launch
+share/openhrp3_hrp2/launch/openhrp3_hrp2_nobush_seq.launch
 share/openhrp3_hrp2/package.xml
 share/openhrp3_hrp2/project/simulationMode.xml
 share/openhrp3_hrp2/project/simulationModeNoBush.xml

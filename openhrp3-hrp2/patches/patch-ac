@@ -1,0 +1,78 @@
+diff --git launch/CMakeLists.txt launch/CMakeLists.txt
+index d751ad1..4f513a7 100644
+--- launch/CMakeLists.txt
++++ launch/CMakeLists.txt
+@@ -1,3 +1,9 @@
+ # Generate the configure file for openhrp2_launch
+ configure_file( ${CMAKE_SOURCE_DIR}/launch/openhrp3_hrp2.launch.in ${CMAKE_BINARY_DIR}/launch/openhrp3_hrp2.launch)
+-install(FILES ${CMAKE_BINARY_DIR}/launch/openhrp3_hrp2.launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
+\ No newline at end of file
++install(FILES 
++  ${CMAKE_BINARY_DIR}/launch/openhrp3_hrp2.launch 
++  openhrp3_hrp2_bush.launch 
++  openhrp3_hrp2_nobush.launch
++  openhrp3_hrp2_nobush_seq.launch
++  DESTINATION 
++  ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
+\ No newline at end of file
+diff --git launch/openhrp3_hrp2.launch.in launch/openhrp3_hrp2.launch.in
+index 2aa0232..6b6e9f6 100644
+--- launch/openhrp3_hrp2.launch.in
++++ launch/openhrp3_hrp2.launch.in
+@@ -1,4 +1,6 @@
+ <launch>
++  <arg name="openhrpprojectname" default="simulationMode"/>
++
+   <machine 
+     name="localmachine"
+     address="localhost"
+@@ -16,10 +18,10 @@
+   <node name="hrpsys_viewer" pkg="openhrp3_simulator_wo_rtm" type="start_hrpsys_viewer" />
+ 
+   <node name="controller_hrp2" pkg="openhrp3_hrp2" type="controller-hrp2" 
+-    args="@SOT_HRP2_LIBDIR@/libsot-hrp2-14-controller.so @CMAKE_INSTALL_PREFIX@/example/openhrp3-hrp2/scheduler/etc/PIDgains.dat"
++    args="@SOT_HRP2_LIBDIR@/libsot-hrp2-14-controller.so @CMAKE_INSTALL_PREFIX@/example/openhrp3_hrp2/scheduler/etc/PIDgains.dat"
+   />
+ 
+   <node name="scheduler_project" pkg="openhrp3_simulator_wo_rtm" type="schedulerproject" 
+-    args="-url @CMAKE_INSTALL_PREFIX@/share/openhrp3-hrp2/project/simulationMode.xml"
++    args="-url @CMAKE_INSTALL_PREFIX@/share/openhrp3_hrp2/project/$(arg openhrpprojectname).xml"
+   />
+ </launch>
+\ No newline at end of file
+diff --git launch/openhrp3_hrp2_bush.launch launch/openhrp3_hrp2_bush.launch
+new file mode 100644
+index 0000000..df0747f
+--- /dev/null
++++ launch/openhrp3_hrp2_bush.launch
+@@ -0,0 +1,5 @@
++<launch>
++  <include file="$(find openhrp3_hrp2)/launch/openhrp3_hrp2.launch" >
++    <arg name="openhrpprojectname" value="simulationMode"/>
++  </include>
++</launch>
+diff --git launch/openhrp3_hrp2_nobush.launch launch/openhrp3_hrp2_nobush.launch
+new file mode 100644
+index 0000000..84573c2
+--- /dev/null
++++ launch/openhrp3_hrp2_nobush.launch
+@@ -0,0 +1,5 @@
++<launch>
++  <include file="$(find openhrp3_hrp2)/launch/openhrp3_hrp2.launch" >
++    <arg name="openhrpprojectname" value="simulationModeNoBush"/>
++  </include>
++</launch>
+diff --git launch/openhrp3_hrp2_nobush_seq.launch launch/openhrp3_hrp2_nobush_seq.launch
+new file mode 100644
+index 0000000..4aede55
+--- /dev/null
++++ launch/openhrp3_hrp2_nobush_seq.launch
+@@ -0,0 +1,6 @@
++<launch>
++  <include file="$(find openhrp3_hrp2)/launch/openhrp3_hrp2.launch" >
++    <arg name="openhrpprojectname" value="simulationModeNoBushSeq"/>
++  </include>
++
++</launch>
+-- 
+1.9.1

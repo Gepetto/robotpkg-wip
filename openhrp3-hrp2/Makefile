@@ -4,7 +4,7 @@
 VERSION=		1.0.7
 PKGNAME=		openhrp3-hrp2-${VERSION}
 DISTNAME=		$(subst -,_,${PKGBASE})-${VERSION}
-PKGREVISION=		5
+PKGREVISION=		6
 
 CATEGORIES=		robots
 MASTER_SITES=		${MASTER_SITE_JRL}/openhrp3-hrp2/
@@ -26,6 +26,7 @@ DYNAMIC_PLIST_DIRS+=	share/doc/openhrp3_hrp2
 include ../../wip/openhrp3-simulator-wo-rtm/depend.mk
 include ../../wip/sot-hrp2-v3/depend.mk
 include ../../wip/dynamic-graph-bridge-v3/depend.mk
+include ../../robots/hrp2-14/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-xacro/depend.mk
 include ../../graphics/urdfdom/depend.mk

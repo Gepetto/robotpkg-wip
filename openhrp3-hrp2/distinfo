@@ -1,6 +1,3 @@
-SHA1 (openhrp3_hrp2-1.0.7.tar.gz) = b676db491838156064bf66c4d6eb826c48113197
-RMD160 (openhrp3_hrp2-1.0.7.tar.gz) = 27acd69fe196790559679d5d11dd9724830d7e5a
-Size (openhrp3_hrp2-1.0.7.tar.gz) = 955213 bytes
-SHA1 (patch-aa) = 05cf80df6a9633dbe202cbd29a1ab95e37df6147
-SHA1 (patch-ab) = 85f358fd741d85a48e63372b287141357b403dee
-SHA1 (patch-ac) = 0b1567371fbe13437bf8bc64536c6f92e01d87d4
+SHA1 (openhrp3_hrp2-1.1.0.tar.gz) = aba99f69c592f54b8aee18de386c6121b999460c
+RMD160 (openhrp3_hrp2-1.1.0.tar.gz) = f22eb6ba24e581d4b5cb234082d043d9ea831907
+Size (openhrp3_hrp2-1.1.0.tar.gz) = 1020746 bytes

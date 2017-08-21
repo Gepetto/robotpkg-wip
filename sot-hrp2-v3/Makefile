@@ -2,10 +2,10 @@
 # Created:			Rohan Budhiraja, on Wed. 14th April 2016
 #
 
-VERSION=		2.0.2
+VERSION=		2.1.0
 DISTNAME=		sot-hrp2-v3-${VERSION}
 PKGNAME=		sot-hrp2-v3-${VERSION}
-PKGREVISION=		1
+#PKGREVISION=		1
 
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-hrp2-v3/}

@@ -1,0 +1,13 @@
+diff --git src/sot_loader.cpp src/sot_loader.cpp
+index 411ed6c..1b9071c 100644
+--- src/sot_loader.cpp
++++ src/sot_loader.cpp
+@@ -102,7 +102,7 @@ SotLoader::readControl(map<string,dgs::ControlValues> &controlValues)
+ 
+   
+   // Update joint values.
+-  angleControl_ = controlValues["joints"].getValues();
++  angleControl_ = controlValues["control"].getValues();
+ 
+   //Debug
+   std::map<std::string,dgs::ControlValues>::iterator it = controlValues.begin();

@@ -1,0 +1,26 @@
+diff --git server/SotController/hrp2-oh2sot-tau.cpp server/SotController/hrp2-oh2sot-tau.cpp
+index d99c510..861834f 100644
+--- server/SotController/hrp2-oh2sot-tau.cpp
++++ server/SotController/hrp2-oh2sot-tau.cpp
+@@ -273,7 +273,7 @@ HRP2OH2SOTTAU::readControl(std::map<std::string,dgsot::ControlValues>
+ 			&controlValues)
+ {
+   // Update joint values.
+-  angleControl_ = controlValues["joints"].getValues();
++  angleControl_ = controlValues["control"].getValues();
+ 
+   for(unsigned int i=0;i<angleControl_.size();i++)
+     torques_[i] = angleControl_[i]; 
+diff --git server/SotController/hrp2-oh2sot.cpp server/SotController/hrp2-oh2sot.cpp
+index 0dbb264..a8006fa 100644
+--- server/SotController/hrp2-oh2sot.cpp
++++ server/SotController/hrp2-oh2sot.cpp
+@@ -263,7 +263,7 @@ HRP2OH2SOT::readControl(std::map<std::string,dgsot::ControlValues>
+ {
+ 
+   // Update joint values.
+-  angleControl_ = controlValues["joints"].getValues();
++  angleControl_ = controlValues["control"].getValues();
+   
+   for(unsigned int i=0;i<angleControl_.size();i++)
+     { 

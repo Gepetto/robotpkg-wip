@@ -4,7 +4,7 @@
 DISTNAME=		sot-talos-0.0.2
 MASTER_SITES=		${MASTER_SITE_JRL:=talos/sot-talos/}
 MASTER_REPOSITORY=	https://redmine.laas.fr/laas/users/
-PKGREVISION=		2
+PKGREVISION=		3
 
 CATEGORIES=		wip
 COMMENT=		This packages provides a generic Stack Of Tasks library for the humanoid robot Pyrene.

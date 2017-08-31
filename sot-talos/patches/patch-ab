@@ -1,0 +1,53 @@
+diff --git src/sot-talos-controller.cpp src/sot-talos-controller.cpp
+index 3d49f5c..231637d 100644
+--- src/sot-talos-controller.cpp
++++ src/sot-talos-controller.cpp
+@@ -116,6 +116,18 @@ getControl(map<string,dgsot::ControlValues> &controlOut)
+ }
+ 
+ void SoTTalosController::
++setNoIntegration(void)
++{
++  device_.setNoIntegration();
++}
++
++void SoTTalosController::
++setSecondOrderIntegration(void)
++{
++  device_.setSecondOrderIntegration();
++}
++
++void SoTTalosController::
+ runPython(std::ostream& file,
+ 	  const std::string& command,
+ 	  dynamicgraph::Interpreter& interpreter)
+diff --git src/sot-talos-controller.hh src/sot-talos-controller.hh
+index b58cc7e..bd1957c 100644
+--- src/sot-talos-controller.hh
++++ src/sot-talos-controller.hh
+@@ -42,6 +42,9 @@ class SoTTalosController: public
+ 
+   void getControl(std::map<std::string, dgsot::ControlValues> &anglesOut);
+ 
++  void setNoIntegration(void);
++  void setSecondOrderIntegration(void);
++
+   /// Embedded python interpreter accessible via Corba/ros
+   boost::shared_ptr<dynamicgraph::Interpreter> interpreter_;
+ 
+diff --git src/sot-talos-device.cpp src/sot-talos-device.cpp
+index 7f80772..3061f92 100644
+--- src/sot-talos-device.cpp
++++ src/sot-talos-device.cpp
+@@ -258,7 +258,7 @@ void SoTTalosDevice::getControl(map<string,dgsot::ControlValues> &controlOut)
+ 
+   for(unsigned int i=6; i < state_.size();++i)
+     anglesOut[i-6] = state_(i);
+-  controlOut["joints"].setValues(anglesOut);
++  controlOut["control"].setValues(anglesOut);
+   // Read zmp reference from input signal if plugged
+   int time = controlSIN.getTime ();
+   zmpSIN.recompute (time + 1);
+-- 
+1.9.1
+

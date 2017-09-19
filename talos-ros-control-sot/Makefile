@@ -6,6 +6,7 @@ VERSION=	0.0.2
 PKGBASE=	metapkg-talos-roscontrol-sot
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+PKGREVISION=	1
 
 ROS_METAPKG=	yes
 
@@ -41,7 +42,6 @@ include ../../wip/talos-simulation/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
-include ../../wip/talos-simulation/depend.mk
 include ../../wip/dynamic-graph-bridge-v3/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

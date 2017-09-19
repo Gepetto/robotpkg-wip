@@ -19,7 +19,7 @@ DEPEND_ABI.talos-ros-controllers?=	talos-ros-controllers>=0.2.8
 DEPEND_DIR.talos-ros-controllers?=	../../wip/talos-ros-controllers
 
 SYSTEM_SEARCH.talos-ros-controllers=\
-  'include/talos_joint_state_controller/controller_loader.h'		\
+  'include/talos_joint_state_controller/joint_state_controller.h'		\
   'lib/libtalos_joint_state_controller.so'				\
   'share/talos_joint_state_controller/package.xml:/<version>/s/[^0-9.]//gp'	\
   'lib/pkgconfig/talos_joint_state_controller.pc:/Version/s/[^0-9.]//gp'

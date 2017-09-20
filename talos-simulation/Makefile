@@ -4,7 +4,7 @@
 VERSION=	0.0.14
 PKGNAME=	talos-simulation-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_simulation/}

@@ -3,7 +3,7 @@
 #
 
 VERSION=	0.0.2
-PKGBASE=	metapkg-talos-roscontrol-sot
+PKGBASE=	talos-ros-control-sot
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 PKGREVISION=	1
@@ -14,7 +14,7 @@ ROS_GITTAG=	${DISTNAME}
 WRKSRC=		${WRKDIR}/${ROS_GITTAG}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_JRL:=talos/metapkg-talos-roscontrol-sot/}
+MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_ros_control_sot/}
 COMMENT=	ros_control package for the SoT and specifically for Talos
 LICENSE=	openhrp-grx-license
 
@@ -38,7 +38,6 @@ include ../../interfaces/ros-std-msgs/depend.mk
 include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../math/ros-geometry/depend.mk
-include ../../wip/talos-simulation/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk

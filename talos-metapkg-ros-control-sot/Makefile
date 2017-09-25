@@ -2,11 +2,10 @@
 # Created:			Olivier Stasse on Fri, 5 May 2017
 #
 
-VERSION=	0.0.2
-PKGBASE=	talos-ros-control-sot
+VERSION=	0.0.3
+PKGBASE=	talos-metapkg-ros-control-sot
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-PKGREVISION=	1
 
 ROS_METAPKG=	yes
 
@@ -14,7 +13,7 @@ ROS_GITTAG=	${DISTNAME}
 WRKSRC=		${WRKDIR}/${ROS_GITTAG}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_ros_control_sot/}
+MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_metapkg_ros_control_sot/}
 COMMENT=	ros_control package for the SoT and specifically for Talos
 LICENSE=	openhrp-grx-license
 

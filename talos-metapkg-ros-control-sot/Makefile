@@ -3,14 +3,8 @@
 #
 
 VERSION=	0.0.3
-PKGBASE=	talos-metapkg-ros-control-sot
-PKGNAME=	${PKGBASE}-${VERSION}
+PKGNAME=	talos-metapkg-ros-control-sot-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-
-ROS_METAPKG=	yes
-
-ROS_GITTAG=	${DISTNAME}
-WRKSRC=		${WRKDIR}/${ROS_GITTAG}
 
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_metapkg_ros_control_sot/}
@@ -21,10 +15,7 @@ RESTRICTED=     Redistribution of repackaged binaries not permitted
 NO_PUBLIC_SRC=  ${RESTRICTED}
 NO_PUBLIC_BIN=  ${RESTRICTED}
 
-#USE_BOOST_LIBS=	thread
-
-include ../../meta-pkgs/ros-base/Makefile.common
-CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
+ROS_METAPKG=	yes
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

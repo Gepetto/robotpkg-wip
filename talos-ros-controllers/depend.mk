@@ -22,7 +22,8 @@ SYSTEM_SEARCH.talos-ros-controllers=\
   'include/talos_joint_state_controller/joint_state_controller.h'		\
   'lib/libtalos_joint_state_controller.so'				\
   'share/talos_joint_state_controller/package.xml:/<version>/s/[^0-9.]//gp'	\
-  'lib/pkgconfig/talos_joint_state_controller.pc:/Version/s/[^0-9.]//gp'
+  'lib/pkgconfig/talos_joint_state_controller.pc:/Version/s/[^0-9.]//gp'  \
+  'share/talos_controller_interface/cmake/talos_controller_interfaceConfig.cmake'
 
 endif # TALOS_ROS_CONTROLLERS_DEPEND_MK ----------------------------------------
 

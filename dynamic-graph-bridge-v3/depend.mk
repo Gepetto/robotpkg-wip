@@ -25,7 +25,8 @@ SYSTEM_SEARCH.dynamic-graph-bridge-v3=\
   'include/dynamic_graph_bridge/config.hh'				\
   'lib/pkgconfig/dynamic_graph_bridge.pc:/Version/s/[^0-9.]//gp'	\
   'share/dynamic_graph_bridge/robot_pose_publisher'			\
-  '${PYTHON_SITELIB}/dynamic_graph/ros/ros.py'
+  '${PYTHON_SITELIB}/dynamic_graph/ros/ros.py'	\
+  'share/dynamic_graph_bridge/cmake/dynamic_graph_bridgeConfig.cmake'
 
 
 # headers leak the ros dependency ...

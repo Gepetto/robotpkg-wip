@@ -32,6 +32,7 @@ include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
 include ../../wip/dynamic-graph-bridge-v3/depend.mk
+include ../../wip/talos-ros-controllers/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

@@ -5,7 +5,7 @@ include/talos/roscontrol/sot/warning.hh
 lib/libtalos_rcsot_controller.so
 lib/pkgconfig/talos_roscontrol_sot.pc
 lib/pkgconfig/talos_roscontrol_sot_talos.pc
-share/metapkg_talos_roscontrol_sot/package.xml
+share/talos_metapkg_ros_control_sot/package.xml
 share/talos_roscontrol_sot/cmake/talos_roscontrol_sotConfig-version.cmake
 share/talos_roscontrol_sot/cmake/talos_roscontrol_sotConfig.cmake
 share/talos_roscontrol_sot/config/roscontrol_sot_controller_plugins.xml
@@ -17,6 +17,8 @@ share/talos_roscontrol_sot_talos/cmake/talos_roscontrol_sot_talosConfig.cmake
 share/talos_roscontrol_sot_talos/config/sot_talos_controller.yaml
 share/talos_roscontrol_sot_talos/config/sot_talos_params.yaml
 share/talos_roscontrol_sot_talos/config/sot_talos_params_gazebo.yaml
+share/talos_roscontrol_sot_talos/config/sot_talos_params_gazebo_effort.yaml
 share/talos_roscontrol_sot_talos/launch/sot_talos_controller.launch
 share/talos_roscontrol_sot_talos/launch/sot_talos_controller_gazebo.launch
+share/talos_roscontrol_sot_talos/launch/sot_talos_controller_gazebo_effort.launch
 share/talos_roscontrol_sot_talos/package.xml

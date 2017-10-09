@@ -1,4 +1,4 @@
-@comment Tue Dec 6 12:22:05 CET 2016
+@comment Mon Oct 9 15:36:18 CEST 2017
 include/pinocchio/algorithm/aba.hpp
 include/pinocchio/algorithm/aba.hxx
 include/pinocchio/algorithm/center-of-mass.hpp
@@ -122,16 +122,11 @@ include/pinocchio/warning.hh
 lib/libpinocchio.so
 lib/pkgconfig/pinocchio.pc
 lib/pkgconfig/pinocchiopy.pc
-${PYTHON_SITELIB}/pinocchio/libpinocchio_pywrap.so
 ${PYTHON_SITELIB}/pinocchio/__init__.py
+${PYTHON_SITELIB}/pinocchio/deprecation.py
 ${PYTHON_SITELIB}/pinocchio/explog.py
+${PYTHON_SITELIB}/pinocchio/libpinocchio_pywrap.so
 ${PYTHON_SITELIB}/pinocchio/robot_wrapper.py
 ${PYTHON_SITELIB}/pinocchio/romeo_wrapper.py
 ${PYTHON_SITELIB}/pinocchio/rpy.py
 ${PYTHON_SITELIB}/pinocchio/utils.py
-${PYTHON_SITELIB}/pinocchio/__init__.pyc
-${PYTHON_SITELIB}/pinocchio/explog.pyc
-${PYTHON_SITELIB}/pinocchio/robot_wrapper.pyc
-${PYTHON_SITELIB}/pinocchio/romeo_wrapper.pyc
-${PYTHON_SITELIB}/pinocchio/rpy.pyc
-${PYTHON_SITELIB}/pinocchio/utils.pyc

@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Thu, 4 Feb 2016
 #
 
-VERSION=		1.2.4
+VERSION=		1.2.5
 DISTNAME=		pinocchio-${VERSION}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${PKGBASE}/}
@@ -12,7 +12,6 @@ MAINTAINER=		gepetto@laas.fr
 CATEGORIES=		math
 COMMENT=		Efficient rigid body dynamics
 LICENSE=		gnu-lgpl-v3
-PKGREVISION=  3
 
 # parallel builds would consume all memory because of the g++ process size
 MAKE_JOBS_SAFE=		no

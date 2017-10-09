@@ -12,6 +12,7 @@ MAINTAINER=		gepetto@laas.fr
 CATEGORIES=		math
 COMMENT=		Efficient rigid body dynamics
 LICENSE=		gnu-lgpl-v3
+PKGREVISION=  1
 
 # parallel builds would consume all memory because of the g++ process size
 MAKE_JOBS_SAFE=		no

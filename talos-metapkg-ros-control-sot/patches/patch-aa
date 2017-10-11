@@ -1,0 +1,23 @@
+--- talos_metapkg_ros_control_sot/CMakeLists.txt
++++ talos_metapkg_ros_control_sot/CMakeLists.txt
+@@ -1,4 +1,4 @@
+ cmake_minimum_required(VERSION 2.8.3)
+-project(metapkg_talos_roscontrol_sot)
++project(talos_metapkg_ros_control_sot)
+ find_package(catkin REQUIRED)
+ catkin_metapackage()
+diff --git a/talos_roscontrol_sot/src/roscontrol-sot-controller.cpp b/talos_roscontrol_sot/src/roscontrol-sot-controller.cpp
+index 98d90ea..8af32fa 100644
+--- a/talos_roscontrol_sot/src/roscontrol-sot-controller.cpp
++++ b/talos_roscontrol_sot/src/roscontrol-sot-controller.cpp
+@@ -84,6 +84,9 @@ namespace talos_sot_controller
+     /// Create SoT
+     SotLoaderBasic::Initialization();
+ 
++    /// If we are in effort mode then the device should not do any integration.
++    if (control_mode_==EFFORT)
++      sotController_->setNoIntegration();
+     return true;
+   }
+   
+

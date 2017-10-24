@@ -20,6 +20,7 @@ include/sot/core/exception-task.hh
 include/sot/core/exception-tools.hh
 include/sot/core/binary-op.hh
 include/sot/core/derivator.hh
+include/sot/core/switch.hh
 include/sot/core/fir-filter.hh
 include/sot/core/integrator-abstract.hh
 include/sot/core/integrator-euler.hh
@@ -92,6 +93,10 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/core/derivator/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/derivator/__init__.py
 lib/plugin/derivator.so.${PKGVERSION}
 lib/plugin/derivator.so
+${PYTHON_SITELIB}/dynamic_graph/sot/core/switch/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/sot/core/switch/__init__.py
+lib/plugin/switch.so.${PKGVERSION}
+lib/plugin/switch.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/fir_filter/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/fir_filter/__init__.py
 lib/plugin/fir-filter.so.${PKGVERSION}

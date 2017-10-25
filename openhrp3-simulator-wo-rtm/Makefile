@@ -1,10 +1,10 @@
 # robotpkg Makefile for:	simulation/openhrp3-simulator-wo-rtm
 # Created:			Olivier Stasse on Thursday, 25 Aug 2016
 #
-VERSION=		1.1.3
+VERSION=		1.2.0
 PKGNAME=		openhrp3-simulator-wo-rtm-${VERSION}
 DISTNAME=		$(subst -,_,${PKGBASE})-${VERSION}
-PKGREVISION=		3
+#PKGREVISION=		3
 
 CATEGORIES=		simulation
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=openhrp3-simulator-wo-rtm/}

@@ -7,7 +7,7 @@ VERSION=		3.0.2
 
 PKGNAME=		${PKGTAG.python-}dynamic-graph-v3-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=dynamic-graph-python-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/proyan/dynamic-graph-python
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/dynamic-graph-python
 CHECKOUT_VCS_OPTS=	--recursive
 
 MAINTAINER=	gepetto@laas.fr

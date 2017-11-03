@@ -8,6 +8,7 @@ PKGNAME=		${PKGTAG.python-}sot-tools-v3-${VERSION}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-tools-v3/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/sot-tools
+CHECKOUT_VCS_OPTS+=	--recursive
 
 MAINTAINER=		gepetto@laas.fr
 CATEGORIES=		wip

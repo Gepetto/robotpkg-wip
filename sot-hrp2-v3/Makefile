@@ -10,6 +10,7 @@ PKGNAME=		sot-hrp2-v3-${VERSION}
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-hrp2-v3/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/sot-hrp2
+CHECKOUT_VCS_OPTS+=	--recursive
 
 COMMENT=		This packages provides a generic Stack Of Tasks library for the humanoid robot HRP-2.
 LICENSE=		gnu-lgpl-v3

@@ -1,3 +1,2 @@
 @comment Thu Nov 16 15:57:05 CET 2017
 lib/pkgconfig/${PKGBASE}.pc
-lib64/osgPlugins-${PKGVERSION}/osgdb_dae.so

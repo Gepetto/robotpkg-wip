@@ -2,11 +2,10 @@
 # Created:			Nicolas Mansard, 15/DEC/2016
 #
 
-VERSION=		3.2.0
+VERSION=		3.2.1
 DISTNAME=		osg-dae-${VERSION}
-PKGREVISION=		1
 
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${PKGBASE}/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=stack-of-tasks/${PKGBASE}/releases/download/v${VERSION}/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/${PKGBASE}
 
 MAINTAINER=		gepetto@laas.fr

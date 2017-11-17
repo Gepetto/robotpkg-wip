@@ -8,7 +8,7 @@ VERSION=	4.0.1
 
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=jrl-walkgen-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}proyan/jrl-walkgen/
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/jrl-walkgen/
 
 MAINTAINER=	gepetto@laas.fr
 COMMENT=	Walk pattern generator for the HRP-2 humanoid robot.

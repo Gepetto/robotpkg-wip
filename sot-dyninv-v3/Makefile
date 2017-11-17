@@ -8,7 +8,7 @@ PKGNAME=		sot-dyninv-v3-${VERSION}
 DISTNAME=		sot-dyninv-v3-${VERSION}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-dyninv-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/proyan/sot-dyninv
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/sot-dyninv
 
 MAINTAINER=	hpp@laas.fr
 CATEGORIES=	wip

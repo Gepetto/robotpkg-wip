@@ -7,7 +7,7 @@ PKG_REVISION=		1.0
 DISTNAME=		sot-pattern-generator-v3-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-pattern-generator-v3/}
 MASTER_REPOSITORY=\
-	${MASTER_REPOSITORY_GITHUB}proyan/sot-pattern-generator/
+	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/sot-pattern-generator/
 
 MAINTAINER=		gepetto@laas.fr
 CATEGORIES=		wip

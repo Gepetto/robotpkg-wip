@@ -1,0 +1,24 @@
+diff -Naur include/sot/core/switch.hh include/sot/core/switch.hh
+--- include/sot/core/switch.hh	2017-11-22 20:19:04.817875496 +0100
++++ include/sot/core/switch.hh	2017-11-22 20:18:39.661171318 +0100
+@@ -45,7 +45,7 @@
+      
+     public: /* --- SIGNAL --- */
+       DYNAMIC_GRAPH_ENTITY_DECL();
+-      dynamicgraph::SignalTimeDependent<bool,int> outSOUT;
++      dynamicgraph::Signal<bool,int> outSOUT;
+       
+     protected:
+       bool signalOutput;
+@@ -58,9 +58,9 @@
+     public:
+       Switch( const std::string& name )
+ 	: Entity(name)
+-	,outSOUT( boost::bind(&Switch::switchOutput,this,_1,_2),
+-                  sotNOSIGNAL,"Switch("+name+")::output(bool)::out")
++	,outSOUT("Switch("+name+")::output(bool)::out")
+       {
++        outSOUT.setFunction(boost::bind(&Switch::switchOutput,this,_1,_2));
+         signalOutput = false;
+         signalRegistration (outSOUT );
+         addCommand ("turnOn",

@@ -5,10 +5,12 @@
 PKGNAME=		sot-core-v3-${VERSION}
 DISTNAME=		sot-core-v3-${VERSION}
 VERSION=		3.1.1
+PKGVERSION=		1
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-core-v3/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/sot-core
 CHECKOUT_VCS_OPTS=	--recursive
+
 
 MAINTAINER=	gepetto@laas.fr
 CATEGORIES=	wip

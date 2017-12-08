@@ -1,0 +1,38 @@
+Don't fail to create pthread if user don't have CAP_SYS_NICE
+
+--- src/FastResearchInterfaceLibrary/FastResearchInterface.cpp~	2017-12-08 16:40:08.568668402 +0100
++++ src/FastResearchInterfaceLibrary/FastResearchInterface.cpp	2017-12-08 18:40:03.925198913 +0100
+@@ -155,15 +155,12 @@
+ 
+ 	// Set the thread scheduling policy attribute to round robin
+ 	// default is OTHER which equals RR in QNX 6.5.0.
+-	pthread_attr_setschedpolicy(&AttributesKRCCommunicationThread	,	SCHED_FIFO								)	;
+ 	pthread_attr_setschedpolicy(&AttributesTimerThread				,	SCHED_FIFO								)	;
+ 
+ 	// Set the thread's inherit-scheduling attribute to explicit
+ 	// otherwise, the scheduling parameters Cannot be changed (e.g., priority)
+-	pthread_attr_setinheritsched(&AttributesKRCCommunicationThread	,	PTHREAD_EXPLICIT_SCHED					)	;
+ 	pthread_attr_setinheritsched(&AttributesTimerThread				,	PTHREAD_EXPLICIT_SCHED					)	;
+ 
+-	pthread_attr_setschedparam(&AttributesKRCCommunicationThread	,	&SchedulingParamsKRCCommunicationThread	)	;
+ 	pthread_attr_setschedparam(&AttributesTimerThread				,	&SchedulingParamsTimerThread			)	;
+ 
+ 	// this is supposed to become the message thread
+@@ -229,7 +226,16 @@
+ 	}
+ 
+ 	ThreadCreated	=	false;
+-	pthread_mutex_unlock(&(this->MutexForThreadCreation));
++
++        if (pthread_setschedparam(KRCCommunicationThread, SCHED_FIFO,
++                                  &SchedulingParamsKRCCommunicationThread)) {
++          if (errno == EPERM) {
++            this->OutputConsole->printf("Warning: not enough privilege "
++                                        "to set scheduling parameters\n");
++          }
++        }
++
++        pthread_mutex_unlock(&(this->MutexForThreadCreation));
+ 
+ 	if (strlen(this->LoggingPath) > 0)
+ 	{

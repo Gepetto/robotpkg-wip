@@ -1,0 +1,24 @@
+Don't fail to create pthread if user don't have CAP_SYS_NICE
+
+--- src/FastResearchInterfaceLibrary/Console.cpp~	2014-12-03 09:27:36.000000000 +0100
++++ src/FastResearchInterfaceLibrary/Console.cpp	2017-12-08 18:41:56.650521057 +0100
+@@ -81,9 +81,6 @@
+ 	ThreadSchedulingParams.sched_priority	=	Priority;
+ 
+ 	pthread_attr_init			(&ThreadAttributes								)	;
+-	pthread_attr_setschedpolicy	(&ThreadAttributes	,	SCHED_FIFO				)	;
+-	pthread_attr_setinheritsched(&ThreadAttributes	,	PTHREAD_EXPLICIT_SCHED	)	;
+-	pthread_attr_setschedparam	(&ThreadAttributes	,	&ThreadSchedulingParams	)	;
+ 
+ 	pthread_create(		&ConsoleThread
+ 				   	,	&ThreadAttributes
+@@ -97,6 +94,9 @@
+ 		pthread_cond_wait (&(this->CondVar), &(this->Mutex));
+ 	}
+ 
++        pthread_setschedparam(ConsoleThread, SCHED_FIFO,
++                              &ThreadSchedulingParams);
++
+ 	pthread_mutex_unlock(&(this->Mutex));				   	
+ 
+ 	memset(this->Buffer, 0x0, 		2

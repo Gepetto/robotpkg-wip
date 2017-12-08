@@ -2,6 +2,7 @@
 # Created:			Matthieu Herrb on Mon, 23 May 2016
 #
 
+PKGREVISION=	1
 DISTNAME=	fril
 VERSION=	1.2
 PKGNAME=	FRILibrary-${VERSION}
@@ -14,6 +15,9 @@ CATEGORIES=	hardware
 MAINTAINER=	openrobots@laas.fr
 COMMENT=	C++ Library to interface the KUKA Light Weight Robot IV
 LICENSE=	apache-2.0
+
+# force text conversion to handle CR/LR correctly.
+EXTRACT_OPTS_ZIP=-aao
 
 WRKSRC=		${WRKDIR}/FRILibrary
 

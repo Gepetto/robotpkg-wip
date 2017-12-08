@@ -1,19 +1,21 @@
+ * Generate PIC library, so that this can be linked in shared libraries
+ * Pass PREFIX to avoid hardcoding paths
+
 --- Linux/Makefile.global.orig	2013-10-30 09:28:32.000000000 +0100
 +++ Linux/Makefile.global	2016-05-23 18:47:54.687506000 +0200
-@@ -80,13 +80,14 @@
+@@ -80,13 +80,13 @@
  DEBUG_EXE_DIR=debug/bin
  DEBUG_OBJ_DIR=debug/obj
  DEBUG_LIB_DIR=debug/lib
 -DEBUG_CC= g++ -c -I $(INCLUDE_DIR) -D$(TARGET_OS) -ggdb
-+DEBUG_CC= g++ -c -I $(INCLUDE_DIR) -D$(TARGET_OS) -ggdb -DPREFIX=\"${PREFIX}\"
-+
++DEBUG_CC= g++ -c -I $(INCLUDE_DIR) -D$(TARGET_OS) -ggdb -fPIC -DPREFIX=\"${PREFIX}\"
  DEBUG_CL= g++ $(SYSTEM_LIBS) -gddb
  
  RELEASE_EXE_DIR=release/bin
  RELEASE_OBJ_DIR=release/obj
  RELEASE_LIB_DIR=release/lib
 -RELEASE_CC= g++ -c -I $(INCLUDE_DIR) -D$(TARGET_OS) -O3
-+RELEASE_CC= g++ -c -I $(INCLUDE_DIR) -D$(TARGET_OS) -O3 -DPREFIX=\"${PREFIX}\"
++RELEASE_CC= g++ -c -I $(INCLUDE_DIR) -D$(TARGET_OS) -O3 -fPIC -DPREFIX=\"${PREFIX}\"
  RELEASE_CL= g++ $(SYSTEM_LIBS)
  
  AR= ar vrs 

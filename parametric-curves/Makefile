@@ -5,6 +5,7 @@ VERSION=		1.0.1
 DISTNAME=		parametric-curves-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=parametric-curves/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/parametric-curves}
+CHECKOUT_VCS_OPTS+=	--recursive
 
 
 CATEGORIES=		wip

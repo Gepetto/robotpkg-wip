@@ -1,4 +1,4 @@
-@comment Thu Jan 11 11:40:12 CET 2018
+@comment Thu Jan 11 14:11:24 CET 2018
 include/eigenpy/angle-axis.hpp
 include/eigenpy/config.hh
 include/eigenpy/deprecated.hh
@@ -20,6 +20,7 @@ include/eigenpy/solvers/LeastSquaresConjugateGradient.hpp
 include/eigenpy/solvers/SparseSolverBase.hpp
 include/eigenpy/solvers/preconditioners.hpp
 include/eigenpy/solvers/solvers.hpp
+include/eigenpy/stride.hpp
 include/eigenpy/warning.hh
 include/src/angle-axis.hpp
 include/src/details.hpp
@@ -40,6 +41,7 @@ include/src/solvers/LeastSquaresConjugateGradient.hpp
 include/src/solvers/SparseSolverBase.hpp
 include/src/solvers/preconditioners.hpp
 include/src/solvers/solvers.hpp
+include/src/stride.hpp
 lib/libeigenpy.so
 lib/pkgconfig/eigenpy.pc
 ${PYTHON_SITELIB}/eigenpy.so

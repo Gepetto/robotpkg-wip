@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse, Feb 3rd 2016
 #
 
-VERSION=		1.3.3
+VERSION=		1.4.0
 DISTNAME=		eigenpy-${VERSION}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${PKGBASE}/}

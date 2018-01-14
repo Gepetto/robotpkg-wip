@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Thu, 4 Feb 2016
 #
 
-VERSION=		1.2.5
+VERSION=		1.2.6
 DISTNAME=		pinocchio-${VERSION}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${PKGBASE}/}
@@ -12,7 +12,6 @@ MAINTAINER=		gepetto@laas.fr
 CATEGORIES=		math
 COMMENT=		Efficient rigid body dynamics
 LICENSE=		gnu-lgpl-v3
-PKGREVISION=  1
 
 # parallel builds would consume all memory because of the g++ process size
 MAKE_JOBS_SAFE=		no
@@ -26,7 +25,7 @@ CMAKE_ARGS+=		-DPYTHON_SITELIB=${PYTHON_SITELIB}
 CMAKE_ARGS+=    -DCMAKE_INSTALL_LIBDIR=lib
 
 CMAKE_ARGS+=		-DBUILD_BENCHMARK=OFF
-CMAKE_ARGS+=		-DBUILD_UNIT_TESTS=ON
+CMAKE_ARGS+=		-DBUILD_UNIT_TESTS=OFF
 CMAKE_ARGS+=		-DBUILD_UTILS=OFF
 CMAKE_ARGS+=		-DBUILD_TESTS_WITH_HPP=OFF
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=ON
@@ -34,7 +33,7 @@ CMAKE_ARGS+=    -DINSTALL_DOCUMENTATION=OFF
 
 CHECKOUT_VCS_OPTS = --recursive 
 
-USE_BOOST_LIBS=		python system filesystem unit_test_framework
+USE_BOOST_LIBS=		python system filesystem
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

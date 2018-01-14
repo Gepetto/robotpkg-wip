@@ -1,4 +1,4 @@
-@comment Mon Oct 9 15:36:18 CEST 2017
+@comment Sun Jan 14 20:15:03 CET 2018
 include/pinocchio/algorithm/aba.hpp
 include/pinocchio/algorithm/aba.hxx
 include/pinocchio/algorithm/center-of-mass.hpp
@@ -17,11 +17,13 @@ include/pinocchio/algorithm/energy.hpp
 include/pinocchio/algorithm/finite-differences.hpp
 include/pinocchio/algorithm/finite-differences.hxx
 include/pinocchio/algorithm/frames.hpp
+include/pinocchio/algorithm/frames.hxx
 include/pinocchio/algorithm/geometry.hpp
 include/pinocchio/algorithm/geometry.hxx
 include/pinocchio/algorithm/jacobian.hpp
 include/pinocchio/algorithm/jacobian.hxx
 include/pinocchio/algorithm/joint-configuration.hpp
+include/pinocchio/algorithm/joint-configuration.hxx
 include/pinocchio/algorithm/kinematics.hpp
 include/pinocchio/algorithm/kinematics.hxx
 include/pinocchio/algorithm/rnea.hpp

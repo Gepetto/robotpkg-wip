@@ -5,6 +5,8 @@
 VERSION=		3.1.6
 PKGNAME=		sot-dynamic-pinocchio-v3-${VERSION}
 DISTNAME=		sot-dynamic-pinocchio-v3-${VERSION}
+PKGREVISION= 		1
+
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-dynamic-pinocchio-v3/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/sot-dynamic-pinocchio/
 CHECKOUT_VCS_OPTS+=	--recursive

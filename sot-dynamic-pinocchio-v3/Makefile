@@ -5,7 +5,7 @@
 VERSION=		3.1.6
 PKGNAME=		sot-dynamic-pinocchio-v3-${VERSION}
 DISTNAME=		sot-dynamic-pinocchio-v3-${VERSION}
-PKGREVISION= 		1
+PKGREVISION= 		2
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-dynamic-pinocchio-v3/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/sot-dynamic-pinocchio/
@@ -16,7 +16,6 @@ MAINTAINER=	gepetto@laas.fr
 CATEGORIES=	wip
 LICENSE=	gnu-lgpl-v3
 COMMENT=	Create entities to compute a robot dynamics properties using pinocchio
-PKGREVISION=	1
 
 
 # parallel builds would consume all memory because of the g++ process size

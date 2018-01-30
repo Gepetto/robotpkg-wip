@@ -2,6 +2,7 @@
 # Created:			Olivier Stasse on Mer, 3 May 2017
 #
 VERSION=	2.6.7
+PKGREVISION=	1
 PKGNAME=	talos-gazebo-ros-control-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 

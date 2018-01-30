@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/talos-gazebo-ros-control
 # Created:			Olivier Stasse on Mer, 3 May 2017
 #
-VERSION=	2.6.6
+VERSION=	2.6.7
 PKGNAME=	talos-gazebo-ros-control-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 

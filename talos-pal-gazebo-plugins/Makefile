@@ -1,11 +1,10 @@
 # robotpkg Makefile for:	wip/talos-pal-gazebo-plugins
 # Created:			Olivier Stasse on Fri, 21 Apr 2017
 #
-VERSION=	1.1.5
+VERSION=	1.1.6
 PKGBASE=	talos-pal-gazebo-plugins
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-PKGREVISION=	2
 ROS_GITTAG=	${DISTNAME}
 WRKSRC=		${WRKDIR}/${ROS_GITTAG}
 

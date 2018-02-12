@@ -8,6 +8,7 @@ PKGREVISION=	5
 
 MASTER_SITES=		${MASTER_SITE_JRL:=talos/talos_data/}
 MASTER_REPOSITORY=	https://redmine.laas.fr/laas/users/
+CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		This packages provides data of the humanoid robot Pyrene in a friendly way for the SoT.

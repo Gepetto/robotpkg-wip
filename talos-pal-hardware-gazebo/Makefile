@@ -2,13 +2,13 @@
 # Created:			Olivier Stasse on Thu, 3 May 2017
 #
 
-VERSION=	0.0.9
+VERSION=	0.0.10
 PKGNAME=	talos-pal-hardware-gazebo-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 PKGREVISION=	1
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_JRL:=talos/$(subst -,_,${PKGBASE})/}
+MASTER_SITES=  ${MASTER_SITE_JRL:=talos/$(subst -,_,${PKGBASE})/}
 COMMENT=	Hardware interfaces developped by PAL-Robotics in Gazebo
 LICENSE=	openhrp-grx-license
 

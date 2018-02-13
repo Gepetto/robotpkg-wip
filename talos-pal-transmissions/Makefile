@@ -16,7 +16,6 @@ NO_PUBLIC_SRC=  ${RESTRICTED}
 NO_PUBLIC_BIN=  ${RESTRICTED}
 
 CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
-$(info Display something for talos-ros-controllers ${CMAKE_PREFIX_PATH})
 
 USE_BOOST_LIBS=	thread
 

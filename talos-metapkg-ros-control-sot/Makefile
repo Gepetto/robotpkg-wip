@@ -5,6 +5,7 @@
 VERSION=	0.0.5
 PKGNAME=	talos-metapkg-ros-control-sot-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+PKGREVISION=	1
 
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_metapkg_ros_control_sot/}
@@ -34,6 +35,7 @@ include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
 include ../../wip/dynamic-graph-bridge-v3/depend.mk
 include ../../wip/talos-ros-controllers/depend.mk
+include ../../wip/talos-pal-hardware-interfaces/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

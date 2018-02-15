@@ -9,6 +9,7 @@ PKGREVISION=	2
 
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_metapkg_ros_control_sot/}
+CHECKOUT_VCS_OPTS+=		--recursive
 COMMENT=	ros_control package for the SoT and specifically for Talos
 LICENSE=	openhrp-grx-license
 

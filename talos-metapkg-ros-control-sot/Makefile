@@ -2,10 +2,9 @@
 # Created:			Olivier Stasse on Fri, 5 May 2017
 #
 
-VERSION=	0.0.5
+VERSION=	0.0.6
 PKGNAME=	talos-metapkg-ros-control-sot-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-PKGREVISION=	1
 
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_metapkg_ros_control_sot/}

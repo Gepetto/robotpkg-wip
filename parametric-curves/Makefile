@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/parametric-curves
 # Created:			Olivier Stasse, on Tue. 5th Jan, 2018
 #
-VERSION=		1.0.2
+VERSION=		1.0.3
 DISTNAME=		parametric-curves-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=parametric-curves/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/parametric-curves}

@@ -32,6 +32,7 @@ include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
 include ../../simulation/gazebo-ros-pkgs/depend.mk
+include ../../wip/talos-gazebo-ros-control/depend.mk
 include ../../wip/talos-pal-hardware-interfaces/depend.mk
 include ../../mk/sysdep/gazebo.mk
 include ../../mk/language/c++.mk

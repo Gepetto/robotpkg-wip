@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/talos-roboticsgroup-gazebo-plugins
 # Created:			Olivier Stasse on Fri, 21 Apr 2017
 #
-VERSION=	0.0.3
+VERSION=	0.0.4
 PKGNAME=	talos-roboticsgroup-gazebo-plugins-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 

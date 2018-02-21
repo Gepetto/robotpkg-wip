@@ -14,7 +14,7 @@ ifeq (+,$(PARAMETRIC_CURVES_DEPEND_MK)) # --------------------------------------
 PREFER.parametric-curves?=	robotpkg
 
 SYSTEM_SEARCH.parametric-curves=\
-	include/parametric-curves/config.hh				\
+	include/parametric-curves/abstract-curve.hpp				\
 	'lib/pkgconfig/parametric-curves.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		parametric-curves

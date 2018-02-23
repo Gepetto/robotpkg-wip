@@ -27,7 +27,6 @@ include/sot/torque_control/utils/Stdafx.hh
 include/sot/torque_control/utils/causal-filter.hh
 include/sot/torque_control/utils/lin-estimator.hh
 include/sot/torque_control/utils/logger.hh
-include/sot/torque_control/utils/metapod-helper.hh
 include/sot/torque_control/utils/poly-estimator.hh
 include/sot/torque_control/utils/quad-estimator.hh
 include/sot/torque_control/utils/stop-watch.hh
@@ -87,8 +86,6 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/device_torque_ctrl/__init__.p
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/device_torque_ctrl/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/filter_differentiator/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/filter_differentiator/wrap.so
-${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/force_torque_estimator/__init__.py
-${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/force_torque_estimator/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/free_flyer_locator/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/free_flyer_locator/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/identification/__init__.py
@@ -97,8 +94,6 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/imu_offset_compensation/__ini
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/imu_offset_compensation/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/inverse_dynamics_balance_controller/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/inverse_dynamics_balance_controller/wrap.so
-${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/inverse_dynamics_controller/__init__.py
-${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/inverse_dynamics_controller/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/joint_torque_controller/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/joint_torque_controller/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/joint_trajectory_generator/__init__.py

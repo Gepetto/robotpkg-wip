@@ -5,7 +5,7 @@
 PKGNAME=		sot-torque-control-${VERSION}
 DISTNAME=		sot-torque-control-${VERSION}
 VERSION=		1.0.0
-PKGREVISION=		1
+PKGREVISION=		2
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-torque-control/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/sot-torque-control

@@ -6,14 +6,14 @@ DISTNAME=		parametric-curves-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=parametric-curves/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/parametric-curves}
 CHECKOUT_VCS_OPTS+=	--recursive
-
+PKGREVISION=		1
 
 CATEGORIES=		wip
 COMMENT=		This packages provides a template based parametric curves library.
 LICENSE=		gnu-lgpl-v3
 MAINTAINER=		ostasse@laas.fr
 
-
+include ../py-eigen/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

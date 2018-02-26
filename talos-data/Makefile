@@ -1,10 +1,9 @@
-	# robotpkg Makefile for:	wip/talos-data
+# robotpkg Makefile for:	wip/talos-data
 # Created:			Olivier Stasse, on Tue. 9th May, 2017
 #
-VERSION=	0.0.14
+VERSION=	0.0.15
 PKGNAME=	talos-data-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-PKGREVISION=	5
 
 MASTER_SITES=		${MASTER_SITE_JRL:=talos/talos_data/}
 MASTER_REPOSITORY=	https://redmine.laas.fr/laas/users/

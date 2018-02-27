@@ -1,4 +1,4 @@
-@comment Thu Jan 11 14:11:24 CET 2018
+@comment Tue Feb 27 13:48:29 CET 2018
 include/eigenpy/angle-axis.hpp
 include/eigenpy/config.hh
 include/eigenpy/deprecated.hh
@@ -22,26 +22,6 @@ include/eigenpy/solvers/preconditioners.hpp
 include/eigenpy/solvers/solvers.hpp
 include/eigenpy/stride.hpp
 include/eigenpy/warning.hh
-include/src/angle-axis.hpp
-include/src/details.hpp
-include/src/eigenpy.hpp
-include/src/exception.hpp
-include/src/fwd.hpp
-include/src/geometry.hpp
-include/src/map.hpp
-include/src/memory.hpp
-include/src/quaternion.hpp
-include/src/ref.hpp
-include/src/registration.hpp
-include/src/solvers/BFGSPreconditioners.hpp
-include/src/solvers/BasicPreconditioners.hpp
-include/src/solvers/ConjugateGradient.hpp
-include/src/solvers/IterativeSolverBase.hpp
-include/src/solvers/LeastSquaresConjugateGradient.hpp
-include/src/solvers/SparseSolverBase.hpp
-include/src/solvers/preconditioners.hpp
-include/src/solvers/solvers.hpp
-include/src/stride.hpp
 lib/libeigenpy.so
 lib/pkgconfig/eigenpy.pc
 ${PYTHON_SITELIB}/eigenpy.so

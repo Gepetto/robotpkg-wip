@@ -42,7 +42,7 @@ include ../../graphics/urdfdom/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../path/hpp-fcl/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
-include ../../wip/py-eigen/depend.mk
+include ../../wip/py-eigenpy/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/python.mk

@@ -86,6 +86,7 @@ SUBDIR+=	py-sot-tools-v3
 SUBDIR+= 	qpOASES
 SUBDIR+=	roralink
 SUBDIR+=	robotModelParser-libs
+SUBDIR+=	rqt-dynamic-graph
 SUBDIR+=	simple-humanoid-description
 SUBDIR+=	sot-application
 SUBDIR+=        sot-application-v3

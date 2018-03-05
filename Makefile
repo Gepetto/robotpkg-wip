@@ -76,7 +76,6 @@ SUBDIR+=	parametric-curves
 SUBDIR+=	pinocchio
 SUBDIR+=	pr2-pick-object
 SUBDIR+=	py-dynamic-graph-v3
-SUBDIR+=	py-eigenpy
 SUBDIR+=	py-hla
 SUBDIR+=	py-jsbsim
 SUBDIR+=	py-laaswm

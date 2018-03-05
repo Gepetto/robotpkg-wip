@@ -40,9 +40,9 @@ include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../graphics/urdfdom/depend.mk
 include ../../math/eigen3/depend.mk
+include ../../math/py-eigenpy/depend.mk
 include ../../path/hpp-fcl/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
-include ../../wip/py-eigenpy/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/python.mk

@@ -30,7 +30,6 @@ define PKG_OPTION_SET.pr2
   GENOM_ARGS+= -DPR2
   GENOM_ARGS+= -DUSE_GLUT
   include ../../interfaces/openrobots-pose/depend.mk
-  include ../../wip/jointStateMapper/depend.mk
 endef
 
 ##

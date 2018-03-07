@@ -32,7 +32,6 @@ SUBDIR+=	hyper-genom-plugin
 SUBDIR+=	hyper-viewer
 SUBDIR+=	jafar-qdisplay
 SUBDIR+=	jafar-rtslam
-SUBDIR+=	jointStateMapper
 SUBDIR+=	joystick-genom
 SUBDIR+=	jrl-walkgen-v3
 SUBDIR+=	jsbsim

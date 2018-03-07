@@ -1,4 +1,0 @@
-lib/libjointStateMapper.so
-lib/pkgconfig/jointStateMapper.pc
-include/jointStateMapper/jointMapParser.hpp
-include/jointStateMapper/jointStateMapper.hpp

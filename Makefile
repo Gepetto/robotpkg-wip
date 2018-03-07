@@ -51,7 +51,6 @@ SUBDIR+=	morse-pocolibs
 SUBDIR+=	morse-ros
 SUBDIR+=	move3d-assets
 SUBDIR+=	move3d-studio
-SUBDIR+=	mrpt
 SUBDIR+=	MPC
 SUBDIR+=	MPC_avoidObs-genom
 SUBDIR+=	MPC_controller-genom

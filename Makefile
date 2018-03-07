@@ -50,7 +50,6 @@ SUBDIR+=	morse-pocolibs
 SUBDIR+=	morse-ros
 SUBDIR+=	move3d-assets
 SUBDIR+=	move3d-studio
-SUBDIR+=	MPC
 SUBDIR+=	msgconnector
 SUBDIR+=	mumps
 SUBDIR+= 	octovis

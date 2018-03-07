@@ -30,7 +30,6 @@ SUBDIR+=	hrp2-machine
 SUBDIR+=	hyper
 SUBDIR+=	hyper-genom-plugin
 SUBDIR+=	hyper-viewer
-SUBDIR+=	jafar-qdisplay
 SUBDIR+=	jafar-rtslam
 SUBDIR+=	joystick-genom
 SUBDIR+=	jrl-walkgen-v3

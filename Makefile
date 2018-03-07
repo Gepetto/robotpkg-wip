@@ -52,7 +52,6 @@ SUBDIR+=	move3d-assets
 SUBDIR+=	move3d-studio
 SUBDIR+=	MPC
 SUBDIR+=	MPC_avoidObs-genom
-SUBDIR+=	MPC_controller-genom
 SUBDIR+=	MPC_planner-genom
 SUBDIR+=	MPC_DEMTreatment-genom
 SUBDIR+=	msgconnector

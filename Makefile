@@ -69,7 +69,6 @@ SUBDIR+=	py-jsbsim
 SUBDIR+=	py-laaswm
 SUBDIR+=	py-mavlink
 SUBDIR+=	py-morse
-SUBDIR+=	py-sot-application
 SUBDIR+=	py-sot-tools-v3
 SUBDIR+= 	qpOASES
 SUBDIR+=	roralink

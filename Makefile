@@ -44,7 +44,6 @@ SUBDIR+=	libmove3d
 SUBDIR+=	libmove3d-hri
 SUBDIR+=	libmove3d-planners
 SUBDIR+=	libnabo
-SUBDIR+=	libpointmatcher
 SUBDIR+=	lua-rfsm
 SUBDIR+= 	mavlink
 SUBDIR+=	metapod

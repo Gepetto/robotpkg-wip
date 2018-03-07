@@ -74,7 +74,6 @@ SUBDIR+=	osg-dae
 SUBDIR+=	pal-msgs
 SUBDIR+=	parametric-curves
 SUBDIR+=	pinocchio
-SUBDIR+=	pr2-pick-object
 SUBDIR+=	py-dynamic-graph-v3
 SUBDIR+=	py-hla
 SUBDIR+=	py-jsbsim

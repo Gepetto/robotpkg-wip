@@ -8,6 +8,7 @@ DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 
 CATEGORIES=	wip
 MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_metapkg_ros_control_sot/}
+MASTER_REPOSITORY= git ssh://git@redmine.laas.fr/laas/users/ostasse/pyrene-talos/metapkg_talos_roscontrol_sot.git
 CHECKOUT_VCS_OPTS+=		--recursive
 COMMENT=	ros_control package for the SoT and specifically for Talos
 LICENSE=	openhrp-grx-license

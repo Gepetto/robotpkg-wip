@@ -4,6 +4,7 @@
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH}+
 SOTH_DEPEND_MK:=	${SOTH_DEPEND_MK}+
+PKGREVISION=		1
 
 ifeq (+,$(DEPEND_DEPTH))
 DEPEND_PKG+=		soth
@@ -14,7 +15,7 @@ ifeq (+,$(SOTH_DEPEND_MK)) # -------------------------------------------
 PREFER.soth?=	robotpkg
 
 SYSTEM_SEARCH.soth=\
-	include/soth/config.h				\
+	include/soth/config.hh				\
 	lib/libsoth.so					\
 	'lib/pkgconfig/soth.pc:/Version/s/[^0-9.]//gp'
 

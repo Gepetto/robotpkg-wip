@@ -12,7 +12,6 @@ include/soth/Random.hpp
 include/soth/Stage.hpp
 include/soth/SubMatrix.hpp
 include/soth/api.hpp
-include/soth/config.h
 include/soth/config.hh
 include/soth/debug.hpp
 include/soth/deprecated.hh

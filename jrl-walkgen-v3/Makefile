@@ -5,6 +5,7 @@
 DISTNAME=	jrl-walkgen-v3-${VERSION}
 PKGNAME=	jrl-walkgen-v3-${VERSION}
 VERSION=	4.0.2
+PKGREVISION=	1
 
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS}
@@ -30,7 +31,7 @@ pre-configure:
 
 include ../../mk/sysdep/cmake.mk
 include ../../wip/pinocchio/depend.mk
-include ../../wip/qpOASES/depend.mk
+include ../../wip/eigen-quadprog/depend.mk
 include ../../wip/simple-humanoid-description/depend.mk
 include ../../interfaces/jrl-mal/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

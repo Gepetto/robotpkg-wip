@@ -4,10 +4,10 @@
 
 VERSION=		3.2.0
 DISTNAME=		qpOASES-${VERSION}
-PKGNAME=		qpOASES-${VERSION}
+PKGREVISION=	1
 
 CATEGORIES=		wip
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=qpOASES/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=humanoid-path-planner/qpOASES/releases/download/v${VERSION}/}
 
 HOMEPAGE=		https://projects.coin-or.org/qpOASES
 

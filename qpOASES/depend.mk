@@ -14,7 +14,7 @@ ifeq (+,$(QPOASES_DEPEND_MK)) # --------------------------------------
 PREFER.qpOASES?=	robotpkg
 
 SYSTEM_SEARCH.qpOASES=\
-	lib/libqpOASES.a
+	lib/libqpOASES.so
 
 DEPEND_USE+=		qpOASES
 

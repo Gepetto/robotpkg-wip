@@ -2,8 +2,7 @@
 # Created:			Olivier Stasse on Thu, 18 Apr 2013
 #
 
-VERSION=		3.0.0
-PKG_REVISION=		1.0
+VERSION=		3.0.1
 DISTNAME=		sot-pattern-generator-v3-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-pattern-generator-v3/}
 MASTER_REPOSITORY=\

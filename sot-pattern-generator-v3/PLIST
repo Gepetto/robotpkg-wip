@@ -2,7 +2,6 @@
 include/sot-pattern-generator/config.hh
 include/sot-pattern-generator/deprecated.hh
 include/sot-pattern-generator/warning.hh
-include/sot-pattern-generator/config.h
 lib/pkgconfig/sot-pattern-generator.pc
 lib/plugin/exception-pg.so.${PKGVERSION}
 lib/plugin/exception-pg.so

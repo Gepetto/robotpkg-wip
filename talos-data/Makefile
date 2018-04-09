@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/talos-data
 # Created:			Olivier Stasse, on Tue. 9th May, 2017
 #
-VERSION=	0.0.16
+VERSION=	0.0.17
 PKGNAME=	talos-data-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 

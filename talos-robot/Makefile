@@ -2,19 +2,14 @@
 # Created:			Olivier Stasse on Wed, 3 May 2017
 #
 
-VERSION=	0.0.14
+VERSION=	0.0.24
 PKGNAME=	talos-robot-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-PKGREVISION=	1
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_robot/}
+MASTER_SITES=	${MASTER_SITE_OPENROBOTS:=talos/talos_robot/}
 COMMENT=	talos_robot package including talos_description and talos_bringup
 LICENSE=	openhrp-grx-license
-
-RESTRICTED=     Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=  ${RESTRICTED}
-NO_PUBLIC_BIN=  ${RESTRICTED}
 
 ROS_METAPKG=	yes
 USE_BOOST_LIBS=	thread

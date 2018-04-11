@@ -2,7 +2,7 @@
 # Created:			Guilhem Saurel on Thu Nov 30, 2017
 #
 
-VERSION=		1.0.0
+VERSION=		1.0.1
 DISTNAME=		ur5-description-${VERSION}
 
 CATEGORIES=		wip

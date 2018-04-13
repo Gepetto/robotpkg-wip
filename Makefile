@@ -70,7 +70,6 @@ SUBDIR+=	py-laaswm
 SUBDIR+=	py-mavlink
 SUBDIR+=	py-morse
 SUBDIR+=	py-sot-tools-v3
-SUBDIR+= 	qpOASES
 SUBDIR+=	roralink
 SUBDIR+=	robotModelParser-libs
 SUBDIR+=	rqt-dynamic-graph

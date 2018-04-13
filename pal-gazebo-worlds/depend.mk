@@ -13,6 +13,9 @@ ifeq (+,$(PAL_GAZEBO_WORLDS_DEPEND_MK)) # ---------------------------------
 
 PREFER.pal-gazebo-worlds?=	robotpkg
 
+SYSTEM_SEARCH.pal-gazebo-worlds=\
+    'lib/pkgconfig/pal_gazebo_worlds.pc:/Version/s/[^0-9.]//gp'
+
 DEPEND_USE+=			pal-gazebo-worlds
 
 DEPEND_ABI.pal-gazebo-worlds?=\

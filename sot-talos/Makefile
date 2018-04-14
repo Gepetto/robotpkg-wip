@@ -1,13 +1,13 @@
 # robotpkg Makefile for:	wip/sot-talos
 # Created:			Olivier Stasse, on Tue. 9th May, 2017
 #
-DISTNAME=		sot-talos-0.0.3
-MASTER_SITES=		${MASTER_SITE_JRL:=talos/sot-talos/}
+DISTNAME=		sot-talos-0.0.4
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=talos/sot-talos/}
 MASTER_REPOSITORY=	https://redmine.laas.fr/laas/users/
 
 CATEGORIES=		wip
 COMMENT=		This packages provides a generic Stack Of Tasks library for the humanoid robot Pyrene.
-LICENSE=		gnu-lgpl-v3
+LICENSE=		2-clause-bsd
 MAINTAINER=		ostasse@laas.fr
 
 

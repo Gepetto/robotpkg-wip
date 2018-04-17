@@ -11,6 +11,7 @@ COMMENT=	Talos dev Software
 META_PACKAGE=	yes
 
 include ../sot-talos/depend.mk
+include ../talos-metapkg-ros-control-sot/depend.mk
 include ../talos-gazebo-ros-control/depend.mk
 include ../talos-simulation/depend.mk
 include ../../mk/robotpkg.mk

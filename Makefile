@@ -62,7 +62,6 @@ SUBDIR+=	orocos-yarp_transport
 SUBDIR+=	osg-dae
 SUBDIR+=	pal-msgs
 SUBDIR+=	parametric-curves
-SUBDIR+=	pinocchio
 SUBDIR+=	py-dynamic-graph-v3
 SUBDIR+=	py-hla
 SUBDIR+=	py-jsbsim

@@ -34,10 +34,10 @@ CMAKE_ARG_PATH=		..
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/eigen3/depend.mk
+include ../../math/pinocchio/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
-include ../../wip/pinocchio/depend.mk
 include ../../wip/tsid/depend.mk
 include ../../wip/parametric-curves/depend.mk
 include ../../wip/simple-humanoid-description/depend.mk

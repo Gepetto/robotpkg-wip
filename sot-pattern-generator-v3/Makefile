@@ -23,7 +23,7 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
-include ../../wip/pinocchio/depend.mk
+include ../../math/pinocchio/depend.mk
 include ../../wip/jrl-walkgen-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/sot-application-v3/depend.mk

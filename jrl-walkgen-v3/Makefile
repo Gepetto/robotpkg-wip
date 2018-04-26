@@ -30,7 +30,7 @@ pre-configure:
 	${RUN}${MKDIR} ${WRKSRC}/_build
 
 include ../../mk/sysdep/cmake.mk
-include ../../wip/pinocchio/depend.mk
+include ../../math/pinocchio/depend.mk
 include ../../wip/eigen-quadprog/depend.mk
 include ../../wip/simple-humanoid-description/depend.mk
 include ../../interfaces/jrl-mal/depend.mk

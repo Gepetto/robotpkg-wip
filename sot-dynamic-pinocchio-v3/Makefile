@@ -38,7 +38,7 @@ pre-configure:
 DEPEND_ABI.python+= python<3.0
 
 include ../../devel/tinyxml/depend.mk
-include ../../wip/pinocchio/depend.mk
+include ../../math/pinocchio/depend.mk
 include ../../wip/py-sot-tools-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

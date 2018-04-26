@@ -28,7 +28,7 @@ USE_BOOST_LIBS=		unit_test_framework
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/eigen3/depend.mk
-include ../../wip/pinocchio/depend.mk
+include ../../math/pinocchio/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

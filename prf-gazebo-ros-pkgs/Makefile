@@ -1,18 +1,21 @@
-# robotpkg Makefile for:	wip/talos-gazebo-ros-control
-# Created:			Olivier Stasse on Mer, 3 May 2017
+# robotpkg Makefile for:	wip/gazebo-ros-pkgs
+# Created:			Olivier Stasse on Mer, 28 April 2018
 #
 VERSION=	2.6.7
-PKGREVISION=	1
-PKGNAME=	talos-gazebo-ros-control-${VERSION}
-DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+PRFNAME=	gazebo-ros-pkgs
+PKGBASE=	prf-${PRFNAME}
+PKGNAME=	${PKGBASE}-${VERSION}
+DISTNAME=	${VERSION}
+ROSNAME=	$(subst -,_,${PRFNAME})
+WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_gazebo_ros_control/}
-LICENSE=	openhrp-grx-license
+HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics-forks/${ROSNAME}}
+MASTER_SITES=	${HOMEPAGE}/archive/
 
-RESTRICTED=     Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=  ${RESTRICTED}
-NO_PUBLIC_BIN=  ${RESTRICTED}
+COMMENT=	Wrappers, tools and additional API's for using ROS with Gazebo.
+LICENSE=	pal-license
+
 
 CMAKE_ARGS+=\
   -Dgazebo_INCLUDE_DIRS=$(filter include/%,${SYSTEM_SEARCH.gazebo})	\
@@ -20,7 +23,7 @@ CMAKE_ARGS+=\
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
-include ../../wip/talos-ros-control/depend.mk
+include ../../wip/prf-ros-control/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../devel/ros-pluginlib/depend.mk

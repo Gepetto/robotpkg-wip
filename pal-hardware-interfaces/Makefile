@@ -3,17 +3,17 @@
 #
 
 VERSION=	0.0.3
-PKGNAME=	talos-pal-hardware-interfaces-${VERSION}
-DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+PKGBASE=	pal-hardware-interfaces
+DISTNAME=	${VERSION}
+ROSNAME=	$(subst -,_,${PKGBASE})
+WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_JRL:=talos/$(subst -,_,${PKGBASE})/}
+HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Hardware interfaces developped by PAL-Robotics
-LICENSE=	openhrp-grx-license
+LICENSE=	pal-license
 
-RESTRICTED=     Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=  ${RESTRICTED}
-NO_PUBLIC_BIN=  ${RESTRICTED}
 
 USE_BOOST_LIBS=	thread
 
@@ -25,7 +25,7 @@ include ../../interfaces/ros-std-msgs/depend.mk
 include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../middleware/ros-comm/depend.mk
-include ../../wip/talos-ros-control/depend.mk
+include ../../wip/prf-ros-control/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

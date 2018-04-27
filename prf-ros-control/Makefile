@@ -1,19 +1,22 @@
-# robotpkg Makefile for:	wip/talos-ros-control
-# Created:			Olivier Stasse on Wed, 29 Mar 2017
+# robotpkg Makefile for:	wip/pdf-ros-control
+# Created:			Olivier Stasse on Wed, 27 Apr 2018
 #
 
-VERSION=	0.2.10
-PKGNAME=	talos-ros-control-${VERSION}
-DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+VERSION=	0.2.6
+PRFNAME=        ros-control
+PKGBASE=	prf-${PRFNAME}
+PKGNAME=	${PKGBASE}-${VERSION}
+DISTNAME=	${VERSION}
+ROSNAME=	$(subst -,_,${PRFNAME})
+WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_ros_control/}
-COMMENT=	ros_control package with torque sensors
-LICENSE=	openhrp-grx-license
+#MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_ros_control/}
+HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics-forks/${ROSNAME}}
+MASTER_SITES=	${HOMEPAGE}/archive/
 
-RESTRICTED=     Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=  ${RESTRICTED}
-NO_PUBLIC_BIN=  ${RESTRICTED}
+COMMENT=	ros_control package with torque sensors
+LICENSE=	pal-license
 
 ROS_METAPKG=	yes
 USE_BOOST_LIBS=	thread

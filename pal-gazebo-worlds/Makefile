@@ -12,6 +12,7 @@ CATEGORIES=	wip
 HOMEPAGE=		${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Simulation worlds for PAL robots
+LICENSE=	pal-license
 
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-roscpp-core/depend.mk

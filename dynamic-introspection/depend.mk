@@ -15,7 +15,7 @@ PREFER.dynamic-introspection?=	robotpkg
 
 SYSTEM_SEARCH.dynamic-introspection=\
     'lib/pkgconfig/dynamic_introspection.pc:/Version/s/[^0-9.]//gp' \
-    'share/$_/cmake/$_Config.cmake'
+    'share/dynamic_introspection/cmake/dynamic_introspectionConfig.cmake'
 
 DEPEND_USE+=			dynamic-introspection
 

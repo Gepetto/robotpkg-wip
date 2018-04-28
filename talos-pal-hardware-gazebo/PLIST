@@ -1,8 +1,0 @@
-@comment Thu May 4 09:24:47 CEST 2017
-include/talos_pal_hardware_gazebo/pal_hardware_gazebo.h
-lib/libtalos_pal_hardware_gazebo.so
-lib/pkgconfig/talos_pal_hardware_gazebo.pc
-share/talos_pal_hardware_gazebo/cmake/talos_pal_hardware_gazeboConfig-version.cmake
-share/talos_pal_hardware_gazebo/cmake/talos_pal_hardware_gazeboConfig.cmake
-share/talos_pal_hardware_gazebo/package.xml
-share/talos_pal_hardware_gazebo/talos_pal_hardware_gazebo_plugins.xml

@@ -1,22 +1,17 @@
-# robotpkg Makefile for:	wip/talos-pal-gazebo-plugins
+# robotpkg Makefile for:	wip/pal-gazebo-plugins
 # Created:			Olivier Stasse on Fri, 21 Apr 2017
 #
-VERSION=	1.1.6
-PKGBASE=	talos-pal-gazebo-plugins
-PKGNAME=	${PKGBASE}-${VERSION}
-DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-ROS_GITTAG=	${DISTNAME}
-WRKSRC=		${WRKDIR}/${ROS_GITTAG}
+VERSION=	1.1.7
+PKGBASE=	pal-gazebo-plugins
+DISTNAME=	${VERSION}
+ROSNAME=	$(subst -,_,${PKGBASE})
+WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_pal_gazebo_plugins/}
-LICENSE=	openhrp-grx-license
-
-RESTRICTED=     Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=  ${RESTRICTED}
-NO_PUBLIC_BIN=  ${RESTRICTED}
-
-CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
+HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+MASTER_SITES=	${HOMEPAGE}/archive/
+COMMENT=	Common Gazebo v1.9+ plugins used by the PAL Robotics robots
+LICENSE=	2-clause-bsd
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

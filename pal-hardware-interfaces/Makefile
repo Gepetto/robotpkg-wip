@@ -5,6 +5,7 @@
 VERSION=	0.0.3
 PKGBASE=	pal-hardware-interfaces
 DISTNAME=	${VERSION}
+PKGNAME=	${PKGBASE}-${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 

@@ -16,6 +16,7 @@ MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Wrappers, tools and additional API's for using ROS with Gazebo.
 LICENSE=	pal-license
 
+ROS_METAPKG=	yes
 
 CMAKE_ARGS+=\
   -Dgazebo_INCLUDE_DIRS=$(filter include/%,${SYSTEM_SEARCH.gazebo})	\
@@ -23,7 +24,6 @@ CMAKE_ARGS+=\
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
-include ../../wip/prf-ros-control/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../devel/ros-pluginlib/depend.mk
@@ -37,6 +37,7 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
+include ../../wip/prf-ros-control/depend.mk
 include ../../mk/sysdep/gazebo.mk
 include ../../mk/sysdep/libogre.mk
 include ../../mk/language/c++.mk

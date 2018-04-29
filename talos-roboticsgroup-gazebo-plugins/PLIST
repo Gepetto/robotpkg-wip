@@ -1,7 +1,0 @@
-@comment Fri Apr 28 18:32:34 CEST 2017
-lib/libtalos_roboticsgroup_gazebo_disable_link_plugin.so
-lib/libtalos_roboticsgroup_gazebo_mimic_joint_plugin.so
-lib/pkgconfig/talos_roboticsgroup_gazebo_plugins.pc
-share/talos_roboticsgroup_gazebo_plugins/cmake/talos_roboticsgroup_gazebo_pluginsConfig-version.cmake
-share/talos_roboticsgroup_gazebo_plugins/cmake/talos_roboticsgroup_gazebo_pluginsConfig.cmake
-share/talos_roboticsgroup_gazebo_plugins/package.xml

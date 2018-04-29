@@ -1,17 +1,20 @@
-# robotpkg Makefile for:	wip/talos-roboticsgroup-gazebo-plugins
+# robotpkg Makefile for:	wip/prf-roboticsgroup-gazebo-plugins
 # Created:			Olivier Stasse on Fri, 21 Apr 2017
 #
-VERSION=	0.0.4
-PKGNAME=	talos-roboticsgroup-gazebo-plugins-${VERSION}
-DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+VERSION=	0.1.0
+PRFNAME=	roboticsgroup-gazebo-plugins
+PKGBASE=	prf-${PRFNAME}
+DISTNAME=	${VERSION}
+PKGNAME=	${PKGBASE}-${VERSION}
+ROSNAME= 	$(subst -,_,${PRFNAME})
+WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_roboticsgroup_gazebo_plugins/}
-LICENSE=	openhrp-grx-license
-
-RESTRICTED=     Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=  ${RESTRICTED}
-NO_PUBLIC_BIN=  ${RESTRICTED}
+#MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_roboticsgroup_gazebo_plugins/}
+HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics-forks/${ROSNAME}}
+MASTER_SITES=	${HOMEPAGE}/archive/
+LICENSE=	pal-license
+COMMENT=	Provides the mimic joint functionality in Gazebo. 
 
 CMAKE_ARGS+=\
   -Dgazebo_INCLUDE_DIRS=$(filter include/%,${SYSTEM_SEARCH.gazebo})	\
@@ -31,9 +34,8 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
-include ../../simulation/gazebo-ros-pkgs/depend.mk
-include ../../wip/talos-gazebo-ros-control/depend.mk
-include ../../wip/talos-pal-hardware-interfaces/depend.mk
+include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+include ../../wip/pal-hardware-interfaces/depend.mk
 include ../../mk/sysdep/gazebo.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

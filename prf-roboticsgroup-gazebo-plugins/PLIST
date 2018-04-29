@@ -1,0 +1,7 @@
+@comment Fri Apr 28 18:32:34 CEST 2017
+lib/libroboticsgroup_gazebo_disable_link_plugin.so
+lib/libroboticsgroup_gazebo_mimic_joint_plugin.so
+lib/pkgconfig/roboticsgroup_gazebo_plugins.pc
+share/roboticsgroup_gazebo_plugins/cmake/roboticsgroup_gazebo_pluginsConfig-version.cmake
+share/roboticsgroup_gazebo_plugins/cmake/roboticsgroup_gazebo_pluginsConfig.cmake
+share/roboticsgroup_gazebo_plugins/package.xml

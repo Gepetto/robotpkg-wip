@@ -1,4 +1,4 @@
-# robotpkg Makefile for:	wip/gazebo-ros-pkgs
+# robotpkg Makefile for:	wip/prf-gazebo-ros-pkgs
 # Created:			Olivier Stasse on Mer, 28 April 2018
 #
 VERSION=	2.6.7
@@ -13,7 +13,7 @@ CATEGORIES=	wip
 HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics-forks/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 
-COMMENT=	Wrappers, tools and additional API's for using ROS with Gazebo.
+COMMENT=	Wrappers, tools and additional API for using ROS with Gazebo.
 LICENSE=	pal-license
 
 ROS_METAPKG=	yes

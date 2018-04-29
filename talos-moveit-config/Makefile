@@ -1,21 +1,20 @@
 # robotpkg Makefile for:	wip/talos-moveit-config
 # Created:			Olivier Stasse on Mer, 3 May 2017
 #
-VERSION=	0.2.3
+VERSION=	0.2.6
 PKGBASE=	talos-moveit-config
 PKGNAME=	${PKGBASE}-${VERSION}
-DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-
-ROS_GITTAG=	${DISTNAME}
-WRKSRC=		${WRKDIR}/${ROS_GITTAG}
+DISTNAME=	${VERSION}
+ROSNAME=	$(subst -,_,${PKGBASE})
+WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_moveit_config/}
-LICENSE=	openhrp-grx-license
 
-RESTRICTED=     Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=  ${RESTRICTED}
-NO_PUBLIC_BIN=  ${RESTRICTED}
+HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+MASTER_SITES=	${HOMEPAGE}/archive/
+
+COMMENT= 	Move it package config for Talos
+LICENSE=	2-clause-bsd
 
 CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
 

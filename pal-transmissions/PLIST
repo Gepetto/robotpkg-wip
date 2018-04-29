@@ -1,0 +1,11 @@
+@comment Thu May 4 09:58:13 CEST 2017
+include/pal_transmissions/half_differential_transmission.h
+include/pal_transmissions/half_differential_transmission_loader.h
+include/pal_transmissions/head_transmission.h
+include/pal_transmissions/head_transmission_loader.h
+lib/libpal_transmissions_loader_plugins.so
+lib/pkgconfig/pal_transmissions.pc
+share/pal_transmissions/cmake/pal_transmissionsConfig-version.cmake
+share/pal_transmissions/cmake/pal_transmissionsConfig.cmake
+share/pal_transmissions/package.xml
+share/pal_transmissions/ros_control_plugins.xml

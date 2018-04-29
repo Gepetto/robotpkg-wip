@@ -1,21 +1,25 @@
-# robotpkg Makefile for:	wip/talos-pal-transmissions
+# robotpkg Makefile for:	wip/pal-transmissions
 # Created:			Olivier Stasse on Tues, 18 April 2017
 #
 
-VERSION=	0.2.3
-PKGNAME=	talos-pal-transmissions-${VERSION}
-DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+VERSION=	0.2.2
+PKGBASE=	pal-transmissions
+PKGNAME=	${PKGBASE}-${VERSION}
+DISTNAME=	${VERSION}
+ROSNAME=	$(subst -,_,${PKGBASE})
+
+WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_JRL:=talos/$(subst -,_,${PKGBASE})/}
+# Source file store in robotpkg website
+#MASTER_SITES=	${MASTER_SITE_JRL:=talos/$(subst -,_,${PKGBASE})/}
+
+HOMEPAGE = 	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+MASTER_SITES=	${HOMEPAGE}/archive/
+
 COMMENT=	Hardware transmissions developped by PAL-Robotics
-LICENSE=	openhrp-grx-license
+LICENSE=	2-clause-bsd
 
-RESTRICTED=     Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=  ${RESTRICTED}
-NO_PUBLIC_BIN=  ${RESTRICTED}
-
-CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
 
 USE_BOOST_LIBS=	thread
 
@@ -27,7 +31,7 @@ include ../../interfaces/ros-std-msgs/depend.mk
 include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../middleware/ros-comm/depend.mk
-include ../../wip/talos-ros-control/depend.mk
+include ../../wip/prf-ros-control/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

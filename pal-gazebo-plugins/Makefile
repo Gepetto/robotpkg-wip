@@ -3,6 +3,7 @@
 #
 VERSION=	1.1.7
 PKGBASE=	pal-gazebo-plugins
+PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}

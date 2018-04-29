@@ -1,18 +1,20 @@
 # robotpkg Makefile for:	wip/talos-simulation
 # Created:			Olivier Stasse on Mer, 3 May 2017
 #
-VERSION=	0.0.14
-PKGNAME=	talos-simulation-${VERSION}
-DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-PKGREVISION=	2
+VERSION=	0.1.0
+PKGBASE=	talos-simulation
+PKGNAME=	${PKGBASE}-${VERSION}
+DISTNAME=	${VERSION}
+ROSNAME=	$(subst -,_,${PKGBASE})
+WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_simulation/}
-LICENSE=	openhrp-grx-license
+#MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_simulation/}
+HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+MASTER_SITES=	${HOMEPAGE}/archive/
 
-RESTRICTED=     Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=  ${RESTRICTED}
-NO_PUBLIC_BIN=  ${RESTRICTED}
+LICENSE=	pal-license
+COMMENT=	Talos simulation components.
 
 ROS_METAPKG=	yes
 
@@ -30,11 +32,11 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
-include ../../wip/talos-pal-hardware-gazebo/depend.mk
+include ../../wip/pal-hardware-gazebo/depend.mk
 include ../../wip/talos-robot/depend.mk
 include ../../wip/talos-moveit-config/depend.mk
-include ../../wip/talos-roboticsgroup-gazebo-plugins/depend.mk
-include ../../wip/talos-pal-gazebo-plugins/depend.mk
+include ../../wip/prf-roboticsgroup-gazebo-plugins/depend.mk
+include ../../wip/pal-gazebo-plugins/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

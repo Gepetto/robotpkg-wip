@@ -1,18 +1,21 @@
-# robotpkg Makefile for:	wip/talos-ros-controllers
+# robotpkg Makefile for:	wip/prf-ros-controllers
 # Created:			Olivier Stasse on Wed, 29 Mar 2017
 #
-VERSION=	0.2.11
-PKGNAME=	talos-ros-controllers-${VERSION}
-DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-
+VERSION=	0.3.5
+PRFNAME=	ros-controllers
+PKGBASE=	prf-${PRFNAME}
+PKGNAME=	${PKGBASE}-${VERSION}
+DISTNAME=	${VERSION}
+ROSNAME=	$(subst -,_,${PRFNAME})
+WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_ros_controllers/}
-LICENSE=	openhrp-grx-license
+#MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_ros_controllers/}
+HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics-forks/${ROSNAME}}
+MASTER_SITES=	${HOMEPAGE}/archive/
 
-RESTRICTED=     Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=  ${RESTRICTED}
-NO_PUBLIC_BIN=  ${RESTRICTED}
+COMMENT=	Library of ros controllers
+LICENSE=	2-clause-bsd
 
 ROS_METAPKG=	yes
 
@@ -32,8 +35,8 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
-include ../../wip/talos-ros-control/depend.mk
-include ../../wip/talos-pal-hardware-interfaces/depend.mk
+include ../../wip/prf-ros-control/depend.mk
+include ../../wip/pal-hardware-interfaces/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

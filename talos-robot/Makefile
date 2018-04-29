@@ -2,14 +2,20 @@
 # Created:			Olivier Stasse on Wed, 3 May 2017
 #
 
-VERSION=	0.0.24
-PKGNAME=	talos-robot-${VERSION}
-DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+VERSION=	1.0.2
+PKGBASE=	talos-robot
+PKGNAME=	${PKGBASE}-${VERSION}
+DISTNAME= 	${VERSION}
+ROSNAME=	$(subst -,_,${PKGBASE})
+WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_OPENROBOTS:=talos/talos_robot/}
+#MASTER_SITES=	${MASTER_SITE_OPENROBOTS:=talos/talos_robot/}
+HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+MASTER_SITES=	${HOMEPAGE}/archive/
+
 COMMENT=	talos_robot package including talos_description and talos_bringup
-LICENSE=	openhrp-grx-license
+LICENSE=	pal-license
 
 ROS_METAPKG=	yes
 USE_BOOST_LIBS=	thread

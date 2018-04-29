@@ -1,7 +1,9 @@
-@comment Wed Apr 11 16:03:53 CEST 2018
+@comment Sun Apr 29 17:05:59 CEST 2018
 lib/pkgconfig/talos_bringup.pc
 lib/pkgconfig/talos_controller_configuration.pc
 lib/pkgconfig/talos_description.pc
+lib/pkgconfig/talos_description_calibration.pc
+lib/pkgconfig/talos_description_inertial.pc
 share/talos_bringup/cmake/talos_bringupConfig-version.cmake
 share/talos_bringup/cmake/talos_bringupConfig.cmake
 share/talos_bringup/config/approach_planner_full.yaml
@@ -149,23 +151,31 @@ share/talos_description/robots/talos_full_no_grippers.urdf.xacro
 share/talos_description/robots/talos_full_v1.urdf.xacro
 share/talos_description/robots/talos_full_v2.urdf.xacro
 share/talos_description/robots/talos_lower_body.urdf.xacro
+share/talos_description/robots/upload.launch
 share/talos_description/robots/upload_talos.launch
 share/talos_description/urdf/arm/arm.transmission.xacro
 share/talos_description/urdf/arm/arm_v1.urdf.xacro
 share/talos_description/urdf/arm/arm_v2.urdf.xacro
+share/talos_description/urdf/arm/left_arm.transmissions.urdf.xacro
+share/talos_description/urdf/arm/left_wrist.transmissions.urdf.xacro
+share/talos_description/urdf/arm/right_arm.transmissions.urdf.xacro
+share/talos_description/urdf/arm/right_wrist.transmissions.urdf.xacro
 share/talos_description/urdf/arm/wrist.transmission.xacro
 share/talos_description/urdf/arm/wrist.urdf.xacro
+share/talos_description/urdf/crane/crane.urdf.xacro
 share/talos_description/urdf/deg_to_rad.xacro
 share/talos_description/urdf/gripper/gripper.gazebo.xacro
 share/talos_description/urdf/gripper/gripper.transmission.xacro
 share/talos_description/urdf/gripper/gripper.urdf.xacro
 share/talos_description/urdf/head/head.transmission.xacro
 share/talos_description/urdf/head/head.urdf.xacro
+share/talos_description/urdf/leg/foot_collision_default.urdf.xacro
+share/talos_description/urdf/leg/foot_collision_tallbox.urdf.xacro
+share/talos_description/urdf/leg/foot_collision_thinbox.urdf.xacro
 share/talos_description/urdf/leg/leg.transmission.xacro
 share/talos_description/urdf/leg/leg.urdf.xacro
 share/talos_description/urdf/materials.urdf.xacro
 share/talos_description/urdf/sensors/calibration.xacro
-share/talos_description/urdf/sensors/ftsensor.gazebo.xacro
 share/talos_description/urdf/sensors/ftsensor.urdf.xacro
 share/talos_description/urdf/sensors/imu.urdf.xacro
 share/talos_description/urdf/sensors/openni.gazebo.xacro
@@ -175,4 +185,13 @@ share/talos_description/urdf/sensors/xtion_pro_live.gazebo.xacro
 share/talos_description/urdf/sensors/xtion_pro_live.urdf.xacro
 share/talos_description/urdf/torso/torso.transmission.xacro
 share/talos_description/urdf/torso/torso.urdf.xacro
+share/talos_description_calibration/cmake/talos_description_calibrationConfig-version.cmake
+share/talos_description_calibration/cmake/talos_description_calibrationConfig.cmake
+share/talos_description_calibration/package.xml
+share/talos_description_calibration/urdf/calibration/calibration_constants.urdf.xacro
+share/talos_description_calibration/urdf/deg_to_rad.xacro
+share/talos_description_inertial/cmake/talos_description_inertialConfig-version.cmake
+share/talos_description_inertial/cmake/talos_description_inertialConfig.cmake
+share/talos_description_inertial/package.xml
+share/talos_description_inertial/urdf/inertial.xacro
 share/talos_robot/package.xml

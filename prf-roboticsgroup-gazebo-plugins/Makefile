@@ -8,6 +8,7 @@ DISTNAME=	${VERSION}
 PKGNAME=	${PKGBASE}-${VERSION}
 ROSNAME= 	$(subst -,_,${PRFNAME})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
+DIST_SUBDIR=	${PKGBASE}
 
 CATEGORIES=	wip
 #MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_roboticsgroup_gazebo_plugins/}

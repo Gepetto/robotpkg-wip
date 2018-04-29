@@ -11,11 +11,8 @@ MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_metapkg_ros_control_sot/}
 MASTER_REPOSITORY= git ssh://git@redmine.laas.fr/laas/users/ostasse/pyrene-talos/metapkg_talos_roscontrol_sot.git
 CHECKOUT_VCS_OPTS+=		--recursive
 COMMENT=	ros_control package for the SoT and specifically for Talos
-LICENSE=	openhrp-grx-license
+LICENSE=	2-clause-bsd
 
-RESTRICTED=     Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=  ${RESTRICTED}
-NO_PUBLIC_BIN=  ${RESTRICTED}
 
 ROS_METAPKG=	yes
 
@@ -34,8 +31,8 @@ include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
 include ../../wip/dynamic-graph-bridge-v3/depend.mk
-include ../../wip/talos-ros-controllers/depend.mk
-include ../../wip/talos-pal-hardware-interfaces/depend.mk
+include ../../wip/prf-ros-controllers/depend.mk
+include ../../wip/pal-hardware-interfaces/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

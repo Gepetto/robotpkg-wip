@@ -1,0 +1,7 @@
+@comment Tue May 1 19:19:51 CEST 2018
+lib/head_action/head_action
+lib/pkgconfig/head_action.pc
+share/head_action/cmake/head_actionConfig-version.cmake
+share/head_action/cmake/head_actionConfig.cmake
+share/head_action/launch/head_action.launch
+share/head_action/package.xml

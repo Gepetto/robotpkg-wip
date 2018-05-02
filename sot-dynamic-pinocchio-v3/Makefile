@@ -5,7 +5,7 @@
 VERSION=		3.1.7
 PKGNAME=		sot-dynamic-pinocchio-v3-${VERSION}
 DISTNAME=		sot-dynamic-pinocchio-v3-${VERSION}
-PKGREVISION=	1
+PKGREVISION=		2
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-dynamic-pinocchio-v3/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/sot-dynamic-pinocchio/
@@ -40,6 +40,7 @@ DEPEND_ABI.python+= python<3.0
 
 include ../../devel/tinyxml/depend.mk
 include ../../math/pinocchio/depend.mk
+include ../../math/py-pinocchio/depend.mk
 include ../../wip/py-sot-tools-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

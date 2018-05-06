@@ -1,0 +1,11 @@
+include/roscontrol/sot/config.hh
+include/roscontrol/sot/deprecated.hh
+include/roscontrol/sot/warning.hh
+lib/librcsot_controller.so
+lib/pkgconfig/roscontrol_sot.pc
+share/roscontrol_sot/cmake/roscontrol_sotConfig-version.cmake
+share/roscontrol_sot/cmake/roscontrol_sotConfig.cmake
+share/roscontrol_sot/config/roscontrol_sot_controller_plugins.xml
+share/roscontrol_sot/config/rosdoc.yaml
+share/roscontrol_sot/launch/sot_controller_gazebo.launch
+share/roscontrol_sot/package.xml

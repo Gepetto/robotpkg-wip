@@ -2,14 +2,19 @@
 # Created:			Olivier Stasse on Fri, 5 May 2017
 #
 
-VERSION=	0.0.7
-PKGNAME=	talos-metapkg-ros-control-sot-${VERSION}
-DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+VERSION=	0.0.8rc
+PKGBASE=	talos-metapkg-ros-control-sot
+PKGNAME=	${PKGBASE}-${VERSION}
+ROSNAME=		$(subst -,_,${PKGBASE})
+DISTNAME=		${ROSNAME}-${VERSION}
+WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
+DIST_SUBDIR=		${PKGBASE}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_metapkg_ros_control_sot/}
-MASTER_REPOSITORY= git ssh://git@redmine.laas.fr/laas/users/ostasse/pyrene-talos/metapkg_talos_roscontrol_sot.git
-CHECKOUT_VCS_OPTS+=		--recursive
+HOMEPAGE=		${MASTER_SITE_GITHUB:=stack-of-tasks/${ROSNAME}}
+MASTER_SITES=		${HOMEPAGE}/releases/download/v${VERSION}/
+MASTER_REPOSITORY=	${HOMEPAGE}
+
 COMMENT=	ros_control package for the SoT and specifically for Talos
 LICENSE=	2-clause-bsd
 

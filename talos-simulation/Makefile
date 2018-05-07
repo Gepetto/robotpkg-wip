@@ -37,6 +37,7 @@ include ../../wip/pal-hardware-gazebo/depend.mk
 include ../../wip/talos-robot/depend.mk
 include ../../wip/talos-moveit-config/depend.mk
 include ../../wip/prf-roboticsgroup-gazebo-plugins/depend.mk
+include ../../wip/prf-ros-controllers/depend.mk
 include ../../wip/pal-gazebo-plugins/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

@@ -2,15 +2,15 @@
 # Created:			Olivier Stasse on Fri, 5 May 2017
 #
 
-VERSION=	0.0.8rc
-PKGBASE=	talos-metapkg-ros-control-sot
-PKGNAME=	${PKGBASE}-${VERSION}
+VERSION=		0.0.8rc1
+PKGBASE=		talos-metapkg-ros-control-sot
+PKGNAME=		${PKGBASE}-${VERSION}
 ROSNAME=		$(subst -,_,${PKGBASE})
 DISTNAME=		${ROSNAME}-${VERSION}
 WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=		${PKGBASE}
 
-CATEGORIES=	wip
+CATEGORIES=		wip
 HOMEPAGE=		${MASTER_SITE_GITHUB:=stack-of-tasks/${ROSNAME}}
 MASTER_SITES=		${HOMEPAGE}/releases/download/v${VERSION}/
 MASTER_REPOSITORY=	${HOMEPAGE}

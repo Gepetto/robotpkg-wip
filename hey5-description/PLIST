@@ -1,0 +1,23 @@
+@comment Tue May 8 22:35:55 CEST 2018
+lib/pkgconfig/hey5_description.pc
+share/hey5_description/cmake/hey5_descriptionConfig.cmake
+share/hey5_description/cmake/hey5_descriptionConfig-version.cmake
+share/hey5_description/package.xml
+share/hey5_description/config/two_hands.rviz
+share/hey5_description/gazebo/gazebo.urdf.xacro
+share/hey5_description/launch/hey5_kinematics_test.launch
+share/hey5_description/meshes/finger_abd_collision.stl
+share/hey5_description/meshes/palm.stl
+share/hey5_description/meshes/thumb_abd_collision.stl
+share/hey5_description/meshes/finger_flex_collision.stl
+share/hey5_description/meshes/finger_flex_tip_collision.stl
+share/hey5_description/meshes/palm_collision.stl
+share/hey5_description/robots/hey5_test.urdf.xacro
+share/hey5_description/urdf/palm.urdf.xacro
+share/hey5_description/urdf/hey5_hand.urdf.xacro
+share/hey5_description/urdf/transmissions.urdf.xacro
+share/hey5_description/urdf/actuators.urdf.xacro
+share/hey5_description/urdf/fingers.urdf.xacro
+share/hey5_description/urdf/materials.urdf.xacro
+share/hey5_description/urdf/deg_to_rad.urdf.xacro
+share/hey5_description/LICENSE.txt

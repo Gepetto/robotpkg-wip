@@ -1,0 +1,11 @@
+@comment Tue May 8 23:41:35 CEST 2018
+lib/pal_navigation_sm/map_setup.py
+lib/pal_navigation_sm/navigation.sh
+lib/pal_navigation_sm/pal_navigation_main_sm.py
+lib/pkgconfig/pal_navigation_sm.pc
+share/pal_navigation_sm/cmake/pal_navigation_smConfig-version.cmake
+share/pal_navigation_sm/cmake/pal_navigation_smConfig.cmake
+share/pal_navigation_sm/config/pose.yaml
+share/pal_navigation_sm/launch/map.launch
+share/pal_navigation_sm/launch/pal_navigation_sm.launch
+share/pal_navigation_sm/package.xml

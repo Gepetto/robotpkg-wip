@@ -1,0 +1,9 @@
+@comment Wed May 9 17:42:25 CEST 2018
+lib/ddynamic_reconfigure_python/example.py
+lib/pkgconfig/ddynamic_reconfigure_python.pc
+${PYTHON_SITELIB}/ddynamic_reconfigure_python-${PKGVERSION}-py${PYTHON_VERSION}.egg-info
+${PYTHON_SITELIB}/ddynamic_reconfigure_python/__init__.py
+${PYTHON_SITELIB}/ddynamic_reconfigure_python/ddynamic_reconfigure.py
+share/ddynamic_reconfigure_python/cmake/ddynamic_reconfigure_pythonConfig-version.cmake
+share/ddynamic_reconfigure_python/cmake/ddynamic_reconfigure_pythonConfig.cmake
+share/ddynamic_reconfigure_python/package.xml

@@ -6,19 +6,19 @@ DEPEND_DEPTH:=			${DEPEND_DEPTH}+
 ARUCO_ROS_DEPEND_MK:=	${ARUCO_ROS_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
-DEPEND_PKG+=			prf-aruco-ros
+DEPEND_PKG+=			aruco-ros
 endif
 
 ifeq (+,$(ARUCO_ROS_DEPEND_MK)) # ----------------------------------
 
 PREFER.aruco-ros?=	robotpkg
 
-DEPEND_USE+=			prf-aruco-ros
+DEPEND_USE+=			aruco-ros
 
-DEPEND_ABI.prf-aruco-ros?=	prf-aruco-ros>=0.2.8
-DEPEND_DIR.prf-aruco-ros?=	../../wip/prf-aruco-ros
+DEPEND_ABI.aruco-ros?=	aruco-ros>=0.2.8
+DEPEND_DIR.aruco-ros?=	../../wip/aruco-ros
 
-SYSTEM_SEARCH.prf-aruco-ros=\
+SYSTEM_SEARCH.aruco-ros=\
   'include/aruco/aruco.h'		\
   'lib/libaruco_ros_utils.so'		\
   'share/aruco/package.xml:/<version>/s/[^0-9.]//gp'	\

@@ -1,0 +1,14 @@
+${PYTHON_SITELIB}/pal_python-0.9.14-py${PYTHON_VERSION}.egg-info
+${PYTHON_SITELIB}/pal_python/__init__.py
+${PYTHON_SITELIB}/pal_python/pal_common.py
+${PYTHON_SITELIB}/pal_python/pal_diagnostics.py
+${PYTHON_SITELIB}/pal_python/pal_environ.py
+${PYTHON_SITELIB}/pal_python/pal_hci.py
+${PYTHON_SITELIB}/pal_python/pal_launch.py
+${PYTHON_SITELIB}/pal_python/pal_path.py
+${PYTHON_SITELIB}/pal_python/pal_publishers.py
+${PYTHON_SITELIB}/pal_python/pal_rpc.py
+${PYTHON_SITELIB}/pal_python/pal_test_utils.py
+${PYTHON_SITELIB}/pal_python/pal_thread.py
+${PYTHON_SITELIB}/pal_python/ros_image_utils.py
+${PYTHON_SITELIB}/pal_python/shell_cmd.py

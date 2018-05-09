@@ -1,0 +1,6 @@
+@comment Wed May 9 11:46:14 CEST 2018
+lib/pkgconfig/rviz_plugin_covariance.pc
+share/rviz_plugin_covariance/cmake/rviz_plugin_covarianceConfig-version.cmake
+share/rviz_plugin_covariance/cmake/rviz_plugin_covarianceConfig.cmake
+share/rviz_plugin_covariance/package.xml
+share/rviz_plugin_covariance/plugin_description.xml

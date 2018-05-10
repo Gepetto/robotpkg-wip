@@ -42,8 +42,10 @@ include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
+include ../../mk/robotpkg.prefs.mk
+
 ifeq (Ubuntu,${OPSYS})
-  ifeq(,$(filter 16.04,${OS_VERSION}))
+  ifneq (,$(filter 16.04,${OS_VERSION}))
     include ../../wip/prf-ros-controllers/depend.mk
   endif
 endif

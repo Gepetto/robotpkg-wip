@@ -15,7 +15,7 @@ HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics-forks/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 
 COMMENT=	Wrappers, tools and additional API for using ROS with Gazebo.
-LICENSE=	pal-license
+LICENSE=	2-clause-bsd
 
 ROS_METAPKG=	yes
 

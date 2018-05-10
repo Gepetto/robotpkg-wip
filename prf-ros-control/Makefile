@@ -17,7 +17,7 @@ HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics-forks/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 
 COMMENT=	ros_control package with torque sensors
-LICENSE=	pal-license
+LICENSE=	2-clause-bsd
 
 ROS_METAPKG=	yes
 USE_BOOST_LIBS=	thread

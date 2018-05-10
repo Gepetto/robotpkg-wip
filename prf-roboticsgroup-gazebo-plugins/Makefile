@@ -14,7 +14,7 @@ CATEGORIES=	wip
 #MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_roboticsgroup_gazebo_plugins/}
 HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics-forks/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
-LICENSE=	pal-license
+LICENSE=	2-clause-bsd
 COMMENT=	Provides the mimic joint functionality in Gazebo. 
 
 CMAKE_ARGS+=\

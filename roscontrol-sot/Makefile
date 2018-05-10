@@ -42,7 +42,11 @@ include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
-include ../../wip/prf-ros-controllers/depend.mk
+ifeq (Ubuntu,${OPSYS})
+  ifeq(,$(filter 16.04,${OS_VERSION}))
+    include ../../wip/prf-ros-controllers/depend.mk
+  endif
+endif
 include ../../devel/ros-roscpp-core/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

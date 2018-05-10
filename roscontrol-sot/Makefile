@@ -13,7 +13,8 @@ CATEGORIES=		wip
 #MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=roscontrol_sot/}
 HOMEPAGE=		${MASTER_SITE_GITHUB:=stack-of-tasks/${ROSNAME}}
 MASTER_SITES=		${HOMEPAGE}/releases/download/v${VERSION}/
-MASTER_REPOSITORY=	${HOMEPAGE}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/${ROSNAME}
+CHECKOUT_VCS_OPTS=	--recursive
 
 COMMENT=		This ROS package binds together the ROS control framework with the dynamic-graph real-time control architecture.
 LICENSE=		2-clause-bsd

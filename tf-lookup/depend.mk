@@ -18,7 +18,7 @@ DEPEND_USE+=			tf-lookup
 DEPEND_ABI.tf-lookup?=	tf-lookup>=0.0.1
 DEPEND_DIR.tf-lookup?=	../../wip/tf-lookup
 
-SYSTEM_SEARCH.pmb2-robot=\
+SYSTEM_SEARCH.tf-lookup=\
   'share/tf_lookup/package.xml:/<version>/s/[^0-9.]//gp'	\
   'lib/pkgconfig/tf_lookup.pc:/Version/s/[^0-9.]//gp'  \
   'share/tf_lookup/cmake/tf_lookupConfig.cmake'

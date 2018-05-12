@@ -20,8 +20,10 @@ DEPEND_DIR.pmb2-robot?=	../../wip/pmb2-robot
 
 SYSTEM_SEARCH.pmb2-robot=\
   'share/pmb2_robot/package.xml:/<version>/s/[^0-9.]//gp'	\
-  'lib/pkgconfig/pmb2_robot.pc:/Version/s/[^0-9.]//gp'  \
-  'share/pmb2_robot/cmake/pmb2_robotConfig.cmake'
+  'lib/pkgconfig/pmb2_description.pc:/Version/s/[^0-9.]//gp'  \
+  'lib/pkgconfig/pmb2_bringup.pc:/Version/s/[^0-9.]//gp'  \
+  'share/pmb2_description/cmake/pmb2_descriptionConfig.cmake'   \
+  'share/pmb2_bringup/cmake/pmb2_bringupConfig.cmake'
 
 endif # PMB2_ROBOT_DEPEND_MK ----------------------------------------
 

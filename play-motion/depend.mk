@@ -21,10 +21,10 @@ DEPEND_DIR.play-motion?=\
 	../../wip/play-motion
 
 SYSTEM_SEARCH.play-motion=\
-  'include/pal_hardware_interfaces/actuator_temperature_interface.h'	\
-  'share/pal_hardware_interfaces/cmake/pal_hardware_interfacesConfig.cmake'	\
-  'share/pal_hardware_interfaces/package.xml:/<version>/s/[^0-9.]//gp'	\
-  'lib/pkgconfig/pal_hardware_interfaces.pc:/Version/s/[^0-9.]//gp'
+  'include/play_motion/play_motion.h'	\
+  'share/play_motion/cmake/play_motionConfig.cmake'	\
+  'share/play_motion/package.xml:/<version>/s/[^0-9.]//gp'	\
+  'lib/pkgconfig/play_motion.pc:/Version/s/[^0-9.]//gp'
 
 endif # PLAY_MOTION_DEPEND_MK ---------------------------------------
 

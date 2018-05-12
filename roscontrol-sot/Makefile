@@ -47,6 +47,7 @@ include ../../mk/robotpkg.prefs.mk
 ifeq (Ubuntu,${OPSYS})
   ifneq (,$(filter 16.04,${OS_VERSION}))
     include ../../wip/prf-ros-controllers/depend.mk
+    include ../../wip/pal-hardware-interfaces/depend.mk
   endif
 endif
 include ../../devel/ros-roscpp-core/depend.mk

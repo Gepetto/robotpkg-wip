@@ -35,6 +35,8 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
+include ../../wip/head-action/depend.mk
+include ../../wip/tf-lookup/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

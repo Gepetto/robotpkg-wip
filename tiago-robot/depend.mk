@@ -15,13 +15,16 @@ PREFER.tiago-robot?=	robotpkg
 
 DEPEND_USE+=			tiago-robot
 
-DEPEND_ABI.tiago-robot?=	tiago-robot>=0.1.7
+DEPEND_ABI.tiago-robot?=	tiago-robot>=0.0.35
 DEPEND_DIR.tiago-robot?=	../../wip/tiago-robot
 
 SYSTEM_SEARCH.tiago-robot=\
-  'share/tiago_robot/package.xml:/<version>/s/[^0-9.]//gp'	\
-  'lib/pkgconfig/tiago_robot.pc:/Version/s/[^0-9.]//gp'  \
-  'share/tiago_robot/cmake/tiago_robotConfig.cmake'
+  'share/tiago_description/package.xml:/<version>/s/[^0-9.]//gp'	\
+  'share/tiago_bringup/package.xml:/<version>/s/[^0-9.]//gp'	\
+  'lib/pkgconfig/tiago_description.pc:/Version/s/[^0-9.]//gp'  \
+  'lib/pkgconfig/tiago_bringup.pc:/Version/s/[^0-9.]//gp'  \
+  'share/tiago_description/cmake/tiago_descriptionConfig.cmake'  \
+  'share/tiago_bringup/cmake/tiago_bringupConfig.cmake'
 
 endif # TIAGO_ROBOT_DEPEND_MK ----------------------------------------
 

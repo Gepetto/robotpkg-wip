@@ -11,10 +11,12 @@ CATEGORIES=		robots
 COMMENT=		This packages provides a generic Stack Of Tasks library for the humanoid robot Romeo.
 LICENSE=		gnu-lgpl-v3
 MAINTAINER=		gepetto@laas.fr
+PKG_REVISION=		1
 
 DYNAMIC_PLIST_DIRS+=	share/doc/sot-application
 
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
+include ../../wip/sot-dyninv-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

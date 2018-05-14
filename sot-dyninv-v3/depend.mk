@@ -9,19 +9,19 @@ ifeq (+,$(DEPEND_DEPTH))
 DEPEND_PKG+=		sot-dyninv-v3
 endif
 
-ifeq (+,$(SOT_DYNINV_v3_DEPEND_MK)) # -------------------------------------------
+ifeq (+,$(SOT_DYNINV_V3_DEPEND_MK)) # -------------------------------------------
 
 PREFER.sot-dyninv-v3?=	robotpkg
 
 SYSTEM_SEARCH.sot-dyninv-v3=\
-	include/sot-dyninv/config.hh				\
+	'include/sot-dyninv/config.hh'				\
 	'lib/pkgconfig/sot-dyninv.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		sot-dyninv-v3
 
-DEPEND_ABI.sot-dyninv?=	sot-dyninv-v3>=3.0.0
-DEPEND_DIR.sot-dyninv?=	../../wip/sot-dyninv-v3
+DEPEND_ABI.sot-dyninv-v3?=	sot-dyninv-v3>=3.0.0
+DEPEND_DIR.sot-dyninv-v3?=	../../wip/sot-dyninv-v3
 
-endif # SOT_DYNINV_v3_DEPEND_MK -------------------------------------------------
+endif # SOT_DYNINV_V3_DEPEND_MK -------------------------------------------------
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}

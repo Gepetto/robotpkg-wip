@@ -19,9 +19,9 @@ DEPEND_ABI.talos-metapkg-ros-control-sot?=	talos-metapkg-ros-control-sot>=0.0.1
 DEPEND_DIR.talos-metapkg-ros-control-sot?=	../../wip/talos-metapkg-ros-control-sot
 
 SYSTEM_SEARCH.talos-metapkg-ros-control-sot=\
-  'lib/libtalos_rcsot_controller.so'				\
-  'share/talos_roscontrol_sot/package.xml:/<version>/s/[^0-9.]//gp'	\
-  'lib/pkgconfig/talos_roscontrol_sot.pc:/Version/s/[^0-9.]//gp'
+  'share/roscontrol_sot_talos/package.xml:/<version>/s/[^0-9.]//gp'	\
+  'share/roscontrol_sot_talos/cmake/roscontrol_sot_talosConfig.cmake'   \
+  'lib/pkgconfig/roscontrol_sot_talos.pc:/Version/s/[^0-9.]//gp' 	
 
 endif # TALOS_ROS_CONTROL_SOT_DEPEND_MK ----------------------------------------
 

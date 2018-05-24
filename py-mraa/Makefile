@@ -15,9 +15,10 @@ MAINTAINER=	gepetto-soft@laas.fr
 COMMENT=	low speed IO communication in C with bindings in python
 LICENSE=	mit
 CATEGORIES=	hardware
+HOMEPAGE=	http://mraa.io
 
 include ../../pkgtools/pkg-config/depend.mk
-#include ../../devel/swig/depend.mk
+include ../../devel/swig/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk

@@ -15,11 +15,9 @@ DEPEND_USE+=	libjson-c
 DEPEND_ABI.libjson-c?=libjson-c>=0.10
 
 SYSTEM_SEARCH.libjson-c=	\
-	'bin/git:s/[^0-9.]//gp:% --version'
-
-ifdef PREFIX.git
-  export GIT=	${PREFIX.git}/bin/git
-endif
+	'include/json-c/json.h' \
+	'lib/libjson-c.a' \
+	'lib/pkgconfig/libjson-c.pc:/^Version/s/[^0-9.]//gp'
 
 endif # LIBJSONC_DEPEND_MK ------------------------------------------------------
 

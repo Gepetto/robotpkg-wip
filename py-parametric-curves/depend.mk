@@ -21,6 +21,8 @@ DEPEND_USE+=		py-parametric-curves
 DEPEND_ABI.py-parametric-curves?=	${PKGTAG.python-}parametric-curves>=1.0.0
 DEPEND_DIR.py-parametric-curves?=	../../wip/py-parametric-curves
 
+include ../../mk/sysdep/python.mk
+
 endif # PY_PARAMETRIC_CURVES_DEPEND_MK -------------------------------------------------
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}

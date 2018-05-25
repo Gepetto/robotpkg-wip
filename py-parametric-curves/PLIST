@@ -1,0 +1,3 @@
+@comment Fri May 25 14:02:41 CEST 2018
+${PYTHON_SITELIB}/parametric_curves/__init__.py
+${PYTHON_SITELIB}/parametric_curves/libparametric_curves_pywrap.so

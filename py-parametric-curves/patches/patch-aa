@@ -1,0 +1,14 @@
+Don't install .pyc files, fix python 3.2+, whose compiled files are __pycache__/$filename.<magic>.pyc
+see https://www.python.org/dev/peps/pep-3147/
+
+diff --git python/CMakeLists.txt python/CMakeLists.txt
+index e347c37..9e25e78 100644
+--- python/CMakeLists.txt
++++ python/CMakeLists.txt
+@@ -60,6 +60,5 @@ FOREACH(python ${PYTHON_FILES})
+
+   INSTALL(FILES
+     "${${PROJECT_NAME}_SOURCE_DIR}/python/${python}"
+-    "${CMAKE_BINARY_DIR}/bindings/python/${PROJECT_NAME}/${pythonFile}c"
+     DESTINATION ${${PYWRAP}_INSTALL_DIR})
+ ENDFOREACH(python)

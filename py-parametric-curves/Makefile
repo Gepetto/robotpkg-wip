@@ -2,13 +2,12 @@
 # Created:			Guilhem Saurel, on Fri 25 May, 2018
 #
 NAME=			parametric-curves
-VERSION=		1.0.3
+VERSION=		1.1.0
 PKGNAME=		${PKGTAG.python-}${NAME}-${VERSION}
 DISTNAME=		${NAME}-${VERSION}
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=stack-of-tasks/${NAME}/releases/download/v${VERSION}/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/${NAME}
 CHECKOUT_VCS_OPTS+=	--recursive
-PKGREVISION=		1
 
 CATEGORIES=		wip
 COMMENT=		This packages provides a template based parametric curves library (python bindings)

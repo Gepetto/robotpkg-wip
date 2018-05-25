@@ -13,7 +13,10 @@ COMMENT=		This packages provides a template based parametric curves library.
 LICENSE=		gnu-lgpl-v3
 MAINTAINER=		ostasse@laas.fr
 
-include ../../math/py-eigenpy/depend.mk
+CMAKE_ARGS+=			-DBUILD_PYTHON_INTERFACE=OFF
+DYNAMIC_PLIST_DIRS+=	share/doc/parametric-curves
+
+include ../../math/eigen3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

@@ -66,6 +66,7 @@ SUBDIR+=	pal-hardware-interfaces
 SUBDIR+=	pal-msgs
 SUBDIR+=	pal-transmissions
 SUBDIR+=	parametric-curves
+SUBDIR+=	play-motion
 SUBDIR+=	prf-gazebo-ros-pkgs
 SUBDIR+=	prf-roboticsgroup-gazebo-plugins
 SUBDIR+=	prf-ros-control

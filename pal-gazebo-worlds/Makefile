@@ -15,6 +15,10 @@ MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Simulation worlds for PAL robots
 LICENSE=	pal-license
 
+RESTRICTED=	Redistribution of repackaged binaries not permitted
+NO_PUBLIC_SRC=	${RESTRICTED}
+NO_PUBLIC_BIN=	${RESTRICTED}
+
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-roscpp-core/depend.mk
 include ../../simulation/gazebo-ros-pkgs/depend.mk

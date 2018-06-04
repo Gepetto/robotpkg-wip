@@ -17,6 +17,10 @@ MASTER_SITES=	${HOMEPAGE}/archive/
 LICENSE=	pal-license
 COMMENT=	Talos simulation components.
 
+RESTRICTED=	Redistribution of repackaged binaries not permitted
+NO_PUBLIC_SRC=	${RESTRICTED}
+NO_PUBLIC_BIN=	${RESTRICTED}
+
 ROS_METAPKG=	yes
 
 include ../../devel/boost-headers/depend.mk

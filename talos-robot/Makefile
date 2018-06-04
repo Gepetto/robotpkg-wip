@@ -18,6 +18,10 @@ MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	talos_robot package including talos_description and talos_bringup
 LICENSE=	pal-license
 
+RESTRICTED=	Redistribution of repackaged binaries not permitted
+NO_PUBLIC_SRC=	${RESTRICTED}
+NO_PUBLIC_BIN=	${RESTRICTED}
+
 ROS_METAPKG=	yes
 USE_BOOST_LIBS=	thread
 

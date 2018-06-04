@@ -16,6 +16,10 @@ MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Package to record all data from control thus perform introspection
 LICENSE=	pal-license
 
+RESTRICTED=	Redistribution of repackaged binaries not permitted
+NO_PUBLIC_SRC=	${RESTRICTED}
+NO_PUBLIC_BIN=	${RESTRICTED}
+
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-cmake-modules/depend.mk
 include ../../lang/ros-message-generation/depend.mk

@@ -17,6 +17,7 @@ MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Wrappers, tools and additional API for using ROS with Gazebo.
 LICENSE=	2-clause-bsd
 
+CONFLICTS+=	ros-control-[0-9]*
 ROS_METAPKG=	yes
 
 CMAKE_ARGS+=\

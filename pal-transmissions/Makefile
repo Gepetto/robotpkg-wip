@@ -9,6 +9,7 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 DIST_SUBDIR=	${PKGBASE}
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
+PKGREVISION=	1
 
 CATEGORIES=	wip
 # Source file store in robotpkg website

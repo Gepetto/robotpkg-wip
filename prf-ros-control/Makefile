@@ -10,7 +10,7 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PRFNAME})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	wip
 #MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_ros_control/}
@@ -19,6 +19,8 @@ MASTER_SITES=	${HOMEPAGE}/archive/
 
 COMMENT=	ros_control package with torque sensors
 LICENSE=	2-clause-bsd
+
+CONFLICTS+=	ros-control-[0-9]*
 
 ROS_METAPKG=	yes
 USE_BOOST_LIBS=	thread

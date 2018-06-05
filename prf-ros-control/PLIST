@@ -82,12 +82,8 @@ lib/pkgconfig/transmission_interface.pc
 ${PYTHON_SITELIB}/controller_manager_tests/__init__.py
 ${PYTHON_SITELIB}/controller_manager_tests/controller_manager_dummy.py
 ${PYTHON_SITELIB}/rqt_controller_manager/__init__.py
-${PYTHON_SITELIB}/rqt_controller_manager/controller_manager_gui.py
-${PYTHON_SITELIB}/rqt_controller_manager-0.2.4-py${PYTHON_VERSION}.egg-info
-${PYTHON_SITELIB}/controller_manager-0.2.4-py${PYTHON_VERSION}.egg-info
 ${PYTHON_SITELIB}/controller_manager/__init__.py
 ${PYTHON_SITELIB}/controller_manager/controller_manager_interface.py
-${PYTHON_SITELIB}/controller_manager_msgs-0.2.4-py${PYTHON_VERSION}.egg-info
 ${PYTHON_SITELIB}/controller_manager_msgs/__init__.py
 ${PYTHON_SITELIB}/controller_manager_msgs/msg/_ControllerState.py
 ${PYTHON_SITELIB}/controller_manager_msgs/msg/_ControllerStatistics.py
@@ -101,7 +97,6 @@ ${PYTHON_SITELIB}/controller_manager_msgs/srv/_SwitchController.py
 ${PYTHON_SITELIB}/controller_manager_msgs/srv/_UnloadController.py
 ${PYTHON_SITELIB}/controller_manager_msgs/srv/__init__.py
 ${PYTHON_SITELIB}/controller_manager_msgs/utils.py
-${PYTHON_SITELIB}/controller_manager_tests-0.2.4-py${PYTHON_VERSION}.egg-info
 lib/controller_manager/spawner
 lib/controller_manager/controller_manager
 lib/controller_manager/unspawner
@@ -131,8 +126,6 @@ share/common-lisp/ros/controller_manager_msgs/srv/controller_manager_msgs-srv.as
 share/rqt_controller_manager/cmake/rqt_controller_managerConfig-version.cmake
 share/rqt_controller_manager/cmake/rqt_controller_managerConfig.cmake
 share/rqt_controller_manager/package.xml
-share/rqt_controller_manager/plugins/images/cm_icon.png
-share/rqt_controller_manager/plugins/plugin.xml
 share/controller_interface/cmake/controller_interfaceConfig-version.cmake
 share/controller_interface/cmake/controller_interfaceConfig.cmake
 share/controller_interface/package.xml

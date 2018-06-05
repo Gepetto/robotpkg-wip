@@ -12,6 +12,7 @@ SUBDIR+=	chilitags
 SUBDIR+=	dptu-genom3
 SUBDIR+=	dynamic-graph-v3
 SUBDIR+=	dynamic-graph-bridge-v3
+SUBDIR+=	dynamic-introspection
 SUBDIR+=	eigen-quadprog
 SUBDIR+=	FRILibrary
 SUBDIR+=	gdalwrap

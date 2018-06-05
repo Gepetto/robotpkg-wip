@@ -7,6 +7,7 @@ PKGBASE= 	backward-ros
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
+PKGREVISION=	1
 
 CATEGORIES=	wip
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}/}

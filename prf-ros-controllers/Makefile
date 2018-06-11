@@ -8,6 +8,7 @@ PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PRFNAME})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
+PKGREVISION=	1
 
 CATEGORIES=	wip
 #MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_ros_controllers/}
@@ -37,6 +38,8 @@ include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
 include ../../wip/prf-ros-control/depend.mk
 include ../../wip/pal-hardware-interfaces/depend.mk
+include ../../wip/sysdep/ros-four-wheel-steering-msgs.mk
+include ../../wip/sysdep/ros-urdf-geometry-parser.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

@@ -1,18 +1,22 @@
-# robotpkg sysdep/ros-four-wheel-steering-msgs
+# robotpkg sysdep/ros-urdf-geometry-parser
 # Created:			Olivier Stasse on Mon 11 2018
 #
 DEPEND_DEPTH:=		${DEPEND_DEPTH}+
 URDF_GEOMETRY_PARSER_MK:=	${URDF_GEOMETRY_PARSER_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
-DEPEND_PKG+=		four_wheel_steering_msgs
+DEPEND_PKG+=		ros-urdf-geometry-parser
 endif
 
 ifeq (+,$(URDF_GEOMETRY_PARSER_MK)) # ---------------------------------------------
 
-PREFER.ros-urdf-geometry-parser?=		system
+include ../../meta-pkgs/ros-base/depend.common
+
+PREFER.ros-urdf-geometry-parser?=		${PREFER.ros-base}
+SYSTEM_PREFIX.ros-urdf-geometry-parser?=    ${SYSTEM_PREFIX.ros-base}
 
 DEPEND_USE+=		ros-urdf-geometry-parser
+ROS_DEPEND_USE+=		ros-urdf-geometry-parser
 
 DEPEND_ABI.ros-urdf-geometry-parser?=	ros-urdf-geometry-parser>=0.0.1
 

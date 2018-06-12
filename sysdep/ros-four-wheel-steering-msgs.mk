@@ -5,14 +5,18 @@ DEPEND_DEPTH:=		${DEPEND_DEPTH}+
 FOUR_WHEEL_STEERING_MSGS_DEPEND_MK:=	${FOUR_WHEEL_STEERING_MSGS_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
-DEPEND_PKG+=		four_wheel_steering_msgs
+DEPEND_PKG+=		ros-four-wheel-steering-msgs
 endif
 
 ifeq (+,$(FOUR_WHEEL_STEERING_MSGS_DEPEND_MK)) # ---------------------------------------------
 
-PREFER.ros-four-wheel-steering-msgs?=		system
+include ../../meta-pkgs/ros-base/depend.common
+
+PREFER.ros-four-wheel-steering-msgs?=		${PREFER.ros-base}
+SYSTEM_PREFIX.ros-four-wheel-steering-msgs?=    ${SYSTEM_PREFIX.ros-base}
 
 DEPEND_USE+=		ros-four-wheel-steering-msgs
+ROS_DEPEND_USE+=		ros-four-wheel-steering-msgs
 
 DEPEND_ABI.ros-four-wheel-steering-msgs?=	ros-four-wheel-steering-msgs>=1
 

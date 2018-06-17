@@ -8,7 +8,7 @@ PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PRFNAME})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	wip
 #MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_ros_controllers/}
@@ -20,8 +20,14 @@ LICENSE=	2-clause-bsd
 
 ROS_METAPKG=	yes
 
+# Allows to have robotpkg ros packages with the highest priority
+# over system ros packages.
+# http://wiki.ros.org/catkin/what
+CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
+
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
+include ../../wip/prf-ros-control/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-pluginlib/depend.mk
 include ../../devel/ros-ros/depend.mk
@@ -36,7 +42,6 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
-include ../../wip/prf-ros-control/depend.mk
 include ../../wip/pal-hardware-interfaces/depend.mk
 include ../../wip/sysdep/ros-four-wheel-steering-msgs.mk
 include ../../wip/sysdep/ros-urdf-geometry-parser.mk

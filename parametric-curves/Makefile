@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse, on Tue. 5th Jan, 2018
 #
 NAME=			parametric-curves
-VERSION=		1.1.0
+VERSION=		1.1.1
 DISTNAME=		${NAME}-${VERSION}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=stack-of-tasks/${NAME}/releases/download/v${VERSION}/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/${NAME}

@@ -9,6 +9,7 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PRFNAME})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
+PKGREVISION=	1
 
 CATEGORIES=	wip
 HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics-forks/${ROSNAME}}
@@ -23,6 +24,8 @@ ROS_METAPKG=	yes
 CMAKE_ARGS+=\
   -Dgazebo_INCLUDE_DIRS=$(filter include/%,${SYSTEM_SEARCH.gazebo})	\
   -Dgazebo_LIBRARIES=$(filter %.so,${SYSTEM_SEARCH.gazebo})
+
+CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

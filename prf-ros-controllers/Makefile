@@ -8,7 +8,7 @@ PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PRFNAME})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 
 CATEGORIES=	wip
 #MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_ros_controllers/}
@@ -23,7 +23,7 @@ ROS_METAPKG=	yes
 # Allows to have robotpkg ros packages with the highest priority
 # over system ros packages.
 # http://wiki.ros.org/catkin/what
-CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
+CMAKE_PREFIX_PATH+= ${PREFIX}
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

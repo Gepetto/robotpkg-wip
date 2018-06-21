@@ -17,7 +17,7 @@ MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT= 	Move it package config for Talos
 LICENSE=	2-clause-bsd
 
-CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
+CMAKE_PREFIX_PATH+= ${PREFIX}
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

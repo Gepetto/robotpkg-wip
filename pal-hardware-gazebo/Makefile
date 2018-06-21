@@ -9,7 +9,7 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	wip
 # Source file store in robotpkg website.
@@ -26,7 +26,7 @@ USE_BOOST_LIBS=	thread
 
 CONFLICTS+=	gazebo-ros-control
 
-CMAKE_PREFIX_PATH+=${ROBOTPKG_BASE}
+CMAKE_PREFIX_PATH+=${PREFIX}
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../devel/ros-catkin/depend.mk

@@ -9,7 +9,7 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PRFNAME})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	2
+PKGREVISION=	3
 
 CATEGORIES=	wip
 HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics-forks/${ROSNAME}}
@@ -18,7 +18,7 @@ MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Wrappers, tools and additional API for using ROS with Gazebo.
 LICENSE=	2-clause-bsd
 
-CONFLICTS+=	ros-control-[0-9]*
+CONFLICTS+=	gazebo-ros-control
 ROS_METAPKG=	yes
 
 CMAKE_ARGS+=\

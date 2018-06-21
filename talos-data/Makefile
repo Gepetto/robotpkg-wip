@@ -4,6 +4,7 @@
 VERSION=	0.0.17
 PKGNAME=	talos-data-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+PKGREVISION=	1
 
 MASTER_SITES=		${MASTER_SITE_JRL:=talos/talos_data/}
 MASTER_REPOSITORY=	https://redmine.laas.fr/laas/users/
@@ -18,7 +19,7 @@ RESTRICTED=     Redistribution of repackaged binaries not permitted
 NO_PUBLIC_SRC=  ${RESTRICTED}
 NO_PUBLIC_BIN=  ${RESTRICTED}
 
-CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
+CMAKE_PREFIX_PATH+= ${PREFIX}
 
 include ../../devel/ros-catkin/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk

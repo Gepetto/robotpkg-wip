@@ -9,7 +9,7 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PRFNAME})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	3
+PKGREVISION=	4
 
 CATEGORIES=	wip
 HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics-forks/${ROSNAME}}
@@ -18,14 +18,14 @@ MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Wrappers, tools and additional API for using ROS with Gazebo.
 LICENSE=	2-clause-bsd
 
-CONFLICTS+=	gazebo-ros-control
+CONFLICTS+=	gazebo-ros-control-[0-9]*
 ROS_METAPKG=	yes
 
 CMAKE_ARGS+=\
   -Dgazebo_INCLUDE_DIRS=$(filter include/%,${SYSTEM_SEARCH.gazebo})	\
   -Dgazebo_LIBRARIES=$(filter %.so,${SYSTEM_SEARCH.gazebo})
 
-CMAKE_PREFIX_PATH+= ${ROBOTPKG_BASE}
+CMAKE_PREFIX_PATH+= ${PREFIX}
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

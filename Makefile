@@ -107,6 +107,7 @@ SUBDIR+=	talos-metapkg-ros-control-sot
 SUBDIR+=	talos-moveit-config
 SUBDIR+=	talos-robot
 SUBDIR+=	talos-simulation
+SUBDIR+= 	tf-lookup
 SUBDIR+=	tsid
 SUBDIR+= 	ur5-description
 SUBDIR+= 	urg

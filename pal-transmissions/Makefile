@@ -9,7 +9,7 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 DIST_SUBDIR=	${PKGBASE}
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	wip
 # Source file store in robotpkg website
@@ -23,6 +23,9 @@ LICENSE=	2-clause-bsd
 
 
 USE_BOOST_LIBS=	thread
+
+# To make sure that the chaining uses the openrobots packages first.
+CMAKE_PREFIX_PATH+= ${PREFIX}
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

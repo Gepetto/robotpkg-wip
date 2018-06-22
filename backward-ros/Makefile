@@ -7,7 +7,7 @@ PKGBASE= 	backward-ros
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	wip
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}/}
@@ -16,6 +16,7 @@ COMMENT=	The backward_ros package is a ros wrapper of backward-cpp from https://
 LICENSE=	mit
 
 include ../../devel/ros-catkin/depend.mk
+include ../../devel/ros-roscpp-core/depend.mk
 
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

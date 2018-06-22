@@ -22,6 +22,7 @@ SUBDIR+=	gladys
 SUBDIR+=	hatpconsole
 SUBDIR+=	hatponboard-lib
 SUBDIR+=	hatptester
+SUBDIR+=	head-action
 SUBDIR+=	histodet
 SUBDIR+=	hri-simulation
 SUBDIR+=	hrp2-dev

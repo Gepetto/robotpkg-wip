@@ -25,7 +25,6 @@ include/tf_lookup/tf_stream.h
 include/tf_lookup/tf_stream_client.h
 include/tf_lookup/tf_stream_client_impl.h
 include/tf_lookup/tf_stream_server.h
-lib/librviz_plugin_covariance.so
 lib/pkgconfig/tf_lookup.pc
 ${PYTHON_SITELIB}/tf_lookup-0.0.1-py${PYTHON_VERSION}.egg-info
 ${PYTHON_SITELIB}/tf_lookup/__init__.py

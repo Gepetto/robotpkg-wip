@@ -1,11 +1,13 @@
 @comment Sat May 6 18:24:39 CEST 2017
 lib/pkgconfig/roscontrol_sot_talos.pc
+lib/pkgconfig/sot_pyrene_bringup.pc
 lib/roscontrol_sot_talos/republish
 share/talos_metapkg_ros_control_sot/package.xml
 share/roscontrol_sot_talos/cmake/roscontrol_sot_talosConfig-version.cmake
 share/roscontrol_sot_talos/cmake/roscontrol_sot_talosConfig.cmake
 share/roscontrol_sot_talos/config/sot_talos_controller.yaml
 share/roscontrol_sot_talos/config/sot_talos_params.yaml
+share/roscontrol_sot_talos/config/sot_talos_params_effort.yaml
 share/roscontrol_sot_talos/config/sot_talos_params_gazebo.yaml
 share/roscontrol_sot_talos/config/sot_talos_params_gazebo_effort.yaml
 share/roscontrol_sot_talos/launch/display_sot.launch
@@ -13,3 +15,11 @@ share/roscontrol_sot_talos/launch/sot_talos_controller.launch
 share/roscontrol_sot_talos/launch/sot_talos_controller_gazebo.launch
 share/roscontrol_sot_talos/launch/sot_talos_controller_gazebo_effort.launch
 share/roscontrol_sot_talos/package.xml
+share/sot_pyrene_bringup/cmake/sot_pyrene_bringupConfig.cmake
+share/sot_pyrene_bringup/cmake/sot_pyrene_bringupConfig-version.cmake
+share/sot_pyrene_bringup/package.xml
+share/sot_pyrene_bringup/launch/geometric_simu.launch
+share/sot_pyrene_bringup/launch/geometric_simu_context.launch
+share/sot_pyrene_bringup/sot/pyrene.yaml
+
+

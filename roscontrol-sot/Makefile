@@ -8,6 +8,7 @@ ROSNAME=		$(subst -,_,${PKGBASE})
 DISTNAME=		${ROSNAME}-${VERSION}
 WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=		${PKGBASE}
+PKGREVISION=		1
 
 CATEGORIES=		wip
 #MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=roscontrol_sot/}
@@ -30,6 +31,12 @@ CMAKE_ARGS+=		-DCXX_DISABLE_WERROR=yes
 CMAKE_ARGS+=		-DMANDIR=${PREFIX}/${PKGMANDIR}
 # library location
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
+
+# Allows to have robotpkg ros packages with the highest priority
+# over system ros packages.
+# http://wiki.ros.org/catkin/what
+CMAKE_PREFIX_PATH+= ${PREFIX}
+
 
 include ../../sysutils/ros-rospack/depend.mk
 include ../../motion/dynamic-graph-bridge-msgs/depend.mk

@@ -8,7 +8,7 @@ ROSNAME=		$(subst -,_,${PKGBASE})
 DISTNAME=		${ROSNAME}-${VERSION}
 WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=		${PKGBASE}
-PKGREVISION=		1
+PKGREVISION=		2
 
 CATEGORIES=		wip
 #MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=roscontrol_sot/}
@@ -43,6 +43,7 @@ include ../../motion/dynamic-graph-bridge-msgs/depend.mk
 include ../../wip/dynamic-graph-bridge-v3/depend.mk
 include ../../devel/ros-realtime-tools/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
+include ../../interfaces/ros-control-msgs/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../simulation/bullet/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
@@ -50,13 +51,13 @@ include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
 include ../../mk/robotpkg.prefs.mk
-
-ifeq (Ubuntu,${OPSYS})
-  ifneq (,$(filter 16.04,${OS_VERSION}))
-    include ../../wip/prf-ros-controllers/depend.mk
-    include ../../wip/pal-hardware-interfaces/depend.mk
-  endif
-endif
+include ../../wip/pal-hardware-interfaces/depend.mk
+include ../../wip/prf-ros-control/depend.mk
+#ifeq (Ubuntu,${OPSYS})
+#  ifneq (,$(filter 16.04,${OS_VERSION}))
+#    include ../../wip/prf-ros-controllers/depend.mk
+#  endif
+#endif
 include ../../devel/ros-roscpp-core/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

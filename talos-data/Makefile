@@ -4,15 +4,15 @@
 VERSION=	0.0.17
 PKGNAME=	talos-data-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
-MASTER_SITES=		${MASTER_SITE_JRL:=talos/talos_data/}
+MASTER_SITES=		ftp://${PAL_FTP_USER}${PAL_FTP_PASSWD:%=:%}@softs.laas.fr/talos/talos_data/
 MASTER_REPOSITORY=	https://redmine.laas.fr/laas/users/
 CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		This packages provides data of the humanoid robot Pyrene in a friendly way for the SoT.
-LICENSE=		openhrp-grx-license
+LICENSE=		pal-license
 MAINTAINER=		ostasse@laas.fr
 
 RESTRICTED=     Redistribution of repackaged binaries not permitted

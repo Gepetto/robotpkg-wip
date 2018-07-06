@@ -4,7 +4,7 @@
 
 PKGNAME=		sot-core-v3-${VERSION}
 DISTNAME=		sot-core-v3-${VERSION}
-VERSION=		3.1.7
+VERSION=		3.1.8
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-core-v3/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/sot-core

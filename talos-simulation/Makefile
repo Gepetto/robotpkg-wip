@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/talos-simulation
 # Created:			Olivier Stasse on Mer, 3 May 2017
 #
-VERSION=	0.1.0
+VERSION=	0.1.4
 PKGBASE=	talos-simulation
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}

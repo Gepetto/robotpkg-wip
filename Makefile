@@ -64,6 +64,7 @@ SUBDIR+=	orocos-dot_service
 SUBDIR+=	orocos-yarp_transport
 SUBDIR+=	osg-dae
 SUBDIR+=	pal-gazebo-plugins
+SUBDIR+=	pal-gazebo-worlds
 SUBDIR+=	pal-hardware-gazebo
 SUBDIR+=	pal-hardware-interfaces
 SUBDIR+=	pal-msgs

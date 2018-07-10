@@ -4,14 +4,15 @@
 
 VERSION=	2.0.8
 PKGBASE=	pal-gazebo-worlds
+PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKG_REVISION=	1
+PKG_REVISION=	2
 
 CATEGORIES=	wip
-HOMEPAGE=		${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Simulation worlds for PAL robots
 LICENSE=	pal-license
@@ -22,7 +23,7 @@ NO_PUBLIC_BIN=	${RESTRICTED}
 
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-roscpp-core/depend.mk
-include ../../simulation/gazebo-ros-pkgs/depend.mk
+include ../../wip/prf-gazebo-ros-pkgs/depend.mk
 
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

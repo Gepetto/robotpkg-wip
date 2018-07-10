@@ -13,16 +13,14 @@ ifeq (+,$(PAL_GAZEBO_WORLDS_DEPEND_MK)) # ---------------------------------
 
 PREFER.pal-gazebo-worlds?=	robotpkg
 
-SYSTEM_SEARCH.pal-gazebo-worlds=\
-    'lib/pkgconfig/pal_gazebo_worlds.pc:/Version/s/[^0-9.]//gp'
-
 DEPEND_USE+=			pal-gazebo-worlds
 
-DEPEND_ABI.pal-gazebo-worlds?=\
-	pal-gazebo-worlds>=2.0.8
-DEPEND_DIR.pal-gazebo-worlds?=\
-	../../wip/pal-gazebo-worlds
+DEPEND_ABI.pal-gazebo-worlds?=	pal-gazebo-worlds>=2.0.0
+DEPEND_DIR.pal-gazebo-worlds?=  ../../wip/pal-gazebo-worlds
 
+SYSTEM_SEARCH.pal-gazebo-worlds=\
+    'share/pal_gazebo_worlds/package.xml:/<version>/s/[^0-9.]//gp'	\
+    'share/pal_gazebo_worlds/launch/pal_gazebo.launch'
 endif # PAL_GAZEBO_WORLDS_DEPEND_MK ---------------------------------------
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}

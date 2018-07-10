@@ -1,0 +1,3 @@
+@comment Tue Jul 10 15:07:29 CEST 2018
+${PYTHON_SITELIB}/example_adder/__init__.py
+${PYTHON_SITELIB}/example_adder/libexample_adder.so

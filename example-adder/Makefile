@@ -20,6 +20,8 @@ LICENSE=			2-clause-bsd
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

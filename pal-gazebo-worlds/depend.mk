@@ -19,7 +19,7 @@ SYSTEM_SEARCH.pal-gazebo-worlds=\
 DEPEND_USE+=			pal-gazebo-worlds
 
 DEPEND_ABI.pal-gazebo-worlds?=\
-	pal-gazebo-worlds>=2.0.4
+	pal-gazebo-worlds>=2.0.8
 DEPEND_DIR.pal-gazebo-worlds?=\
 	../../wip/pal-gazebo-worlds
 

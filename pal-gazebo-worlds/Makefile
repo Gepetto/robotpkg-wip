@@ -2,7 +2,7 @@
 # Created:			Guilhem Saurel on Fri, 13 Apr 2018
 #
 
-VERSION=	2.0.4
+VERSION=	2.0.8
 PKGBASE=	pal-gazebo-worlds
 DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})

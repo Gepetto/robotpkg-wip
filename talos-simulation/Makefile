@@ -8,7 +8,7 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKG_REVISION=	1
+PKG_REVISION=	2
 
 CATEGORIES=	wip
 #MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_simulation/}
@@ -44,6 +44,7 @@ include ../../wip/talos-moveit-config/depend.mk
 include ../../wip/prf-roboticsgroup-gazebo-plugins/depend.mk
 include ../../wip/prf-ros-controllers/depend.mk
 include ../../wip/pal-gazebo-plugins/depend.mk
+include ../../wip/pal-gazebo-worlds/depend.mk
 include ../../wip/head-action/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

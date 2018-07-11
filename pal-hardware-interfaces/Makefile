@@ -32,7 +32,7 @@ include ../../lang/ros-message-runtime/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../wip/sysdep/pal-distro.mk
 ifeq (palerbium,${PALDISTRO})
-  include ../../motion/ros-control/depend.mk
+  CMAKE_PREFIX_PATH+=/opt/pal/erbium
 else
   include ../../wip/prf-ros-control/depend.mk
 endif

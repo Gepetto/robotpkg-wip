@@ -52,13 +52,15 @@ include ../../wip/sot-core-v3/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
 include ../../mk/robotpkg.prefs.mk
 include ../../wip/sysdep/pal-distro.mk
-include ../../wip/pal-hardware-interfaces/depend.mk
 
+include ../../wip/sysdep/pal-distro.mk
 ifeq (palerbium,${PALDISTRO})
-  include ../../motion/ros-control/depend.mk
+  CMAKE_PREFIX_PATH+=/opt/pal/erbium
 else
+  include ../../wip/pal-hardware-interfaces/depend.mk
   include ../../wip/prf-ros-control/depend.mk
 endif
+
 
 include ../../devel/ros-roscpp-core/depend.mk
 include ../../devel/ros-catkin/depend.mk

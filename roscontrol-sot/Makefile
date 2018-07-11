@@ -56,6 +56,13 @@ include ../../wip/sysdep/pal-distro.mk
 include ../../wip/sysdep/pal-distro.mk
 ifeq (palerbium,${PALDISTRO})
   CMAKE_PREFIX_PATH+=/opt/pal/erbium
+  CMAKE_ARGS+= -Dcontrol_toolbox_INCLUDE_DIRS=/opt/pal/erbium/include
+  PATH+=/opt/pal/erbium
+  PATH+=/bin
+  PATH+=/usr/bin
+  PATH+=/sbin
+  CXXFLAGS+="-I/opt/pal/erbium/include"
+  include ../../motion/ros-control-toolbox/depend.mk
 else
   include ../../wip/pal-hardware-interfaces/depend.mk
   include ../../wip/prf-ros-control/depend.mk

@@ -30,7 +30,12 @@ include ../../interfaces/ros-std-msgs/depend.mk
 include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../middleware/ros-comm/depend.mk
-include ../../wip/prf-ros-control/depend.mk
+include ../../wip/sysdep/pal-distro.mk
+ifeq (palerbium,${PALDISTRO})
+  include ../../motion/ros-control/depend.mk
+else
+  include ../../wip/prf-ros-control/depend.mk
+endif
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

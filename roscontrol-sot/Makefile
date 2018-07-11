@@ -54,7 +54,7 @@ include ../../mk/robotpkg.prefs.mk
 include ../../wip/sysdep/pal-distro.mk
 include ../../wip/pal-hardware-interfaces/depend.mk
 
-ifeq (palerbium,${OPSYS})
+ifeq (palerbium,${PALDISTRO})
   include ../../motion/ros-control/depend.mk
 else
   include ../../wip/prf-ros-control/depend.mk

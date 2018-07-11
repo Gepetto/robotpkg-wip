@@ -17,14 +17,14 @@
 #
 #                                            Anthony Mallet on Fri Sep  9 2011
 #
-if test -f /opt/pal/erbium; then
+if test -d /opt/pal/erbium; then
   echo "palerbium"
   exit 0
 fi
-if test -f /opt/pal/dubnium; then
+if test -d /opt/pal/dubnium; then
   echo "paldubnium"
   exit 0
 fi
-echo "Not found"
+echo "NotFound"
 exit 0
 

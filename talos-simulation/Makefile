@@ -37,7 +37,6 @@ include ../../lang/ros-message-runtime/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
-include ../../motion/ros-control-toolbox/depend.mk
 
 # Check if we on a pal distro
 include ../../wip/sysdep/pal-distro.mk
@@ -46,6 +45,7 @@ ifeq (palerbium,${PALDISTRO})
    $(error "talos-simulation is useless on PAL erbium.")
 endif
 
+include ../../motion/ros-control-toolbox/depend.mk
 include ../../wip/pal-hardware-gazebo/depend.mk
 include ../../wip/talos-robot/depend.mk
 include ../../wip/talos-moveit-config/depend.mk

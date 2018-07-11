@@ -8,7 +8,7 @@ ROSNAME=		$(subst -,_,${PKGBASE})
 DISTNAME=		${ROSNAME}-${VERSION}
 WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=		${PKGBASE}
-PKGREVISION=		2
+PKGREVISION=		3
 
 CATEGORIES=		wip
 #MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=roscontrol_sot/}
@@ -51,13 +51,15 @@ include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
 include ../../mk/robotpkg.prefs.mk
+include ../../wip/sysdep/pal-distro.mk
 include ../../wip/pal-hardware-interfaces/depend.mk
-include ../../wip/prf-ros-control/depend.mk
-#ifeq (Ubuntu,${OPSYS})
-#  ifneq (,$(filter 16.04,${OS_VERSION}))
-#    include ../../wip/prf-ros-controllers/depend.mk
-#  endif
-#endif
+
+ifeq (palerbium,${OPSYS})
+  include ../../motion/ros-control/depend.mk
+else
+  include ../../wip/prf-ros-control/depend.mk
+endif
+
 include ../../devel/ros-roscpp-core/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

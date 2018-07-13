@@ -4,7 +4,7 @@
 VERSION=	0.0.17
 PKGNAME=	talos-data-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 
 MASTER_SITES=		ftp://${JRL_FTP_USER}${JRL_FTP_PASSWD:%=:%}@softs.laas.fr/talos/talos_data/
 MASTER_REPOSITORY=	https://redmine.laas.fr/laas/users/
@@ -24,6 +24,7 @@ CMAKE_PREFIX_PATH+= ${PREFIX}
 include ../../devel/ros-catkin/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../interfaces/ros-std-msgs/depend.mk
+include ../../graphics/urdfdom/depend.mk
 include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../middleware/ros-comm/depend.mk

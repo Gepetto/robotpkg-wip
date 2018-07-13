@@ -11,7 +11,7 @@ CATEGORIES=		robots
 COMMENT=		This packages provides a generic Stack Of Tasks library for the humanoid robot Romeo.
 LICENSE=		gnu-lgpl-v3
 MAINTAINER=		gepetto@laas.fr
-PKG_REVISION=		1
+PKGREVISION=		1
 
 DYNAMIC_PLIST_DIRS+=	share/doc/sot-application
 

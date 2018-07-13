@@ -1,0 +1,33 @@
+# robotpkg Makefile for:	wip/example-adder
+# Created:			Guilhem Saurel on Tue, 10 Jul 2018
+#
+
+ORG=				stack-of-tasks
+NAME=				dynamic-graph-tutorial
+VERSION=			1.1.1
+
+PKGNAME=			${NAME}-${VERSION}
+DISTNAME=			${NAME}-${VERSION}
+
+MASTER_SITES=		${MASTER_SITE_GITHUB:=${ORG}/${NAME}/releases/download/v${VERSION}/}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${NAME}
+CHECKOUT_VCS_OPTS=	--recursive
+
+CATEGORIES=			wip
+COMMENT=			Tutorial for the dynamic-graph
+MAINTAINER=			gsaurel@laas.fr
+LICENSE=			2-clause-bsd
+
+CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
+
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+
+include ../../wip/dynamic-graph-v3/depend.mk
+include ../../devel/boost-headers/depend.mk
+include ../../devel/boost-libs/depend.mk
+include ../../pkgtools/pkg-config/depend.mk
+include ../../mk/sysdep/cmake.mk
+include ../../mk/language/c.mk
+include ../../mk/language/c++.mk
+
+include ../../mk/robotpkg.mk

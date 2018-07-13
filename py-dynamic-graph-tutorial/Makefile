@@ -4,7 +4,7 @@
 
 ORG=				stack-of-tasks
 NAME=				dynamic-graph-tutorial
-VERSION=			1.1.0
+VERSION=			1.1.1
 
 PKGNAME=			${PKGTAG.python-}${NAME}-${VERSION}
 DISTNAME=			${NAME}-${VERSION}

@@ -1,0 +1,11 @@
+@comment Fri Jul 13 15:58:59 CEST 2018
+include/dynamic-graph/tutorial/feedback-controller.hh
+include/dynamic-graph/tutorial/inverted-pendulum.hh
+include/dynamic/graph/tutorial/config.hh
+include/dynamic/graph/tutorial/deprecated.hh
+include/dynamic/graph/tutorial/warning.hh
+lib/libdynamic-graph-tutorial.so
+lib/libdynamic-graph-tutorial.so.${PKGVERSION}
+lib/pkgconfig/dynamic-graph-tutorial.pc
+${PYTHON_SITELIB}/dynamic_graph/tutorial/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/tutorial/wrap.so

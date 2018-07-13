@@ -77,6 +77,7 @@ SUBDIR+=	prf-roboticsgroup-gazebo-plugins
 SUBDIR+=	prf-ros-control
 SUBDIR+= 	prf-ros-controllers
 SUBDIR+=	py-dynamic-graph-v3
+SUBDIR+=	py-dynamic-graph-tutorial
 SUBDIR+=	py-example-adder
 SUBDIR+=	py-hla
 SUBDIR+=	py-jsbsim

@@ -6,8 +6,8 @@ ORG=				gepetto
 NAME=				example-adder
 VERSION=			1.0.0
 
-PKGNAME=			${PKGTAG.python-}${NAME}-${VERSION}
 DISTNAME=			${NAME}-${VERSION}
+PKGNAME=			${PKGTAG.python-}${DISTNAME}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
 MASTER_REPOSITORY=	git https://gepgitlab.laas.fr/${ORG}/${NAME}.git

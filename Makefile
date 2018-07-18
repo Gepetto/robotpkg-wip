@@ -118,5 +118,6 @@ SUBDIR+=	tsid
 SUBDIR+= 	ur5-description
 SUBDIR+= 	urg
 SUBDIR+= 	vnet-yarp
+SUBDIR+=        infuse_types_asn1
 
 include ../mk/robotpkg.subdir.mk

@@ -1,0 +1,23 @@
+@comment Mon Jul 9 10:20:45 CEST 2018
+include/cdff_types/CorrespondenceMap2D.h
+include/cdff_types/CorrespondenceMap3D.h
+include/cdff_types/Covariance.h
+include/cdff_types/Eigen.h
+include/cdff_types/Geometry.h
+include/cdff_types/Image_InFuse.h
+include/cdff_types/Map_InFuse.h
+include/cdff_types/Path_InFuse.h
+include/cdff_types/Point.h
+include/cdff_types/PointCloud_InFuse.h
+include/cdff_types/Pose.h
+include/cdff_types/Pose_InFuse.h
+include/cdff_types/Time.h
+include/cdff_types/TransformWithCovariance.h
+include/cdff_types/TwistWithCovariance.h
+include/cdff_types/Twist_InFuse.h
+include/cdff_types/VisualPointFeatureVector2D.h
+include/cdff_types/VisualPointFeatureVector3D.h
+include/cdff_types/asn1crt.h
+include/cdff_types/taste-extended.h
+include/cdff_types/taste-types.h
+lib/libcdff_types.so

@@ -6,7 +6,6 @@ ORG=				gepetto
 NAME=				example-adder
 VERSION=			1.0.0
 
-PKGNAME=			${NAME}-${VERSION}
 DISTNAME=			${NAME}-${VERSION}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}

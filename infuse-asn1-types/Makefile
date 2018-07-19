@@ -4,7 +4,7 @@
 DISTNAME=               QuentinLab-infuse_types_asn1-443fb0e
 CATEGORIES=             devel
 VERSION=                0.1
-PKGNAME=                infuse_types_asn1
+PKGNAME=                infuse-asn1-types
 MASTER_SITES=           https://github.com/QuentinLab/infuse_types_asn1/tarball/master/
 MASTER_REPOSITORY=      git https://github.com/QuentinLab/infuse_types_asn1.git
 MAINTAINER=             quentin.labourey@laas.fr

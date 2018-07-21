@@ -4,7 +4,7 @@
 VERSION=		3.0.10
 DISTNAME=		dynamic_graph_bridge-v3-${VERSION}
 PKGNAME=		dynamic-graph-bridge-v3-${VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		wip
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=dynamic-graph-bridge-v3/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/dynamic_graph_bridge/

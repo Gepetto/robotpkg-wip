@@ -14,7 +14,7 @@ LICENSE=                2-clause-bsd
 
 
 
-include ../../mk/sysdep/mono.mk
+include ../mk/sysdep/mono.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/sysdep/cmake.mk

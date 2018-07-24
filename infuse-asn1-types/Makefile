@@ -1,11 +1,11 @@
 # robotpkg Makefile for:    wip/infuse_types_asn1
 # Created:                  Quentin Labourey on Fri, 6 July 2018
 
-DISTNAME=               QuentinLab-infuse_types_asn1-443fb0e
+DISTNAME=               infuse_asn1_types
 CATEGORIES=             devel
 VERSION=                0.1
 PKGNAME=                infuse-asn1-types
-MASTER_SITES=           https://github.com/QuentinLab/infuse_types_asn1/tarball/master/
+MASTER_SITES=           http://homepages.laas.fr/qlaboure/
 MASTER_REPOSITORY=      git https://github.com/QuentinLab/infuse_types_asn1.git
 MAINTAINER=             quentin.labourey@laas.fr
 HOMEPAGE=               ${MASTER_SITES}

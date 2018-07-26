@@ -35,6 +35,7 @@ SUBDIR+=	hrp2-machine
 SUBDIR+=	hyper
 SUBDIR+=	hyper-genom-plugin
 SUBDIR+=	hyper-viewer
+SUBDIR+=        infuse-asn1-types
 SUBDIR+=	jrl-walkgen-v3
 SUBDIR+=	jsbsim
 SUBDIR+=	kukaFri-libs
@@ -118,6 +119,5 @@ SUBDIR+=	tsid
 SUBDIR+= 	ur5-description
 SUBDIR+= 	urg
 SUBDIR+= 	vnet-yarp
-SUBDIR+=        infuse_types_asn1
 
 include ../mk/robotpkg.subdir.mk

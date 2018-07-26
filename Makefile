@@ -35,6 +35,7 @@ SUBDIR+=	hrp2-machine
 SUBDIR+=	hyper
 SUBDIR+=	hyper-genom-plugin
 SUBDIR+=	hyper-viewer
+SUBDIR+=        infuse-asn1-conversions
 SUBDIR+=        infuse-asn1-types
 SUBDIR+=	jrl-walkgen-v3
 SUBDIR+=	jsbsim

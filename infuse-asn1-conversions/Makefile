@@ -37,13 +37,14 @@ endef
 PKG_OPTION_DESCR.pcl= Enable the conversions from/to PCL types
 define PKG_OPTION_SET.pcl
 	CMAKE_ARGS+= -DWITH_PCL=ON
-	include ../mk/sysdep/pcl.mk
+	include ../../wip/mk/sysdep/pcl.mk
 endef
 define PKG_OPTION_UNSET.pcl
 	CMAKE_ARGS+= -DWITH_PCL=OFF
 endef
 
 # Dependencies
+include ../../wip/infuse-asn1-types/depend.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../pkgtools/pkg-config/depend.mk

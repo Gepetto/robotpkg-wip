@@ -1,0 +1,3 @@
+@comment Fri Jul 27 18:19:28 CEST 2018
+lib/pkgconfig/infuse-idl.pc
+share/idl/infuse/asn1/bitstream.gen

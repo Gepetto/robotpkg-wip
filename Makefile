@@ -90,6 +90,7 @@ SUBDIR+=	py-morse
 SUBDIR+=	py-mraa
 SUBDIR+=	py-parametric-curves
 SUBDIR+=	py-sot-tools-v3
+SUBDIR+=	py-sot-torque-control
 SUBDIR+=	robotModelParser-libs
 SUBDIR+=	roralink
 SUBDIR+= 	roscontrol-sot

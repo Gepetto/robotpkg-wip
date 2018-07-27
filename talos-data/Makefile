@@ -4,7 +4,7 @@
 VERSION=	0.0.17
 PKGNAME=	talos-data-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 
 MASTER_SITES=		ftp://${JRL_FTP_USER}${JRL_FTP_PASSWD:%=:%}@softs.laas.fr/talos/talos_data/
 MASTER_REPOSITORY=	https://redmine.laas.fr/laas/users/

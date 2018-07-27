@@ -27,10 +27,6 @@ CMAKE_ARGS+=		-DPYTHON_LIBRARY=${PYTHON_LIB}
 CMAKE_ARGS+=		-DPYTHON_SITELIB=${PYTHON_SITELIB}
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
-# Build the package in a separate directory
-CONFIGURE_DIRS=		_build
-CMAKE_ARG_PATH=		..
-
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/eigen3/depend.mk

@@ -23,6 +23,7 @@ CONFLICTS+=		py[0-9][0-9]-sot-tools-[0-9]*
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
+CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF  # doxygen segfaults on 14.04
 
 # disable -Werror, some warnings from boost-filesystem (1.50, netbsd) cannot be
 # fixed here

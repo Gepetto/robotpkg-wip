@@ -107,6 +107,7 @@ SUBDIR+=	sot-hrprtc-hrp2
 SUBDIR+=	sot-pattern-generator-v3
 SUBDIR+=	sot-romeo-v3
 SUBDIR+=	sot-talos
+SUBDIR+=	sot-tools-v3
 SUBDIR+=	sot-torque-control
 SUBDIR+=	soth
 SUBDIR+=	spark-genom

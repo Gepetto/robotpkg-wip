@@ -1,0 +1,14 @@
+@comment Tue Jul 31 14:06:37 UTC 2018
+include/swri_math_util/constants.h
+include/swri_math_util/generic_ring_buffer.h
+include/swri_math_util/interpolation_1d.h
+include/swri_math_util/math_util.h
+include/swri_math_util/random.h
+include/swri_math_util/ransac.h
+include/swri_math_util/stat_buffer.h
+include/swri_math_util/trig_util.h
+lib/libswri_math_util.so
+lib/pkgconfig/swri_math_util.pc
+share/swri_math_util/cmake/swri_math_utilConfig-version.cmake
+share/swri_math_util/cmake/swri_math_utilConfig.cmake
+share/swri_math_util/package.xml

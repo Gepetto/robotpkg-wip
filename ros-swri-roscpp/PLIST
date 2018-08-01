@@ -1,0 +1,21 @@
+@comment Wed Aug 1 11:58:39 UTC 2018
+include/swri_roscpp/latched_subscriber.h
+include/swri_roscpp/optional_diagnosed_publisher.h
+include/swri_roscpp/parameters.h
+include/swri_roscpp/publisher.h
+include/swri_roscpp/service_server.h
+include/swri_roscpp/service_server_impl.h
+include/swri_roscpp/service_server_statistics.h
+include/swri_roscpp/subscriber.h
+include/swri_roscpp/subscriber_impl.h
+include/swri_roscpp/swri_roscpp.h
+include/swri_roscpp/timer.h
+include/swri_roscpp/timer_impl.h
+lib/pkgconfig/swri_roscpp.pc
+lib/swri_roscpp/latched_subscriber_test
+lib/swri_roscpp/param_example
+lib/swri_roscpp/subscriber_test
+share/swri_roscpp/cmake/swri_roscppConfig-version.cmake
+share/swri_roscpp/cmake/swri_roscppConfig.cmake
+share/swri_roscpp/package.xml
+share/swri_roscpp/param_example.launch

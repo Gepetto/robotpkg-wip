@@ -1,0 +1,10 @@
+@comment Wed Aug 1 08:59:13 UTC 2018
+include/swri_nodelet/class_list_macros.h
+lib/pkgconfig/swri_nodelet.pc
+lib/swri_nodelet/nodelet
+share/swri_nodelet/cmake/swri_nodelet-extras.cmake
+share/swri_nodelet/cmake/swri_nodeletConfig-version.cmake
+share/swri_nodelet/cmake/swri_nodeletConfig.cmake
+share/swri_nodelet/nodelet.cpp.in
+share/swri_nodelet/nodelet_plugins.xml
+share/swri_nodelet/package.xml

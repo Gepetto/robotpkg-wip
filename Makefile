@@ -98,6 +98,7 @@ SUBDIR+=	py-sot-torque-control
 SUBDIR+=	robotModelParser-libs
 SUBDIR+=	roralink
 SUBDIR+= 	roscontrol-sot
+SUBDIR+=	ros-gps-umd
 SUBDIR+=	ros-swri-math-util
 SUBDIR+=	ros-swri-nodelet
 SUBDIR+=	ros-swri-roscpp

@@ -13,5 +13,6 @@ LICENSE=		isc
 
 GNU_CONFIGURE=		yes
 
+include ../../interfaces/openrobots-idl/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/robotpkg.mk

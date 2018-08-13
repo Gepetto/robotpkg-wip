@@ -28,12 +28,6 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
 CONFLICTS+=		sot-dynamic
 CONFLICTS+=		sot-dynamic-v3
-# Build the package in a separate directory
-CONFIGURE_DIRS=		_build
-CMAKE_ARG_PATH=		..
-
-pre-configure:
-	${RUN}${MKDIR} ${WRKSRC}/_build
 
 DEPEND_ABI.python+= python<3.0
 

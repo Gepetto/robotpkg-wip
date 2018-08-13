@@ -17,17 +17,13 @@ LICENSE=	gnu-lgpl-v3
 
 DYNAMIC_PLIST_DIRS+=	share/doc/jrl-walkgen
 
+CONFLICTS+=		jrl-walkgen
+
 PKG_SUPPORTED_OPTIONS+= debug
 PKG_OPTION_DESCR.debug=	Compile in debugging mode
 PKG_OPTION_SET.debug:=	CMAKE_ARGS+= -DCMAKE_BUILD_TYPE=Debug
 
-# Build the package in a separate directory
-CONFIGURE_DIRS=		_build
-CMAKE_ARG_PATH=		..
 CMAKE_ARGS+=    -DCMAKE_INSTALL_LIBDIR=lib
-
-pre-configure:
-	${RUN}${MKDIR} ${WRKSRC}/_build
 
 include ../../mk/sysdep/cmake.mk
 include ../../math/pinocchio/depend.mk

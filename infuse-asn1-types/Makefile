@@ -2,7 +2,7 @@
 # Created:                  Quentin Labourey on Fri, 6 July 2018
 
 NAME=                   infuse-asn1-types
-VERSION=                0.1
+VERSION=                0.2
 DISTNAME=               ${NAME}-${VERSION}
 CATEGORIES=             devel
 MASTER_SITES=           http://homepages.laas.fr/emendes/infuse/

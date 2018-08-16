@@ -1,4 +1,4 @@
-@comment Fri Mar 18 13:31:14 CET 2016
+@comment Thu Aug 16 14:27:04 CEST 2018
 bin/asc2log
 bin/bcmserver
 bin/can-calc-bit-timing
@@ -18,8 +18,12 @@ bin/isotpsend
 bin/isotpserver
 bin/isotpsniffer
 bin/isotptun
+bin/jacd
+bin/jspy
+bin/jsr
 bin/log2asc
 bin/log2long
 bin/slcan_attach
 bin/slcand
 bin/slcanpty
+bin/testj1939

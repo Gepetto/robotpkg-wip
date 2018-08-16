@@ -2,7 +2,8 @@
 # Created:			Ellon Paiva Mendes on Fri,  27 Jul 2018
 #
 
-DISTNAME=		infuse-idl-0.1
+VERSION=		0.1.1
+DISTNAME=		infuse-idl-${VERSION}
 CATEGORIES=		interfaces
 MASTER_SITES=		http://homepages.laas.fr/emendes/infuse/
 MASTER_REPOSITORY=	git ssh://git@redmine.laas.fr/laas/users/simon/infuse-idl.git

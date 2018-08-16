@@ -18,7 +18,7 @@ SYSTEM_SEARCH.infuse-idl=\
 	'share/idl/infuse/asn1/bitstream.gen'			\
 	'lib/pkgconfig/infuse-idl.pc:/Version/s/[^0-9.]//gp'
 
-DEPEND_ABI.infuse-idl?=	infuse-idl>=0.1
+DEPEND_ABI.infuse-idl?=	infuse-idl>=0.1.1
 DEPEND_DIR.infuse-idl?=	../../wip/infuse-idl
 
 endif # INFUSE_IDL_DEPEND_MK -------------------------------------------

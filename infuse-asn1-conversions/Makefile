@@ -2,7 +2,7 @@
 # Created:                  Ellon Paiva Mendes on wed, 25 July 2018
 
 NAME=				infuse-asn1-conversions
-VERSION=			0.1
+VERSION=			0.2
 DISTNAME=			${NAME}-${VERSION}
 CATEGORIES=			devel
 MASTER_SITES=		http://homepages.laas.fr/emendes/infuse/

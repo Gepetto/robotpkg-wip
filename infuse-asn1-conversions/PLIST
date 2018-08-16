@@ -1,17 +1,21 @@
-@comment Thu Jul 26 11:19:15 CEST 2018
+@comment Thu Aug 16 17:51:35 CEST 2018
 include/infuse_asn1_conversions/asn1_base_conversions.hpp
-lib/libinfuse_asn1_conversions_base.so
-lib/libinfuse_asn1_conversions_base.so.${PKGVERSION}
 ${PLIST.eigen3}include/infuse_asn1_conversions/asn1_eigen_conversions.hpp
-${PLIST.eigen3}lib/libinfuse_asn1_conversions_eigen.so
-${PLIST.eigen3}lib/libinfuse_asn1_conversions_eigen.so.${PKGVERSION}
 ${PLIST.pcl}include/infuse_asn1_conversions/asn1_pcl_conversions.hpp
-${PLIST.pcl}lib/libinfuse_asn1_conversions_pcl.so
-${PLIST.pcl}lib/libinfuse_asn1_conversions_pcl.so.${PKGVERSION}
 ${PLIST.ros}include/infuse_asn1_conversions/asn1_ros_conversions.hpp
-${PLIST.ros}lib/libinfuse_asn1_conversions_ros.so
-${PLIST.ros}lib/libinfuse_asn1_conversions_ros.so.${PKGVERSION}
 lib/cmake/infuse_asn1_conversions/infuse_asn1_conversionsConfig.cmake
 lib/cmake/infuse_asn1_conversions/infuse_asn1_conversionsConfigVersion.cmake
 lib/cmake/infuse_asn1_conversions/infuse_asn1_conversionsTargets-release.cmake
 lib/cmake/infuse_asn1_conversions/infuse_asn1_conversionsTargets.cmake
+lib/libinfuse_asn1_conversions_base.so
+lib/libinfuse_asn1_conversions_base.so.${PKGVERSION}
+${PLIST.eigen3}lib/libinfuse_asn1_conversions_eigen.so
+${PLIST.eigen3}lib/libinfuse_asn1_conversions_eigen.so.${PKGVERSION}
+${PLIST.pcl}lib/libinfuse_asn1_conversions_pcl.so
+${PLIST.pcl}lib/libinfuse_asn1_conversions_pcl.so.${PKGVERSION}
+${PLIST.ros}lib/libinfuse_asn1_conversions_ros.so
+${PLIST.ros}lib/libinfuse_asn1_conversions_ros.so.${PKGVERSION}
+lib/pkgconfig/infuse_asn1_conversions_base.pc
+${PLIST.eigen3}lib/pkgconfig/infuse_asn1_conversions_eigen.pc
+${PLIST.pcl}lib/pkgconfig/infuse_asn1_conversions_pcl.pc
+${PLIST.ros}lib/pkgconfig/infuse_asn1_conversions_ros.pc

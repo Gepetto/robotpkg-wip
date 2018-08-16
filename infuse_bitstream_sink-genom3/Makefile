@@ -16,6 +16,9 @@ LICENSE=		isc
 
 include ../../architecture/genom3/module.mk
 
+# For InFuse we use ROS, so keep these options enabled by default
+PKG_SUGGESTED_OPTIONS+=		ros-client-c ros-client-ros ros-server
+
 include ../../interfaces/openrobots-idl/depend.mk
 include ../../wip/infuse-asn1-types/depend.mk
 include ../../wip/infuse-idl/depend.mk

@@ -1,14 +1,13 @@
 # robotpkg Makefile for:	wip/roscontrol_sot
 #
 
-VERSION=		0.0.2
+VERSION=		0.0.3
 PKGBASE=		roscontrol-sot
 PKGNAME=		${PKGBASE}-${VERSION}
 ROSNAME=		$(subst -,_,${PKGBASE})
 DISTNAME=		${ROSNAME}-${VERSION}
 WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=		${PKGBASE}
-PKGREVISION=		4
 
 CATEGORIES=		wip
 #MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=roscontrol_sot/}

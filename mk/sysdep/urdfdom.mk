@@ -1,4 +1,4 @@
-# robotpkg depend.mk for:   mono
+# robotpkg depend.mk for:   urdfdom
 # Created:      Quentin Labourey on Fri, 17 August 2018
 
 DEPEND_DEPTH:=          ${DEPEND_DEPTH}+
@@ -16,7 +16,7 @@ DEPEND_ABI.urdfdom=     urdfdom>=0.4
 SYSTEM_PKG.Ubuntu.urdfdom= liburdfdom-dev
 
 SYSTEM_SEARCH.urdfdom=\
-    'lib/pkgconfig/urdfdom_headers.pc' \
+    'lib/pkgconfig/urdfdom_headers.pc:/Version/s/[^0-9.]//gp' \
 	'lib/liburdfdom_model.so' \
 	'lib/liburdfdom_model_state.so' \
 	'lib/liburdfdom_sensor.so' \

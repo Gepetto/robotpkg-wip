@@ -2,7 +2,7 @@
 # Created:			Quentin Labourey on Fri, 17 August 2018
 
 DEPEND_DEPTH:=      ${DEPEND_DEPTH}+
-INFUSE_ENVIRE:= ${INFUSE_ENVIRE_DEPEND_MK}+
+INFUSE_ENVIRE_DEPEND_MK:= ${INFUSE_ENVIRE_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
 DEPEND_PKG+=      infuse-envire
@@ -64,7 +64,7 @@ SYSTEM_SEARCH.infuse-envire=\
 	'include/infuse_envire/serialization/SerializationHandle.hpp' \
 	'include/infuse_envire/util/Demangle.hpp' \
 	'lib/libinfuse_envire.so' \
-	'lib/pkgconfig/infuse_envire.pc'
+	'lib/pkgconfig/infuse_envire.pc:/Version/s/[^0-9.]//gp'
 
 endif # INFUSE_ASN1_TYPES_DEPEND_MK ---------------------------------------------
 

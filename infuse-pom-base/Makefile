@@ -13,7 +13,7 @@ COMMENT=                Base classes for the Position Manager, PoM
 LICENSE=                2-clause-bsd
 
 
-include ../../wip/mk/sysdep/urdfdom.mk
+include ../../graphics/urdfdom/depend.mk
 include ../../wip/infuse-envire/depend.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk

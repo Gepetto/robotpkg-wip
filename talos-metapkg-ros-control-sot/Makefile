@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Fri, 5 May 2017
 #
 
-VERSION=		0.0.10
+VERSION=		0.0.11
 PKGBASE=		talos-metapkg-ros-control-sot
 PKGNAME=		${PKGBASE}-${VERSION}
 ROSNAME=		$(subst -,_,${PKGBASE})

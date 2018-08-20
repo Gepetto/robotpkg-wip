@@ -1,5 +1,6 @@
-# robotpkg Makefile for:    wip/infuse-pom-base
-# Created:                  Quentin Labourey on Fri, 17 August 2018
+# robotpkg Makefile for:	devel/infuse-pom-base
+# Created:			Quentin Labourey on Fri, 17 Aug 2018
+#
 
 NAME=                   infuse-pom-base
 VERSION=                0.1

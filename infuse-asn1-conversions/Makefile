@@ -1,5 +1,6 @@
-# robotpkg Makefile for:    wip/infuse-asn1-conversions
-# Created:                  Ellon Paiva Mendes on wed, 25 July 2018
+# robotpkg Makefile for:	devel/infuse-asn1-conversions
+# Created:			Ellon Paiva Mendes on Thu, 26 Jul 2018
+#
 
 NAME=				infuse-asn1-conversions
 VERSION=			0.3

@@ -3,9 +3,8 @@
 #
 
 NAME=                   infuse-pom-base
-VERSION=                0.1
+VERSION=                0.1.1
 DISTNAME=               ${NAME}-${VERSION}
-PKGREVISION=            1
 CATEGORIES=             devel
 MASTER_SITES=           http://homepages.laas.fr/qlaboure/infuse/
 MASTER_REPOSITORY=      git ssh://git@redmine.laas.fr/laas/users/simon/infuse-pom-base.git

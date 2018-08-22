@@ -64,6 +64,6 @@ include ../../hardware/gyro-libs/depend.mk
 include ../../robots/rmp-libs/depend.mk
 include ../../robots/mana-emergency/depend.mk
 include ../../mk/language/c.mk
-include ../../hardware/MTI/depend.mk
+include ../infuse-MTI/depend.mk
 include ../../mk/robotpkg.mk
 

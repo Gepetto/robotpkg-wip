@@ -3,7 +3,7 @@
 #
 
 NAME=                   infuse-pom-crisp
-VERSION=                0.1
+VERSION=                0.1.1
 DISTNAME=               ${NAME}-${VERSION}
 PKGREVISION=            1
 CATEGORIES=             devel

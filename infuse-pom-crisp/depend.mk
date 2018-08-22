@@ -19,7 +19,6 @@ DEPEND_ABI.infuse-pom-crisp?=  infuse-pom-crisp>=0.1
 DEPEND_DIR.infuse-pom-crisp= ../../wip/infuse-pom-crisp
 
 SYSTEM_SEARCH.infuse-pom-crisp=\
-
     'include/infuse_pom_crisp/Crisp.hpp' \
     'include/infuse_pom_crisp/CrispASN1.hpp' \
     'lib/cmake/infuse_pom_crisp/infuse_pom_crispConfig.cmake' \

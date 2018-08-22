@@ -3,11 +3,10 @@
 #
 
 NAME=				infuse-asn1-conversions
-VERSION=			0.3
-PKGREVISION=        1
+VERSION=			0.4
 DISTNAME=			${NAME}-${VERSION}
 CATEGORIES=			devel
-MASTER_SITES=		http://homepages.laas.fr/emendes/infuse/
+MASTER_SITES=		http://homepages.laas.fr/qlaboure/infuse/
 MASTER_REPOSITORY=	git ssh://git@redmine.laas.fr/laas/users/simon/infuse-asn1-conversions.git 
 MAINTAINER=			ellon.mendes@laas.fr
 HOMEPAGE=			https://redmine.laas.fr/projects/infuse

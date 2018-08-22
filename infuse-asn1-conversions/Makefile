@@ -4,6 +4,7 @@
 
 NAME=				infuse-asn1-conversions
 VERSION=			0.3
+PKGREVISION=        1
 DISTNAME=			${NAME}-${VERSION}
 CATEGORIES=			devel
 MASTER_SITES=		http://homepages.laas.fr/emendes/infuse/

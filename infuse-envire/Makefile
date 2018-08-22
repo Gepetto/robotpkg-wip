@@ -2,7 +2,7 @@
 # Created:                  Pierre Narvor on Tue, 24 July 2018
 
 NAME=                   infuse-envire
-VERSION=                0.1
+VERSION=                0.1.1
 DISTNAME=               ${NAME}-${VERSION}
 CATEGORIES=             devel
 MASTER_SITES=           http://homepages.laas.fr/qlaboure/infuse/

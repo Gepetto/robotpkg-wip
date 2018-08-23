@@ -18,7 +18,7 @@ SYSTEM_SEARCH.py-dynamic-graph-tutorial=\
 
 DEPEND_USE+=		py-dynamic-graph-tutorial
 
-DEPEND_ABI.py-dynamic-graph-tutorial?=	py-dynamic-graph-tutorial>=1.0.0
+DEPEND_ABI.py-dynamic-graph-tutorial?=	${PKGTAG.python-}dynamic-graph-tutorial>=1.0.0
 DEPEND_DIR.py-dynamic-graph-tutorial?=	../../wip/py-dynamic-graph-tutorial
 
 endif # PY_DYNAMIC_GRAPH_TUTORIAL_DEPEND_MK ------------------------------------------------

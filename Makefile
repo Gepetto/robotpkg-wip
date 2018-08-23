@@ -37,7 +37,6 @@ SUBDIR+=	infuse-novatel-gps-driver-ros
 SUBDIR+=	jrl-walkgen-v3
 SUBDIR+=	jsbsim
 SUBDIR+=	kukaFri-libs
-SUBDIR+= 	laaswm-gui
 SUBDIR+=	libfreenect
 SUBDIR+=	libhatp
 SUBDIR+=	libmove3d

@@ -80,7 +80,6 @@ SUBDIR+=	py-dynamic-graph-v3
 SUBDIR+=	py-example-adder
 SUBDIR+=	py-hla
 SUBDIR+=	py-jsbsim
-SUBDIR+=	py-laaswm
 SUBDIR+=	py-mavlink
 SUBDIR+=	py-morse
 SUBDIR+=	py-mraa

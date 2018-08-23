@@ -1,11 +1,9 @@
-@comment Fri Dec 11 17:57:27 CET 2015
-
+@comment Thu Aug 16 17:18:42 CEST 2018
 include/dynamic-graph/config.hh
 include/dynamic-graph/deprecated.hh
 include/dynamic-graph/warning.hh
 include/dynamic-graph/config-tracer.hh
 include/dynamic-graph/config-tracer-real-time.hh
-include/dynamic-graph/config-shell-procedure.hh
 include/dynamic-graph/config-contiifstream.hh
 lib/pkgconfig/dynamic-graph.pc
 lib/libdynamic-graph.so.${PKGVERSION}
@@ -53,6 +51,4 @@ include/dynamic-graph/command-direct-getter.h
 include/dynamic-graph/command-direct-setter.h
 include/dynamic-graph/command-bind.h
 include/dynamic-graph/all-commands.h
-share/dynamic-graph/script/shell.dg
 share/dynamic-graph/script/tracer.dg
-${PKGMANDIR}/man1/dg-shell-plugin.1.gz

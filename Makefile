@@ -5,7 +5,6 @@ COMMENT=	WIP packages
 
 SUBDIR+=	antlr2
 SUBDIR+= 	atlaas
-SUBDIR+= 	atlaas-genom
 SUBDIR+=	backward-ros
 SUBDIR+=	can-utils
 SUBDIR+= 	certi

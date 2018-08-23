@@ -2,6 +2,7 @@
 # Created:			Ellon Paiva Mendes on Thu, 26 Jul 2018
 #
 
+PKGREVISION=        1 
 NAME=				infuse-asn1-conversions
 VERSION=			0.4
 DISTNAME=			${NAME}-${VERSION}
@@ -12,6 +13,7 @@ MAINTAINER=			ellon.mendes@laas.fr
 HOMEPAGE=			https://redmine.laas.fr/projects/infuse
 COMMENT=			Conversions from/to ASN.1 types for InFuse.
 LICENSE=			2-clause-bsd
+
 
 
 # Options

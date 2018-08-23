@@ -1,0 +1,19 @@
+@comment Fri Jul 13 11:42:58 CEST 2018
+${PYTHON_SITELIB}/dynamic_graph/ros/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/ros/dgcompleter.py
+${PYTHON_SITELIB}/dynamic_graph/ros/ros.py
+${PYTHON_SITELIB}/dynamic_graph/ros/ros_joint_state/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/ros/ros_joint_state/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/ros/ros_publish/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/ros/ros_publish/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/ros/ros_queued_subscribe/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/ros/ros_queued_subscribe/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/ros/ros_subscribe/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/ros/ros_subscribe/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/ros/ros_tf_listener/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/ros/ros_tf_listener/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/ros/ros_time/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/ros/ros_time/wrap.so
+${PYTHON_SITELIB}/dynamic_graph_bridge/__init__.py
+${PYTHON_SITELIB}/dynamic_graph_bridge/srv/_RunPythonFile.py
+${PYTHON_SITELIB}/dynamic_graph_bridge/srv/__init__.py

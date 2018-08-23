@@ -4,7 +4,6 @@
 COMMENT=	WIP packages
 
 SUBDIR+=	antlr2
-SUBDIR+= 	atlaas
 SUBDIR+=	backward-ros
 SUBDIR+=	can-utils
 SUBDIR+= 	certi

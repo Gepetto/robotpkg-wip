@@ -95,6 +95,7 @@ SUBDIR+=	py-mraa
 SUBDIR+=	py-parametric-curves
 SUBDIR+=	py-sot-core-v3
 SUBDIR+=	py-sot-dyninv-v3
+SUBDIR+=	py-sot-dynamic-pinocchio-v3
 SUBDIR+=	py-sot-pattern-generator-v3
 SUBDIR+=	py-sot-tools-v3
 SUBDIR+=	py-sot-torque-control

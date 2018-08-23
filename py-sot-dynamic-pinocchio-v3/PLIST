@@ -1,0 +1,27 @@
+@comment Fri Dec 6 09:25:38 CET 2013
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/angle_estimator/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/angle_estimator/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/dynamic/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/dynamic/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/force_compensation/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/force_compensation/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/humanoid_robot.py
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/integrator_force/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/integrator_force/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/integrator_force_exact/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/integrator_force_exact/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/integrator_force_rk4/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/integrator_force_rk4/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/mass_apparent/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/mass_apparent/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/parser.py
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/tools.py
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/waist_attitude_from_sensor/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/waist_attitude_from_sensor/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/zmp_from_forces/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/zmp_from_forces/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/zmpreffromcom/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/dynamics_pinocchio/zmpreffromcom/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/tutorial/kine_romeo.py
+${PYTHON_SITELIB}/dynamic_graph/tutorial/kine_romeo_small.py

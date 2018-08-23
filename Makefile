@@ -124,6 +124,5 @@ SUBDIR+=	tiago-robot
 SUBDIR+=	tsid
 SUBDIR+= 	ur5-description
 SUBDIR+= 	urg
-SUBDIR+= 	vnet-yarp
 
 include ../mk/robotpkg.subdir.mk

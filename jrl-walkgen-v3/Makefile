@@ -1,29 +1,26 @@
-# robotpkg Makefile for:	path/jrl-walkgen
+# robotpkg Makefile for:	wip/jrl-walkgen-v3
 # Created:			Anthony Mallet on Tue, 15 May 2007
 #
 
-DISTNAME=	jrl-walkgen-v3-${VERSION}
-PKGNAME=	jrl-walkgen-v3-${VERSION}
-VERSION=	4.0.2
-PKGREVISION=	2
+ORG=			stack-of-tasks
+NAME=			jrl-walkgen
+VERSION=		4.0.3
+
+DISTNAME=		${NAME}-${VERSION}
+PKGNAME=		${NAME}-v3-${VERSION}
+
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
+CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/jrl-walkgen/
+COMMENT=		Walk pattern generator for the HRP-2 humanoid robot.
+LICENSE=		2-clause-bsd
+MAINTAINER=		gepetto-soft@laas.fr
 
-MAINTAINER=	gepetto@laas.fr
-COMMENT=	Walk pattern generator for the HRP-2 humanoid robot.
-LICENSE=	gnu-lgpl-v3
+CONFLICTS+=		${NAME}
 
-DYNAMIC_PLIST_DIRS+=	share/doc/jrl-walkgen
-
-CONFLICTS+=		jrl-walkgen
-
-PKG_SUPPORTED_OPTIONS+= debug
-PKG_OPTION_DESCR.debug=	Compile in debugging mode
-PKG_OPTION_SET.debug:=	CMAKE_ARGS+= -DCMAKE_BUILD_TYPE=Debug
-
-CMAKE_ARGS+=    -DCMAKE_INSTALL_LIBDIR=lib
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../mk/sysdep/cmake.mk
 include ../../math/pinocchio/depend.mk

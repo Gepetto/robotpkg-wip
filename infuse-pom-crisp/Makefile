@@ -2,11 +2,10 @@
 # Created:			Quentin Labourey on Tue, 21 Aug 2018
 #
 
-PKGREVISION=            1
+PKGREVISION=            2
 NAME=                   infuse-pom-crisp
 VERSION=                0.1.1
 DISTNAME=               ${NAME}-${VERSION}
-PKGREVISION=            1
 CATEGORIES=             devel
 MASTER_SITES=           http://homepages.laas.fr/qlaboure/infuse/
 MASTER_REPOSITORY=      git ssh://git@redmine.laas.fr/laas/users/simon/infuse-pom-crisp.git

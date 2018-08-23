@@ -4,36 +4,30 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-tools
-VERSION=		2.0.3
+VERSION=		2.1.0
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${NAME}.git
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}
 CHECKOUT_VCS_OPTS+=	--recursive
 
-MAINTAINER=		gepetto@laas.fr
 CATEGORIES=		wip
-LICENSE=		gnu-lgpl-v3
-COMMENT=		Python tools for wip/sot-core-v3 package
+COMMENT=		tools for the sot-core package (python bindings)
+LICENSE=		2-clause-bsd
+MAINTAINER=		gepetto-soft@laas.fr
 
-CONFLICTS+=		py[0-9][0-9]-sot-tools-v3-[0-9]*
-CONFLICTS+=		py[0-9][0-9]-sot-tools-[0-9]*
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+CONFLICTS+=		py[0-9][0-9]-${NAME}
 
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF  # doxygen segfaults on 14.04
 
-# disable -Werror, some warnings from boost-filesystem (1.50, netbsd) cannot be
-# fixed here
-CMAKE_ARGS+=		-DCXX_DISABLE_WERROR=yes
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
-DEPEND_ABI.python+=	python<3
-
+include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
-#include ../../wip/py-sot-core-v3/depend.mk TODO
-include ../../wip/sot-tools-v3/depend.mk
+include ../../wip/py-sot-core-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

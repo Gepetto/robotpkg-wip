@@ -19,7 +19,6 @@ SUBDIR+=	gdalwrap
 SUBDIR+= 	gerard-bauzil
 SUBDIR+=	hatpconsole
 SUBDIR+=	hatponboard-lib
-SUBDIR+=	hatptester
 SUBDIR+=	head-action
 SUBDIR+=	histodet
 SUBDIR+=	hrp2-dev

@@ -20,7 +20,7 @@ SYSTEM_SEARCH.py-example-adder=\
 
 DEPEND_USE+=		py-example-adder
 
-DEPEND_ABI.py-example-adder?=	py-example-adder>=1.0.0
+DEPEND_ABI.py-example-adder?=	${PKGTAG.python-}example-adder>=1.0.0
 DEPEND_DIR.py-example-adder?=	../../wip/py-example-adder
 
 endif # PY_EXAMPLE_ADDER_DEPEND_MK ------------------------------------------------

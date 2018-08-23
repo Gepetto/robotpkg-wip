@@ -1,36 +1,37 @@
-# robotpkg Makefile for:	motion/sot-pattern-generator
+# robotpkg Makefile for:	wip/sot-pattern-generator-v3
 # Created:			Olivier Stasse on Thu, 18 Apr 2013
 #
 
-VERSION=		3.0.1
-DISTNAME=		sot-pattern-generator-v3-${VERSION}
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-pattern-generator-v3/}
-MASTER_REPOSITORY=\
-	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/sot-pattern-generator/
+ORG=			stack-of-tasks
+NAME=			sot-pattern-generator
+VERSION=		3.1.0
 
-MAINTAINER=		gepetto@laas.fr
+DISTNAME=		${NAME}-${VERSION}
+PKGNAME=		${NAME}-v3-${VERSION}
+
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
+CHECKOUT_VCS_OPTS+=	--recursive
+
 CATEGORIES=		wip
 COMMENT=		Walking Pattern Generator
-LICENSE=		gnu-lgpl-v3
+LICENSE=		2-clause-bsd
+MAINTAINER=		gepetto-soft@laas.fr
 
-DYNAMIC_PLIST_DIRS+=	share/doc/sot-pattern-generator
+CONFLICTS+=		${NAME}
 
-CMAKE_ARGS+=		-DPYTHON_EXECUTABLE=${PYTHON}
-CMAKE_ARGS+=		-DPYTHON_INCLUDE_DIR=${PYTHON_INCLUDE}
-CMAKE_ARGS+=		-DPYTHON_LIBRARY=${PYTHON_LIB}
-CMAKE_ARGS+=		-DPYTHON_SITELIB=${PYTHON_SITELIB}
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
+CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
+
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../wip/jrl-walkgen-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
-include ../../wip/sot-application-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
-include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

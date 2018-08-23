@@ -4,23 +4,20 @@
 
 ORG=				stack-of-tasks
 NAME=				sot-torque-control
-VERSION=			1.0.0
-PKGREVISION=		3
+VERSION=			1.1.0
 
 DISTNAME=			${NAME}-${VERSION}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${NAME}.git
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
 CHECKOUT_VCS_OPTS=	--recursive
 
-
-MAINTAINER=			gepetto@laas.fr
 CATEGORIES=			wip
 COMMENT=			Torque control for humanoids
 LICENSE=			2-clause-bsd
+MAINTAINER=			gepetto-soft@laas.fr
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
-WRKSRC=		${WRKDIR}/${DISTNAME:a=}
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 

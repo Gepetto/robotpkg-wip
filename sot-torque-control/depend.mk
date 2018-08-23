@@ -1,4 +1,4 @@
-# robotpkg depend.mk for:	wip/sot-core
+# robotpkg depend.mk for:	wip/sot-torque-control
 # Created:			Rohan Budhiraja on Thu, 17 Dec 2015
 #
 
@@ -20,7 +20,7 @@ SYSTEM_SEARCH.sot-torque-control=\
 
 DEPEND_USE+=		sot-torque-control
 
-DEPEND_ABI.sot-torque-control?=	sot-torque-control>=3.0.0
+DEPEND_ABI.sot-torque-control?=	sot-torque-control>=1.0.0
 DEPEND_DIR.sot-torque-control?=	../../wip/sot-torque-control
 
 endif # SOT_CORE_DEPEND_MK -------------------------------------------------

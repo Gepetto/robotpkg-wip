@@ -18,8 +18,7 @@ DEPEND_ABI.py-dynamic-graph-v3?=	${PKGTAG.python-}dynamic-graph-v3>=3.0
 DEPEND_DIR.py-dynamic-graph-v3?=	../../wip/py-dynamic-graph-v3
 
 SYSTEM_SEARCH.py-dynamic-graph-v3=\
-	lib/pkgconfig/dynamic-graph-python.pc \
-	include/dynamic-graph/python/interpreter.hh
+	'${PYTHON_SYSLIBSEARCH}/dynamic_graph/wrap.so'
 
 include ../../mk/sysdep/python.mk
 

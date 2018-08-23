@@ -1,4 +1,4 @@
-# robotpkg depend.mk for:	wip/sot-core
+# robotpkg depend.mk for:	wip/sot-core-v3
 # Created:			Rohan Budhiraja on Thu, 17 Dec 2015
 #
 

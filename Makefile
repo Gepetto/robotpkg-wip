@@ -23,7 +23,6 @@ SUBDIR+=	hatponboard-lib
 SUBDIR+=	hatptester
 SUBDIR+=	head-action
 SUBDIR+=	histodet
-SUBDIR+=	hri-simulation
 SUBDIR+=	hrp2-dev
 SUBDIR+=	hrp2-14-description
 SUBDIR+=	hrp2-bringup

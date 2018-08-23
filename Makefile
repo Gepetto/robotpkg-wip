@@ -93,6 +93,7 @@ SUBDIR+=	py-mavlink
 SUBDIR+=	py-morse
 SUBDIR+=	py-mraa
 SUBDIR+=	py-parametric-curves
+SUBDIR+=	py-sot-core-v3
 SUBDIR+=	py-sot-tools-v3
 SUBDIR+=	py-sot-torque-control
 SUBDIR+=	pyrene-motions

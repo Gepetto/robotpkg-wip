@@ -18,7 +18,6 @@ SUBDIR+=	example-adder
 SUBDIR+=	FRILibrary
 SUBDIR+=	gdalwrap
 SUBDIR+= 	gerard-bauzil
-SUBDIR+=	gladys
 SUBDIR+=	hatpconsole
 SUBDIR+=	hatponboard-lib
 SUBDIR+=	hatptester

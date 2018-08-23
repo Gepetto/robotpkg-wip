@@ -1,29 +1,28 @@
-# robotpkg Makefile for:	wip/dynamic-graph-bridge
+# robotpkg Makefile for:	wip/dynamic-graph-bridge-v3
 #
 
-VERSION=		3.0.10
-DISTNAME=		dynamic_graph_bridge-v3-${VERSION}
-PKGNAME=		dynamic-graph-bridge-v3-${VERSION}
-PKGREVISION=		3
-CATEGORIES=		wip
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=dynamic-graph-bridge-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/dynamic_graph_bridge/
+ORG=			stack-of-tasks
+NAME=			dynamic-graph-bridge
+VERSION=		3.1.0
+
+ROSNAME=		$(subst -,_,${NAME})
+DISTNAME=		${ROSNAME}-${VERSION}
+PKGNAME=		${NAME}-v3-${VERSION}
+
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}
 CHECKOUT_VCS_OPTS+=	--recursive
 
+CATEGORIES=		wip
 COMMENT=		This ROS package binds together the ROS framework with the dynamic-graph real-time control architecture.
-LICENSE=		gnu-lgpl-v3
-MAINTAINER=		hpp@laas.fr
+LICENSE=		2-clause-bsd
+MAINTAINER=		gepetto-soft@laas.fr
 
-DYNAMIC_PLIST_DIRS+=	share/doc/doxygen-html
+CONFLICTS+=		${ROSNAME}
 
-# disable -Werror because of x86_64 warnings (must be fixed upstream) and
-# boost + gcc that don't cohabit well depending on their respective versions
-CMAKE_ARGS+=		-DCXX_DISABLE_WERROR=yes
+CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
-# man pages location
-CMAKE_ARGS+=		-DMANDIR=${PREFIX}/${PKGMANDIR}
-# library location
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-realtime-tools/depend.mk
@@ -37,11 +36,10 @@ include ../../simulation/bullet/depend.mk
 include ../../simulation/bullet/depend.mk
 include ../../sysutils/ros-rospack/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
-include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
+include ../../math/pinocchio/depend.mk
 include ../../mk/sysdep/cmake.mk
-include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

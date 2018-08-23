@@ -35,7 +35,6 @@ SUBDIR+=	infuse-msgs-ros
 SUBDIR+=	infuse-novatel-gps-driver-ros
 SUBDIR+=	jrl-walkgen-v3
 SUBDIR+=	jsbsim
-SUBDIR+=	libfreenect
 SUBDIR+=	libhatp
 SUBDIR+=	libmove3d
 SUBDIR+=	libmove3d-hri

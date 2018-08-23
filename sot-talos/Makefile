@@ -17,7 +17,7 @@ MAINTAINER=		ostasse@laas.fr
 
 
 include ../../wip/talos-data/depend.mk
-include ../../wip/sot-application-v3/depend.mk
+include ../../wip/py-sot-application-v3/depend.mk
 include ../../wip/sot-dyninv-v3/depend.mk
 include ../../motion/dynamic-graph-bridge-msgs/depend.mk
 include ../../wip/dynamic-graph-bridge-v3/depend.mk

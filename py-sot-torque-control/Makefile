@@ -4,37 +4,34 @@
 
 ORG=				stack-of-tasks
 NAME=				sot-torque-control
-VERSION=			1.0.0
-PKGREVISION=		3
+VERSION=			1.1.0
 
 DISTNAME=			${NAME}-${VERSION}
 PKGNAME=			${PKGTAG.python-}${DISTNAME}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${NAME}.git
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}
 CHECKOUT_VCS_OPTS=	--recursive
 
-
-MAINTAINER=			gepetto@laas.fr
 CATEGORIES=			wip
-COMMENT=			Torque control for humanoids
+COMMENT=			Torque control for humanoids (python bindings)
 LICENSE=			2-clause-bsd
-
-CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=ON
-WRKSRC=		${WRKDIR}/${DISTNAME:a=}
+MAINTAINER=			gepetto-soft@laas.fr
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+
+include ../../${CATEGORIES}/${NAME}/depend.mk
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../math/pinocchio/depend.mk
+include ../../math/py-pinocchio/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
-#include ../../wip/py-sot-core-v3/depend.mk TODO
+include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/tsid/depend.mk
-#include ../../wip/py-tsid/depend.mk TODO
 include ../../wip/parametric-curves/depend.mk
 include ../../wip/py-parametric-curves/depend.mk
 include ../../wip/simple-humanoid-description/depend.mk

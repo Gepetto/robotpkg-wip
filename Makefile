@@ -29,7 +29,6 @@ SUBDIR+=	hrp2-bringup
 SUBDIR+=	hrp2-computer-monitor
 SUBDIR+=	hrp2-machine
 SUBDIR+=	hyper
-SUBDIR+=	hyper-viewer
 SUBDIR+=	infuse-asn1-conversions
 SUBDIR+=	infuse-asn1-types
 SUBDIR+=	infuse-envire

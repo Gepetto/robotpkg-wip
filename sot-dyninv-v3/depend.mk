@@ -19,7 +19,7 @@ SYSTEM_SEARCH.sot-dyninv-v3=\
 
 DEPEND_USE+=		sot-dyninv-v3
 
-DEPEND_ABI.sot-dyninv-v3?=	sot-dyninv-v3>=3.0.0
+DEPEND_ABI.sot-dyninv-v3?=	sot-dyninv-v3>=2.0.0
 DEPEND_DIR.sot-dyninv-v3?=	../../wip/sot-dyninv-v3
 
 endif # SOT_DYNINV_V3_DEPEND_MK -------------------------------------------------

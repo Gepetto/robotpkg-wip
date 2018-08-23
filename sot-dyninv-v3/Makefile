@@ -2,25 +2,29 @@
 # Created:			Rohan Budhiraja on Thu, 08 Sep 2016
 #
 
-VERSION=		3.0.0
-PKGREVISION=		0
-PKGNAME=		sot-dyninv-v3-${VERSION}
-DISTNAME=		sot-dyninv-v3-${VERSION}
+ORG=			stack-of-tasks
+NAME=			sot-dyninv
+VERSION=		3.1.0
 
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-dyninv-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/sot-dyninv
+DISTNAME=		${NAME}-${VERSION}
+PKGNAME=		${NAME}-v3-${VERSION}
 
-MAINTAINER=	hpp@laas.fr
-CATEGORIES=	wip
-LICENSE=	gnu-lgpl-v3
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
+CHECKOUT_VCS_OPTS+=	--recursive
 
-CONFLICTS+=		sot-dyninv
-DYNAMIC_PLIST_DIRS+=	share/doc/sot-dyninv
-DEPEND_ABI.python+= python<3.0
+CATEGORIES=		wip
+COMMENT=		Resolve the inverse of the dynamics of a free-floating robot
+LICENSE=		2-clause-bsd
+MAINTAINER=		gepetto-soft@laas.fr
+
+CONFLICTS+=		${NAME}
+
+CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
+
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../wip/soth/depend.mk
-
-include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

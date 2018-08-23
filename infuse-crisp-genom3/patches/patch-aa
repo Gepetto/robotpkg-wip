@@ -1,0 +1,104 @@
+--- codels/infuse_crisp_update_internal_tree_codels.cc	2018-08-22 09:39:25.000000000 +0200
++++ codels/infuse_crisp_update_internal_tree_codels.cc	2018-08-23 11:02:48.878530834 +0200
+@@ -56,6 +56,7 @@
+                         const genom_context self)
+ {
+     asn1_bitstream* gbstream;
++    vector<PositionManager::FrameId> leavesNames = ids->crisp->getLeavesNames();
+     for(int i = 0; i < ids->outputPortInfos._length; i++)
+     {
+         if(sensorPoseOutput->open(ids->outputPortInfos._buffer[i].name, self) != genom_ok)
+@@ -71,10 +72,23 @@
+                  << string(ids->outputPortInfos._buffer[i].name) << endl;
+             continue;
+         }
+-        gbstream->data._maximum = asn1SccTransformWithCovariance_REQUIRED_BYTES_FOR_ENCODING;
+-        gbstream->data._length  = asn1SccTransformWithCovariance_REQUIRED_BYTES_FOR_ENCODING;
+-        gbstream->data._release = NULL;
+-        gbstream->data._buffer  = new uint8_t[asn1SccTransformWithCovariance_REQUIRED_BYTES_FOR_ENCODING];
++
++        struct timeval tv;
++        gettimeofday(&tv,NULL);
++        long long timeNow = tv.tv_sec*1000000 + tv.tv_usec;
++        gbstream->header.seq = 0;
++        gbstream->header.stamp.sec = timeNow / 1000000;
++        gbstream->header.stamp.nsec = (timeNow % 1000000) * 1000;
++        gbstream->header.frame_id = (char*)malloc(sizeof(char)*(1 + strlen(leavesNames[i].c_str())));
++        sprintf(gbstream->header.frame_id, leavesNames[i].c_str());
++
++        //// Init bistream type
++        gbstream->type = (char*)malloc(sizeof(char)*(1 + strlen("TransformWithCovariance")));
++        sprintf(gbstream->type, "TransformWithCovariance");
++        gbstream->serialization_method = 0; //uPER
++        //reserve memory for serialized data
++        genom_sequence_reserve(&(gbstream->data), asn1SccTransformWithCovariance_REQUIRED_BYTES_FOR_ENCODING);
++        gbstream->data._length = 0;
+ 
+         ids->crisp->toggleLeafState(string(ids->outputPortInfos._buffer[i].name));
+ 
+@@ -113,9 +127,6 @@
+         }
+ 
+         //This section is to not read several time the same pose
+-        //if(gbstream->currentByte == -1)
+-        //    continue;
+-        //gbstream->currentByte = -1;
+         if(gbstream->header.stamp.nsec == UINT32_MAX)
+             continue;
+         gbstream->header.stamp.nsec == UINT32_MAX;
+@@ -135,6 +146,9 @@
+     //    cout << " \"" << leavesNames[i] << "\"";
+     //cout << endl;
+ 
++    struct timeval tv;
++    gettimeofday(&tv,NULL);
++    long long timeNow = tv.tv_sec*1000000 + tv.tv_usec;    
+     for(int i = 0; i < leavesNames.size(); i++)
+     {
+         gbstream = sensorPoseOutput->data(leavesNames[i].c_str(), self);
+@@ -144,23 +158,34 @@
+                  << leavesNames[i].c_str() << "\""<< endl;
+             continue;
+         }
++        gbstream->header.seq = gbstream->header.seq + 1;
++        gbstream->header.stamp.sec = timeNow / 1000000;
++        gbstream->header.stamp.nsec = (timeNow % 1000000) * 1000;
++
+         bstream.buf = gbstream->data._buffer;
+-        ids->crisp->getLeafPose(leavesNames[i], bstream);
++        if(!ids->crisp->getLeafPose(leavesNames[i], bstream))
++        {
++            cout << "Encoding error, could not export sensor pose : " << leavesNames[i] << endl;
++        }
++        gbstream->data._length = asn1SccTransformWithCovariance_REQUIRED_BYTES_FOR_ENCODING;
++        gbstream->data._length = bstream.count;
++
+         if(sensorPoseOutput->write(leavesNames[i].c_str(), self) != genom_ok)
+         {
+             cout << "Could not export sensor pose : " << leavesNames[i] << endl;
+         }
+     }
+-    /*map<PositionManager::FrameId,PositionManager::Pose> poses;
+-    ids->crisp->getActiveLeavesPoses(poses);
+-    for(map<PositionManager::FrameId,PositionManager::Pose>::iterator it = poses.begin();
+-        it != poses.end(); ++it)
+-    {
+-        cout << it->second.toString() << "\n";
+-    }
+-    if(poses.size() != 0)
+-        cout << endl;
+-    */
++
++    //map<PositionManager::FrameId,PositionManager::Pose> poses;
++    //ids->crisp->getActiveLeavesPoses(poses);
++    //for(map<PositionManager::FrameId,PositionManager::Pose>::iterator it = poses.begin();
++    //    it != poses.end(); ++it)
++    //{
++    //    cout << it->second.toString() << "\n";
++    //}
++    //if(poses.size() != 0)
++    //    cout << endl;
++    
+ 
+     return infuse_crisp_pause_readjoints;
+ }

@@ -1,27 +1,26 @@
-# robotpkg Makefile for:	math/tsid
+# robotpkg Makefile for:	wip/tsid
 # Created:			Justin Carpentier on Thu, 16 June 2017
 #
 
+ORG=			stack-of-tasks
+NAME=			tsid
 VERSION=		1.0.2
-DISTNAME=		tsid-${VERSION}
+PKGREVISION=	1
 
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${PKGBASE}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/${PKGBASE}
+DISTNAME=		${NAME}-${VERSION}
 
-MAINTAINER=		gepetto@laas.fr
-CATEGORIES=		math
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
+CHECKOUT_VCS_OPTS+=	--recursive
+
+CATEGORIES=		wip
 COMMENT=		Efficient Inverse Dynamics based on Pinocchio
-LICENSE=		gnu-lgpl-v3
+LICENSE=		2-clause-bsd
+MAINTAINER=		gepetto-soft@laas.fr
 
-# parallel builds would consume all memory because of the g++ process size
-MAKE_JOBS_SAFE=		no
+CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${PKGBASE}
-
-CMAKE_ARGS+=    -DCMAKE_INSTALL_LIBDIR=lib
-
-CMAKE_ARGS+=		-DBUILD_UNIT_TESTS=ON
-CMAKE_ARGS+=    -DINSTALL_DOCUMENTATION=OFF
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 USE_BOOST_LIBS=		unit_test_framework
 

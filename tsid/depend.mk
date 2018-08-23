@@ -1,4 +1,4 @@
-# robotpkg depend.mk for:	math/tsid
+# robotpkg depend.mk for:	wip/tsid
 # Created:			Justin Carpentier on Thu, 16 June 2017
 #
 

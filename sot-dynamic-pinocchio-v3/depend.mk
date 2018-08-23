@@ -1,4 +1,4 @@
-# robotpkg Makefile for:	wip/sot-dynamic-pinocchio
+# robotpkg Makefile for:	wip/sot-dynamic-pinocchio-v3
 # Created:			Rohan Budhiraja on Fri, 8 Apr 2016
 #
 
@@ -15,7 +15,7 @@ PREFER.sot-dynamic-pinocchio-v3?=	robotpkg
 
 SYSTEM_SEARCH.sot-dynamic-pinocchio-v3=\
 	include/sot-dynamic-pinocchio/dynamic-pinocchio.h \
-	'lib/pkgconfig/sot-dynamic-pinocchio.pc:Version/s/[^0-9.]//gp' 
+	'lib/pkgconfig/sot-dynamic-pinocchio.pc:Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		sot-dynamic-pinocchio-v3
 

@@ -1,47 +1,40 @@
-# robotpkg Makefile for:	wip/sot-dynamic-pinocchio
+# robotpkg Makefile for:	wip/sot-dynamic-pinocchio-v3
 # Created:			Rohan Budhiraja on Fri, 8 Apr 2016
 #
 
-VERSION=		3.1.8
-PKGNAME=		sot-dynamic-pinocchio-v3-${VERSION}
-DISTNAME=		sot-dynamic-pinocchio-v3-${VERSION}
+ORG=			stack-of-tasks
+NAME=			sot-dynamic-pinocchio
+VERSION=		3.2.0
 
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=sot-dynamic-pinocchio-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}stack-of-tasks/sot-dynamic-pinocchio/
+DISTNAME=		${NAME}-${VERSION}
+PKGNAME=		${NAME}-v3-${VERSION}
+
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
 CHECKOUT_VCS_OPTS+=	--recursive
 
+CATEGORIES=		wip
+COMMENT=		Create entities to compute a robot dynamics properties using pinocchio
+LICENSE=		2-clause-bsd
+MAINTAINER=		gepetto-soft@laas.fr
 
-MAINTAINER=	gepetto@laas.fr
-CATEGORIES=	wip
-LICENSE=	gnu-lgpl-v3
-COMMENT=	Create entities to compute a robot dynamics properties using pinocchio
-
+CONFLICTS+=		${NAME}
 
 # parallel builds would consume all memory because of the g++ process size
 MAKE_JOBS_SAFE=		no
 
-DYNAMIC_PLIST_DIRS+=	share/doc/sot-dynamic-pinocchio
-CMAKE_ARGS+=		-DPYTHON_SITELIB=${PYTHON_SITELIB}
-CMAKE_ARGS+=		-DPYTHON_INCLUDE_PATH=${PYTHON_INCLUDE}
-CMAKE_ARGS+=		-DPYTHON_LIBRARY=${PYTHON_LIB}
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
+CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
-CONFLICTS+=		sot-dynamic
-CONFLICTS+=		sot-dynamic-v3
-
-DEPEND_ABI.python+= python<3.0
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../devel/tinyxml/depend.mk
 include ../../math/pinocchio/depend.mk
-include ../../math/py-pinocchio/depend.mk
-include ../../wip/py-sot-tools-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
+include ../../wip/sot-tools-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/graphviz.mk
-include ../../mk/sysdep/pdflatex.mk
-include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

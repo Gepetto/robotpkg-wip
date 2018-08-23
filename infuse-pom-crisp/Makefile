@@ -2,6 +2,7 @@
 # Created:			Quentin Labourey on Tue, 21 Aug 2018
 #
 
+PKGREVISION=            1
 NAME=                   infuse-pom-crisp
 VERSION=                0.1.1
 DISTNAME=               ${NAME}-${VERSION}

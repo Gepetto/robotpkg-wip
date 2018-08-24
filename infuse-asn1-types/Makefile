@@ -2,10 +2,10 @@
 # Created:                  Quentin Labourey on Fri, 6 July 2018
 
 NAME=                   infuse-asn1-types
-VERSION=                0.2
+VERSION=                0.3
 DISTNAME=               ${NAME}-${VERSION}
 CATEGORIES=             devel
-MASTER_SITES=           http://homepages.laas.fr/emendes/infuse/
+MASTER_SITES=           http://homepages.laas.fr/qlaboure/infuse/
 MASTER_REPOSITORY=      git ssh://git@redmine.laas.fr/laas/users/simon/infuse_asn1_types.git 
 MAINTAINER=             quentin.labourey@laas.fr
 HOMEPAGE=               https://redmine.laas.fr/projects/infuse

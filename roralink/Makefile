@@ -1,5 +1,5 @@
-VERSION=	0.1
-DISTNAME=	roralink-${VERSION}
+VERSION=	0.3.0
+DISTNAME=	roralink-${VERSION}-Source
 CATEGORIES=	wip
 
 MASTER_SITES=	${MASTER_SITE_OPENROBOTS:=roralink/}
@@ -12,12 +12,6 @@ COMMENT=	Network tunnel to allow seamless wire/wireless connections
 
 ONLY_FOR_PLATFORM=      Linux-%
 
-WRKSRC=		${WRKDIR}/roralink
-NO_CONFIGURE=	yes
-INSTALLATION_DIRS=	${PREFIX}/bin
-
-do-install:
-		cd ${WRKSRC} && ${CP} roraclient ${DESTDIR}${PREFIX}/bin/
-
+include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

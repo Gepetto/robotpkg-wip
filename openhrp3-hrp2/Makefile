@@ -24,7 +24,7 @@ DYNAMIC_PLIST_DIRS+=	share/doc/openhrp3_hrp2
 
 include ../../wip/openhrp3-simulator-wo-rtm/depend.mk
 include ../../wip/sot-hrp2-v3/depend.mk
-include ../../wip/dynamic-graph-bridge-v3/depend.mk
+include ../../wip/py-dynamic-graph-bridge-v3/depend.mk
 include ../../robots/hrp2-14/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-xacro/depend.mk

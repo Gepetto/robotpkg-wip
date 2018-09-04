@@ -19,6 +19,10 @@ DEPEND_ABI.py-dynamic-graph-bridge-v3?=		${PKGTAG.python-}dynamic-graph-bridge-v
 DEPEND_DIR.py-dynamic-graph-bridge-v3?=		../../wip/py-dynamic-graph-bridge-v3
 
 SYSTEM_SEARCH.py-dynamic-graph-bridge-v3=\
+  'include/dynamic_graph_bridge/config.hh'				\
+  'lib/pkgconfig/dynamic_graph_bridge.pc:/Version/s/[^0-9.]//gp'	\
+  'share/dynamic_graph_bridge/robot_pose_publisher'			\
+  'share/dynamic_graph_bridge/cmake/dynamic_graph_bridgeConfig.cmake' \
   '${PYTHON_SITELIB}/dynamic_graph/ros/ros.py'
 
 
@@ -27,6 +31,6 @@ include ../../middleware/ros-comm/depend.mk
 
 include ../../mk/sysdep/python.mk
 
-endif # ROS_REALTIMETOOLS_DEPEND_MK --------------------------------------------
+endif # PY_ROS_DYNAMICGRAPHBRIDGE_V3_DEPEND_MK --------------------------------------------
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}

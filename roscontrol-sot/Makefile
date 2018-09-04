@@ -39,7 +39,7 @@ CMAKE_PREFIX_PATH+= ${PREFIX}
 
 include ../../sysutils/ros-rospack/depend.mk
 include ../../motion/dynamic-graph-bridge-msgs/depend.mk
-include ../../wip/dynamic-graph-bridge-v3/depend.mk
+include ../../wip/py-dynamic-graph-bridge-v3/depend.mk
 include ../../devel/ros-realtime-tools/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../interfaces/ros-control-msgs/depend.mk

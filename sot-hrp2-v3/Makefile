@@ -19,7 +19,7 @@ MAINTAINER=		hpp@laas.fr
 DYNAMIC_PLIST_DIRS+=	share/doc/sot-hrp2
 
 
-include ../../wip/dynamic-graph-bridge-v3/depend.mk
+include ../../wip/py-dynamic-graph-bridge-v3/depend.mk
 include ../../motion/dynamic-graph-bridge-msgs/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
 include ../../wip/py-sot-tools-v3/depend.mk

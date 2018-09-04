@@ -9,7 +9,6 @@ SUBDIR+=	can-utils
 SUBDIR+= 	certi
 SUBDIR+=	dptu-genom3
 SUBDIR+=	dynamic-graph-v3
-SUBDIR+=	dynamic-graph-bridge-v3
 SUBDIR+=	dynamic-graph-tutorial
 SUBDIR+=	dynamic-introspection
 SUBDIR+=	eigen-quadprog

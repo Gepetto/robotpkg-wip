@@ -1,9 +1,10 @@
-# robotpkg Makefile for:	wip/dynamic-graph-bridge
+# robotpkg Makefile for:	wip/dynamic-graph-bridge-v3
 #
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-bridge
 VERSION=		3.1.0
+PKGREVISION=	1
 
 ROSNAME=		$(subst -,_,${NAME})
 DISTNAME=		${ROSNAME}-${VERSION}
@@ -14,17 +15,15 @@ MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}
 CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
-COMMENT=		This ROS package binds together the ROS framework with the dynamic-graph real-time control architecture (python bindings)
+COMMENT=		This ROS package binds together the ROS framework with the dynamic-graph real-time control architecture.
 LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto-soft@laas.fr
 
+CONFLICTS+=		${ROSNAME}
 CONFLICTS+=		py[0-9][0-9]-${ROSNAME}
-
-CMAKE_ARGS+=		-DCXX_DISABLE_WERROR=yes
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
-include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-realtime-tools/depend.mk
 include ../../devel/ros-roscpp-core/depend.mk

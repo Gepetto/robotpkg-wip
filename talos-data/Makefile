@@ -1,12 +1,11 @@
 # robotpkg Makefile for:	wip/talos-data
 # Created:			Olivier Stasse, on Tue. 9th May, 2017
 #
-VERSION=	0.0.17
+VERSION=	0.0.18
 PKGNAME=	talos-data-${VERSION}
 DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
-PKGREVISION=	5
 
-MASTER_SITES=		ftp://${JRL_FTP_USER}${JRL_FTP_PASSWD:%=:%}@softs.laas.fr/talos/talos_data/
+MASTER_SITES=	${MASTER_SITE_OPENROBOTS:=talos/talos_data/}	
 MASTER_REPOSITORY=	https://redmine.laas.fr/laas/users/
 CHECKOUT_VCS_OPTS+=	--recursive
 
@@ -14,10 +13,6 @@ CATEGORIES=		wip
 COMMENT=		This packages provides data of the humanoid robot Pyrene in a friendly way for the SoT.
 LICENSE=		pal-license
 MAINTAINER=		ostasse@laas.fr
-
-RESTRICTED=     Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=  ${RESTRICTED}
-NO_PUBLIC_BIN=  ${RESTRICTED}
 
 CMAKE_PREFIX_PATH+= ${PREFIX}
 

@@ -4,7 +4,7 @@
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-bridge
 VERSION=		3.1.1
-PKGREVISION=		2
+PKGREVISION=		3
 
 ROSNAME=		$(subst -,_,${NAME})
 DISTNAME=		${ROSNAME}-v3-${VERSION}

@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/sot-talos
 # Created:			Olivier Stasse, on Tue. 9th May, 2017
 #
-VERSION=		0.0.6
+VERSION=		0.0.7
 PKGBASE=		sot-talos
 PKGNAME=		${PKGBASE}-${VERSION}
 DISTNAME=		${PKGNAME}

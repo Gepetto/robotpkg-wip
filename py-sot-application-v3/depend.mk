@@ -1,25 +1,25 @@
-# robotpkg depend.mk for:	robots/sot-application
+# robotpkg depend.mk for:	robots/py-sot-application-v3
 # Created:			Aurélie Clodic on Wed, 10 Jun 2014
 #
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH}+
-SOT_APPLICATION_V3_DEPEND_MK:=	${SOT_APPLICATION_V3_DEPEND_MK}+
+PY_SOT_APPLICATION_V3_DEPEND_MK:=	${PY_SOT_APPLICATION_V3_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
-DEPEND_PKG+=		sot-application-v3
+DEPEND_PKG+=		py-sot-application-v3
 endif
 
-ifeq (+,$(SOT_APPLICATION_V3_DEPEND_MK)) # -------------------------------------------
+ifeq (+,$(PY_SOT_APPLICATION_V3_DEPEND_MK)) # -------------------------------------------
 
-PREFER.sot-application-v3?=	robotpkg
+PREFER.py-sot-application-v3?=	robotpkg
 
-SYSTEM_SEARCH.sot-application-v3=\
-	'lib/pkgconfig/sot-application.pc:/Version/s/[^0-9.]//gp'
+SYSTEM_SEARCH.py-sot-application-v3=\
+	'${PYTHON_SYSLIBSEARCH}/dynamic_graph/sot/dynamics_pinocchio/dynamic/wrap.so'
 
-DEPEND_USE+=		sot-application-v3
+DEPEND_USE+=		py-sot-application-v3
 
-DEPEND_ABI.sot-application-v3?=	sot-application-v3>=1.1.0
-DEPEND_DIR.sot-application-v3?=	../../wip/sot-application-v3
+DEPEND_ABI.py-sot-application-v3?=	${PKGTAG.python-}sot-application-v3>=1.1.0
+DEPEND_DIR.py-sot-application-v3?=	../../wip/py-sot-application-v3
 
 endif # SOT_APPLICATION_DEPEND_MK -------------------------------------------------
 

@@ -2,13 +2,13 @@
 #
 
 DEPEND_DEPTH:=			${DEPEND_DEPTH}+
-ROSCONTROL_SOT_DEPEND_MK:=	${ROSCONTROL_SOT_DEPEND_MK_DEPEND_MK}+
+ROSCONTROL_SOT_DEPEND_MK:=	${ROSCONTROL_SOT_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
 DEPEND_PKG+=			roscontrol_sot
 endif
 
-ifeq (+,$(ROSCONTROL_SOT_DEPEND_MK_DEPEND_MK)) # --------------------------------------
+ifeq (+,$(ROSCONTROL_SOT_DEPEND_MK)) # --------------------------------------
 
 DEPEND_USE+=			roscontrol_sot
 ROS_DEPEND_USE+=		roscontrol_sot

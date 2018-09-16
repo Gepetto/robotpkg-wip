@@ -1,3 +1,5 @@
-SHA1 (sot-dynamic-pinocchio-v3-3.2.2.tar.gz) = e4fc2d6a95e552634feac0afcbabbb4f232f3540
-RMD160 (sot-dynamic-pinocchio-v3-3.2.2.tar.gz) = 0eed4e379b5aabc6fa9f95604b9122ef06fbc9bd
-Size (sot-dynamic-pinocchio-v3-3.2.2.tar.gz) = 859578 bytes
+SHA1 (sot-dynamic-pinocchio-v3-3.2.2.tar.gz) = 594aa30aa63f780dc10d83bda731b5dd6ca313d5
+RMD160 (sot-dynamic-pinocchio-v3-3.2.2.tar.gz) = ae594fa02a36591ebdd84839679c8989354a0250
+Size (sot-dynamic-pinocchio-v3-3.2.2.tar.gz) = 859581 bytes
+SHA1 (patch-aa) = 485f513ca5bb245452745a546d77ebd8a3497836
+SHA1 (patch-ab) = c041161979d98b4380ed62ae4990184aead6331b

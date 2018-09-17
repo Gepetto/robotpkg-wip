@@ -26,7 +26,6 @@ include ../../devel/boost-libs/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-pluginlib/depend.mk
 include ../../devel/ros-ros/depend.mk
-include ../../graphics/ros-robot-model/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../interfaces/ros-std-msgs/depend.mk
 include ../../lang/ros-message-generation/depend.mk

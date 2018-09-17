@@ -27,7 +27,7 @@ include ../../interfaces/ros-common-msgs/depend.mk
 include ../../interfaces/ros-std-msgs/depend.mk
 include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
-include ../../graphics/ros-robot-model/depend.mk
+include ../../graphics/ros-kdl-parser/depend.mk
 include ../../interfaces/ros-control-msgs/depend.mk
 include ../../motion/orocos-kdl/depend.mk
 include ../../math/ros-geometry/depend.mk

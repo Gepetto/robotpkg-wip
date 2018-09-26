@@ -49,8 +49,3 @@ share/dynamic_graph_bridge/robot_pose_publisher
 share/dynamic_graph_bridge/run_command
 share/dynamic_graph_bridge/srv/RunPythonFile.srv
 share/dynamic_graph_bridge/tf_publisher
-share/gennodejs/ros/dynamic_graph_bridge/_index.js
-share/gennodejs/ros/dynamic_graph_bridge/srv/RunPythonFile.js
-share/gennodejs/ros/dynamic_graph_bridge/srv/_index.js
-share/roseus/ros/dynamic_graph_bridge/manifest.l
-share/roseus/ros/dynamic_graph_bridge/srv/RunPythonFile.l

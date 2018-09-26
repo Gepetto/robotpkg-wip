@@ -5,7 +5,7 @@
 ORG=			stack-of-tasks
 NAME=			sot-core
 VERSION=		3.2.0
-PKGREVISION=		1
+PKGREVISION=		2
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}
@@ -29,6 +29,7 @@ DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/eigen3/depend.mk
+include ../../math/pinocchio/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

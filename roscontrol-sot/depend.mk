@@ -5,23 +5,23 @@ DEPEND_DEPTH:=			${DEPEND_DEPTH}+
 ROSCONTROL_SOT_DEPEND_MK:=	${ROSCONTROL_SOT_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
-DEPEND_PKG+=			roscontrol_sot
+DEPEND_PKG+=			roscontrol-sot
 endif
 
 ifeq (+,$(ROSCONTROL_SOT_DEPEND_MK)) # --------------------------------------
 
-DEPEND_USE+=			roscontrol_sot
-ROS_DEPEND_USE+=		roscontrol_sot
+DEPEND_USE+=			roscontrol-sot
+ROS_DEPEND_USE+=		roscontrol-sot
 
 DEPEND_ABI.ros+=		ros>=groovy
 
-DEPEND_ABI.roscontrol_sot?=		roscontrol_sot>=1.0.0
-DEPEND_DIR.roscontrol_sot?=		../../wip/roscontrol_sot
+DEPEND_ABI.roscontrol-sot?=		roscontrol-sot>=0.0.3
+DEPEND_DIR.roscontrol-sot?=		../../wip/roscontrol-sot
 
-DEPEND_ABI.roscontrol_sot.groovy?=	roscontrol_sot>=1.0.0
-DEPEND_ABI.roscontrol_sot.hydro?=	roscontrol_sot>=1.0.0
+DEPEND_ABI.roscontrol-sot.groovy?=	roscontrol-sot>=0.0.3
+DEPEND_ABI.roscontrol-sot.hydro?=	roscontrol-sot>=0.0.3
 
-SYSTEM_SEARCH.roscontrol_sot=\
+SYSTEM_SEARCH.roscontrol-sot=\
   'include/roscontrol_sot/config.hh'				\
   'lib/librcsot_controller.so'					\
   'lib/pkgconfig/roscontrol_sot.pc:/Version/s/[^0-9.]//gp'	\

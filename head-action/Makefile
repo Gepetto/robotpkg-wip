@@ -9,7 +9,7 @@ PKGNAME=	${PKGBASE}-${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	3
+PKGREVISION=	4
 
 CATEGORIES=	wip
 HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
@@ -29,7 +29,7 @@ include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../graphics/ros-kdl-parser/depend.mk
 include ../../interfaces/ros-control-msgs/depend.mk
-include ../../motion/orocos-kdl/depend.mk
+include ../../motion/ros-orocos-kinematics-dynamics/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../mk/language/c++.mk

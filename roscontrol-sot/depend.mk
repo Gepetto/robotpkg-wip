@@ -22,7 +22,7 @@ DEPEND_ABI.roscontrol-sot.groovy?=	roscontrol-sot>=0.0.3
 DEPEND_ABI.roscontrol-sot.hydro?=	roscontrol-sot>=0.0.3
 
 SYSTEM_SEARCH.roscontrol-sot=\
-  'include/roscontrol_sot/config.hh'				\
+  'include/roscontrol/sot/config.hh'				\
   'lib/librcsot_controller.so'					\
   'lib/pkgconfig/roscontrol_sot.pc:/Version/s/[^0-9.]//gp'	\
   'share/controller_interface/cmake/controller_interfaceConfig.cmake'

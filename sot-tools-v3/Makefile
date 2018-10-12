@@ -28,6 +28,7 @@ DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../wip/sot-core-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
+include ../../math/eigen3/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/graphviz.mk

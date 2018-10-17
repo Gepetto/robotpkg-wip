@@ -3,8 +3,7 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-bridge
-VERSION=		3.1.1
-PKGREVISION=		5
+VERSION=		3.1.2
 
 ROSNAME=		$(subst -,_,${NAME})
 DISTNAME=		${ROSNAME}-v3-${VERSION}
@@ -22,7 +21,7 @@ MAINTAINER=		gepetto-soft@laas.fr
 CONFLICTS+=		${ROSNAME}
 CONFLICTS+=		py[0-9][0-9]-${ROSNAME}
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+DYNAMIC_PLIST_DIRS+=	share/doc/doxygen-html
 DYNAMIC_PLIST_DIRS+=	share/gennodejs/${NAME}
 DYNAMIC_PLIST_DIRS+=	share/roseus/${NAME}
 

@@ -7,6 +7,7 @@ SUBDIR+=	antlr2
 SUBDIR+=	backward-ros
 SUBDIR+=	can-utils
 SUBDIR+= 	certi
+SUBDIR+=	cppad
 SUBDIR+=	dptu-genom3
 SUBDIR+=	dynamic-graph-v3
 SUBDIR+=	dynamic-graph-tutorial

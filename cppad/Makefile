@@ -20,6 +20,7 @@ LICENSE=		eclipse
 MAINTAINER=		gsaurel@laas.fr
 
 CMAKE_ARGS+=	-Dcppad_prefix=${PREFIX}
+DEPEND_ABI.cmake=	cmake>=3.1
 
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk

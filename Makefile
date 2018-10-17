@@ -8,6 +8,7 @@ SUBDIR+=	backward-ros
 SUBDIR+=	can-utils
 SUBDIR+=	certi
 SUBDIR+=	cppad
+SUBDIR+=	cppadcodegen
 SUBDIR+=	dptu-genom3
 SUBDIR+=	dynamic-graph-v3
 SUBDIR+=	dynamic-graph-tutorial

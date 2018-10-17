@@ -18,6 +18,8 @@ COMMENT=		This packages provides a template based parametric curves library (pyt
 LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto-soft@laas.fr
 
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+
 include ../../${CATEGORIES}/${NAME}/depend.mk
 include ../../math/py-eigenpy/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

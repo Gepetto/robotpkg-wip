@@ -23,6 +23,7 @@ CMAKE_ARGS+=	-DCREATE_DOXYGEN_DOC=YES
 DYNAMIC_PLIST_DIRS+=	share/doc/cppadcg
 
 include ../../wip/cppad/depend.mk
+include ../../wip/mk/sysdep/llvm.mk
 include ../../math/eigen3/depend.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/cmake.mk

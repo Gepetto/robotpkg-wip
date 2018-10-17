@@ -1,4 +1,7 @@
 @comment Thu Oct 16 12:43:20 CEST 2014
+include/sot/application/warning.hh
+include/sot/application/deprecated.hh
+include/sot/application/config.hh
 lib/pkgconfig/sot-application.pc
 ${PYTHON_SITELIB}/dynamic_graph/sot/application/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/application/acceleration/__init__.py
@@ -6,4 +9,3 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/application/acceleration/precomputed_meta_ta
 ${PYTHON_SITELIB}/dynamic_graph/sot/application/velocity/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/application/velocity/precomputed_meta_tasks.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/application/velocity/precomputed_tasks.py
-

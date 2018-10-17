@@ -1,8 +1,0 @@
-include/backward_ros/backward.hpp
-lib/libbackward.so
-lib/pkgconfig/backward_ros.pc
-share/backward_ros/cmake/BackwardConfig.cmake
-share/backward_ros/cmake/BackwardConfigCatkin.cmake
-share/backward_ros/cmake/backward_rosConfig-version.cmake
-share/backward_ros/cmake/backward_rosConfig.cmake
-share/backward_ros/package.xml

@@ -21,6 +21,7 @@ SUBDIR+=	gerard-bauzil
 SUBDIR+=	hatponboard-lib
 SUBDIR+=	head-action
 SUBDIR+=	histodet
+SUBDIR+=	hpp-environments
 SUBDIR+=	hrp2-dev
 SUBDIR+=	hrp2-14-description
 SUBDIR+=	hrp2-bringup

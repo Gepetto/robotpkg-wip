@@ -2,22 +2,23 @@
 # Created:			Nicolas Mansard, 15/DEC/2016
 #
 
+ORG=			stack-of-tasks
+NAME=			osg-dae
 VERSION=		3.2.1
-DISTNAME=		osg-dae-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
-MASTER_SITES=		${MASTER_SITE_GITHUB:=stack-of-tasks/${PKGBASE}/releases/download/v${VERSION}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/${PKGBASE}
+DISTNAME=		${NAME}-${VERSION}
 
-MAINTAINER=		gepetto@laas.fr
-CATEGORIES=		graphics
+MASTER_SITES=		${MASTER_SITE_GITHUB:=${ORG}/${NAME}/releases/download/v${VERSION}/}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${NAME}
+CHECKOUT_VCS_OPTS+=	--recursive
+
+CATEGORIES=		wip
 COMMENT=		DAE module for OSG
 LICENSE=		gnu-lgpl-v3
+MAINTAINER=		gepetto@laas.fr
 
-# parallel builds would consume all memory because of the g++ process size
-MAKE_JOBS_SAFE=		no
-
-#DYNAMIC_PLIST_DIRS+=	
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 PLIST_SRC+=		${PKGDIR}/PLIST.${OS_VERSION}
 
 CMAKE_ARGS+=    -DINSTALL_DOCUMENTATION=OFF

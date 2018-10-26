@@ -1,2 +1,6 @@
-@comment Thu Nov 16 15:57:05 CET 2017
-lib/pkgconfig/${PKGBASE}.pc
+@comment Fri Oct 26 17:51:35 CEST 2018
+include/osg/dae/config.h
+include/osg/dae/config.hh
+include/osg/dae/deprecated.hh
+include/osg/dae/warning.hh
+lib/pkgconfig/osg-dae.pc

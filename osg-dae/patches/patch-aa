@@ -1,0 +1,29 @@
+From 9c04eb18996d9401ac489c2f3280b71cfb241c51 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Fri, 26 Oct 2018 17:43:55 +0200
+Subject: [PATCH] [CMake] stop installing in lib64
+
+---
+ CMakeLists.txt | 6 ------
+ 1 file changed, 6 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 9759b5e..b63a54a 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -258,12 +258,6 @@ IF(CYGWIN)
+   SET(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -D_DEBUG")
+ ENDIF()
+ 
+-IF(UNIX AND NOT WIN32 AND NOT APPLE)
+-  IF(CMAKE_SIZEOF_VOID_P MATCHES "8")
+-      SET(LIB_POSTFIX "64" CACHE STRING "suffix for 32/64 dir placement")
+-      MARK_AS_ADVANCED(LIB_POSTFIX)
+-  ENDIF()
+-ENDIF()
+ IF(NOT DEFINED LIB_POSTFIX)
+     SET(LIB_POSTFIX "")
+ ENDIF()
+-- 
+2.7.4
+

@@ -5,13 +5,16 @@
 ORG=			stack-of-tasks
 NAME=			sot-talos
 VERSION=		1.0.1
+PKGREVISION=		1
 
 PKGNAME=		${NAME}-${VERSION}
-DISTNAME=		${PKGNAME}
+DISTNAME=		${NAME}-${VERSION}
+DIST_SUBDIR=		${PKGBASE}
 
 HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${NAME}}
 MASTER_SITES=		${HOMEPAGE}/releases/download/v${VERSION}/
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${NAME}
+CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		This packages provides a generic Stack Of Tasks library for the humanoid robot Pyrene.

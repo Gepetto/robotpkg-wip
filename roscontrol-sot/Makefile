@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/roscontrol_sot
 #
 
-VERSION=		0.0.4
+VERSION=		0.0.6
 PKGBASE=		roscontrol-sot
 PKGNAME=		${PKGBASE}-${VERSION}
 ROSNAME=		$(subst -,_,${PKGBASE})

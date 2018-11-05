@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-dyninv
-VERSION=		3.1.0
+VERSION=		3.1.1
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}

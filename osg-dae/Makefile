@@ -2,7 +2,7 @@
 # Created:			Nicolas Mansard, 15/DEC/2016
 #
 
-ORG=			stack-of-tasks
+ORG=			gepetto
 NAME=			osg-dae
 VERSION=		3.2.1
 PKGREVISION=	2

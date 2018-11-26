@@ -17,6 +17,11 @@ DEPEND_ABI.llvm?=	llvm>=3.8.0
 SYSTEM_SEARCH.llvm=	\
     'bin/llvm-config:p:% --version'
 
+SYSTEM_PKG.Arch.llvm=	llvm
+SYSTEM_PKG.Debian.llvm=	llvm
+SYSTEM_PKG.Fedora.llvm=	llvm-devel
+SYSTEM_PKG.Ubuntu.llvm=	llvm
+
 endif # LLVM_DEPEND_MK ------------------------------------------------------
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}

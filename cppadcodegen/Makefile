@@ -4,7 +4,7 @@
 
 ORG=			joaoleal
 NAME=			CppADCodeGen
-VERSION=		2.2.0
+VERSION=		2.3.0
 
 DISTNAME=		v${VERSION}
 PKGNAME=		${NAME}-${VERSION}

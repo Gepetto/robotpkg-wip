@@ -82,6 +82,7 @@ share/talos_data/robots/talos_full.urdf.xacro
 share/talos_data/robots/talos_full_no_grippers.urdf.xacro
 share/talos_data/robots/talos_full_v1.urdf.xacro
 share/talos_data/robots/talos_full_v2.urdf.xacro
+share/talos_data/robots/talos_left_arm.urdf
 share/talos_data/robots/talos_lower_body.urdf.xacro
 share/talos_data/robots/talos_reduced.urdf
 share/talos_data/robots/talos_small.urdf.xacro

@@ -1,12 +1,17 @@
 # robotpkg Makefile for:	wip/talos-data
 # Created:			Olivier Stasse, on Tue. 9th May, 2017
 #
-VERSION=	0.0.20
-PKGNAME=	talos-data-${VERSION}
-DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 
-MASTER_SITES=	${MASTER_SITE_OPENROBOTS:=talos/talos_data/}	
-MASTER_REPOSITORY=	https://redmine.laas.fr/laas/users/
+ORG=			pyrene-dev
+NAME=			talos-data
+VERSION=		0.0.20
+PKGREVISION=	1
+
+ROSNAME=		$(subst -,_,${NAME})
+DISTNAME=		${ROSNAME}-${VERSION}
+
+MASTER_SITES=		https://gepgitlab.laas.fr/${ORG}/${ROSNAME}
+MASTER_REPOSITORY=	git ${MASTER_SITES}.git
 CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
@@ -15,6 +20,8 @@ LICENSE=		pal-license
 MAINTAINER=		ostasse@laas.fr
 
 CMAKE_PREFIX_PATH+= ${PREFIX}
+
+DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
 
 include ../../devel/ros-catkin/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
@@ -31,4 +38,3 @@ include ../../mk/sysdep/pdflatex.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk
-

@@ -8,6 +8,7 @@ VERSION=		0.0.20
 PKGREVISION=	1
 
 ROSNAME=		$(subst -,_,${NAME})
+PKGNAME=		${NAME}-${VERSION}
 DISTNAME=		${ROSNAME}-${VERSION}
 
 MASTER_SITES=		https://gepgitlab.laas.fr/${ORG}/${ROSNAME}

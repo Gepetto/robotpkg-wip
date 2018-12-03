@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	robots/openhrp3-hrp2
 # Created:			Olivier Stasse on 30, 30 Sep. 2016
 #
-VERSION=		1.2.0
+VERSION=		1.2.1
 PKGNAME=		openhrp3-hrp2-${VERSION}
 DISTNAME=		$(subst -,_,${PKGBASE})-${VERSION}
 

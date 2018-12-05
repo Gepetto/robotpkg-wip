@@ -2,16 +2,17 @@
 # Created:			Olivier Stasse on Fr, 27 Apr 2018
 #
 
-VERSION=	0.1.4
+VERSION=	0.1.6
 PKGBASE= 	backward-ros
 PKGNAME=	${PKGBASE}-${VERSION}
-DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
+DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
-PKGREVISION=	3
+WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 
 CATEGORIES=	wip
-#MASTER_SITES=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}/}
-MASTER_SITES=	${MASTER_SITE_OPENROBOTS:=${PKGBASE}/}
+HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+MASTER_SITES=	${HOMEPAGE}/archive/
+
 COMMENT=	The backward_ros package is a ros wrapper of backward-cpp from https://github.com/bombela/backward-cpp
 LICENSE=	mit
 

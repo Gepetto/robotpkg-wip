@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/prf-gazebo-ros-pkgs
 # Created:			Olivier Stasse on Mer, 28 April 2018
 #
-VERSION=	2.6.7
+VERSION=	2.6.8
 PRFNAME=	gazebo-ros-pkgs
 PKGBASE=	prf-${PRFNAME}
 PKGNAME=	${PKGBASE}-${VERSION}
@@ -9,7 +9,6 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PRFNAME})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	4
 
 CATEGORIES=	wip
 HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics-forks/${ROSNAME}}

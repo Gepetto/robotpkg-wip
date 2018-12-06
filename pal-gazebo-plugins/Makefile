@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/pal-gazebo-plugins
 # Created:			Olivier Stasse on Fri, 21 Apr 2017
 #
-VERSION=	1.1.7
+VERSION=	1.1.8
 PKGBASE=	pal-gazebo-plugins
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}

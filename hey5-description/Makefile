@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Tue, 8 May 2018
 #
 
-VERSION=	1.0.1
+VERSION=	1.0.2
 PKGBASE=	hey5-description
 DISTNAME=	${VERSION}
 PKGNAME=	${PKGBASE}-${VERSION}

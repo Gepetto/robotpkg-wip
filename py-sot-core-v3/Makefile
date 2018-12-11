@@ -28,6 +28,7 @@ include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/eigen3/depend.mk
+include ../../math/pinocchio/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

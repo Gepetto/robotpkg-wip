@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Tue, 9 May 2018
 #
 
-VERSION=	1.1.8os1
+VERSION=	1.1.9
 PKGBASE=	pmb2-robot
 DISTNAME=	${VERSION}
 PKGNAME=	${PKGBASE}-${VERSION}
@@ -11,8 +11,8 @@ WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
 
 CATEGORIES=	wip
-HOMEPAGE=	${MASTER_SITE_GITHUB:=olivier-stasse/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/v
+HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	PMB2 robot description and launch files
 LICENSE=	apache-2.0
 

@@ -2,14 +2,13 @@
 # Created:			Olivier Stasse on Thu, 3 May 2017
 #
 
-VERSION=	0.1.1
+VERSION=	0.1.2
 PKGBASE=	pal-hardware-gazebo
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	2
 
 CATEGORIES=	wip
 # Source file store in robotpkg website.

@@ -64,6 +64,7 @@ SUBDIR+=	pal-gripper
 SUBDIR+=	pal-hardware-gazebo
 SUBDIR+=	pal-hardware-interfaces
 SUBDIR+=	pal-msgs
+SUBDIR+=	pal-statistics
 SUBDIR+=	pal-transmissions
 SUBDIR+=	parametric-curves
 SUBDIR+=	play-motion

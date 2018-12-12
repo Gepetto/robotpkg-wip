@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Fr, 27 Apr 2018
 #
 
-VERSION=	1.0.5
+VERSION=	1.0.8
 PKGBASE= 	dynamic-introspection
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}
@@ -26,6 +26,7 @@ include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../wip/backward-ros/depend.mk
+include ../../wip/pal-statistics/depend.mk
 
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

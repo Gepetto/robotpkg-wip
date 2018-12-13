@@ -1,0 +1,13 @@
+Don't install the .pc file, that is already installed by sot-pattern-generator
+
+--- cmake/base.cmake.orig	2018-07-23 03:38:57.000000000 +0200
++++ cmake/base.cmake	2018-12-13 11:13:28.177001824 +0100
+@@ -226,7 +226,7 @@
+ #   finalize the project setup.
+ #
+ MACRO(SETUP_PROJECT_FINALIZE)
+-  _SETUP_PROJECT_PKG_CONFIG_FINALIZE()
++  #_SETUP_PROJECT_PKG_CONFIG_FINALIZE()
+   _SETUP_PROJECT_DOCUMENTATION_FINALIZE()
+   _SETUP_PROJECT_HEADER_FINAlIZE()
+   _SETUP_DEBIAN()

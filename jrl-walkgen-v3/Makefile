@@ -20,6 +20,8 @@ MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		${NAME}
 
+CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR=lib
+
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../mk/sysdep/cmake.mk

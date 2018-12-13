@@ -18,7 +18,9 @@ COMMENT=		Tutorial for the dynamic-graph
 LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto-soft@laas.fr
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+CMAKE_ARGS+=	-DCMAKE_INSTALL_DOCDIR=share/doc/${PKGBASE}
+
+DYNAMIC_PLIST_DIRS+=	share/doc/${PKGBASE}
 
 include ../../wip/${NAME}/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk

@@ -1,0 +1,27 @@
+don't install headers that are already here
+
+--- include/CMakeLists.txt.orig	2018-08-17 15:19:12.000000000 +0200
++++ include/CMakeLists.txt	2018-12-13 11:55:15.693566494 +0100
+@@ -46,7 +46,7 @@
+ #----------------------------------------------------
+ # Install procedure for the header files
+ #----------------------------------------------------
+-INSTALL(FILES ${fullpath_${PROJECT_NAME}_HEADERS}
+-	DESTINATION include/${PROJECT_NAME}
+-        PERMISSIONS OWNER_READ GROUP_READ WORLD_READ OWNER_WRITE
+-)
++#INSTALL(FILES ${fullpath_${PROJECT_NAME}_HEADERS}
++#	DESTINATION include/${PROJECT_NAME}
++#        PERMISSIONS OWNER_READ GROUP_READ WORLD_READ OWNER_WRITE
++#)
+--- cmake/base.cmake.orig	2018-12-13 11:57:57.000000000 +0100
++++ cmake/base.cmake	2018-12-13 12:01:12.105987185 +0100
+@@ -206,7 +206,7 @@
+ 
+   #FIXME: normalize naming to <MODULE>_SETUP()
+   _SETUP_PROJECT_WARNINGS()
+-  _SETUP_PROJECT_HEADER()
++  #_SETUP_PROJECT_HEADER()
+   _SETUP_PROJECT_DIST()
+   DISTCHECK_SETUP()
+   RELEASE_SETUP()

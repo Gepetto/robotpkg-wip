@@ -6,6 +6,7 @@ include/dynamic_introspection/IntrospectionMsg.h
 include/dynamic_introspection/MarkerParameter.h
 include/dynamic_introspection/dynamic_introspection.h
 include/dynamic_introspection/dynamic_introspection_utils.h
+include/dynamic_introspection/introspection_online_utils.h
 lib/libdynamic_introspection.so
 lib/pkgconfig/dynamic_introspection.pc
 ${PYTHON_SITELIB}/dynamic_introspection/__init__.py

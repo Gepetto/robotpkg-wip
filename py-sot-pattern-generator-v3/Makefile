@@ -20,7 +20,9 @@ MAINTAINER=		gepetto@laas.fr
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+CMAKE_ARGS+=	-DCMAKE_INSTALL_DOCDIR=share/doc/${PKGBASE}
+
+DYNAMIC_PLIST_DIRS+=	share/doc/${PKGBASE}
 
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/boost-headers/depend.mk

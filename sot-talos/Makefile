@@ -31,8 +31,12 @@ include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
 include ../../wip/py-sot-dynamic-pinocchio-v3/depend.mk
 include ../../wip/py-sot-tools-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
+include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
+include ../../math/pinocchio/depend.mk
+include ../../math/py-pinocchio/depend.mk
+include ../../math/eigen3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

@@ -2,18 +2,23 @@
 # Created:			Rohan Budhiraja on Wed Oct 19, 2016
 #
 
+ORG=			jrl-umi3218
+NAME=			eigen-quadprog
 VERSION=		1.0.0
-DISTNAME=		eigen-quadprog-${VERSION}
-PKGNAME=		eigen-quadprog-${VERSION}
+
+DISTNAME=		${NAME}-${VERSION}
+
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}
+HOMEPAGE=			${MASTER_SITE_GITHUB}${ORG}/${NAME}
 
 CATEGORIES=		wip
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=eigen-quadprog/}
-
-HOMEPAGE=		https://github.com/jrl-umi3218/eigen-quadprog
-
 COMMENT=		eigen-quadprog allow to use the QuadProg QP solver with the Eigen3 library.
 LICENSE=		gnu-lgpl-v3
 MAINTAINER=		gepetto@laas.fr
+
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+
 
 # disable -Werror because of x86_64 warnings (must be fixed upstream) and
 # boost + gcc that don't cohabit well depending on their respective versions

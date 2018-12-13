@@ -7,6 +7,14 @@ include/gazebo_ros_control/internal/position_joint.h
 include/gazebo_ros_control/internal/read_write_resource.h
 include/gazebo_ros_control/internal/velocity_joint.h
 include/gazebo_ros_control/robot_hw_sim.h
+lib/gazebo_ros/debug
+lib/gazebo_ros/gazebo
+lib/gazebo_ros/gdbrun
+lib/gazebo_ros/gzclient
+lib/gazebo_ros/gzserver
+lib/gazebo_ros/libcommon.sh
+lib/gazebo_ros/perf
+lib/gazebo_ros/spawn_model
 lib/libdefault_robot_hw_sim.so
 lib/libgazebo_ros_control.so
 lib/pkgconfig/gazebo_ros_control.pc

@@ -29,7 +29,6 @@ DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../devel/tinyxml/depend.mk
 include ../../math/pinocchio/depend.mk
-include ../../math/py-eigenpy/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/sot-tools-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

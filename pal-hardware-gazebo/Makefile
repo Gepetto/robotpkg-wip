@@ -9,6 +9,7 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
+PKGREVISION=	1
 
 CATEGORIES=	wip
 # Source file store in robotpkg website.
@@ -35,6 +36,7 @@ include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../wip/pal-hardware-interfaces/depend.mk
+include ../../wip/pal-statistics/depend.mk
 include ../../wip/prf-gazebo-ros-pkgs/depend.mk
 include ../../wip/prf-ros-control/depend.mk
 include ../../wip/dynamic-introspection/depend.mk

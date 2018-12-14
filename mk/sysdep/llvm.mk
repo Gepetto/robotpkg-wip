@@ -12,7 +12,7 @@ ifeq (+,$(LLVM_DEPEND_MK)) # ------------------------------------------------
 
 PREFER.llvm?=	system
 DEPEND_USE+=	llvm
-DEPEND_ABI.llvm?=	llvm>=3.8.0
+DEPEND_ABI.llvm?=	llvm>=2.0
 
 SYSTEM_SEARCH.llvm=	\
     'bin/llvm-config:p:% --version'

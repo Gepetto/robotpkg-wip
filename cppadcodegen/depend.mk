@@ -19,7 +19,7 @@ SYSTEM_SEARCH.cppadcodegen=\
 
 DEPEND_USE+=		cppadcodegen
 
-DEPEND_ABI.cppadcodegen?=	cppadcodegen>=2.3.0
+DEPEND_ABI.cppadcodegen?=	CppADCodeGen>=2.3.0
 DEPEND_DIR.cppadcodegen?=	../../wip/cppadcodegen
 
 endif # CPPADCODEGEN_DEPEND_MK ------------------------------------------------

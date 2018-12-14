@@ -25,6 +25,7 @@ DYNAMIC_PLIST_DIRS+=	share/doc/cppadcg
 include ../../wip/cppad/depend.mk
 include ../../wip/mk/sysdep/llvm.mk
 include ../../math/eigen3/depend.mk
+include ../../math/eigen3/googletest.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk

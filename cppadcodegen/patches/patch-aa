@@ -1,0 +1,13 @@
+look for the same file in googletest.mk & CMakeLists
+
+--- test/CMakeLists.txt.orig	2018-10-28 11:16:06.000000000 +0100
++++ test/CMakeLists.txt	2018-12-15 09:05:20.787624366 +0100
+@@ -45,7 +45,7 @@
+         LOG_BUILD ON)
+ ELSE()
+     # find installed in system
+-    FIND_PATH(GOOGLETEST_SOURCE_DIR NAMES "src/gtest_main.cc"
++    FIND_PATH(GOOGLETEST_SOURCE_DIR NAMES "include/gtest/gtest.h"
+               HINTS  $ENV{GOOGLETEST_HOME}
+                      "/usr/src/gtest/" )
+     IF(NOT IS_DIRECTORY ${GOOGLETEST_SOURCE_DIR})

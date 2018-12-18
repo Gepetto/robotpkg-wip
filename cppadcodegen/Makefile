@@ -3,12 +3,12 @@
 #
 
 ORG=			joaoleal
-NAME=			CppADCodeGen
+NAME=			cppadcodegen
 VERSION=		2.3.0
 
 DISTNAME=		v${VERSION}
 PKGNAME=		${NAME}-${VERSION}
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/CppADCodeGen-${VERSION}
 
 HOMEPAGE=			${MASTER_SITE_GITHUB:=${ORG}/${NAME}}
 MASTER_SITES=		${HOMEPAGE}/archive/

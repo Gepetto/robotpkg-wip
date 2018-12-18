@@ -35,7 +35,7 @@ SYSTEM_PKG.Fedora.cppad=cppad-devel
 
 DEPEND_USE+=		cppad
 
-DEPEND_ABI.cppad?=	cppad>=2014.00.00.3
+DEPEND_ABI.cppad?=	cppad>=20140000.3
 DEPEND_DIR.cppad?=	../../wip/cppad
 
 endif # CPPAD_DEPEND_MK ------------------------------------------------

@@ -1,15 +1,20 @@
 # robotpkg Makefile for:	simulation/openhrp3-simulator-wo-rtm
 # Created:			Olivier Stasse on Thursday, 25 Aug 2016
 #
+
+ORG=			stack-of-tasks
+NAME=			openhrp3-simulator-wo-rtm
 VERSION=		1.2.0
-PKGNAME=		openhrp3-simulator-wo-rtm-${VERSION}
-DISTNAME=		$(subst -,_,${PKGBASE})-${VERSION}
-#PKGREVISION=		3
+
+ROSNAME=		$(subst -,_,${NAME})
+DISTNAME=		${ROSNAME}-${VERSION}
+PKGNAME=		${NAME}-${VERSION}
+
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${NAME}
+CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		simulation
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=openhrp3-simulator-wo-rtm/}
-MASTER_REPOSITORY=      ${MASTER_REPOSITORY_GITHUB}/olivier-stasse/openhrp3-simulator-wo-rtm
-
 MAINTAINER=		ostasse@laas.fr
 COMMENT=		OpenHRP-3 Simulator without RTM
 LICENSE=		eclipse
@@ -17,6 +22,8 @@ LICENSE=		eclipse
 USE_BOOST_LIBS=		thread
 
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
+
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../graphics/gepetto-viewer/depend.mk
 include ../../devel/ros-catkin/depend.mk

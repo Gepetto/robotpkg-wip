@@ -31,6 +31,7 @@ include ../../devel/ros-roscpp-core/depend.mk
 include ../../interfaces/ros-std-msgs/depend.mk
 include ../../lang/ros-message-generation/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
+include ../../middleware/omniORB/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk

@@ -23,7 +23,7 @@ USE_BOOST_LIBS=		thread
 
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
 
 include ../../graphics/gepetto-viewer/depend.mk
 include ../../devel/ros-catkin/depend.mk

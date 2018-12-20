@@ -1,0 +1,12 @@
+@comment Thu Dec 20 11:01:52 CET 2018
+include/srdfdom/model.h
+include/srdfdom/srdf_writer.h
+lib/libsrdfdom.so
+lib/pkgconfig/srdfdom.pc
+${PYTHON_SITELIB}/${PKGNAME}-py${PYTHON_VERSION}.egg-info
+${PYTHON_SITELIB}/srdfdom/__init__.py
+${PYTHON_SITELIB}/srdfdom/srdf.py
+lib/srdfdom/display_srdf
+share/srdfdom/cmake/srdfdomConfig-version.cmake
+share/srdfdom/cmake/srdfdomConfig.cmake
+share/srdfdom/package.xml

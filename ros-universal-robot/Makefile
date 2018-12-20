@@ -18,8 +18,21 @@ include ../../wip/ros-moveit/depend.mk
 
 include ../../interfaces/ros-std-msgs/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
+include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../middleware/ros-dynamic-reconfigure/depend.mk
+include ../../middleware/ros-actionlib/depend.mk
+include ../../middleware/ros-comm/depend.mk
+include ../../interfaces/ros-control-msgs/depend.mk
+include ../../motion/ros-control/depend.mk
+include ../../simulation/gazebo-ros-pkgs/depend.mk
+include ../../math/ros-geometry2/depend.mk
+include ../../localization/ros-joint-state-publisher/depend.mk
+include ../../localization/ros-robot-state-publisher/depend.mk
+include ../../devel/ros-pluginlib/depend.mk
+include ../../devel/ros-xacro/depend.mk
+include ../../graphics/robot-capsule-urdf/depend.mk
+include ../../graphics/ros-urdf/depend.mk
 
 include ../../devel/ros-catkin/depend.mk
 include ../../mk/sysdep/python.mk

@@ -14,6 +14,8 @@ ROS_COMMENT=	ROS-Industrial Universal Robot meta-package
 
 include ../../meta-pkgs/ros-base/Makefile.common
 
+include ../../wip/moveit/depend.mk
+
 include ../../interfaces/ros-std-msgs/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../lang/ros-message-runtime/depend.mk

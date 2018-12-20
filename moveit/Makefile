@@ -31,7 +31,7 @@ include ../../graphics/ros-interactive-markers/depend.mk
 include ../../sysutils/ros-rviz/depend.mk
 
 include ../../mk/sysdep/glew.mk
-include ../../wip/mk/sysdep/fcl.mk
+include ../../wip/fcl/depend.mk
 
 DEPEND_ABI.fcl +=	fcl>=0.5.0
 #DEPEND_ABI.octomap +=	octomap>=1.8.0

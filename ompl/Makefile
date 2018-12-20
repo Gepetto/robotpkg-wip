@@ -21,6 +21,7 @@ CMAKE_ARGS+= 	-DOMPL_REGISTRATION=OFF
 CMAKE_ARGS+=    -DCMAKE_INSTALL_LIBDIR:PATH=${CMAKE_CONFIGURE_PREFIX}/lib
 
 DEPEND_ABI.cmake= 		cmake>=2.8.7
+DEPEND_ABI.boost-libs+=	 boost-libs>=1.54
 
 PKG_SUPPORTED_OPTIONS+=		python
 PKG_OPTION_DESCR.python=	Enable python bindings

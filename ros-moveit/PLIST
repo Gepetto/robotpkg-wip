@@ -588,35 +588,3 @@ share/moveit_simple_controller_manager/cmake/moveit_simple_controller_managerCon
 share/moveit_simple_controller_manager/cmake/moveit_simple_controller_managerConfig.cmake
 share/moveit_simple_controller_manager/moveit_simple_controller_manager_plugin_description.xml
 share/moveit_simple_controller_manager/package.xml
-@pkgdir include/ompl/CMakeFiles/ompl.dir/util
-@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/thunder
-@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/multiplan
-@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/lightning
-@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/experience
-@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/debug
-@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/config
-@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/benchmark
-@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/stride
-@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/sst
-@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/sbl
-@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/rrt
-@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/prm
-@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/pdst
-@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/kpiece
-@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/fmt
-@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/experience
-@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/est
-@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/cforest
-@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/bitstar/datastructures
-@pkgdir include/ompl/CMakeFiles/ompl.dir/control/spaces
-@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/syclop
-@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/sst
-@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/rrt
-@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/pdst
-@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/ltl
-@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/kpiece
-@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/est
-@pkgdir include/ompl/CMakeFiles/ompl.dir/base/spaces/constraint
-@pkgdir include/ompl/CMakeFiles/ompl.dir/base/samplers/informed
-@pkgdir include/ompl/CMakeFiles/ompl.dir/base/objectives
-@pkgdir include/ompl/CMakeFiles/ompl.dir/base/goals

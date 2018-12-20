@@ -14,7 +14,9 @@ ROS_COMMENT=	ROS messages/actionlib server for object recognition
 include ../../meta-pkgs/ros-base/Makefile.common
 
 include ../../interfaces/ros-common-msgs/depend.mk
+include ../../interfaces/ros-std-msgs/depend.mk
 include ../../middleware/ros-genmsg/depend.mk
+include ../../lang/ros-message-generation/depend.mk
 
 include ../../devel/ros-catkin/depend.mk
 include ../../mk/sysdep/python.mk

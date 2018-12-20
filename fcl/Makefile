@@ -21,6 +21,8 @@ MAINTAINER=		gsaurel@laas.fr
 
 DEPEND_ABI.cmake +=	cmake>=2.8.12
 
+CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
+
 include ../../mapping/octomap/depend.mk
 
 include ../../pkgtools/pkg-config/depend.mk

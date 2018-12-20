@@ -19,8 +19,8 @@ DEPEND_ABI.universal-robot?=	universal-robot>=1.2.1
 DEPEND_DIR.universal-robot?=	../../wip/universal-robot
 
 SYSTEM_SEARCH.universal-robot=\
-	include/hpp/romeo/config.hh	\
-	'lib/pkgconfig/universal-robot.pc:/Version/s/[^0-9.]//gp'
+	include/ur_msgs/SetIO.hh	\
+	'lib/pkgconfig/ur_description.pc:/Version/s/[^0-9.]//gp'
 
 endif # UNIVERSAL_ROBOT_DEPEND_MK --------------------------------------------
 

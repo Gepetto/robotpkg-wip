@@ -1,0 +1,319 @@
+@comment Thu Dec 20 17:12:41 CET 2018
+include/ur_driver/URDriverConfig.h
+include/ur_kinematics/ikfast.h
+include/ur_kinematics/ur_kin.h
+include/ur_kinematics/ur_moveit_plugin.h
+include/ur_msgs/Analog.h
+include/ur_msgs/Digital.h
+include/ur_msgs/IOStates.h
+include/ur_msgs/MasterboardDataMsg.h
+include/ur_msgs/RobotStateRTMsg.h
+include/ur_msgs/SetIO.h
+include/ur_msgs/SetIORequest.h
+include/ur_msgs/SetIOResponse.h
+include/ur_msgs/SetPayload.h
+include/ur_msgs/SetPayloadRequest.h
+include/ur_msgs/SetPayloadResponse.h
+include/ur_msgs/ToolDataMsg.h
+lib/libur10_kin.so
+lib/libur10_moveit_plugin.so
+lib/libur3_kin.so
+lib/libur3_moveit_plugin.so
+lib/libur5_kin.so
+lib/libur5_moveit_plugin.so
+lib/pkgconfig/ur10_moveit_config.pc
+lib/pkgconfig/ur3_moveit_config.pc
+lib/pkgconfig/ur5_moveit_config.pc
+lib/pkgconfig/ur_bringup.pc
+lib/pkgconfig/ur_description.pc
+lib/pkgconfig/ur_driver.pc
+lib/pkgconfig/ur_gazebo.pc
+lib/pkgconfig/ur_kinematics.pc
+lib/pkgconfig/ur_msgs.pc
+${PYTHON_SITELIB}/ur_driver-${PKGVERSION}-py${PYTHON_VERSION}.egg-info
+${PYTHON_SITELIB}/ur_driver/__init__.py
+${PYTHON_SITELIB}/ur_driver/cfg/URDriverConfig.py
+${PYTHON_SITELIB}/ur_driver/cfg/__init__.py
+${PYTHON_SITELIB}/ur_driver/deserialize.py
+${PYTHON_SITELIB}/ur_driver/deserializeRT.py
+${PYTHON_SITELIB}/ur_driver/driver.py
+${PYTHON_SITELIB}/ur_driver/io_interface.py
+${PYTHON_SITELIB}/ur_driver/testRT_comm.py
+${PYTHON_SITELIB}/ur_driver/test_comm.py
+${PYTHON_SITELIB}/ur_msgs/__init__.py
+${PYTHON_SITELIB}/ur_msgs/msg/_Analog.py
+${PYTHON_SITELIB}/ur_msgs/msg/_Digital.py
+${PYTHON_SITELIB}/ur_msgs/msg/_IOStates.py
+${PYTHON_SITELIB}/ur_msgs/msg/_MasterboardDataMsg.py
+${PYTHON_SITELIB}/ur_msgs/msg/_RobotStateRTMsg.py
+${PYTHON_SITELIB}/ur_msgs/msg/_ToolDataMsg.py
+${PYTHON_SITELIB}/ur_msgs/msg/__init__.py
+${PYTHON_SITELIB}/ur_msgs/srv/_SetIO.py
+${PYTHON_SITELIB}/ur_msgs/srv/_SetPayload.py
+${PYTHON_SITELIB}/ur_msgs/srv/__init__.py
+lib/ur_driver/driver.py
+lib/ur_driver/test_io.py
+lib/ur_driver/test_move.py
+share/common-lisp/ros/ur_msgs/msg/Analog.lisp
+share/common-lisp/ros/ur_msgs/msg/Digital.lisp
+share/common-lisp/ros/ur_msgs/msg/IOStates.lisp
+share/common-lisp/ros/ur_msgs/msg/MasterboardDataMsg.lisp
+share/common-lisp/ros/ur_msgs/msg/RobotStateRTMsg.lisp
+share/common-lisp/ros/ur_msgs/msg/ToolDataMsg.lisp
+share/common-lisp/ros/ur_msgs/msg/_package.lisp
+share/common-lisp/ros/ur_msgs/msg/_package_Analog.lisp
+share/common-lisp/ros/ur_msgs/msg/_package_Digital.lisp
+share/common-lisp/ros/ur_msgs/msg/_package_IOStates.lisp
+share/common-lisp/ros/ur_msgs/msg/_package_MasterboardDataMsg.lisp
+share/common-lisp/ros/ur_msgs/msg/_package_RobotStateRTMsg.lisp
+share/common-lisp/ros/ur_msgs/msg/_package_ToolDataMsg.lisp
+share/common-lisp/ros/ur_msgs/msg/ur_msgs-msg.asd
+share/common-lisp/ros/ur_msgs/srv/SetIO.lisp
+share/common-lisp/ros/ur_msgs/srv/SetPayload.lisp
+share/common-lisp/ros/ur_msgs/srv/_package.lisp
+share/common-lisp/ros/ur_msgs/srv/_package_SetIO.lisp
+share/common-lisp/ros/ur_msgs/srv/_package_SetPayload.lisp
+share/common-lisp/ros/ur_msgs/srv/ur_msgs-srv.asd
+share/gennodejs/ros/ur_msgs/_index.js
+share/gennodejs/ros/ur_msgs/msg/Analog.js
+share/gennodejs/ros/ur_msgs/msg/Digital.js
+share/gennodejs/ros/ur_msgs/msg/IOStates.js
+share/gennodejs/ros/ur_msgs/msg/MasterboardDataMsg.js
+share/gennodejs/ros/ur_msgs/msg/RobotStateRTMsg.js
+share/gennodejs/ros/ur_msgs/msg/ToolDataMsg.js
+share/gennodejs/ros/ur_msgs/msg/_index.js
+share/gennodejs/ros/ur_msgs/srv/SetIO.js
+share/gennodejs/ros/ur_msgs/srv/SetPayload.js
+share/gennodejs/ros/ur_msgs/srv/_index.js
+share/roseus/ros/ur_msgs/manifest.l
+share/roseus/ros/ur_msgs/msg/Analog.l
+share/roseus/ros/ur_msgs/msg/Digital.l
+share/roseus/ros/ur_msgs/msg/IOStates.l
+share/roseus/ros/ur_msgs/msg/MasterboardDataMsg.l
+share/roseus/ros/ur_msgs/msg/RobotStateRTMsg.l
+share/roseus/ros/ur_msgs/msg/ToolDataMsg.l
+share/roseus/ros/ur_msgs/srv/SetIO.l
+share/roseus/ros/ur_msgs/srv/SetPayload.l
+share/universal_robot/package.xml
+share/ur10_moveit_config/cmake/ur10_moveit_configConfig-version.cmake
+share/ur10_moveit_config/cmake/ur10_moveit_configConfig.cmake
+share/ur10_moveit_config/config/controllers.yaml
+share/ur10_moveit_config/config/fake_controllers.yaml
+share/ur10_moveit_config/config/joint_limits.yaml
+share/ur10_moveit_config/config/kinematics.yaml
+share/ur10_moveit_config/config/ompl_planning.yaml
+share/ur10_moveit_config/config/ur10.srdf
+share/ur10_moveit_config/launch/default_warehouse_db.launch
+share/ur10_moveit_config/launch/demo.launch
+share/ur10_moveit_config/launch/fake_moveit_controller_manager.launch.xml
+share/ur10_moveit_config/launch/move_group.launch
+share/ur10_moveit_config/launch/moveit.rviz
+share/ur10_moveit_config/launch/moveit_rviz.launch
+share/ur10_moveit_config/launch/ompl_planning_pipeline.launch.xml
+share/ur10_moveit_config/launch/planning_context.launch
+share/ur10_moveit_config/launch/planning_pipeline.launch.xml
+share/ur10_moveit_config/launch/run_benchmark_ompl.launch
+share/ur10_moveit_config/launch/sensor_manager.launch.xml
+share/ur10_moveit_config/launch/setup_assistant.launch
+share/ur10_moveit_config/launch/trajectory_execution.launch.xml
+share/ur10_moveit_config/launch/ur10_moveit_controller_manager.launch.xml
+share/ur10_moveit_config/launch/ur10_moveit_planning_execution.launch
+share/ur10_moveit_config/launch/ur10_moveit_sensor_manager.launch.xml
+share/ur10_moveit_config/launch/warehouse.launch
+share/ur10_moveit_config/launch/warehouse_settings.launch.xml
+share/ur10_moveit_config/package.xml
+share/ur3_moveit_config/cmake/ur3_moveit_configConfig-version.cmake
+share/ur3_moveit_config/cmake/ur3_moveit_configConfig.cmake
+share/ur3_moveit_config/config/controllers.yaml
+share/ur3_moveit_config/config/fake_controllers.yaml
+share/ur3_moveit_config/config/joint_limits.yaml
+share/ur3_moveit_config/config/kinematics.yaml
+share/ur3_moveit_config/config/ompl_planning.yaml
+share/ur3_moveit_config/config/ur3.srdf
+share/ur3_moveit_config/launch/default_warehouse_db.launch
+share/ur3_moveit_config/launch/demo.launch
+share/ur3_moveit_config/launch/fake_moveit_controller_manager.launch.xml
+share/ur3_moveit_config/launch/joystick_control.launch
+share/ur3_moveit_config/launch/move_group.launch
+share/ur3_moveit_config/launch/moveit.rviz
+share/ur3_moveit_config/launch/moveit_rviz.launch
+share/ur3_moveit_config/launch/ompl_planning_pipeline.launch.xml
+share/ur3_moveit_config/launch/planning_context.launch
+share/ur3_moveit_config/launch/planning_pipeline.launch.xml
+share/ur3_moveit_config/launch/run_benchmark_ompl.launch
+share/ur3_moveit_config/launch/sensor_manager.launch.xml
+share/ur3_moveit_config/launch/setup_assistant.launch
+share/ur3_moveit_config/launch/trajectory_execution.launch.xml
+share/ur3_moveit_config/launch/ur3_moveit_controller_manager.launch.xml
+share/ur3_moveit_config/launch/ur3_moveit_planning_execution.launch
+share/ur3_moveit_config/launch/ur3_moveit_sensor_manager.launch.xml
+share/ur3_moveit_config/launch/warehouse.launch
+share/ur3_moveit_config/launch/warehouse_settings.launch.xml
+share/ur3_moveit_config/package.xml
+share/ur5_moveit_config/cmake/ur5_moveit_configConfig-version.cmake
+share/ur5_moveit_config/cmake/ur5_moveit_configConfig.cmake
+share/ur5_moveit_config/config/controllers.yaml
+share/ur5_moveit_config/config/fake_controllers.yaml
+share/ur5_moveit_config/config/joint_limits.yaml
+share/ur5_moveit_config/config/kinematics.yaml
+share/ur5_moveit_config/config/ompl_planning.yaml
+share/ur5_moveit_config/config/ur5.srdf
+share/ur5_moveit_config/launch/default_warehouse_db.launch
+share/ur5_moveit_config/launch/demo.launch
+share/ur5_moveit_config/launch/fake_moveit_controller_manager.launch.xml
+share/ur5_moveit_config/launch/move_group.launch
+share/ur5_moveit_config/launch/moveit.rviz
+share/ur5_moveit_config/launch/moveit_rviz.launch
+share/ur5_moveit_config/launch/ompl_planning_pipeline.launch.xml
+share/ur5_moveit_config/launch/planning_context.launch
+share/ur5_moveit_config/launch/planning_pipeline.launch.xml
+share/ur5_moveit_config/launch/run_benchmark_ompl.launch
+share/ur5_moveit_config/launch/sensor_manager.launch.xml
+share/ur5_moveit_config/launch/setup_assistant.launch
+share/ur5_moveit_config/launch/trajectory_execution.launch.xml
+share/ur5_moveit_config/launch/ur5_moveit_controller_manager.launch.xml
+share/ur5_moveit_config/launch/ur5_moveit_planning_execution.launch
+share/ur5_moveit_config/launch/ur5_moveit_sensor_manager.launch.xml
+share/ur5_moveit_config/launch/warehouse.launch
+share/ur5_moveit_config/launch/warehouse_settings.launch.xml
+share/ur5_moveit_config/package.xml
+share/ur_bringup/cmake/ur_bringupConfig-version.cmake
+share/ur_bringup/cmake/ur_bringupConfig.cmake
+share/ur_bringup/launch/ur10_bringup.launch
+share/ur_bringup/launch/ur10_bringup_joint_limited.launch
+share/ur_bringup/launch/ur3_bringup.launch
+share/ur_bringup/launch/ur3_bringup_joint_limited.launch
+share/ur_bringup/launch/ur5_bringup.launch
+share/ur_bringup/launch/ur5_bringup_joint_limited.launch
+share/ur_bringup/launch/ur_common.launch
+share/ur_bringup/package.xml
+share/ur_description/cmake/ur_descriptionConfig-version.cmake
+share/ur_description/cmake/ur_descriptionConfig.cmake
+share/ur_description/launch/test.launch
+share/ur_description/launch/ur10_upload.launch
+share/ur_description/launch/ur3_upload.launch
+share/ur_description/launch/ur5_upload.launch
+share/ur_description/meshes/ur10/collision/base.stl
+share/ur_description/meshes/ur10/collision/forearm.stl
+share/ur_description/meshes/ur10/collision/shoulder.stl
+share/ur_description/meshes/ur10/collision/upperarm.stl
+share/ur_description/meshes/ur10/collision/wrist1.stl
+share/ur_description/meshes/ur10/collision/wrist2.stl
+share/ur_description/meshes/ur10/collision/wrist3.stl
+share/ur_description/meshes/ur10/visual/base.dae
+share/ur_description/meshes/ur10/visual/forearm.dae
+share/ur_description/meshes/ur10/visual/shoulder.dae
+share/ur_description/meshes/ur10/visual/upperarm.dae
+share/ur_description/meshes/ur10/visual/wrist1.dae
+share/ur_description/meshes/ur10/visual/wrist2.dae
+share/ur_description/meshes/ur10/visual/wrist3.dae
+share/ur_description/meshes/ur3/collision/base.stl
+share/ur_description/meshes/ur3/collision/forearm.stl
+share/ur_description/meshes/ur3/collision/shoulder.stl
+share/ur_description/meshes/ur3/collision/upperarm.stl
+share/ur_description/meshes/ur3/collision/wrist1.stl
+share/ur_description/meshes/ur3/collision/wrist2.stl
+share/ur_description/meshes/ur3/collision/wrist3.stl
+share/ur_description/meshes/ur3/visual/base.dae
+share/ur_description/meshes/ur3/visual/forearm.dae
+share/ur_description/meshes/ur3/visual/shoulder.dae
+share/ur_description/meshes/ur3/visual/upperarm.dae
+share/ur_description/meshes/ur3/visual/wrist1.dae
+share/ur_description/meshes/ur3/visual/wrist2.dae
+share/ur_description/meshes/ur3/visual/wrist3.dae
+share/ur_description/meshes/ur5/collision/base.stl
+share/ur_description/meshes/ur5/collision/forearm.stl
+share/ur_description/meshes/ur5/collision/shoulder.stl
+share/ur_description/meshes/ur5/collision/upperarm.stl
+share/ur_description/meshes/ur5/collision/wrist1.stl
+share/ur_description/meshes/ur5/collision/wrist2.stl
+share/ur_description/meshes/ur5/collision/wrist3.stl
+share/ur_description/meshes/ur5/visual/base.dae
+share/ur_description/meshes/ur5/visual/forearm.dae
+share/ur_description/meshes/ur5/visual/shoulder.dae
+share/ur_description/meshes/ur5/visual/upperarm.dae
+share/ur_description/meshes/ur5/visual/wrist1.dae
+share/ur_description/meshes/ur5/visual/wrist2.dae
+share/ur_description/meshes/ur5/visual/wrist3.dae
+share/ur_description/package.xml
+share/ur_description/urdf/common.gazebo.xacro
+share/ur_description/urdf/ur.gazebo.xacro
+share/ur_description/urdf/ur.transmission.xacro
+share/ur_description/urdf/ur10.urdf.xacro
+share/ur_description/urdf/ur10_joint_limited_robot.urdf.xacro
+share/ur_description/urdf/ur10_robot.urdf.xacro
+share/ur_description/urdf/ur3.urdf.xacro
+share/ur_description/urdf/ur3_joint_limited_robot.urdf.xacro
+share/ur_description/urdf/ur3_robot.urdf.xacro
+share/ur_description/urdf/ur5.urdf.xacro
+share/ur_description/urdf/ur5_joint_limited_robot.urdf.xacro
+share/ur_description/urdf/ur5_robot.urdf.xacro
+share/ur_driver/cmake/ur_driverConfig-version.cmake
+share/ur_driver/cmake/ur_driverConfig.cmake
+share/ur_driver/package.xml
+share/ur_driver/prog
+share/ur_driver/prog_reset
+share/ur_gazebo/cmake/ur_gazeboConfig-version.cmake
+share/ur_gazebo/cmake/ur_gazeboConfig.cmake
+share/ur_gazebo/controller/arm_controller_ur10.yaml
+share/ur_gazebo/controller/arm_controller_ur3.yaml
+share/ur_gazebo/controller/arm_controller_ur5.yaml
+share/ur_gazebo/controller/joint_state_controller.yaml
+share/ur_gazebo/launch/controller_utils.launch
+share/ur_gazebo/launch/ur10.launch
+share/ur_gazebo/launch/ur10_joint_limited.launch
+share/ur_gazebo/launch/ur3.launch
+share/ur_gazebo/launch/ur3_joint_limited.launch
+share/ur_gazebo/launch/ur5.launch
+share/ur_gazebo/launch/ur5_joint_limited.launch
+share/ur_gazebo/package.xml
+share/ur_kinematics/cmake/ur_kinematicsConfig-version.cmake
+share/ur_kinematics/cmake/ur_kinematicsConfig.cmake
+share/ur_kinematics/package.xml
+share/ur_kinematics/ur_moveit_plugins.xml
+share/ur_msgs/cmake/ur_msgs-msg-extras.cmake
+share/ur_msgs/cmake/ur_msgs-msg-paths.cmake
+share/ur_msgs/cmake/ur_msgsConfig-version.cmake
+share/ur_msgs/cmake/ur_msgsConfig.cmake
+share/ur_msgs/msg/Analog.msg
+share/ur_msgs/msg/Digital.msg
+share/ur_msgs/msg/IOStates.msg
+share/ur_msgs/msg/MasterboardDataMsg.msg
+share/ur_msgs/msg/RobotStateRTMsg.msg
+share/ur_msgs/msg/ToolDataMsg.msg
+share/ur_msgs/package.xml
+share/ur_msgs/srv/SetIO.srv
+share/ur_msgs/srv/SetPayload.srv
+@pkgdir include/ompl/CMakeFiles/ompl.dir/util
+@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/thunder
+@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/multiplan
+@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/lightning
+@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/experience
+@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/debug
+@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/config
+@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/benchmark
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/stride
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/sst
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/sbl
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/rrt
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/prm
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/pdst
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/kpiece
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/fmt
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/experience
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/est
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/cforest
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/bitstar/datastructures
+@pkgdir include/ompl/CMakeFiles/ompl.dir/control/spaces
+@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/syclop
+@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/sst
+@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/rrt
+@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/pdst
+@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/ltl
+@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/kpiece
+@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/est
+@pkgdir include/ompl/CMakeFiles/ompl.dir/base/spaces/constraint
+@pkgdir include/ompl/CMakeFiles/ompl.dir/base/samplers/informed
+@pkgdir include/ompl/CMakeFiles/ompl.dir/base/objectives
+@pkgdir include/ompl/CMakeFiles/ompl.dir/base/goals
+@pkgdir include/fcl/CMakeFiles

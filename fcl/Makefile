@@ -25,6 +25,8 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
 include ../../mapping/octomap/depend.mk
 
+include ../../math/libccd/depend.mk
+
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk

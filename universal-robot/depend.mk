@@ -19,7 +19,7 @@ DEPEND_ABI.universal-robot?=	universal-robot>=1.2.1
 DEPEND_DIR.universal-robot?=	../../wip/universal-robot
 
 SYSTEM_SEARCH.universal-robot=\
-	include/ur_msgs/SetIO.hh	\
+	include/ur_msgs/SetIO.h	\
 	'lib/pkgconfig/ur_description.pc:/Version/s/[^0-9.]//gp'
 
 endif # UNIVERSAL_ROBOT_DEPEND_MK --------------------------------------------

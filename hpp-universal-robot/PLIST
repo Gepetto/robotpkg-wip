@@ -1,0 +1,18 @@
+@comment Thu Dec 20 17:43:28 CET 2018
+include/hpp/universal/robot/config.hh
+include/hpp/universal/robot/deprecated.hh
+include/hpp/universal/robot/warning.hh
+lib/pkgconfig/hpp-universal-robot.pc
+${PYTHON_SITELIB}/hpp/corbaserver/manipulation/ur5/__init__.py
+${PYTHON_SITELIB}/hpp/corbaserver/manipulation/ur5/robot.py
+${PYTHON_SITELIB}/hpp/corbaserver/ur5/__init__.py
+${PYTHON_SITELIB}/hpp/corbaserver/ur5/robot.py
+share/ur_description/launch/ur5.launch
+share/ur_description/rviz/config.rviz
+share/ur_description/srdf/ur3_gripper.srdf
+share/ur_description/srdf/ur5.srdf
+share/ur_description/srdf/ur5_gripper.srdf
+share/ur_description/srdf/ur5_joint_limited_robot.srdf
+share/ur_description/urdf/ur3_gripper.urdf
+share/ur_description/urdf/ur5_gripper.urdf
+share/ur_description/urdf/ur5_joint_limited_robot.urdf

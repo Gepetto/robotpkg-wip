@@ -11,13 +11,11 @@ endif
 
 ifeq (+,$(FCL_DEPEND_MK)) # ------------------------------------------
 
-PREFER.fcl?=	robotpkg
+PREFER.fcl?=	system
 
 SYSTEM_SEARCH.fcl=\
   'include/fcl/octree.h:'	\
   'lib/pkgconfig/fcl.pc:/Version  /s/[^0-9.]//gp'
-
-
 
 DEPEND_USE+=		fcl
 

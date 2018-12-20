@@ -22,6 +22,8 @@ SYSTEM_SEARCH.object-recognition-msgs=\
 	include/object_recognition_msgs/ObjectType.h	\
 	'lib/pkgconfig/object_recognition_msgs.pc:/Version/s/[^0-9.]//gp'
 
+CMAKE_PREFIX_PATH.object-recognition-msgs=  ${PREFIX.object-recognition-msgs}
+
 endif # OBJECT_RECOGNITION_MSGS_DEPEND_MK --------------------------------------------
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}

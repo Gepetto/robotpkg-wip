@@ -15,7 +15,7 @@ PREFER.srdfdom?=	robotpkg
 
 DEPEND_USE+=		srdfdom
 
-DEPEND_ABI.srdfdom?=	srdfdom>=0.5.1
+DEPEND_ABI.srdfdom?=	srdfdom>=0.4.2
 DEPEND_DIR.srdfdom?=	../../wip/srdfdom
 
 SYSTEM_SEARCH.srdfdom=\

@@ -17,7 +17,7 @@ include ../../wip/ros-octomap-msgs/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../interfaces/ros-std-msgs/depend.mk
 include ../../devel/ros-pluginlib/depend.mk
-include ../../devel/ros-cpp-core/depend.mk
+include ../../devel/ros-roscpp-core/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../math/ros-geometry/depend.mk
 

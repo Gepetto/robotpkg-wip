@@ -21,15 +21,40 @@ include ../../wip/ros-srdfdom/depend.mk
 include ../../wip/ompl/depend.mk
 include ../../wip/ros-warehouse-ros/depend.mk
 
-include ../../image/ros-image-common/depend.mk
-include ../../interfaces/ros-control-msgs/depend.mk
-#include ../../mapping/octomap/depend.mk
-include ../../math/ros-geometry2/depend.mk
-include ../../math/ros-eigen-stl-containers/depend.mk
-include ../../motion/ros-control/depend.mk
+include ../../devel/ros-catkin/depend.mk
+include ../../devel/ros-class-loader/depend.mk
+include ../../devel/ros-pluginlib/depend.mk
+include ../../devel/ros-roscpp-core/depend.mk
+include ../../devel/ros-ros/depend.mk
+include ../../devel/ros-xacro/depend.mk
+include ../../devel/ros-xacro/depend.mk.orig
+include ../../graphics/robot-capsule-urdf/depend.mk
 include ../../graphics/ros-geometric-shapes/depend.mk
 include ../../graphics/ros-interactive-markers/depend.mk
+include ../../graphics/ros-kdl-parser/depend.mk
+include ../../graphics/ros-urdf/depend.mk
+include ../../image/ros-image-common/depend.mk
+include ../../image/ros-vision-opencv/depend.mk
+include ../../interfaces/ros-comm-msgs/depend.mk
+include ../../interfaces/ros-common-msgs/depend.mk
+include ../../interfaces/ros-control-msgs/depend.mk
+include ../../interfaces/ros-std-msgs/depend.mk
+include ../../mapping/octomap/depend.mk
+include ../../math/ros-angles/depend.mk
+include ../../math/ros-eigen-stl-containers/depend.mk
+include ../../math/ros-geometry2/depend.mk
+include ../../math/ros-geometry/depend.mk
+include ../../math/ros-random-numbers/depend.mk
+include ../../math/ros-random-numbers/depend.mk.orig
+include ../../middleware/ros-actionlib/depend.mk
+include ../../middleware/ros-comm/depend.mk
+include ../../middleware/ros-dynamic-reconfigure/depend.mk
+include ../../motion/orocos-kdl/depend.mk
+include ../../motion/py-orocos-kdl/depend.mk
+include ../../motion/ros-control/depend.mk
+include ../../sysutils/ros-console/depend.mk
 include ../../sysutils/ros-rviz/depend.mk
+
 
 include ../../mk/sysdep/glew.mk
 include ../../wip/fcl/depend.mk

@@ -19,7 +19,7 @@ include ../../wip/ros-py-urdf-parser/depend.mk
 include ../../devel/ros-cmake-modules/depend.mk
 include ../../sysutils/ros-console-bridge/depend.mk
 include ../../graphics/urdfdom-headers/depend.mk
-include ../../middleware/roscomm/depend.mk
+include ../../middleware/ros-comm/depend.mk
 include ../../devel/tinyxml/depend.mk
 include ../../graphics/ros-urdf/depend.mk
 

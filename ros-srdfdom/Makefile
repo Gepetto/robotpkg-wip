@@ -1,4 +1,4 @@
-# robotpkg Makefile for:	wip/srdfdom
+# robotpkg Makefile for:	wip/ros-srdfdom
 # Created:			Guilhem Saurel on Wed, 20 Dec 2018
 #
 
@@ -15,7 +15,7 @@ include ../../meta-pkgs/ros-base/Makefile.common
 
 include ../../devel/ros-cmake-modules/depend.mk
 include ../../graphics/urdfdom/depend.mk
-include ../../wip/py-urdf-parser/depend.mk
+include ../../wip/ros-py-urdf-parser/depend.mk
 
 include ../../devel/ros-catkin/depend.mk
 include ../../mk/sysdep/python.mk

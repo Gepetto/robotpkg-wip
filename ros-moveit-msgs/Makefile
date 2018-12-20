@@ -1,4 +1,4 @@
-# robotpkg Makefile for:	wip/moveit
+# robotpkg Makefile for:	wip/ros-moveit
 # Created:			Guilhem Saurel on Wed, 19 Dec 2018
 #
 
@@ -12,8 +12,9 @@ CATEGORIES=		wip
 ROS_COMMENT=	ROS messages specific to MoveIt!
 
 include ../../meta-pkgs/ros-base/Makefile.common
-include ../../wip/object-recognition-msgs/depend.mk
-include ../../wip/octomap-msgs/depend.mk
+
+include ../../wip/ros-object-recognition-msgs/depend.mk
+include ../../wip/ros-octomap-msgs/depend.mk
 
 include ../../devel/ros-catkin/depend.mk
 include ../../mk/sysdep/python.mk

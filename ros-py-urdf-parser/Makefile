@@ -1,4 +1,4 @@
-# robotpkg Makefile for:	wip/py-urdf-parser
+# robotpkg Makefile for:	wip/ros-py-urdf-parser
 # Created:			Guilhem Saurel on Wed, 20 Dec 2018
 #
 
@@ -12,8 +12,8 @@ ROS_COMMENT=	Standalone URDF parser for Python.
 
 
 include ../../meta-pkgs/ros-base/Makefile.common
-include ../../wip/object-recognition-msgs/depend.mk
-include ../../wip/octomap-msgs/depend.mk
+include ../../wip/ros-object-recognition-msgs/depend.mk
+include ../../wip/ros-octomap-msgs/depend.mk
 
 include ../../devel/ros-catkin/depend.mk
 include ../../mk/sysdep/python.mk

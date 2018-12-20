@@ -1,4 +1,4 @@
-# robotpkg Makefile for:	wip/moveit
+# robotpkg Makefile for:	wip/ros-moveit
 # Created:			Guilhem Saurel on Wed, 19 Dec 2018
 #
 
@@ -15,11 +15,12 @@ ROS_COMMENT=	The MoveIt! Motion Planning Framework
 
 include ../../meta-pkgs/ros-base/Makefile.common
 
-include ../../wip/moveit-resources/depend.mk
-include ../../wip/moveit-msgs/depend.mk
-include ../../wip/srdfdom/depend.mk
+include ../../wip/ros-moveit-resources/depend.mk
+include ../../wip/ros-moveit-msgs/depend.mk
+include ../../wip/ros-srdfdom/depend.mk
 include ../../wip/ompl/depend.mk
-include ../../wip/warehouse-ros/depend.mk
+include ../../wip/ros-warehouse-ros/depend.mk
+
 include ../../image/ros-image-common/depend.mk
 include ../../interfaces/ros-control-msgs/depend.mk
 #include ../../mapping/octomap/depend.mk

@@ -1,4 +1,4 @@
-# robotpkg Makefile for:	wip/universal-robot
+# robotpkg Makefile for:	wip/ros-universal-robot
 # Created:			Guilhem Saurel on Wed, 19 Dec 2018
 #
 
@@ -14,7 +14,7 @@ ROS_COMMENT=	ROS-Industrial Universal Robot meta-package
 
 include ../../meta-pkgs/ros-base/Makefile.common
 
-include ../../wip/moveit/depend.mk
+include ../../wip/ros-moveit/depend.mk
 
 include ../../interfaces/ros-std-msgs/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk

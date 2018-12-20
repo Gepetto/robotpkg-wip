@@ -14,7 +14,7 @@ export ROS_PACKAGE_PATH+=	${PREFIX.hpp-universal-robot}/share
 
 include ../../meta-pkgs/hpp/Makefile.common
 
-include ../../wip/universal-robot/depend.mk
+include ../../wip/ros-universal-robot/depend.mk
 include ../../devel/ros-xacro/depend.mk
 
 include ../../mk/sysdep/python.mk

@@ -1,10 +1,10 @@
-# robotpkg Makefile for:	wip/octomap-msgs
+# robotpkg Makefile for:	wip/ros-warehouse-ros
 # Created:			Guilhem Saurel on Wed, 20 Dec 2018
 #
 
-ROS_PKG=		octomap_msgs
-ROS_VERSION=	0.3.3
-ROS_REPO=		octomap
+ROS_PKG=		warehouse_ros
+ROS_VERSION=	0.9.2
+ROS_REPO=		ros-planning
 
 PKGNAME=		$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 
@@ -12,6 +12,8 @@ CATEGORIES=		wip
 ROS_COMMENT=	ROS messages specific to MoveIt!
 
 include ../../meta-pkgs/ros-base/Makefile.common
+include ../../wip/ros-object-recognition-msgs/depend.mk
+include ../../wip/ros-octomap-msgs/depend.mk
 
 include ../../devel/ros-catkin/depend.mk
 include ../../mk/sysdep/python.mk

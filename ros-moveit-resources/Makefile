@@ -1,4 +1,4 @@
-# robotpkg Makefile for:	wip/moveit
+# robotpkg Makefile for:	wip/ros-moveit
 # Created:			Guilhem Saurel on Wed, 19 Dec 2018
 #
 

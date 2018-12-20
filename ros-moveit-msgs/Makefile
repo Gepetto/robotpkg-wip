@@ -15,10 +15,10 @@ include ../../meta-pkgs/ros-base/Makefile.common
 
 include ../../wip/ros-object-recognition-msgs/depend.mk
 include ../../wip/ros-octomap-msgs/depend.mk
-include ../../interfaces/ros-common-msgs/depende.mk
-include ../../interfaces/ros-std-msgs/depende.mk
-include ../../lang/ros-message-generation/depende.mk
-include ../../lang/ros-message-runtime/depende.mk
+include ../../interfaces/ros-common-msgs/depend.mk
+include ../../interfaces/ros-std-msgs/depend.mk
+include ../../lang/ros-message-generation/depend.mk
+include ../../lang/ros-message-runtime/depend.mk
 
 include ../../devel/ros-catkin/depend.mk
 include ../../mk/sysdep/python.mk

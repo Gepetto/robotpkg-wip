@@ -14,6 +14,7 @@ ROS_COMMENT=	Standalone URDF parser for Python.
 include ../../meta-pkgs/ros-base/Makefile.common
 include ../../wip/ros-object-recognition-msgs/depend.mk
 include ../../wip/ros-octomap-msgs/depend.mk
+include ../../mk/sysdep/py-yaml.mk
 
 include ../../devel/ros-catkin/depend.mk
 include ../../mk/sysdep/python.mk

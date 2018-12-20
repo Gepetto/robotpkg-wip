@@ -1,4 +1,4 @@
-# robotpkg Makefile for:	wip/hpp-environments
+# robotpkg Makefile for:	wip/hpp-romeo
 # Created:			Guilhem Saurel on Fri, 10 Oct 2018
 #
 

@@ -13,6 +13,8 @@ ROS_COMMENT=	ROS package to provide messages and serializations / conversion for
 
 include ../../meta-pkgs/ros-base/Makefile.common
 
+include ../../lang/ros-message-generation/depend.mk
+
 include ../../devel/ros-catkin/depend.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/robotpkg.mk

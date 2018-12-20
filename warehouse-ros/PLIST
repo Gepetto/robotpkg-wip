@@ -1,0 +1,17 @@
+@comment Thu Dec 20 11:16:08 CET 2018
+include/warehouse_ros/database_connection.h
+include/warehouse_ros/database_loader.h
+include/warehouse_ros/exceptions.h
+include/warehouse_ros/impl/database_connection_impl.hpp
+include/warehouse_ros/impl/message_collection_impl.hpp
+include/warehouse_ros/impl/query_results_impl.hpp
+include/warehouse_ros/message_collection.h
+include/warehouse_ros/message_with_metadata.h
+include/warehouse_ros/metadata.h
+include/warehouse_ros/query_results.h
+include/warehouse_ros/transform_collection.h
+lib/libwarehouse_ros.so
+lib/pkgconfig/warehouse_ros.pc
+share/warehouse_ros/cmake/warehouse_rosConfig-version.cmake
+share/warehouse_ros/cmake/warehouse_rosConfig.cmake
+share/warehouse_ros/package.xml

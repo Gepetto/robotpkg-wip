@@ -13,6 +13,11 @@ ROS_COMMENT=	various resources needed for MoveIt! testing.
 
 include ../../meta-pkgs/ros-base/Makefile.common
 
+include ../../wip/ros-warehouse-ros/depend.mk
+include ../../localization/ros-joint-state-publisher/depend.mk
+include ../../localization/ros-robot-state-publisher/depend.mk
+include ../../devel/ros-xacro/depend.mk
+
 include ../../devel/ros-catkin/depend.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/robotpkg.mk

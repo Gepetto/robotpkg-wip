@@ -47,6 +47,8 @@ define PKG_OPTION_UNSET.morse
   CMAKE_ARGS+=			-DOMPL_EXTENSION_MORSE=OFF
 endef
 
+include ../../simulation/morse/depend.mk
+include ../../graphics/flann/depend.mk
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

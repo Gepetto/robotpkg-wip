@@ -9,7 +9,7 @@ ROS_REPO=		octomap
 PKGNAME=		$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 
 CATEGORIES=		wip
-ROS_COMMENT=	ROS messages specific to MoveIt!
+ROS_COMMENT=	ROS package to provide messages and serializations / conversion for the OctoMap library
 
 include ../../meta-pkgs/ros-base/Makefile.common
 

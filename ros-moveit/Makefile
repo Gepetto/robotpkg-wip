@@ -35,6 +35,7 @@ include ../../mk/sysdep/glew.mk
 include ../../wip/fcl/depend.mk
 
 DEPEND_ABI.fcl +=	fcl>=0.5.0
+PREFER.fcl=		robotpkg
 #DEPEND_ABI.octomap +=	octomap>=1.8.0
 
 include ../../devel/ros-catkin/depend.mk

@@ -1,5 +1,7 @@
-@comment Fri Jan 16 11:29:25 CET 2015
+@comment Thu Dec 20 14:04:29 CET 2018
 bin/ompl_benchmark_statistics.py
+include/ompl/base/ConstrainedSpaceInformation.h
+include/ompl/base/Constraint.h
 include/ompl/base/Cost.h
 include/ompl/base/DiscreteMotionValidator.h
 include/ompl/base/GenericParam.h
@@ -27,6 +29,8 @@ include/ompl/base/StateSpace.h
 include/ompl/base/StateSpaceTypes.h
 include/ompl/base/StateStorage.h
 include/ompl/base/StateValidityChecker.h
+include/ompl/base/TypedSpaceInformation.h
+include/ompl/base/TypedStateValidityChecker.h
 include/ompl/base/ValidStateSampler.h
 include/ompl/base/goals/GoalLazySamples.h
 include/ompl/base/goals/GoalRegion.h
@@ -38,10 +42,18 @@ include/ompl/base/objectives/MechanicalWorkOptimizationObjective.h
 include/ompl/base/objectives/MinimaxObjective.h
 include/ompl/base/objectives/PathLengthOptimizationObjective.h
 include/ompl/base/objectives/StateCostIntegralObjective.h
+include/ompl/base/objectives/VFMechanicalWorkOptimizationObjective.h
+include/ompl/base/objectives/VFUpstreamCriterionOptimizationObjective.h
+include/ompl/base/samplers/BridgeTestValidStateSampler.h
 include/ompl/base/samplers/GaussianValidStateSampler.h
+include/ompl/base/samplers/InformedStateSampler.h
 include/ompl/base/samplers/MaximizeClearanceValidStateSampler.h
+include/ompl/base/samplers/MinimumClearanceValidStateSampler.h
 include/ompl/base/samplers/ObstacleBasedValidStateSampler.h
 include/ompl/base/samplers/UniformValidStateSampler.h
+include/ompl/base/samplers/informed/OrderedInfSampler.h
+include/ompl/base/samplers/informed/PathLengthDirectInfSampler.h
+include/ompl/base/samplers/informed/RejectionInfSampler.h
 include/ompl/base/spaces/DiscreteStateSpace.h
 include/ompl/base/spaces/DubinsStateSpace.h
 include/ompl/base/spaces/RealVectorBounds.h
@@ -53,8 +65,13 @@ include/ompl/base/spaces/SE3StateSpace.h
 include/ompl/base/spaces/SO2StateSpace.h
 include/ompl/base/spaces/SO3StateSpace.h
 include/ompl/base/spaces/TimeStateSpace.h
+include/ompl/base/spaces/WrapperStateSpace.h
+include/ompl/base/spaces/constraint/AtlasChart.h
+include/ompl/base/spaces/constraint/AtlasStateSpace.h
+include/ompl/base/spaces/constraint/ConstrainedStateSpace.h
+include/ompl/base/spaces/constraint/ProjectedStateSpace.h
+include/ompl/base/spaces/constraint/TangentBundleStateSpace.h
 include/ompl/config.h
-include/ompl/contrib/rrt_star/RRTstar.h
 include/ompl/control/Control.h
 include/ompl/control/ControlSampler.h
 include/ompl/control/ControlSpace.h
@@ -81,6 +98,7 @@ include/ompl/control/planners/ltl/PropositionalDecomposition.h
 include/ompl/control/planners/ltl/World.h
 include/ompl/control/planners/pdst/PDST.h
 include/ompl/control/planners/rrt/RRT.h
+include/ompl/control/planners/sst/SST.h
 include/ompl/control/planners/syclop/Decomposition.h
 include/ompl/control/planners/syclop/GridDecomposition.h
 include/ompl/control/planners/syclop/Syclop.h
@@ -89,16 +107,20 @@ include/ompl/control/planners/syclop/SyclopRRT.h
 include/ompl/control/spaces/DiscreteControlSpace.h
 include/ompl/control/spaces/RealVectorControlSpace.h
 include/ompl/datastructures/BinaryHeap.h
+include/ompl/datastructures/DynamicSSSP.h
 include/ompl/datastructures/GreedyKCenters.h
 include/ompl/datastructures/Grid.h
 include/ompl/datastructures/GridB.h
 include/ompl/datastructures/GridN.h
+include/ompl/datastructures/LPAstarOnGraph.h
 include/ompl/datastructures/NearestNeighbors.h
 include/ompl/datastructures/NearestNeighborsFLANN.h
 include/ompl/datastructures/NearestNeighborsGNAT.h
+include/ompl/datastructures/NearestNeighborsGNATNoThreadSafety.h
 include/ompl/datastructures/NearestNeighborsLinear.h
 include/ompl/datastructures/NearestNeighborsSqrtApprox.h
 include/ompl/datastructures/PDF.h
+include/ompl/datastructures/Permutation.h
 include/ompl/extensions/morse/MorseControlSpace.h
 include/ompl/extensions/morse/MorseEnvironment.h
 include/ompl/extensions/morse/MorseGoal.h
@@ -124,10 +146,22 @@ include/ompl/geometric/PathSimplifier.h
 include/ompl/geometric/SimpleSetup.h
 include/ompl/geometric/planners/AnytimePathShortening.h
 include/ompl/geometric/planners/PlannerIncludes.h
+include/ompl/geometric/planners/bitstar/BITstar.h
+include/ompl/geometric/planners/bitstar/datastructures/CostHelper.h
+include/ompl/geometric/planners/bitstar/datastructures/HelperFunctions.h
+include/ompl/geometric/planners/bitstar/datastructures/IdGenerator.h
+include/ompl/geometric/planners/bitstar/datastructures/ImplicitGraph.h
+include/ompl/geometric/planners/bitstar/datastructures/SearchQueue.h
+include/ompl/geometric/planners/bitstar/datastructures/Vertex.h
 include/ompl/geometric/planners/cforest/CForest.h
 include/ompl/geometric/planners/cforest/CForestStateSampler.h
 include/ompl/geometric/planners/cforest/CForestStateSpaceWrapper.h
+include/ompl/geometric/planners/est/BiEST.h
 include/ompl/geometric/planners/est/EST.h
+include/ompl/geometric/planners/est/ProjEST.h
+include/ompl/geometric/planners/experience/LightningRetrieveRepair.h
+include/ompl/geometric/planners/experience/ThunderRetrieveRepair.h
+include/ompl/geometric/planners/fmt/BFMT.h
 include/ompl/geometric/planners/fmt/FMT.h
 include/ompl/geometric/planners/kpiece/BKPIECE1.h
 include/ompl/geometric/planners/kpiece/Discretization.h
@@ -141,15 +175,23 @@ include/ompl/geometric/planners/prm/PRM.h
 include/ompl/geometric/planners/prm/PRMstar.h
 include/ompl/geometric/planners/prm/SPARS.h
 include/ompl/geometric/planners/prm/SPARStwo.h
+include/ompl/geometric/planners/rrt/BiTRRT.h
+include/ompl/geometric/planners/rrt/InformedRRTstar.h
 include/ompl/geometric/planners/rrt/LBTRRT.h
+include/ompl/geometric/planners/rrt/LazyLBTRRT.h
 include/ompl/geometric/planners/rrt/LazyRRT.h
 include/ompl/geometric/planners/rrt/RRT.h
 include/ompl/geometric/planners/rrt/RRTConnect.h
+include/ompl/geometric/planners/rrt/RRTXstatic.h
+include/ompl/geometric/planners/rrt/RRTsharp.h
 include/ompl/geometric/planners/rrt/RRTstar.h
+include/ompl/geometric/planners/rrt/SORRTstar.h
 include/ompl/geometric/planners/rrt/TRRT.h
+include/ompl/geometric/planners/rrt/VFRRT.h
 include/ompl/geometric/planners/rrt/pRRT.h
 include/ompl/geometric/planners/sbl/SBL.h
 include/ompl/geometric/planners/sbl/pSBL.h
+include/ompl/geometric/planners/sst/SST.h
 include/ompl/geometric/planners/stride/STRIDE.h
 include/ompl/tools/benchmark/Benchmark.h
 include/ompl/tools/benchmark/MachineSpecs.h
@@ -157,29 +199,46 @@ include/ompl/tools/config/MagicConstants.h
 include/ompl/tools/config/SelfConfig.h
 include/ompl/tools/debug/PlannerMonitor.h
 include/ompl/tools/debug/Profiler.h
+include/ompl/tools/experience/ExperienceSetup.h
+include/ompl/tools/lightning/DynamicTimeWarp.h
+include/ompl/tools/lightning/Lightning.h
+include/ompl/tools/lightning/LightningDB.h
 include/ompl/tools/multiplan/OptimizePlan.h
 include/ompl/tools/multiplan/ParallelPlan.h
+include/ompl/tools/thunder/SPARSdb.h
+include/ompl/tools/thunder/Thunder.h
+include/ompl/tools/thunder/ThunderDB.h
 include/ompl/util/ClassForward.h
 include/ompl/util/Console.h
 include/ompl/util/Deprecation.h
+include/ompl/util/DisableCompilerWarning.h
 include/ompl/util/Exception.h
+include/ompl/util/GeometricEquations.h
+include/ompl/util/Hash.h
 include/ompl/util/PPM.h
+include/ompl/util/ProlateHyperspheroid.h
 include/ompl/util/RandomNumbers.h
 include/ompl/util/Time.h
 lib/libompl.so
 lib/libompl.so.${PKGVERSION}
-lib/libompl.so.10
+lib/libompl.so.15
 lib/pkgconfig/ompl.pc
 share/man/man1/ompl_benchmark_statistics.1
+share/man/man1/plannerarena.1
+share/ompl/cmake/omplConfig.cmake
+share/ompl/cmake/omplConfigVersion.cmake
 share/ompl/demos/CForestCircleGridBenchmark.cpp
+share/ompl/demos/Diagonal.cpp
 share/ompl/demos/GeometricCarPlanning.cpp
 share/ompl/demos/HybridSystemPlanning.cpp
 share/ompl/demos/HypercubeBenchmark.cpp
 share/ompl/demos/KinematicChainBenchmark.cpp
+share/ompl/demos/KinematicChainPathPlot.py
 share/ompl/demos/Koules/Koules.cpp
 share/ompl/demos/Koules/KoulesConfig.h
 share/ompl/demos/Koules/KoulesControlSpace.cpp
 share/ompl/demos/Koules/KoulesControlSpace.h
+share/ompl/demos/Koules/KoulesDecomposition.h
 share/ompl/demos/Koules/KoulesDirectedControlSampler.cpp
 share/ompl/demos/Koules/KoulesDirectedControlSampler.h
 share/ompl/demos/Koules/KoulesGoal.cpp
@@ -214,31 +273,42 @@ share/ompl/demos/RigidBodyPlanningWithODESolverAndControls.cpp
 share/ompl/demos/RigidBodyPlanningWithODESolverAndControls.py
 share/ompl/demos/StateSampling.cpp
 share/ompl/demos/StateSampling.py
+share/ompl/demos/ThunderLightning.cpp
 share/ompl/demos/TriangulationDemo.cpp
-share/ompl/ompl-config.cmake
+share/ompl/demos/VFRRT/VectorFieldConservative.cpp
+share/ompl/demos/VFRRT/VectorFieldNonconservative.cpp
+share/ompl/demos/VFRRT/plotConservative.py
+share/ompl/demos/VFRRT/plotNonconservative.py
+share/ompl/ompl.conf
 @pkgdir include/ompl/CMakeFiles/ompl.dir/util
+@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/thunder
 @pkgdir include/ompl/CMakeFiles/ompl.dir/tools/multiplan
+@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/lightning
+@pkgdir include/ompl/CMakeFiles/ompl.dir/tools/experience
 @pkgdir include/ompl/CMakeFiles/ompl.dir/tools/debug
 @pkgdir include/ompl/CMakeFiles/ompl.dir/tools/config
 @pkgdir include/ompl/CMakeFiles/ompl.dir/tools/benchmark
 @pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/stride
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/sst
 @pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/sbl
 @pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/rrt
 @pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/prm
 @pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/pdst
 @pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/kpiece
 @pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/fmt
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/experience
 @pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/est
 @pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/cforest
-@pkgdir include/ompl/CMakeFiles/ompl.dir/extensions/morse
+@pkgdir include/ompl/CMakeFiles/ompl.dir/geometric/planners/bitstar/datastructures
 @pkgdir include/ompl/CMakeFiles/ompl.dir/control/spaces
 @pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/syclop
+@pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/sst
 @pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/rrt
 @pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/pdst
 @pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/ltl
 @pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/kpiece
 @pkgdir include/ompl/CMakeFiles/ompl.dir/control/planners/est
-@pkgdir include/ompl/CMakeFiles/ompl.dir/base/spaces
-@pkgdir include/ompl/CMakeFiles/ompl.dir/base/samplers
+@pkgdir include/ompl/CMakeFiles/ompl.dir/base/spaces/constraint
+@pkgdir include/ompl/CMakeFiles/ompl.dir/base/samplers/informed
 @pkgdir include/ompl/CMakeFiles/ompl.dir/base/objectives
 @pkgdir include/ompl/CMakeFiles/ompl.dir/base/goals

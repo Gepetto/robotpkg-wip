@@ -1,0 +1,1 @@
+template based classes for creating and manipulating spline and bezier curves. Comes with extra options specific to end-effector trajectories in robotics.

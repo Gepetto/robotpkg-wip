@@ -1,0 +1,19 @@
+@comment Thu Jan 3 16:32:16 CET 2019
+include/hpp/spline/MathDefs.h
+include/hpp/spline/bernstein.h
+include/hpp/spline/bezier_curve.h
+include/hpp/spline/bezier_polynom_conversion.h
+include/hpp/spline/config.hh
+include/hpp/spline/cubic_spline.h
+include/hpp/spline/curve_abc.h
+include/hpp/spline/curve_constraint.h
+include/hpp/spline/deprecated.hh
+include/hpp/spline/exact_cubic.h
+include/hpp/spline/helpers/effector_spline.h
+include/hpp/spline/helpers/effector_spline_rotation.h
+include/hpp/spline/polynom.h
+include/hpp/spline/quintic_spline.h
+include/hpp/spline/spline_deriv_constraint.h
+include/hpp/spline/warning.hh
+lib/pkgconfig/hpp-spline.pc
+${PYTHON_SITELIB}/hpp_spline.so

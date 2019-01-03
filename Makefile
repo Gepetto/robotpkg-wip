@@ -24,6 +24,7 @@ SUBDIR+=	head-action
 SUBDIR+=	histodet
 SUBDIR+=	hpp-environments
 SUBDIR+=	hpp-romeo
+SUBDIR+=	hpp-spline
 SUBDIR+=	hpp-universal-robot
 SUBDIR+=	hrp2-14-description
 SUBDIR+=	hrp2-bringup

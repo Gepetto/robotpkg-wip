@@ -24,6 +24,7 @@ SUBDIR+=	head-action
 SUBDIR+=	histodet
 SUBDIR+=	hpp-centroidal-dynamics
 SUBDIR+=	hpp-environments
+SUBDIR+=	hpp-rbprm-robot-data
 SUBDIR+=	hpp-romeo
 SUBDIR+=	hpp-spline
 SUBDIR+=	hpp-universal-robot

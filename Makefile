@@ -23,6 +23,7 @@ SUBDIR+=	hatponboard-lib
 SUBDIR+=	head-action
 SUBDIR+=	histodet
 SUBDIR+=	hpp-affordance
+SUBDIR+=	hpp-affordance-corba
 SUBDIR+=	hpp-bezier-com-traj
 SUBDIR+=	hpp-centroidal-dynamics
 SUBDIR+=	hpp-environments

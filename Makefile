@@ -22,6 +22,7 @@ SUBDIR+=	gerard-bauzil
 SUBDIR+=	hatponboard-lib
 SUBDIR+=	head-action
 SUBDIR+=	histodet
+SUBDIR+=	hpp-centroidal-dynamics
 SUBDIR+=	hpp-environments
 SUBDIR+=	hpp-romeo
 SUBDIR+=	hpp-spline

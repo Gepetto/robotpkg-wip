@@ -19,6 +19,7 @@ WRKSRC=		${WRKDIR}/qpOASES-${VERSION}/interfaces/python
 PYDISTUTILSPKG=	yes
 
 include ../../optimization/qpoases/depend.mk
+include ../../wip/mk/sysdep/py-cython.mk
 include ../../mk/sysdep/py-numpy.mk
 
 include ../../mk/sysdep/python.mk

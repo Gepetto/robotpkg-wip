@@ -86,6 +86,7 @@ SUBDIR+=	py-mavlink
 SUBDIR+=	py-morse
 SUBDIR+=	py-mraa
 SUBDIR+=	py-parametric-curves
+SUBDIR+=	py-qpoases
 SUBDIR+=	py-sot-application-v3
 SUBDIR+=	py-sot-core-v3
 SUBDIR+=	py-sot-dynamic-pinocchio-v3

@@ -1,0 +1,11 @@
+--- setup.py.orig	2017-04-03 12:20:42.000000000 +0200
++++ setup.py	2019-01-15 11:17:52.295839615 +0100
+@@ -54,7 +54,7 @@
+ extra_params = extra_params.copy()
+ extra_params['libraries'] = ['qpOASES']
+ 
+-extra_params['library_dirs'] = ['/usr/lib', os.path.join(BASEDIR, 'bin')]
++extra_params['library_dirs'] = [os.path.join(os.environ['PREFIX'], 'lib'), '/usr/lib', os.path.join(BASEDIR, 'bin')]
+ extra_params['language'] = 'c++'
+ 
+ if os.name == 'posix':

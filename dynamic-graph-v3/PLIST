@@ -26,7 +26,6 @@ include/dynamic-graph/exception-signal.h
 include/dynamic-graph/exception-traces.h
 include/dynamic-graph/factory.h
 include/dynamic-graph/fwd.hh
-include/dynamic-graph/import-default-paths.h
 include/dynamic-graph/linear-algebra.h
 include/dynamic-graph/null-ptr.hh
 include/dynamic-graph/pool.h
@@ -52,4 +51,3 @@ lib/libdynamic-graph.so.${PKGVERSION}
 lib/pkgconfig/dynamic-graph.pc
 lib/plugin/tracer-real-time.so
 lib/plugin/tracer.so
-share/dynamic-graph/script/tracer.dg

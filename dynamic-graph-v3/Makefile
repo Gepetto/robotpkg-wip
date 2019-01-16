@@ -4,9 +4,9 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph
-VERSION=		3.2.0
+VERSION=		3.2.1
 
-DISTNAME=		${NAME}-${VERSION}
+DISTNAME=		${NAME}-v3-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}

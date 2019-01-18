@@ -15,6 +15,8 @@ MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Common Gazebo v1.9+ plugins used by the PAL Robotics robots
 LICENSE=	2-clause-bsd
 
+CONFLICTS+=	talos-${PKGBASE}
+
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../devel/ros-catkin/depend.mk
@@ -32,4 +34,3 @@ include ../../wip/pal-msgs/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk
-

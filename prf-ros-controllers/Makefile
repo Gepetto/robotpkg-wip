@@ -20,6 +20,8 @@ LICENSE=	2-clause-bsd
 
 ROS_METAPKG=	yes
 
+CONFLICTS=	talos-ros-controllers
+
 # Allows to have robotpkg ros packages with the highest priority
 # over system ros packages.
 # http://wiki.ros.org/catkin/what

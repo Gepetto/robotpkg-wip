@@ -1,10 +1,12 @@
-@comment Thu May 4 09:48:29 CEST 2017
+@comment Fri Jan 18 14:11:41 CET 2019
+include/pal_gazebo_plugins/gazebo_attachment.h
 include/pal_gazebo_plugins/gazebo_harness.h
 include/pal_gazebo_plugins/gazebo_pal_hand.h
 include/pal_gazebo_plugins/gazebo_ros_forcetorque.h
 include/pal_gazebo_plugins/gazebo_underactuated_finger.h
 include/pal_gazebo_plugins/gazebo_wifi_ap.h
 include/pal_gazebo_plugins/gazebo_world_odometry.h
+lib/libgazebo_attachment.so
 lib/libgazebo_harness.so
 lib/libgazebo_pal_hand.so
 lib/libgazebo_ros_forcetorque.so

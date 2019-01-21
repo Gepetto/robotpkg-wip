@@ -5,6 +5,7 @@
 ORG=			stack-of-tasks
 NAME=			sot-dynamic-pinocchio
 VERSION=		3.2.4
+PKGREVISION=		1
 
 DISTNAME=		${NAME}-v3-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
@@ -26,6 +27,8 @@ include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/tinyxml/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../math/py-pinocchio/depend.mk
+include ../../wip/dynamic-graph-v3/depend.mk
+include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/sot-tools-v3/depend.mk

@@ -8,6 +8,7 @@ VERSION=		2.1.0
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
+PKGREVISION=		1
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}
@@ -28,6 +29,8 @@ DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/py-sot-core-v3/depend.mk
+include ../../wip/dynamic-graph-v3/depend.mk
+include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

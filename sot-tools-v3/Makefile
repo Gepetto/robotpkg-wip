@@ -5,6 +5,7 @@
 ORG=			stack-of-tasks
 NAME=			sot-tools
 VERSION=		2.1.0
+PKGREVISION=		1
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}
@@ -27,6 +28,7 @@ CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF  # doxygen segfaults on 14.04
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../wip/sot-core-v3/depend.mk
+include ../../wip/dynamic-graph-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../mk/sysdep/cmake.mk

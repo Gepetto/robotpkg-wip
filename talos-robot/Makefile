@@ -9,6 +9,7 @@ DISTNAME= 	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
+PKGREVISION=	1
 
 CATEGORIES=	wip
 #MASTER_SITES=	${MASTER_SITE_OPENROBOTS:=talos/talos_robot/}
@@ -16,11 +17,6 @@ HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 
 COMMENT=	talos_robot package including talos_description and talos_bringup
-LICENSE=	pal-license
-
-RESTRICTED=	Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=	${RESTRICTED}
-NO_PUBLIC_BIN=	${RESTRICTED}
 
 ROS_METAPKG=	yes
 USE_BOOST_LIBS=	thread

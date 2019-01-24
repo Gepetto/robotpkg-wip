@@ -4,7 +4,7 @@
 
 ORG=			pyrene-dev
 NAME=			talos-data
-VERSION=		0.0.20
+VERSION=		0.0.21
 PKGREVISION=	1
 
 ROSNAME=		$(subst -,_,${NAME})

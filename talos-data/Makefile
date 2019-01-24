@@ -5,19 +5,19 @@
 ORG=			pyrene-dev
 NAME=			talos-data
 VERSION=		0.0.21
-PKGREVISION=	1
+PKGREVISION=		2
 
 ROSNAME=		$(subst -,_,${NAME})
 PKGNAME=		${NAME}-${VERSION}
 DISTNAME=		${ROSNAME}-${VERSION}
 
-MASTER_SITES=		https://gepgitlab.laas.fr/${ORG}/${ROSNAME}
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
 MASTER_REPOSITORY=	git ${MASTER_SITES}.git
 CHECKOUT_VCS_OPTS+=	--recursive
+LICENSE=		gnu-lgpl-v3
 
 CATEGORIES=		wip
 COMMENT=		This packages provides data of the humanoid robot Pyrene in a friendly way for the SoT.
-LICENSE=		pal-license
 MAINTAINER=		ostasse@laas.fr
 
 CMAKE_PREFIX_PATH+= ${PREFIX}

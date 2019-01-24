@@ -95,6 +95,7 @@ SUBDIR+=	py-sot-pattern-generator-v3
 SUBDIR+=	py-sot-tools-v3
 SUBDIR+=	py-sot-torque-control
 SUBDIR+=	pyrene-motions
+SUBDIR+=	qgv
 SUBDIR+=	roralink
 SUBDIR+=	roscontrol-sot
 SUBDIR+=	ros-moveit

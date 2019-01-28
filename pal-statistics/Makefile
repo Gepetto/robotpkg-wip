@@ -22,6 +22,8 @@ USE_BOOST_LIBS=	thread
 ROS_METAPKG=	yes
 USE_BOOST_LIBS=	thread
 
+ONLY_FOR_PLATFORM=	Ubuntu-16.04-%
+
 CMAKE_PREFIX_PATH+=${PREFIX}
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

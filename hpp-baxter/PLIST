@@ -1,0 +1,16 @@
+@comment Mon Jan 28 10:58:57 CET 2019
+include/hpp/baxter/config.hh
+include/hpp/baxter/deprecated.hh
+include/hpp/baxter/warning.hh
+lib/pkgconfig/hpp-baxter.pc
+${PYTHON_SITELIB}/hpp/corbaserver/baxter/__init__.py
+${PYTHON_SITELIB}/hpp/corbaserver/baxter/robot.py
+${PYTHON_SITELIB}/hpp/corbaserver/manipulation/baxter/__init__.py
+${PYTHON_SITELIB}/hpp/corbaserver/manipulation/baxter/robot.py
+share/hpp-baxter/package.xml
+share/hpp-baxter/srdf/baxter.srdf
+share/hpp-baxter/srdf/baxter_manipulation.srdf
+share/hpp-baxter/srdf/box.srdf
+share/hpp-baxter/urdf/baxter.urdf
+share/hpp-baxter/urdf/baxter_colman.urdf
+share/hpp-baxter/urdf/box.urdf

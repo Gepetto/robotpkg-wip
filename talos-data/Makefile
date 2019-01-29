@@ -21,6 +21,7 @@ COMMENT=		This packages provides data of the humanoid robot Pyrene in a friendly
 MAINTAINER=		ostasse@laas.fr
 
 CMAKE_PREFIX_PATH+= ${PREFIX}
+CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
 

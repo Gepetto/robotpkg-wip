@@ -1,0 +1,36 @@
+cdd headers ar in /usr/include in ArchLinux, /usr/include/cdd in Ubuntu and /usr/include/cddlib in Fedora
+
+--- cmake2/FindCDD.cmake.orig	2019-01-29 15:13:37.000000000 +0100
++++ cmake2/FindCDD.cmake	2019-01-31 10:33:17.193453803 +0100
+@@ -6,8 +6,8 @@
+ #  CDD_DEFINITIONS - Compiler switches required for using CDD
+ 
+ 
+-find_path(CDD_INCLUDE_DIR cdd/cdd.h
+-          HINTS ${CDD_INCLUDEDIR} /usr/include
++find_path(CDD_INCLUDE_DIR cdd.h
++          HINTS ${CDD_INCLUDEDIR} /usr/include /usr/include/cdd /usr/include/cddlib
+           PATH_SUFFIXES CDD )
+ 
+ find_library(CDD_LIBRARY NAMES libcdd.so
+--- CMakeLists.txt.orig	2019-01-30 08:32:24.000000000 +0100
++++ CMakeLists.txt	2019-01-31 22:29:28.207695794 +0100
+@@ -46,6 +46,8 @@
+ ADD_REQUIRED_DEPENDENCY("hpp-affordance")
+ ADD_REQUIRED_DEPENDENCY("hpp-spline")
+
++set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} cmake2) 
++find_package(CDD REQUIRED)
+ FIND_PACKAGE( OpenMP REQUIRED)
+ find_package(Boost)
+ find_package(Boost 1.54.0 COMPONENTS filesystem system REQUIRED)
+--- src/CMakeLists.txt.orig	2019-01-30 08:32:24.000000000 +0100
++++ src/CMakeLists.txt	2019-01-31 22:34:44.346889827 +0100
+@@ -76,6 +76,7 @@
+   )
+ 
+ TARGET_LINK_LIBRARIES(${LIBRARY_NAME} hpp-centroidal-dynamics hpp-bezier-com-traj)
++TARGET_INCLUDE_DIRECTORIES(${LIBRARY_NAME} PUBLIC ${CDD_INCLUDE_DIRS})
+ 
+ PKG_CONFIG_USE_DEPENDENCY(${LIBRARY_NAME} hpp-core)
+ PKG_CONFIG_USE_DEPENDENCY(${LIBRARY_NAME} hpp-util)

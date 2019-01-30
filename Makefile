@@ -29,6 +29,7 @@ SUBDIR+=	hpp-bezier-com-traj
 SUBDIR+=	hpp-centroidal-dynamics
 SUBDIR+=	hpp-environments
 SUBDIR+=	hpp-rbprm
+SUBDIR+=	hpp-rbprm-corba
 SUBDIR+=	hpp-rbprm-robot-data
 SUBDIR+=	hpp-romeo
 SUBDIR+=	hpp-spline

@@ -26,6 +26,9 @@ DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/tinyxml/depend.mk
 include ../../math/pinocchio/depend.mk
+include ../../path/hpp-fcl/depend.mk
+include ../../mapping/octomap/depend.mk
+include ../../math/py-eigenpy/depend.mk
 include ../../math/py-pinocchio/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk

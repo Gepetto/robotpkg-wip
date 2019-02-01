@@ -9,16 +9,12 @@ PKGNAME=	${PKGBASE}-${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
+PKGREVISION=	1
 
 CATEGORIES=	wip
 HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Hardware interfaces developped by PAL-Robotics
-LICENSE=	pal-license
-
-RESTRICTED=	Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=	${RESTRICTED}
-NO_PUBLIC_BIN=	${RESTRICTED}
 
 USE_BOOST_LIBS=	thread
 

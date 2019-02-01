@@ -8,19 +8,14 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	2
+PKGREVISION=	3
 
 CATEGORIES=	wip
 #MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_simulation/}
 HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 
-LICENSE=	pal-license
 COMMENT=	Talos simulation components.
-
-RESTRICTED=	Redistribution of repackaged binaries not permitted
-NO_PUBLIC_SRC=	${RESTRICTED}
-NO_PUBLIC_BIN=	${RESTRICTED}
 
 ROS_METAPKG=	yes
 

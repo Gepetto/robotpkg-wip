@@ -6,8 +6,7 @@ DISTNAME=		hrp2-14-description-${VERSION}
 
 CATEGORIES=		robots
 MASTER_SITES=		${MASTER_SITE_JRL}ros/hrp2-14-description/
-MASTER_REPOSITORY=\
-  ${MASTER_REPOSITORY_JRL}robots/ros-hrp2/hrp2-14-description
+MASTER_REPOSITORY=	git ssh://git@redmine.laas.fr/laas/users/ostasse/hrp-2-n-14-repositories/hrp2-14-description.git
 
 MAINTAINER=		gepetto@laas.fr
 COMMENT=		Hrp2-14 robot model description

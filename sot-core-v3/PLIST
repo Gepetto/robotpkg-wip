@@ -60,6 +60,7 @@ include/sot/core/periodic-call.hh
 include/sot/core/pool.hh
 include/sot/core/reader.hh
 include/sot/core/robot-simu.hh
+include/sot/core/robot-utils.hh
 include/sot/core/sot.hh
 include/sot/core/switch.hh
 include/sot/core/task-abstract.hh

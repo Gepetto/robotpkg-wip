@@ -27,6 +27,7 @@ include/dynamic-graph/exception-traces.h
 include/dynamic-graph/factory.h
 include/dynamic-graph/fwd.hh
 include/dynamic-graph/linear-algebra.h
+include/dynamic-graph/logger.h
 include/dynamic-graph/null-ptr.hh
 include/dynamic-graph/pool.h
 include/dynamic-graph/real-time-logger.h

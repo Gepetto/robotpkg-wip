@@ -9,11 +9,9 @@ include/dynamic-graph/command-getter.t.cpp
 include/dynamic-graph/command-setter.h
 include/dynamic-graph/command-setter.t.cpp
 include/dynamic-graph/command.h
-include/dynamic-graph/config-contiifstream.hh
 include/dynamic-graph/config-tracer-real-time.hh
 include/dynamic-graph/config-tracer.hh
 include/dynamic-graph/config.hh
-include/dynamic-graph/contiifstream.h
 include/dynamic-graph/debug.h
 include/dynamic-graph/deprecated.hh
 include/dynamic-graph/dynamic-graph-api.h

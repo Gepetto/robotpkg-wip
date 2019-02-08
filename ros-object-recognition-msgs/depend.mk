@@ -11,9 +11,12 @@ endif
 
 ifeq (+,$(OBJECT_RECOGNITION_MSGS_DEPEND_MK)) # --------------------------------------
 
-PREFER.ros-object-recognition-msgs?=	robotpkg
+include ../../meta-pkgs/ros-base/depend.common
+PREFER.ros-object-recognition-msgs?=	${PREFER.ros-base}
+SYSTEM_PREFIX.ros-object-recognition-msgs?=	${SYSTEM_PREFIX.ros-base}
 
 DEPEND_USE+=		ros-object-recognition-msgs
+ROS_DEPEND_USE+=		ros-object-recognition-msgs
 
 DEPEND_ABI.ros-object-recognition-msgs?=	object-recognition-msgs>=0.4.1
 DEPEND_DIR.ros-object-recognition-msgs?=	../../wip/ros-object-recognition-msgs

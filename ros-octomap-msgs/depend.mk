@@ -11,9 +11,12 @@ endif
 
 ifeq (+,$(OCTOMAP_MSGS_DEPEND_MK)) # --------------------------------------
 
-PREFER.ros-octomap-msgs?=	robotpkg
+include ../../meta-pkgs/ros-base/depend.common
+PREFER.ros-octomap-msgs?=	${PREFER.ros-base}
+SYSTEM_PREFIX.ros-octomap-msgs?=	${SYSTEM_PREFIX.ros-base}
 
 DEPEND_USE+=		ros-octomap-msgs
+ROS_DEPEND_USE+=		ros-octomap-msgs
 
 DEPEND_ABI.ros-octomap-msgs?=	octomap-msgs>=0.3.3
 DEPEND_DIR.ros-octomap-msgs?=	../../wip/ros-octomap-msgs

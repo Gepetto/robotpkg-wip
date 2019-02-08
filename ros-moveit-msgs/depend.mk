@@ -11,9 +11,12 @@ endif
 
 ifeq (+,$(MOVEIT_MSGS_DEPEND_MK)) # --------------------------------------
 
-PREFER.ros-moveit-msgs?=	robotpkg
+include ../../meta-pkgs/ros-base/depend.common
+PREFER.ros-moveit-msgs?=	${PREFER.ros-base}
+SYSTEM_PREFIX.ros-moveit-msgs?=	${SYSTEM_PREFIX.ros-base}
 
 DEPEND_USE+=		ros-moveit-msgs
+ROS_DEPEND_USE+=		ros-moveit-msgs
 
 DEPEND_ABI.ros-moveit-msgs?=	moveit-msgs>=0.10.0
 DEPEND_DIR.ros-moveit-msgs?=	../../wip/ros-moveit-msgs

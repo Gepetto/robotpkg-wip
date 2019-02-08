@@ -11,9 +11,12 @@ endif
 
 ifeq (+,$(MOVEIT_DEPEND_MK)) # --------------------------------------
 
-PREFER.ros-moveit?=	robotpkg
+include ../../meta-pkgs/ros-base/depend.common
+PREFER.ros-moveit?=	${PREFER.ros-base}
+SYSTEM_PREFIX.ros-moveit?=	${SYSTEM_PREFIX.ros-base}
 
 DEPEND_USE+=		ros-moveit
+ROS_DEPEND_USE+=		ros-moveit
 
 DEPEND_ABI.ros-moveit?=	moveit>=0.10.5
 DEPEND_DIR.ros-moveit?=	../../wip/ros-moveit

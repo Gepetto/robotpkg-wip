@@ -11,9 +11,12 @@ endif
 
 ifeq (+,$(WAREHOUSE_ROS_DEPEND_MK)) # --------------------------------------
 
-PREFER.ros-warehouse-ros?=	robotpkg
+include ../../meta-pkgs/ros-base/depend.common
+PREFER.ros-warehouse-ros?=	${PREFER.ros-base}
+SYSTEM_PREFIX.ros-warehouse-ros?=	${SYSTEM_PREFIX.ros-base}
 
 DEPEND_USE+=		ros-warehouse-ros
+ROS_DEPEND_USE+=		ros-warehouse-ros
 
 DEPEND_ABI.ros-warehouse-ros?=	warehouse-ros>=0.9.2
 DEPEND_DIR.ros-warehouse-ros?=	../../wip/ros-warehouse-ros

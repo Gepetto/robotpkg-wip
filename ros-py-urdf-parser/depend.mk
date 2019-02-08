@@ -11,9 +11,12 @@ endif
 
 ifeq (+,$(PY_URDF_PARSER_DEPEND_MK)) # --------------------------------------
 
-PREFER.ros-py-urdf-parser?=	robotpkg
+include ../../meta-pkgs/ros-base/depend.common
+PREFER.ros-py-urdf-parser?=	${PREFER.ros-base}
+SYSTEM_PREFIX.ros-py-urdf-parser?=	${SYSTEM_PREFIX.ros-base}
 
 DEPEND_USE+=		ros-py-urdf-parser
+ROS_DEPEND_USE+=		ros-py-urdf-parser
 
 DEPEND_ABI.ros-py-urdf-parser?=	${PKGTAG.python-}urdf-parser>=0.4.0
 DEPEND_DIR.ros-py-urdf-parser?=	../../wip/ros-py-urdf-parser

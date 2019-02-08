@@ -11,9 +11,12 @@ endif
 
 ifeq (+,$(SRDFDOM_DEPEND_MK)) # --------------------------------------
 
-PREFER.ros-srdfdom?=	robotpkg
+include ../../meta-pkgs/ros-base/depend.common
+PREFER.ros-srdfdom?=	${PREFER.ros-base}
+SYSTEM_PREFIX.ros-srdfdom?=	${SYSTEM_PREFIX.ros-base}
 
 DEPEND_USE+=		ros-srdfdom
+ROS_DEPEND_USE+=		ros-srdfdom
 
 DEPEND_ABI.ros-srdfdom?=	srdfdom>=0.4.2
 DEPEND_DIR.ros-srdfdom?=	../../wip/ros-srdfdom

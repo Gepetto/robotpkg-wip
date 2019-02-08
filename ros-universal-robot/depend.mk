@@ -11,9 +11,12 @@ endif
 
 ifeq (+,$(UNIVERSAL_ROBOT_DEPEND_MK)) # --------------------------------------
 
-PREFER.ros-universal-robot?=	robotpkg
+include ../../meta-pkgs/ros-base/depend.common
+PREFER.ros-universal-robot?=	${PREFER.ros-base}
+SYSTEM_PREFIX.ros-class-loader?=${SYSTEM_PREFIX.ros-base}
 
 DEPEND_USE+=		ros-universal-robot
+ROS_DEPEND_USE+=		ros-universal-robot
 
 DEPEND_ABI.ros-universal-robot?=	universal-robot>=1.2.1
 DEPEND_DIR.ros-universal-robot?=	../../wip/ros-universal-robot

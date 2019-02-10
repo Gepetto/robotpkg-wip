@@ -9,12 +9,14 @@ PKGNAME=	${PKGBASE}-${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	wip
 HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Hardware interfaces developped by PAL-Robotics
+LICENSE=	gnu-lgpl-v3
+
 
 USE_BOOST_LIBS=	thread
 

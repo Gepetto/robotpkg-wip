@@ -8,12 +8,13 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	3
+PKGREVISION=	4
 
 CATEGORIES=	wip
 #MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_simulation/}
 HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
+LICENSE=	gnu-lgpl-v3
 
 COMMENT=	Talos simulation components.
 

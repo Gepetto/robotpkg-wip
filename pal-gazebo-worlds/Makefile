@@ -9,12 +9,13 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	3
+PKGREVISION=	4
 
 CATEGORIES=	wip
 HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Simulation worlds for PAL robots
+LICENSE=	gnu-lgpl-v3
 
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-roscpp-core/depend.mk

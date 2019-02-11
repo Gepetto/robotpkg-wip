@@ -97,6 +97,8 @@ lib/plugin/derivator.so
 lib/plugin/derivator.so.${PKGVERSION}
 lib/plugin/event.so
 lib/plugin/event.so.${PKGVERSION}
+lib/plugin/exp-moving-avg.so
+lib/plugin/exp-moving-avg.so.${PKGVERSION}
 lib/plugin/feature-1d.so
 lib/plugin/feature-1d.so.${PKGVERSION}
 lib/plugin/feature-generic.so
@@ -123,6 +125,8 @@ lib/plugin/gain-adaptive.so
 lib/plugin/gain-adaptive.so.${PKGVERSION}
 lib/plugin/gain-hyperbolic.so
 lib/plugin/gain-hyperbolic.so.${PKGVERSION}
+lib/plugin/gradient-ascent.so
+lib/plugin/gradient-ascent.so.${PKGVERSION}
 lib/plugin/gripper-control.so
 lib/plugin/gripper-control.so.${PKGVERSION}
 lib/plugin/integrator-abstract.so

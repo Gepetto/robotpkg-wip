@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-talos
-VERSION=		1.0.3
+VERSION=		1.0.4
 
 PKGNAME=		${NAME}-${VERSION}
 DISTNAME=		${NAME}-${VERSION}

@@ -15,6 +15,7 @@ SUBDIR+=	dynamic-graph-v3
 SUBDIR+=	dynamic-introspection
 SUBDIR+=	eigen-quadprog
 SUBDIR+=	example-adder
+SUBDIR+=	example-robot-data
 SUBDIR+=	fcl
 SUBDIR+=	FRILibrary
 SUBDIR+=	gdalwrap

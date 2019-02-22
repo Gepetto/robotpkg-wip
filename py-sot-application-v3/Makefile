@@ -25,7 +25,7 @@ DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
 include ../../wip/py-sot-dynamic-pinocchio-v3/depend.mk
-include ../../wip/sot-dyninv-v3/depend.mk
+#include ../../wip/sot-dyninv-v3/depend.mk
 include ../../wip/sot-tools-v3/depend.mk
 include ../../wip/py-sot-tools-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk

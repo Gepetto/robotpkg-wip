@@ -4,14 +4,14 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-talos
-VERSION=		1.0.4
+VERSION=		1.0.5
 
 PKGNAME=		${NAME}-${VERSION}
 DISTNAME=		${NAME}-${VERSION}
 DIST_SUBDIR=		${PKGBASE}
 
 HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${NAME}}
-MASTER_SITES=		${HOMEPAGE}/releases/download/v${VERSION}/
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${NAME}
 CHECKOUT_VCS_OPTS+=	--recursive
 
@@ -24,7 +24,7 @@ DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../wip/talos-data/depend.mk
 include ../../wip/py-sot-application-v3/depend.mk
-include ../../wip/sot-dyninv-v3/depend.mk
+#include ../../wip/sot-dyninv-v3/depend.mk
 include ../../motion/dynamic-graph-bridge-msgs/depend.mk
 include ../../wip/py-dynamic-graph-bridge-v3/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk

@@ -15,7 +15,7 @@ CATEGORIES=	wip
 HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics-forks/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 LICENSE=	2-clause-bsd
-COMMENT=	Provides the mimic joint functionality in Gazebo. 
+COMMENT=	Provides the mimic joint functionality in Gazebo.
 
 CMAKE_ARGS+=\
   -Dgazebo_INCLUDE_DIRS=$(filter include/%,${SYSTEM_SEARCH.gazebo})	\
@@ -34,6 +34,7 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
+include ../../simulation/gazebo-ros-pkgs/depend.mk
 include ../../wip/prf-gazebo-ros-pkgs/depend.mk
 include ../../wip/pal-hardware-interfaces/depend.mk
 include ../../mk/sysdep/gazebo.mk

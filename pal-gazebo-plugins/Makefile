@@ -30,6 +30,7 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
+include ../../simulation/gazebo-ros-pkgs/depend.mk
 include ../../wip/pal-msgs/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

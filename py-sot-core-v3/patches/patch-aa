@@ -1,0 +1,42 @@
+Don't install stuff already installed by wip/sot-core-v3
+
+--- include/CMakeLists.txt.orig	2019-02-22 14:50:36.000000000 +0100
++++ include/CMakeLists.txt	2019-02-22 15:39:31.631676180 +0100
+@@ -79,7 +79,3 @@
+   sot/core/variadic-op.hh
+   sot/core/robot-utils.hh
+   )
+-INSTALL(FILES ${NEWHEADERS}
+-  DESTINATION include/sot/core
+-  PERMISSIONS OWNER_READ GROUP_READ WORLD_READ OWNER_WRITE
+-  )
+--- src/CMakeLists.txt.orig	2019-02-22 14:50:36.000000000 +0100
++++ src/CMakeLists.txt	2019-02-22 15:40:46.276450788 +0100
+@@ -169,8 +169,6 @@
+ 
+ TARGET_LINK_LIBRARIES(${LIBRARY_NAME} ${Boost_LIBRARIES})
+ 
+-INSTALL(TARGETS ${LIBRARY_NAME}
+-  DESTINATION ${CMAKE_INSTALL_LIBDIR})
+ 
+ #Plugins compilation, link, and installation
+ #Compiles a plugin. The plugin library is ${LIBRARY_NAME}
+@@ -220,9 +218,6 @@
+       sot-core-${PYTHON_LIBRARY_NAME}-wrap
+       )
+   ENDIF(BUILD_PYTHON_INTERFACE)
+-  # Install plugins
+-  INSTALL(TARGETS ${LIBRARY_NAME}
+-    DESTINATION ${DYNAMIC_GRAPH_PLUGINDIR})
+ ENDFOREACH(plugin)
+ 
+ IF(BUILD_PYTHON_INTERFACE)
+--- CMakeLists.txt.orig	2019-02-22 14:50:36.000000000 +0100
++++ CMakeLists.txt	2019-02-22 15:41:13.684735154 +0100
+@@ -62,6 +62,5 @@
+ ADD_SUBDIRECTORY(include)
+ ADD_SUBDIRECTORY(src)
+ ADD_SUBDIRECTORY(unitTesting)
+-ADD_SUBDIRECTORY(doc)
+ 
+ SETUP_PROJECT_FINALIZE()

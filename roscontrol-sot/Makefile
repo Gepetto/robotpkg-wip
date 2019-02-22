@@ -51,6 +51,7 @@ include ../../wip/sot-core-v3/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
 include ../../mk/robotpkg.prefs.mk
 include ../../wip/sysdep/pal-distro.mk
+include ../../wip/pal-msgs/depend.mk
 
 include ../../wip/sysdep/pal-distro.mk
 ifeq (palerbium,${PALDISTRO})

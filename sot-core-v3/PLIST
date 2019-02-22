@@ -21,6 +21,7 @@ include/sot/core/exception-feature.hh
 include/sot/core/exception-signal.hh
 include/sot/core/exception-task.hh
 include/sot/core/exception-tools.hh
+include/sot/core/exp-moving-avg.hh
 include/sot/core/factory.hh
 include/sot/core/feature-1d.hh
 include/sot/core/feature-abstract.hh

@@ -1,0 +1,40 @@
+Don't install stuff already installed by wip/sot-dynamic-pinocchio-v3
+
+--- CMakeLists.txt.orig	2019-02-22 15:33:56.000000000 +0100
++++ CMakeLists.txt	2019-02-22 15:58:46.647643454 +0100
+@@ -69,7 +69,6 @@
+ # Add subdirectories.
+ ADD_SUBDIRECTORY(include)
+ ADD_SUBDIRECTORY(src)
+-ADD_SUBDIRECTORY(doc)
+ ADD_SUBDIRECTORY(python)
+ ADD_SUBDIRECTORY(unitTesting)
+ 
+--- include/CMakeLists.txt.orig	2019-02-22 15:33:56.000000000 +0100
++++ include/CMakeLists.txt	2019-02-22 16:03:06.646333733 +0100
+@@ -28,7 +28,3 @@
+ #----------------------------------------------------
+ # Install procedure for the header files
+ #----------------------------------------------------
+-INSTALL(FILES ${fullpath_${PROJECT_NAME}_HEADERS}
+-	DESTINATION include/${PROJECT_NAME}
+-        PERMISSIONS OWNER_READ GROUP_READ WORLD_READ OWNER_WRITE
+-)
+--- src/CMakeLists.txt.orig	2019-02-22 15:33:56.000000000 +0100
++++ src/CMakeLists.txt	2019-02-22 16:08:05.433424470 +0100
+@@ -37,7 +37,6 @@
+   PKG_CONFIG_USE_DEPENDENCY(${libname} sot-core)
+   PKG_CONFIG_USE_DEPENDENCY(${libname} dynamic-graph)
+ 
+-  INSTALL(TARGETS ${libname} DESTINATION ${DYNAMIC_GRAPH_PLUGINDIR})
+ 
+   # build python submodule
+   IF(BUILD_PYTHON_INTERFACE)
+@@ -65,7 +64,6 @@
+ PKG_CONFIG_USE_DEPENDENCY(${LIBRARY_NAME} sot-core)
+ PKG_CONFIG_USE_DEPENDENCY(${LIBRARY_NAME} dynamic-graph)
+ TARGET_LINK_LIBRARIES(${LIBRARY_NAME} ${Boost_LIBRARIES})
+-INSTALL(TARGETS ${LIBRARY_NAME} DESTINATION ${CMAKE_INSTALL_LIBDIR})
+ 
+ TARGET_LINK_LIBRARIES(dp-dynamic ${LIBRARY_NAME})
+ 

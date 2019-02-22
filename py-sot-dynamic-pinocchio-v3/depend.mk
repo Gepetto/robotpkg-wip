@@ -18,7 +18,7 @@ SYSTEM_SEARCH.py-sot-dynamic-pinocchio-v3=\
 
 DEPEND_USE+=		py-sot-dynamic-pinocchio-v3
 
-DEPEND_ABI.py-sot-dynamic-pinocchio-v3?=	${PKGTAG.python-}sot-dynamic-pinocchio-v3>=3.1.1
+DEPEND_ABI.py-sot-dynamic-pinocchio-v3?=	${PKGTAG.python-}sot-dynamic-pinocchio-v3>=3.2.0<4.0.0
 DEPEND_DIR.py-sot-dynamic-pinocchio-v3?=	../../wip/py-sot-dynamic-pinocchio-v3
 
 endif # PY_SOT_DYNAMIC_DEPEND_MK --------------------------------------------

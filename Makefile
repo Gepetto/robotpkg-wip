@@ -29,6 +29,7 @@ SUBDIR+=	hpp-baxter
 SUBDIR+=	hpp-bezier-com-traj
 SUBDIR+=	hpp-centroidal-dynamics
 SUBDIR+=	hpp-environments
+SUBDIR+=	hpp-gui
 SUBDIR+=	hpp-plot
 SUBDIR+=	hpp-rbprm
 SUBDIR+=	hpp-rbprm-corba

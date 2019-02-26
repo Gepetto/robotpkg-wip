@@ -4,7 +4,7 @@
 
 HPP_PACKAGE=	hpp-plot
 HPP_COMMENT=	Plotting tools for hpp
-HPP_VERSION=	4.3.1
+HPP_VERSION=	4.3.2
 
 CATEGORIES=		wip
 

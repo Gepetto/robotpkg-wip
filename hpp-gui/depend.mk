@@ -15,7 +15,11 @@ PREFER.hpp-gui?=	robotpkg
 
 DEPEND_USE+=		hpp-gui
 
-DEPEND_ABI.hpp-gui?=	hpp-gui>=4.3.0
+# depend on appropriate Qt version when using Qt, all versions otherwise.
+_hppg_qts={qt4,qt5}
+_hppg_qt=$(if $(filter qt,${PKG_ALTERNATIVES}),${PKG_ALTERNATIVE.qt},${_hppg_qts})
+
+DEPEND_ABI.hpp-gui?=	${_hppg_qt}-hpp-gui>=4.3.0
 DEPEND_DIR.hpp-gui?=	../../wip/hpp-gui
 
 SYSTEM_SEARCH.hpp-gui=\

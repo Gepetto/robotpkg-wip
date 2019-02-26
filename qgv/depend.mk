@@ -21,7 +21,11 @@ SYSTEM_SEARCH.qgv=\
 
 DEPEND_USE+=		qgv
 
-DEPEND_ABI.qgv?=	qgv>=1.1.0
+# depend on appropriate Qt version when using Qt, all versions otherwise.
+_qgv_qts={qt4,qt5}
+_qgv_qt=$(if $(filter qt,${PKG_ALTERNATIVES}),${PKG_ALTERNATIVE.qt},${_qgv_qts})
+
+DEPEND_ABI.qgv?=	${_qgv_qt}-qgv>=1.1.0
 DEPEND_DIR.qgv?=	../../wip/qgv
 
 endif # QGV_DEPEND_MK ------------------------------------------------

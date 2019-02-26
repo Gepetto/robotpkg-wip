@@ -15,7 +15,11 @@ PREFER.hpp-plot?=	robotpkg
 
 DEPEND_USE+=		hpp-plot
 
-DEPEND_ABI.hpp-plot?=	hpp-plot>=4.3.0
+# depend on appropriate Qt version when using Qt, all versions otherwise.
+_hppp_qts={qt4,qt5}
+_hppp_qt=$(if $(filter qt,${PKG_ALTERNATIVES}),${PKG_ALTERNATIVE.qt},${_hppp_qts})
+
+DEPEND_ABI.hpp-plot?=	${hppp_qt}-hpp-plot>=4.3.0
 DEPEND_DIR.hpp-plot?=	../../wip/hpp-plot
 
 SYSTEM_SEARCH.hpp-plot=\

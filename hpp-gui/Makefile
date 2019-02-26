@@ -5,6 +5,8 @@
 HPP_PACKAGE=	hpp-gui
 HPP_COMMENT=	Graphical interface for HPP
 
+PKGNAME=		${PKGTAG.qt-}${DISTNAME}
+
 CATEGORIES=		wip
 
 CONFLICTS+=		qt[0-9]-hpp-gui-[0-9]*

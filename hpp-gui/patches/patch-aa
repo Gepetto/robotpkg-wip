@@ -1,0 +1,13 @@
+c++11 compatibility
+
+--- plugins/hppwidgetsplugin/transformconstraintwidget.cc.orig	2018-12-07 13:43:58.000000000 +0100
++++ plugins/hppwidgetsplugin/transformconstraintwidget.cc	2019-02-26 15:17:00.588357920 +0100
+@@ -96,7 +96,7 @@
+         vecDouble[i + 1] = ui->secondYPosition->value();
+         vecDouble[i + 2] = ui->secondZPosition->value();
+       }
+-      emit finished(std::make_pair<QVector<double>, QVector<bool> >(vecDouble, vecBool));
++      emit finished(std::make_pair(vecDouble, vecBool));
+       this->deleteLater();
+       this->close();
+     }

@@ -16,4 +16,4 @@ include/hpp/spline/quintic_spline.h
 include/hpp/spline/spline_deriv_constraint.h
 include/hpp/spline/warning.hh
 lib/pkgconfig/hpp-spline.pc
-${PYTHON_SITELIB}/hpp_spline.so
+${PYTHON_SITELIB}/hpp_spline${PYTHON_EXT_SUFFIX}

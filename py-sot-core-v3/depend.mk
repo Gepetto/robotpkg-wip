@@ -18,7 +18,7 @@ SYSTEM_SEARCH.py-sot-core-v3=\
 
 DEPEND_USE+=		py-sot-core-v3
 
-DEPEND_ABI.py-sot-core-v3?=	${PKGTAG.python-}sot-core-v3>=4.0.0<5.0.0
+DEPEND_ABI.py-sot-core-v3?=	${PKGTAG.python-}sot-core-v3>=4.1.0<5.0.0
 DEPEND_DIR.py-sot-core-v3?=	../../wip/py-sot-core-v3
 
 endif # PY_SOT_CORE_V3_DEPEND_MK -------------------------------------------------

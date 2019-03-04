@@ -1,0 +1,27 @@
+@comment Mon Mar 4 15:01:27 CET 2019
+include/tsid/bindings/python/constraint/constraint-bound.hpp
+include/tsid/bindings/python/constraint/constraint-equality.hpp
+include/tsid/bindings/python/constraint/constraint-inequality.hpp
+include/tsid/bindings/python/constraint/expose-constraints.hpp
+include/tsid/bindings/python/contacts/contact-6d.hpp
+include/tsid/bindings/python/contacts/contact-point.hpp
+include/tsid/bindings/python/contacts/expose-contact.hpp
+include/tsid/bindings/python/formulations/expose-formulations.hpp
+include/tsid/bindings/python/formulations/formulation.hpp
+include/tsid/bindings/python/robots/expose-robots.hpp
+include/tsid/bindings/python/robots/robot-wrapper.hpp
+include/tsid/bindings/python/solvers/HQPData.hpp
+include/tsid/bindings/python/solvers/HQPOutput.hpp
+include/tsid/bindings/python/solvers/expose-solvers.hpp
+include/tsid/bindings/python/solvers/solver-HQP-eiquadprog.hpp
+include/tsid/bindings/python/tasks/expose-tasks.hpp
+include/tsid/bindings/python/tasks/task-com-equality.hpp
+include/tsid/bindings/python/tasks/task-joint-posture.hpp
+include/tsid/bindings/python/tasks/task-se3-equality.hpp
+include/tsid/bindings/python/trajectories/expose-trajectories.hpp
+include/tsid/bindings/python/trajectories/trajectory-base.hpp
+include/tsid/bindings/python/trajectories/trajectory-euclidian.hpp
+include/tsid/bindings/python/trajectories/trajectory-se3.hpp
+include/tsid/bindings/python/utils/container.hpp
+${PYTHON_SITELIB}/tsid/__init__.py
+${PYTHON_SITELIB}/tsid/libtsid_pywrap${PYTHON_EXT_SUFFIX}

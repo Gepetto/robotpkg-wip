@@ -8,7 +8,7 @@ ROSNAME=		$(subst -,_,${PKGBASE})
 DISTNAME=		${ROSNAME}-${VERSION}
 WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=		${PKGBASE}
-PKGREVISION=		1
+PKGREVISION=		2
 
 CATEGORIES=		wip
 #MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=roscontrol_sot/}
@@ -59,6 +59,7 @@ ifeq (palerbium,${PALDISTRO})
   CMAKE_PREFIX_PATH+=/opt/pal/erbium
   SYSTEM_PREFIX+=/opt/pal/erbium
   CXXFLAGS+="-I/opt/pal/erbium/include"
+  PKG_CONFIG_DIRS=/opt/pal/erbium/lib/pkgconfig
   include ../../motion/ros-control-toolbox/depend.mk
 else
   include ../../wip/pal-hardware-interfaces/depend.mk

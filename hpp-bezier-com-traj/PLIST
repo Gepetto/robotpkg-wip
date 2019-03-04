@@ -23,4 +23,4 @@ include/hpp/bezier-com-traj/waypoints/waypoints_c0_dc0_ddc0_ddc1_dc1_c1.hh
 include/hpp/bezier-com-traj/waypoints/waypoints_definition.hh
 lib/libhpp-bezier-com-traj.so
 lib/pkgconfig/hpp-bezier-com-traj.pc
-${PYTHON_SITELIB}/hpp_bezier_com_traj.so
+${PYTHON_SITELIB}/hpp_bezier_com_traj${PYTHON_EXT_SUFFIX}

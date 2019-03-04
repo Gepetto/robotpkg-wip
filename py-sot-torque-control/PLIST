@@ -4,7 +4,6 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/admittance_controller/__init_
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/admittance_controller/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/base_estimator/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/base_estimator/wrap${PYTHON_EXT_SUFFIX}
-${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/common_sot_py${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/control_manager/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/control_manager/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/create_entities_utils.py

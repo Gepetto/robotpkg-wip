@@ -10,10 +10,9 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/pyrene/prologue.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/pyrene/robot.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/talos/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/talos/sot_talos_device/__init__.py
-${PYTHON_SITELIB}/dynamic_graph/sot/talos/sot_talos_device/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/sot/talos/sot_talos_device/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/talos/talos.py
+share/sot-talos/tests/appli.py
 share/sot-talos/tests/katana_holding.py
 share/sot-talos/tests/kinetalos.py
 share/sot-talos/tests/test.py
-share/sot-talos/tests/appli.py
-

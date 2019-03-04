@@ -4,7 +4,7 @@
 
 ORG=				stack-of-tasks
 NAME=				sot-torque-control
-VERSION=			1.2.0
+VERSION=			1.3.0
 
 DISTNAME=			${NAME}-${VERSION}
 PKGNAME=			${PKGTAG.python-}${DISTNAME}
@@ -24,9 +24,12 @@ include ../../${CATEGORIES}/${NAME}/depend.mk
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
+include ../../graphics/urdfdom/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../math/py-pinocchio/depend.mk
+include ../../mapping/octomap/depend.mk
+include ../../path/hpp-fcl/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk

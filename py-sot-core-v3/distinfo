@@ -1,4 +1,6 @@
-SHA1 (sot-core-4.1.0.tar.gz) = 42f030ef2297a482d43d1ef63ce801ced33f6d00
-RMD160 (sot-core-4.1.0.tar.gz) = ee356a1316d0ab684efc00b266d6c7a7238c872e
-Size (sot-core-4.1.0.tar.gz) = 1081609 bytes
-SHA1 (patch-aa) = 707c742c9011266fae48e10199f92e1d4fd4e685
+SHA1 (sot-core-4.1.1.tar.gz) = 13df07061624f1d1609489c6f50835cf0de3c40f
+RMD160 (sot-core-4.1.1.tar.gz) = 2c43092f1f8dfa8b3b14a41fc509b75bdb0e617f
+Size (sot-core-4.1.1.tar.gz) = 1082407 bytes
+SHA1 (patch-aa) = 228fbffed1db2ddbb5926764e0d77750774fe716
+SHA1 (patch-ab) = 65531cbbc1ea697e9f4f63f864fd811a99e955ae
+SHA1 (patch-ad) = 9731f90f2c33abec026a1d34cfaa653316b84427

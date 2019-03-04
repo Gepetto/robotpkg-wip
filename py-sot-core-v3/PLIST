@@ -89,6 +89,7 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/core/reader/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/reader/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/robot_simu/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/robot_simu/wrap${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/dynamic_graph/sot/core/robot_utils_sot_py${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/seq_play/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/seq_play/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/sequencer/__init__.py

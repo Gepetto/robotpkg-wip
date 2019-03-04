@@ -3,8 +3,10 @@ include/tsid/config.hh
 include/tsid/config.hpp
 include/tsid/contacts/contact-6d.hpp
 include/tsid/contacts/contact-base.hpp
+include/tsid/contacts/contact-point.hpp
 include/tsid/contacts/fwd.hpp
 include/tsid/deprecated.hh
+include/tsid/deprecation.hpp
 include/tsid/formulations/inverse-dynamics-formulation-acc-force.hpp
 include/tsid/formulations/inverse-dynamics-formulation-base.hpp
 include/tsid/math/constraint-base.hpp

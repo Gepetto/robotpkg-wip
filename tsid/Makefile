@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			tsid
-VERSION=		1.1.0
+VERSION=		1.2.0
 
 DISTNAME=		${NAME}-${VERSION}
 
@@ -25,8 +25,11 @@ USE_BOOST_LIBS=		unit_test_framework
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
+include ../../graphics/urdfdom/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../math/pinocchio/depend.mk
+include ../../mapping/octomap/depend.mk
+include ../../path/hpp-fcl/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
@@ -34,7 +37,6 @@ include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 
 DEPEND_ABI.python +=		python<3
-DEPEND_ABI.pinocchio +=	pinocchio>=1.3.0
 DEPEND_ABI.eigen3 += eigen3>=3.2.0
 
 include ../../mk/robotpkg.mk

@@ -4,7 +4,7 @@
 
 ORG=				stack-of-tasks
 NAME=				sot-torque-control
-VERSION=			1.3.0
+VERSION=			1.3.1
 
 DISTNAME=			${NAME}-${VERSION}
 

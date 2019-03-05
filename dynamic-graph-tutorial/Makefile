@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-tutorial
-VERSION=		1.1.1
+VERSION=		1.1.2
 
 DISTNAME=		${NAME}-${VERSION}
 

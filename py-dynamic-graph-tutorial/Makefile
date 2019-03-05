@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-tutorial
-VERSION=		1.1.1
+VERSION=		1.1.2
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
@@ -20,7 +20,8 @@ MAINTAINER=		gepetto-soft@laas.fr
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_DOCDIR=share/doc/${PKGBASE}
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${PKGBASE}
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+DYNAMIC_PLIST_DIRS+=	share/doc/${PKGTAG.python-}${NAME}
 
 include ../../wip/${NAME}/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk

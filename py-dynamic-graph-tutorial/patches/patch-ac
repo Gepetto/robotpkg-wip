@@ -1,0 +1,21 @@
+don't install stuff already installed by main package
+
+--- include/dynamic-graph/tutorial/CMakeLists.txt.orig	2019-03-05 11:45:18.000000000 +0100
++++ include/dynamic-graph/tutorial/CMakeLists.txt	2019-03-05 13:40:33.556184874 +0100
+@@ -2,8 +2,3 @@
+   inverted-pendulum.hh
+   feedback-controller.hh
+   )
+-
+-INSTALL(FILES
+-  ${${PROJECT_NAME}_HEADERS}
+-  DESTINATION include/dynamic-graph/tutorial/
+-  )
+--- src/CMakeLists.txt.orig	2019-03-05 11:45:18.000000000 +0100
++++ src/CMakeLists.txt	2019-03-05 13:41:15.188967955 +0100
+@@ -19,5 +19,3 @@
+   DYNAMIC_GRAPH_PYTHON_MODULE("tutorial" ${PROJECT_NAME} wrap)
+   INSTALL(FILES ${${PY_NAME}_PYTHON} DESTINATION "${PYTHON_SITELIB}/dynamic_graph/tutorial/")
+ ENDIF(BUILD_PYTHON_INTERFACE)
+-
+-INSTALL(TARGETS ${PROJECT_NAME} DESTINATION lib)

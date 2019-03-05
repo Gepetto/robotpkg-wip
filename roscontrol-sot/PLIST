@@ -1,9 +1,10 @@
+@comment Tue Mar 5 17:17:19 CET 2019
+bin/roscontrol-sot-parse-log
 include/roscontrol/sot/config.hh
 include/roscontrol/sot/deprecated.hh
 include/roscontrol/sot/warning.hh
 lib/librcsot_controller.so
 lib/pkgconfig/roscontrol_sot.pc
-bin/roscontrol-sot-parse-log
 share/roscontrol_sot/cmake/roscontrol_sotConfig-version.cmake
 share/roscontrol_sot/cmake/roscontrol_sotConfig.cmake
 share/roscontrol_sot/config/roscontrol_sot_controller_plugins.xml

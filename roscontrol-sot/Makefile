@@ -21,7 +21,7 @@ COMMENT=		This ROS package binds together the ROS control framework with the dyn
 LICENSE=		2-clause-bsd
 MAINTAINER=		hpp@laas.fr
 
-DYNAMIC_PLIST_DIRS+=	share/doc/doxygen-html
+CMAKE_ARGS+=			-DINSTALL_DOCUMENTATION=OFF
 
 # disable -Werror because of x86_64 warnings (must be fixed upstream) and
 # boost + gcc that don't cohabit well depending on their respective versions

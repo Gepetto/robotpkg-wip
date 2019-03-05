@@ -21,9 +21,12 @@ MAINTAINER=		gepetto-soft@laas.fr
 CONFLICTS+=		${ROSNAME}
 CONFLICTS+=		py[0-9][0-9]-${ROSNAME}
 
+CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
+
 DYNAMIC_PLIST_DIRS+=	share/doc/doxygen-html
-DYNAMIC_PLIST_DIRS+=	share/gennodejs/${NAME}
-DYNAMIC_PLIST_DIRS+=	share/roseus/${NAME}
+DYNAMIC_PLIST_DIRS+=	share/gennodejs/ros/${ROSNAME}
+DYNAMIC_PLIST_DIRS+=	share/roseus/ros/${ROSNAME}
+DYNAMIC_PLIST_DIRS+=	share/commonlisp/ros/${ROSNAME}
 
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-realtime-tools/depend.mk

@@ -24,6 +24,7 @@ share/talos_moveit_config/launch/setup_assistant.launch
 share/talos_moveit_config/launch/talos_moveit_controller_manager.launch.xml
 share/talos_moveit_config/launch/talos_moveit_sensor_manager.launch.xml
 share/talos_moveit_config/launch/trajectory_execution.launch.xml
+share/talos_moveit_config/launch/upload_talos_collision_blacklist.launch
 share/talos_moveit_config/launch/warehouse.launch
 share/talos_moveit_config/launch/warehouse_settings.launch.xml
 share/talos_moveit_config/package.xml

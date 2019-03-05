@@ -4,7 +4,6 @@
 
 HPP_PACKAGE=	hpp-plot
 HPP_COMMENT=	Plotting tools for hpp
-HPP_VERSION=	4.3.2
 
 PKGNAME=		${PKGTAG.qt-}${DISTNAME}
 

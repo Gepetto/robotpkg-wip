@@ -18,7 +18,7 @@ COMMENT=			Torque control for humanoids (python bindings)
 LICENSE=			2-clause-bsd
 MAINTAINER=			gepetto-soft@laas.fr
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
 
 include ../../${CATEGORIES}/${NAME}/depend.mk
 

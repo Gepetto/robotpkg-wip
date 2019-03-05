@@ -1,10 +1,9 @@
-include/parametric/curves/config.hh
-include/parametric/curves/deprecated.hh
-include/parametric/curves/warning.hh
 include/parametric-curves/MathDefs.h
 include/parametric-curves/abstract-curve.hpp
+include/parametric-curves/config.hh
 include/parametric-curves/constant.hpp
 include/parametric-curves/curve-constraint.hpp
+include/parametric-curves/deprecated.hh
 include/parametric-curves/infinite-const-acc.hpp
 include/parametric-curves/infinite-sinusoid.hpp
 include/parametric-curves/linear-chirp.hpp
@@ -15,4 +14,5 @@ include/parametric-curves/spatial/force-curve.hpp
 include/parametric-curves/spline.hpp
 include/parametric-curves/text-file.hpp
 include/parametric-curves/utils/file-io.hpp
+include/parametric-curves/warning.hh
 lib/pkgconfig/parametric-curves.pc

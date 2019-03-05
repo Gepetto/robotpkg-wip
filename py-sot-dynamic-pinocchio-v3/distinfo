@@ -2,3 +2,5 @@ SHA1 (sot-dynamic-pinocchio-v3-3.3.0.tar.gz) = 387173261f4755de6821c29212dde1d36
 RMD160 (sot-dynamic-pinocchio-v3-3.3.0.tar.gz) = 429e8eac320fee3e51d8e0e94d3f471d9c36ecee
 Size (sot-dynamic-pinocchio-v3-3.3.0.tar.gz) = 862834 bytes
 SHA1 (patch-aa) = 610e74d5c682045ec67675cc77536b4cdfa3f214
+SHA1 (patch-ab) = 65531cbbc1ea697e9f4f63f864fd811a99e955ae
+SHA1 (patch-ad) = 9731f90f2c33abec026a1d34cfaa653316b84427

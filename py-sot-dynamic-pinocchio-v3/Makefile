@@ -20,7 +20,7 @@ MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
 
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/tinyxml/depend.mk

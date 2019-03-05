@@ -1,3 +1,6 @@
-SHA1 (parametric-curves-1.2.0.tar.gz) = faf5fdb5dc9862606aeca9115ee104f5bb71336e
-RMD160 (parametric-curves-1.2.0.tar.gz) = b5a0a63561fed8bb28781ddec251b0449b915ce0
-Size (parametric-curves-1.2.0.tar.gz) = 820754 bytes
+SHA1 (parametric-curves-1.2.1.tar.gz) = 04104a51bc8e30607a76e1bed7a21599759d9a26
+RMD160 (parametric-curves-1.2.1.tar.gz) = 2114c487d5850bb02704be68f59e7a3c9322960c
+Size (parametric-curves-1.2.1.tar.gz) = 831921 bytes
+SHA1 (patch-aa) = c18abc7658e72dec73e87dcdaccd648053f755ac
+SHA1 (patch-ab) = fc473d24ad8e05f11bd908d2274adc685f817456
+SHA1 (patch-ad) = 9731f90f2c33abec026a1d34cfaa653316b84427

@@ -1,0 +1,12 @@
+don't install main headers
+
+--- CMakeLists.txt.orig	2019-03-05 14:16:01.000000000 +0100
++++ CMakeLists.txt	2019-03-05 14:40:34.854771244 +0100
+@@ -43,7 +43,6 @@
+   ADD_SUBDIRECTORY(python)
+ ENDIF(BUILD_PYTHON_INTERFACE)
+ 
+-ADD_SUBDIRECTORY (include/${PROJECT_NAME})
+ ADD_SUBDIRECTORY (src/tests/spline_test)
+ 
+ ADD_CUSTOM_TARGET(check COMMAND ${CMAKE_CTEST_COMMAND})

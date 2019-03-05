@@ -21,14 +21,14 @@ MAINTAINER=		gepetto-soft@laas.fr
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
-
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
 
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../math/pinocchio/depend.mk
+include ../../math/py-pinocchio/depend.mk
 include ../../path/hpp-fcl/depend.mk
 include ../../mapping/octomap/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk

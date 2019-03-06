@@ -22,6 +22,8 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
+DEPEND_ABI.eigen3 += eigen3>=3.2.92
+
 include ../../math/eigen3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

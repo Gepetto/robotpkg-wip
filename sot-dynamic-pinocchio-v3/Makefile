@@ -5,6 +5,7 @@
 ORG=			stack-of-tasks
 NAME=			sot-dynamic-pinocchio
 VERSION=		3.3.0
+PKGREVISION=	1
 
 DISTNAME=		${NAME}-v3-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}

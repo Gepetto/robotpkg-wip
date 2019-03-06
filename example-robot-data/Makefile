@@ -4,7 +4,7 @@
 
 ORG=			gepetto
 NAME=			example-robot-data
-VERSION=		0.1.0
+VERSION=		1.0.0
 
 DISTNAME=		${NAME}-${VERSION}
 

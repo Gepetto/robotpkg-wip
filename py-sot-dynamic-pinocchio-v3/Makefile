@@ -22,6 +22,7 @@ MAINTAINER=		gepetto-soft@laas.fr
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 
 CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
+CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/tinyxml/depend.mk

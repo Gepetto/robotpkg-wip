@@ -23,6 +23,8 @@ CONFLICTS+=		py[0-9][0-9]-${NAME}
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
+CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR=lib
+
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
 include ../../wip/py-sot-dynamic-pinocchio-v3/depend.mk
 #include ../../wip/sot-dyninv-v3/depend.mk

@@ -24,6 +24,8 @@ CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR=lib
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
+DEPEND_ABI.pinocchio=	pinocchio<2
+
 include ../../mk/sysdep/cmake.mk
 include ../../math/pinocchio/depend.mk
 include ../../wip/eigen-quadprog/depend.mk

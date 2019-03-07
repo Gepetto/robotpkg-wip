@@ -25,6 +25,8 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
+DEPEND_ABI.pinocchio=	pinocchio<2
+
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/pinocchio/depend.mk

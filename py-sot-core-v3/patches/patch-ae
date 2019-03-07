@@ -1,0 +1,31 @@
+From 5961ecf4cefff6d7e22f493435a44008db178307 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Thu, 7 Mar 2019 10:41:47 +0100
+Subject: [PATCH] fix build on C++11
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+src/tools/device.cpp:530:19: error: unable to find string literal operator ‘operator""what’ with ‘const char [31]’, ‘long unsigned int’ arguments
+     CHECK_BOUNDS(state_, lowerPosition_, upperPosition_, "position");
+                   ^
+---
+ src/tools/device.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/tools/device.cpp b/src/tools/device.cpp
+index 03ca73b..0e2df1e 100644
+--- src/tools/device.cpp
++++ src/tools/device.cpp
+@@ -508,7 +508,7 @@ saturateBounds (double& val, const double& lower, const double& upper)
+   for (int i = 0; i < val.size(); ++i) {                                       \
+     double old = val(i);                                                       \
+     if (saturateBounds (val(i), lower(i), upper(i)))                           \
+-      dgRTLOG () << "Robot "what" bound violation at DoF " << i <<             \
++      dgRTLOG () << "Robot " what " bound violation at DoF " << i <<           \
+       ": requested " << old << " but set " << val(i) << '\n';                  \
+   }
+ 
+-- 
+2.7.4
+

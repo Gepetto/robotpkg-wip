@@ -1,0 +1,34 @@
+From d7d07c2567ae3e21be0b306e40def1138ae82ef3 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Thu, 7 Mar 2019 13:05:33 +0100
+Subject: [PATCH] use Eigen::DenseIndex to fix build on eigen3.2, fix #50
+
+---
+ src/angle-estimator.cpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/angle-estimator.cpp b/src/angle-estimator.cpp
+index e0279c5..f9cb3ae 100644
+--- src/angle-estimator.cpp
++++ src/angle-estimator.cpp
+@@ -340,7 +340,7 @@ compute_xff_dotSOUT( dynamicgraph::Vector& res,
+   const dynamicgraph::Matrix & J = jacobianSIN( time );
+   const dynamicgraph::Vector & dq = qdotSIN( time );
+ 
+-  const Eigen::Index nr=J.rows(), nc=J.cols()-6;
++  const Eigen::DenseIndex nr=J.rows(), nc=J.cols()-6;
+   assert( nr==6 );
+   dynamicgraph::Matrix Ja( nr,nc ); dynamicgraph::Vector dqa(nc);
+   for( int j=0;j<nc;++j )
+@@ -367,7 +367,7 @@ compute_qdotSOUT( dynamicgraph::Vector& res,
+ 
+   assert( dx.size()==6 );
+ 
+-  const Eigen::Index nr=dq.size();
++  const Eigen::DenseIndex nr=dq.size();
+   res.resize( nr ); res=dq;
+   for( int i=0;i<6;++i ) res(i)=dx(i);
+ 
+-- 
+2.7.4
+

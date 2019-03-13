@@ -3,16 +3,16 @@
 #
 
 ROS_PKG=		baxter_common
-ROS_METAPKG=	yes
-ROS_VERSION=	1.2.0
+ROS_METAPKG=		yes
+ROS_VERSION=		1.2.0
 ROS_REPO=		rethinkrobotics
 
-HOMEPAGE=			${MASTER_SITE_GITHUB:=${ROS_REPO}/${ROS_PKG}}
-MASTER_SITES=		${HOMEPAGE}/archive/
+HOMEPAGE=		${MASTER_SITE_GITHUB:=${ROS_REPO}/${ROS_PKG}}
+MASTER_SITES=		${HOMEPAGE}/archive/v
 MASTER_REPOSITORY=	git ${HOMEPAGE}.git
 
 CATEGORIES=		wip
-ROS_COMMENT=	ROS Messages and robot description files for the Baxter Research Robot
+ROS_COMMENT=		ROS Messages and robot description files for the Baxter Research Robot
 
 include ../../meta-pkgs/ros-base/Makefile.common
 

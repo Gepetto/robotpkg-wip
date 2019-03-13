@@ -112,6 +112,7 @@ SUBDIR+=	pyrene-motions
 SUBDIR+=	qgv
 SUBDIR+=	roralink
 SUBDIR+=	roscontrol-sot
+SUBDIR+=	ros-baxter-common
 SUBDIR+=	ros-moveit
 SUBDIR+=	ros-moveit-msgs
 SUBDIR+=	ros-moveit-resources

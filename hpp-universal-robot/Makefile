@@ -10,9 +10,8 @@ CATEGORIES=	wip
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
 
-export ROS_PACKAGE_PATH+=	${PREFIX.hpp-universal-robot}/share
-
 include ../../meta-pkgs/hpp/Makefile.common
+include ../../meta-pkgs/ros-base/Makefile.common
 
 include ../../wip/ros-universal-robot/depend.mk
 include ../../devel/ros-xacro/depend.mk

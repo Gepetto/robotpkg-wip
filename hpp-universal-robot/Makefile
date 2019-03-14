@@ -6,6 +6,10 @@ HPP_PACKAGE=	hpp-universal-robot
 HPP_COMMENT=	Data specific to robots ur5 and ur10 for hpp-corbaserver
 HPP_VERSION=	4.2.1
 
+# Workaround include of both Makefile.common
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+DIST_SUBDIR=
+
 CATEGORIES=	wip
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}

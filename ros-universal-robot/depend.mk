@@ -22,7 +22,7 @@ DEPEND_ABI.ros-universal-robot?=	ros-universal-robot>=1.2.1
 DEPEND_DIR.ros-universal-robot?=	../../wip/ros-universal-robot
 
 SYSTEM_SEARCH.ros-universal-robot=\
-	'share/universal_robot/package.xml:<version>/s/[^0-9.]//gp'
+	'share/universal_robot/package.xml:/<version>/s/[^0-9.]//gp'
 
 endif # ROS_UNIVERSAL_ROBOT_DEPEND_MK --------------------------------------------
 

@@ -22,4 +22,4 @@ include ../../mk/robotpkg.mk
 
 export PYTHONPATH=		$(word 1,${SYSTEM_PREFIX.ros-base})/lib/python${PYTHON_VERSION}/dist-packages
 export ROS_PACKAGE_PATH=	$(word 1,${SYSTEM_PREFIX.ros-base})
-export PATH=			$(word 1,${SYSTEM_PREFIX.ros-base})/bin
+CMAKE_PREFIX_PATH+=		$(word 1,${SYSTEM_PREFIX.ros-base})

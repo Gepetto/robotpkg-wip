@@ -16,6 +16,10 @@ ROS_COMMENT=		ROS Messages and robot description files for the Baxter Research R
 
 include ../../meta-pkgs/ros-base/Makefile.common
 
+include ../../interfaces/ros-common-msgs/depend.mk
+include ../../interfaces/ros-std-msgs/depend.mk
+include ../../lang/ros-message-generation/depend.mk
+
 include ../../devel/ros-catkin/depend.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/robotpkg.mk

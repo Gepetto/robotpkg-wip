@@ -3,20 +3,20 @@
 #
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH}+
-UNIVERSAL_ROBOT_DEPEND_MK:=	${UNIVERSAL_ROBOT_DEPEND_MK}+
+ROS_UNIVERSAL_ROBOT_DEPEND_MK:=	${ROS_UNIVERSAL_ROBOT_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
 DEPEND_PKG+=		ros-universal-robot
 endif
 
-ifeq (+,$(UNIVERSAL_ROBOT_DEPEND_MK)) # --------------------------------------
+ifeq (+,$(ROS_UNIVERSAL_ROBOT_DEPEND_MK)) # --------------------------------------
 
 include ../../meta-pkgs/ros-base/depend.common
-PREFER.ros-universal-robot?=	${PREFER.ros-base}
-SYSTEM_PREFIX.ros-class-loader?=${SYSTEM_PREFIX.ros-base}
+PREFER.ros-universal-robot?=		${PREFER.ros-base}
+SYSTEM_PREFIX.ros-universal-robot?=	${SYSTEM_PREFIX.ros-base}
 
-DEPEND_USE+=		ros-universal-robot
-ROS_DEPEND_USE+=		ros-universal-robot
+DEPEND_USE+=				ros-universal-robot
+ROS_DEPEND_USE+=			ros-universal-robot
 
 DEPEND_ABI.ros-universal-robot?=	ros-universal-robot>=1.2.1
 DEPEND_DIR.ros-universal-robot?=	../../wip/ros-universal-robot
@@ -24,6 +24,6 @@ DEPEND_DIR.ros-universal-robot?=	../../wip/ros-universal-robot
 SYSTEM_SEARCH.ros-universal-robot=\
 	'share/universal_robot/package.xml:<version>/s/[^0-9.]//gp'
 
-endif # UNIVERSAL_ROBOT_DEPEND_MK --------------------------------------------
+endif # ROS_UNIVERSAL_ROBOT_DEPEND_MK --------------------------------------------
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}

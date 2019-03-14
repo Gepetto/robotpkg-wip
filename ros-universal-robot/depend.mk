@@ -18,12 +18,11 @@ SYSTEM_PREFIX.ros-class-loader?=${SYSTEM_PREFIX.ros-base}
 DEPEND_USE+=		ros-universal-robot
 ROS_DEPEND_USE+=		ros-universal-robot
 
-DEPEND_ABI.ros-universal-robot?=	universal-robot>=1.2.1
+DEPEND_ABI.ros-universal-robot?=	ros-universal-robot>=1.2.1
 DEPEND_DIR.ros-universal-robot?=	../../wip/ros-universal-robot
 
 SYSTEM_SEARCH.ros-universal-robot=\
-	include/ur_msgs/SetIO.h	\
-	'lib/pkgconfig/ur_description.pc:/Version/s/[^0-9.]//gp'
+	'share/universal_robot/package.xml:<version>/s/[^0-9.]//gp'
 
 endif # UNIVERSAL_ROBOT_DEPEND_MK --------------------------------------------
 

@@ -5,10 +5,11 @@
 ORG=			gepetto
 NAME=			PythonQt
 VERSION=		0.0.1
-PKGREVISION=		1
+PKGREVISION=		2
 
-DISTNAME=		${NAME}-${VERSION}
+DISTNAME=		${NAME}-${PKG_ALTERNATIVE.qt}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${PKGTAG.qt-}${ORG}-pythonqt-${VERSION}
+WRKSRC=			${WRKDIR}/${NAME}-${VERSION}
 
 HOMEPAGE=			${MASTER_SITE_GITHUB:=${ORG}/${NAME}}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
@@ -22,6 +23,8 @@ MAINTAINER=		gsaurel@laas.fr
 
 CMAKE_ARGS+=		-DPythonQt_Wrap_QtAll=ON
 CMAKE_ARGS+=		-DPythonQt_Extensions=ON
+
+DEPEND_ABI.qt=		qt>=4<5
 
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

@@ -5,6 +5,7 @@
 ORG=			gepetto
 NAME=			PythonQt
 VERSION=		0.0.1
+PKGREVISION=		1
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${PKGTAG.qt-}${ORG}-pythonqt-${VERSION}
@@ -18,6 +19,9 @@ CATEGORIES=		wip
 COMMENT=		PythonQT temporary fork
 LICENSE=		gnu-lgpl-v2.1
 MAINTAINER=		gsaurel@laas.fr
+
+CMAKE_ARGS+=		-DPythonQt_Wrap_QtAll=ON
+CMAKE_ARGS+=		-DPythonQt_Extensions=ON
 
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

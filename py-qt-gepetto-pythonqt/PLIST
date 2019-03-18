@@ -23,9 +23,11 @@ include/PythonQt/PythonQtStdOut.h
 include/PythonQt/PythonQtSystem.h
 include/PythonQt/PythonQtUtils.h
 include/PythonQt/PythonQtVariants.h
+include/PythonQt/PythonQt_QtAll.h
 include/PythonQt/PythonQt_QtBindings.h
 include/PythonQt/gui/PythonQtScriptingConsole.h
-lib/libPythonQt${PYTHON_EXT_SUFFIX}
+lib/libPythonQt.so
+lib/libPythonQt_QtAll.so
 ${PYTHON_SITELIB}/pythonqt/__init__.py
 ${PYTHON_SITELIB}/pythonqt/matplotlib/__init__.py
 ${PYTHON_SITELIB}/pythonqt/matplotlib/backends/__init__.py

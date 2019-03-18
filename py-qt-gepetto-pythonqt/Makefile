@@ -14,7 +14,7 @@ WRKSRC=			${WRKDIR}/${NAME}-${VERSION}
 HOMEPAGE=			${MASTER_SITE_GITHUB:=${ORG}/${NAME}}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
 MASTER_REPOSITORY=	git ${HOMEPAGE}.git
-CHECKOUT_VCS_OPTS+=	--recursive
+CHECKOUT_VCS_OPTS+=	-b${PKG_ALTERNATIVE.qt}
 
 CATEGORIES=		wip
 COMMENT=		PythonQT temporary fork
@@ -24,7 +24,8 @@ MAINTAINER=		gsaurel@laas.fr
 CMAKE_ARGS+=		-DPythonQt_Wrap_QtAll=ON
 CMAKE_ARGS+=		-DPythonQt_Extensions=ON
 
-DEPEND_ABI.qt=		qt>5
+PLIST_SRC+=		${PKGDIR}/PLIST
+PLIST_SRC+=		${PKGDIR}/PLIST.${PKG_ALTERNATIVE.qt}
 
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

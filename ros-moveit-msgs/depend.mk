@@ -3,22 +3,22 @@
 #
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH}+
-MOVEIT_MSGS_DEPEND_MK:=	${MOVEIT_MSGS_DEPEND_MK}+
+ROS_MOVEIT_MSGS_DEPEND_MK:=	${ROS_MOVEIT_MSGS_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
 DEPEND_PKG+=		ros-moveit-msgs
 endif
 
-ifeq (+,$(MOVEIT_MSGS_DEPEND_MK)) # --------------------------------------
+ifeq (+,$(ROS_MOVEIT_MSGS_DEPEND_MK)) # --------------------------------------
 
 include ../../meta-pkgs/ros-base/depend.common
 PREFER.ros-moveit-msgs?=	${PREFER.ros-base}
 SYSTEM_PREFIX.ros-moveit-msgs?=	${SYSTEM_PREFIX.ros-base}
 
-DEPEND_USE+=		ros-moveit-msgs
+DEPEND_USE+=			ros-moveit-msgs
 ROS_DEPEND_USE+=		ros-moveit-msgs
 
-DEPEND_ABI.ros-moveit-msgs?=	moveit-msgs>=0.10.0
+DEPEND_ABI.ros-moveit-msgs?=	ros-moveit-msgs>=0.10.0
 DEPEND_DIR.ros-moveit-msgs?=	../../wip/ros-moveit-msgs
 
 SYSTEM_SEARCH.ros-moveit-msgs=\
@@ -27,6 +27,6 @@ SYSTEM_SEARCH.ros-moveit-msgs=\
 
 CMAKE_PREFIX_PATH.ros-moveit-msgs=  ${PREFIX.ros-moveit-msgs}
 
-endif # MOVEIT_MSGS_DEPEND_MK --------------------------------------------
+endif # ROS_MOVEIT_MSGS_DEPEND_MK --------------------------------------------
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}

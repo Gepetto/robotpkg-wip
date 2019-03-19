@@ -3,13 +3,13 @@
 #
 
 ROS_PKG=		octomap_msgs
-ROS_VERSION=	0.3.3
+ROS_VERSION=		0.3.3
 ROS_REPO=		octomap
 
-PKGNAME=		$(subst _,-,${ROS_PKG})-${ROS_VERSION}
+PKGNAME=		ros-$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 
 CATEGORIES=		wip
-ROS_COMMENT=	ROS package to provide messages and serializations / conversion for the OctoMap library
+ROS_COMMENT=		ROS package to provide messages and serializations / conversion for the OctoMap library
 
 include ../../meta-pkgs/ros-base/Makefile.common
 

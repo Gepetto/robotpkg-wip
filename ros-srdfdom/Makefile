@@ -3,13 +3,13 @@
 #
 
 ROS_PKG=		srdfdom
-ROS_VERSION=	0.4.2
+ROS_VERSION=		0.4.2
 ROS_REPO=		ros-planning
 
-PKGNAME=		$(subst _,-,${ROS_PKG})-${ROS_VERSION}
+PKGNAME=		ros-$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 
 CATEGORIES=		wip
-ROS_COMMENT=	srdf parser
+ROS_COMMENT=		srdf parser
 
 include ../../meta-pkgs/ros-base/Makefile.common
 

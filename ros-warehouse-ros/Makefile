@@ -3,13 +3,13 @@
 #
 
 ROS_PKG=		warehouse_ros
-ROS_VERSION=	0.9.2
+ROS_VERSION=		0.9.2
 ROS_REPO=		ros-planning
 
-PKGNAME=		$(subst _,-,${ROS_PKG})-${ROS_VERSION}
+PKGNAME=		ros-$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 
 CATEGORIES=		wip
-ROS_COMMENT=	ROS messages specific to MoveIt!
+ROS_COMMENT=		ROS messages specific to MoveIt!
 
 include ../../meta-pkgs/ros-base/Makefile.common
 include ../../wip/ros-object-recognition-msgs/depend.mk

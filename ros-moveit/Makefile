@@ -2,12 +2,12 @@
 # Created:			Guilhem Saurel on Wed, 19 Dec 2018
 #
 
-ROS_PKG=		ros-moveit
+ROS_PKG=		moveit
 ROS_METAPKG=		yes
 ROS_VERSION=		0.10.5
 ROS_REPO=		ros-planning
 
-PKGNAME=		$(subst _,-,${ROS_PKG})-${ROS_VERSION}
+PKGNAME=		ros-$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 
 CATEGORIES=		wip
 ROS_COMMENT=		The MoveIt! Motion Planning Framework

@@ -2,15 +2,15 @@
 # Created:			Guilhem Saurel on Wed, 19 Dec 2018
 #
 
-ROS_PKG=		moveit
-ROS_METAPKG=	yes
-ROS_VERSION=	0.10.5
+ROS_PKG=		ros-moveit
+ROS_METAPKG=		yes
+ROS_VERSION=		0.10.5
 ROS_REPO=		ros-planning
 
 PKGNAME=		$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 
 CATEGORIES=		wip
-ROS_COMMENT=	The MoveIt! Motion Planning Framework
+ROS_COMMENT=		The MoveIt! Motion Planning Framework
 
 
 include ../../meta-pkgs/ros-base/Makefile.common

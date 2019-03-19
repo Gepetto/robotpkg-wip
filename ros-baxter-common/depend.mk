@@ -15,11 +15,11 @@ include ../../meta-pkgs/ros-base/depend.common
 PREFER.ros-baxter-common?=		${PREFER.ros-base}
 SYSTEM_PREFIX.ros-baxter-common?=	${SYSTEM_PREFIX.ros-base}
 
-DEPEND_USE+=			ros-baxter-common
-ROS_DEPEND_USE+=		ros-baxter-common
+DEPEND_USE+=				ros-baxter-common
+ROS_DEPEND_USE+=			ros-baxter-common
 
-DEPEND_ABI.ros-baxter-common?=	baxter-common>=1.2.0
-DEPEND_DIR.ros-baxter-common?=	../../wip/ros-baxter-common
+DEPEND_ABI.ros-baxter-common?=		ros-baxter-common>=1.2.0
+DEPEND_DIR.ros-baxter-common?=		../../wip/ros-baxter-common
 
 SYSTEM_SEARCH.ros-baxter-common=\
 	include/baxter_core_msgs/OpenCamera.h	\

@@ -5,6 +5,7 @@
 ROS_PKG=		moveit_msgs
 ROS_VERSION=		0.10.0
 ROS_REPO=		ros-planning
+PKGREVISION=		1
 
 PKGNAME=		ros-$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 

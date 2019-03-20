@@ -5,6 +5,7 @@
 ROS_PKG=		warehouse_ros
 ROS_VERSION=		0.9.2
 ROS_REPO=		ros-planning
+PKGREVISION=		1
 
 PKGNAME=		ros-$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 

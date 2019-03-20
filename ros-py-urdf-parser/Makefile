@@ -3,12 +3,13 @@
 #
 
 ROS_PKG=		urdf_parser_py
-ROS_VERSION=	0.4.0
+ROS_VERSION=		0.4.0
+PKGREVISION=		1
 
 PKGNAME=		${PKGTAG.python-}urdf-parser-${ROS_VERSION}
 
 CATEGORIES=		wip
-ROS_COMMENT=	Standalone URDF parser for Python.
+ROS_COMMENT=		Standalone URDF parser for Python.
 
 
 include ../../meta-pkgs/ros-base/Makefile.common

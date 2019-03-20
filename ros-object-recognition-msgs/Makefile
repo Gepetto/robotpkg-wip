@@ -5,6 +5,7 @@
 ROS_PKG=		object_recognition_msgs
 ROS_VERSION=		0.4.1
 ROS_REPO=		wg-perception
+PKGREVISION=		1
 
 PKGNAME=		ros-$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 

@@ -6,6 +6,7 @@ ROS_PKG=		baxter_common
 ROS_METAPKG=		yes
 ROS_VERSION=		1.2.0
 ROS_REPO=		rethinkrobotics
+PKGREVISION=		1
 
 HOMEPAGE=		${MASTER_SITE_GITHUB:=${ROS_REPO}/${ROS_PKG}}
 MASTER_SITES=		${HOMEPAGE}/archive/v

@@ -5,6 +5,7 @@
 ROS_PKG=		moveit_resources
 ROS_VERSION=		0.6.4
 ROS_REPO=		ros-planning
+PKGREVISION=		1
 
 PKGNAME=		ros-$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 

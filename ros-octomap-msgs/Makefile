@@ -5,6 +5,7 @@
 ROS_PKG=		octomap_msgs
 ROS_VERSION=		0.3.3
 ROS_REPO=		octomap
+PKGREVISION=		1
 
 PKGNAME=		ros-$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 

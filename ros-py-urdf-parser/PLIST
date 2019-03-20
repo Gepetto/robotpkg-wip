@@ -1,12 +1,5 @@
 @comment Thu Dec 20 10:46:33 CET 2018
 lib/pkgconfig/urdfdom_py.pc
-${PYTHON_SITELIB}/urdf_parser_py/__init__.py
-${PYTHON_SITELIB}/urdf_parser_py/sdf.py
-${PYTHON_SITELIB}/urdf_parser_py/urdf.py
-${PYTHON_SITELIB}/urdf_parser_py/xml_reflection/__init__.py
-${PYTHON_SITELIB}/urdf_parser_py/xml_reflection/basics.py
-${PYTHON_SITELIB}/urdf_parser_py/xml_reflection/core.py
-${PYTHON_SITELIB}/urdfdom_py-${PKGVERSION}-py${PYTHON_VERSION}.egg-info
 lib/urdfdom_py/display_urdf
 share/urdfdom_py/cmake/urdfdom_pyConfig-version.cmake
 share/urdfdom_py/cmake/urdfdom_pyConfig.cmake

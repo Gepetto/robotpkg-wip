@@ -22,6 +22,7 @@ CONFLICTS+=		py[0-9][0-9]-${NAME}
 
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
+CMAKE_ARGS+=		-DINSTALL_PYTHON_INTERFACE_ONLY=ON
 
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/boost-headers/depend.mk

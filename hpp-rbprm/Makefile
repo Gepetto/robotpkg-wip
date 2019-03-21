@@ -4,10 +4,14 @@
 
 HPP_PACKAGE=	hpp-rbprm
 HPP_COMMENT=	RB-PRM planner in HPP
+PKGREVISION=	1
 
 CATEGORIES=	wip
 
 include ../../meta-pkgs/hpp/Makefile.common
+
+include ../../wip/hpp-rbprm-robot-data/depend.mk
+include ../../wip/hpp-environments/depend.mk
 
 include ../../path/hpp-core/depend.mk
 include ../../path/hpp-util/depend.mk

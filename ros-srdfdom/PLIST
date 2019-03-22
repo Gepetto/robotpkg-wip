@@ -3,6 +3,7 @@ include/srdfdom/model.h
 include/srdfdom/srdf_writer.h
 lib/libsrdfdom.so
 lib/pkgconfig/srdfdom.pc
+${PYTHON_SITELIB}/srdfdom-${PKGVERSION}-py${PYTHON_VERSION}.egg-info
 ${PYTHON_SITELIB}/srdfdom/__init__.py
 ${PYTHON_SITELIB}/srdfdom/srdf.py
 lib/srdfdom/display_srdf

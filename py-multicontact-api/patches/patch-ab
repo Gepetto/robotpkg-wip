@@ -1,0 +1,13 @@
+Don't install the .pc file, which is already installed by main package
+
+--- cmake/base.cmake.orig	2018-07-11 10:41:37.000000000 +0200
++++ cmake/base.cmake	2018-12-13 14:15:46.772836002 +0100
+@@ -226,7 +226,7 @@
+ #   finalize the project setup.
+ #
+ MACRO(SETUP_PROJECT_FINALIZE)
+-  _SETUP_PROJECT_PKG_CONFIG_FINALIZE()
++  #_SETUP_PROJECT_PKG_CONFIG_FINALIZE()
+   _SETUP_PROJECT_DOCUMENTATION_FINALIZE()
+   _SETUP_PROJECT_HEADER_FINAlIZE()
+   _SETUP_DEBIAN()

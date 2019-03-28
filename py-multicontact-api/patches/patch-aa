@@ -1,0 +1,12 @@
+don't install headers, already installed by main package
+
+--- CMakeLists.txt.orig	2019-03-28 11:52:49.000000000 +0100
++++ CMakeLists.txt	2019-03-28 12:54:27.982041064 +0100
+@@ -40,7 +40,6 @@
+ SEARCH_FOR_BOOST()
+ INCLUDE_DIRECTORIES(SYSTEM ${Boost_INCLUDE_DIRS})
+ 
+-ADD_SUBDIRECTORY(include/${CUSTOM_HEADER_DIR})
+ ADD_SUBDIRECTORY(bindings)
+ ADD_SUBDIRECTORY(unittest)
+ 

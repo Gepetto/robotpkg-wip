@@ -55,12 +55,18 @@ include ../../wip/sysdep/pal-distro.mk
 include ../../wip/pal-msgs/depend.mk
 
 include ../../wip/sysdep/pal-distro.mk
-ifeq (palerbium,${PALDISTRO})
-  CMAKE_PREFIX_PATH+=/opt/pal/erbium
-  SYSTEM_PREFIX+=/opt/pal/erbium
-  CXXFLAGS+="-I/opt/pal/erbium/include"
-  PKG_CONFIG_DIRS=/opt/pal/erbium/lib/pkgconfig
-  include ../../motion/ros-control-toolbox/depend.mk
+ifeq (erbium,${PREFER.pal-distro})
+  ifeq (palerbium,${PALDISTRO})
+    CMAKE_PREFIX_PATH+=/opt/pal/erbium
+    SYSTEM_PREFIX+=/opt/pal/erbium
+    CXXFLAGS+="-I/opt/pal/erbium/include"
+    PKG_CONFIG_DIRS=/opt/pal/erbium/lib/pkgconfig
+    include ../../motion/ros-control-toolbox/depend.mk
+  else
+    include ../../wip/pal-hardware-interfaces/depend.mk
+    include ../../wip/prf-ros-control/depend.mk
+    include ../../wip/prf-ros-controllers/depend.mk
+  endif
 else
   include ../../wip/pal-hardware-interfaces/depend.mk
   include ../../wip/prf-ros-control/depend.mk

@@ -35,9 +35,14 @@ include ../../middleware/ros-comm/depend.mk
 
 # Check if we on a pal distro
 include ../../wip/sysdep/pal-distro.mk
-ifeq (palerbium,${PALDISTRO})
-   # If yes then it does not make sense to continue
-   $(error "talos-simulation is useless on PAL erbium.")
+
+# PREFER.pal-distro gives the user the choice to compile
+# over PAL packages or not.
+ifeq (erbium,${PREFER.pal-distro})
+  ifeq (palerbium,${PALDISTRO})
+     # If yes then it does not make sense to continue
+     $(error "talos-simulation is useless on PAL erbium.")
+  endif
 endif
 
 include ../../motion/ros-control-toolbox/depend.mk

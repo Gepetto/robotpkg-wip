@@ -29,8 +29,15 @@ include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../wip/sysdep/pal-distro.mk
-ifeq (palerbium,${PALDISTRO})
-  CMAKE_PREFIX_PATH+=/opt/pal/erbium
+
+# PREFER.pal-distro gives the user the choice to compile
+# over PAL packages or not.
+ifeq (erbium,${PREFER.pal-distro})
+  ifeq (palerbium,${PALDISTRO})
+    CMAKE_PREFIX_PATH+=/opt/pal/erbium
+  else
+    include ../../wip/prf-ros-control/depend.mk
+  endif
 else
   include ../../wip/prf-ros-control/depend.mk
 endif

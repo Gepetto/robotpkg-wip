@@ -1,6 +1,7 @@
 # robotpkg Makefile for:	wip/pal-gazebo-plugins
 # Created:			Olivier Stasse on Fri, 21 Apr 2017
 #
+ORG=		pal-robotics
 VERSION=	1.1.8
 PKGBASE=	pal-gazebo-plugins
 PKGNAME=	${PKGBASE}-${VERSION}
@@ -10,7 +11,10 @@ WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
 
 CATEGORIES=	wip
-HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
+CHECKOUT_VCS_OPTS+=	--recursive
+
+HOMEPAGE=	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Common Gazebo v1.9+ plugins used by the PAL Robotics robots
 LICENSE=	2-clause-bsd

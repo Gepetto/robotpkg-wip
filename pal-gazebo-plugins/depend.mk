@@ -16,7 +16,7 @@ PREFER.pal-gazebo-plugins?=	robotpkg
 DEPEND_USE+=			pal-gazebo-plugins
 
 DEPEND_ABI.pal-gazebo-plugins?=\
-	pal-gazebo-plugins>=1.1.5
+	pal-gazebo-plugins>=1.1.4
 DEPEND_DIR.pal-gazebo-plugins?=\
 	../../wip/pal-gazebo-plugins
 

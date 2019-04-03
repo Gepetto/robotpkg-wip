@@ -10,11 +10,15 @@ ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
 
-CATEGORIES=	wip
-HOMEPAGE=	${MASTER_SITE_GITHUB:=olivier-stasse/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/
-COMMENT=	An automatically generated package with all the configuration and launch files 
-LICENSE=	2-clause-bsd
+CATEGORIES=		wip
+
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
+CHECKOUT_VCS_OPTS+=	--recursive
+
+HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
+MASTER_SITES=		${HOMEPAGE}/archive/
+COMMENT=		An automatically generated package with all the configuration and launch files 
+LICENSE=		2-clause-bsd
 
 USE_BOOST_LIBS=	thread
 

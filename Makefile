@@ -89,6 +89,7 @@ SUBDIR+=	prf-gazebo-ros-pkgs
 SUBDIR+=	prf-roboticsgroup-gazebo-plugins
 SUBDIR+=	prf-ros-control
 SUBDIR+=	prf-ros-controllers
+SUBDIR+=	py-crocoddyl
 SUBDIR+=	py-dynamic-graph-bridge-v3
 SUBDIR+=	py-dynamic-graph-tutorial
 SUBDIR+=	py-dynamic-graph-v3

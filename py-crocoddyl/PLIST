@@ -1,0 +1,21 @@
+@comment Wed Apr 3 17:06:03 CEST 2019
+${PYTHON_SITELIB}/crocoddyl/__init__.py
+${PYTHON_SITELIB}/crocoddyl/action.py
+${PYTHON_SITELIB}/crocoddyl/activation.py
+${PYTHON_SITELIB}/crocoddyl/actuation.py
+${PYTHON_SITELIB}/crocoddyl/callbacks.py
+${PYTHON_SITELIB}/crocoddyl/contact.py
+${PYTHON_SITELIB}/crocoddyl/cost.py
+${PYTHON_SITELIB}/crocoddyl/ddp.py
+${PYTHON_SITELIB}/crocoddyl/diagnostic.py
+${PYTHON_SITELIB}/crocoddyl/differential_action.py
+${PYTHON_SITELIB}/crocoddyl/fddp.py
+${PYTHON_SITELIB}/crocoddyl/floating_contact.py
+${PYTHON_SITELIB}/crocoddyl/impact.py
+${PYTHON_SITELIB}/crocoddyl/integrated_action.py
+${PYTHON_SITELIB}/crocoddyl/kkt.py
+${PYTHON_SITELIB}/crocoddyl/robots.py
+${PYTHON_SITELIB}/crocoddyl/shooting.py
+${PYTHON_SITELIB}/crocoddyl/state.py
+${PYTHON_SITELIB}/crocoddyl/unicycle.py
+${PYTHON_SITELIB}/crocoddyl/utils.py

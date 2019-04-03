@@ -1,7 +1,8 @@
 # robotpkg Makefile for:	wip/prf-ros-controllers
 # Created:			Olivier Stasse on Wed, 29 Mar 2017
 #
-VERSION=	0.3.5
+ORG=		pal-robotics-forks
+VERSION=	0.3.12
 PRFNAME=	ros-controllers
 PKGBASE=	prf-${PRFNAME}
 PKGNAME=	${PKGBASE}-${VERSION}
@@ -11,8 +12,10 @@ WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 PKGREVISION=	3
 
 CATEGORIES=	wip
-#MASTER_SITES=	${MASTER_SITE_JRL:=talos/talos_ros_controllers/}
-HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics-forks/${ROSNAME}}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
+CHECKOUT_VCS_OPTS+=	--recursive
+
+HOMEPAGE=	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 
 COMMENT=	Library of ros controllers

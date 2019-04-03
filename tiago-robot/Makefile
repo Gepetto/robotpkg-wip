@@ -2,7 +2,8 @@
 # Created:			Olivier Stasse on Tue, 8 May 2018
 #
 
-VERSION=	0.0.35os1
+ORG=		pal-robotics
+VERSION=	2.0.14
 PKGBASE=	tiago-robot
 DISTNAME=	${VERSION}
 PKGNAME=	${PKGBASE}-${VERSION}

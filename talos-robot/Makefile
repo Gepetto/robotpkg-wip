@@ -12,8 +12,11 @@ DIST_SUBDIR=	${PKGBASE}
 PKGREVISION=	2
 
 CATEGORIES=	wip
-#MASTER_SITES=	${MASTER_SITE_OPENROBOTS:=talos/talos_robot/}
-HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
+CHECKOUT_VCS_OPTS+=	--recursive
+
+HOMEPAGE=	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 
 COMMENT=	talos_robot package including talos_description and talos_bringup

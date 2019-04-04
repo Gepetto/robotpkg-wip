@@ -12,9 +12,9 @@ DIST_SUBDIR=	${PKGBASE}
 PKGREVISION=	1
 
 CATEGORIES=	wip
-# Source file store in robotpkg website.
-#HOMEPAGE=	${MASTER_SITE_OPENROBOTS:=${PKGBASE}/}
-#MASTER_SITES=   ${HOMEPAGE}
+
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
+CHECKOUT_VCS_OPTS+=	--recursive
 
 # Source file from pal-robotics website
 HOMEPAGE = 	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}

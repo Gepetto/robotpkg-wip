@@ -21,7 +21,6 @@ DEPEND_DIR.hey5-description?=\
 	../../wip/hey5-description
 
 SYSTEM_SEARCH.hey5-description=\
-  'include/hey5_description/hey5_description.h'	\
   'share/hey5_description/cmake/hey5_descriptionConfig.cmake' \
   'share/hey5_description/package.xml:/<version>/s/[^0-9.]//gp'	\
   'lib/pkgconfig/hey5_description.pc:/Version/s/[^0-9.]//gp'

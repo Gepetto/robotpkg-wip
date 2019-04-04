@@ -23,6 +23,7 @@ DEPEND_DIR.play-motion?=\
 SYSTEM_SEARCH.play-motion=\
   'include/play_motion/play_motion.h'	\
   'share/play_motion/cmake/play_motionConfig.cmake'	\
+  'share/play_motion_msgs/cmake/play_motion_msgsConfig.cmake'	\
   'share/play_motion/package.xml:/<version>/s/[^0-9.]//gp'	\
   'lib/pkgconfig/play_motion.pc:/Version/s/[^0-9.]//gp'
 

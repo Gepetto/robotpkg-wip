@@ -33,6 +33,9 @@ include ../../wip/pal-gazebo-plugins/depend.mk
 include ../../wip/pal-hardware-gazebo/depend.mk
 include ../../wip/prf-ros-controllers/depend.mk
 include ../../wip/tiago-moveit-config/depend.mk
+include ../../wip/tiago-description-calibration/depend.mk
+include ../../wip/simple-grasping-action/depend.mk
+include ../../wip/prf-teleop-tools/depend.mk
 include ../../wip/play-motion/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

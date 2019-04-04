@@ -1,28 +1,28 @@
-# robotpkg depend.mk for:	wip/tiago-robot
+# robotpkg depend.mk for:	wip/tiago-simulation
 # Created:			Olivier Stasse on Wed, 29 Mar 2017
 #
 
 DEPEND_DEPTH:=			${DEPEND_DEPTH}+
-TIAGO_ROBOT_DEPEND_MK:=	${TIAGO_ROBOT_DEPEND_MK}+
+TIAGO_SIMULATION_DEPEND_MK:=	${TIAGO_SIMULATION_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
-DEPEND_PKG+=			tiago-robot
+DEPEND_PKG+=			tiago-simulation
 endif
 
-ifeq (+,$(TIAGO_ROBOT_DEPEND_MK)) # ----------------------------------
+ifeq (+,$(TIAGO_SIMULATION_DEPEND_MK)) # ----------------------------------
 
-PREFER.tiago-robot?=	robotpkg
+PREFER.tiago-simulation?=	robotpkg
 
-DEPEND_USE+=			tiago-robot
+DEPEND_USE+=			tiago-simulation
 
-DEPEND_ABI.tiago-robot?=	tiago-robot>=0.1.7
-DEPEND_DIR.tiago-robot?=	../../wip/tiago-robot
+DEPEND_ABI.tiago-simulation?=	tiago-simulation>=2.0.6
+DEPEND_DIR.tiago-simulation?=	../../wip/tiago-simulation
 
-SYSTEM_SEARCH.tiago-robot=\
-  'share/tiago_robot/package.xml:/<version>/s/[^0-9.]//gp'	\
-  'lib/pkgconfig/tiago_robot.pc:/Version/s/[^0-9.]//gp'  \
-  'share/tiago_robot/cmake/tiago_robotConfig.cmake'
+SYSTEM_SEARCH.tiago-simulation=\
+  'share/tiago_simulation/package.xml:/<version>/s/[^0-9.]//gp'	\
+  'lib/pkgconfig/tiago_simulation.pc:/Version/s/[^0-9.]//gp'  \
+  'share/tiago_simulation/cmake/tiago_simulationConfig.cmake'
 
-endif # TIAGO_ROBOT_DEPEND_MK ----------------------------------------
+endif # TIAGO_SIMULATION_DEPEND_MK ----------------------------------------
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}

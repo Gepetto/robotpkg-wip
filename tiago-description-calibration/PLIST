@@ -1,0 +1,8 @@
+@comment Thu Apr 4 11:11:31 CEST 2019
+lib/pkgconfig/tiago_description_calibration.pc
+share/tiago_description_calibration/cmake/tiago_description_calibrationConfig-version.cmake
+share/tiago_description_calibration/cmake/tiago_description_calibrationConfig.cmake
+share/tiago_description_calibration/package.xml
+share/tiago_description_calibration/urdf/calibration/calibration_constants.urdf.xacro
+share/tiago_description_calibration/urdf/calibration/extrinsic_camera_calibration_constants.urdf.xacro
+share/tiago_description_calibration/urdf/deg_to_rad.xacro

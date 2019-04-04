@@ -36,6 +36,7 @@ include ../../middleware/ros-comm/depend.mk
 include ../../wip/pmb2-robot/depend.mk
 include ../../wip/pal-gripper/depend.mk
 include ../../wip/head-action/depend.mk
+include ../../wip/hey5-description/depend.mk
 include ../../wip/tf-lookup/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

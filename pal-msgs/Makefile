@@ -1,13 +1,24 @@
 # robotpkg Makefile for:	wip/pal-msgs
 # Created:			Olivier Stasse on Sun, 18 Jun 2017
 #
+ORG=		pal-robotics
+VERSION=	0.12.13
+PKGBASE=	pal-msgs
+PKGNAME=	${PKGBASE}-${VERSION}
+DISTNAME=	${VERSION}
+ROSNAME=	$(subst -,_,${PKGBASE})
+WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 
-VERSION=	0.11.3
-PKGNAME=	pal-msgs-${VERSION}
-DISTNAME=	$(subst -,_,${PKGBASE})-${VERSION}
 
 CATEGORIES=	wip
-MASTER_SITES=	${MASTER_SITE_OPENROBOTS:=${PKGBASE}/}
+
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
+CHECKOUT_VCS_OPTS+=	--recursive
+
+HOMEPAGE= 	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
+MASTER_SITES=	${HOMEPAGE}/archive/
+
+
 COMMENT=	Commonly used messages, services and action in PAL
 LICENSE=	original-bsd
 

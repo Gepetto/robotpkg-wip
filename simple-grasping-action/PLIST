@@ -1,0 +1,6 @@
+@comment Thu Apr 4 11:07:38 CEST 2019
+lib/pkgconfig/simple_grasping_action.pc
+lib/simple_grasping_action/simple_grasping_action
+share/simple_grasping_action/cmake/simple_grasping_actionConfig-version.cmake
+share/simple_grasping_action/cmake/simple_grasping_actionConfig.cmake
+share/simple_grasping_action/package.xml

@@ -2,6 +2,7 @@
 # Created:			Olivier Stasse on Tue, 01 May 2018
 #
 
+ORG=		pal-robotics
 VERSION=	0.0.1
 PKGBASE=	head-action
 DISTNAME=	${VERSION}

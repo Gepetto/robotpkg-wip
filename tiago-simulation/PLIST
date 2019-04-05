@@ -1,9 +1,8 @@
-@comment Sat May 12 18:41:49 CEST 2018
+@comment Mon Apr 1 23:30:01 CEST 2019
 lib/pkgconfig/tiago_2dnav_gazebo.pc
 lib/pkgconfig/tiago_controller_configuration_gazebo.pc
 lib/pkgconfig/tiago_gazebo.pc
 lib/pkgconfig/tiago_multi.pc
-lib/tiago_controller_configuration_gazebo/home_gripper.py
 lib/tiago_gazebo/tuck_arm.py
 lib/tiago_multi/pose_writing.sh
 share/tiago_2dnav_gazebo/cmake/tiago_2dnav_gazeboConfig-version.cmake
@@ -17,25 +16,24 @@ share/tiago_2dnav_gazebo/package.xml
 share/tiago_controller_configuration_gazebo/cmake/tiago_controller_configuration_gazeboConfig-version.cmake
 share/tiago_controller_configuration_gazebo/cmake/tiago_controller_configuration_gazeboConfig.cmake
 share/tiago_controller_configuration_gazebo/config/gravity_compensation_with_controller_wrist_controller.yaml
-share/tiago_controller_configuration_gazebo/config/joint_state_controller_extra_joints.yaml
+share/tiago_controller_configuration_gazebo/config/hardware_gazebo/tiago_pal_hardware_gazebo.yaml.em
+share/tiago_controller_configuration_gazebo/config/hardware_gazebo/tiago_pal_hardware_gazebo_no-arm.yaml
+share/tiago_controller_configuration_gazebo/config/hardware_gazebo/tiago_pal_hardware_gazebo_pal-gripper.yaml
+share/tiago_controller_configuration_gazebo/config/hardware_gazebo/tiago_pal_hardware_gazebo_pal-gripper_schunk-ft.yaml
+share/tiago_controller_configuration_gazebo/config/hardware_gazebo/tiago_pal_hardware_gazebo_pal-hey5.yaml
+share/tiago_controller_configuration_gazebo/config/hardware_gazebo/tiago_pal_hardware_gazebo_pal-hey5_schunk-ft.yaml
+share/tiago_controller_configuration_gazebo/config/hardware_gazebo/tiago_pal_hardware_gazebo_schunk-wsg.yaml
+share/tiago_controller_configuration_gazebo/config/hardware_gazebo/tiago_pal_hardware_gazebo_schunk-wsg_schunk-ft.yaml
 share/tiago_controller_configuration_gazebo/config/joint_trajectory_controllers.yaml
 share/tiago_controller_configuration_gazebo/config/mobile_base_controller.yaml
 share/tiago_controller_configuration_gazebo/config/mobile_base_controller_multipliers.yaml
 share/tiago_controller_configuration_gazebo/config/pids.yaml
-share/tiago_controller_configuration_gazebo/config/tiago_custom_pal_hardware_gazebo.yaml
-share/tiago_controller_configuration_gazebo/config/tiago_pal_hardware_gazebo.yaml
-share/tiago_controller_configuration_gazebo/config/tiago_steel_pal_hardware_gazebo.yaml
-share/tiago_controller_configuration_gazebo/config/tiago_titanium_pal_hardware_gazebo.yaml
 share/tiago_controller_configuration_gazebo/launch/default_controllers.launch
 share/tiago_controller_configuration_gazebo/launch/force_torque_controller.launch
 share/tiago_controller_configuration_gazebo/launch/gravity_compensation_with_controller_wrist.launch
-share/tiago_controller_configuration_gazebo/launch/gripper_controller.launch
 share/tiago_controller_configuration_gazebo/launch/hey5_controller.launch
 share/tiago_controller_configuration_gazebo/launch/imu_controller.launch
-share/tiago_controller_configuration_gazebo/launch/iron_controllers.launch
-share/tiago_controller_configuration_gazebo/launch/steel_controllers.launch
-share/tiago_controller_configuration_gazebo/launch/titanium_chessboard_controllers.launch
-share/tiago_controller_configuration_gazebo/launch/titanium_controllers.launch
+share/tiago_controller_configuration_gazebo/launch/tiago_controllers.launch
 share/tiago_controller_configuration_gazebo/launch/whole_body_controller.launch
 share/tiago_controller_configuration_gazebo/package.xml
 share/tiago_gazebo/Media/materials/scripts/Face.material
@@ -67,7 +65,6 @@ share/tiago_gazebo/config/tiago.rviz
 share/tiago_gazebo/config/wbc.rviz
 share/tiago_gazebo/launch/simulation_tiago_bringup.launch
 share/tiago_gazebo/launch/tiago_gazebo.launch
-share/tiago_gazebo/launch/tiago_gazebo_grasp_demo.launch
 share/tiago_gazebo/launch/tiago_spawn.launch
 share/tiago_gazebo/models/arm_chair/arm_chair.sdf
 share/tiago_gazebo/models/arm_chair/meshes/arm_chair.stl
@@ -142,6 +139,11 @@ share/tiago_gazebo/models/green_ball/model.config
 share/tiago_gazebo/models/green_ball/model.sdf
 share/tiago_gazebo/models/green_cube/green_cube.sdf
 share/tiago_gazebo/models/green_cube/model.config
+share/tiago_gazebo/models/ground_plane/model-1_2.sdf
+share/tiago_gazebo/models/ground_plane/model-1_3.sdf
+share/tiago_gazebo/models/ground_plane/model-1_4.sdf
+share/tiago_gazebo/models/ground_plane/model.config
+share/tiago_gazebo/models/ground_plane/model.sdf
 share/tiago_gazebo/models/kitchen_chair/kitchen_chair.sdf
 share/tiago_gazebo/models/kitchen_chair/meshes/kitchen_chair.stl
 share/tiago_gazebo/models/kitchen_chair/model.config
@@ -187,6 +189,11 @@ share/tiago_gazebo/models/sprite/material/scripts/sprite.material
 share/tiago_gazebo/models/sprite/material/textures/sprite.jpg
 share/tiago_gazebo/models/sprite/model.config
 share/tiago_gazebo/models/sprite/sprite.sdf
+share/tiago_gazebo/models/sun/model-1_2.sdf
+share/tiago_gazebo/models/sun/model-1_3.sdf
+share/tiago_gazebo/models/sun/model-1_4.sdf
+share/tiago_gazebo/models/sun/model.config
+share/tiago_gazebo/models/sun/model.sdf
 share/tiago_gazebo/models/table_0m8/model.config
 share/tiago_gazebo/models/table_0m8/table.sdf
 share/tiago_gazebo/models/table_1m/model.config
@@ -216,6 +223,8 @@ share/tiago_gazebo/models/willowgarage/materials/textures/__auto_2.png
 share/tiago_gazebo/models/willowgarage/meshes/willowgarage_collision.dae
 share/tiago_gazebo/models/willowgarage/meshes/willowgarage_visual.dae
 share/tiago_gazebo/package.xml
+share/tiago_gazebo/scripts/grasp_demo.py
+share/tiago_gazebo/scripts/tuck_arm.py
 share/tiago_gazebo/worlds/ball.world
 share/tiago_gazebo/worlds/empty.world
 share/tiago_gazebo/worlds/hit_table.world
@@ -224,6 +233,7 @@ share/tiago_gazebo/worlds/objects_on_table.world
 share/tiago_gazebo/worlds/pal_office.world
 share/tiago_gazebo/worlds/pick.world
 share/tiago_gazebo/worlds/simple_office_with_people.world
+share/tiago_gazebo/worlds/simple_ramp.world
 share/tiago_gazebo/worlds/small_office.world
 share/tiago_gazebo/worlds/tabletop_cube.world
 share/tiago_gazebo/worlds/tutorial_office.world
@@ -243,4 +253,3 @@ share/tiago_multi/launch/multitiago_gazebo_navigation.launch
 share/tiago_multi/launch/teleop_tiago.launch
 share/tiago_multi/package.xml
 share/tiago_simulation/package.xml
-@pkgdir share/pkgconfig

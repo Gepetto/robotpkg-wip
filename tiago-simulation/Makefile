@@ -2,19 +2,21 @@
 # Created:			Olivier Stasse on Tue, 8 May 2018
 #
 
-VERSION=	0.0.10os1
-PKGBASE=	tiago-simulation
-DISTNAME=	${VERSION}
-PKGNAME=	${PKGBASE}-${VERSION}
-ROSNAME=	$(subst -,_,${PKGBASE})
-WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
-DIST_SUBDIR=	${PKGBASE}
+ORG=		    pal-robotics
+VERSION=	    2.0.6
+PKGBASE=	    tiago-simulation
+DISTNAME=	    ${VERSION}
+PKGNAME=	    ${PKGBASE}-${VERSION}
+ROSNAME=	    $(subst -,_,${PKGBASE})
+WRKSRC=		    ${WRKDIR}/${ROSNAME}-${VERSION}
+DIST_SUBDIR=	    ${PKGBASE}
 
-CATEGORIES=	wip
-HOMEPAGE=	${MASTER_SITE_GITHUB:=olivier-stasse/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/
-COMMENT=	Simulation for the TIAGo robot
-LICENSE=	2-clause-bsd
+CATEGORIES=	    wip
+HOMEPAGE=	    ${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
+MASTER_REPOSITORY=  ${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
+MASTER_SITES=	    ${HOMEPAGE}/archive/
+COMMENT=	    Simulation for the TIAGo robot
+LICENSE=	    2-clause-bsd
 
 
 ROS_METAPKG=	yes

@@ -2,7 +2,8 @@
 # Created:			Olivier Stasse on Tue, 9 May 2018
 #
 
-VERSION=	1.1.9
+ORG=		pal-robotics
+VERSION=	3.0.2
 PKGBASE=	pmb2-robot
 DISTNAME=	${VERSION}
 PKGNAME=	${PKGBASE}-${VERSION}

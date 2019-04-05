@@ -1,9 +1,14 @@
-@comment Thu May 4 09:18:34 CEST 2017
+@comment Fri Apr 5 11:03:31 CEST 2019
 lib/pkgconfig/talos_controller_configuration_gazebo.pc
 lib/pkgconfig/talos_gazebo.pc
 lib/pkgconfig/talos_hardware_gazebo.pc
 share/talos_controller_configuration_gazebo/cmake/talos_controller_configuration_gazeboConfig-version.cmake
 share/talos_controller_configuration_gazebo/cmake/talos_controller_configuration_gazeboConfig.cmake
+share/talos_controller_configuration_gazebo/config/offsets.yaml
+share/talos_controller_configuration_gazebo/config/walking_controller.yaml
+share/talos_controller_configuration_gazebo/config/walking_params.yaml
+share/talos_controller_configuration_gazebo/launch/default_controllers.launch
+share/talos_controller_configuration_gazebo/launch/walking_controller.launch
 share/talos_controller_configuration_gazebo/package.xml
 share/talos_gazebo/cmake/talos_gazeboConfig-version.cmake
 share/talos_gazebo/cmake/talos_gazeboConfig.cmake
@@ -13,13 +18,13 @@ share/talos_gazebo/package.xml
 share/talos_hardware_gazebo/cmake/talos_hardware_gazeboConfig-version.cmake
 share/talos_hardware_gazebo/cmake/talos_hardware_gazeboConfig.cmake
 share/talos_hardware_gazebo/config/pids.yaml
-share/talos_hardware_gazebo/config/talos_full_pal_hardware_gazebo_config.yaml
+share/talos_hardware_gazebo/config/sensors/arm_left.yaml
+share/talos_hardware_gazebo/config/sensors/arm_right.yaml
+share/talos_hardware_gazebo/config/sensors/gripper_left.yaml
+share/talos_hardware_gazebo/config/sensors/gripper_right.yaml
+share/talos_hardware_gazebo/config/sensors/head.yaml
+share/talos_hardware_gazebo/config/sensors/leg_left.yaml
+share/talos_hardware_gazebo/config/sensors/leg_right.yaml
+share/talos_hardware_gazebo/config/sensors/torso.yaml
 share/talos_hardware_gazebo/package.xml
 share/talos_simulation/package.xml
-share/talos_controller_configuration_gazebo/package.xml
-share/talos_controller_configuration_gazebo/config/offsets.yaml
-share/talos_controller_configuration_gazebo/config/walking_controller.yaml
-share/talos_controller_configuration_gazebo/config/walking_params.yaml
-share/talos_controller_configuration_gazebo/launch/default_controllers.launch
-share/talos_controller_configuration_gazebo/launch/walking_controller.launch
-

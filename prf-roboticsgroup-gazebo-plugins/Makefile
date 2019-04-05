@@ -1,7 +1,8 @@
 # robotpkg Makefile for:	wip/prf-roboticsgroup-gazebo-plugins
 # Created:			Olivier Stasse on Fri, 21 Apr 2017
 #
-VERSION=	0.1.0
+ORG=		pal-robotics-forks
+VERSION=	0.1.1
 PRFNAME=	roboticsgroup-gazebo-plugins
 PKGBASE=	prf-${PRFNAME}
 DISTNAME=	${VERSION}

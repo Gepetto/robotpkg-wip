@@ -1,6 +1,7 @@
 # robotpkg Makefile for:	wip/talos-moveit-config
 # Created:			Olivier Stasse on Mer, 3 May 2017
 #
+ORG=		pal-robotics
 VERSION=	0.2.6
 PKGBASE=	talos-moveit-config
 PKGNAME=	${PKGBASE}-${VERSION}

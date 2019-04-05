@@ -1,8 +1,8 @@
 # robotpkg Makefile for:	wip/pdf-ros-control
 # Created:			Olivier Stasse on Wed, 27 Apr 2018
 #
-
-VERSION=	0.2.6
+ORG=		pal-robotics-forks
+VERSION=	0.2.7
 PRFNAME=        ros-control
 PKGBASE=	prf-${PRFNAME}
 PKGNAME=	${PKGBASE}-${VERSION}
@@ -10,7 +10,6 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PRFNAME})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	3
 
 CATEGORIES=	wip
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git

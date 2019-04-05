@@ -1,5 +1,14 @@
+@comment Mon Apr 1 23:26:23 CEST 2019
+lib/pkgconfig/pmb2_2dnav_gazebo.pc
 lib/pkgconfig/pmb2_controller_configuration_gazebo.pc
 lib/pkgconfig/pmb2_gazebo.pc
+share/pmb2_2dnav_gazebo/cmake/pmb2_2dnav_gazeboConfig-version.cmake
+share/pmb2_2dnav_gazebo/cmake/pmb2_2dnav_gazeboConfig.cmake
+share/pmb2_2dnav_gazebo/launch/pmb2_mapping.launch
+share/pmb2_2dnav_gazebo/launch/pmb2_mapping_public.launch
+share/pmb2_2dnav_gazebo/launch/pmb2_navigation.launch
+share/pmb2_2dnav_gazebo/launch/pmb2_navigation_public.launch
+share/pmb2_2dnav_gazebo/package.xml
 share/pmb2_controller_configuration_gazebo/cmake/pmb2_controller_configuration_gazeboConfig-version.cmake
 share/pmb2_controller_configuration_gazebo/cmake/pmb2_controller_configuration_gazeboConfig.cmake
 share/pmb2_controller_configuration_gazebo/config/mobile_base_controller.yaml

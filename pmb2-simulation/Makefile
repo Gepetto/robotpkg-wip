@@ -2,7 +2,8 @@
 # Created:			Olivier Stasse on Tue, 9 May 2018
 #
 
-VERSION=	1.0.0os1
+ORG=		pal-robotics
+VERSION=	2.0.7
 PKGBASE=	pmb2-simulation
 DISTNAME=	${VERSION}
 PKGNAME=	${PKGBASE}-${VERSION}

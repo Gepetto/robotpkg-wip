@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/pal-gripper
 # Created:			Olivier Stasse on Tue, 8 May 2018
 #
-
+ORG=		pal-robotics
 VERSION=	0.0.13
 PKGBASE=	pal-gripper
 DISTNAME=	${VERSION}

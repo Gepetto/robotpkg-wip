@@ -36,10 +36,11 @@ share/pmb2_description/config/joint_limits.yaml
 share/pmb2_description/gazebo/gazebo.urdf.xacro
 share/pmb2_description/meshes/base/base.stl
 share/pmb2_description/meshes/base/base_collision.dae
-share/pmb2_description/meshes/base/base_collision.stl
 share/pmb2_description/meshes/base/base_ring.stl
 share/pmb2_description/meshes/base/high_resolution/base.stl
 share/pmb2_description/meshes/base/high_resolution/base_collision.stl
+share/pmb2_description/meshes/cameras_add_on/cameras_add_on.stl
+share/pmb2_description/meshes/cameras_add_on/cameras_add_on_collision.stl
 share/pmb2_description/meshes/dock/dock.stl
 share/pmb2_description/meshes/dock/dock_collision.stl
 share/pmb2_description/meshes/objects/antenna.stl
@@ -47,6 +48,7 @@ share/pmb2_description/meshes/objects/cover.stl
 share/pmb2_description/meshes/objects/high_resolution/cover.stl
 share/pmb2_description/meshes/sensors/bumper.stl
 share/pmb2_description/meshes/sensors/bumper_collision.stl
+share/pmb2_description/meshes/sensors/elp_camera.stl
 share/pmb2_description/meshes/sensors/high_resolution/bumper.stl
 share/pmb2_description/meshes/sensors/high_resolution/hokuyo_urg_04lx_ug01.stl
 share/pmb2_description/meshes/sensors/high_resolution/sick_tim551.stl
@@ -55,6 +57,8 @@ share/pmb2_description/meshes/sensors/high_resolution/xtion_pro_live.stl
 share/pmb2_description/meshes/sensors/hokuyo_urg_04lx_ug01.stl
 share/pmb2_description/meshes/sensors/sick_tim551.stl
 share/pmb2_description/meshes/sensors/srf05.stl
+share/pmb2_description/meshes/sensors/structure_sensor.stl
+share/pmb2_description/meshes/sensors/xtion_pro_live.dae
 share/pmb2_description/meshes/wheels/caster_1.stl
 share/pmb2_description/meshes/wheels/caster_2.stl
 share/pmb2_description/meshes/wheels/high_resolution/caster_1.stl
@@ -62,17 +66,13 @@ share/pmb2_description/meshes/wheels/high_resolution/caster_2.stl
 share/pmb2_description/meshes/wheels/high_resolution/wheel.stl
 share/pmb2_description/meshes/wheels/wheel.stl
 share/pmb2_description/package.xml
-share/pmb2_description/robots/pmb2_default.urdf.xacro
-share/pmb2_description/robots/pmb2_full.urdf.xacro
-share/pmb2_description/robots/pmb2_sick551.urdf.xacro
-share/pmb2_description/robots/pmb2_sick561.urdf.xacro
-share/pmb2_description/robots/pmb2_sick571.urdf.xacro
+share/pmb2_description/robots/pmb2.urdf.xacro
 share/pmb2_description/robots/show.launch
 share/pmb2_description/robots/upload.launch
-share/pmb2_description/robots/upload_pmb2.launch
 share/pmb2_description/urdf/base/base.urdf.xacro
 share/pmb2_description/urdf/base/base_sensors.urdf.xacro
 share/pmb2_description/urdf/base/footprint.yaml
+share/pmb2_description/urdf/cameras_add_on/cameras_add_on.urdf.xacro
 share/pmb2_description/urdf/deg_to_rad.xacro
 share/pmb2_description/urdf/dock/dock.urdf.xacro
 share/pmb2_description/urdf/materials.urdf.xacro
@@ -80,6 +80,8 @@ share/pmb2_description/urdf/objects/antenna.urdf.xacro
 share/pmb2_description/urdf/objects/cover.urdf.xacro
 share/pmb2_description/urdf/sensors/bumper.gazebo.xacro
 share/pmb2_description/urdf/sensors/bumper.urdf.xacro
+share/pmb2_description/urdf/sensors/courier.urdf.xacro
+share/pmb2_description/urdf/sensors/elp_rgb.urdf.xacro
 share/pmb2_description/urdf/sensors/hokuyo_urg_04lx_ug01_laser.gazebo.xacro
 share/pmb2_description/urdf/sensors/hokuyo_urg_04lx_ug01_laser.urdf.xacro
 share/pmb2_description/urdf/sensors/imu.urdf.xacro
@@ -92,6 +94,8 @@ share/pmb2_description/urdf/sensors/sick_tim561_laser.gazebo.xacro
 share/pmb2_description/urdf/sensors/sick_tim561_laser.urdf.xacro
 share/pmb2_description/urdf/sensors/sick_tim571_laser.gazebo.xacro
 share/pmb2_description/urdf/sensors/sick_tim571_laser.urdf.xacro
+share/pmb2_description/urdf/sensors/structure_sensor.gazebo.xacro
+share/pmb2_description/urdf/sensors/structure_sensor.urdf.xacro
 share/pmb2_description/urdf/wheels/caster.gazebo.xacro
 share/pmb2_description/urdf/wheels/caster.urdf.xacro
 share/pmb2_description/urdf/wheels/wheel.gazebo.xacro

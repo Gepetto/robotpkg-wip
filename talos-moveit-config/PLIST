@@ -1,4 +1,4 @@
-@comment Fri Apr 5 03:51:12 CEST 2019
+@comment Fri Apr 5 09:22:44 CEST 2019
 lib/pkgconfig/talos_moveit_config.pc
 share/talos_moveit_config/cmake/talos_moveit_configConfig-version.cmake
 share/talos_moveit_config/cmake/talos_moveit_configConfig.cmake
@@ -28,27 +28,3 @@ share/talos_moveit_config/launch/upload_talos_collision_blacklist.launch
 share/talos_moveit_config/launch/warehouse.launch
 share/talos_moveit_config/launch/warehouse_settings.launch.xml
 share/talos_moveit_config/package.xml
-share/tiago_moveit_config/config/controllers/controllers.yaml.em
-share/tiago_moveit_config/config/controllers/controllers_no-arm.yaml
-share/tiago_moveit_config/config/controllers/controllers_pal-gripper.yaml
-share/tiago_moveit_config/config/controllers/controllers_pal-gripper_schunk-ft.yaml
-share/tiago_moveit_config/config/controllers/controllers_pal-hey5.yaml
-share/tiago_moveit_config/config/controllers/controllers_pal-hey5_schunk-ft.yaml
-share/tiago_moveit_config/config/controllers/controllers_schunk-wsg.yaml
-share/tiago_moveit_config/config/controllers/controllers_schunk-wsg_schunk-ft.yaml
-share/tiago_moveit_config/config/fake_controllers/fake_controllers.yaml.em
-share/tiago_moveit_config/config/fake_controllers/fake_controllers_no-arm.yaml
-share/tiago_moveit_config/config/fake_controllers/fake_controllers_pal-gripper.yaml
-share/tiago_moveit_config/config/fake_controllers/fake_controllers_pal-gripper_schunk-ft.yaml
-share/tiago_moveit_config/config/fake_controllers/fake_controllers_pal-hey5.yaml
-share/tiago_moveit_config/config/fake_controllers/fake_controllers_pal-hey5_schunk-ft.yaml
-share/tiago_moveit_config/config/fake_controllers/fake_controllers_schunk-wsg.yaml
-share/tiago_moveit_config/config/fake_controllers/fake_controllers_schunk-wsg_schunk-ft.yaml
-share/tiago_moveit_config/config/srdf/tiago.srdf.em
-share/tiago_moveit_config/config/srdf/tiago_no-arm.srdf
-share/tiago_moveit_config/config/srdf/tiago_pal-gripper.srdf
-share/tiago_moveit_config/config/srdf/tiago_pal-gripper_schunk-ft.srdf
-share/tiago_moveit_config/config/srdf/tiago_pal-hey5.srdf
-share/tiago_moveit_config/config/srdf/tiago_pal-hey5_schunk-ft.srdf
-share/tiago_moveit_config/config/srdf/tiago_schunk-wsg.srdf
-share/tiago_moveit_config/config/srdf/tiago_schunk-wsg_schunk-ft.srdf

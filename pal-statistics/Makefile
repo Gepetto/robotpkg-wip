@@ -1,8 +1,8 @@
 # robotpkg Makefile for:	wip/pal-statistics
 # Created:			Olivier Stasse on Thu, 12 Dec 2018
 #
-
-VERSION=	1.1.0
+ORG=		pal-robotics
+VERSION=	1.1.1
 PKGBASE=	pal-statistics
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}

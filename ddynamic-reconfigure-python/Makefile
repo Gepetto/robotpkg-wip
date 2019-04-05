@@ -2,6 +2,7 @@
 # Created:			Olivier Stasse on Tue, 9 May 2018
 #
 
+ORG=		pal-robotics
 VERSION=	0.0.1
 PKGBASE=	ddynamic-reconfigure-python
 DISTNAME=	${VERSION}
@@ -11,7 +12,7 @@ WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
 
 CATEGORIES=	wip
-HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+MASTER_REPOSITORY=	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	The ddynamic_reconfigure_python package contains a class to instantiate dynamic reconfigure servers on the fly
 LICENSE=	2-clause-bsd

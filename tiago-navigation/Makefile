@@ -2,7 +2,8 @@
 # Created:			Olivier Stasse on Tue, 8 May 2018
 #
 
-VERSION=	0.9.8os1
+ORG=		pal-robotics
+VERSION=	1.0.7
 PKGBASE=	tiago-navigation
 DISTNAME=	${VERSION}
 PKGNAME=	${PKGBASE}-${VERSION}

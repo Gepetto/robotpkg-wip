@@ -1,8 +1,8 @@
 # robotpkg Makefile for:	wip/pal-gazebo-worlds
 # Created:			Guilhem Saurel on Fri, 13 Apr 2018
 #
-
-VERSION=	2.0.8
+ORG=		pal-robotics
+VERSION=	2.0.25
 PKGBASE=	pal-gazebo-worlds
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}

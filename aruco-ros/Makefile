@@ -2,6 +2,7 @@
 # Created:			Olivier Stasse on Tue, 8 May 2018
 #
 
+ORG=		pal-robotics
 VERSION=	0.2.3
 PKGBASE=	aruco-ros
 DISTNAME=	${VERSION}
@@ -11,7 +12,7 @@ WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
 
 CATEGORIES=	wip
-HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+HOMEPAGE=	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Software package and ROS wrappers of the Aruco Augmented Reality marker detector library
 LICENSE=	2-clause-bsd

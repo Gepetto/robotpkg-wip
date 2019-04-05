@@ -1,14 +1,14 @@
 # robotpkg Makefile for:	wip/talos-simulation
 # Created:			Olivier Stasse on Mer, 3 May 2017
 #
-VERSION=	0.1.4
+ORG=		pal-robotics
+VERSION=	0.1.8
 PKGBASE=	talos-simulation
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	4
 
 CATEGORIES=	wip
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git

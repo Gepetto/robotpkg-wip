@@ -137,6 +137,7 @@ SUBDIR+=	ros-swri-string-util
 SUBDIR+=	ros-universal-robot
 SUBDIR+=	ros-warehouse-ros
 SUBDIR+=	rqt-dynamic-graph
+SUBDIR+= 	simple-grasping-action
 SUBDIR+=	simple-humanoid-description
 SUBDIR+=	sot-core-v3
 SUBDIR+=	sot-dynamic-pinocchio-v3

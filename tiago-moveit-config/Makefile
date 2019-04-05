@@ -2,13 +2,14 @@
 # Created:			Olivier Stasse on Tue, 9 May 2018
 #
 
-VERSION=	0.0.15os1
-PKGBASE=	tiago-moveit-config
-DISTNAME=	${VERSION}
-PKGNAME=	${PKGBASE}-${VERSION}
-ROSNAME=	$(subst -,_,${PKGBASE})
-WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
-DIST_SUBDIR=	${PKGBASE}
+ORG=			pal-robotics
+VERSION=		1.0.1
+PKGBASE=		tiago-moveit-config
+DISTNAME=		${VERSION}
+PKGNAME=		${PKGBASE}-${VERSION}
+ROSNAME=		$(subst -,_,${PKGBASE})
+WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
+DIST_SUBDIR=		${PKGBASE}
 
 CATEGORIES=		wip
 

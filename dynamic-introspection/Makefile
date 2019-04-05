@@ -12,7 +12,10 @@ DIST_SUBDIR=	${PKGBASE}
 PKGREVIONS=	1
 
 CATEGORIES=	wip
-HOMEPAGE=	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
+CHECKOUT_VCS_OPTS+=	--recursive
+
+HOMEPAGE= 	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Package to record all data from control thus perform introspection
 

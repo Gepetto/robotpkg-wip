@@ -2,7 +2,8 @@
 # Created:			Olivier Stasse on Mon, 07 May 2018
 #
 
-VERSION=	0.4.5
+ORG=		pal-robotics
+VERSION=	0.4.6
 PKGBASE=	play-motion
 DISTNAME=	${VERSION}
 PKGNAME=	${PKGBASE}-${VERSION}

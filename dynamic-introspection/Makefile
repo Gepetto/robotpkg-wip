@@ -2,6 +2,7 @@
 # Created:			Olivier Stasse on Fr, 27 Apr 2018
 #
 
+ORG=		pal-robotics
 VERSION=	1.0.8
 PKGBASE= 	dynamic-introspection
 PKGNAME=	${PKGBASE}-${VERSION}

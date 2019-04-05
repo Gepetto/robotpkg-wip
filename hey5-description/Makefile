@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/hey5-description
 # Created:			Olivier Stasse on Tue, 8 May 2018
 #
-
+ORG=		pal-robotics
 VERSION=	1.0.2
 PKGBASE=	hey5-description
 DISTNAME=	${VERSION}

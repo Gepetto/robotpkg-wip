@@ -1,15 +1,14 @@
 # robotpkg Makefile for:	wip/talos-robot
 # Created:			Olivier Stasse on Wed, 3 May 2017
 #
-
-VERSION=	1.0.2
+ORG=		pal-robotics
+VERSION=	1.0.48
 PKGBASE=	talos-robot
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME= 	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	2
 
 CATEGORIES=	wip
 

@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/pal-hardware-gazebo
 # Created:			Olivier Stasse on Thu, 3 May 2017
 #
-
+ORG=		pal-robotics
 VERSION=	0.1.2
 PKGBASE=	pal-hardware-gazebo
 PKGNAME=	${PKGBASE}-${VERSION}
@@ -17,7 +17,7 @@ MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
 CHECKOUT_VCS_OPTS+=	--recursive
 
 # Source file from pal-robotics website
-HOMEPAGE = 	${MASTER_SITE_GITHUB:=pal-robotics/${ROSNAME}}
+HOMEPAGE = 	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Hardware interfaces developped by PAL-Robotics in Gazebo
 LICENSE=	2-clause-bsd

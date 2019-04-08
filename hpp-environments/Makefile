@@ -4,6 +4,7 @@
 
 HPP_PACKAGE=	hpp-environments
 HPP_COMMENT=	Environments and robot descriptions for HPP
+HPP_VERSION=	4.4.0
 
 CATEGORIES=	wip
 

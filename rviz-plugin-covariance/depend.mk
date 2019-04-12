@@ -18,7 +18,7 @@ DEPEND_USE+=			rviz-plugin-covariance
 DEPEND_ABI.rviz-plugin-covariance?=	rviz-plugin-covariance>=0.0.6
 DEPEND_DIR.rviz-plugin-covariance?=	../../wip/rviz-plugin-covariance
 
-SYSTEM_SEARCH.pmb2-robot=\
+SYSTEM_SEARCH.rviz-plugin-covariance=\
   'share/rviz_plugin_covariance/package.xml:/<version>/s/[^0-9.]//gp'	\
   'lib/pkgconfig/rviz_plugin_covariance.pc:/Version/s/[^0-9.]//gp'  \
   'share/rviz_plugin_covariance/cmake/rviz_plugin_covarianceConfig.cmake'

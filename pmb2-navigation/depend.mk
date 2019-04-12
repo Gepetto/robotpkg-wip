@@ -20,8 +20,11 @@ DEPEND_DIR.pmb2-navigation?=	../../wip/pmb2-navigation
 
 SYSTEM_SEARCH.pmb2-navigation=\
   'share/pmb2_navigation/package.xml:/<version>/s/[^0-9.]//gp'	\
-  'lib/pkgconfig/pmb2_navigation.pc:/Version/s/[^0-9.]//gp'  \
-  'share/pmb2_navigation/cmake/pmb2_navigationConfig.cmake'
+  'lib/pkgconfig/pmb2_2dnav.pc:/Version/s/[^0-9.]//gp'  \
+  'share/pmb2_2dnav/cmake/pmb2_2dnavConfig.cmake' \
+  'share/pmb2_laser_sensors/cmake/pmb2_laser_sensorsConfig.cmake' \
+  'share/pmb2_maps/cmake/pmb2_mapsConfig.cmake' \
+  'share/pmb2_rgbd_sensors/cmake/pmb2_rgbd_sensorsConfig.cmake'
 
 endif # PMB2_NAVIGATION_DEPEND_MK ----------------------------------------
 

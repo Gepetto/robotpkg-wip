@@ -29,7 +29,7 @@ USE_BOOST_LIBS=	thread
 # ros-kinetic-carrot-plaln
 # ros-kinetic-fake-localization
 # ros-kinetic-gmapping
-# ros-rviz
+# ros-kinetic-eband-local-planner
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../devel/ros-catkin/depend.mk

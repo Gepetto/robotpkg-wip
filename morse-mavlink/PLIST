@@ -1,8 +1,0 @@
-@comment Mon Feb 8 10:38:03 CET 2016
-${PYTHON_SITELIB}/morse/middleware/mavlink/__init__.py
-${PYTHON_SITELIB}/morse/middleware/mavlink/abstract_mavlink.py
-${PYTHON_SITELIB}/morse/middleware/mavlink/attitude.py
-${PYTHON_SITELIB}/morse/middleware/mavlink/local_position_ned_to_waypoint.py
-${PYTHON_SITELIB}/morse/middleware/mavlink/odometry_to_local_ned.py
-${PYTHON_SITELIB}/morse/middleware/mavlink/read_attitude_target.py
-${PYTHON_SITELIB}/morse/middleware/mavlink_datastream.py

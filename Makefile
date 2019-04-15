@@ -53,7 +53,6 @@ SUBDIR+=	libmove3d-hri
 SUBDIR+=	libmove3d-planners
 SUBDIR+=	mavlink
 SUBDIR+=	metapod
-SUBDIR+=	morse-mavlink
 SUBDIR+=	morse-ros
 SUBDIR+=	move3d-assets
 SUBDIR+=	move3d-studio

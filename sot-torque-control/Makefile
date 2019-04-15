@@ -23,16 +23,16 @@ DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
+include ../../graphics/simple-humanoid-description/depend.mk
 include ../../graphics/urdfdom/depend.mk
+include ../../mapping/octomap/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../math/pinocchio/depend.mk
-include ../../mapping/octomap/depend.mk
 include ../../path/hpp-fcl/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/tsid/depend.mk
 include ../../wip/parametric-curves/depend.mk
-include ../../wip/simple-humanoid-description/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

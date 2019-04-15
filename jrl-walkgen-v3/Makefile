@@ -26,14 +26,14 @@ DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 DEPEND_ABI.pinocchio=	pinocchio<2
 
-include ../../mk/sysdep/cmake.mk
-include ../../math/pinocchio/depend.mk
-include ../../wip/eigen-quadprog/depend.mk
-include ../../wip/simple-humanoid-description/depend.mk
+include ../../graphics/simple-humanoid-description/depend.mk
 include ../../interfaces/jrl-mal/depend.mk
-include ../../pkgtools/pkg-config/depend.mk
+include ../../math/pinocchio/depend.mk
+include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/graphviz.mk
+include ../../pkgtools/pkg-config/depend.mk
+include ../../wip/eigen-quadprog/depend.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/fortran.mk

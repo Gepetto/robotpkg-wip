@@ -63,7 +63,6 @@ SUBDIR+=	move3d-assets
 SUBDIR+=	move3d-studio
 SUBDIR+=	msgconnector
 SUBDIR+=	multicontact-api
-SUBDIR+=	mumps
 SUBDIR+=	octovis
 SUBDIR+=	ompl
 SUBDIR+=	openhrp3-hrp2

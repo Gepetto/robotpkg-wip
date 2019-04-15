@@ -42,7 +42,6 @@ SUBDIR+=	hrp2-14-description
 SUBDIR+=	hrp2-bringup
 SUBDIR+=	hrp2-computer-monitor
 SUBDIR+=	hrp2-dev
-SUBDIR+=	hrp2-machine
 SUBDIR+=	infuse-asn1-conversions
 SUBDIR+=	infuse-asn1-types
 SUBDIR+=	infuse-envire

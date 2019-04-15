@@ -56,7 +56,6 @@ SUBDIR+=	libnabo
 SUBDIR+=	lua-rfsm
 SUBDIR+=	mavlink
 SUBDIR+=	metapod
-SUBDIR+=	morse-hla
 SUBDIR+=	morse-mavlink
 SUBDIR+=	morse-ros
 SUBDIR+=	move3d-assets

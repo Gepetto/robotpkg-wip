@@ -34,8 +34,8 @@ include ../../robots/hrp2-14/depend.mk
 include ../../robots/hrp2-machine/depend.mk
 include ../../scripts/py-sot-application/depend.mk
 include ../../sysutils/hrp2-computer-monitor/depend.mk
+include ../../sysutils/hrp2-bringup/depend.mk
 include ../../wip/hrp2-14-description/depend.mk
-include ../../wip/hrp2-bringup/depend.mk
 include ../../wip/sot-dyninv/depend.mk
 include ../../wip/sot-hrp2/depend.mk
 include ../../mk/sysdep/cmake.mk

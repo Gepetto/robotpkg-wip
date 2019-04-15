@@ -39,7 +39,6 @@ SUBDIR+=	hpp-romeo
 SUBDIR+=	hpp-spline
 SUBDIR+=	hpp-universal-robot
 SUBDIR+=	hrp2-14-description
-SUBDIR+=	hrp2-bringup
 SUBDIR+=	hrp2-dev
 SUBDIR+=	infuse-asn1-conversions
 SUBDIR+=	infuse-asn1-types

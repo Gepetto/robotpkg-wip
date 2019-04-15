@@ -20,8 +20,8 @@ DYNAMIC_PLIST_DIRS+=	share/doc/hrp2_bringup
 
 include ../../pkgtools/pkg-config/depend.mk
 include ../../robots/hrp2-machine/depend.mk
+include ../../sysutils/hrp2-computer-monitor/depend.mk
 include ../../wip/hrp2-14-description/depend.mk
-include ../../wip/hrp2-computer-monitor/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/graphviz.mk

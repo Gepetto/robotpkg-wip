@@ -20,7 +20,6 @@ SUBDIR+=	example-robot-data
 SUBDIR+=	fcl
 SUBDIR+=	FRILibrary
 SUBDIR+=	gdalwrap
-SUBDIR+=	gerard-bauzil
 SUBDIR+=	hatponboard-lib
 SUBDIR+=	head-action
 SUBDIR+=	hey5-description

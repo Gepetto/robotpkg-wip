@@ -2,16 +2,14 @@
 bin/hpp-rbprm-server
 include/hpp/corbaserver/rbprm/config.hh
 include/hpp/corbaserver/rbprm/deprecated.hh
-include/hpp/corbaserver/rbprm/rbprmbuilder.hh
+include/hpp/corbaserver/rbprm/rbprmbuilder-idl.hh
 include/hpp/corbaserver/rbprm/server.hh
 include/hpp/corbaserver/rbprm/warning.hh
 lib/libhpp-rbprm-corba.so
 lib/pkgconfig/hpp-rbprm-corba.pc
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/__init__.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/client.py
-${PYTHON_SITELIB}/hpp/corbaserver/rbprm/common_idl.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/rbprmbuilder.py
-${PYTHON_SITELIB}/hpp/corbaserver/rbprm/rbprmbuilder_idl.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/rbprmfullbody.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/rbprmstate.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/state_alg.py
@@ -24,3 +22,6 @@ ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/obj_to_constraints.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/path_to_trajectory.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/plot_analytics.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/time_out.py
+${PYTHON_SITELIB}/hpp_idl/hpp/corbaserver/rbprm/__init__.py
+${PYTHON_SITELIB}/hpp_stubs/rbprm/__init__.py
+${PYTHON_SITELIB}/hpp_stubs/rbprm/rbprmbuilder_idl.py

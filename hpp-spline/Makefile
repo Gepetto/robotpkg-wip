@@ -4,7 +4,6 @@
 
 HPP_PACKAGE=	hpp-spline
 HPP_COMMENT=	spline and bezier curves
-HPP_VERSION=	4.3.1
 
 CATEGORIES=	wip
 

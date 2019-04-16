@@ -1,6 +1,6 @@
 @comment Fri Jan 4 21:25:43 CET 2019
 bin/hpp-affordance-server
-include/hpp/corbaserver/affordance/affordance.hh
+include/hpp/corbaserver/affordance/affordance-idl.hh
 include/hpp/corbaserver/affordance/config.hh
 include/hpp/corbaserver/affordance/deprecated.hh
 include/hpp/corbaserver/affordance/fwd.hh
@@ -10,11 +10,12 @@ lib/libhpp-affordance-corba.so
 lib/pkgconfig/hpp-affordance-corba.pc
 ${PYTHON_SITELIB}/hpp/corbaserver/affordance/__init__.py
 ${PYTHON_SITELIB}/hpp/corbaserver/affordance/affordance.py
-${PYTHON_SITELIB}/hpp/corbaserver/affordance/affordance_idl.py
 ${PYTHON_SITELIB}/hpp/corbaserver/affordance/client.py
-${PYTHON_SITELIB}/hpp/corbaserver/affordance/common_idl.py
 ${PYTHON_SITELIB}/hpp/corbaserver/affordance/corba.py
 ${PYTHON_SITELIB}/hpp/corbaserver/affordance/robot.py
+${PYTHON_SITELIB}/hpp_idl/hpp/corbaserver/affordance/__init__.py
+${PYTHON_SITELIB}/hpp_stubs/affordance/__init__.py
+${PYTHON_SITELIB}/hpp_stubs/affordance/affordance_idl.py
 share/hpp-affordance-corba/meshes/box.stl
 share/hpp-affordance-corba/meshes/darpareduced.stl
 share/hpp-affordance-corba/meshes/hyq/hyq_all.stl

@@ -4,7 +4,7 @@
 
 ORG=			loco-3d
 NAME=			multicontact-api
-VERSION=		1.0.1
+VERSION=		1.1.0
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${DISTNAME}

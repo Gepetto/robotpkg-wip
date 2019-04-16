@@ -4,7 +4,6 @@
 
 HPP_PACKAGE=	hpp-rbprm-robot-data
 HPP_COMMENT=	file database
-HPP_VERSION=	4.4.0
 
 CATEGORIES=	wip
 

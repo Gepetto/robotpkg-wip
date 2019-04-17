@@ -16,15 +16,13 @@ PREFER.py-pal?=	robotpkg
 DEPEND_USE+=			py-pal
 
 DEPEND_ABI.py-pal?=\
-	py-pal>=0.9.14
+	pal-python>=0.9.14os1
 DEPEND_DIR.py-pal?=\
 	../../wip/py-pal
 
 SYSTEM_SEARCH.py-pal=\
-  'include/py_pal/py_pal.h'	\
-  'share/py_pal/cmake/py_palConfig.cmake' \
-  'share/py_pal/package.xml:/<version>/s/[^0-9.]//gp'	\
-  'lib/pkgconfig/py_pal.pc:/Version/s/[^0-9.]//gp'
+  '${PYTHON_SYSLIBSEARCH}/pal_python/pal_common.py' \
+  '${PYTHON_SYSLIBSEARCH}/pal_python/pal_launch.py' 
 
 endif # PY_PAL_DEPEND_MK ---------------------------------------
 

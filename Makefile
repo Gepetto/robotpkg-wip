@@ -82,6 +82,7 @@ SUBDIR+=	prf-roboticsgroup-gazebo-plugins
 SUBDIR+=	prf-ros-control
 SUBDIR+=	prf-ros-controllers
 SUBDIR+=	prf-teleop-tools
+SUBDIR+=	py-bmtools
 SUBDIR+=	py-crocoddyl
 SUBDIR+=	py-curves
 SUBDIR+=	py-dynamic-graph-bridge-v3

@@ -18,7 +18,7 @@ SYSTEM_SEARCH.py-bmtools=\
 
 DEPEND_USE+=			py-bmtools
 
-DEPEND_ABI.py-bmtools?=		${PKGTAG.python-}bmtools>=1.0
+DEPEND_ABI.py-bmtools?=		${PKGTAG.python-}bmtools>=1.0.1
 DEPEND_DIR.py-bmtools?=		../../wip/py-bmtools
 
 include ../../mk/sysdep/python.mk

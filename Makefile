@@ -89,6 +89,7 @@ SUBDIR+=	py-dynamic-graph-bridge-v3
 SUBDIR+=	py-dynamic-graph-tutorial
 SUBDIR+=	py-dynamic-graph-v3
 SUBDIR+=	py-example-adder
+SUBDIR+=	py-hqp
 SUBDIR+=	py-mavlink
 SUBDIR+=	py-morse
 SUBDIR+=	py-mraa

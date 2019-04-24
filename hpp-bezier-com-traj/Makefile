@@ -4,7 +4,6 @@
 
 HPP_PACKAGE=	hpp-bezier-com-traj
 HPP_COMMENT=	trajectory generation for the COM with bezier curves
-HPP_VERSION=	4.4.0
 
 CATEGORIES=	wip
 

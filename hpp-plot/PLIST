@@ -5,7 +5,6 @@ include/hpp/plot/deprecated.hh
 include/hpp/plot/graph-widget.hh
 include/hpp/plot/hpp-manipulation-graph.hh
 include/hpp/plot/warning.hh
-lib/gepetto-gui-plugins/hppmanipulationplugin.so
 lib/gepetto-gui-plugins/hppmonitoringplugin.so
 lib/libhpp-plot.so
 lib/pkgconfig/hpp-plot.pc

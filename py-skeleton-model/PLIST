@@ -1,0 +1,7 @@
+@comment Thu Apr 25 15:04:29 CEST 2019
+${PYTHON_SITELIB}/hqp/wrapper.py.orig
+${PYTHON_SITELIB}/skeleton_model-${PKGVERSION}-py${PYTHON_VERSION}.egg-info
+${PYTHON_SITELIB}/skeleton_model/__init__.py
+${PYTHON_SITELIB}/skeleton_model/builder.py
+${PYTHON_SITELIB}/skeleton_model/config.py
+${PYTHON_SITELIB}/skeleton_model/osim_parser.py

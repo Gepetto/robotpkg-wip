@@ -26,6 +26,7 @@ SUBDIR+=	histodet
 SUBDIR+=	hpp-affordance
 SUBDIR+=	hpp-affordance-corba
 SUBDIR+=	hpp-baxter
+SUBDIR+=	hpp-benchmark
 SUBDIR+=	hpp-bezier-com-traj
 SUBDIR+=	hpp-centroidal-dynamics
 SUBDIR+=	hpp-environments

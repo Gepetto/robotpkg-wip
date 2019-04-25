@@ -1,0 +1,23 @@
+@comment Thu Apr 25 11:01:59 CEST 2019
+include/hpp/benchmark/config.hh
+include/hpp/benchmark/deprecated.hh
+include/hpp/benchmark/warning.hh
+lib/pkgconfig/hpp_benchmark.pc
+${PYTHON_SITELIB}/hpp/corbaserver/lydia/__init__.py
+${PYTHON_SITELIB}/hpp/corbaserver/lydia/robot.py
+share/hpp_benchmark/baxter-manipulation-boxes/script.py
+share/hpp_benchmark/construction-set/script.py
+share/hpp_benchmark/construction-set/setup.py
+share/hpp_benchmark/construction-set/state_name.py
+share/hpp_benchmark/construction-set/visibility_prm.py
+share/hpp_benchmark/hrp2-on-the-ground/script.py
+share/hpp_benchmark/package.xml
+share/hpp_benchmark/pr2-in-iai-kitchen/script.py
+share/hpp_benchmark/pr2-manipulation-kitchen/script.py
+share/hpp_benchmark/pr2-manipulation-two-hand/script.py
+share/hpp_benchmark/romeo-placard/script.py
+share/hpp_benchmark/srdf/lydia.srdf
+share/hpp_benchmark/urdf/lydia.urdf
+share/hpp_benchmark/urdf/obstacle.urdf
+share/hpp_benchmark/urdf/obstacle_easy.urdf
+share/hpp_benchmark/urdf/obstacle_medium.urdf

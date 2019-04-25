@@ -1,0 +1,10 @@
+@comment Thu Apr 25 13:09:03 CEST 2019
+${PYTHON_SITELIB}/ospi-${PKGVERSION}-py${PYTHON_VERSION}.egg-info
+${PYTHON_SITELIB}/ospi/__init__.py
+${PYTHON_SITELIB}/ospi/algebra.py
+${PYTHON_SITELIB}/ospi/model_builder.py
+${PYTHON_SITELIB}/ospi/model_parser.py
+${PYTHON_SITELIB}/ospi/motion_parser.py
+${PYTHON_SITELIB}/ospi/utils.py
+${PYTHON_SITELIB}/ospi/viewer_utils.py
+${PYTHON_SITELIB}/ospi/wrapper.py

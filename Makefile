@@ -95,6 +95,7 @@ SUBDIR+=	py-mavlink
 SUBDIR+=	py-morse
 SUBDIR+=	py-mraa
 SUBDIR+=	py-multicontact-api
+SUBDIR+=	py-ospi
 SUBDIR+=	py-pal
 SUBDIR+=	py-parametric-curves
 SUBDIR+=	py-qpoases

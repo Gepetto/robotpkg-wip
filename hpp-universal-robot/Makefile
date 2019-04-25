@@ -4,7 +4,6 @@
 
 HPP_PACKAGE=	hpp-universal-robot
 HPP_COMMENT=	Data specific to robots ur5 and ur10 for hpp-corbaserver
-HPP_VERSION=	4.2.1
 
 CATEGORIES=	wip
 

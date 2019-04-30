@@ -11,6 +11,7 @@ CATEGORIES=	wip
 include ../../meta-pkgs/hpp/Makefile.common
 
 include ../../devel/boost-headers/depend.mk
+include ../../devel/boost-libs/depend.mk
 
 include ../../math/eigen3/depend.mk
 include ../../path/hpp-fcl/depend.mk

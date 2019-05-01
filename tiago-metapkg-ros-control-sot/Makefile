@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Tue, 30 April 2019
 #
 
-VERSION=		0.0.1
+VERSION=		0.0.2
 PKGBASE=		tiago-metapkg-ros-control-sot
 PKGNAME=		${PKGBASE}-${VERSION}
 ROSNAME=		$(subst -,_,${PKGBASE})
@@ -12,7 +12,8 @@ DIST_SUBDIR=		${PKGBASE}
 
 CATEGORIES=		wip
 HOMEPAGE=		${MASTER_SITE_GITHUB:=stack-of-tasks/${ROSNAME}}
-MASTER_SITES=		${HOMEPAGE}/releases/download/v${VERSION}/
+#MASTER_SITES=		${HOMEPAGE}/releases/download/v${VERSION}/
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=tiago/${PKGBASE}/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/${ROSNAME}
 
 COMMENT=	ros_control package for the SoT and specifically for Tiago

@@ -1,6 +1,5 @@
 @comment Sat May 6 18:24:39 CEST 2017
 lib/pkgconfig/roscontrol_sot_tiago.pc
-lib/pkgconfig/sot_pyrene_bringup.pc
 lib/roscontrol_sot_tiago/republish
 share/roscontrol_sot_tiago/cmake/roscontrol_sot_tiagoConfig-version.cmake
 share/roscontrol_sot_tiago/cmake/roscontrol_sot_tiagoConfig.cmake

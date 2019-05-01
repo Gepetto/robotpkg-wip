@@ -3,19 +3,21 @@
 #
 
 ORG=			stack-of-tasks
-NAME=			tiago-data
 VERSION=		0.0.1
+PKGBASE=		tiago-data
+DISTNAME=		${VERSION}
+PKGNAME=		${PKGBASE}-${VERSION}
+ROSNAME=		$(subst -,_,${PKGBASE})
+WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
+DIST_SUBDIR=		${PKGBASE}
 
-ROSNAME=		$(subst -,_,${NAME})
-PKGNAME=		${NAME}-${VERSION}
-DISTNAME=		${ROSNAME}-${VERSION}
+CATEGORIES=		wip
 
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=tiago/${NAME}/}
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=tiago/${PKGBASE}/${ROSNAME}-}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}${ROSNAME}.git
 CHECKOUT_VCS_OPTS+=	--recursive
 LICENSE=		gnu-lgpl-v3
 
-CATEGORIES=		wip
 COMMENT=		This packages provides data of mobile robot in a friendly way for the SoT.
 MAINTAINER=		ostasse@laas.fr
 

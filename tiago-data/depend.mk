@@ -14,7 +14,8 @@ ifeq (+,$(TIAGO_DATA_DEPEND_MK)) # -------------------------------------------
 PREFER.tiago-data?=	robotpkg
 
 SYSTEM_SEARCH.tiago-data=\
-	'share/tiago_data/urdf/tiago_reduced.urdf'				\
+	'share/tiago_data/urdf/tiago_steel.urdf'			\
+	'share/tiago_data/urdf/tiago_titanium.urdf'			\
 	'lib/pkgconfig/tiago_data.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		tiago-data

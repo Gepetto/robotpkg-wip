@@ -1,0 +1,15 @@
+@comment Tue May 9 23:59:20 CEST 2017
+include/sot-tiago/config.hh
+include/sot-tiago/deprecated.hh
+include/sot-tiago/warning.hh
+lib/libsot-tiago-controller.so
+lib/libsot-tiago-device.so
+lib/pkgconfig/sot-tiago.pc
+${PYTHON_SITELIB}/dynamic_graph/sot/tiago/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/tiago/prologue.py
+${PYTHON_SITELIB}/dynamic_graph/sot/tiago/robot.py
+${PYTHON_SITELIB}/dynamic_graph/sot/tiago/sot_tiago_device/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/tiago/sot_tiago_device/wrap${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/dynamic_graph/sot/tiago/tiago.py
+share/sot-tiago/tests/appli.py
+share/sot-tiago/tests/test.py

@@ -1,4 +1,5 @@
 @comment Tue Apr 30 18:56:04 CEST 2019
+lib/pkgconfig/tiago_data.pc
 share/tiago_data/Media/materials/scripts/markers.material
 share/tiago_data/Media/materials/textures/aruco-26_8cm.png
 share/tiago_data/Media/materials/textures/aruco-582_8cm.png

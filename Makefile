@@ -151,6 +151,7 @@ SUBDIR+=	talos-moveit-config
 SUBDIR+=	talos-robot
 SUBDIR+=	talos-simulation
 SUBDIR+=	tf-lookup
+SUBDIR+=	tiago-data
 SUBDIR+=	tiago-description-calibration
 SUBDIR+=	tiago-moveit-config
 SUBDIR+=	tiago-navigation

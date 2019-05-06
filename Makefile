@@ -158,6 +158,7 @@ SUBDIR+=	tiago-moveit-config
 SUBDIR+=	tiago-navigation
 SUBDIR+=	tiago-robot
 SUBDIR+=	tiago-simulation
+SUBDIR+=	tiago-metapkg-ros-control-sot
 SUBDIR+=	tiago-tutorials
 SUBDIR+=	tsid
 SUBDIR+=	ur5-description

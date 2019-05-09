@@ -11,6 +11,7 @@ SUBDIR+=	certi
 SUBDIR+=	cppad
 SUBDIR+=	cppadcodegen
 SUBDIR+=	dptu-genom3
+SUBDIR+=	ddp-actuator-solver
 SUBDIR+=	dynamic-graph-tutorial
 SUBDIR+=	dynamic-graph-v3
 SUBDIR+=	dynamic-introspection

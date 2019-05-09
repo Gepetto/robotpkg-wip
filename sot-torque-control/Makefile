@@ -5,6 +5,7 @@
 ORG=				stack-of-tasks
 NAME=				sot-torque-control
 VERSION=			1.3.2
+PKGREVISION=			1
 
 DISTNAME=			${NAME}-${VERSION}
 
@@ -33,6 +34,7 @@ include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/tsid/depend.mk
 include ../../wip/parametric-curves/depend.mk
+include ../../wip/ddp-actuator-solver/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

@@ -1,0 +1,14 @@
+@comment Thu May 9 18:26:37 CEST 2019
+include/ddp-actuator-solver/costfunction.hh
+include/ddp-actuator-solver/ddpsolver.hh
+include/ddp-actuator-solver/dynamicmodel.hh
+include/ddp-actuator-solver/examples/costfunctionromeoactuator.hh
+include/ddp-actuator-solver/examples/costtemp.hh
+include/ddp-actuator-solver/examples/dctemp.hh
+include/ddp-actuator-solver/examples/romeosimpleactuator.hh
+include/ddp-actuator-solver/examples/romeotorqueactuator.hh
+include/ddp/actuator/solver/config.hh
+include/ddp/actuator/solver/deprecated.hh
+include/ddp/actuator/solver/warning.hh
+lib/libddp-actuator-solver-examples.so
+lib/pkgconfig/ddp-actuator-solver.pc

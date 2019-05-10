@@ -4,7 +4,7 @@
 
 ORG=				stack-of-tasks
 NAME=				sot-torque-control
-VERSION=			1.3.1
+VERSION=			1.3.2
 
 DISTNAME=			${NAME}-${VERSION}
 PKGNAME=			${PKGTAG.python-}${DISTNAME}
@@ -40,6 +40,7 @@ include ../../wip/tsid/depend.mk
 include ../../wip/py-tsid/depend.mk
 include ../../wip/parametric-curves/depend.mk
 include ../../wip/py-parametric-curves/depend.mk
+include ../../wip/ddp-actuator-solver/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/sysdep/doxygen.mk

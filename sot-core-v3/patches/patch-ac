@@ -1,0 +1,278 @@
+--- include/sot/core/unary-op.hh
++++ include/sot/core/unary-op.hh
+@@ -50,9 +50,11 @@ namespace dynamicgraph {
+ 
+       UnaryOp( const std::string& name )
+ 	: Entity(name)
+-	,SIN(NULL,Self::CLASS_NAME+"("+name+")::input("+Self::getTypeInName()+")::sin")
++	,SIN(NULL,Self::CLASS_NAME+"("+name+")::input("
++	     +Self::getTypeInName()+")::sin")
+ 	,SOUT( boost::bind(&Self::computeOperation,this,_1,_2),
+-	       SIN,Self::CLASS_NAME+"("+name+")::output("+Self::getTypeOutName()+")::sout")
++	     SIN,Self::CLASS_NAME+"("+name+")::output("
++	       +Self::getTypeOutName()+")::sout")
+       {
+ 	signalRegistration( SIN<<SOUT );
+ 	op.addSpecificCommands(*this,commandMap);
+
+--- src/matrix/operator.cpp
++++ src/matrix/operator.cpp
+@@ -41,8 +41,10 @@ namespace dynamicgraph {
+     {
+       typedef TypeIn Tin;
+       typedef TypeOut Tout;
+-      static const std::string & nameTypeIn(void) { return TypeNameHelper<Tin>::typeName; }
+-      static const std::string & nameTypeOut(void) { return TypeNameHelper<Tout>::typeName; }
++      static const std::string & nameTypeIn(void)
++      { return TypeNameHelper<Tin>::typeName; }
++      static const std::string & nameTypeOut(void)
++      { return TypeNameHelper<Tout>::typeName; }
+       void addSpecificCommands(Entity&, Entity::CommandMap_t& ) {}
+       virtual std::string getDocString () const {
+ 	return std::string
+@@ -101,8 +103,10 @@ namespace dynamicgraph {
+       segments_t idxs;
+       Vector::Index size;
+ 
+-      void setBounds( const int & m,const int & M ) { idxs = segments_t (1, segment_t(m, M-m)); size = M-m; }
+-      void addBounds( const int & m,const int & M ) { idxs    .push_back(   segment_t(m, M-m)); size += M-m; }
++      void setBounds( const int & m,const int & M )
++      { idxs = segments_t (1, segment_t(m, M-m)); size = M-m; }
++      void addBounds( const int & m,const int & M )
++      { idxs    .push_back(   segment_t(m, M-m)); size += M-m; }
+ 
+       void addSpecificCommands(Entity& ent,
+        			       Entity::CommandMap_t& commandMap )
+@@ -112,11 +116,13 @@ namespace dynamicgraph {
+ 
+ 	boost::function< void( const int&, const int& ) > setBound
+ 	  = boost::bind( &VectorSelecter::setBounds,this,_1,_2 );
+-	doc = docCommandVoid2("Set the bound of the selection [m,M[.","int (min)","int (max)");
++	doc = docCommandVoid2("Set the bound of the selection [m,M[.",
++			      "int (min)","int (max)");
+ 	ADD_COMMAND( "selec", makeCommandVoid2(ent,setBound,doc) );
+ 	boost::function< void( const int&, const int& ) > addBound
+ 	  = boost::bind( &VectorSelecter::addBounds,this,_1,_2 );
+-	doc = docCommandVoid2("Add a segment to be selected [m,M[.","int (min)","int (max)");
++	doc = docCommandVoid2("Add a segment to be selected [m,M[.",
++			      "int (min)","int (max)");
+ 	ADD_COMMAND( "addSelec", makeCommandVoid2(ent,addBound,doc) );
+       }
+       VectorSelecter () : size (0) {}
+@@ -138,8 +144,9 @@ namespace dynamicgraph {
+       int index;
+       void setIndex (const int & m) { index = m; }
+ 
+-      void addSpecificCommands(Entity& ent,
+-       			       Entity::CommandMap_t& commandMap )
++      void addSpecificCommands
++      (Entity& ent,
++       Entity::CommandMap_t& commandMap )
+       {
+ 	std::string doc;
+ 
+--- unitTesting/CMakeLists.txt
++++ unitTesting/CMakeLists.txt
+@@ -81,6 +81,8 @@ SET (tests
+	
+ 	math/matrix-twist
+ 	math/matrix-homogeneous
++
++	matrix/test_operator
+ 	)
+ 
+ # TODO
+
+--- /dev/null
++++ unitTesting/matrix/test_operator.cpp
+@@ -0,0 +1,189 @@
++/// Copyright CNRS 2019
++/// author: O. Stasse
++#include <iostream>
++#include "../../src/matrix/operator.cpp"
++
++namespace dg= ::dynamicgraph;
++using namespace dynamicgraph::sot;
++
++#define BOOST_TEST_MODULE test-operator
++
++#include <boost/test/unit_test.hpp>
++#include <boost/test/output_test_stream.hpp>
++
++using boost::test_tools::output_test_stream;
++
++
++BOOST_AUTO_TEST_CASE(test_vector_selecter)
++{
++  // Test VectorSelecter registered as aSelec_of_vector
++  VectorSelecter aSelec_of_vector;
++
++  output_test_stream output;
++
++  output << aSelec_of_vector.nameTypeIn();
++  BOOST_CHECK(output.is_equal("Vector"));
++
++  output << aSelec_of_vector.nameTypeOut();
++  BOOST_CHECK(output.is_equal("Vector"));
++
++  output << aSelec_of_vector.getDocString();
++  BOOST_CHECK
++    (output.is_equal
++     ("Undocumented unary operator\n"
++      "  - input  Vector\n"
++      "  - output Vector\n"));
++  dg::Vector vIn(10),vOut(10);
++  for(unsigned int i=0;
++      i<10;i++)
++    vIn(i)=i;
++  
++  aSelec_of_vector.setBounds(3,5);
++  aSelec_of_vector.addBounds(7,10);
++  aSelec_of_vector(vIn,vOut);
++  output << vOut;
++
++  BOOST_CHECK
++    (output.is_equal
++     ("3\n4\n7\n8\n9"));
++
++  output << dg::sot::UnaryOp<VectorSelecter>::CLASS_NAME;
++  BOOST_CHECK
++    (output.is_equal
++     ("Selec_of_vector"));
++  
++  dg::Entity * anEntity = regFunction_Selec_of_vector("test_Selec_of_vector");
++  dg::sot::UnaryOp<VectorSelecter> * aVectorSelecter =
++    dynamic_cast<dg::sot::UnaryOp<VectorSelecter > * > (anEntity);
++  output << aVectorSelecter->getTypeInName();
++  BOOST_CHECK
++    (output.is_equal
++     ("Vector"));
++  
++  output << aVectorSelecter->getTypeOutName();
++  BOOST_CHECK
++    (output.is_equal
++     ("Vector"));
++  
++  output << aVectorSelecter->getClassName();
++  BOOST_CHECK
++    (output.is_equal
++     ("Selec_of_vector"));
++
++  output << aVectorSelecter->getDocString();
++  BOOST_CHECK
++    (output.is_equal
++     ("Undocumented unary operator\n"
++      "  - input  Vector\n"
++      "  - output Vector\n"));
++
++}
++
++BOOST_AUTO_TEST_CASE(test_vector_component)
++{
++  // Test Vector Component
++  VectorComponent aComponent_of_vector;
++
++  output_test_stream output;
++  
++  aComponent_of_vector.setIndex(1);
++  dg::Vector vIn(3);
++  for(unsigned int i=0;
++      i<3;
++      i++)
++    vIn(i)=i;
++
++  double res;
++  aComponent_of_vector(vIn,res);
++  BOOST_CHECK(res==1.0);
++  
++  output << aComponent_of_vector.getDocString();
++  BOOST_CHECK
++    (output.is_equal("Select a component of a vector\n"
++		     "  - input  vector\n"
++		     "  - output double"));
++  
++  output << aComponent_of_vector.nameTypeIn();
++  BOOST_CHECK(output.is_equal("Vector"));
++  output << aComponent_of_vector.nameTypeOut();
++  BOOST_CHECK(output.is_equal("double"));
++
++  dg::Entity * anEntity =
++    regFunction_Component_of_vector("test_Component_of_vector");
++  dg::sot::UnaryOp<VectorComponent> * aVectorSelecter =
++    dynamic_cast<dg::sot::UnaryOp<VectorComponent > * > (anEntity);
++  output << aVectorSelecter->getTypeInName();
++  BOOST_CHECK
++    (output.is_equal
++     ("Vector"));
++  
++  output << aVectorSelecter->getTypeOutName();
++  BOOST_CHECK
++    (output.is_equal
++     ("double"));
++  
++  output << aVectorSelecter->getClassName();
++  BOOST_CHECK
++    (output.is_equal
++     ("Component_of_vector"));
++
++  output << aVectorSelecter->getDocString();
++  BOOST_CHECK
++    (output.is_equal
++     ("Select a component of a vector\n"
++      "  - input  vector\n"
++      "  - output double"));
++
++}
++
++BOOST_AUTO_TEST_CASE(test_matrix_selector)
++{
++  MatrixSelector aSelec_of_matrix;
++  output_test_stream output;
++  
++  aSelec_of_matrix.setBoundsRow(2,4);
++  aSelec_of_matrix.setBoundsCol(2,4);
++  
++  dg::Matrix aMatrix(5,5);
++  for(unsigned int i=0;
++      i<5;
++      i++)
++    for(unsigned int j=0;
++	j<5;
++	j++)
++      aMatrix(i,j)=i*5+j;
++
++  dg::Matrix resMatrix(2,2);
++  aSelec_of_matrix(aMatrix,resMatrix);
++  BOOST_CHECK(resMatrix(0,0)==12.0);
++  BOOST_CHECK(resMatrix(0,1)==13.0);
++  BOOST_CHECK(resMatrix(1,0)==17.0);
++  BOOST_CHECK(resMatrix(1,1)==18.0);
++  
++  output << aSelec_of_matrix.nameTypeIn();
++  BOOST_CHECK(output.is_equal("Matrix"));
++  output << aSelec_of_matrix.nameTypeOut();
++  BOOST_CHECK(output.is_equal("Matrix"));
++
++  dg::Entity * anEntity =
++    regFunction_Selec_of_matrix("test_Selec_of_matrix");
++  dg::sot::UnaryOp<MatrixSelector> * aMatrixSelector =
++    dynamic_cast<dg::sot::UnaryOp<MatrixSelector > * > (anEntity);
++  output << aMatrixSelector->getTypeInName();
++  BOOST_CHECK
++    (output.is_equal
++     ("Matrix"));
++  
++  output << aMatrixSelector->getTypeOutName();
++  BOOST_CHECK
++    (output.is_equal
++     ("Matrix"));
++  
++  output << aMatrixSelector->getClassName();
++  BOOST_CHECK
++    (output.is_equal
++     ("Selec_of_matrix"));
++
++  
++}
++
+

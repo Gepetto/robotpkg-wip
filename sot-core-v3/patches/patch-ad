@@ -1,0 +1,369 @@
+--- src/math/op-point-modifier.cpp
++++ src/math/op-point-modifier.cpp
+@@ -30,14 +30,19 @@ DYNAMICGRAPH_FACTORY_ENTITY_PLUGIN(OpPointModifier,"OpPointModifier");
+ OpPointModifier::
+ OpPointModifier( const std::string& name )
+   :Entity( name )
+-   ,jacobianSIN(NULL,"OpPointModifior("+name+")::input(matrix)::jacobianIN")
+-   ,positionSIN(NULL,"OpPointModifior("+name+")::input(matrixhomo)::positionIN")
+-   ,jacobianSOUT( boost::bind(&OpPointModifier::jacobianSOUT_function,this,_1,_2),
+-		  jacobianSIN,
+-		  "OpPointModifior("+name+")::output(matrix)::jacobian" )
+-   ,positionSOUT( boost::bind(&OpPointModifier::positionSOUT_function,this,_1,_2),
+-		  positionSIN,
+-		  "OpPointModifior("+name+")::output(matrixhomo)::position" )
++  ,jacobianSIN(NULL,"OpPointModifior("+name+")::input(matrix)::jacobianIN")
++  ,positionSIN
++   (NULL,"OpPointModifior("+name+
++    ")::input(matrixhomo)::positionIN")
++  ,jacobianSOUT
++   ( boost::bind(&OpPointModifier::jacobianSOUT_function,
++		 this,_1,_2),
++     jacobianSIN,
++     "OpPointModifior("+name+")::output(matrix)::jacobian" )
++  ,positionSOUT
++   ( boost::bind(&OpPointModifier::positionSOUT_function,this,_1,_2),
++     positionSIN,
++     "OpPointModifior("+name+")::output(matrixhomo)::position" )
+   ,transformation()
+   ,isEndEffector(true)
+ {
+@@ -47,18 +52,22 @@ OpPointModifier( const std::string& name )
+   {
+
+     using namespace dynamicgraph::command;
+-    addCommand("getTransformation",
+-	       makeDirectGetter(*this,&transformation.matrix(),
+-				docDirectGetter("transformation","matrix 4x4 homo")));
+-    addCommand("setTransformation",
+-	       makeDirectSetter(*this, &transformation.matrix(),
+-				docDirectSetter("dimension","matrix 4x4 homo")));
+-    addCommand("getEndEffector",
+-	       makeDirectGetter(*this,&isEndEffector,
+-				docDirectGetter("end effector mode","bool")));
+-    addCommand("setEndEffector",
+-	       makeDirectSetter(*this, &isEndEffector,
+-				docDirectSetter("end effector mode","bool")));
++    addCommand
++      ("getTransformation",
++       makeDirectGetter(*this,&transformation.matrix(),
++			docDirectGetter("transformation","matrix 4x4 homo")));
++    addCommand
++      ("setTransformation",
++       makeDirectSetter(*this, &transformation.matrix(),
++			docDirectSetter("dimension","matrix 4x4 homo")));
++    addCommand
++      ("getEndEffector",
++       makeDirectGetter(*this,&isEndEffector,
++			docDirectGetter("end effector mode","bool")));
++    addCommand
++      ("setEndEffector",
++       makeDirectSetter(*this, &isEndEffector,
++			docDirectSetter("end effector mode","bool")));
+   }
+ 
+   sotDEBUGOUT(15);
+--- src/math/vector-quaternion.cpp
++++ src/math/vector-quaternion.cpp
+@@ -72,42 +72,6 @@ fromMatrix( const MatrixRotation& rot )
+ 	}
+     }
+
+-  // TRIAL (1)
+-
+-//   const float trace = 1 + rotmat(0,0) + rotmat(1,1) + rotmat(2,2);
+-//   if( trace>1e-6 )
+-//     {
+-//       const float s = sqrt(1+trace) * 2;
+-//       vector(0) = rotmat(2,1) - rotmat(1,2) / s;
+-//       vector(1) = (rotmat(0,2) - rotmat(2,0)) / s;
+-//       vector(2) = (rotmat(1,0) - rotmat(0,1)) / s;
+-//       vector(3) = s / 4;
+-//     }
+-//   else if (rotmat(0,0) > rotmat(1,1) && rotmat(0,0) > rotmat(2,2))
+-//     {
+-//       const float s = sqrt(1.0f + rotmat(0,0) - rotmat(1,1) - rotmat(2,2)) * 2;
+-//       vector(0) = s / 4;
+-//       vector(1) = (rotmat(1,0) + rotmat(0,1)) / s;
+-//       vector(2) = (rotmat(0,2) + rotmat(2,0)) / s;
+-//       vector(3) = (rotmat(2,1) - rotmat(1,2)) / s;
+-//     }
+-//   else if (rotmat(1,1) > rotmat(2,2))
+-//     {
+-//       const float s = sqrt(1.0f + rotmat(1,1) - rotmat(0,0) - rotmat(2,2)) * 2;
+-//       vector(0) = (rotmat(1,0) + rotmat(0,1)) / s;
+-//       vector(1) = s / 4;
+-//       vector(2) = (rotmat(2,1) + rotmat(1,2)) / s;
+-//       vector(3) = (rotmat(0,2) - rotmat(2,0)) / s;
+-//     }
+-//   else
+-//     {
+-//       const float s = sqrt(1.0f + rotmat(2,2) - rotmat(0,0) - rotmat(1,1)) * 2;
+-//       vector(0) = (rotmat(0,2) + rotmat(2,0)) / s;
+-//       vector(1) = (rotmat(2,1) + rotmat(1,2)) / s;
+-//       vector(2) = s / 4;
+-//       vector(3) = (rotmat(1,0) - rotmat(0,1)) / s;
+-//     }
+-
+   sotDEBUGOUT(15) ;
+   return *this;
+ }
+@@ -167,63 +131,12 @@ toMatrix( MatrixRotation& rot ) const
+   rotmat(2,0) = 2 * (zx - ry);
+   rotmat(2,1) = 2 * (yz + rx);
+ 
+-  // TRIAL (2)
+-
+-//   double Nq = w*w + x*x + y*y + z*z;
+-//   double s= 0.0;  if( Nq>0.0 ) s = 2/Nq;  else s=0.0;
+-
+-//   double X = x*s; double Y = y*s; double Z = z*s;
+-//   double wX = w*X; double wY = w*Y; double wZ = w*Z;
+-//   double xX = x*X; double xY = x*Y; double xZ = x*Z;
+-//   double yY = y*Y; double yZ = y*Z; double zZ = z*Z;
+-
+-//   rotmat(0,0) = 1.0-(yY+zZ);
+-//   rotmat(0,1) = xY-wZ;
+-//   rotmat(0,2) = xZ+wY;
+-
+-//   rotmat(1,0) = xY+wZ;
+-//   rotmat(1,1) = 1.0-(xX+zZ);
+-//   rotmat(1,2) = yZ-wX;
+-
+-//   rotmat(2,0) = xZ-wY;
+-//   rotmat(2,1) = yZ+wX;
+-//   rotmat(2,2) = 1.0-(xX+yY);
+-
+-
+-  // TRIAL (1)
+-
+-        //   const double& a = vector(0);
+-//   const double& b = vector(1);
+-//   const double& c = vector(2);
+-//   const double& d = vector(3);
+-
+-//   double a2=a*a;
+-//   double b2=b*b;
+-//   double c2=c*c;
+-//   double d2=d*d;
+-
+-//   const double bc = b*c;
+-//   const double ad = a*d;
+-//   const double bd = b*d;
+-//   const double ac = a*c;
+-//   const double ab = a*b;
+-//   const double cd = c*d;
+-
+-//   rotmat(0,0) =  a2+b2-c2-d2  ;
+-//   rotmat(1,0) =  bc-ad ;
+-//   rotmat(2,0) =  ac+bd ;
+-//   rotmat(0,1) =  ad+bc ;
+-//   rotmat(1,1) =  a2-b2+c2-d2 ;
+-//   rotmat(2,1) =  cd-ab ;
+-//   rotmat(0,2) =  bd-ac ;
+-//   rotmat(1,2) =  ab+cd ;
+-//   rotmat(2,2) =  a2-b2-c2+d2 ;
+-
+   sotDEBUGOUT(15) ;
+   return rot;
+ }
+ 
+-VectorQuaternion& VectorQuaternion::conjugate(VectorQuaternion& res) const
++VectorQuaternion& VectorQuaternion::
++conjugate(VectorQuaternion& res) const
+ {
+   res.vector(0) = vector(0);
+   res.vector(1) = -vector(1);
+@@ -232,7 +145,8 @@ VectorQuaternion& VectorQuaternion::conjugate(VectorQuaternion& res) const
+   return res;
+ }
+ 
+-VectorQuaternion& VectorQuaternion::multiply(const VectorQuaternion& q2, VectorQuaternion& res) const
++VectorQuaternion& VectorQuaternion::
++multiply(const VectorQuaternion& q2, VectorQuaternion& res) const
+ {
+   double & a1 = vector(0);
+   double & b1 = vector(1);
+--- src/tools/device.cpp
++++ src/tools/device.cpp
+@@ -34,8 +34,11 @@ const std::string Device::CLASS_NAME = "Device";
+ /* --- CLASS ----------------------------------------------------------- */
+ /* --------------------------------------------------------------------- */
+ 
+-void Device::integrateRollPitchYaw(Vector& state, const Vector& control,
+-                                   double dt)
++void Device::
++integrateRollPitchYaw
++(Vector& state,
++ const Vector& control,
++ double dt)
+ {
+   using Eigen::AngleAxisd;
+   using Eigen::Vector3d;
+@@ -56,11 +59,13 @@ void Device::integrateRollPitchYaw(Vector& state, const Vector& control,
+   ffPose_.translation() = qout.head<3>();
+   state.head<3>() = qout.head<3>();
+ 
+-  ffPose_.linear() = QuaternionMapd(qout.tail<4>().data()).toRotationMatrix();
++  ffPose_.linear() =
++    QuaternionMapd(qout.tail<4>().data()).toRotationMatrix();
+   state.segment<3>(3) = ffPose_.linear().eulerAngles(2,1,0).reverse();
+ }
+ 
+-const MatrixHomogeneous& Device::freeFlyerPose() const
++const MatrixHomogeneous&
++Device::freeFlyerPose() const
+ {
+   return ffPose_;
+ }
+@@ -88,8 +93,9 @@ Device( const std::string& n )
+   ,attitudeSOUT( "Device("+n+")::output(matrixRot)::attitude" )
+   ,motorcontrolSOUT   ( "Device("+n+")::output(vector)::motorcontrol" )
+   ,previousControlSOUT( "Device("+n+")::output(vector)::previousControl" )
+-  ,ZMPPreviousControllerSOUT( "Device("+n+")::output(vector)::zmppreviouscontroller" )
+-
++  ,ZMPPreviousControllerSOUT
++   ( "Device("+n+
++     ")::output(vector)::zmppreviouscontroller" )
+   ,robotState_     ("Device("+n+")::output(vector)::robotState")
+   ,robotVelocity_  ("Device("+n+")::output(vector)::robotVelocity")
+   ,pseudoTorqueSOUT("Device("+n+")::output(vector)::ptorque" )
+@@ -113,7 +119,8 @@ Device( const std::string& n )
+                       <<velocitySOUT<<attitudeSOUT
+                       <<attitudeSIN<<zmpSIN <<*forcesSOUT[0]<<*forcesSOUT[1]
+                       <<*forcesSOUT[2]<<*forcesSOUT[3] <<previousControlSOUT
+-                      <<pseudoTorqueSOUT << motorcontrolSOUT << ZMPPreviousControllerSOUT );
++                      <<pseudoTorqueSOUT << motorcontrolSOUT
++		      << ZMPPreviousControllerSOUT );
+   state_.fill(.0); stateSOUT.setConstant( state_ );
+ 
+   velocity_.resize(state_.size()); velocity_.setZero();
+@@ -161,9 +168,11 @@ Device( const std::string& n )
+         "    acceleration measure instead of velocity \n"
+         "\n";
+ 
+-    addCommand("setSecondOrderIntegration",
+-               command::makeCommandVoid0(*this,&Device::setSecondOrderIntegration,
+-                                         docstring));
++    addCommand
++      ("setSecondOrderIntegration",
++       command::makeCommandVoid0
++       (*this,&Device::setSecondOrderIntegration,
++	docstring));
+ 
+     /* SET of control input type. */
+     docstring =
+@@ -185,23 +194,34 @@ Device( const std::string& n )
+                (*this, &Device::setSanityCheck, docstring));
+ 
+     addCommand("setPositionBounds",
+-               command::makeCommandVoid2(*this,&Device::setPositionBounds,
+-                 command::docCommandVoid2 ("Set robot position bounds", "vector: lower bounds", "vector: upper bounds")
+-                 ));
++               command::makeCommandVoid2
++	       (*this,&Device::setPositionBounds,
++                 command::docCommandVoid2
++		("Set robot position bounds",
++		 "vector: lower bounds",
++		 "vector: upper bounds")));
+ 
+     addCommand("setVelocityBounds",
+-               command::makeCommandVoid2(*this,&Device::setVelocityBounds,
+-                 command::docCommandVoid2 ("Set robot velocity bounds", "vector: lower bounds", "vector: upper bounds")
+-                 ));
++               command::makeCommandVoid2
++	       (*this,&Device::setVelocityBounds,
++		command::docCommandVoid2
++		("Set robot velocity bounds",
++		 "vector: lower bounds",
++		 "vector: upper bounds")));
+ 
+     addCommand("setTorqueBounds",
+-               command::makeCommandVoid2(*this,&Device::setTorqueBounds,
+-                 command::docCommandVoid2 ("Set robot torque bounds", "vector: lower bounds", "vector: upper bounds")
+-                 ));
++               command::makeCommandVoid2
++	       (*this,&Device::setTorqueBounds,
++		command::docCommandVoid2
++		("Set robot torque bounds",
++		 "vector: lower bounds",
++		 "vector: upper bounds")));
+ 
+     addCommand("getTimeStep",
+-	       command::makeDirectGetter (*this, &this->timestep_,
+-		command::docDirectGetter ("Time step", "double")));
++	       command::makeDirectGetter
++	       (*this, &this->timestep_,
++		command::docDirectGetter
++		("Time step", "double")));
+ 
+     // Handle commands and signals called in a synchronous way.
+     periodicCallBefore_.addSpecificCommands(*this, commandMap, "before.");
+@@ -252,7 +272,8 @@ setState( const Vector& st )
+         if (   s != lowerVelocity_.size()
+             || s != upperVelocity_.size() )
+           throw std::invalid_argument ("Upper and/or lower velocity bounds "
+-              "do not match state size. Set them first with setVelocityBounds");
++              "do not match state size."
++	      " Set them first with setVelocityBounds");
+       case CONTROL_INPUT_NO_INTEGRATION:
+         break;
+       default:
+@@ -332,18 +353,21 @@ setSanityCheck(const bool & enableCheck)
+              "to estimate the joint torques for the given acceleration.\n";
+         if (   s != lowerTorque_.size()
+             || s != upperTorque_.size() )
+-          throw std::invalid_argument ("Upper and/or lower torque bounds "
+-              "do not match state size. Set them first with setTorqueBounds");
++          throw std::invalid_argument
++	    ("Upper and/or lower torque bounds "
++	     "do not match state size. Set them first with setTorqueBounds");
+       case CONTROL_INPUT_ONE_INTEGRATION:
+         if (   s != lowerVelocity_.size()
+             || s != upperVelocity_.size() )
+-          throw std::invalid_argument ("Upper and/or lower velocity bounds "
+-              "do not match state size. Set them first with setVelocityBounds");
++          throw std::invalid_argument
++	    ("Upper and/or lower velocity bounds "
++	     "do not match state size. Set them first with setVelocityBounds");
+       case CONTROL_INPUT_NO_INTEGRATION:
+         if (   s != lowerPosition_.size()
+             || s != upperPosition_.size() )
+-          throw std::invalid_argument ("Upper and/or lower position bounds "
+-              "do not match state size. Set them first with setPositionBounds");
++          throw std::invalid_argument
++	    ("Upper and/or lower position bounds "
++	     "do not match state size. Set them first with setPositionBounds");
+         break;
+       default:
+         throw std::invalid_argument ("Invalid control mode type.");
+@@ -500,12 +524,12 @@ saturateBounds (double& val, const double& lower, const double& upper)
+   return false;
+ }
+ 
+-#define CHECK_BOUNDS(val, lower, upper, what)                                  \
+-  for (int i = 0; i < val.size(); ++i) {                                       \
+-    double old = val(i);                                                       \
+-    if (saturateBounds (val(i), lower(i), upper(i)))                           \
+-      dgRTLOG () << "Robot " what " bound violation at DoF " << i <<           \
+-      ": requested " << old << " but set " << val(i) << '\n';                  \
++#define CHECK_BOUNDS(val, lower, upper, what)                                 \
++  for (int i = 0; i < val.size(); ++i) {                                      \
++    double old = val(i);                                                      \
++    if (saturateBounds (val(i), lower(i), upper(i)))                          \
++      dgRTLOG () << "Robot " what " bound violation at DoF " << i <<          \
++      ": requested " << old << " but set " << val(i) << '\n';                 \
+   }
+ 
+ void Device::integrate( const double & dt )
+@@ -568,4 +592,8 @@ void Device::integrate( const double & dt )
+ /* --- DISPLAY ------------------------------------------------------------ */
+ 
+ void Device::display ( std::ostream& os ) const
+-{os <<name<<": "<<state_<<endl; }
++{
++  os << name <<": "<<state_<<endl
++     << "sanityCheck: " << sanityCheck_<< endl
++     << "controlInputType:" << controlInputType_ << endl;
++}
+

@@ -26,7 +26,7 @@ include ../../path/hpp-util/depend.mk
 include ../../mapping/octomap/depend.mk
 
 include ../../middleware/omniORB/depend.mk
-include ../../middleware/omniORBpy/depend.mk
+include ../../middleware/py-omniORBpy/depend.mk
 
 include ../../devel/boost-headers/depend.mk
 include ../../mk/sysdep/python.mk

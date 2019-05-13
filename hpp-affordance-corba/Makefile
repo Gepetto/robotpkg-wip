@@ -15,7 +15,7 @@ include ../../math/eigen3/depend.mk
 include ../../math/hpp-pinocchio/depend.mk
 include ../../middleware/hpp-template-corba/depend.mk
 include ../../middleware/omniORB/depend.mk
-include ../../middleware/omniORBpy/depend.mk
+include ../../middleware/py-omniORBpy/depend.mk
 include ../../path/hpp-constraints/depend.mk
 include ../../path/hpp-core/depend.mk
 include ../../path/hpp-corbaserver/depend.mk

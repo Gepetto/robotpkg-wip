@@ -74,6 +74,7 @@ SUBDIR+=	pal-msgs
 SUBDIR+=	pal-navigation-sm
 SUBDIR+=	pal-statistics
 SUBDIR+=	pal-transmissions
+SUBDIR+=	pal-wsg-gripper
 SUBDIR+=	parametric-curves
 SUBDIR+=	play-motion
 SUBDIR+=	pmb2-robot

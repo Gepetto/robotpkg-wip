@@ -142,6 +142,7 @@ SUBDIR+=	sot-hrp2
 SUBDIR+=	sot-hrp2-v3
 SUBDIR+=	sot-pattern-generator-v3
 SUBDIR+=	sot-talos
+SUBDIR+=	sot-talos-balance
 SUBDIR+=	sot-tiago
 SUBDIR+=	sot-tools-v3
 SUBDIR+=	sot-torque-control

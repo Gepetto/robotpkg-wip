@@ -10,6 +10,7 @@ PKGNAME=	${PKGBASE}-${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
+PKGREVISION=	1
 
 CATEGORIES=	wip
 
@@ -35,6 +36,7 @@ include ../../lang/ros-message-runtime/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../wip/pmb2-robot/depend.mk
 include ../../wip/pal-gripper/depend.mk
+include ../../wip/pal-wsg-gripper/depend.mk
 include ../../wip/head-action/depend.mk
 include ../../wip/hey5-description/depend.mk
 include ../../wip/tf-lookup/depend.mk

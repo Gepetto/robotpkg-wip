@@ -5,6 +5,7 @@
 ORG=				stack-of-tasks
 NAME=				sot-torque-control
 VERSION=			1.3.3
+PKGREVISION=			1
 
 DISTNAME=			${NAME}-${VERSION}
 

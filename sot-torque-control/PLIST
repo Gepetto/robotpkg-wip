@@ -8,7 +8,6 @@ include/sot/torque_control/commands-helper.hh
 include/sot/torque_control/control-manager.hh
 include/sot/torque_control/current-controller.hh
 include/sot/torque_control/device-torque-ctrl.hh
-include/sot/torque_control/filter-differentiator.hh
 include/sot/torque_control/free-flyer-locator.hh
 include/sot/torque_control/imu_offset_compensation.hh
 include/sot/torque_control/inverse-dynamics-balance-controller.hh
@@ -23,11 +22,9 @@ include/sot/torque_control/se3-trajectory-generator.hh
 include/sot/torque_control/torque-offset-estimator.hh
 include/sot/torque_control/trace-player.hh
 include/sot/torque_control/utils/Stdafx.hh
-include/sot/torque_control/utils/causal-filter.hh
 include/sot/torque_control/utils/lin-estimator.hh
 include/sot/torque_control/utils/poly-estimator.hh
 include/sot/torque_control/utils/quad-estimator.hh
-include/sot/torque_control/utils/stop-watch.hh
 include/sot/torque_control/utils/trajectory-generators.hh
 include/sot/torque_control/utils/vector-conversions.hh
 lib/libsot-torque-control.so
@@ -43,8 +40,6 @@ lib/plugin/current-controller.so
 lib/plugin/current-controller.so.${PKGVERSION}
 lib/plugin/device-torque-ctrl.so
 lib/plugin/device-torque-ctrl.so.${PKGVERSION}
-lib/plugin/filter-differentiator.so
-lib/plugin/filter-differentiator.so.${PKGVERSION}
 lib/plugin/free-flyer-locator.so
 lib/plugin/free-flyer-locator.so.${PKGVERSION}
 lib/plugin/imu_offset_compensation.so
@@ -55,8 +50,6 @@ lib/plugin/joint-torque-controller.so
 lib/plugin/joint-torque-controller.so.${PKGVERSION}
 lib/plugin/joint-trajectory-generator.so
 lib/plugin/joint-trajectory-generator.so.${PKGVERSION}
-lib/plugin/madgwickahrs.so
-lib/plugin/madgwickahrs.so.${PKGVERSION}
 lib/plugin/nd-trajectory-generator.so
 lib/plugin/nd-trajectory-generator.so.${PKGVERSION}
 lib/plugin/numerical-difference.so

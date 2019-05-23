@@ -34,6 +34,7 @@ include/sot/core/feature-posture.hh
 include/sot/core/feature-task.hh
 include/sot/core/feature-vector3.hh
 include/sot/core/feature-visual-point.hh
+include/sot/core/filter-differentiator.hh
 include/sot/core/fir-filter.hh
 include/sot/core/flags.hh
 include/sot/core/gain-adaptive.hh

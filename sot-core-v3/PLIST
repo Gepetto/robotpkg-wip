@@ -4,6 +4,7 @@ include/sot/core/additional-functions.hh
 include/sot/core/api.hh
 include/sot/core/binary-int-to-uint.hh
 include/sot/core/binary-op.hh
+include/sot/core/causal-filter.hh
 include/sot/core/clamp-workspace.hh
 include/sot/core/com-freezer.hh
 include/sot/core/config.hh

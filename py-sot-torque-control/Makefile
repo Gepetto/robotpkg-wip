@@ -4,7 +4,7 @@
 
 ORG=				stack-of-tasks
 NAME=				sot-torque-control
-VERSION=			1.3.3
+VERSION=			1.4.0
 
 DISTNAME=			${NAME}-${VERSION}
 PKGNAME=			${PKGTAG.python-}${DISTNAME}

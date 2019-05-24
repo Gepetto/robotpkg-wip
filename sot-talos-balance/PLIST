@@ -8,7 +8,6 @@ include/sot/talos_balance/sdk_qualisys/Markup.h
 include/sot/talos_balance/sdk_qualisys/Network.h
 include/sot/talos_balance/sdk_qualisys/RTPacket.h
 include/sot/talos_balance/sdk_qualisys/RTProtocol.h
-include/sot/talos_balance/utils/causal-filter.hh
 include/sot/talos_balance/utils/commands-helper.hh
 include/sot/talos_balance/utils/statistics.hh
 include/sot/talos_balance/utils/stop-watch.hh

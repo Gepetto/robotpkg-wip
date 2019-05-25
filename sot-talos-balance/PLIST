@@ -10,7 +10,6 @@ include/sot/talos_balance/sdk_qualisys/RTPacket.h
 include/sot/talos_balance/sdk_qualisys/RTProtocol.h
 include/sot/talos_balance/utils/commands-helper.hh
 include/sot/talos_balance/utils/statistics.hh
-include/sot/talos_balance/utils/stop-watch.hh
 include/sot/talos_balance/warning.hh
 lib/libsot-talos-balance.so
 lib/libsot-talos-balance.so.${PKGVERSION}
@@ -49,7 +48,6 @@ lib/plugin/joint-position-controller.so
 lib/plugin/joint-position-controller.so.${PKGVERSION}
 lib/plugin/nd-trajectory-generator.so
 lib/plugin/nd-trajectory-generator.so.${PKGVERSION}
-lib/plugin/parameter-server.so.4.2.0
 lib/plugin/pose-quaternion-to-matrix-homo.so
 lib/plugin/pose-quaternion-to-matrix-homo.so.${PKGVERSION}
 lib/plugin/qualisys-client.so

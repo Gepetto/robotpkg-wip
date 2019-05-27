@@ -14,12 +14,12 @@ ifeq (+,$(PY_SOT_TORQUE_CONTROL_DEPEND_MK)) # ----------------------------------
 PREFER.py-sot-torque-control?=	robotpkg
 
 SYSTEM_SEARCH.py-sot-torque-control=\
-  '${PYTHON_SYSLIBSEARCH}/sot/torque_control/admittance_controller/wrap.so'			\
+  '${PYTHON_SYSLIBSEARCH}/dynamic_graph/sot/torque_control/inverse_dynamics_balance_controller/wrap.so' \
   '${PYTHON_SYSLIBSEARCH}/dynamic_graph/sot/torque_control/__init__.py'
 
 DEPEND_USE+=		py-sot-torque-control
 
-DEPEND_ABI.py-sot-torque-control?=	py-sot-torque-control>=1.0.0
+DEPEND_ABI.py-sot-torque-control?=	${PKGTAG.python-}sot-torque-control>=1.0.0
 DEPEND_DIR.py-sot-torque-control?=	../../wip/py-sot-torque-control
 
 endif # PY_SOT_TORQUE_CONTROL_DEPEND_MK -------------------------------------------------

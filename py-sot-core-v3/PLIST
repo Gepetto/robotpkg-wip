@@ -83,6 +83,8 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/core/op_point_modifier/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/op_point_modifier/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/operator/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/operator/wrap${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/dynamic_graph/sot/core/parameter_server/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/core/parameter_server/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/periodic_call_entity/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/periodic_call_entity/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/reader/__init__.py

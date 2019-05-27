@@ -58,6 +58,7 @@ include/sot/core/motion-period.hh
 include/sot/core/multi-bound.hh
 include/sot/core/neck-limitation.hh
 include/sot/core/op-point-modifier.hh
+include/sot/core/parameter-server.hh
 include/sot/core/periodic-call-entity.hh
 include/sot/core/periodic-call.hh
 include/sot/core/pool.hh
@@ -156,6 +157,8 @@ lib/plugin/op-point-modifier.so
 lib/plugin/op-point-modifier.so.${PKGVERSION}
 lib/plugin/operator.so
 lib/plugin/operator.so.${PKGVERSION}
+lib/plugin/parameter-server.so
+lib/plugin/parameter-server.so.${PKGVERSION}
 lib/plugin/periodic-call-entity.so
 lib/plugin/periodic-call-entity.so.${PKGVERSION}
 lib/plugin/reader.so

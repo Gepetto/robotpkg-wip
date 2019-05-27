@@ -6,7 +6,7 @@ DEPEND_DEPTH:=		${DEPEND_DEPTH}+
 SOT_TALOS_BALANCE_DEPEND_MK:=	${SOT_TALOS_BALANCE_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
-DEPEND_PKG+=		sot-core-v3
+DEPEND_PKG+=		sot-talos-balance
 endif
 
 ifeq (+,$(SOT_TALOS_BALANCE_DEPEND_MK)) # -------------------------------------------
@@ -14,7 +14,6 @@ ifeq (+,$(SOT_TALOS_BALANCE_DEPEND_MK)) # --------------------------------------
 PREFER.sot-talos-balance?=	robotpkg
 
 SYSTEM_SEARCH.sot-talos-balance=\
-	include/sot/talos_balance/dcm-com-controller.hh      	\
 	lib/libsot-talos-balance.so					\
 	'lib/pkgconfig/sot-talos-balance.pc:/Version/s/[^0-9.]//gp'
 

@@ -108,6 +108,7 @@ SUBDIR+=	py-sot-core-v3
 SUBDIR+=	py-sot-dynamic-pinocchio-v3
 SUBDIR+=	py-sot-dyninv-v3
 SUBDIR+=	py-sot-pattern-generator-v3
+SUBDIR+=	py-sot-talos-balance
 SUBDIR+=	py-sot-tools-v3
 SUBDIR+=	py-sot-torque-control
 SUBDIR+=	py-tsid

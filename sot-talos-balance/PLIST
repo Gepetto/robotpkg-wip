@@ -67,17 +67,6 @@ lib/plugin/talos-base-estimator.so
 lib/plugin/talos-base-estimator.so.${PKGVERSION}
 lib/plugin/talos-control-manager.so
 lib/plugin/talos-control-manager.so.${PKGVERSION}
-lib/python2.7/site-packages/dynamic_graph/sot/core/filter_differentiator/__init__.py
-lib/python2.7/site-packages/dynamic_graph/sot/core/filter_differentiator/wrap.so
-lib/python2.7/site-packages/dynamic_graph/sot/core/madgwickahrs/__init__.py
-lib/python2.7/site-packages/dynamic_graph/sot/core/madgwickahrs/wrap.so
-lib/python2.7/site-packages/dynamic_graph/sot/core/parameter_server/__init__.py
-lib/python2.7/site-packages/dynamic_graph/sot/core/parameter_server/wrap.so
-lib/python2.7/site-packages/dynamic_graph/sot/torque_control/admittance_controller/__init__.py
-lib/python2.7/site-packages/dynamic_graph/sot/torque_control/admittance_controller/wrap.so
-lib/python2.7/site-packages/dynamic_graph/sot/torque_control/ddp_actuator_solver/__init__.py
-lib/python2.7/site-packages/dynamic_graph/sot/torque_control/ddp_actuator_solver/wrap.so
-share/joint_torque_sensor_state_controller/joint_torque_sensor_state_controller.launch
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/CoM.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/LeftFoot.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/RightFoot.dat

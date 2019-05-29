@@ -124,6 +124,8 @@ lib/plugin/feature-vector3.so
 lib/plugin/feature-vector3.so.${PKGVERSION}
 lib/plugin/feature-visual-point.so
 lib/plugin/feature-visual-point.so.${PKGVERSION}
+lib/plugin/filter-differentiator.so
+lib/plugin/filter-differentiator.so.${PKGVERSION}
 lib/plugin/fir-filter.so
 lib/plugin/fir-filter.so.${PKGVERSION}
 lib/plugin/gain-adaptive.so
@@ -146,6 +148,8 @@ lib/plugin/kalman.so
 lib/plugin/kalman.so.${PKGVERSION}
 lib/plugin/latch.so
 lib/plugin/latch.so.${PKGVERSION}
+lib/plugin/madgwickahrs.so
+lib/plugin/madgwickahrs.so.${PKGVERSION}
 lib/plugin/mailbox-vector.so
 lib/plugin/mailbox-vector.so.${PKGVERSION}
 lib/plugin/matrix-constant.so

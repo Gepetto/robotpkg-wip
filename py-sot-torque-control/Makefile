@@ -1,4 +1,4 @@
-# robotpkg Makefile for:	wip/sot-torque-control
+# robotpkg Makefile for:	wip/py-sot-torque-control
 # Created:			Olivier Stasse on Wed Feb 21 18:07:40 CET 2018
 #
 

@@ -15,7 +15,7 @@ PREFER.hpp-rbprm-corba?=	robotpkg
 
 DEPEND_USE+=		hpp-rbprm-corba
 
-DEPEND_ABI.hpp-rbprm-corba?=	hpp-rbprm-corba>=4.3.0
+DEPEND_ABI.hpp-rbprm-corba?=	hpp-rbprm-corba>=4.6.0
 DEPEND_DIR.hpp-rbprm-corba?=	../../wip/hpp-rbprm-corba
 
 SYSTEM_SEARCH.hpp-rbprm-corba=\

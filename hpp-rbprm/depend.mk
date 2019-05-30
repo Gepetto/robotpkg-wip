@@ -15,7 +15,7 @@ PREFER.hpp-rbprm?=	robotpkg
 
 DEPEND_USE+=		hpp-rbprm
 
-DEPEND_ABI.hpp-rbprm?=	hpp-rbprm>=4.3.0
+DEPEND_ABI.hpp-rbprm?=	hpp-rbprm>=4.6.0
 DEPEND_DIR.hpp-rbprm?=	../../wip/hpp-rbprm
 
 SYSTEM_SEARCH.hpp-rbprm=\

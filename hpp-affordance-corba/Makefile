@@ -4,6 +4,7 @@
 
 HPP_PACKAGE=	hpp-affordance-corba
 HPP_COMMENT=	Extract Whole-Body Affordances for Mutli-Contact Planning (CORBA bindings)
+HPP_VERSION=	4.5.0
 
 CATEGORIES=	wip
 

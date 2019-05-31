@@ -41,6 +41,8 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_vector3/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_vector3/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_visual_point/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_visual_point/wrap${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/dynamic_graph/sot/core/filter_differentiator/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/core/filter_differentiator/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/fir_filter/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/fir_filter/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/gain_adaptive/__init__.py
@@ -63,6 +65,8 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/core/kalman/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/kalman/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/latch/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/latch/wrap${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/dynamic_graph/sot/core/madgwickahrs/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/core/madgwickahrs	/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/mailbox_vector/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/mailbox_vector/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/math_small_entities.py

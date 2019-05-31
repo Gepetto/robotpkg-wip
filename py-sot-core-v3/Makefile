@@ -5,7 +5,7 @@
 ORG=			stack-of-tasks
 NAME=			sot-core
 VERSION=		4.3.0
-PKGREVISION=		3
+PKGREVISION=		4
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}

@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-tiago
-VERSION=		0.0.2
+VERSION=		1.0.0
 
 PKGNAME=		${NAME}-${VERSION}
 DISTNAME=		${NAME}-${VERSION}

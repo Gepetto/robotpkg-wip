@@ -4,7 +4,7 @@
 
 ORG=			loco-3d
 NAME=			crocoddyl
-VERSION=		0.1.0
+VERSION=		0.2.0
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
@@ -23,6 +23,8 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../wip/example-robot-data/depend.mk
+include ../../wip/multicontact-api/depend.mk
+include ../../wip/py-multicontact-api/depend.mk
 include ../../graphics/assimp/depend.mk
 include ../../graphics/urdfdom/depend.mk
 include ../../mapping/octomap/depend.mk

@@ -3,6 +3,8 @@ ${PYTHON_SITELIB}/crocoddyl/__init__.py
 ${PYTHON_SITELIB}/crocoddyl/action.py
 ${PYTHON_SITELIB}/crocoddyl/activation.py
 ${PYTHON_SITELIB}/crocoddyl/actuation.py
+${PYTHON_SITELIB}/crocoddyl/box_ddp.py
+${PYTHON_SITELIB}/crocoddyl/box_kkt.py
 ${PYTHON_SITELIB}/crocoddyl/callbacks.py
 ${PYTHON_SITELIB}/crocoddyl/contact.py
 ${PYTHON_SITELIB}/crocoddyl/cost.py
@@ -14,8 +16,15 @@ ${PYTHON_SITELIB}/crocoddyl/floating_contact.py
 ${PYTHON_SITELIB}/crocoddyl/impact.py
 ${PYTHON_SITELIB}/crocoddyl/integrated_action.py
 ${PYTHON_SITELIB}/crocoddyl/kkt.py
+${PYTHON_SITELIB}/crocoddyl/locomotion/__init__.py
+${PYTHON_SITELIB}/crocoddyl/locomotion/centroidal_phi.py
+${PYTHON_SITELIB}/crocoddyl/locomotion/contact_sequence_wrapper.py
+${PYTHON_SITELIB}/crocoddyl/locomotion/problem_definition.py
+${PYTHON_SITELIB}/crocoddyl/locomotion/spline_utils.py
+${PYTHON_SITELIB}/crocoddyl/qpsolvers.py
 ${PYTHON_SITELIB}/crocoddyl/robots.py
 ${PYTHON_SITELIB}/crocoddyl/shooting.py
+${PYTHON_SITELIB}/crocoddyl/solver.py
 ${PYTHON_SITELIB}/crocoddyl/state.py
 ${PYTHON_SITELIB}/crocoddyl/unicycle.py
 ${PYTHON_SITELIB}/crocoddyl/utils.py

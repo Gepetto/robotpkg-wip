@@ -4,7 +4,7 @@
 
 ORG=				stack-of-tasks
 NAME=				sot-talos-balance
-VERSION=			1.4.0
+VERSION=			1.5.0
 
 DISTNAME=			${NAME}-${VERSION}
 PKGNAME=			${PKGTAG.python-}${DISTNAME}

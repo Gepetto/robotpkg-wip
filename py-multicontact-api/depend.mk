@@ -18,8 +18,10 @@ SYSTEM_SEARCH.py-multicontact-api=\
 
 DEPEND_USE+=					py-multicontact-api
 
-DEPEND_ABI.py-multicontact-api?=		py-multicontact-api>=1.0.0
+DEPEND_ABI.py-multicontact-api?=		${PKGTAG.python-}multicontact-api>=1.0.0
 DEPEND_DIR.py-multicontact-api?=		../../wip/py-multicontact-api
+
+include ../../mk/sysdep/python.mk
 
 endif # PY_MULTICONTACT_API_DEPEND_MK ------------------------------------------------
 

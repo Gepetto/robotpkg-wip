@@ -10,6 +10,7 @@ PKGNAME=	    ${PKGBASE}-${VERSION}
 ROSNAME=	    $(subst -,_,${PKGBASE})
 WRKSRC=		    ${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	    ${PKGBASE}
+PKGREVISION=	    1
 
 CATEGORIES=	    wip
 HOMEPAGE=	    ${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
@@ -32,6 +33,7 @@ include ../../lang/ros-message-runtime/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../wip/aruco-ros/depend.mk
 include ../../wip/tiago-robot/depend.mk
+include ../../wip/tiago-simulation/depend.mk
 include ../../wip/pal-gazebo-plugins/depend.mk
 include ../../wip/pal-hardware-gazebo/depend.mk
 include ../../wip/pal-msgs/depend.mk

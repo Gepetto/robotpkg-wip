@@ -15,3 +15,5 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/tiago/sot_tiago_device/wrap${PYTHON_EXT_SUFF
 ${PYTHON_SITELIB}/dynamic_graph/sot/tiago/tiago.py
 share/sot-tiago/tests/appli.py
 share/sot-tiago/tests/test.py
+share/sot-tiago/tests/stop-controllers.py
+

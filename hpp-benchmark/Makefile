@@ -4,6 +4,7 @@
 
 HPP_PACKAGE=	hpp-benchmark
 HPP_COMMENT=	Benchmark for HPP
+HPP_VERSION=	4.5.0
 
 ROSNAME=	$(subst -,_,${HPP_PACKAGE})
 DISTNAME=	${ROSNAME}-${HPP_VERSION}

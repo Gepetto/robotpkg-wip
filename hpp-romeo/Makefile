@@ -4,6 +4,7 @@
 
 HPP_PACKAGE=	hpp-romeo
 HPP_COMMENT=	Python and ros launch files for Romeo robot in hpp.
+HPP_VERSION=	4.5.0
 
 ROSNAME=	$(subst -,_,${HPP_PACKAGE})
 DISTNAME=	${ROSNAME}-${HPP_VERSION}

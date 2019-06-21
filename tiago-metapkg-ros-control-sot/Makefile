@@ -2,14 +2,13 @@
 # Created:			Olivier Stasse on Tue, 30 April 2019
 #
 
-VERSION=		1.0.0
+VERSION=		1.0.1
 PKGBASE=		tiago-metapkg-ros-control-sot
 PKGNAME=		${PKGBASE}-${VERSION}
 ROSNAME=		$(subst -,_,${PKGBASE})
-DISTNAME=		${ROSNAME}-${VERSION}a
+DISTNAME=		${ROSNAME}-${VERSION}
 WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=		${PKGBASE}
-PKGREVISION=		2
 
 CATEGORIES=		wip
 HOMEPAGE=		${MASTER_SITE_GITHUB:=stack-of-tasks/${ROSNAME}}

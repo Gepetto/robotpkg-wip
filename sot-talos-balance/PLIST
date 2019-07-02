@@ -1,4 +1,4 @@
-@comment Sat May 25 23:50:53 CEST 2019
+@comment Tue Jul 2 03:58:14 CEST 2019
 include/sot/talos_balance/config.hh
 include/sot/talos_balance/deprecated.hh
 include/sot/talos_balance/math/fwd.hh
@@ -52,6 +52,12 @@ lib/plugin/quat-to-euler.so
 lib/plugin/quat-to-euler.so.${PKGVERSION}
 lib/plugin/simple-admittance-controller.so
 lib/plugin/simple-admittance-controller.so.${PKGVERSION}
+lib/plugin/simple-distribute-wrench.so
+lib/plugin/simple-distribute-wrench.so.${PKGVERSION}
+lib/plugin/simple-pid.so
+lib/plugin/simple-pid.so.${PKGVERSION}
+lib/plugin/simple-pidd.so
+lib/plugin/simple-pidd.so.${PKGVERSION}
 lib/plugin/simple-reference-frame.so
 lib/plugin/simple-reference-frame.so.${PKGVERSION}
 lib/plugin/simple-zmp-estimator.so

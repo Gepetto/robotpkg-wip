@@ -5,7 +5,7 @@
 ORG=				stack-of-tasks
 NAME=				sot-talos-balance
 VERSION=			1.5.0
-PKGREVISION=			1
+PKGREVISION=			2
 
 DISTNAME=			${NAME}-${VERSION}
 

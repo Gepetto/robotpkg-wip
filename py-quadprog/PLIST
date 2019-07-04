@@ -1,0 +1,8 @@
+@comment Thu Jul 4 19:07:52 CEST 2019
+${PYTHON_SITELIB}/quadprog-${PKGVERSION}.dist-info/INSTALLER
+${PYTHON_SITELIB}/quadprog-${PKGVERSION}.dist-info/METADATA
+${PYTHON_SITELIB}/quadprog-${PKGVERSION}.dist-info/RECORD
+${PYTHON_SITELIB}/quadprog-${PKGVERSION}.dist-info/WHEEL
+${PYTHON_SITELIB}/quadprog-${PKGVERSION}.dist-info/pbr.json
+${PYTHON_SITELIB}/quadprog-${PKGVERSION}.dist-info/top_level.txt
+${PYTHON_SITELIB}/quadprog${PYTHON_EXT_SUFFIX}

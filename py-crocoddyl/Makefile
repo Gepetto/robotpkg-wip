@@ -22,6 +22,7 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
+include ../../wip/mk/sysdep/py-scipy.mk
 include ../../wip/example-robot-data/depend.mk
 include ../../wip/multicontact-api/depend.mk
 include ../../wip/py-multicontact-api/depend.mk

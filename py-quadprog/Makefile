@@ -20,8 +20,10 @@ COMMENT=		Solve a strictly convex quadratic program
 LICENSE=		gnu-gpl-v2
 MAINTAINER=		gsaurel@laas.fr
 
+PYDISTUTILSPKG=yes
+MAKE_ENV+= PYTHONPATH=${PREFIX}/${PYTHON_SITELIB}
+
 include ../../wip/mk/sysdep/py-cython.mk
-include ../../wip/mk/sysdep/py-pip.mk
 
 include ../../mk/sysdep/py-numpy.mk
 include ../../mk/sysdep/python.mk

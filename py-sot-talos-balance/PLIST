@@ -1,4 +1,4 @@
-@comment Sun May 26 00:17:03 CEST 2019
+@comment Fri Jul 12 15:51:53 CEST 2019
 ${PYTHON_SITELIB}/sot_talos_balance/__init__.py
 ${PYTHON_SITELIB}/sot_talos_balance/admittance_controller_end_effector/__init__.py
 ${PYTHON_SITELIB}/sot_talos_balance/admittance_controller_end_effector/wrap${PYTHON_EXT_SUFFIX}
@@ -43,6 +43,12 @@ ${PYTHON_SITELIB}/sot_talos_balance/quat_to_euler/__init__.py
 ${PYTHON_SITELIB}/sot_talos_balance/quat_to_euler/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/sot_talos_balance/simple_admittance_controller/__init__.py
 ${PYTHON_SITELIB}/sot_talos_balance/simple_admittance_controller/wrap${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/sot_talos_balance/simple_distribute_wrench/__init__.py
+${PYTHON_SITELIB}/sot_talos_balance/simple_distribute_wrench/wrap${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/sot_talos_balance/simple_pid/__init__.py
+${PYTHON_SITELIB}/sot_talos_balance/simple_pid/wrap${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/sot_talos_balance/simple_pidd/__init__.py
+${PYTHON_SITELIB}/sot_talos_balance/simple_pidd/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/sot_talos_balance/simple_reference_frame/__init__.py
 ${PYTHON_SITELIB}/sot_talos_balance/simple_reference_frame/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/sot_talos_balance/simple_zmp_estimator/__init__.py

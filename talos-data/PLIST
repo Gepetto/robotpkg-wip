@@ -1,4 +1,4 @@
-@comment Wed Sep 26 15:32:27 CEST 2018
+@comment Tue Jul 16 00:49:25 CEST 2019
 include/talos/data/config.hh
 include/talos/data/deprecated.hh
 include/talos/data/warning.hh
@@ -89,6 +89,7 @@ share/talos_data/robots/talos_small.urdf.xacro
 share/talos_data/robots/upload.launch
 share/talos_data/robots/upload_talos.launch
 share/talos_data/srdf/talos.srdf
+share/talos_data/srdf/talos_wpg.srdf
 share/talos_data/urdf/arm/arm.transmission.xacro
 share/talos_data/urdf/arm/arm_v1.urdf.xacro
 share/talos_data/urdf/arm/arm_v2.urdf.xacro
@@ -123,5 +124,6 @@ share/talos_data/urdf/talos_full.urdf
 share/talos_data/urdf/talos_full_v2.urdf
 share/talos_data/urdf/talos_reduced.urdf
 share/talos_data/urdf/talos_reduced_v2.urdf
+share/talos_data/urdf/talos_reduced_wpg.urdf
 share/talos_data/urdf/torso/torso.transmission.xacro
 share/talos_data/urdf/torso/torso.urdf.xacro

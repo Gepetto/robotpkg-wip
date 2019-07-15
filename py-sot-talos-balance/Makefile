@@ -48,6 +48,7 @@ include ../../wip/eigen-quadprog/depend.mk
 include ../../wip/sot-torque-control/depend.mk
 include ../../wip/py-sot-torque-control/depend.mk
 include ../../wip/sot-talos-balance/depend.mk
+include ../../wip/talos-data/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/sysdep/doxygen.mk

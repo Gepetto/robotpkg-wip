@@ -5,6 +5,7 @@
 ORG=			stack-of-tasks
 NAME=			jrl-walkgen
 VERSION=		4.2.0
+PKGREVISION=		1
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}
@@ -27,7 +28,6 @@ DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 DEPEND_ABI.pinocchio=	pinocchio>2
 
 include ../../graphics/simple-humanoid-description/depend.mk
-include ../../interfaces/jrl-mal/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

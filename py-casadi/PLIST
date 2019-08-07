@@ -1,5 +1,7 @@
-@comment Wed Aug 7 18:56:18 CEST 2019
+@comment Wed Aug 7 20:50:09 CEST 2019
 include/casadi/casadi.hpp
+include/casadi/casadi.i
+include/casadi/casadi_numpy.hpp
 include/casadi/config.h
 include/casadi/core/calculus.hpp
 include/casadi/core/callback.hpp
@@ -92,7 +94,11 @@ include/casadi/core/timing.hpp
 include/casadi/core/variable.hpp
 include/casadi/core/xml_file.hpp
 include/casadi/core/xml_node.hpp
+include/casadi/doc.i
+include/casadi/doc_merged.i
 include/casadi/mem.h
+include/casadi/valgrind-casadi.supp
+include/casadi/valgrind-python.supp
 lib/cmake/casadi/casadi-config-version.cmake
 lib/cmake/casadi/casadi-config.cmake
 lib/cmake/casadi/casadi-targets-release.cmake
@@ -101,6 +107,8 @@ lib/libcasadi.so
 lib/libcasadi.so.3.5
 lib/libcasadi_conic_nlpsol.so
 lib/libcasadi_conic_nlpsol.so.3.5
+lib/libcasadi_conic_qpoases.so
+lib/libcasadi_conic_qpoases.so.3.5
 lib/libcasadi_conic_qrqp.so
 lib/libcasadi_conic_qrqp.so.3.5
 lib/libcasadi_importer_shell.so
@@ -121,6 +129,10 @@ lib/libcasadi_linsol_csparse.so
 lib/libcasadi_linsol_csparse.so.3.5
 lib/libcasadi_linsol_csparsecholesky.so
 lib/libcasadi_linsol_csparsecholesky.so.3.5
+lib/libcasadi_linsol_lapacklu.so
+lib/libcasadi_linsol_lapacklu.so.3.5
+lib/libcasadi_linsol_lapackqr.so
+lib/libcasadi_linsol_lapackqr.so.3.5
 lib/libcasadi_linsol_ldl.so
 lib/libcasadi_linsol_ldl.so.3.5
 lib/libcasadi_linsol_lsqr.so
@@ -129,6 +141,8 @@ lib/libcasadi_linsol_qr.so
 lib/libcasadi_linsol_qr.so.3.5
 lib/libcasadi_linsol_symbolicqr.so
 lib/libcasadi_linsol_symbolicqr.so.3.5
+lib/libcasadi_nlpsol_ipopt.so
+lib/libcasadi_nlpsol_ipopt.so.3.5
 lib/libcasadi_nlpsol_scpgen.so
 lib/libcasadi_nlpsol_scpgen.so.3.5
 lib/libcasadi_nlpsol_sqpmethod.so
@@ -145,3 +159,13 @@ lib/libcasadi_sundials_common.so
 lib/libcasadi_sundials_common.so.3.5
 lib/libcasadi_xmlfile_tinyxml.so
 lib/libcasadi_xmlfile_tinyxml.so.3.5
+${PYTHON_SITELIB}/casadi/__init__.py
+${PYTHON_SITELIB}/casadi/_casadi.so
+${PYTHON_SITELIB}/casadi/casadi.py
+${PYTHON_SITELIB}/casadi/tools/__init__.py
+${PYTHON_SITELIB}/casadi/tools/bounds.py
+${PYTHON_SITELIB}/casadi/tools/graph/__init__.py
+${PYTHON_SITELIB}/casadi/tools/graph/graph.py
+${PYTHON_SITELIB}/casadi/tools/in_out.py
+${PYTHON_SITELIB}/casadi/tools/structure.py
+${PYTHON_SITELIB}/casadi/tools/structure3.py

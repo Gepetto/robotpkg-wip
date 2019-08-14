@@ -13,6 +13,7 @@ CATEGORIES=	wip
 DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
 
 include ../../meta-pkgs/hpp/Makefile.common
+include ../../mapping/octomap/depend.mk
 include ../../path/hpp-corbaserver/depend.mk
 
 include ../../mk/sysdep/python.mk

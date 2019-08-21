@@ -1,0 +1,38 @@
+include pinocchio before boost, ref
+https://github.com/stack-of-tasks/pinocchio/issues/849
+
+--- src/utils/algorithms.cc.orig	2019-05-29 17:04:49.000000000 +0200
++++ src/utils/algorithms.cc	2019-08-21 13:47:38.987440983 +0200
+@@ -1,3 +1,4 @@
++#include <pinocchio/fwd.hpp>
+ #include "hpp/rbprm/utils/algorithms.h"
+ #include <hpp/fcl/intersect.h>
+ #include <hpp/util/debug.hh>
+--- tests/test-rbrrt.cc.orig	2019-05-29 17:04:49.000000000 +0200
++++ tests/test-rbrrt.cc	2019-08-21 13:48:38.358849918 +0200
+@@ -18,6 +18,7 @@
+ 
+ 
+ #define BOOST_TEST_MODULE test-rbrrt
++#include <pinocchio/fwd.hpp>
+ #include <boost/test/included/unit_test.hpp>
+ 
+ #include <hpp/core/problem-solver.hh>
+--- tests/test-projection.cc.orig	2019-05-29 17:04:49.000000000 +0200
++++ tests/test-projection.cc	2019-08-21 13:49:20.094435386 +0200
+@@ -1,4 +1,5 @@
+ #define BOOST_TEST_MODULE test-projection
++#include <pinocchio/fwd.hpp>
+ #include <boost/test/included/unit_test.hpp>
+ 
+ #include "tools-fullbody.hh"
+--- tests/test-kinodynamic.cc.orig	2019-05-29 17:04:49.000000000 +0200
++++ tests/test-kinodynamic.cc	2019-08-21 13:49:57.286066627 +0200
+@@ -18,6 +18,7 @@
+ 
+ 
+ #define BOOST_TEST_MODULE test-kinodynamic
++#include <pinocchio/fwd.hpp>
+ #include <boost/test/included/unit_test.hpp>
+ 
+ #include <hpp/core/problem-solver.hh>

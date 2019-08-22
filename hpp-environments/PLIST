@@ -4,7 +4,9 @@ include/hpp/environments/deprecated.hh
 include/hpp/environments/warning.hh
 lib/pkgconfig/hpp-environments.pc
 ${PYTHON_SITELIB}/hpp/environments/__init__.py
+${PYTHON_SITELIB}/hpp/environments/__init__.pyc
 ${PYTHON_SITELIB}/hpp/environments/robot.py
+${PYTHON_SITELIB}/hpp/environments/robot.pyc
 share/hpp_environments/meshes/CMakeLists.txt
 share/hpp_environments/meshes/buggy/buggy.dae
 share/hpp_environments/meshes/buggy/buggyBB.dae

@@ -5,10 +5,9 @@
 HPP_PACKAGE=	hpp-environments
 HPP_COMMENT=	Environments and robot descriptions for HPP
 HPP_VERSION=	4.4.0
+PKGREVISION=	1
 
 CATEGORIES=	wip
-
-DEPEND_ABI.python+=	python<3
 
 include ../../meta-pkgs/hpp/Makefile.common
 

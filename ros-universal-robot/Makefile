@@ -4,9 +4,8 @@
 
 ROS_PKG=		universal_robot
 ROS_METAPKG=		yes
-ROS_VERSION=		1.2.1
+ROS_VERSION=		1.2.5
 ROS_REPO=		ros-industrial
-PKGREVISION=		1
 
 PKGNAME=		ros-$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 

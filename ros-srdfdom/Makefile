@@ -3,9 +3,8 @@
 #
 
 ROS_PKG=		srdfdom
-ROS_VERSION=		0.4.2
+ROS_VERSION=		0.5.1
 ROS_REPO=		ros-planning
-PKGREVISION=		1
 
 PKGNAME=		ros-$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 

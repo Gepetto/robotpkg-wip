@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph
-VERSION=		3.7.0
+VERSION=		3.7.1
 
 DISTNAME=		${NAME}-v3-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}

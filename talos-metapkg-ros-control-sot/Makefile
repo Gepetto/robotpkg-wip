@@ -2,18 +2,18 @@
 # Created:			Olivier Stasse on Fri, 5 May 2017
 #
 
-VERSION=		0.0.12
+VERSION=		0.0.13
 PKGBASE=		talos-metapkg-ros-control-sot
 PKGNAME=		${PKGBASE}-${VERSION}
 ROSNAME=		$(subst -,_,${PKGBASE})
 DISTNAME=		${ROSNAME}-${VERSION}
 WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=		${PKGBASE}
-PKGREVISION=		1
 
 CATEGORIES=		wip
 HOMEPAGE=		${MASTER_SITE_GITHUB:=stack-of-tasks/${ROSNAME}}
-MASTER_SITES=		${HOMEPAGE}/releases/download/v${VERSION}/
+#MASTER_SITES=		${HOMEPAGE}/releases/download/v${VERSION}/
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=talos/${PKGBASE}/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/${ROSNAME}
 
 COMMENT=	ros_control package for the SoT and specifically for Talos

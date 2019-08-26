@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Tue, 30 April 2019
 #
 
-VERSION=		1.0.1
+VERSION=		1.0.2
 PKGBASE=		tiago-metapkg-ros-control-sot
 PKGNAME=		${PKGBASE}-${VERSION}
 ROSNAME=		$(subst -,_,${PKGBASE})

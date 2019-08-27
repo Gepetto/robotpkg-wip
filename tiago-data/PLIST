@@ -1,4 +1,7 @@
 @comment Tue Aug 27 04:34:08 CEST 2019
+include/tiago/data/config.hh
+include/tiago/data/deprecated.hh
+include/tiago/data/warning.hh
 lib/pkgconfig/tiago_data.pc
 share/roscontrol_sot_talos/config/sot_talos_params_control_mode.yaml
 share/roscontrol_sot_talos/config/sot_talos_params_control_mode_effort.yaml

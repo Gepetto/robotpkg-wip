@@ -7,6 +7,8 @@ share/roscontrol_sot_talos/cmake/roscontrol_sot_talosConfig.cmake
 share/roscontrol_sot_talos/config/pids_effort.yaml
 share/roscontrol_sot_talos/config/sot_talos_controller.yaml
 share/roscontrol_sot_talos/config/sot_talos_params.yaml
+share/roscontrol_sot_talos/config/sot_talos_params_control_mode.yaml
+share/roscontrol_sot_talos/config/sot_talos_params_control_mode_effort.yaml
 share/roscontrol_sot_talos/config/sot_talos_params_effort.yaml
 share/roscontrol_sot_talos/config/sot_talos_params_gazebo.yaml
 share/roscontrol_sot_talos/config/sot_talos_params_gazebo_effort.yaml

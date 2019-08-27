@@ -1,5 +1,7 @@
-@comment Tue Apr 30 18:56:04 CEST 2019
+@comment Tue Aug 27 04:34:08 CEST 2019
 lib/pkgconfig/tiago_data.pc
+share/roscontrol_sot_talos/config/sot_talos_params_control_mode.yaml
+share/roscontrol_sot_talos/config/sot_talos_params_control_mode_effort.yaml
 share/tiago_data/Media/materials/scripts/markers.material
 share/tiago_data/Media/materials/textures/aruco-26_8cm.png
 share/tiago_data/Media/materials/textures/aruco-582_8cm.png
@@ -55,6 +57,7 @@ share/tiago_data/package.xml
 share/tiago_data/robots/show.launch
 share/tiago_data/robots/tiago.urdf.xacro
 share/tiago_data/robots/tiago_steel.urdf
+share/tiago_data/robots/tiago_steel_without_wheels.urdf
 share/tiago_data/robots/tiago_titanium.urdf
 share/tiago_data/robots/upload.launch
 share/tiago_data/urdf/arm/arm.transmission.xacro

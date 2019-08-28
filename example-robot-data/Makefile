@@ -4,7 +4,7 @@
 
 ORG=			gepetto
 NAME=			example-robot-data
-VERSION=		1.0.0
+VERSION=		2.0.0
 
 DISTNAME=		${NAME}-${VERSION}
 
@@ -19,6 +19,7 @@ LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto@laas.fr
 
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
+CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 

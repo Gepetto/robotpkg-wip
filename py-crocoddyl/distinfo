@@ -1,5 +1,3 @@
-SHA1 (crocoddyl-0.2.0.tar.gz) = 1e2477023d5971d4bd8e20941265cff09edfc9cd
-RMD160 (crocoddyl-0.2.0.tar.gz) = 8c2f7590a782b4fd7d031f2d3bf5d472b44fc0e0
-Size (crocoddyl-0.2.0.tar.gz) = 2052086 bytes
-SHA1 (patch-ab) = 83aeb011c56e1d2a9d4da3efae6d2904b207cf06
-SHA1 (patch-ad) = 9731f90f2c33abec026a1d34cfaa653316b84427
+SHA1 (crocoddyl-0.9.0.tar.gz) = 07709cdd8b984c80ea8ba89192242071aa3f72f9
+RMD160 (crocoddyl-0.9.0.tar.gz) = dcd3982f7e07d52208d3cf398c1532a326c0391d
+Size (crocoddyl-0.9.0.tar.gz) = 2129419 bytes

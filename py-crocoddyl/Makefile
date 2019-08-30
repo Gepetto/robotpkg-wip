@@ -4,8 +4,7 @@
 
 ORG=			loco-3d
 NAME=			crocoddyl
-VERSION=		0.2.0
-PKGREVISION=		1
+VERSION=		0.9.0
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
@@ -18,6 +17,8 @@ CATEGORIES=		wip
 COMMENT=		Contact RObot COntrol by Differential DYnamic programming Library
 LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto-soft@laas.fr
+
+CONFLICTS+=		py[0-9][0-9]-crocoddyl
 
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 

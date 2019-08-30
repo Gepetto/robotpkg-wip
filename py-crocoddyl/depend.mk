@@ -14,11 +14,13 @@ ifeq (+,$(PY_CROCODDYL_DEPEND_MK)) # ------------------------------------------
 PREFER.py-crocoddyl?=	robotpkg
 
 SYSTEM_SEARCH.py-crocoddyl=\
+  'include/crocoddyl/config.hh:/CROCODDYL_VERSION/s/[^0-9.]//gp' \
+  'lib/pkgconfig/crocoddyl.pc:/Version/s/[^0-9.]//gp' \
   '${PYTHON_SYSLIBSEARCH}/crocoddyl/__init__.py'
 
 DEPEND_USE+=				py-crocoddyl
 
-DEPEND_ABI.py-crocoddyl?=		${PKGTAG.python-}crocoddyl>=0.1.0
+DEPEND_ABI.py-crocoddyl?=		${PKGTAG.python-}crocoddyl>=0.9.0
 DEPEND_DIR.py-crocoddyl?=		../../wip/py-crocoddyl
 
 include ../../mk/sysdep/python.mk

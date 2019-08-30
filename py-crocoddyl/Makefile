@@ -5,6 +5,7 @@
 ORG=			loco-3d
 NAME=			crocoddyl
 VERSION=		0.9.0
+PKGREVISION=		1
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${DISTNAME}

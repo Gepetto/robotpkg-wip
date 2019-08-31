@@ -5,7 +5,7 @@
 ORG=			loco-3d
 NAME=			crocoddyl
 VERSION=		0.9.0
-PKGREVISION=		2
+PKGREVISION=		3
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
@@ -22,7 +22,6 @@ MAINTAINER=		gepetto-soft@laas.fr
 CONFLICTS+=		py[0-9][0-9]-crocoddyl
 
 CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
-CMAKE_ARGS+=		-DPYTHON_PACKAGES_DIR=site-packages
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 

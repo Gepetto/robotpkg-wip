@@ -5,7 +5,7 @@
 ORG=			loco-3d
 NAME=			crocoddyl
 VERSION=		0.9.0
-PKGREVISION=		3
+PKGREVISION=		4
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
@@ -27,6 +27,7 @@ DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../wip/mk/sysdep/py-scipy.mk
 include ../../wip/example-robot-data/depend.mk
+include ../../wip/py-example-robot-data/depend.mk
 include ../../wip/multicontact-api/depend.mk
 include ../../wip/py-multicontact-api/depend.mk
 include ../../wip/py-quadprog/depend.mk

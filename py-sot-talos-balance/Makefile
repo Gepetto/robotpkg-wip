@@ -50,7 +50,6 @@ include ../../wip/py-sot-torque-control/depend.mk
 include ../../wip/sot-talos-balance/depend.mk
 include ../../wip/talos-data/depend.mk
 include ../../mk/sysdep/cmake.mk
-include ../../mk/sysdep/python.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/graphviz.mk
 include ../../mk/sysdep/py-sphinx.mk

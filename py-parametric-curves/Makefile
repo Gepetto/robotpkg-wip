@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			parametric-curves
-VERSION=		1.2.1
+VERSION=		1.2.2
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${DISTNAME}

@@ -5,7 +5,7 @@
 ORG=				stack-of-tasks
 NAME=				sot-talos-balance
 VERSION=			1.5.0
-PKGREVISION=			2
+PKGREVISION=			3
 
 DISTNAME=			${NAME}-${VERSION}
 
@@ -38,6 +38,7 @@ include ../../wip/ddp-actuator-solver/depend.mk
 include ../../wip/eigen-quadprog/depend.mk
 include ../../wip/sot-torque-control/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
+include ../../wip/talos-data/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/graphviz.mk

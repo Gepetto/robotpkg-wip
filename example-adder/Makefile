@@ -4,7 +4,7 @@
 
 ORG=			gepetto
 NAME=			example-adder
-VERSION=		1.0.0
+VERSION=		2.0.0
 
 DISTNAME=		${NAME}-${VERSION}
 
@@ -26,5 +26,5 @@ include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++.mk
+include ../../mk/language/c++11.mk
 include ../../mk/robotpkg.mk

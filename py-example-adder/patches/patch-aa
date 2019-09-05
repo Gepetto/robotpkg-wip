@@ -1,0 +1,14 @@
+revert https://github.com/jrl-umi3218/jrl-cmakemodules/pull/214
+to comply with robotpkg PYTHON_SITELIB instead of Debian / Ubuntu
+
+--- cmake/python.cmake.orig	2019-07-28 11:15:53.000000000 +0200
++++ cmake/python.cmake	2019-08-31 18:28:52.847614739 +0200
+@@ -84,7 +84,7 @@
+ 
+ EXECUTE_PROCESS(
+   COMMAND "${PYTHON_EXECUTABLE}" "-c"
+-  "from distutils import sysconfig; print(sysconfig.get_python_lib(prefix='', plat_specific=False))"
++  "import sys, os; print(os.sep.join(['lib', 'python' + sys.version[:3], 'site-packages']))"
+   OUTPUT_VARIABLE PYTHON_SITELIB
+   OUTPUT_STRIP_TRAILING_WHITESPACE
+   ERROR_QUIET)

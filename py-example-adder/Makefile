@@ -4,7 +4,7 @@
 
 ORG=			gepetto
 NAME=			example-adder
-VERSION=		1.0.0
+VERSION=		2.0.0
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
@@ -12,6 +12,8 @@ PKGNAME=		${PKGTAG.python-}${DISTNAME}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
 MASTER_REPOSITORY=	git https://gepgitlab.laas.fr/${ORG}/${NAME}.git
 CHECKOUT_VCS_OPTS+=	--recursive
+
+CMAKE_ARGS+=		-DINSTALL_PYTHON_INTERFACE_ONLY=ON
 
 CATEGORIES=		wip
 COMMENT=		Example Project

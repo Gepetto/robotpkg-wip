@@ -4,13 +4,7 @@
 
 ORG=			gepetto
 NAME=			example-adder
-VERSION=		2.0.0
-
-DISTNAME=		${NAME}-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	git https://gepgitlab.laas.fr/${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
+VERSION=		2.0.1
 
 CATEGORIES=		wip
 COMMENT=		Example Project
@@ -18,10 +12,8 @@ LICENSE=		2-clause-bsd
 MAINTAINER=		gsaurel@laas.fr
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
+include ../../wip/jrl/Makefile.common
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

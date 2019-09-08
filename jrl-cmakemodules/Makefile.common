@@ -1,0 +1,27 @@
+# robotpkg Makefile for:	wip/jrl
+# Created:			Guilhem Saurel on Sun Sep 9 2019
+#
+#
+ifndef NAME
+  PKG_FAIL_REASON+="Dependency on jrl/Makefile.common requires NAME"
+endif
+ifndef ORG
+  PKG_FAIL_REASON+="Dependency on jrl/Makefile.common requires ORG"
+endif
+ifndef VERSION
+  PKG_FAIL_REASON+="Dependency on jrl/Makefile.common requires VERSION"
+endif
+
+DISTNAME?=		${NAME}-${VERSION}
+
+MASTER_SITES?=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
+MASTER_REPOSITORY?=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${NAME}.git
+CHECKOUT_VCS_OPTS+=	--recursive
+
+CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
+CMAKE_ARGS+=		-DPYTHON_STANDARD_LAYOUT=ON
+
+DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+
+include ../../pkgtools/pkg-config/depend.mk
+include ../../mk/sysdep/cmake.mk

@@ -15,7 +15,7 @@ COMMENT=		Example Project
 LICENSE=		2-clause-bsd
 MAINTAINER=		gsaurel@laas.fr
 
-include ../../wip/jrl/Makefile.common
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../wip/${NAME}/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

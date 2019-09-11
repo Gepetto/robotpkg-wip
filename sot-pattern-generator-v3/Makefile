@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-pattern-generator
-VERSION=		3.1.0
+VERSION=		3.2.0
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}
@@ -25,7 +25,7 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
-DEPEND_ABI.pinocchio=	pinocchio<2
+DEPEND_ABI.pinocchio=	pinocchio>2
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

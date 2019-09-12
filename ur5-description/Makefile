@@ -12,6 +12,8 @@ MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}nim65s/${PKGBASE}
 COMMENT=		Rigid body model of a simple robot arm.
 MAINTAINER=		gepetto-soft@laas.fr
 
+DYNAMIC_PLIST_DIRS+=	share/doc/ur5_description
+
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk

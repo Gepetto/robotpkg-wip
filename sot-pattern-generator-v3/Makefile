@@ -8,6 +8,7 @@ VERSION=		3.2.0
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}
+PKGREVISION=		1
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
@@ -31,6 +32,8 @@ include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../wip/jrl-walkgen-v3/depend.mk
+include ../../wip/dynamic-graph-v3/depend.mk
+include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

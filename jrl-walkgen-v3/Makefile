@@ -7,12 +7,7 @@ NAME=			jrl-walkgen
 VERSION=		4.2.0
 PKGREVISION=		1
 
-DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		Walk pattern generator for the HRP-2 humanoid robot.
@@ -21,12 +16,7 @@ MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		${NAME}
 
-CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR=lib
-
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
-DEPEND_ABI.pinocchio=	pinocchio>2
-
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../graphics/simple-humanoid-description/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../mk/sysdep/cmake.mk

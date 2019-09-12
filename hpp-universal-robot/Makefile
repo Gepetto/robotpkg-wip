@@ -20,6 +20,7 @@ include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk
 
-export PYTHONPATH=		$(word 1,${SYSTEM_PREFIX.ros-base})/lib/python${PYTHON_VERSION}/dist-packages
-export ROS_PACKAGE_PATH=	$(word 1,${SYSTEM_PREFIX.ros-base}):${PREFIX}
-CMAKE_PREFIX_PATH+=		$(word 1,${SYSTEM_PREFIX.ros-base})
+export PYTHONPATH=		$(word 1,${PREFIX.ros-universal-robot})/lib/python${PYTHON_VERSION}/dist-packages:$(word 1,${PREFIX.ros-universal-robot})/lib/python${PYTHON_VERSION}/site-packages
+export ROS_PACKAGE_PATH=	$(word 1,${PREFIX.ros-universal-robot}):${PREFIX}
+PKG_CONFIG_PATH=		$(word 1,${PREFIX.ros-universal-robot})/lib/pkgconfig
+CMAKE_PREFIX_PATH+=		$(word 1,${PREFIX.ros-universal-robot})

@@ -2,20 +2,19 @@
 # Created:			Olivier Stasse on Tues, 18 April 2017
 #
 ORG=		pal-robotics
-VERSION=	0.2.2
+VERSION=	0.2.4
 PKGBASE=	pal-transmissions
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 DIST_SUBDIR=	${PKGBASE}
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
-PKGREVISION=	2
 
 CATEGORIES=	wip
 # Source file store in robotpkg website
 #MASTER_SITES=	${MASTER_SITE_JRL:=talos/$(subst -,_,${PKGBASE})/}
-
-MASTER_REPOSITORY = 	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
+MASTER_REPOSITORY = 	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
+HOMEPAGE= 	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/
 
 COMMENT=	Hardware transmissions developped by PAL-Robotics

@@ -3,7 +3,7 @@
 #
 
 ORG=			pal-robotics
-VERSION=		1.0.1
+VERSION=		1.0.2
 PKGBASE=		tiago-moveit-config
 DISTNAME=		${VERSION}
 PKGNAME=		${PKGBASE}-${VERSION}

@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Wed, 27 Apr 2018
 #
 ORG=		pal-robotics-forks
-VERSION=	0.2.7
+VERSION=	0.2.8
 PRFNAME=        ros-control
 PKGBASE=	prf-${PRFNAME}
 PKGNAME=	${PKGBASE}-${VERSION}

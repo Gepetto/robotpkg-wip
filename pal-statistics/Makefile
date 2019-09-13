@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Thu, 12 Dec 2018
 #
 ORG=		pal-robotics
-VERSION=	1.1.1
+VERSION=	1.3.1
 PKGBASE=	pal-statistics
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}

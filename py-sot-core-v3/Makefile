@@ -5,13 +5,9 @@
 ORG=			stack-of-tasks
 NAME=			sot-core
 VERSION=		4.5.0
+PKGREVISION=		1
 
-DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}
-CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		Hierarchical task based control of humanoid robots (python bindings)
@@ -20,11 +16,11 @@ MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
 CMAKE_ARGS+=		-DINSTALL_PYTHON_INTERFACE_ONLY=ON
 CMAKE_ARGS+=		-DPYTHON_PACKAGES_DIR="site-packages"
 
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

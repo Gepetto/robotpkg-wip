@@ -2,7 +2,7 @@
 # Created:			Guilhem Saurel on Fri, 13 Apr 2018
 #
 ORG=		pal-robotics
-VERSION=	2.0.25
+VERSION=	2.0.33
 PKGBASE=	pal-gazebo-worlds
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}

@@ -2,14 +2,13 @@
 # Created:			Olivier Stasse on Wed, 29 Mar 2017
 #
 ORG=		pal-robotics-forks
-VERSION=	0.3.12
+VERSION=	0.3.15
 PRFNAME=	ros-controllers
 PKGBASE=	prf-${PRFNAME}
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PRFNAME})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
-PKGREVISION=	3
 
 CATEGORIES=	wip
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git

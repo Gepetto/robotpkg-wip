@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Wed, 29 Mar 2017
 #
 ORG=		pal-robotics-forks
-VERSION=	0.3.1
+VERSION=	0.3.2
 PRFNAME=	teleop-tools
 PKGBASE=	prf-${PRFNAME}
 PKGNAME=	${PKGBASE}-${VERSION}

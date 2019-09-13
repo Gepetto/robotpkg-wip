@@ -1,4 +1,4 @@
-@comment Mon Apr 1 23:30:01 CEST 2019
+@comment Fri Sep 13 08:10:04 CEST 2019
 lib/pkgconfig/tiago_2dnav_gazebo.pc
 lib/pkgconfig/tiago_controller_configuration_gazebo.pc
 lib/pkgconfig/tiago_gazebo.pc
@@ -7,7 +7,9 @@ lib/tiago_gazebo/tuck_arm.py
 lib/tiago_multi/pose_writing.sh
 share/tiago_2dnav_gazebo/cmake/tiago_2dnav_gazeboConfig-version.cmake
 share/tiago_2dnav_gazebo/cmake/tiago_2dnav_gazeboConfig.cmake
-share/tiago_2dnav_gazebo/launch/pick_and_place.launch
+share/tiago_2dnav_gazebo/launch/localization.launch
+share/tiago_2dnav_gazebo/launch/mapping.launch
+share/tiago_2dnav_gazebo/launch/navigation.launch
 share/tiago_2dnav_gazebo/launch/tiago_mapping.launch
 share/tiago_2dnav_gazebo/launch/tiago_mapping_public.launch
 share/tiago_2dnav_gazebo/launch/tiago_navigation.launch
@@ -236,6 +238,7 @@ share/tiago_gazebo/worlds/simple_office_with_people.world
 share/tiago_gazebo/worlds/simple_ramp.world
 share/tiago_gazebo/worlds/small_office.world
 share/tiago_gazebo/worlds/tabletop_cube.world
+share/tiago_gazebo/worlds/tabletop_cylinder.world
 share/tiago_gazebo/worlds/tutorial_office.world
 share/tiago_gazebo/worlds/willow_garage.world
 share/tiago_multi/cmake/tiago_multiConfig-version.cmake

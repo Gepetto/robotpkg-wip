@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Thu, 12 Dec 2018
 #
 ORG=		pal-robotics
-VERSION=	0.0.7
+VERSION=	0.0.9
 PKGBASE=	pal-wsg-gripper
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}

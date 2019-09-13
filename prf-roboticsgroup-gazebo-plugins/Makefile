@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Fri, 21 Apr 2017
 #
 ORG=		pal-robotics-forks
-VERSION=	0.1.1
+VERSION=	0.1.3
 PRFNAME=	roboticsgroup-gazebo-plugins
 PKGBASE=	prf-${PRFNAME}
 DISTNAME=	${VERSION}

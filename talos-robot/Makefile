@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Wed, 3 May 2017
 #
 ORG=		pal-robotics
-VERSION=	1.0.48
+VERSION=	1.0.51
 PKGBASE=	talos-robot
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME= 	${VERSION}

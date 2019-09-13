@@ -4,22 +4,18 @@
 
 ORG=			loco-3d
 NAME=			multicontact-api
-VERSION=		1.1.0
+VERSION=		1.1.1
 
-DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		Multi-contact locomotion for multi-body systems
 LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto-soft@laas.fr
 
-CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
+CMAKE_ARGS+=		-DINSTALL_PYTHON_INTERFACE_ONLY=ON
 
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../wip/${NAME}/depend.mk
 include ../../math/py-eigenpy/depend.mk
 include ../../math/py-pinocchio/depend.mk

@@ -3,7 +3,7 @@
 #
 
 ORG=		pal-robotics
-VERSION=	0.4.6
+VERSION=	0.4.8
 PKGBASE=	play-motion
 DISTNAME=	${VERSION}
 PKGNAME=	${PKGBASE}-${VERSION}

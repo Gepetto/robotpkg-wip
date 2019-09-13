@@ -4,3 +4,6 @@ lib/simple_grasping_action/simple_grasping_action
 share/simple_grasping_action/cmake/simple_grasping_actionConfig-version.cmake
 share/simple_grasping_action/cmake/simple_grasping_actionConfig.cmake
 share/simple_grasping_action/package.xml
+${PYTHON_SITELIB}/simple_grasping_action-${PKGVERSION}-py${PYTHON_VERSION}.egg-info
+${PYTHON_SITELIB}/simple_grasping_action/__init__.py
+${PYTHON_SITELIB}/simple_grasping_action/simple_grasping_action.py

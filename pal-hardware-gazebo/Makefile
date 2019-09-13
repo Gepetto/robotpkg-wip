@@ -2,14 +2,13 @@
 # Created:			Olivier Stasse on Thu, 3 May 2017
 #
 ORG=		pal-robotics
-VERSION=	0.1.2
+VERSION=	0.1.3
 PKGBASE=	pal-hardware-gazebo
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	1
 
 CATEGORIES=	wip
 

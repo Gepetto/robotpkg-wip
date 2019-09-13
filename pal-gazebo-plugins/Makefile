@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Fri, 21 Apr 2017
 #
 ORG=		pal-robotics
-VERSION=	1.1.8
+VERSION=	1.1.9
 PKGBASE=	pal-gazebo-plugins
 PKGNAME=	${PKGBASE}-${VERSION}
 DISTNAME=	${VERSION}

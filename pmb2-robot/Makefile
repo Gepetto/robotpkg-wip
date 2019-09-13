@@ -3,7 +3,7 @@
 #
 
 ORG=		pal-robotics
-VERSION=	3.0.2
+VERSION=	3.0.5
 PKGBASE=	pmb2-robot
 DISTNAME=	${VERSION}
 PKGNAME=	${PKGBASE}-${VERSION}

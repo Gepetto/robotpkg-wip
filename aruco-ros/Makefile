@@ -3,7 +3,7 @@
 #
 
 ORG=		pal-robotics
-VERSION=	0.2.3
+VERSION=	0.2.4
 PKGBASE=	aruco-ros
 DISTNAME=	${VERSION}
 PKGNAME=	${PKGBASE}-${VERSION}

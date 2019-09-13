@@ -3,14 +3,13 @@
 #
 
 ORG=		    pal-robotics
-VERSION=	    2.0.6
+VERSION=	    2.0.12
 PKGBASE=	    tiago-simulation
 DISTNAME=	    ${VERSION}
 PKGNAME=	    ${PKGBASE}-${VERSION}
 ROSNAME=	    $(subst -,_,${PKGBASE})
 WRKSRC=		    ${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	    ${PKGBASE}
-PKGREVISION=	    1
 
 CATEGORIES=	    wip
 HOMEPAGE=	    ${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}

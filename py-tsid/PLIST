@@ -26,4 +26,4 @@ include/tsid/bindings/python/trajectories/trajectory-euclidian.hpp
 include/tsid/bindings/python/trajectories/trajectory-se3.hpp
 include/tsid/bindings/python/utils/container.hpp
 ${PYTHON_SITELIB}/tsid/__init__.py
-${PYTHON_SITELIB}/tsid/libtsid_pywrap${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/tsid/libtsid_pywrap.so

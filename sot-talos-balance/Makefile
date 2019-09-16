@@ -5,13 +5,7 @@
 ORG=				stack-of-tasks
 NAME=				sot-talos-balance
 VERSION=			1.5.0
-PKGREVISION=			3
-
-DISTNAME=			${NAME}-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS=	--recursive
+PKGREVISION=			4
 
 CATEGORIES=			wip
 COMMENT=			Balance for TALOS humanoid robot
@@ -20,8 +14,7 @@ MAINTAINER=			gepetto-soft@laas.fr
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../graphics/simple-humanoid-description/depend.mk

@@ -10,10 +10,6 @@ ROSNAME=		$(subst -,_,${NAME})
 DISTNAME=		${ROSNAME}-${VERSION}
 PKGNAME=		${NAME}-${VERSION}
 
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${NAME}
-CHECKOUT_VCS_OPTS+=	--recursive
-
 CATEGORIES=		simulation
 MAINTAINER=		ostasse@laas.fr
 COMMENT=		OpenHRP-3 Simulator without RTM
@@ -21,10 +17,7 @@ LICENSE=		eclipse
 
 USE_BOOST_LIBS=		thread
 
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
-
-DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
-
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../graphics/gepetto-viewer/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-roscpp-core/depend.mk

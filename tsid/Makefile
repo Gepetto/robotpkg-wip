@@ -4,13 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			tsid
-VERSION=		1.2.0
-
-DISTNAME=		${NAME}-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
+VERSION=		1.2.1
 
 CATEGORIES=		wip
 COMMENT=		Efficient Inverse Dynamics based on Pinocchio
@@ -19,10 +13,9 @@ MAINTAINER=		gepetto-soft@laas.fr
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
 USE_BOOST_LIBS=		unit_test_framework
 
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../graphics/urdfdom/depend.mk
@@ -35,8 +28,5 @@ include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
-
-DEPEND_ABI.python +=		python<3
-DEPEND_ABI.eigen3 += eigen3>=3.2.0
 
 include ../../mk/robotpkg.mk

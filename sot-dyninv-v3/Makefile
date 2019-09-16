@@ -4,14 +4,9 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-dyninv
-VERSION=		3.1.1
+VERSION=		3.1.2
 
-DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		Resolve the inverse of the dynamics of a free-floating robot
@@ -22,8 +17,7 @@ CONFLICTS+=		${NAME}
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../wip/soth/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

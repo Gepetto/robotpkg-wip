@@ -6,12 +6,7 @@ ORG=			stack-of-tasks
 NAME=			dynamic-graph-python
 VERSION=		3.3.2
 
-DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}dynamic-graph-v3-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}
-CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		Efficient data-flow C++ library for robotics (python bindings)
@@ -21,11 +16,9 @@ MAINTAINER=		gepetto-soft@laas.fr
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 CONFLICTS+=		py[0-9][0-9]-${NAME}-v3  # there is stuff not in ${PYTHON_SITELIB}
 
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
-CMAKE_ARGS+=		-DCXX_DISABLE_WERROR=yes
+DEPEND_ABI.python+=	python<3
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

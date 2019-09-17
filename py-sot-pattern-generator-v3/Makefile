@@ -4,14 +4,9 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-pattern-generator
-VERSION=		3.1.0
+VERSION=		3.2.1
 
-DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}
-CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		Walking Pattern Generator (python bindings)
@@ -20,10 +15,9 @@ MAINTAINER=		gepetto@laas.fr
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 
-CMAKE_ARGS+=	-DCMAKE_INSTALL_DOCDIR=share/doc/${PKGBASE}
+USE_PYTHON_ONLY=	true
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${PKGBASE}
-
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

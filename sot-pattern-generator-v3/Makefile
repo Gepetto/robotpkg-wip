@@ -4,15 +4,9 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-pattern-generator
-VERSION=		3.2.0
+VERSION=		3.2.1
 
-DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}
-PKGREVISION=		1
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		Walking Pattern Generator
@@ -22,18 +16,13 @@ MAINTAINER=		gepetto-soft@laas.fr
 CONFLICTS+=		${NAME}
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
-DEPEND_ABI.pinocchio=	pinocchio>2
-
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../wip/jrl-walkgen-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
-include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

@@ -1,0 +1,8 @@
+@comment Tue Sep 17 13:38:41 CEST 2019
+include/eiquadprog/config.hpp
+include/eiquadprog/deprecated.hpp
+include/eiquadprog/eiquadprog-fast.hpp
+include/eiquadprog/eiquadprog-fast.hxx
+include/eiquadprog/eiquadprog.hpp
+include/eiquadprog/warning.hpp
+lib/pkgconfig/eiquadprog.pc

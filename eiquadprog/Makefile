@@ -2,7 +2,7 @@
 # Created:			Guilhem Saurel on Tue, 17 Sep 2019
 #
 
-ORG=			stack-of-tassks
+ORG=			stack-of-tasks
 NAME=			eiquadprog
 VERSION=		0.0.3
 

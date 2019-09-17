@@ -4,15 +4,10 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-dynamic-pinocchio
-VERSION=		3.3.0
-PKGREVISION=	2
+VERSION=		3.3.1
 
 DISTNAME=		${NAME}-v3-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}
-CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		Create entities to compute a robot dynamics properties using pinocchio (python bindings)
@@ -21,9 +16,9 @@ MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 
-CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
+USE_PYTHON_ONLY=	true
 
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/tinyxml/depend.mk
 include ../../math/pinocchio/depend.mk

@@ -4,15 +4,10 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-dynamic-pinocchio
-VERSION=		3.3.0
-PKGREVISION=	2
+VERSION=		3.3.1
 
 DISTNAME=		${NAME}-v3-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		Create entities to compute a robot dynamics properties using pinocchio
@@ -25,10 +20,8 @@ CONFLICTS+=		${NAME}
 MAKE_JOBS_SAFE=		no
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../devel/tinyxml/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../path/hpp-fcl/depend.mk

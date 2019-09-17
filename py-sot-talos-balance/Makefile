@@ -4,8 +4,7 @@
 
 ORG=				stack-of-tasks
 NAME=				sot-talos-balance
-VERSION=			1.5.0
-PKGREVISION=			2
+VERSION=			1.6.0
 
 PKGNAME=			${PKGTAG.python-}${DISTNAME}
 
@@ -14,9 +13,7 @@ COMMENT=			Balance for TALOS humanoid robot (python bindings)
 LICENSE=			2-clause-bsd
 MAINTAINER=			gepetto-soft@laas.fr
 
-CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
-CMAKE_ARGS+=		-DINSTALL_PYTHON_INTERFACE_ONLY=ON
-CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=ON
+USE_PYTHON_ONLY=		true
 
 include ../../${CATEGORIES}/${NAME}/depend.mk
 include ../../wip/jrl-cmakemodules/Makefile.common

@@ -1,5 +1,7 @@
 @comment Fri Jul 27 14:47:41 CEST 2018
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/admittance_controller/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/admittance_controller/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/base_estimator/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/base_estimator/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/control_manager/__init__.py
@@ -7,6 +9,8 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/control_manager/wrap${PYTHON_
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/create_entities_utils.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/current_controller/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/current_controller/wrap${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/ddp_actuator_solver/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/ddp_actuator_solver/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/device_torque_ctrl/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/device_torque_ctrl/wrap${PYTHON_EXT_SUFFIX}
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/free_flyer_locator/__init__.py

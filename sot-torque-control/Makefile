@@ -7,12 +7,6 @@ NAME=				sot-torque-control
 VERSION=			1.4.0
 PKGREVISION=			1
 
-DISTNAME=			${NAME}-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS=	--recursive
-
 CATEGORIES=			wip
 COMMENT=			Torque control for humanoids
 LICENSE=			2-clause-bsd
@@ -20,8 +14,7 @@ MAINTAINER=			gepetto-soft@laas.fr
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../graphics/simple-humanoid-description/depend.mk

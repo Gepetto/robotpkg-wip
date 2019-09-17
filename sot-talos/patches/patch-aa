@@ -1,0 +1,33 @@
+include pinocchio before boost
+ref https://github.com/stack-of-tasks/pinocchio/issues/849
+
+--- src/sot-talos-device.cpp.orig	2019-03-04 17:58:29.000000000 +0100
++++ src/sot-talos-device.cpp	2019-09-17 23:51:50.015282049 +0200
+@@ -13,6 +13,7 @@
+ 
+ #include <fstream>
+ #include <map>
++#include <pinocchio/fwd.hpp>
+ 
+ #if DEBUG
+ #define ODEBUG(x) std::cout << x << std::endl
+--- src/sot-talos-controller.cpp.orig	2019-03-04 17:58:29.000000000 +0100
++++ src/sot-talos-controller.cpp	2019-09-17 23:52:26.486976528 +0200
+@@ -11,6 +11,7 @@
+  *
+  */
+ 
++#include <pinocchio/fwd.hpp>
+ #include <sot/core/debug.hh>
+ #include <sot/core/exception-abstract.hh>
+ #include <dynamic_graph_bridge/ros_init.hh>
+--- src/sot-pyrene-controller.cpp.orig	2019-03-04 17:58:29.000000000 +0100
++++ src/sot-pyrene-controller.cpp	2019-09-17 23:52:53.806747699 +0200
+@@ -10,6 +10,7 @@
+  *
+  */
+ 
++#include <pinocchio/fwd.hpp>
+ #include <sot/core/debug.hh>
+ 
+ /* Pyrene is the first TALOS */

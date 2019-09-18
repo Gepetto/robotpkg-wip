@@ -6,12 +6,6 @@ ORG=			stack-of-tasks
 NAME=			ddp-actuator-solver
 VERSION=		1.0.0
 
-DISTNAME=		${NAME}-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
-
 CATEGORIES=		wip
 COMMENT=		Differentiable Dynamics Programming for one actuator
 LICENSE=		2-clause-bsd
@@ -19,10 +13,9 @@ MAINTAINER=		gepetto-soft@laas.fr
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
 USE_BOOST_LIBS=		unit_test_framework
 
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../optimization/qpoases/depend.mk

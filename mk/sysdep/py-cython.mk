@@ -20,7 +20,7 @@ SYSTEM_SEARCH.py-cython=\
   '${PYTHON_SYSLIBSEARCH}/Cython/Shadow.py:/^__version__/s/[^0-9.]//gp'
 
 SYSTEM_PKG.Arch.py-cython=	cython (cython${PYTHON_MAJOR})
-SYSTEM_PKG.Fedora.py-cython=	python${PYTHON_MAJOR}-cython
+SYSTEM_PKG.Fedora.py-cython=	python${PYTHON_MAJOR}-Cython
 SYSTEM_PKG.Ubuntu.py-cython=	cython (cython${PYTHON_MAJOR})
 SYSTEM_PKG.Debian.py-cython=	cython (cython${PYTHON_MAJOR})
 SYSTEM_PKG.NetBSD.py-cython=	devel/${PKGTAG.python-}cython

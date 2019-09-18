@@ -4,22 +4,17 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-hrp2
-VERSION=		2.1.1
+VERSION=		2.1.2
 
 DISTNAME=		${NAME}-v3-${VERSION}
 
 CATEGORIES=		wip
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}
-CHECKOUT_VCS_OPTS+=	--recursive
 
 COMMENT=		This packages provides a generic Stack Of Tasks library for the humanoid robot HRP-2.
 LICENSE=		gnu-lgpl-v3
 MAINTAINER=		hpp@laas.fr
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
-
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../wip/py-dynamic-graph-bridge-v3/depend.mk
 include ../../motion/dynamic-graph-bridge-msgs/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk

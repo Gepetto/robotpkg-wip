@@ -4,25 +4,17 @@
 
 ORG=			gepetto
 NAME=			example-robot-data
-VERSION=		2.0.0
-
-DISTNAME=		${NAME}-${VERSION}
-PKGNAME=		${PKGTAG.python-}${DISTNAME}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	git https://gepgitlab.laas.fr/${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
+VERSION=		2.1.0
 
 CATEGORIES=		wip
 COMMENT=		Set of robot URDFs for benchmarking and developed examples.
-
 LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto@laas.fr
 
-CMAKE_ARGS+=		-DINSTALL_DATA=OFF
-CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
+USE_PYTHON_ONLY=	true
 
-include ../../wip/example-robot-data/depend.mk
+include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../${CATEGORIES}/${NAME}/depend.mk
 
 include ../../graphics/urdfdom-headers/depend.mk
 include ../../graphics/urdfdom/depend.mk

@@ -4,25 +4,16 @@
 
 ORG=			gepetto
 NAME=			example-robot-data
-VERSION=		2.0.0
-
-DISTNAME=		${NAME}-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	git https://gepgitlab.laas.fr/${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
+VERSION=		2.1.0
 
 CATEGORIES=		wip
 COMMENT=		Set of robot URDFs for benchmarking and developed examples.
-
 LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto@laas.fr
 
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
+include ../../wip/jrl-cmakemodules/Makefile.common
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk

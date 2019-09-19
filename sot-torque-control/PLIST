@@ -36,6 +36,8 @@ lib/plugin/control-manager.so
 lib/plugin/control-manager.so.${PKGVERSION}
 lib/plugin/current-controller.so
 lib/plugin/current-controller.so.${PKGVERSION}
+lib/plugin/ddp-actuator-solver.so
+lib/plugin/ddp-actuator-solver.so.${PKGVERSION}
 lib/plugin/device-torque-ctrl.so
 lib/plugin/device-torque-ctrl.so.${PKGVERSION}
 lib/plugin/free-flyer-locator.so

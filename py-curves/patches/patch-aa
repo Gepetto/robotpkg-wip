@@ -1,0 +1,23 @@
+From b00c549fa309a1f16d4f20041778e357cceea3ef Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Wed, 17 Apr 2019 13:04:37 +0200
+Subject: [PATCH] [Test][Python] Remove StringIO, which is useless and fails in
+ python 3
+
+---
+ python/test/test.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/python/test/test.py b/python/test/test.py
+index d77db6b..2887625 100644
+--- python/test/test.py
++++ python/test/test.py
+@@ -1,5 +1,4 @@
+ # FOR PRINT, TO REMOVE
+-import StringIO
+ import sys
+ # END FOR PRINT
+ 
+-- 
+2.17.1
+

@@ -12,7 +12,7 @@ COMMENT=		SOT Hierarchical solver
 LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto-soft@laas.fr
 
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../math/eigen3/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

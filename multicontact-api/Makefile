@@ -13,7 +13,7 @@ MAINTAINER=		gepetto-soft@laas.fr
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../graphics/assimp/depend.mk
 include ../../graphics/urdfdom/depend.mk
 include ../../mapping/octomap/depend.mk

@@ -11,7 +11,7 @@ COMMENT=		algorithm of Goldfarb and Idnani for the solution of a QP
 LICENSE=		2-clause-bsd
 MAINTAINER=		gsaurel@laas.fr
 
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/eigen3/depend.mk

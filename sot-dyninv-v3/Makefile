@@ -17,7 +17,7 @@ CONFLICTS+=		${NAME}
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/soth/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

@@ -20,7 +20,7 @@ CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
 CMAKE_ARGS+=		-DINSTALL_PYTHON_INTERFACE_ONLY=ON
 CMAKE_ARGS+=		-DPYTHON_PACKAGES_DIR="site-packages"
 
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

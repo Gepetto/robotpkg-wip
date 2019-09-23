@@ -14,7 +14,7 @@ COMMENT=		This packages provides a generic Stack Of Tasks library for the humano
 LICENSE=		gnu-lgpl-v3
 MAINTAINER=		hpp@laas.fr
 
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/py-dynamic-graph-bridge-v3/depend.mk
 include ../../motion/dynamic-graph-bridge-msgs/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk

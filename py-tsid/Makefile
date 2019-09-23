@@ -21,7 +21,7 @@ CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
 CMAKE_ARGS+=		-DINSTALL_GENERATED_HEADERS=OFF
 CMAKE_ARGS+=		-DINSTALL_PKG_CONFIG_FILE=OFF
 
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../${CATEGORIES}/${NAME}/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

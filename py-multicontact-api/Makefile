@@ -15,7 +15,7 @@ MAINTAINER=		gepetto-soft@laas.fr
 
 CMAKE_ARGS+=		-DINSTALL_PYTHON_INTERFACE_ONLY=ON
 
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/${NAME}/depend.mk
 include ../../math/py-eigenpy/depend.mk
 include ../../math/py-pinocchio/depend.mk

@@ -13,7 +13,7 @@ MAINTAINER=		gepetto@laas.fr
 
 USE_PYTHON_ONLY=	true
 
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../${CATEGORIES}/${NAME}/depend.mk
 
 include ../../graphics/urdfdom-headers/depend.mk

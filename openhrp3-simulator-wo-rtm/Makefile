@@ -17,7 +17,7 @@ LICENSE=		eclipse
 
 USE_BOOST_LIBS=		thread
 
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../graphics/gepetto-viewer/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-roscpp-core/depend.mk

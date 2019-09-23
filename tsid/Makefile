@@ -15,7 +15,7 @@ CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
 USE_BOOST_LIBS=		unit_test_framework
 
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../graphics/urdfdom/depend.mk

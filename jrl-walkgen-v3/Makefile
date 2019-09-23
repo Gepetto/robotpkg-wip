@@ -16,7 +16,7 @@ MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		${NAME}
 
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../graphics/simple-humanoid-description/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../mk/sysdep/cmake.mk

@@ -21,7 +21,7 @@ MAKE_JOBS_SAFE=		no
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/tinyxml/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../path/hpp-fcl/depend.mk

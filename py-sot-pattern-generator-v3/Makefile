@@ -17,7 +17,7 @@ CONFLICTS+=		py[0-9][0-9]-${NAME}
 
 USE_PYTHON_ONLY=	true
 
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

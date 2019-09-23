@@ -15,7 +15,7 @@ MAINTAINER=			gepetto-soft@laas.fr
 USE_PYTHON_ONLY=		true
 
 include ../../${CATEGORIES}/${NAME}/depend.mk
-include ../../wip/jrl-cmakemodules/Makefile.common
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../graphics/simple-humanoid-description/depend.mk

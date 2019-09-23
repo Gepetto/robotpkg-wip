@@ -12,8 +12,13 @@ endif
 ifeq (+,$(ROS_BAXTER_COMMON_DEPEND_MK)) # --------------------------------------
 
 include ../../meta-pkgs/ros-base/depend.common
-PREFER.ros-baxter-common?=		${PREFER.ros-base}
-SYSTEM_PREFIX.ros-baxter-common?=	${SYSTEM_PREFIX.ros-base}
+include ../../mk/robotpkg.prefs.mk
+ifeq (18.04,${OS_VERSION})
+  PREFER.ros-baxter-common?=		robotpkg
+else
+  PREFER.ros-baxter-common?=		${PREFER.ros-base}
+  SYSTEM_PREFIX.ros-baxter-common?=	${SYSTEM_PREFIX.ros-base}
+endif
 
 DEPEND_USE+=				ros-baxter-common
 ROS_DEPEND_USE+=			ros-baxter-common

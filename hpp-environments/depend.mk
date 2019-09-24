@@ -11,11 +11,13 @@ endif
 
 ifeq (+,$(HPPENVIRONMENTS_DEPEND_MK)) # --------------------------------------
 
+include ../../mk/sysdep/python.mk
+
 PREFER.hpp-environments?=	robotpkg
 
 DEPEND_USE+=		hpp-environments
 
-DEPEND_ABI.hpp-environments?=	hpp-environments>=4.2.0
+DEPEND_ABI.hpp-environments?=	${PKGTAG.python-}hpp-environments>=4.7.0
 DEPEND_DIR.hpp-environments?=	../../wip/hpp-environments
 
 SYSTEM_SEARCH.hpp-environments=\

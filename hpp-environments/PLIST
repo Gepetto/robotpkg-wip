@@ -4,9 +4,7 @@ include/hpp/environments/deprecated.hh
 include/hpp/environments/warning.hh
 lib/pkgconfig/hpp-environments.pc
 ${PYTHON_SITELIB}/hpp/environments/__init__.py
-${PYTHON_SITELIB}/hpp/environments/__init__.pyc
 ${PYTHON_SITELIB}/hpp/environments/robot.py
-${PYTHON_SITELIB}/hpp/environments/robot.pyc
 share/hpp_environments/meshes/CMakeLists.txt
 share/hpp_environments/meshes/buggy/buggy.dae
 share/hpp_environments/meshes/buggy/buggyBB.dae
@@ -16,6 +14,9 @@ share/hpp_environments/meshes/buggy/scene.stl
 share/hpp_environments/meshes/buggy/wheel_frontleft.dae
 share/hpp_environments/meshes/buggy/wheel_frontright.dae
 share/hpp_environments/meshes/hrp2/floor.dae
+share/hpp_environments/meshes/multicontact/antfarm_firstLevel.stl
+share/hpp_environments/meshes/multicontact/bauzil_ramp.stl
+share/hpp_environments/meshes/multicontact/bauzil_ramp_simplified.stl
 share/hpp_environments/meshes/multicontact/bauzil_simplified.stl
 share/hpp_environments/meshes/multicontact/bauzil_stairs.stl
 share/hpp_environments/meshes/multicontact/bauzil_stairs_10cm.stl
@@ -70,8 +71,12 @@ share/hpp_environments/meshes/multicontact/ground_tablec.stl
 share/hpp_environments/meshes/multicontact/ground_with_bridge.stl
 share/hpp_environments/meshes/multicontact/groundcrouch.stl
 share/hpp_environments/meshes/multicontact/obstacle.stl
+share/hpp_environments/meshes/multicontact/ori_plinth.stl
 share/hpp_environments/meshes/multicontact/pedal.stl
 share/hpp_environments/meshes/multicontact/plane.stl
+share/hpp_environments/meshes/multicontact/plateforme_not_flat.stl
+share/hpp_environments/meshes/multicontact/plateforme_surfaces.stl
+share/hpp_environments/meshes/multicontact/plateforme_surfaces_scale.stl
 share/hpp_environments/meshes/multicontact/plateformes_full.stl
 share/hpp_environments/meshes/multicontact/platform_hand.stl
 share/hpp_environments/meshes/multicontact/polaris.stl
@@ -95,6 +100,7 @@ share/hpp_environments/meshes/multicontact/test.stl
 share/hpp_environments/meshes/multicontact/truck.stl
 share/hpp_environments/meshes/multicontact/truck_vision.stl
 share/hpp_environments/meshes/multicontact/untitled.stl
+share/hpp_environments/meshes/ori/modular_palet_low.stl
 share/hpp_environments/meshes/tests/baxter_simple/torso.dae
 share/hpp_environments/meshes/ur_benchmark/pokeball.dae
 share/hpp_environments/package.xml
@@ -107,6 +113,9 @@ share/hpp_environments/srdf/construction_set/ground.srdf
 share/hpp_environments/srdf/construction_set/sphere.srdf
 share/hpp_environments/srdf/drawer_desk/desk.srdf
 share/hpp_environments/srdf/hrp2/floor_as_mesh.srdf
+share/hpp_environments/srdf/multicontact/antfarm_firstLevel.srdf
+share/hpp_environments/srdf/multicontact/bauzil_ramp.srdf
+share/hpp_environments/srdf/multicontact/bauzil_ramp_simplified.srdf
 share/hpp_environments/srdf/multicontact/bauzil_stairs.srdf
 share/hpp_environments/srdf/multicontact/bauzil_stairs_10cm.srdf
 share/hpp_environments/srdf/multicontact/bauzil_stairs_collision.srdf
@@ -139,8 +148,11 @@ share/hpp_environments/srdf/multicontact/ground_jump_med.srdf
 share/hpp_environments/srdf/multicontact/ground_with_bridge.srdf
 share/hpp_environments/srdf/multicontact/groundcrouch.srdf
 share/hpp_environments/srdf/multicontact/obstacle_towr.srdf
+share/hpp_environments/srdf/multicontact/ori_plinth.srdf
 share/hpp_environments/srdf/multicontact/plane.srdf
 share/hpp_environments/srdf/multicontact/plane_hole.srdf
+share/hpp_environments/srdf/multicontact/plateforme_not_flat.srdf
+share/hpp_environments/srdf/multicontact/plateforme_surfaces.srdf
 share/hpp_environments/srdf/multicontact/polaris.srdf
 share/hpp_environments/srdf/multicontact/roomWall.srdf
 share/hpp_environments/srdf/multicontact/scene.srdf
@@ -157,6 +169,7 @@ share/hpp_environments/srdf/multicontact/stairs_towr.srdf
 share/hpp_environments/srdf/multicontact/stepladder.srdf
 share/hpp_environments/srdf/multicontact/table.srdf
 share/hpp_environments/srdf/multicontact/truck.srdf
+share/hpp_environments/srdf/ori/modular_palet_low.srdf
 share/hpp_environments/srdf/placard.srdf
 share/hpp_environments/srdf/scene.srdf
 share/hpp_environments/srdf/tests/baxter_simple.srdf
@@ -179,6 +192,9 @@ share/hpp_environments/urdf/drawer_desk/drawer.urdf.xacro
 share/hpp_environments/urdf/drawer_desk/table.urdf.xacro
 share/hpp_environments/urdf/drawer_desk/table_leg.urdf.xacro
 share/hpp_environments/urdf/hrp2/floor_as_mesh.urdf
+share/hpp_environments/urdf/multicontact/antfarm_firstLevel.urdf
+share/hpp_environments/urdf/multicontact/bauzil_ramp.urdf
+share/hpp_environments/urdf/multicontact/bauzil_ramp_simplified.urdf
 share/hpp_environments/urdf/multicontact/bauzil_stairs.urdf
 share/hpp_environments/urdf/multicontact/bauzil_stairs_10cm.urdf
 share/hpp_environments/urdf/multicontact/bauzil_stairs_collision.urdf
@@ -212,7 +228,10 @@ share/hpp_environments/urdf/multicontact/ground_jump_med.urdf
 share/hpp_environments/urdf/multicontact/ground_with_bridge.urdf
 share/hpp_environments/urdf/multicontact/groundcrouch.urdf
 share/hpp_environments/urdf/multicontact/obstacle_towr.urdf
+share/hpp_environments/urdf/multicontact/ori_plinth.urdf
 share/hpp_environments/urdf/multicontact/plane.urdf
+share/hpp_environments/urdf/multicontact/plateforme_not_flat.urdf
+share/hpp_environments/urdf/multicontact/plateforme_surfaces.urdf
 share/hpp_environments/urdf/multicontact/polaris.urdf
 share/hpp_environments/urdf/multicontact/roomWall.urdf
 share/hpp_environments/urdf/multicontact/scene.urdf
@@ -229,6 +248,7 @@ share/hpp_environments/urdf/multicontact/stairs_towr.urdf
 share/hpp_environments/urdf/multicontact/stepladder.urdf
 share/hpp_environments/urdf/multicontact/table.urdf
 share/hpp_environments/urdf/multicontact/truck.urdf
+share/hpp_environments/urdf/ori/modular_palet_low.urdf
 share/hpp_environments/urdf/placard-vertical.urdf
 share/hpp_environments/urdf/placard.urdf
 share/hpp_environments/urdf/scene.urdf

@@ -4,14 +4,13 @@
 
 HPP_PACKAGE=	hpp-environments
 HPP_COMMENT=	Environments and robot descriptions for HPP
-HPP_VERSION=	4.4.0
-PKGREVISION=	1
 
 CATEGORIES=	wip
 
+USE_PYTHON=	true
+
 include ../../meta-pkgs/hpp/Makefile.common
 
-include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++.mk
+include ../../mk/language/c++11.mk
 include ../../mk/robotpkg.mk

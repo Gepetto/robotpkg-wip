@@ -4,14 +4,7 @@
 
 ORG=			loco-3d
 NAME=			curves
-VERSION=		0.1.0
-
-DISTNAME=		${NAME}-${VERSION}
-PKGNAME=		${PKGTAG.python-}${DISTNAME}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	git https://gepgitlab.laas.fr/${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
+VERSION=		0.2.0
 
 CATEGORIES=		wip
 COMMENT=		Library for creating curves
@@ -19,12 +12,9 @@ COMMENT=		Library for creating curves
 LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto@laas.fr
 
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
-
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
 USE_BOOST_LIBS=		python
 
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

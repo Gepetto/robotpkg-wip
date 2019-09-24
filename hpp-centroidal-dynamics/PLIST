@@ -12,4 +12,4 @@ include/hpp/centroidal-dynamics/util.hh
 include/hpp/centroidal-dynamics/warning.hh
 lib/libhpp-centroidal-dynamics.so
 lib/pkgconfig/hpp-centroidal-dynamics.pc
-${PYTHON_SITELIB}/hpp_centroidal_dynamics${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/hpp_centroidal_dynamics.so

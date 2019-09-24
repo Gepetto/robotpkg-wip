@@ -4,13 +4,11 @@
 
 HPP_PACKAGE=	hpp-centroidal-dynamics
 HPP_COMMENT=	testing equilibrium
-HPP_VERSION=	4.5.1
 
 CATEGORIES=	wip
 
-DEPEND_ABI.python+=	python<3
-
 USE_BOOST_LIBS=		python
+USE_PYTHON=		true
 
 include ../../meta-pkgs/hpp/Makefile.common
 
@@ -22,7 +20,6 @@ include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 
 include ../../wip/mk/sysdep/libcdd.mk
-include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++.mk
+include ../../mk/language/c++11.mk
 include ../../mk/robotpkg.mk

@@ -11,11 +11,13 @@ endif
 
 ifeq (+,$(HPP_CENTROIDAL_DYNAMICS_DEPEND_MK)) # --------------------------------------
 
+include ../../mk/sysdep/python.mk
+
 PREFER.hpp-centroidal-dynamics?=	robotpkg
 
 DEPEND_USE+=		hpp-centroidal-dynamics
 
-DEPEND_ABI.hpp-centroidal-dynamics?=	hpp-centroidal-dynamics>=4.2.0
+DEPEND_ABI.hpp-centroidal-dynamics?=	${PKGTAG.python-}hpp-centroidal-dynamics>=4.7.0
 DEPEND_DIR.hpp-centroidal-dynamics?=	../../wip/hpp-centroidal-dynamics
 
 SYSTEM_SEARCH.hpp-centroidal-dynamics=\

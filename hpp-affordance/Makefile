@@ -4,7 +4,6 @@
 
 HPP_PACKAGE=	hpp-affordance
 HPP_COMMENT=	Extract Whole-Body Affordances for Mutli-Contact Planning.
-HPP_VERSION=	4.4.0
 
 CATEGORIES=	wip
 
@@ -18,5 +17,5 @@ include ../../path/hpp-fcl/depend.mk
 include ../../mapping/octomap/depend.mk
 
 include ../../mk/language/c.mk
-include ../../mk/language/c++.mk
+include ../../mk/language/c++11.mk
 include ../../mk/robotpkg.mk

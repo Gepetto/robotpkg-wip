@@ -17,11 +17,11 @@ PREFER.py-qpoases?=	robotpkg
 
 DEPEND_USE+=		py-qpoases
 
-DEPEND_ABI.py-qpoases?=	${PKGTAG.python-}-qpoases>=3.2
+DEPEND_ABI.py-qpoases?=	${PKGTAG.python-}qpoases>=3.2
 DEPEND_DIR.py-qpoases?=	../../wip/py-qpoases
 
 SYSTEM_SEARCH.py-qpoases=\
-  '${PYTHON_SITELIB}/qpoases${PYTHON_SOABI}.so'
+  '${PYTHON_SITELIB}/qpoases.{*.,}so'
 
 endif # PY_QPOASES_DEPEND_MK --------------------------------------------------
 

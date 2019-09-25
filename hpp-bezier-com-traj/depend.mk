@@ -11,11 +11,13 @@ endif
 
 ifeq (+,$(HPP_BEZIER_COM_TRAJ_DEPEND_MK)) # --------------------------------------
 
+include ../../mk/sysdep/python.mk
+
 PREFER.hpp-bezier-com-traj?=	robotpkg
 
 DEPEND_USE+=		hpp-bezier-com-traj
 
-DEPEND_ABI.hpp-bezier-com-traj?=	hpp-bezier-com-traj>=4.2.0
+DEPEND_ABI.hpp-bezier-com-traj?=	${PKGTAG.python-}hpp-bezier-com-traj>=4.7.0
 DEPEND_DIR.hpp-bezier-com-traj?=	../../wip/hpp-bezier-com-traj
 
 SYSTEM_SEARCH.hpp-bezier-com-traj=\

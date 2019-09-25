@@ -4,13 +4,11 @@
 
 HPP_PACKAGE=	hpp-bezier-com-traj
 HPP_COMMENT=	trajectory generation for the COM with bezier curves
-HPP_VERSION=	4.5.0
 
 CATEGORIES=	wip
 
-DEPEND_ABI.python+=	python<3
-
 USE_BOOST_LIBS=		python
+USE_PYTHON=		true
 
 include ../../meta-pkgs/hpp/Makefile.common
 
@@ -23,7 +21,6 @@ include ../../math/eigen3/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 
-include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++.mk
+include ../../mk/language/c++11.mk
 include ../../mk/robotpkg.mk

@@ -4,15 +4,12 @@
 
 HPP_PACKAGE=	hpp-rbprm-robot-data
 HPP_COMMENT=	file database
-HPP_VERSION=	4.5.0
 
 CATEGORIES=	wip
-
-DEPEND_ABI.python+=	python<3
 
 include ../../meta-pkgs/hpp/Makefile.common
 
 include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++.mk
+include ../../mk/language/c++11.mk
 include ../../mk/robotpkg.mk

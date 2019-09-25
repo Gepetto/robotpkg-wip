@@ -11,11 +11,13 @@ endif
 
 ifeq (+,$(HPP_RBPRM_ROBOT_DATA_DEPEND_MK)) # --------------------------------------
 
+include ../../mk/sysdep/python.mk
+
 PREFER.hpp-rbprm-robot-data?=	robotpkg
 
 DEPEND_USE+=		hpp-rbprm-robot-data
 
-DEPEND_ABI.hpp-rbprm-robot-data?=	hpp-rbprm-robot-data>=4.2.0
+DEPEND_ABI.hpp-rbprm-robot-data?=	${PKGTAG.python-}hpp-rbprm-robot-data>=4.7.0
 DEPEND_DIR.hpp-rbprm-robot-data?=	../../wip/hpp-rbprm-robot-data
 
 SYSTEM_SEARCH.hpp-rbprm-robot-data=\

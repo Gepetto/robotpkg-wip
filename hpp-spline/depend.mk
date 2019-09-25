@@ -11,11 +11,13 @@ endif
 
 ifeq (+,$(HPP_SPLINE_DEPEND_MK)) # --------------------------------------
 
+include ../../mk/sysdep/python.mk
+
 PREFER.hpp-spline?=	robotpkg
 
 DEPEND_USE+=		hpp-spline
 
-DEPEND_ABI.hpp-spline?=	hpp-spline>=4.2.0
+DEPEND_ABI.hpp-spline?=	${PKGTAG.python-}hpp-spline>=4.5.0
 DEPEND_DIR.hpp-spline?=	../../wip/hpp-spline
 
 SYSTEM_SEARCH.hpp-spline=\

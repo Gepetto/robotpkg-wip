@@ -19,8 +19,8 @@ DEPEND_ABI.hpp-rbprm-corba?=	hpp-rbprm-corba>=4.6.0
 DEPEND_DIR.hpp-rbprm-corba?=	../../wip/hpp-rbprm-corba
 
 SYSTEM_SEARCH.hpp-rbprm-corba=\
-	include/hpp/corbaserver/rbprm/config.hh	\
-	lib/libhpp-rbprm-corba.so	\
+	include/hpp/corbaserver/rbprm/config.hh	i			\
+	lib/hppPlugins/rbprm-corba.so					\
 	'lib/pkgconfig/hpp-rbprm-corba.pc:/Version/s/[^0-9.]//gp'
 
 endif # HPP_RBPRM_CORBA_DEPEND_MK --------------------------------------------

@@ -2,17 +2,19 @@
 # Created:			Guilhem Saurel on Wed, 30 Jan 2019
 #
 
-HPP_PACKAGE=	hpp-rbprm-corba
-HPP_COMMENT=	Corba server for RB-PRM
+HPP_PACKAGE=		hpp-rbprm-corba
+HPP_COMMENT=		Corba server for RB-PRM
 
-CATEGORIES=	wip
+CATEGORIES=		wip
 
-DEPEND_ABI.octomap=		octomap>=1.8.0
+DEPEND_ABI.octomap=	octomap>=1.8.0
 
 MAKE_JOBS_SAFE=	no # because multiple parallel omniidl won't work
 
 CONFIGURE_DIRS=		build
-CMAKE_ARG_PATH= ..
+CMAKE_ARG_PATH=		..
+
+USE_PYTHON=		true
 
 include ../../meta-pkgs/hpp/Makefile.common
 

@@ -11,11 +11,13 @@ endif
 
 ifeq (+,$(HPP_BAXTER_DEPEND_MK)) # --------------------------------------
 
+include ../../mk/sysdep/python.mk
+
 PREFER.hpp-baxter?=	robotpkg
 
 DEPEND_USE+=		hpp-baxter
 
-DEPEND_ABI.hpp-baxter?=	hpp-baxter>=4.3.0
+DEPEND_ABI.hpp-baxter?=	${PKGTAG.python-}hpp-baxter>=4.7.0
 DEPEND_DIR.hpp-baxter?=	../../wip/hpp-baxter
 
 SYSTEM_SEARCH.hpp-baxter=\

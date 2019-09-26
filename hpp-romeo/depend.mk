@@ -11,11 +11,13 @@ endif
 
 ifeq (+,$(HPPROMEO_DEPEND_MK)) # --------------------------------------
 
+include ../../mk/sysdep/python.mk
+
 PREFER.hpp-romeo?=	robotpkg
 
 DEPEND_USE+=		hpp-romeo
 
-DEPEND_ABI.hpp-romeo?=	hpp-romeo>=4.2.0
+DEPEND_ABI.hpp-romeo?=	${PKGTAG.python-}hpp-romeo>=4.7.0
 DEPEND_DIR.hpp-romeo?=	../../wip/hpp-romeo
 
 SYSTEM_SEARCH.hpp-romeo=\

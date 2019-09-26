@@ -4,7 +4,6 @@
 
 HPP_PACKAGE=	hpp-romeo
 HPP_COMMENT=	Python and ros launch files for Romeo robot in hpp.
-HPP_VERSION=	4.5.0
 
 ROSNAME=	$(subst -,_,${HPP_PACKAGE})
 DISTNAME=	${ROSNAME}-${HPP_VERSION}
@@ -12,6 +11,8 @@ DISTNAME=	${ROSNAME}-${HPP_VERSION}
 CATEGORIES=	wip
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
+
+USE_PYTHON=	true
 
 include ../../meta-pkgs/hpp/Makefile.common
 include ../../math/hpp-pinocchio/depend.mk

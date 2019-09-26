@@ -4,9 +4,10 @@
 
 HPP_PACKAGE=	hpp-affordance-corba
 HPP_COMMENT=	Extract Whole-Body Affordances for Mutli-Contact Planning (CORBA bindings)
-HPP_VERSION=	4.5.0
 
 CATEGORIES=	wip
+
+USE_PYTHON=	true
 
 include ../../meta-pkgs/hpp/Makefile.common
 
@@ -26,5 +27,5 @@ include ../../mapping/octomap/depend.mk
 
 include ../../devel/boost-headers/depend.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++.mk
+include ../../mk/language/c++11.mk
 include ../../mk/robotpkg.mk

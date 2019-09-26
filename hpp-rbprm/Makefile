@@ -7,6 +7,8 @@ HPP_COMMENT=	RB-PRM planner in HPP
 
 CATEGORIES=	wip
 
+USE_PYTHON=	true
+
 include ../../meta-pkgs/hpp/Makefile.common
 
 include ../../wip/hpp-rbprm-robot-data/depend.mk
@@ -29,5 +31,5 @@ include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 
 include ../../mk/language/c.mk
-include ../../mk/language/c++.mk
+include ../../mk/language/c++11.mk
 include ../../mk/robotpkg.mk

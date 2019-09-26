@@ -7,9 +7,10 @@ HPP_COMMENT=	file database
 
 CATEGORIES=	wip
 
+USE_PYTHON=	true
+
 include ../../meta-pkgs/hpp/Makefile.common
 
-include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++11.mk
 include ../../mk/robotpkg.mk

@@ -16,8 +16,6 @@ MAINTAINER=		gepetto-soft@laas.fr
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 CONFLICTS+=		py[0-9][0-9]-${NAME}-v3  # there is stuff not in ${PYTHON_SITELIB}
 
-DEPEND_ABI.python+=	python<3
-
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../math/eigen3/depend.mk

@@ -3,6 +3,17 @@ include/example/robot/data/config.hh
 include/example/robot/data/deprecated.hh
 include/example/robot/data/warning.hh
 lib/pkgconfig/example-robot-data.pc
+share/example-robot-data/anymal_b_simple_description/meshes/base/anymal_base.dae
+share/example-robot-data/anymal_b_simple_description/meshes/base/base_uv_texture.jpg
+share/example-robot-data/anymal_b_simple_description/meshes/foot/anymal_foot.dae
+share/example-robot-data/anymal_b_simple_description/meshes/foot/carbon_uv_texture.jpg
+share/example-robot-data/anymal_b_simple_description/meshes/hip/anymal_hip_l.dae
+share/example-robot-data/anymal_b_simple_description/meshes/hip/anymal_hip_r.dae
+share/example-robot-data/anymal_b_simple_description/meshes/shank/anymal_shank_l.dae
+share/example-robot-data/anymal_b_simple_description/meshes/shank/anymal_shank_r.dae
+share/example-robot-data/anymal_b_simple_description/meshes/thigh/anymal_thigh.dae
+share/example-robot-data/anymal_b_simple_description/robots/anymal.urdf
+share/example-robot-data/anymal_b_simple_description/srdf/anymal.srdf
 share/example-robot-data/hyq_description/meshes/leg/hipassembly.dae
 share/example-robot-data/hyq_description/meshes/leg/lowerleg.dae
 share/example-robot-data/hyq_description/meshes/leg/upperleg.dae

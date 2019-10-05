@@ -4,9 +4,11 @@
 
 HPP_PACKAGE=	hpp-romeo
 HPP_COMMENT=	Python and ros launch files for Romeo robot in hpp.
+PKGREVISION=	1
 
 ROSNAME=	$(subst -,_,${HPP_PACKAGE})
 DISTNAME=	${ROSNAME}-${HPP_VERSION}
+PKGNAME=	${PKGTAG.python-}${HPP_PACKAGE}-${HPP_VERSION}
 
 CATEGORIES=	wip
 

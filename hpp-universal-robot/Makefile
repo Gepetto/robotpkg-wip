@@ -6,12 +6,12 @@ HPP_PACKAGE=	hpp-universal-robot
 HPP_COMMENT=	Data specific to robots ur5 and ur10 for hpp-corbaserver
 
 CATEGORIES=	wip
+USE_PYTHON=	true
 
 include ../../meta-pkgs/hpp/Makefile.common
 
 include ../../wip/example-robot-data/depend.mk
 
-include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++11.mk
 include ../../mk/robotpkg.mk

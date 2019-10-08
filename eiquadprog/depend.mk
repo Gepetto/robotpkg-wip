@@ -15,7 +15,7 @@ PREFER.eiquadprog?=	robotpkg
 
 #TODO
 SYSTEM_SEARCH.eiquadprog=\
-  'include/eiquadprog/config.hh:/EIQUADPROG_VERSION/s/[^0-9.]//gp'	\
+  'include/eiquadprog/config.hpp:/EIQUADPROG_VERSION/s/[^0-9.]//gp'	\
   'lib/pkgconfig/eiquadprog.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=			eiquadprog

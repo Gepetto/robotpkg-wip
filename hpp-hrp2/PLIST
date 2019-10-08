@@ -1,0 +1,9 @@
+@comment Tue Oct 8 10:56:15 CEST 2019
+include/hpp/hrp2/config.hh
+include/hpp/hrp2/deprecated.hh
+include/hpp/hrp2/warning.hh
+lib/pkgconfig/hpp-hrp2.pc
+${PYTHON_SITELIB}/hpp/corbaserver/hrp2/__init__.py
+${PYTHON_SITELIB}/hpp/corbaserver/hrp2/robot.py
+${PYTHON_SITELIB}/hpp/corbaserver/manipulation/hrp2/__init__.py
+${PYTHON_SITELIB}/hpp/corbaserver/manipulation/hrp2/robot.py

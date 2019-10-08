@@ -1,0 +1,1 @@
+Data specific to robot hrp2 for hpp-corbaserver.

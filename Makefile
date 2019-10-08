@@ -32,6 +32,7 @@ SUBDIR+=	hpp-benchmark
 SUBDIR+=	hpp-bezier-com-traj
 SUBDIR+=	hpp-centroidal-dynamics
 SUBDIR+=	hpp-environments
+SUBDIR+=	hpp-hrp2
 SUBDIR+=	hpp-rbprm
 SUBDIR+=	hpp-rbprm-corba
 SUBDIR+=	hpp-rbprm-robot-data

@@ -1,12 +1,29 @@
-@comment Tue Jul 16 00:49:25 CEST 2019
+@comment Wed Oct 9 17:43:37 CEST 2019
 include/talos/data/config.hh
 include/talos/data/deprecated.hh
 include/talos/data/warning.hh
+lib/libSpring.so
+lib/libSpringPlugin.so
+lib/liblibSpring.so
 lib/pkgconfig/talos_data.pc
+local_setup.bash
+local_setup.sh
+local_setup.zsh
+setup.bash
+setup.sh
+setup.zsh
 share/talos_data/cmake/talos_dataConfig-version.cmake
 share/talos_data/cmake/talos_dataConfig.cmake
+share/talos_data/config/collision_parameters.yaml
+share/talos_data/config/default_configuration_hanging.yaml
+share/talos_data/config/default_configuration_locomotion.yaml
+share/talos_data/config/default_configuration_zeros.yaml
 share/talos_data/config/joint_limits.yaml
+share/talos_data/config/rviz.rviz
+share/talos_data/config/talos_plotjuggler.xml
 share/talos_data/gazebo/gazebo.urdf.xacro
+share/talos_data/launch/talos_gazebo.launch
+share/talos_data/launch/talos_spawn.launch
 share/talos_data/meshes/arm/arm_1.STL
 share/talos_data/meshes/arm/arm_1_collision.STL
 share/talos_data/meshes/arm/arm_2.STL
@@ -111,6 +128,8 @@ share/talos_data/urdf/leg/foot_collision_tallbox.urdf.xacro
 share/talos_data/urdf/leg/foot_collision_thinbox.urdf.xacro
 share/talos_data/urdf/leg/leg.transmission.xacro
 share/talos_data/urdf/leg/leg.urdf.xacro
+share/talos_data/urdf/leg/leg_passive.urdf.xacro
+share/talos_data/urdf/leg/leg_passive.urdf.xacro~
 share/talos_data/urdf/materials.urdf.xacro
 share/talos_data/urdf/sensors/calibration.xacro
 share/talos_data/urdf/sensors/ftsensor.urdf.xacro
@@ -121,7 +140,9 @@ share/talos_data/urdf/sensors/orbbec_astra_pro.urdf.xacro
 share/talos_data/urdf/sensors/xtion_pro_live.gazebo.xacro
 share/talos_data/urdf/sensors/xtion_pro_live.urdf.xacro
 share/talos_data/urdf/talos_full.urdf
+share/talos_data/urdf/talos_full_common.urdf.xacro
 share/talos_data/urdf/talos_full_v2.urdf
+share/talos_data/urdf/talos_full_v2.urdf.xacro
 share/talos_data/urdf/talos_reduced.urdf
 share/talos_data/urdf/talos_reduced_v2.urdf
 share/talos_data/urdf/talos_reduced_wpg.urdf

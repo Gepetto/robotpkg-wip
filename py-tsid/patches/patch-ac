@@ -1,0 +1,30 @@
+--- CMakeLists.txt.orig	2019-10-09 16:24:46.000000000 +0200
++++ CMakeLists.txt	2019-10-09 16:31:36.347666937 +0200
+@@ -79,6 +79,7 @@
+ #  - If it isn't, nothing happens and the subsequent pkg-config check takes care of everything.
+ 
+ ADD_REQUIRED_DEPENDENCY("pinocchio >= 2.0.0")
++ADD_REQUIRED_DEPENDENCY("tsid >= 1.2.1")
+ 
+ SET(BOOST_REQUIERED_COMPONENTS filesystem system)
+ SET(BOOST_BUILD_COMPONENTS unit_test_framework)
+--- bindings/python/CMakeLists.txt.orig	2019-09-16 11:12:22.000000000 +0200
++++ bindings/python/CMakeLists.txt	2019-10-09 16:36:03.733286369 +0200
+@@ -112,6 +112,7 @@
+ ADD_SOURCE_GROUP(${PYWRAP}_SOURCES)
+ PKG_CONFIG_USE_DEPENDENCY(${PYWRAP} eigenpy)
+ PKG_CONFIG_USE_DEPENDENCY(${PYWRAP} pinocchio)
++PKG_CONFIG_USE_DEPENDENCY(${PYWRAP} tsid)
+ 
+ TARGET_LINK_LIBRARIES(${PYWRAP} ${PROJECT_NAME})
+ TARGET_LINK_BOOST_PYTHON(${PYWRAP})
+--- unittest/CMakeLists.txt.orig	2019-09-16 11:12:22.000000000 +0200
++++ unittest/CMakeLists.txt	2019-10-09 16:39:06.392569781 +0200
+@@ -41,6 +41,7 @@
+   FOREACH(PKG ${PKGS})
+     PKG_CONFIG_USE_DEPENDENCY(${NAME} ${PKG})
+   ENDFOREACH(PKG)
++  PKG_CONFIG_USE_DEPENDENCY(${NAME} tsid)
+ 
+   TARGET_LINK_LIBRARIES(${NAME} ${PROJECT_NAME})
+   TARGET_LINK_LIBRARIES(${NAME} ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})

@@ -4,23 +4,17 @@
 
 ORG=			stack-of-tasks
 NAME=			parametric-curves
-VERSION=		1.2.2
-
-DISTNAME=		${NAME}-${VERSION}
-PKGNAME=		${PKGTAG.python-}${DISTNAME}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}
-CHECKOUT_VCS_OPTS+=	--recursive
+VERSION=		1.2.3
 
 CATEGORIES=		wip
 COMMENT=		This packages provides a template based parametric curves library (python bindings)
 LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto-soft@laas.fr
 
-CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
+USE_PYTHON_ONLY=	true
 
 include ../../${CATEGORIES}/${NAME}/depend.mk
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../math/py-eigenpy/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

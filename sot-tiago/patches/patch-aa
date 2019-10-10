@@ -1,0 +1,21 @@
+--- src/sot-tiago-controller.cpp
++++ src/sot-tiago-controller.cpp
+@@ -11,6 +11,7 @@
+  *
+  */
+ 
++#include <pinocchio/fwd.hpp>
+ #include <sot/core/debug.hh>
+ #include <sot/core/exception-abstract.hh>
+ #include <dynamic_graph_bridge/ros_init.hh>
+--- src/sot-tiago-steel-controller.cpp
++++ src/sot-tiago-steel-controller.cpp
+@@ -14,6 +14,7 @@
+ # error "You must define TIAGO_STEEL_WITH_WHEELS to 0 or 1"
+ #endif
+ 
++#include <pinocchio/fwd.hpp>
+ #include <sot/core/debug.hh>
+ 
+ /* TiagoSteel is the instance of TIAGO named "steel" */
+

@@ -1,0 +1,6 @@
+@comment Thu Oct 17 10:38:43 CEST 2019
+${PYTHON_SITELIB}/solo_pybullet/PD.py
+${PYTHON_SITELIB}/solo_pybullet/__init__.py
+${PYTHON_SITELIB}/solo_pybullet/__main__.py
+${PYTHON_SITELIB}/solo_pybullet/controller.py
+${PYTHON_SITELIB}/solo_pybullet/initialization_simulation.py

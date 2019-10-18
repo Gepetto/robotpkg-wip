@@ -105,6 +105,7 @@ SUBDIR+=	py-qpoases
 SUBDIR+=	py-qt-gepetto-pythonqt
 SUBDIR+=	py-quadprog
 SUBDIR+=	py-skeleton-model
+SUBDIR+=	py-solo-pybullet
 SUBDIR+=	py-sot-application-v3
 SUBDIR+=	py-sot-core-v3
 SUBDIR+=	py-sot-dynamic-pinocchio-v3

@@ -4,9 +4,9 @@ include/momentumopt/cntopt/ContactPlanInterface.hpp
 include/momentumopt/cntopt/ContactState.hpp
 include/momentumopt/dynopt/DynamicsOptimizer.hpp
 include/momentumopt/dynopt/DynamicsState.hpp
-include/momentumopt/settting/Definitions.hpp
-include/momentumopt/settting/PlannerParams.hpp
-include/momentumopt/settting/PlannerSetting.hpp
+include/momentumopt/setting/Definitions.hpp
+include/momentumopt/setting/PlannerParams.hpp
+include/momentumopt/setting/PlannerSetting.hpp
 include/momentumopt/utilities/Clock.hpp
 include/momentumopt/yaml_eigen.h
 include/timeoptimization/solver/interface/Cone.hpp

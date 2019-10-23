@@ -1,0 +1,12 @@
+fix link
+
+--- momentumopt/CMakeLists.txt.orig	2019-10-23 22:04:53.000000000 +0200
++++ momentumopt/CMakeLists.txt	2019-10-23 22:05:26.509233012 +0200
+@@ -62,6 +62,7 @@
+ set(momentumopt_LIBS
+   ${Boost_LIBRARIES}
+   ${catkin_LIBRARIES}
++  ${YAML_CPP_LIBRARIES}
+ )
+ IF(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+   set(momentumopt_LIBS ${momentumopt_LIBS} rt)

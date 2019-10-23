@@ -1,4 +1,4 @@
-# robotpkg Makefile for:	wip/hpp-rbprm-corba
+# robotpkg Makefile for:	wip/py37-hpp-rbprm-corba
 # Created:			Guilhem Saurel on Wed, 30 Jan 2019
 #
 
@@ -32,7 +32,6 @@ include ../../middleware/omniORB/depend.mk
 include ../../middleware/py-omniORBpy/depend.mk
 
 include ../../devel/boost-headers/depend.mk
-include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

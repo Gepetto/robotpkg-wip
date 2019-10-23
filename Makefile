@@ -114,6 +114,7 @@ SUBDIR+=	py-sot-pattern-generator-v3
 SUBDIR+=	py-sot-talos-balance
 SUBDIR+=	py-sot-tools-v3
 SUBDIR+=	py-sot-torque-control
+SUBDIR+=	py-talos-rbprm
 SUBDIR+=	py-tsid
 SUBDIR+=	pyrene-motions
 SUBDIR+=	roralink

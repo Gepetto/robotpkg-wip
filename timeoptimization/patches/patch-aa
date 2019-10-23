@@ -1,0 +1,42 @@
+From dd3bf271dfcfbd5f963d933c21a7ecef2dfaada7 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Wed, 23 Oct 2019 21:51:05 +0200
+Subject: [PATCH] [CMake] fix dependency after its name update
+
+---
+ momentumopt/CMakeLists.txt | 2 +-
+ momentumopt/package.xml    | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/momentumopt/CMakeLists.txt b/momentumopt/CMakeLists.txt
+index a9e2cd9..3ab8da8 100644
+--- momentumopt/CMakeLists.txt
++++ momentumopt/CMakeLists.txt
+@@ -28,7 +28,7 @@ find_package(yaml-cpp)
+ catkin_package(
+   INCLUDE_DIRS include
+   LIBRARIES momentumopt
+-  CATKIN_DEPENDS solver
++  CATKIN_DEPENDS timeoptimization-solver
+ )
+ 
+ get_filename_component(TEST_PATH tests ABSOLUTE)
+diff --git a/momentumopt/package.xml b/momentumopt/package.xml
+index d8c08d2..93fed9a 100644
+--- momentumopt/package.xml
++++ momentumopt/package.xml
+@@ -8,9 +8,9 @@
+   
+   <buildtool_depend>catkin</buildtool_depend>
+   
+-  <build_depend>solver</build_depend>
++  <build_depend>timeoptimization-solver</build_depend>
+   
+-  <run_depend>solver</run_depend>
++  <run_depend>timeoptimization-solver</run_depend>
+   
+   <export>
+   </export>
+-- 
+2.23.0
+

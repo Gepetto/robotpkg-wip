@@ -167,6 +167,7 @@ SUBDIR+=	tiago-robot
 SUBDIR+=	tiago-simulation
 SUBDIR+=	tiago-metapkg-ros-control-sot
 SUBDIR+=	tiago-tutorials
+SUBDIR+=	timeoptimization
 SUBDIR+=	tsid
 SUBDIR+=	ur5-description
 SUBDIR+=	urg

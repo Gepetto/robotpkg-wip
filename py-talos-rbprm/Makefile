@@ -11,7 +11,7 @@ USE_PYTHON=	true
 
 include ../../meta-pkgs/hpp/Makefile.common
 
-include ../../wip/hpp-rbprm-corba/depend.mk
+include ../../wip/py-hpp-rbprm-corba/depend.mk
 
 include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk

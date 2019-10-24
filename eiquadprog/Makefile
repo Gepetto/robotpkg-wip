@@ -12,6 +12,7 @@ LICENSE=		gnu-lgpl-v3
 MAINTAINER=		gsaurel@laas.fr
 
 DEPEND_ABI.cmake+=	cmake>=3.0.0
+DEPEND_ABI.eigen3+=	eigen3>=3.2.98
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/boost-headers/depend.mk

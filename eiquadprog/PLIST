@@ -3,6 +3,8 @@ include/eiquadprog/config.hpp
 include/eiquadprog/deprecated.hpp
 include/eiquadprog/eiquadprog-fast.hpp
 include/eiquadprog/eiquadprog-fast.hxx
+include/eiquadprog/eiquadprog-rt.hpp
+include/eiquadprog/eiquadprog-rt.hxx
 include/eiquadprog/eiquadprog.hpp
 include/eiquadprog/warning.hpp
 lib/pkgconfig/eiquadprog.pc

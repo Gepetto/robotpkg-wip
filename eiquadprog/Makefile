@@ -4,12 +4,14 @@
 
 ORG=			stack-of-tasks
 NAME=			eiquadprog
-VERSION=		0.0.3
+VERSION=		1.0.0
 
 CATEGORIES=		wip
 COMMENT=		algorithm of Goldfarb and Idnani for the solution of a QP
-LICENSE=		2-clause-bsd
+LICENSE=		gnu-lgpl-v3
 MAINTAINER=		gsaurel@laas.fr
+
+DEPEND_ABI.cmake+=	cmake>=3.0.0
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/boost-headers/depend.mk

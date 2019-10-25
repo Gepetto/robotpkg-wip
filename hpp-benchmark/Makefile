@@ -23,12 +23,12 @@ include ../../meta-pkgs/hpp/Makefile.common
 include ../../wip/hpp-baxter/depend.mk
 include ../../wip/hpp-romeo/depend.mk
 
-include ../../graphics/gepetto-viewer/depend.mk
-include ../../graphics/gepetto-viewer-corba/depend.mk
-include ../../graphics/hpp-gepetto-viewer/depend.mk
+include ../../graphics/py-qt-gepetto-viewer/depend.mk
+include ../../graphics/py-qt-gepetto-viewer-corba/depend.mk
+include ../../graphics/py-qt-hpp-gepetto-viewer/depend.mk
 include ../../math/hpp-pinocchio/depend.mk
 include ../../middleware/omniORB/depend.mk
-include ../../path/hpp-corbaserver/depend.mk
+include ../../path/py-hpp-corbaserver/depend.mk
 include ../../path/hpp-constraints/depend.mk
 include ../../path/hpp-core/depend.mk
 include ../../robots/romeo-description/depend.mk

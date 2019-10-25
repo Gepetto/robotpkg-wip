@@ -16,7 +16,7 @@ USE_PYTHON=	true
 
 include ../../meta-pkgs/hpp/Makefile.common
 include ../../math/hpp-pinocchio/depend.mk
-include ../../path/hpp-corbaserver/depend.mk
+include ../../path/py-hpp-corbaserver/depend.mk
 include ../../path/hpp-constraints/depend.mk
 include ../../path/hpp-core/depend.mk
 

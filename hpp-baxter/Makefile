@@ -18,7 +18,7 @@ include ../../meta-pkgs/hpp/Makefile.common
 include ../../wip/ros-baxter-common/depend.mk
 
 include ../../mapping/octomap/depend.mk
-include ../../path/hpp-corbaserver/depend.mk
+include ../../path/py-hpp-corbaserver/depend.mk
 
 include ../../mk/language/c.mk
 include ../../mk/language/c++11.mk

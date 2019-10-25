@@ -20,7 +20,7 @@ include ../../middleware/omniORB/depend.mk
 include ../../middleware/py-omniORBpy/depend.mk
 include ../../path/hpp-constraints/depend.mk
 include ../../path/hpp-core/depend.mk
-include ../../path/hpp-corbaserver/depend.mk
+include ../../path/py-hpp-corbaserver/depend.mk
 include ../../path/hpp-fcl/depend.mk
 include ../../path/hpp-util/depend.mk
 include ../../mapping/octomap/depend.mk

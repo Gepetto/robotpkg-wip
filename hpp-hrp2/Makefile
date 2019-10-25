@@ -10,8 +10,8 @@ USE_PYTHON=	true
 
 include ../../meta-pkgs/hpp/Makefile.common
 
-include ../../path/hpp-corbaserver/depend.mk
-include ../../path/hpp-manipulation-corba/depend.mk
+include ../../path/py-hpp-corbaserver/depend.mk
+include ../../path/py-hpp-manipulation-corba/depend.mk
 
 include ../../mk/language/c.mk
 include ../../mk/language/c++11.mk

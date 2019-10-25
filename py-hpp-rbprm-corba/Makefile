@@ -24,7 +24,7 @@ include ../../wip/hpp-affordance-corba/depend.mk
 
 include ../../math/eigen3/depend.mk
 include ../../path/hpp-core/depend.mk
-include ../../path/hpp-corbaserver/depend.mk
+include ../../path/py-hpp-corbaserver/depend.mk
 include ../../path/hpp-util/depend.mk
 include ../../mapping/octomap/depend.mk
 

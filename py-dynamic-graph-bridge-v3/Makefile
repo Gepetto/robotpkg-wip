@@ -4,6 +4,7 @@
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-bridge
 VERSION=		3.2.4
+PKGREVISION=		1
 
 ROSNAME=		$(subst -,_,${NAME})
 DISTNAME=		${ROSNAME}-v3-${VERSION}
@@ -22,6 +23,10 @@ CONFLICTS+=		${ROSNAME}
 CONFLICTS+=		py[0-9][0-9]-${ROSNAME}
 
 CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
+# Needed for robotpkg to install in site-packages
+CMAKE_ARGS+=		-DSETUPTOOLS_DEB_LAYOUT=OFF
+# Needed for dynamic_graph_bridge to be installed in site-packages
+CMAKE_ARGS+=		-DPYTHON_STANDARD_LAYOUT=ON
 
 DYNAMIC_PLIST_DIRS+=	share/doc/doxygen-html
 DYNAMIC_PLIST_DIRS+=	share/gennodejs/ros/${ROSNAME}

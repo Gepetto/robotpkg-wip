@@ -4,25 +4,16 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-tutorial
-VERSION=		1.1.2
-
-DISTNAME=		${NAME}-${VERSION}
-PKGNAME=		${PKGTAG.python-}${DISTNAME}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${NAME}
-CHECKOUT_VCS_OPTS+=	--recursive
+VERSION=		1.2.0
 
 CATEGORIES=		wip
 COMMENT=		Tutorial for the dynamic-graph
 LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto-soft@laas.fr
 
-CMAKE_ARGS+=	-DCMAKE_INSTALL_DOCDIR=share/doc/${PKGBASE}
+USE_PYTHON_ONLY=	true
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-DYNAMIC_PLIST_DIRS+=	share/doc/${PKGTAG.python-}${NAME}
-
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/${NAME}/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk

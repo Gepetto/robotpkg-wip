@@ -14,7 +14,7 @@ ifeq (+,$(DYNAMIC_GRAPH_TUTORIAL_DEPEND_MK)) # ---------------------------------
 PREFER.dynamic-graph-tutorial?=	robotpkg
 
 SYSTEM_SEARCH.dynamic-graph-tutorial=\
-  'include/dynamic/graph/tutorial/config.hh:/DYNAMIC_GRAPH_TUTORIAL_VERSION/s/[^0-9.]//gp'	\
+  'include/dynamic-graph/tutorial/config.hh:/DYNAMIC_GRAPH_TUTORIAL_VERSION/s/[^0-9.]//gp'	\
   'lib/libdynamic-graph-tutorial.so'							\
   'lib/pkgconfig/dynamic-graph-tutorial.pc:/Version/s/[^0-9.]//gp'
 

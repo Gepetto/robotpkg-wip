@@ -1,9 +1,15 @@
 @comment Thu Aug 16 17:45:45 CEST 2018
 include/dynamic-graph/python/api.hh
 include/dynamic-graph/python/config.hh
+include/dynamic-graph/python/convert-dg-to-py.hh
 include/dynamic-graph/python/deprecated.hh
+include/dynamic-graph/python/dynamic-graph-py.hh
 include/dynamic-graph/python/exception-python.hh
+include/dynamic-graph/python/exception.hh
 include/dynamic-graph/python/interpreter.hh
+include/dynamic-graph/python/link-to-python.hh
+include/dynamic-graph/python/python-compat.hh
+include/dynamic-graph/python/signal-wrapper.hh
 include/dynamic-graph/python/warning.hh
 lib/libdynamic-graph-python.so
 lib/libdynamic-graph-python.so.${PKGVERSION}
@@ -11,7 +17,6 @@ lib/pkgconfig/dynamic-graph-python.pc
 ${PYTHON_SITELIB}/dynamic_graph/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/attrpath.py
 ${PYTHON_SITELIB}/dynamic_graph/entity.py
-${PYTHON_SITELIB}/dynamic_graph/matlab.py
 ${PYTHON_SITELIB}/dynamic_graph/script_shortcuts.py
 ${PYTHON_SITELIB}/dynamic_graph/signal_base.py
 ${PYTHON_SITELIB}/dynamic_graph/tools.py

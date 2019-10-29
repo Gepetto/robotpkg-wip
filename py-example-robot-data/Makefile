@@ -13,6 +13,8 @@ MAINTAINER=		gepetto@laas.fr
 
 USE_PYTHON_ONLY=	true
 
+DEPEND_ABI.cmake+=	cmake>=3.0.0
+
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../${CATEGORIES}/${NAME}/depend.mk
 

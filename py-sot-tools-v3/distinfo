@@ -1,6 +1,3 @@
-SHA1 (sot-tools-2.1.1.tar.gz) = d601b2195c522b299be6513fde50abd3255612b6
-RMD160 (sot-tools-2.1.1.tar.gz) = c563c697edc55cfcaab9b40acb2291bdcaeb3843
-Size (sot-tools-2.1.1.tar.gz) = 795231 bytes
-SHA1 (patch-aa) = 6fc15aa32b1440fead21a83459638f0436df85bf
-SHA1 (patch-ab) = 65531cbbc1ea697e9f4f63f864fd811a99e955ae
-SHA1 (patch-ad) = 9731f90f2c33abec026a1d34cfaa653316b84427
+SHA1 (sot-tools-2.2.0.tar.gz) = 24bba437f50e4e895f4681a3bb288d30489284cd
+RMD160 (sot-tools-2.2.0.tar.gz) = 8f3e58fd22b9f8a52c8b49e9b27e34c74d3395a5
+Size (sot-tools-2.2.0.tar.gz) = 796458 bytes

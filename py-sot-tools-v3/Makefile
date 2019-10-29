@@ -4,14 +4,9 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-tools
-VERSION=		2.1.1
+VERSION=		2.2.0
 
-DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}
-CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		tools for the sot-core package (python bindings)
@@ -20,11 +15,9 @@ MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
-CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF  # doxygen segfaults on 14.04
+USE_PYTHON_ONLY=	true
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/py-sot-core-v3/depend.mk

@@ -3,16 +3,11 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-bridge
-VERSION=		3.2.4
-PKGREVISION=		1
+VERSION=		3.3.0
 
 ROSNAME=		$(subst -,_,${NAME})
 DISTNAME=		${ROSNAME}-v3-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}-v3/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}
-CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		This ROS package binds together the ROS framework with the dynamic-graph real-time control architecture.
@@ -33,6 +28,7 @@ DYNAMIC_PLIST_DIRS+=	share/gennodejs/ros/${ROSNAME}
 DYNAMIC_PLIST_DIRS+=	share/roseus/ros/${ROSNAME}
 DYNAMIC_PLIST_DIRS+=	share/commonlisp/ros/${ROSNAME}
 
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-realtime-tools/depend.mk
 include ../../devel/ros-roscpp-core/depend.mk

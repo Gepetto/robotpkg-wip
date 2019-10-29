@@ -4,8 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-core
-VERSION=		4.6.0
-PKGREVISION=		1
+VERSION=		4.7.0
 
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
@@ -16,9 +15,7 @@ MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 
-CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
-CMAKE_ARGS+=		-DINSTALL_PYTHON_INTERFACE_ONLY=ON
-CMAKE_ARGS+=		-DPYTHON_PACKAGES_DIR="site-packages"
+USE_PYTHON_ONLY=	true
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk

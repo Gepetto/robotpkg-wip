@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-pattern-generator
-VERSION=		3.2.1
+VERSION=		3.2.2
 
 PKGNAME=		${NAME}-v3-${VERSION}
 

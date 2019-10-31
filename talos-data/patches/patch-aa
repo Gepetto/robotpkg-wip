@@ -1,0 +1,16 @@
+fix for Gazebo 9
+
+--- src/SpringPlugin.cc.orig	2019-10-22 09:57:51.000000000 +0200
++++ src/SpringPlugin.cc	2019-10-31 19:11:11.766354569 +0100
+@@ -77,7 +77,11 @@
+   common::Time stepTime = currTime - this->prevUpdateTime;
+   this->prevUpdateTime = currTime;
+ 
++#if GAZEBO_MAJOR_VERSION < 9
+   double pos = this->jointExplicit->GetAngle(0).Radian();
++#else
++  double pos = this->jointExplicit->Position(0);
++#endif
+   double vel = this->jointExplicit->GetVelocity(0);
+   double force = -this->kpExplicit * pos
+                  -this->kdExplicit * vel;

@@ -1,4 +1,4 @@
-@comment Fri Jul 13 12:13:49 CEST 2018
+@comment Thu Oct 31 22:20:35 CST 2019
 include/sot/core/abstract-sot-external-interface.hh
 include/sot/core/additional-functions.hh
 include/sot/core/api.hh
@@ -31,6 +31,7 @@ include/sot/core/feature-joint-limits.hh
 include/sot/core/feature-line-distance.hh
 include/sot/core/feature-point6d-relative.hh
 include/sot/core/feature-point6d.hh
+include/sot/core/feature-pose.hh
 include/sot/core/feature-posture.hh
 include/sot/core/feature-task.hh
 include/sot/core/feature-vector3.hh
@@ -116,6 +117,8 @@ lib/plugin/feature-point6d-relative.so
 lib/plugin/feature-point6d-relative.so.${PKGVERSION}
 lib/plugin/feature-point6d.so
 lib/plugin/feature-point6d.so.${PKGVERSION}
+lib/plugin/feature-pose.so
+lib/plugin/feature-pose.so.${PKGVERSION}
 lib/plugin/feature-posture.so
 lib/plugin/feature-posture.so.${PKGVERSION}
 lib/plugin/feature-task.so

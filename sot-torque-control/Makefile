@@ -4,8 +4,7 @@
 
 ORG=				stack-of-tasks
 NAME=				sot-torque-control
-VERSION=			1.4.0
-PKGREVISION=			1
+VERSION=			1.5.0
 
 CATEGORIES=			wip
 COMMENT=			Torque control for humanoids

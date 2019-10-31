@@ -1,12 +1,11 @@
 @comment Wed Feb 21 18:24:12 CET 2018
-include/sot/torque-control/config.hh
-include/sot/torque-control/deprecated.hh
-include/sot/torque-control/warning.hh
 include/sot/torque_control/admittance-controller.hh
 include/sot/torque_control/base-estimator.hh
 include/sot/torque_control/commands-helper.hh
+include/sot/torque_control/config.hh
 include/sot/torque_control/control-manager.hh
 include/sot/torque_control/current-controller.hh
+include/sot/torque_control/deprecated.hh
 include/sot/torque_control/device-torque-ctrl.hh
 include/sot/torque_control/free-flyer-locator.hh
 include/sot/torque_control/imu_offset_compensation.hh
@@ -25,6 +24,7 @@ include/sot/torque_control/utils/poly-estimator.hh
 include/sot/torque_control/utils/quad-estimator.hh
 include/sot/torque_control/utils/trajectory-generators.hh
 include/sot/torque_control/utils/vector-conversions.hh
+include/sot/torque_control/warning.hh
 lib/libsot-torque-control.so
 lib/libsot-torque-control.so.${PKGVERSION}
 lib/pkgconfig/sot-torque-control.pc

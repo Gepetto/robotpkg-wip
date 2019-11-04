@@ -47,6 +47,8 @@ lib/plugin/ft-calibration.so
 lib/plugin/ft-calibration.so.${PKGVERSION}
 lib/plugin/ft-wrist-calibration.so
 lib/plugin/ft-wrist-calibration.so.${PKGVERSION}
+lib/plugin/hip-flexibility-compensation.so
+lib/plugin/hip-flexibility-compensation.so.${PKGVERSION}
 lib/plugin/int-identity.so
 lib/plugin/int-identity.so.${PKGVERSION}
 lib/plugin/joint-position-controller.so
@@ -112,6 +114,7 @@ share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/DSP20SSP780/RightFoot
 share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/DSP20SSP780/WaistOrientation.dat
 share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/DSP20SSP780/ZMP.dat
 share/sot_talos_balance/launch/spawn_ramp.launch
+share/sot_talos_balance/launch/talos_gazebo_flex.launch
 share/sot_talos_balance/launch/talos_gazebo_half_sitting.launch
 share/sot_talos_balance/launch/talos_gazebo_testEE.launch
 share/sot_talos_balance/launch/talos_gazebo_testEE_calibration.launch

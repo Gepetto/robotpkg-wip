@@ -4,15 +4,9 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-application
-VERSION=		1.2.0
-PKGREVISION=		2
+VERSION=		1.2.2
 
-DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
 
 CATEGORIES=		wip
 COMMENT=		Application dependent control graph initialization scripts for the Stack of Tasks
@@ -21,10 +15,7 @@ MAINTAINER=		gepetto@laas.fr
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
-CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR=lib
-
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
 include ../../wip/py-sot-dynamic-pinocchio-v3/depend.mk
 #include ../../wip/sot-dyninv-v3/depend.mk

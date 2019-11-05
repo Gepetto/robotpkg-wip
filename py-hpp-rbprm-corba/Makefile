@@ -20,7 +20,7 @@ USE_PYTHON=		true
 include ../../meta-pkgs/hpp/Makefile.common
 
 include ../../wip/hpp-rbprm/depend.mk
-include ../../wip/hpp-affordance-corba/depend.mk
+include ../../wip/py-hpp-affordance-corba/depend.mk
 
 include ../../math/eigen3/depend.mk
 include ../../path/hpp-core/depend.mk

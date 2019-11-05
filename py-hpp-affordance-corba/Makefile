@@ -1,13 +1,14 @@
-# robotpkg Makefile for:	wip/hpp-affordance-corba
+# robotpkg Makefile for:	wip/py-hpp-affordance-corba
 # Created:			Guilhem Saurel on fri, 4 Jan 2019
 #
 
-HPP_PACKAGE=	hpp-affordance-corba
-HPP_COMMENT=	Extract Whole-Body Affordances for Mutli-Contact Planning (CORBA bindings)
+HPP_PACKAGE=		hpp-affordance-corba
+HPP_COMMENT=		Extract Whole-Body Affordances for Mutli-Contact Planning (CORBA bindings)
 
-CATEGORIES=	wip
+CATEGORIES=		wip
 
-USE_PYTHON=	true
+USE_PYTHON=		true
+PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common
 

@@ -1,13 +1,14 @@
-# robotpkg Makefile for:	wip/hpp-universal-robot
+# robotpkg Makefile for:	wip/py-hpp-universal-robot
 # Created:			Guilhem Saurel on Fri, 10 Oct 2018
 #
 
-HPP_PACKAGE=	hpp-universal-robot
-HPP_COMMENT=	Data specific to robots ur5 and ur10 for hpp-corbaserver
-HPP_VERSION=	4.7.1
+HPP_PACKAGE=		hpp-universal-robot
+HPP_COMMENT=		Data specific to robots ur5 and ur10 for hpp-corbaserver
+HPP_VERSION=		4.7.1
 
-CATEGORIES=	wip
-USE_PYTHON=	true
+CATEGORIES=		wip
+USE_PYTHON=		true
+PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common
 

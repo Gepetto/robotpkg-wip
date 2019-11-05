@@ -12,7 +12,7 @@ PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common
 
-include ../../wip/hpp-rbprm-robot-data/depend.mk
+include ../../wip/py-hpp-rbprm-robot-data/depend.mk
 include ../../wip/py-hpp-environments/depend.mk
 
 include ../../path/hpp-core/depend.mk

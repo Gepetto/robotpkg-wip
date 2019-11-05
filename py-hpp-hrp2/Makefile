@@ -2,11 +2,12 @@
 # Created:			Guilhem Saurel on Tue,  8 Oct 2019
 #
 
-HPP_PACKAGE=	hpp-hrp2
-HPP_COMMENT=	Data specific to robots hrp2 for hpp-corbaserver
+HPP_PACKAGE=		hpp-hrp2
+HPP_COMMENT=		Data specific to robots hrp2 for hpp-corbaserver
 
-CATEGORIES=	wip
-USE_PYTHON=	true
+CATEGORIES=		wip
+USE_PYTHON=		true
+PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common
 

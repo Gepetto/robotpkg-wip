@@ -12,7 +12,7 @@ USE_PYTHON=	true
 include ../../meta-pkgs/hpp/Makefile.common
 
 include ../../wip/hpp-rbprm-robot-data/depend.mk
-include ../../wip/hpp-environments/depend.mk
+include ../../wip/py-hpp-environments/depend.mk
 
 include ../../path/hpp-core/depend.mk
 include ../../path/hpp-util/depend.mk

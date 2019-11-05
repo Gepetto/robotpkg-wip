@@ -1,18 +1,19 @@
-# robotpkg Makefile for:	wip/hpp-romeo
+# robotpkg Makefile for:	wip/py-hpp-romeo
 # Created:			Guilhem Saurel on Fri, 10 Oct 2018
 #
 
-HPP_PACKAGE=	hpp-romeo
-HPP_COMMENT=	Python and ros launch files for Romeo robot in hpp.
+HPP_PACKAGE=		hpp-romeo
+HPP_COMMENT=		Python and ros launch files for Romeo robot in hpp.
 
-ROSNAME=	$(subst -,_,${HPP_PACKAGE})
-DISTNAME=	${ROSNAME}-${HPP_VERSION}
+ROSNAME=		$(subst -,_,${HPP_PACKAGE})
+DISTNAME=		${ROSNAME}-${HPP_VERSION}
 
-CATEGORIES=	wip
+CATEGORIES=		wip
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
 
-USE_PYTHON=	true
+USE_PYTHON=		true
+PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common
 include ../../math/hpp-pinocchio/depend.mk

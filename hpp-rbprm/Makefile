@@ -19,7 +19,7 @@ include ../../path/hpp-util/depend.mk
 include ../../path/hpp-statistics/depend.mk
 include ../../path/hpp-fcl/depend.mk
 include ../../path/hpp-constraints/depend.mk
-include ../../wip/hpp-bezier-com-traj/depend.mk
+include ../../wip/py-hpp-bezier-com-traj/depend.mk
 include ../../wip/hpp-centroidal-dynamics/depend.mk
 include ../../wip/hpp-affordance/depend.mk
 include ../../wip/hpp-spline/depend.mk

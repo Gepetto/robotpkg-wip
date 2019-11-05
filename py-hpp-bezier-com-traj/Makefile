@@ -1,14 +1,15 @@
-# robotpkg Makefile for:	wip/hpp-bezier-com-traj
+# robotpkg Makefile for:	wip/py-hpp-bezier-com-traj
 # Created:			Guilhem Saurel on Fri, 4 Jan 2019
 #
 
-HPP_PACKAGE=	hpp-bezier-com-traj
-HPP_COMMENT=	trajectory generation for the COM with bezier curves
+HPP_PACKAGE=		hpp-bezier-com-traj
+HPP_COMMENT=		trajectory generation for the COM with bezier curves
 
-CATEGORIES=	wip
+CATEGORIES=		wip
 
 USE_BOOST_LIBS=		python
 USE_PYTHON=		true
+PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common
 

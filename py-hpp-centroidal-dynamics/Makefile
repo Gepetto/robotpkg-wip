@@ -1,14 +1,15 @@
-# robotpkg Makefile for:	wip/hpp-centroidal-dynamics
+# robotpkg Makefile for:	wip/py-hpp-centroidal-dynamics
 # Created:			Guilhem Saurel on Thu, 3 Jan 2019
 #
 
-HPP_PACKAGE=	hpp-centroidal-dynamics
-HPP_COMMENT=	testing equilibrium
+HPP_PACKAGE=		hpp-centroidal-dynamics
+HPP_COMMENT=		testing equilibrium
 
-CATEGORIES=	wip
+CATEGORIES=		wip
 
 USE_BOOST_LIBS=		python
 USE_PYTHON=		true
+PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common
 

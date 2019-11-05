@@ -14,7 +14,7 @@ PYTHON_NOTAG_CONFLICT=	yes
 include ../../meta-pkgs/hpp/Makefile.common
 
 include ../../wip/hpp-spline/depend.mk
-include ../../wip/hpp-centroidal-dynamics/depend.mk
+include ../../wip/py-hpp-centroidal-dynamics/depend.mk
 
 include ../../math/py-eigenpy/depend.mk
 include ../../math/eigen3/depend.mk

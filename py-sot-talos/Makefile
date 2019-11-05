@@ -1,27 +1,19 @@
-# robotpkg Makefile for:	wip/sot-talos
+# robotpkg Makefile for:	wip/py-sot-talos
 # Created:			Olivier Stasse, on Tue. 9th May, 2017
 #
 
 ORG=			stack-of-tasks
 NAME=			sot-talos
-VERSION=		1.0.6
-
-PKGNAME=		${NAME}-${VERSION}
-DISTNAME=		${NAME}-${VERSION}
-DIST_SUBDIR=		${PKGBASE}
-
-HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${NAME}}
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${NAME}
-CHECKOUT_VCS_OPTS+=	--recursive
+VERSION=		1.1.0
 
 CATEGORIES=		wip
 COMMENT=		This packages provides a generic Stack Of Tasks library for the humanoid robot Pyrene.
 LICENSE=		2-clause-bsd
 MAINTAINER=		ostasse@laas.fr
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
+USE_PYTHON=		true
 
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/talos-data/depend.mk
 include ../../wip/py-sot-application-v3/depend.mk
 #include ../../wip/sot-dyninv-v3/depend.mk

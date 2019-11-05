@@ -10,7 +10,7 @@ COMMENT=	Tiago dev Software
 
 META_PACKAGE=	yes
 
-include ../sot-tiago/depend.mk
+include ../py-sot-tiago/depend.mk
 include ../tiago-metapkg-ros-control-sot/depend.mk
 include ../prf-gazebo-ros-pkgs/depend.mk
 include ../tiago-simulation/depend.mk

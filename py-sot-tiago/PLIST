@@ -4,14 +4,15 @@ include/sot-tiago/deprecated.hh
 include/sot-tiago/warning.hh
 lib/libsot-tiago-device.so
 lib/libsot-tiago-steel-controller.so
+lib/libsot-tiago-steel-without-wheels-controller.so
 lib/pkgconfig/sot-tiago.pc
 lib/plugin/libdiff-drive-controller.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/tiago/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/tiago/diff_drive_controller/__init__.py
-${PYTHON_SITELIB}/dynamic_graph/sot/tiago/diff_drive_controller/wrap${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/dynamic_graph/sot/tiago/diff_drive_controller/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/tiago/robot.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/tiago/sot_tiago_device/__init__.py
-${PYTHON_SITELIB}/dynamic_graph/sot/tiago/sot_tiago_device/wrap${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/dynamic_graph/sot/tiago/sot_tiago_device/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/tiago/steel/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/tiago/steel/prologue.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/tiago/steel/robot.py

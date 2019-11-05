@@ -1,13 +1,14 @@
-# robotpkg Makefile for:	wip/hpp-rbprm
+# robotpkg Makefile for:	wip/py-hpp-rbprm
 # Created:			Guilhem Saurel on Wed, 30 Jan 2019
 #
 
-HPP_PACKAGE=	hpp-rbprm
-HPP_COMMENT=	RB-PRM planner in HPP
+HPP_PACKAGE=		hpp-rbprm
+HPP_COMMENT=		RB-PRM planner in HPP
 
-CATEGORIES=	wip
+CATEGORIES=		wip
 
-USE_PYTHON=	true
+USE_PYTHON=		true
+PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common
 

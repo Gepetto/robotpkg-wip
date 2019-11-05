@@ -1,14 +1,15 @@
-# robotpkg Makefile for:	wip/hpp-environments
+# robotpkg Makefile for:	wip/py-hpp-spline
 # Created:			Guilhem Saurel on Fri, 10 Oct 2018
 #
 
-HPP_PACKAGE=	hpp-spline
-HPP_COMMENT=	spline and bezier curves
+HPP_PACKAGE=		hpp-spline
+HPP_COMMENT=		spline and bezier curves
 
-CATEGORIES=	wip
+CATEGORIES=		wip
 
 USE_BOOST_LIBS=		python
 USE_PYTHON=		true
+PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common
 

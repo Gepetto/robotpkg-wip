@@ -20,7 +20,7 @@ DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
 
 include ../../meta-pkgs/hpp/Makefile.common
 
-include ../../wip/hpp-baxter/depend.mk
+include ../../wip/py-hpp-baxter/depend.mk
 include ../../wip/hpp-romeo/depend.mk
 
 include ../../graphics/py-qt-gepetto-viewer/depend.mk

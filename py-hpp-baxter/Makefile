@@ -1,17 +1,18 @@
-# robotpkg Makefile for:	wip/hpp-baxter
+# robotpkg Makefile for:	wip/py-hpp-baxter
 # Created:			Guilhem Saurel on Mon, 28 Jan 2019
 #
 
-HPP_PACKAGE=	hpp-baxter
-HPP_COMMENT=	Wrappers for Baxter robot in HPP
+HPP_PACKAGE=		hpp-baxter
+HPP_COMMENT=		Wrappers for Baxter robot in HPP
 
-ROSNAME=	$(subst -,_,${HPP_PACKAGE})
+ROSNAME=		$(subst -,_,${HPP_PACKAGE})
 
-CATEGORIES=	wip
+CATEGORIES=		wip
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
 
-USE_PYTHON=	true
+USE_PYTHON=		true
+PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common
 

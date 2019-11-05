@@ -1,21 +1,17 @@
-# robotpkg Makefile for:	wip/roscontrol_sot
+# robotpkg Makefile for:	wip/py36-roscontrol-sot
+# Created:			Guilhem Saurel on Tue, 5 Nov 2019
 #
 
-VERSION=		0.1.0
-PKGBASE=		roscontrol-sot
-PKGNAME=		${PKGBASE}-${VERSION}
-ROSNAME=		$(subst -,_,${PKGBASE})
+ORG=			stack-of-tasks
+VERSION=		0.2.0
+NAME=			roscontrol-sot
+PKGNAME=		${PKGTAG.python-}${NAME}-${VERSION}
+ROSNAME=		$(subst -,_,${NAME})
 DISTNAME=		${ROSNAME}-${VERSION}
 WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
-DIST_SUBDIR=		${PKGBASE}
-PKGREVISION=		1
+DIST_SUBDIR=		${NAME}
 
 CATEGORIES=		wip
-#MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=roscontrol_sot/}
-HOMEPAGE=		${MASTER_SITE_GITHUB:=stack-of-tasks/${ROSNAME}}
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${ROSNAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/${ROSNAME}
-CHECKOUT_VCS_OPTS=	--recursive
 
 COMMENT=		This ROS package binds together the ROS control framework with the dynamic-graph real-time control architecture.
 LICENSE=		2-clause-bsd
@@ -29,15 +25,15 @@ CMAKE_ARGS+=		-DCXX_DISABLE_WERROR=yes
 
 # man pages location
 CMAKE_ARGS+=		-DMANDIR=${PREFIX}/${PKGMANDIR}
-# library location
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
 
 # Allows to have robotpkg ros packages with the highest priority
 # over system ros packages.
 # http://wiki.ros.org/catkin/what
-CMAKE_PREFIX_PATH+= ${PREFIX}
+CMAKE_PREFIX_PATH+=	${PREFIX}
+USE_PYTHON=		true
 
 
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../sysutils/ros-rospack/depend.mk
 include ../../motion/dynamic-graph-bridge-msgs/depend.mk
 include ../../wip/py-dynamic-graph-bridge-v3/depend.mk
@@ -80,6 +76,6 @@ include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/bullet.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++.mk
+include ../../mk/language/c++11.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/robotpkg.mk

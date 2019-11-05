@@ -8,7 +8,7 @@ lib/libsot-test-controller.so
 lib/libsot-test-device.so
 lib/pkgconfig/roscontrol_sot.pc
 ${PYTHON_SITELIB}/dynamic_graph/sot/test/sot_test_device/__init__.py
-${PYTHON_SITELIB}/dynamic_graph/sot/test/sot_test_device/wrap${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/dynamic_graph/sot/test/sot_test_device/wrap.so
 share/roscontrol_sot/cmake/roscontrol_sotConfig-version.cmake
 share/roscontrol_sot/cmake/roscontrol_sotConfig.cmake
 share/roscontrol_sot/config/roscontrol_sot_controller_plugins.xml

@@ -28,6 +28,7 @@ CONFLICTS=	talos-ros-controllers
 # over system ros packages.
 # http://wiki.ros.org/catkin/what
 CMAKE_PREFIX_PATH+= ${PREFIX}
+CMAKE_PREFIX_PATH+= /opt/ros/melodic
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

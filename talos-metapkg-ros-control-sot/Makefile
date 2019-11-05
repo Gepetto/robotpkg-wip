@@ -63,8 +63,7 @@ displaytalosmetapkg:
 
 endif
 
-include ../../wip/roscontrol-sot/depend.mk
+include ../../wip/py-roscontrol-sot/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk
-

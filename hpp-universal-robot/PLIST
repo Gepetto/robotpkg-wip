@@ -13,5 +13,3 @@ share/example-robot-data/ur_description/srdf/ur3_gripper.srdf
 share/example-robot-data/ur_description/srdf/ur5.srdf
 share/example-robot-data/ur_description/srdf/ur5_gripper.srdf
 share/example-robot-data/ur_description/srdf/ur5_joint_limited_robot.srdf
-share/example-robot-data/ur_description/urdf/ur3_gripper.urdf
-share/example-robot-data/ur_description/urdf/ur5_gripper.urdf

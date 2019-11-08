@@ -10,9 +10,9 @@ COMMENT=	Talos dev Software
 
 META_PACKAGE=	yes
 
-include ../sot-talos/depend.mk
-include ../talos-metapkg-ros-control-sot/depend.mk
-include ../prf-gazebo-ros-pkgs/depend.mk
-include ../talos-simulation/depend.mk
-include ../../interfaces/ros-humanoid-msgs/depend.mk
+include ../../interfaces/humanoid-nav-msgs/depend.mk
+include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+include ../../wip/sot-talos/depend.mk
+include ../../wip/talos-metapkg-ros-control-sot/depend.mk
+include ../../wip/talos-simulation/depend.mk
 include ../../mk/robotpkg.mk

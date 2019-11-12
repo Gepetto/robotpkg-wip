@@ -13,7 +13,6 @@ META_PACKAGE=	yes
 include ../../interfaces/humanoid-nav-msgs/depend.mk
 include ../../wip/py-sot-talos/depend.mk
 include ../../wip/prf-gazebo-ros-pkgs/depend.mk
-include ../../wip/sot-talos/depend.mk
 include ../../wip/talos-metapkg-ros-control-sot/depend.mk
 include ../../wip/talos-simulation/depend.mk
 include ../../mk/robotpkg.mk

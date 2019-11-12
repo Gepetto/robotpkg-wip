@@ -8,7 +8,6 @@ PKGREVISION=		2
 
 CATEGORIES=		wip
 
-USE_PYTHON=		true
 PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common

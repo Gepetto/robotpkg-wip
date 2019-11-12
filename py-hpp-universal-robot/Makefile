@@ -7,7 +7,6 @@ HPP_COMMENT=		Data specific to robots ur5 and ur10 for hpp-corbaserver
 HPP_VERSION=		4.7.1
 
 CATEGORIES=		wip
-USE_PYTHON=		true
 PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common

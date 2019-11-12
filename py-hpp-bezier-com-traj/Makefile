@@ -8,7 +8,6 @@ HPP_COMMENT=		trajectory generation for the COM with bezier curves
 CATEGORIES=		wip
 
 USE_BOOST_LIBS=		python
-USE_PYTHON=		true
 PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common

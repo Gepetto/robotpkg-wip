@@ -14,6 +14,7 @@ LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto@laas.fr
 
 USE_BOOST_LIBS=		python
+USE_PYTHON=		yes
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/boost-headers/depend.mk

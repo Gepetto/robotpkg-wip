@@ -7,7 +7,6 @@ SUBDIR+=	antlr2
 SUBDIR+=	aruco-ros
 SUBDIR+=	backward-ros
 SUBDIR+=	can-utils
-SUBDIR+=	certi
 SUBDIR+=	cppad
 SUBDIR+=	cppadcodegen
 SUBDIR+=	dptu-genom3

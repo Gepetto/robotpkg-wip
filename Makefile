@@ -36,7 +36,6 @@ SUBDIR+=	infuse-novatel-gps-driver-ros
 SUBDIR+=	jrl-walkgen-v3
 SUBDIR+=	jsbsim
 SUBDIR+=	libhatp
-SUBDIR+=	libmove3d
 SUBDIR+=	morse-ros
 SUBDIR+=	msgconnector
 SUBDIR+=	multicontact-api

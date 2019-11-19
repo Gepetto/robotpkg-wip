@@ -2,8 +2,7 @@
 # Created:			Olivier Stasse, on Tue. 21th Aug, 2018
 #
 VERSION=	0.0.1
-PKGNAME=	pyrene-motions
-DISTNAME=	${PKGNAME}-${VERSION}
+DISTNAME=	pyrene-motions-${VERSION}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=talos/pyrene-motions/}
 MASTER_REPOSITORY=	git git://gepgitlab.laas.fr:pyrene-dev/pyrene-motions.git
@@ -23,4 +22,3 @@ include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk
-

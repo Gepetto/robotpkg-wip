@@ -44,7 +44,6 @@ SUBDIR+=	libmove3d-planners
 SUBDIR+=	metapod
 SUBDIR+=	morse-ros
 SUBDIR+=	move3d-assets
-SUBDIR+=	move3d-studio
 SUBDIR+=	msgconnector
 SUBDIR+=	multicontact-api
 SUBDIR+=	octovis

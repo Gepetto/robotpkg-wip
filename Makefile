@@ -41,7 +41,6 @@ SUBDIR+=	libhatp
 SUBDIR+=	libmove3d
 SUBDIR+=	libmove3d-hri
 SUBDIR+=	libmove3d-planners
-SUBDIR+=	metapod
 SUBDIR+=	morse-ros
 SUBDIR+=	msgconnector
 SUBDIR+=	multicontact-api

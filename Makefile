@@ -142,7 +142,6 @@ SUBDIR+=	sot-talos-balance
 SUBDIR+=	sot-tiago
 SUBDIR+=	sot-tools-v3
 SUBDIR+=	sot-torque-control
-SUBDIR+=	spark-genom
 SUBDIR+=	talos-data
 SUBDIR+=	talos-dev
 SUBDIR+=	talos-metapkg-ros-control-sot

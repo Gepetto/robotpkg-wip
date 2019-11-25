@@ -4,7 +4,6 @@
 
 HPP_PACKAGE=		hpp-rbprm-robot-data
 HPP_COMMENT=		file database
-PKGREVISION=		2
 
 CATEGORIES=		wip
 

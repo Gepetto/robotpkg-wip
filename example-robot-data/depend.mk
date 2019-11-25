@@ -15,7 +15,7 @@ PREFER.example-robot-data?=	robotpkg
 
 #TODO
 SYSTEM_SEARCH.example-robot-data=\
-  'include/example/robot/data/config.hh:/EXAMPLE_ROBOT_DATA_VERSION/s/[^0-9.]//gp'	\
+  'include/example-robot-data/config.hh:/EXAMPLE_ROBOT_DATA_VERSION/s/[^0-9.]//gp'	\
   'lib/pkgconfig/example-robot-data.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		example-robot-data

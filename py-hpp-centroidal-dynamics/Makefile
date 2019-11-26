@@ -10,6 +10,8 @@ CATEGORIES=		wip
 USE_BOOST_LIBS=		python
 PYTHON_NOTAG_CONFLICT=	yes
 
+CMAKE_ARGS+=		-DqpOASES_PREFIX=${PREFIX.qpoases}
+
 include ../../meta-pkgs/hpp/Makefile.common
 
 include ../../math/py-eigenpy/depend.mk

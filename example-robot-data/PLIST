@@ -107,7 +107,6 @@ share/example-robot-data/robots/kinova_description/meshes/wrist_spherical_1.dae
 share/example-robot-data/robots/kinova_description/meshes/wrist_spherical_2.dae
 share/example-robot-data/robots/kinova_description/robots/kinova.urdf
 share/example-robot-data/robots/kinova_description/srdf/kinova.srdf
-share/example-robot-data/robots/romeo_description/meshes/PLACEHOLDER
 share/example-robot-data/robots/romeo_description/meshes/V1/collision/HeadRoll.dae
 share/example-robot-data/robots/romeo_description/meshes/V1/collision/LAnkleRoll.dae
 share/example-robot-data/robots/romeo_description/meshes/V1/collision/LAnkleRollBasic.dae
@@ -168,7 +167,6 @@ share/example-robot-data/robots/romeo_description/meshes/V1/visual/RWristRoll.da
 share/example-robot-data/robots/romeo_description/meshes/V1/visual/RWristYaw.dae
 share/example-robot-data/robots/romeo_description/meshes/V1/visual/Torso.dae
 share/example-robot-data/robots/romeo_description/meshes/V1/visual/TrunkYaw.dae
-share/example-robot-data/robots/romeo_description/meshes/convert.sh
 share/example-robot-data/robots/romeo_description/srdf/romeo.srdf
 share/example-robot-data/robots/romeo_description/srdf/romeo_moveit.srdf
 share/example-robot-data/robots/romeo_description/srdf/romeo_small.srdf

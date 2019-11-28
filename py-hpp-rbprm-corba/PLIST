@@ -19,6 +19,7 @@ ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/affordance_centroids.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/com_constraints.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/cwc_trajectory.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/cwc_trajectory_helper.py
+${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/display_tools.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/generateROMs.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/obj_to_constraints.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/path_to_trajectory.py

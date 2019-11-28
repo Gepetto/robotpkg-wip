@@ -4,7 +4,6 @@
 
 HPP_PACKAGE=		hpp-rbprm-corba
 HPP_COMMENT=		Corba server for RB-PRM
-HPP_VERSION=		4.7.1
 
 CATEGORIES=		wip
 

@@ -1,9 +1,13 @@
 @comment Tue Aug 21 09:30:06 CEST 2018
-lib/pkgconfig/${PKGNAME}.pc
-share/${PKGNAME}/climb15cmStairsNoHandrail/no_handrail_15cm_1_step.posture
-share/${PKGNAME}/grabHandrail15/handrail_grab.posture
-share/${PKGNAME}/grabHandrail15/stairs_15cm_handrail_grab_actuated.posture
-share/${PKGNAME}/identification/OEM_arms_60s_500Hz.posture
-share/${PKGNAME}/multicontact15/stairs_15cm_multicontact_all_steps_actuated.posture
-share/${PKGNAME}/multicontact15HalfStep/motion_sequence.posture
-share/${PKGNAME}/multicontact15SingleStep/stairs_15cm_with_handrail_first_full_step.posture
+include/pyrene/motions/config.hh
+include/pyrene/motions/deprecated.hh
+include/pyrene/motions/warning.hh
+lib/pkgconfig/pyrene-motions.pc
+share/pyrene-motions/climb15cmStairsNoHandrail/no_handrail_15cm_1_step.posture
+share/pyrene-motions/grabHandrail15/handrail_grab.posture
+share/pyrene-motions/grabHandrail15/stairs_15cm_handrail_grab_actuated.posture
+share/pyrene-motions/identification/OEM_arms_60s_500Hz.csv
+share/pyrene-motions/identification/OEM_arms_60s_500Hz.posture
+share/pyrene-motions/multicontact15/stairs_15cm_multicontact_all_steps_actuated.posture
+share/pyrene-motions/multicontact15HalfStep/motion_sequence.posture
+share/pyrene-motions/multicontact15SingleStep/stairs_15cm_with_handrail_first_full_step.posture

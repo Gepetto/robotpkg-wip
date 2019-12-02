@@ -11,6 +11,8 @@ COMMENT=			Torque control for humanoids (python bindings)
 LICENSE=			2-clause-bsd
 MAINTAINER=			gepetto-soft@laas.fr
 
+CMAKE_ARGS+=			-DqpOASES_PREFIX=${PREFIX.qpoases}
+
 USE_PYTHON_ONLY=		true
 
 include ../../${CATEGORIES}/${NAME}/depend.mk
@@ -23,6 +25,7 @@ include ../../mapping/octomap/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../math/py-pinocchio/depend.mk
+include ../../optimization/qpoases/depend.mk
 include ../../path/hpp-fcl/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk

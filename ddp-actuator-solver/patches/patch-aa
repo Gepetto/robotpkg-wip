@@ -13,3 +13,19 @@
  ADD_REQUIRED_DEPENDENCY("eigen3 >= 3.0.5")
  
 
+--- cmake/find-external/qpOASES/FindqpOASES.cmake.orig	2019-03-29 11:37:27.000000000 +0100
++++ cmake/find-external/qpOASES/FindqpOASES.cmake	2019-12-02 18:27:09.903628419 +0100
+@@ -27,11 +27,11 @@
+ 
+ FIND_PATH(qpOASES_INCLUDE_DIR
+   NAMES qpOASES.hpp
+-  PATHS ${qpOASES_PREFIX}
++  PATHS ${qpOASES_PREFIX} ${qpOASES_PREFIX}/include
+   )
+ FIND_LIBRARY(qpOASES_LIBRARY
+   NAMES libqpOASES.so
+-  PATHS ${qpOASES_PREFIX}
++  PATHS ${qpOASES_PREFIX} ${qpOASES_PREFIX}/lib
+   )
+ 
+ SET(qpOASES_LIBRARIES ${qpOASES_LIBRARY})

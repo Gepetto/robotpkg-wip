@@ -12,6 +12,7 @@ LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto-soft@laas.fr
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
+CMAKE_ARGS+=		-DqpOASES_PREFIX=${PREFIX.qpoases}
 
 USE_BOOST_LIBS=		unit_test_framework
 

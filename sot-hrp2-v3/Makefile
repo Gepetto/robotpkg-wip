@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-hrp2
-VERSION=		2.1.2
+VERSION=		2.1.3
 
 DISTNAME=		${NAME}-v3-${VERSION}
 

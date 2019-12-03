@@ -30,7 +30,7 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_line_distance/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_point6d/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_point6d/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_point6d_relative/__init__.py
-${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_point6d_relative/wrap${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_point6d_relative/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_pose/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_pose/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_position.py

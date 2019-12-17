@@ -5,6 +5,7 @@
 ORG=			stack-of-tasks
 NAME=			parametric-curves
 VERSION=		1.3.0
+PKGREVISION=		1
 
 CATEGORIES=		wip
 COMMENT=		This packages provides a template based parametric curves library.

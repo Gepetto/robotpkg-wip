@@ -14,12 +14,15 @@ ifeq (+,$(TALOS_DATA_DEPEND_MK)) # -------------------------------------------
 PREFER.talos-data?=	robotpkg
 
 SYSTEM_SEARCH.talos-data=\
-	'share/talos_data/urdf/talos_reduced.urdf'				\
-	'lib/pkgconfig/talos_data.pc:/Version/s/[^0-9.]//gp'
+	'include/talos/data/config.hh:/TALOS_DATA_VERSION /s/[^0-9.]//gp'			\
+	'lib/cmake/talos_data/talos_dataConfigVersion.cmake:/PACKAGE_VERSION /s/[^0-9.]//gp'	\
+	'lib/libtalos_data.so'									\
+	'lib/pkgconfig/talos_data.pc:/Version/s/[^0-9.]//gp'					\
+	'share/talos_data/urdf/talos_reduced.urdf'
 
 DEPEND_USE+=		talos-data
 
-DEPEND_ABI.talos-data?=	talos-data>=0.0.14
+DEPEND_ABI.talos-data?=	talos-data>=1.1.0
 DEPEND_DIR.talos-data?=	../../wip/talos-data
 
 endif # TALOS_DATA_DEPEND_MK -------------------------------------------------

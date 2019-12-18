@@ -2,7 +2,11 @@
 include/talos/data/config.hh
 include/talos/data/deprecated.hh
 include/talos/data/warning.hh
-lib/libSpringPlugin.so
+lib/cmake/talos_data/talos_dataConfig.cmake
+lib/cmake/talos_data/talos_dataConfigVersion.cmake
+lib/cmake/talos_data/talos_dataTargets-release.cmake
+lib/cmake/talos_data/talos_dataTargets.cmake
+lib/libtalos_data.so
 lib/pkgconfig/talos_data.pc
 share/talos_data/cmake/talos_dataConfig-version.cmake
 share/talos_data/cmake/talos_dataConfig.cmake
@@ -98,6 +102,7 @@ share/talos_data/robots/talos_reduced.urdf
 share/talos_data/robots/talos_small.urdf.xacro
 share/talos_data/robots/upload.launch
 share/talos_data/robots/upload_talos.launch
+share/talos_data/srdf/pyrene.srdf
 share/talos_data/srdf/talos.srdf
 share/talos_data/srdf/talos_wpg.srdf
 share/talos_data/urdf/arm/arm.transmission.xacro
@@ -123,6 +128,7 @@ share/talos_data/urdf/leg/leg.transmission.xacro
 share/talos_data/urdf/leg/leg.urdf.xacro
 share/talos_data/urdf/leg/leg_passive.urdf.xacro
 share/talos_data/urdf/materials.urdf.xacro
+share/talos_data/urdf/pyrene.urdf
 share/talos_data/urdf/sensors/calibration.xacro
 share/talos_data/urdf/sensors/ftsensor.urdf.xacro
 share/talos_data/urdf/sensors/imu.urdf.xacro

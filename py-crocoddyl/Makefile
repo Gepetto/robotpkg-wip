@@ -4,15 +4,7 @@
 
 ORG=			loco-3d
 NAME=			crocoddyl
-VERSION=		0.9.0
-PKGREVISION=		4
-
-DISTNAME=		${NAME}-${VERSION}
-PKGNAME=		${PKGTAG.python-}${DISTNAME}
-
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
+VERSION=		1.0.0
 
 CATEGORIES=		wip
 COMMENT=		Contact RObot COntrol by Differential DYnamic programming Library
@@ -21,10 +13,9 @@ MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		py[0-9][0-9]-crocoddyl
 
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
+USE_PYTHON=		true
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/mk/sysdep/py-scipy.mk
 include ../../wip/example-robot-data/depend.mk
 include ../../wip/py-example-robot-data/depend.mk
@@ -44,6 +35,6 @@ include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++.mk
+include ../../mk/language/c++11.mk
 
 include ../../mk/robotpkg.mk

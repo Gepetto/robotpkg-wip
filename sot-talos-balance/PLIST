@@ -1,4 +1,4 @@
-@comment Tue Sep 17 16:43:26 CEST 2019
+@comment Thu Dec 26 00:20:37 CET 2019
 include/sot/talos_balance/Markup.h
 include/sot/talos_balance/Network.h
 include/sot/talos_balance/RTPacket.h
@@ -31,6 +31,8 @@ lib/plugin/dcm-controller.so
 lib/plugin/dcm-controller.so.${PKGVERSION}
 lib/plugin/dcm-estimator.so
 lib/plugin/dcm-estimator.so.${PKGVERSION}
+lib/plugin/delay.so
+lib/plugin/delay.so.${PKGVERSION}
 lib/plugin/distribute-wrench.so
 lib/plugin/distribute-wrench.so.${PKGVERSION}
 lib/plugin/dummy-dcm-estimator.so
@@ -77,6 +79,8 @@ lib/plugin/simple-pidd.so
 lib/plugin/simple-pidd.so.${PKGVERSION}
 lib/plugin/simple-reference-frame.so
 lib/plugin/simple-reference-frame.so.${PKGVERSION}
+lib/plugin/simple-state-integrator.so
+lib/plugin/simple-state-integrator.so.${PKGVERSION}
 lib/plugin/simple-zmp-estimator.so
 lib/plugin/simple-zmp-estimator.so.${PKGVERSION}
 lib/plugin/state-transformation.so
@@ -90,6 +94,7 @@ share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/LeftFoot.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/Phase.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/Rho.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/RightFoot.dat
+share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/Torques.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/WaistOrientation.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/ZMP.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/15cm/CoM.dat
@@ -97,6 +102,7 @@ share/sot_talos_balance/data/TestKajita2003StraightWalking64/15cm/LeftFoot.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/15cm/Phase.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/15cm/Rho.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/15cm/RightFoot.dat
+share/sot_talos_balance/data/TestKajita2003StraightWalking64/15cm/Torques.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/15cm/WaistOrientation.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/15cm/ZMP.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/20cm/CoM.dat
@@ -104,8 +110,16 @@ share/sot_talos_balance/data/TestKajita2003StraightWalking64/20cm/LeftFoot.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/20cm/Phase.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/20cm/Rho.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/20cm/RightFoot.dat
+share/sot_talos_balance/data/TestKajita2003StraightWalking64/20cm/Torques.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/20cm/WaistOrientation.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/20cm/ZMP.dat
+share/sot_talos_balance/data/TestKajita2003StraightWalking64/one_step_10cm_ssp_900_dsp_115/CoM.dat
+share/sot_talos_balance/data/TestKajita2003StraightWalking64/one_step_10cm_ssp_900_dsp_115/LeftFoot.dat
+share/sot_talos_balance/data/TestKajita2003StraightWalking64/one_step_10cm_ssp_900_dsp_115/Phase.dat
+share/sot_talos_balance/data/TestKajita2003StraightWalking64/one_step_10cm_ssp_900_dsp_115/Rho.dat
+share/sot_talos_balance/data/TestKajita2003StraightWalking64/one_step_10cm_ssp_900_dsp_115/RightFoot.dat
+share/sot_talos_balance/data/TestKajita2003StraightWalking64/one_step_10cm_ssp_900_dsp_115/Torques.dat
+share/sot_talos_balance/data/TestKajita2003StraightWalking64/one_step_10cm_ssp_900_dsp_115/WaistOrientation.dat
 share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/DSP20SSP780/CoM.dat
 share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/DSP20SSP780/LeftFoot.dat
 share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/DSP20SSP780/Phase.dat
@@ -113,6 +127,20 @@ share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/DSP20SSP780/Rho.dat
 share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/DSP20SSP780/RightFoot.dat
 share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/DSP20SSP780/WaistOrientation.dat
 share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/DSP20SSP780/ZMP.dat
+share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/onestep_ssp_780_dsp_020/CoM.dat
+share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/onestep_ssp_780_dsp_020/LeftFoot.dat
+share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/onestep_ssp_780_dsp_020/Phase.dat
+share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/onestep_ssp_780_dsp_020/Rho.dat
+share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/onestep_ssp_780_dsp_020/RightFoot.dat
+share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/onestep_ssp_780_dsp_020/Torques.dat
+share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/onestep_ssp_780_dsp_020/WaistOrientation.dat
+share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/onestep_ssp_900_dsp_115/CoM.dat
+share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/onestep_ssp_900_dsp_115/LeftFoot.dat
+share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/onestep_ssp_900_dsp_115/Phase.dat
+share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/onestep_ssp_900_dsp_115/Rho.dat
+share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/onestep_ssp_900_dsp_115/RightFoot.dat
+share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/onestep_ssp_900_dsp_115/Torques.dat
+share/sot_talos_balance/data/TestKajita2003WalkingOnSpot64/onestep_ssp_900_dsp_115/WaistOrientation.dat
 share/sot_talos_balance/launch/spawn_ramp.launch
 share/sot_talos_balance/launch/talos_gazebo_flex.launch
 share/sot_talos_balance/launch/talos_gazebo_half_sitting.launch

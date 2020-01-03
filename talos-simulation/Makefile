@@ -9,7 +9,7 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	wip
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
@@ -48,13 +48,27 @@ ifeq (erbium,${PREFER.pal-distro})
   endif
 endif
 
+include ../../wip/sysdep/ubuntu-distro.mk
+
+
 include ../../motion/ros-control-toolbox/depend.mk
-include ../../wip/pal-hardware-gazebo/depend.mk
+
+ifeq (bionic,${UBUNTUDISTRO})
+  include ../../wip/pal-hardware-gazebo-melodic/depend.mk
+else
+  include ../../wip/pal-hardware-gazebo/depend.mk
+endif
+
 include ../../wip/talos-robot/depend.mk
 include ../../wip/talos-moveit-config/depend.mk
 include ../../wip/prf-roboticsgroup-gazebo-plugins/depend.mk
 include ../../wip/prf-ros-controllers/depend.mk
-include ../../wip/pal-gazebo-plugins/depend.mk
+ifeq (bionic,${UBUNTUDISTRO})
+  include ../../wip/pal-gazebo-plugins-melodic/depend.mk
+else
+  include ../../wip/pal-gazebo-plugins/depend.mk
+endif
+
 include ../../wip/pal-gazebo-worlds/depend.mk
 include ../../wip/head-action/depend.mk
 include ../../mk/language/c++.mk

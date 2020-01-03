@@ -1,0 +1,19 @@
+@comment Fri Jan 18 14:11:41 CET 2019
+include/pal_gazebo_plugins/gazebo_attachment.h
+include/pal_gazebo_plugins/gazebo_harness.h
+include/pal_gazebo_plugins/gazebo_pal_hand.h
+include/pal_gazebo_plugins/gazebo_ros_forcetorque.h
+include/pal_gazebo_plugins/gazebo_underactuated_finger.h
+include/pal_gazebo_plugins/gazebo_wifi_ap.h
+include/pal_gazebo_plugins/gazebo_world_odometry.h
+lib/libgazebo_attachment.so
+lib/libgazebo_harness.so
+lib/libgazebo_pal_hand.so
+lib/libgazebo_ros_forcetorque.so
+lib/libgazebo_underactuated_finger.so
+lib/libgazebo_wifi_ap.so
+lib/libgazebo_world_odometry.so
+lib/pkgconfig/pal_gazebo_plugins.pc
+share/pal_gazebo_plugins/cmake/pal_gazebo_pluginsConfig-version.cmake
+share/pal_gazebo_plugins/cmake/pal_gazebo_pluginsConfig.cmake
+share/pal_gazebo_plugins/package.xml

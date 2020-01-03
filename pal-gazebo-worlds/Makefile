@@ -9,6 +9,7 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
+PKGREVISION=	1
 
 CATEGORIES=	wip
 
@@ -22,7 +23,12 @@ LICENSE=	gnu-lgpl-v3
 
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-roscpp-core/depend.mk
-include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+include ../../wip/sysdep/ubuntu-distro.mk
+ifeq (bionic,${UBUNTUDISTRO})
+  include ../../wip/prf-gazebo-ros-pkgs-melodic/depend.mk
+else
+  include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+endif
 
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

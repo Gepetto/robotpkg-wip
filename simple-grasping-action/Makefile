@@ -9,7 +9,7 @@ DISTNAME=	${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	1
+PKGREVISION=	2
 
 CATEGORIES=	wip
 
@@ -24,7 +24,7 @@ LICENSE=	gnu-gpl-v3
 USE_BOOST_LIBS=	thread
 
 
-ONLY_FOR_PLATFORM=	Ubuntu-16.04-%
+ONLY_FOR_PLATFORM=	Ubuntu-16.04-% Ubuntu-18.04-%
 
 CMAKE_PREFIX_PATH+=${PREFIX}
 include ../../devel/boost-headers/depend.mk

@@ -1,5 +1,5 @@
-# robotpkg Makefile for:	wip/prf-gazebo-ros-pkgs
-# Created:			Olivier Stasse on Mer, 28 April 2018
+# robotpkg Makefile for:	wip/prf-gazebo-ros-pkgs-melodic
+# Created:			Olivier Stasse on Mer, 2 Jan 2020
 #
 ORG=		pal-robotics-forks
 VERSION=	3.0.1

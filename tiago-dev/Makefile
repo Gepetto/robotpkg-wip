@@ -4,6 +4,7 @@
 
 TIAGO_DATE=	20190516
 DISTNAME=	tiago-dev-${TIAGO_DATE}
+PKGREVISION=	1
 
 CATEGORIES=	meta-pkgs
 COMMENT=	Tiago dev Software

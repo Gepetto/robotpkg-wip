@@ -10,7 +10,7 @@ PKGNAME=	    ${PKGBASE}-${VERSION}
 ROSNAME=	    $(subst -,_,${PKGBASE})
 WRKSRC=		    ${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	    ${PKGBASE}
-PKGREVISION=	    1
+PKGREVISION=	    2
 
 CATEGORIES=	    wip
 HOMEPAGE=	    ${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
@@ -23,8 +23,6 @@ LICENSE=	    2-clause-bsd
 ROS_METAPKG=	yes
 USE_BOOST_LIBS=	thread
 
-include ../../wip/sysdep/ubuntu-distro.mk
-
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../devel/ros-catkin/depend.mk
@@ -34,12 +32,15 @@ include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../wip/tiago-robot/depend.mk
+include ../../wip/sysdep/ubuntu-distro.mk
+$(info $(UBUNTUDISTRO))
+
 ifeq (bionic,${UBUNTUDISTRO})
   include ../../wip/pal-gazebo-plugins-melodic/depend.mk
   include ../../wip/pal-hardware-gazebo-melodic/depend.mk
 else
-  include ../../wip/pal-gazebo-plugins/depend.mk
   include ../../wip/pal-hardware-gazebo/depend.mk
+  include ../../wip/pal-gazebo-plugins/depend.mk
 endif
 include ../../wip/pal-gazebo-worlds/depend.mk
 include ../../wip/prf-ros-controllers/depend.mk

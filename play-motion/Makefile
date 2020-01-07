@@ -10,6 +10,7 @@ PKGNAME=	${PKGBASE}-${VERSION}
 ROSNAME=	$(subst -,_,${PKGBASE})
 WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=	${PKGBASE}
+PKGREVISION=	1
 
 CATEGORIES=	wip
 
@@ -33,6 +34,11 @@ include ../../interfaces/ros-std-msgs/depend.mk
 include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../middleware/ros-comm/depend.mk
+
+include ../../wip/sysdep/ubuntu-distro.mk
+ifeq (bionic,${UBUNTUDISTRO})
+  include ../../wip/ros-moveit/depend.mk
+endif
 include ../../wip/prf-ros-control/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

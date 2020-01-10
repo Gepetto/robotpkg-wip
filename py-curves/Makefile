@@ -4,8 +4,7 @@
 
 ORG=			loco-3d
 NAME=			curves
-VERSION=		0.2.0
-PKGREVISION=		1
+VERSION=		0.3.0
 
 CATEGORIES=		wip
 COMMENT=		Library for creating curves

@@ -15,12 +15,12 @@ PREFER.py-curves?=	robotpkg
 
 DEPEND_USE+=		py-curves
 
-DEPEND_ABI.py-curves?=	${PKGTAG.python-}curves>=0.1.0
+DEPEND_ABI.py-curves?=	${PKGTAG.python-}curves>=0.3.0
 DEPEND_DIR.py-curves?=	../../wip/py-py-curves
 
 SYSTEM_SEARCH.py-curves=\
 	include/curves/config.hh				\
-	'${PYTHON_SYSLIBSEARCH}/curves.so'			\
+	'${PYTHON_SYSLIBSEARCH}/curves/curves.so'		\
 	'lib/pkgconfig/curves.pc:/Version/s/[^0-9.]//gp'
 
 include ../../mk/sysdep/python.mk

@@ -9,6 +9,7 @@ SUBDIR+=	backward-ros
 SUBDIR+=	can-utils
 SUBDIR+=	cppad
 SUBDIR+=	cppadcodegen
+SUBDIR+=	curves
 SUBDIR+=	dptu-genom3
 SUBDIR+=	ddp-actuator-solver
 SUBDIR+=	dynamic-graph-tutorial

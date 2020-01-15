@@ -1,5 +1,5 @@
-# robotpkg Makefile for:	wip/py-curves
-# Created:			Guilhem Saurel on Wed, 17 Apr 2019
+# robotpkg Makefile for:	wip/curves
+# Created:			Guilhem Saurel on Wed, 15 Jan 2020
 #
 
 ORG=			loco-3d
@@ -7,25 +7,20 @@ NAME=			curves
 VERSION=		0.3.1
 
 CATEGORIES=		wip
-COMMENT=		Library for creating curves (python bindings)
+COMMENT=		Library for creating curves
 
 LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto@laas.fr
 
-USE_BOOST_LIBS=		python
-USE_PYTHON_ONLY=	yes
+CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
 include ../../devel/jrl-cmakemodules/Makefile.common
-include ../../wip/${NAME}/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../math/eigen3/depend.mk
-include ../../math/py-eigenpy/depend.mk
 include ../../math/pinocchio/depend.mk
-include ../../math/py-pinocchio/depend.mk
 include ../../mk/sysdep/cmake.mk
-include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

@@ -16,7 +16,7 @@ PREFER.curves?=	robotpkg
 DEPEND_USE+=		curves
 
 DEPEND_ABI.curves?=	curves>=0.3.1
-DEPEND_DIR.curves?=	../../wip/py-curves
+DEPEND_DIR.curves?=	../../wip/curves
 
 SYSTEM_SEARCH.curves=\
 	include/curves/config.hh				\

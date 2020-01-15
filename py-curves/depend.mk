@@ -16,7 +16,7 @@ PREFER.py-curves?=	robotpkg
 DEPEND_USE+=		py-curves
 
 DEPEND_ABI.py-curves?=	${PKGTAG.python-}curves>=0.3.1
-DEPEND_DIR.py-curves?=	../../wip/py-py-curves
+DEPEND_DIR.py-curves?=	../../wip/py-curves
 
 SYSTEM_SEARCH.py-curves=\
 	'${PYTHON_SYSLIBSEARCH}/curves/curves.so'

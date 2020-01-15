@@ -5,6 +5,8 @@
 HPP_PACKAGE=		hpp-rbprm
 HPP_COMMENT=		RB-PRM planner in HPP
 
+PKGREVISION=		1
+
 CATEGORIES=		wip
 
 PYTHON_NOTAG_CONFLICT=	yes
@@ -13,6 +15,8 @@ include ../../meta-pkgs/hpp/Makefile.common
 
 include ../../wip/py-hpp-rbprm-robot-data/depend.mk
 include ../../wip/py-hpp-environments/depend.mk
+include ../../wip/curves/depend.mk
+include ../../wip/py-curves/depend.mk
 
 include ../../path/hpp-core/depend.mk
 include ../../path/hpp-util/depend.mk

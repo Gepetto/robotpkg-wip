@@ -1,0 +1,23 @@
+sot-hrp2-device.cpp & sot-hrp2-14-controller.cpp 
+are including pinocchio/fwd.hpp
+
+--- src/CMakeLists.txt.orig	2019-12-03 10:47:30.000000000 +0100
++++ src/CMakeLists.txt	2020-01-15 10:34:08.974136096 +0100
+@@ -76,6 +76,7 @@
+   PKG_CONFIG_USE_DEPENDENCY(${DEVICE_NAME} "dynamic-graph")
+   PKG_CONFIG_USE_DEPENDENCY(${DEVICE_NAME} "dynamic-graph-python")
+   PKG_CONFIG_USE_DEPENDENCY(${DEVICE_NAME} "sot-core")
++  PKG_CONFIG_USE_DEPENDENCY(${DEVICE_NAME} "pinocchio")
+ 
+   PKG_CONFIG_USE_DEPENDENCY(${DEVICE_NAME} "dynamic_graph_bridge")
+ 
+--- src/CMakeLists.txt.orig	2020-01-15 10:34:57.000000000 +0100
++++ src/CMakeLists.txt	2020-01-15 10:39:09.570948873 +0100
+@@ -111,6 +111,7 @@
+   PKG_CONFIG_USE_DEPENDENCY(${CONTROLLER_NAME} "dynamic-graph")
+   PKG_CONFIG_USE_DEPENDENCY(${CONTROLLER_NAME} "dynamic-graph-python")
+   PKG_CONFIG_USE_DEPENDENCY(${CONTROLLER_NAME} "sot-core")
++  PKG_CONFIG_USE_DEPENDENCY(${CONTROLLER_NAME} "pinocchio")
+ 
+   PKG_CONFIG_USE_DEPENDENCY(${CONTROLLER_NAME} "dynamic_graph_bridge")
+ 

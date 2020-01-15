@@ -5,18 +5,19 @@
 ORG=			loco-3d
 NAME=			multicontact-api
 VERSION=		1.1.1
-
-PKGNAME=		${PKGTAG.python-}${DISTNAME}
+PKGREVISION=		1
 
 CATEGORIES=		wip
 COMMENT=		Multi-contact locomotion for multi-body systems
 LICENSE=		2-clause-bsd
 MAINTAINER=		gepetto-soft@laas.fr
 
-CMAKE_ARGS+=		-DINSTALL_PYTHON_INTERFACE_ONLY=ON
+USE_PYTHON_ONLY+=	yes
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/${NAME}/depend.mk
+include ../../wip/curves/depend.mk
+include ../../wip/py-curves/depend.mk
 include ../../math/py-eigenpy/depend.mk
 include ../../math/py-pinocchio/depend.mk
 

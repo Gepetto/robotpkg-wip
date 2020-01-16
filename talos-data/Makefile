@@ -35,8 +35,10 @@ include ../../pkgtools/pkg-config/depend.mk
 include ../../wip/sysdep/ubuntu-distro.mk
 ifeq (bionic,${UBUNTUDISTRO})
   include ../../wip/prf-gazebo-ros-pkgs-melodic/depend.mk
-else
+else ifeq (xenial,${UBUNTUDISTRO})
   include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+else
+  include ../../simulation/gazebo-ros-pkgs/depend.mk
 endif
 
 include ../../mk/sysdep/gazebo.mk

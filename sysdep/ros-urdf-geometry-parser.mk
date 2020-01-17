@@ -12,7 +12,7 @@ ifeq (+,$(URDF_GEOMETRY_PARSER_MK)) # ------------------------------------------
 
 include ../../meta-pkgs/ros-base/depend.common
 
-PREFER.ros-urdf-geometry-parser?=		${PREFER.ros-base}
+PREFER.ros-urdf-geometry-parser?=		system
 SYSTEM_PREFIX.ros-urdf-geometry-parser?=    ${SYSTEM_PREFIX.ros-base}
 
 DEPEND_USE+=		ros-urdf-geometry-parser

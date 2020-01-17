@@ -12,7 +12,7 @@ ifeq (+,$(FOUR_WHEEL_STEERING_MSGS_DEPEND_MK)) # -------------------------------
 
 include ../../meta-pkgs/ros-base/depend.common
 
-PREFER.ros-four-wheel-steering-msgs?=		${PREFER.ros-base}
+PREFER.ros-four-wheel-steering-msgs?=		system
 SYSTEM_PREFIX.ros-four-wheel-steering-msgs?=    ${SYSTEM_PREFIX.ros-base}
 
 DEPEND_USE+=		ros-four-wheel-steering-msgs

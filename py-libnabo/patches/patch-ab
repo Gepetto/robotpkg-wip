@@ -1,0 +1,13 @@
+Fix Boost::Python lib detection
+
+--- python/CMakeLists.txt.orig	2019-02-08 06:31:26.000000000 +0100
++++ python/CMakeLists.txt	2020-01-17 19:32:56.868020743 +0100
+@@ -43,7 +43,7 @@
+ 		endif(PYTHON_VERSION_MAJOR GREATER 2)
+ 	endif (PYTHON_DEB_INSTALL_TARGET)
+ 
+-	find_package(Boost COMPONENTS ${BOOST_PYTHON_COMPONENT})
++	find_package(Boost COMPONENTS python)
+ 	find_python_module(numpy)
+ 	find_package_handle_standard_args(numpy DEFAULT_MSG PY_NUMPY)
+ 	if (Boost_FOUND AND NUMPY_FOUND)

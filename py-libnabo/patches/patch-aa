@@ -1,0 +1,46 @@
+Install only python lib
+
+--- CMakeLists.txt.orig	2019-02-08 06:31:26.000000000 +0100
++++ CMakeLists.txt	2020-01-17 16:48:38.447525230 +0100
+@@ -153,7 +153,6 @@
+ set(SHARED_LIBS FALSE CACHE BOOL "Set to TRUE to build shared library")
+ if (SHARED_LIBS)
+ 	add_library(${LIB_NAME} SHARED ${NABO_SRC})
+-	install(TARGETS ${LIB_NAME} LIBRARY DESTINATION lib)
+ else (SHARED_LIBS)
+ 	add_library(${LIB_NAME} ${NABO_SRC})
+ 	add_definitions(-fPIC)
+@@ -163,12 +162,6 @@
+ 
+ # create doc before installing
+ set(DOC_INSTALL_TARGET "share/doc/${PROJECT_NAME}/api" CACHE STRING "Target where to install doxygen documentation")
+-install(FILES nabo/nabo.h DESTINATION include/nabo)
+-install(FILES nabo/third_party/any.hpp DESTINATION include/nabo/third_party)
+-install(FILES README.md DESTINATION share/doc/${PROJECT_NAME})
+-if (DOXYGEN_FOUND)
+-	install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/doc/html DESTINATION ${DOC_INSTALL_TARGET})
+-endif (DOXYGEN_FOUND)
+ 
+ enable_testing()
+ 
+@@ -177,7 +170,6 @@
+ add_subdirectory(python)
+ 
+ # Install catkin package.xml
+-install(FILES package.xml DESTINATION share/libnabo)
+ 
+ #=============================================
+ # to allow find_package() on libnabo
+@@ -228,12 +220,6 @@
+ configure_file(libnaboConfigVersion.cmake.in
+ 	"${PROJECT_BINARY_DIR}/libnaboConfigVersion.cmake" @ONLY)
+ 
+-install(FILES
+-	"${PROJECT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/libnaboConfig.cmake"
+-	"${PROJECT_BINARY_DIR}/libnaboConfigVersion.cmake"
+-	DESTINATION share/libnabo/cmake COMPONENT dev)
+-
+-
+ #=============================================
+ # Add uninstall target
+ #=============================================

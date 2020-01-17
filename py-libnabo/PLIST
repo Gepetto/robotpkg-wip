@@ -1,10 +1,2 @@
 @comment Fri Jan 17 15:37:51 CET 2020
-include/nabo/nabo.h
-include/nabo/third_party/any.hpp
-lib/libnabo.so
-lib/libnabo.so.1
-lib/libnabo.so.${PKGVERSION}
 ${PYTHON_SITELIB}/pynabo.so
-share/libnabo/cmake/libnaboConfig.cmake
-share/libnabo/cmake/libnaboConfigVersion.cmake
-share/libnabo/package.xml

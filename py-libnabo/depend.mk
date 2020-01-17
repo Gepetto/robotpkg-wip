@@ -19,11 +19,7 @@ DEPEND_ABI.py-libnabo?=	${PKGTAG.python-}libnabo>=1.0.7
 DEPEND_DIR.py-libnabo?=	../../wip/py-libnabo
 
 SYSTEM_SEARCH.py-libnabo=\
-  'include/nabo/nabo.h:/NABO_VERSION /s/[^0-9.]//gp'					\
-  'lib/libnabo.so'									\
   '${PYTHON_SYSLIBSEARCH}/pynabo.so'
-  'share/libnabo/cmake/libnaboConfigVersion.cmake:/PACKAGE_VERSION /s/[^0-9.]//gp'	\
-  'share/libnabo/package.xml:/<version>/s/[^0-9.]//gp'
 
 include ../../mk/sysdep/python.mk
 

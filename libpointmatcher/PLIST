@@ -1,0 +1,20 @@
+@comment Fri Jan 17 16:59:47 CET 2020
+bin/pmicp
+include/pointmatcher/DeprecationWarnings.h
+include/pointmatcher/Functions.h
+include/pointmatcher/IO.h
+include/pointmatcher/Parametrizable.h
+include/pointmatcher/PointMatcher.h
+include/pointmatcher/PointMatcherPrivate.h
+include/pointmatcher/Registrar.h
+include/pointmatcher/Timer.h
+lib/cmake/pointmatcher/libpointmatcherConfig.cmake
+lib/cmake/pointmatcher/libpointmatcherConfigVersion.cmake
+lib/libpointmatcher.so
+lib/libpointmatcher.so.1
+lib/libpointmatcher.so.${PKGVERSION}
+lib/pkgconfig/libpointmatcher.pc
+lib/pkgconfig/pointmatcher.pc
+share/libpointmatcher/cmake/libpointmatcherConfig.cmake
+share/libpointmatcher/cmake/libpointmatcherConfigVersion.cmake
+share/libpointmatcher/package.xml

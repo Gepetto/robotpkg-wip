@@ -38,6 +38,7 @@ SUBDIR+=	jrl-walkgen-v3
 SUBDIR+=	jsbsim
 SUBDIR+=	libhatp
 SUBDIR+=	libnabo
+SUBDIR+=	libpointmatcher
 SUBDIR+=	morse-ros
 SUBDIR+=	msgconnector
 SUBDIR+=	multicontact-api

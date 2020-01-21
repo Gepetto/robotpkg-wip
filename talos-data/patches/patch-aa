@@ -1,0 +1,13 @@
+Fix package version
+
+--- package.xml.orig	2019-12-18 10:44:33.000000000 +0100
++++ package.xml	2020-01-21 15:06:20.853115700 +0100
+@@ -1,7 +1,7 @@
+ <?xml version="1.0"?>
+ <package format="2">
+   <name>talos_data</name>
+-  <version>1.0.4</version>
++  <version>1.1.0</version>
+   <description>The talos_data package</description>
+ 
+   <maintainer email="olivier.stasse@laas.fr">Olivier Stasse</maintainer>

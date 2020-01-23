@@ -18,8 +18,13 @@ DEPEND_ABI.py-dynamic-graph-v3?=	${PKGTAG.python-}dynamic-graph-v3>=3.0
 DEPEND_DIR.py-dynamic-graph-v3?=	../../wip/py-dynamic-graph-v3
 
 SYSTEM_SEARCH.py-dynamic-graph-v3=\
-	'lib/pkgconfig/dynamic-graph-python.pc:/Version/s/[^0-9.]//gp'	\
-	'${PYTHON_SYSLIBSEARCH}/dynamic_graph/wrap.so'
+  'include/dynamic-graph/python/config.hh:/DYNAMIC_GRAPH_PYTHON_VERSION /s/[^0-9.]//gp'				\
+  'lib/libdynamic-graph-python.so'										\
+  '${PYTHON_SYSLIBSEARCH}/dynamic_graph/wrap.so'								\
+  '${PYTHON_SYSLIBSEARCH}/dynamic_graph/__init__.py'								\
+  'lib/cmake/dynamic-graph-python/dynamic-graph-pythonConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
+  'lib/pkgconfig/dynamic-graph-python.pc:/Version/s/[^0-9.]//gp'						\
+  'share/dynamic-graph-python/package.xml:/<version>/s/[^0-9.]//gp'
 
 include ../../mk/sysdep/python.mk
 

@@ -11,6 +11,10 @@ include/dynamic-graph/python/link-to-python.hh
 include/dynamic-graph/python/python-compat.hh
 include/dynamic-graph/python/signal-wrapper.hh
 include/dynamic-graph/python/warning.hh
+lib/cmake/dynamic-graph-python/dynamic-graph-pythonConfig.cmake
+lib/cmake/dynamic-graph-python/dynamic-graph-pythonConfigVersion.cmake
+lib/cmake/dynamic-graph-python/dynamic-graph-pythonTargets-release.cmake
+lib/cmake/dynamic-graph-python/dynamic-graph-pythonTargets.cmake
 lib/libdynamic-graph-python.so
 lib/libdynamic-graph-python.so.${PKGVERSION}
 lib/pkgconfig/dynamic-graph-python.pc
@@ -25,3 +29,4 @@ ${PYTHON_SITELIB}/dynamic_graph/tracer/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/tracer_real_time/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/tracer_real_time/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/wrap.so
+share/dynamic-graph-python/package.xml

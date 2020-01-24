@@ -18,6 +18,7 @@ include ../../meta-pkgs/ros-base/Makefile.common
 
 include ../../wip/libnabo/depend.mk
 include ../../wip/libpointmatcher/depend.mk
+include ../../mk/sysdep/pcl.mk
 
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../interfaces/ros-std-msgs/depend.mk

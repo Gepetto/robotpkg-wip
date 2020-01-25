@@ -6,6 +6,7 @@ ROS_PKG=		aicp_mapping
 ROS_METAPKG=		yes
 ROS_VERSION=		0.0.1
 ROS_REPO=		ori-drs
+PKGREVISION=		1
 
 HOMEPAGE=		${MASTER_SITE_GITHUB:=${ROS_REPO}/${ROS_PKG}}
 MASTER_SITES=		${HOMEPAGE}/archive/
@@ -18,7 +19,7 @@ include ../../meta-pkgs/ros-base/Makefile.common
 
 include ../../wip/libnabo/depend.mk
 include ../../wip/libpointmatcher/depend.mk
-include ../../mk/sysdep/pcl.mk
+include ../../wip/mk/sysdep/pcl.mk
 
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../interfaces/ros-std-msgs/depend.mk

@@ -12,6 +12,7 @@ LICENSE=			2-clause-bsd
 MAINTAINER=			gepetto-soft@laas.fr
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
+CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/eiquadprog/depend.mk

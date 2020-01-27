@@ -58,7 +58,8 @@ SYSTEM_SEARCH.pcl= \
 'lib/pkgconfig/pcl_recognition-1.7.pc:/Version/s/[^.0-9]//gp' \
 'include/pcl-1.7/pcl/pcl_base.h'
 
-SYSTEM_PKG.Ubuntu.pcl= libpcl-dev
+SYSTEM_PKG.Arch.pcl= pcl (AUR)
+SYSTEM_PKG.Debian.pcl= libpcl-dev
 
 endif
 

@@ -30,6 +30,8 @@ SYSTEM_SEARCH.ros-urdf-geometry-parser=\
 	'share/urdf_geometry_parser/cmake/urdf_geometry_parserConfig-version.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
 	'share/urdf_geometry_parser/package.xml:/<version>/s/[^.0-9]//gp'
 
+include ../../mk/language/c++11.mk
+
 endif # ROS_URDF_GEOMETRY_PARSER_DEPEND_MK --------------------------------------------
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}

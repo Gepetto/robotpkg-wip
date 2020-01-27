@@ -20,4 +20,5 @@ include ../../math/ros-geometry2/depend.mk
 
 include ../../devel/ros-catkin/depend.mk
 include ../../mk/sysdep/python.mk
+include ../../mk/language/c++11.mk
 include ../../mk/robotpkg.mk

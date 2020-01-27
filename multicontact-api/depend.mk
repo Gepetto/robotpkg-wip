@@ -14,7 +14,7 @@ ifeq (+,$(MULTICONTACT_API_DEPEND_MK)) # ---------------------------------------
 PREFER.multicontact-api?=	robotpkg
 
 SYSTEM_SEARCH.multicontact-api=\
-  'include/multicontact-api/config.hh:/MULTICONTACT_API_VERSION/s/[^0-9.]//gp'	\
+  'include/multicontact-api/config.hh:/MULTICONTACT_API_VERSION /s/[^0-9.]//gp'	\
   'lib/pkgconfig/multicontact-api.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=				multicontact-api

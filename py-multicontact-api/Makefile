@@ -4,8 +4,7 @@
 
 ORG=			loco-3d
 NAME=			multicontact-api
-VERSION=		1.1.1
-PKGREVISION=		1
+VERSION=		1.1.2
 
 CATEGORIES=		wip
 COMMENT=		Multi-contact locomotion for multi-body systems

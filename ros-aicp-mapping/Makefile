@@ -21,6 +21,7 @@ include ../../wip/libnabo/depend.mk
 include ../../wip/libpointmatcher/depend.mk
 include ../../wip/mk/sysdep/pcl.mk
 
+include ../../devel/ros-cmake-modules/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../interfaces/ros-std-msgs/depend.mk
 include ../../lang/ros-message-generation/depend.mk

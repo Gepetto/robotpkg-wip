@@ -1,0 +1,7 @@
+@comment Mon Jan 27 14:03:00 CET 2020
+include/urdf_geometry_parser/urdf_geometry_parser.h
+lib/liburdf_geometry_parser.so
+lib/pkgconfig/urdf_geometry_parser.pc
+share/urdf_geometry_parser/cmake/urdf_geometry_parserConfig-version.cmake
+share/urdf_geometry_parser/cmake/urdf_geometry_parserConfig.cmake
+share/urdf_geometry_parser/package.xml

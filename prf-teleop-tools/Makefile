@@ -49,7 +49,7 @@ include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
 include ../../wip/pal-hardware-interfaces/depend.mk
 include ../../wip/sysdep/ros-four-wheel-steering-msgs.mk
-include ../../wip/sysdep/ros-urdf-geometry-parser.mk
+include ../../wip/ros-urdf-geometry-parser/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

@@ -20,6 +20,7 @@ include ../../meta-pkgs/ros-base/Makefile.common
 include ../../wip/ros-pcl-msgs/depend.mk
 include ../../wip/mk/sysdep/pcl.mk
 
+include ../../devel/ros-cmake-modules/depend.mk
 include ../../devel/ros-nodelet-core/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-comm/depend.mk

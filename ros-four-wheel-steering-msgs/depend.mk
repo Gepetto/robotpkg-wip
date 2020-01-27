@@ -20,7 +20,7 @@ SYSTEM_PREFIX.ros-four-wheel-steering-msgs?=	${SYSTEM_PREFIX.ros-base}
 DEPEND_USE+=					ros-four-wheel-steering-msgs
 ROS_DEPEND_USE+=				ros-four-wheel-steering-msgs
 
-DEPEND_ABI.ros-four-wheel-steering-msgs?=	ros-four-wheel-steering-msgs>=1.0.1
+DEPEND_ABI.ros-four-wheel-steering-msgs?=	ros-four-wheel-steering-msgs>=1.0.0
 DEPEND_DIR.ros-four-wheel-steering-msgs?=	../../wip/ros-four-wheel-steering-msgs
 
 SYSTEM_SEARCH.ros-four-wheel-steering-msgs=\

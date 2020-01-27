@@ -122,6 +122,7 @@ SUBDIR+=	pyrene-motions
 SUBDIR+=	roralink
 SUBDIR+=	ros-aicp-mapping
 SUBDIR+=	ros-baxter-common
+SUBDIR+=	ros-four-wheel-steering-msgs
 SUBDIR+=	ros-moveit
 SUBDIR+=	ros-moveit-msgs
 SUBDIR+=	ros-moveit-resources

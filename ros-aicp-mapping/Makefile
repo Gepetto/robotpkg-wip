@@ -20,11 +20,14 @@ include ../../meta-pkgs/ros-base/Makefile.common
 include ../../wip/libnabo/depend.mk
 include ../../wip/libpointmatcher/depend.mk
 include ../../wip/mk/sysdep/pcl.mk
+include ../../wip/ros-perception-pcl/depend.mk
 
 include ../../devel/ros-cmake-modules/depend.mk
+include ../../image/opencv3/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../interfaces/ros-std-msgs/depend.mk
 include ../../lang/ros-message-generation/depend.mk
+include ../../mapping/octomap/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-comm/depend.mk
 

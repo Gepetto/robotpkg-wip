@@ -12,7 +12,7 @@ ifeq (+,$(PCL_DEPEND_MK))
 
 PREFER.pcl?=           system
 DEPEND_USE+=            pcl
-DEPEND_ABI.pcl=        pcl>=[.0-9]*
+DEPEND_ABI.pcl=        pcl>=1.7
 SYSTEM_SEARCH.pcl= \
 'lib/libpcl_visualization.so' \
 'lib/libpcl_segmentation.so' \

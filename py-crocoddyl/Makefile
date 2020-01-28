@@ -19,8 +19,6 @@ include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/mk/sysdep/py-scipy.mk
 include ../../wip/example-robot-data/depend.mk
 include ../../wip/py-example-robot-data/depend.mk
-include ../../wip/multicontact-api/depend.mk
-include ../../wip/py-multicontact-api/depend.mk
 include ../../wip/py-quadprog/depend.mk
 include ../../graphics/assimp/depend.mk
 include ../../graphics/urdfdom/depend.mk

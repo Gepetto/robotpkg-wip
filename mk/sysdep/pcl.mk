@@ -12,7 +12,7 @@ ifeq (+,$(PCL_DEPEND_MK))
 
 PREFER.pcl?=           system
 DEPEND_USE+=            pcl
-DEPEND_ABI.pcl=        pcl>=1.7
+DEPEND_ABI.pcl=        pcl>=[.0-9]*
 SYSTEM_SEARCH.pcl= \
 'lib/libpcl_visualization.so' \
 'lib/libpcl_segmentation.so' \
@@ -34,29 +34,29 @@ SYSTEM_SEARCH.pcl= \
 'lib/libpcl_outofcore.so' \
 'lib/cmake/pcl/PCLConfig.cmake' \
 'lib/cmake/pcl/PCLConfigVersion.cmake' \
-'lib/pkgconfig/pcl_segmentation-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_surface-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_kdtree-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_in_hand_scanner-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_tracking-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_io-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_registration-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_geometry-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_point_cloud_editor-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_people-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_outofcore-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_common-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_apps-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_search-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_features-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_octree-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_modeler-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_filters-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_sample_consensus-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_keypoints-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_visualization-1.7.pc:/Version/s/[^.0-9]//gp' \
-'lib/pkgconfig/pcl_recognition-1.7.pc:/Version/s/[^.0-9]//gp' \
-'include/pcl-1.7/pcl/pcl_base.h'
+'lib/pkgconfig/pcl_segmentation-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_surface-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_kdtree-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_in_hand_scanner-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_tracking-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_io-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_registration-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_geometry-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_point_cloud_editor-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_people-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_outofcore-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_common-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_apps-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_search-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_features-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_octree-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_modeler-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_filters-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_sample_consensus-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_keypoints-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_visualization-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'lib/pkgconfig/pcl_recognition-[.0-9]*.pc:/Version/s/[^.0-9]//gp' \
+'include/pcl-[.0-9]*/pcl/pcl_base.h'
 
 SYSTEM_PKG.Arch.pcl= pcl (AUR)
 SYSTEM_PKG.Debian.pcl= libpcl-dev

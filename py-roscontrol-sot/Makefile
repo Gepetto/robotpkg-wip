@@ -3,14 +3,13 @@
 #
 
 ORG=			stack-of-tasks
-VERSION=		0.2.0
+VERSION=		0.3.0
 NAME=			roscontrol-sot
 PKGNAME=		${PKGTAG.python-}${NAME}-${VERSION}
 ROSNAME=		$(subst -,_,${NAME})
 DISTNAME=		${ROSNAME}-${VERSION}
 WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
 DIST_SUBDIR=		${NAME}
-PKGREVISION=		1
 
 CATEGORIES=		wip
 
@@ -42,6 +41,7 @@ include ../../devel/ros-realtime-tools/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../interfaces/ros-control-msgs/depend.mk
 include ../../math/ros-geometry/depend.mk
+include ../../motion/ros-control-toolbox/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk

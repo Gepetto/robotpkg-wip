@@ -1,5 +1,4 @@
-SHA1 (talos_data-1.1.0.tar.gz) = c3c1f7d572d8a862d4619bcb21664e363256abcd
-RMD160 (talos_data-1.1.0.tar.gz) = 05ec6c1914a20e832341febf07ba4d84b9fa50cb
-Size (talos_data-1.1.0.tar.gz) = 8844249 bytes
-SHA1 (patch-aa) = 8c18fcbcfbe5dbdff22bd75b845145816132b4ff
-SHA1 (patch-ab) = 3725dd74db1f66c7a4a57d87e890c400254408a8
+SHA1 (talos_data-1.2.0.tar.gz) = 6b1ace90d6d4b566514a07835d1fff86240a6ff5
+RMD160 (talos_data-1.2.0.tar.gz) = f48e12e9426afb32fac61291e4719ee443922e20
+Size (talos_data-1.2.0.tar.gz) = 8860846 bytes
+SHA1 (patch-aa) = 3725dd74db1f66c7a4a57d87e890c400254408a8

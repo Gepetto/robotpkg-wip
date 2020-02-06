@@ -16,11 +16,18 @@ share/talos_data/config/default_configuration_hanging.yaml
 share/talos_data/config/default_configuration_locomotion.yaml
 share/talos_data/config/default_configuration_zeros.yaml
 share/talos_data/config/joint_limits.yaml
+share/talos_data/config/pids_stiff.yaml
+share/talos_data/config/pids_spring.yaml
 share/talos_data/config/rviz.rviz
 share/talos_data/config/talos_plotjuggler.xml
 share/talos_data/gazebo/gazebo.urdf.xacro
+share/talos_data/launch/talos_bringup.launch
 share/talos_data/launch/talos_gazebo.launch
+share/talos_data/launch/talos_gazebo_alone.launch
+share/talos_data/launch/talos_gazebo_spawn_hs.launch
+share/talos_data/launch/talos_gazebo_spawn_hs_wide.launch
 share/talos_data/launch/talos_spawn.launch
+share/talos_data/launch/talos_spawn_stiff.launch
 share/talos_data/meshes/arm/arm_1.STL
 share/talos_data/meshes/arm/arm_1_collision.STL
 share/talos_data/meshes/arm/arm_2.STL
@@ -102,6 +109,7 @@ share/talos_data/robots/talos_reduced.urdf
 share/talos_data/robots/talos_small.urdf.xacro
 share/talos_data/robots/upload.launch
 share/talos_data/robots/upload_talos.launch
+share/talos_data/scripts/start_talos_gazebo.py
 share/talos_data/srdf/pyrene.srdf
 share/talos_data/srdf/talos.srdf
 share/talos_data/srdf/talos_wpg.srdf

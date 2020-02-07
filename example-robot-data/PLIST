@@ -361,6 +361,10 @@ share/example-robot-data/robots/ur_description/meshes/ur5/visual/upperarm.dae
 share/example-robot-data/robots/ur_description/meshes/ur5/visual/wrist1.dae
 share/example-robot-data/robots/ur_description/meshes/ur5/visual/wrist2.dae
 share/example-robot-data/robots/ur_description/meshes/ur5/visual/wrist3.dae
+share/example-robot-data/robots/ur_description/srdf/ur3_gripper.srdf
+share/example-robot-data/robots/ur_description/srdf/ur5.srdf
+share/example-robot-data/robots/ur_description/srdf/ur5_gripper.srdf
+share/example-robot-data/robots/ur_description/srdf/ur5_joint_limited_robot.srdf
 share/example-robot-data/robots/ur_description/urdf/ur10_joint_limited_robot.urdf
 share/example-robot-data/robots/ur_description/urdf/ur10_robot.urdf
 share/example-robot-data/robots/ur_description/urdf/ur3.urdf

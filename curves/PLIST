@@ -20,6 +20,7 @@ include/curves/optimization/integral_cost.h
 include/curves/optimization/quadratic_problem.h
 include/curves/piecewise_curve.h
 include/curves/polynomial.h
+include/curves/python/python_definitions.h
 include/curves/quadratic_variable.h
 include/curves/quintic_spline.h
 include/curves/se3_curve.h

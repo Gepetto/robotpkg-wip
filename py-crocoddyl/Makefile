@@ -4,7 +4,7 @@
 
 ORG=			loco-3d
 NAME=			crocoddyl
-VERSION=		1.0.0
+VERSION=		1.1.0
 
 CATEGORIES=		wip
 COMMENT=		Contact RObot COntrol by Differential DYnamic programming Library

@@ -1,0 +1,178 @@
+From 72b2578d2db23b3e2c739be278c86270c4a1431c Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Mon, 17 Feb 2020 09:34:13 +0100
+Subject: [PATCH] declare eigenpy.switchToNumpyMatrix() for now
+
+---
+ unittest/python/test_com_estimation.py          | 3 +++
+ unittest/python/test_dcm_controller_talos.py    | 3 +++
+ unittest/python/test_dcm_distribute.py          | 3 +++
+ unittest/python/test_dcm_estimator.py           | 3 +++
+ unittest/python/test_dummy_wpgen.py             | 3 +++
+ unittest/python/test_ft_calibration.py          | 3 +++
+ unittest/python/test_round_double_to_int.py     | 3 +++
+ unittest/python/test_simple_state_integrator.py | 3 +++
+ unittest/python/test_simple_zmp_estimator.py    | 3 +++
+ unittest/python/test_state_transformation.py    | 3 +++
+ 10 files changed, 30 insertions(+)
+
+diff --git a/unittest/python/test_com_estimation.py b/unittest/python/test_com_estimation.py
+index 4523d54..88cc0c9 100644
+--- unittest/python/test_com_estimation.py
++++ unittest/python/test_com_estimation.py
+@@ -8,6 +8,9 @@ import sot_talos_balance.talos.parameter_server_conf as param_server_conf
+ from sot_talos_balance.create_entities_utils import (DcmEstimator, EulerToQuat, TalosBaseEstimator,
+                                                      create_parameter_server, plug)
+ 
++import eigenpy
++eigenpy.switchToNumpyMatrix()
++
+ # --- General ---
+ print("--- General ---")
+ 
+diff --git a/unittest/python/test_dcm_controller_talos.py b/unittest/python/test_dcm_controller_talos.py
+index 1c71879..ab08d85 100644
+--- unittest/python/test_dcm_controller_talos.py
++++ unittest/python/test_dcm_controller_talos.py
+@@ -8,6 +8,9 @@ from rospkg import RosPack
+ import sot_talos_balance.talos.parameter_server_conf as param_server_conf
+ from sot_talos_balance.create_entities_utils import DcmController, create_parameter_server
+ 
++import eigenpy
++eigenpy.switchToNumpyMatrix()
++
+ # --- General ---
+ print("--- General ---")
+ 
+diff --git a/unittest/python/test_dcm_distribute.py b/unittest/python/test_dcm_distribute.py
+index cb96602..4f2f688 100644
+--- unittest/python/test_dcm_distribute.py
++++ unittest/python/test_dcm_distribute.py
+@@ -10,6 +10,9 @@ import sot_talos_balance.talos.parameter_server_conf as param_server_conf
+ from sot_talos_balance.create_entities_utils import (DcmController, create_distribute_wrench, create_parameter_server,
+                                                      plug)
+ 
++import eigenpy
++eigenpy.switchToNumpyMatrix()
++
+ # --- General ---
+ print("--- General ---")
+ 
+diff --git a/unittest/python/test_dcm_estimator.py b/unittest/python/test_dcm_estimator.py
+index f4ba8f7..ee4a8d6 100644
+--- unittest/python/test_dcm_estimator.py
++++ unittest/python/test_dcm_estimator.py
+@@ -8,6 +8,9 @@ from rospkg import RosPack
+ import sot_talos_balance.talos.parameter_server_conf as parameter_server_conf
+ from sot_talos_balance.create_entities_utils import Bunch, DcmEstimator, ParameterServer
+ 
++import eigenpy
++eigenpy.switchToNumpyMatrix()
++
+ dt = 0.001
+ conf = Bunch()
+ robot_name = 'robot'
+diff --git a/unittest/python/test_dummy_wpgen.py b/unittest/python/test_dummy_wpgen.py
+index 3794301..183c483 100644
+--- unittest/python/test_dummy_wpgen.py
++++ unittest/python/test_dummy_wpgen.py
+@@ -9,6 +9,9 @@ import sot_talos_balance.talos.parameter_server_conf as param_server_conf
+ from sot_talos_balance.create_entities_utils import (DummyWalkingPatternGenerator, SimpleReferenceFrame,
+                                                      create_parameter_server, plug)
+ 
++import eigenpy
++eigenpy.switchToNumpyMatrix()
++
+ # --- General ---
+ print("--- General ---")
+ 
+diff --git a/unittest/python/test_ft_calibration.py b/unittest/python/test_ft_calibration.py
+index 1c14b61..f5d10c6 100644
+--- unittest/python/test_ft_calibration.py
++++ unittest/python/test_ft_calibration.py
+@@ -1,9 +1,12 @@
++import eigenpy
+ import numpy as np
+ from numpy.testing import assert_almost_equal as assertApprox
+ 
+ import sot_talos_balance.talos.ft_calibration_conf as conf
+ from sot_talos_balance.ft_calibration import FtCalibration
+ 
++eigenpy.switchToNumpyArray()
++
+ robot_name = 'robot'
+ ftc = FtCalibration('ftc')
+ ftc.init(robot_name)
+diff --git a/unittest/python/test_round_double_to_int.py b/unittest/python/test_round_double_to_int.py
+index 1b59672..b9dd24b 100644
+--- unittest/python/test_round_double_to_int.py
++++ unittest/python/test_round_double_to_int.py
+@@ -4,6 +4,9 @@ import numpy as np
+ 
+ from sot_talos_balance.round_double_to_int import RoundDoubleToInt
+ 
++import eigenpy
++eigenpy.switchToNumpyMatrix()
++
+ rd = RoundDoubleToInt('round')
+ time = 0
+ 
+diff --git a/unittest/python/test_simple_state_integrator.py b/unittest/python/test_simple_state_integrator.py
+index cd05174..35ea134 100644
+--- unittest/python/test_simple_state_integrator.py
++++ unittest/python/test_simple_state_integrator.py
+@@ -5,6 +5,9 @@ from numpy.testing import assert_almost_equal as assertApprox
+ 
+ from sot_talos_balance.simple_state_integrator import SimpleStateIntegrator
+ 
++import eigenpy
++eigenpy.switchToNumpyMatrix()
++
+ dt = 1e-3
+ initstate = [0.]*9
+ 
+diff --git a/unittest/python/test_simple_zmp_estimator.py b/unittest/python/test_simple_zmp_estimator.py
+index 58faeee..c59e594 100644
+--- unittest/python/test_simple_zmp_estimator.py
++++ unittest/python/test_simple_zmp_estimator.py
+@@ -6,6 +6,9 @@ from numpy.testing import assert_almost_equal as assertApprox
+ 
+ from sot_talos_balance.simple_zmp_estimator import SimpleZmpEstimator
+ 
++import eigenpy
++eigenpy.switchToNumpyMatrix()
++
+ # --- Create estimator
+ 
+ print("--- Create estimator ---")
+diff --git a/unittest/python/test_state_transformation.py b/unittest/python/test_state_transformation.py
+index 820c20c..b9e2eaf 100644
+--- unittest/python/test_state_transformation.py
++++ unittest/python/test_state_transformation.py
+@@ -1,3 +1,4 @@
++import eigenpy
+ import numpy as np
+ import pinocchio as pin
+ from numpy.testing import assert_almost_equal as assertApprox
+@@ -9,6 +10,8 @@ from sot_talos_balance.create_entities_utils import (DcmEstimator, SimpleReferen
+                                                      TalosBaseEstimator, create_parameter_server, plug)
+ from sot_talos_balance.euler_to_quat import EulerToQuat
+ 
++eigenpy.switchToNumpyMatrix()
++
+ # --- General ---
+ print("--- General ---")
+ 
+-- 
+2.17.1
+
+--- unittest/python/CMakeLists.txt.orig	2019-12-25 23:28:51.000000000 +0100
++++ unittest/python/CMakeLists.txt	2020-02-17 09:56:29.082684085 +0100
+@@ -22,7 +22,6 @@
+   test_simple_distribute
+   test_simple_zmp_estimator
+   test_simple_state_integrator
+-  test_state_transformation
+   )
+ 
+ FOREACH(TEST ${${PROJECT_NAME}_PYTHON_TESTS})

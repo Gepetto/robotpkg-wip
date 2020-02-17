@@ -35,7 +35,6 @@ include ../../wip/py-tsid/depend.mk
 include ../../wip/parametric-curves/depend.mk
 include ../../wip/py-parametric-curves/depend.mk
 include ../../wip/ddp-actuator-solver/depend.mk
-include ../../wip/eigen-quadprog/depend.mk
 include ../../wip/sot-torque-control/depend.mk
 include ../../wip/py-sot-torque-control/depend.mk
 include ../../wip/sot-talos-balance/depend.mk

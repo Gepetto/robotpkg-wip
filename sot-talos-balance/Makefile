@@ -29,7 +29,6 @@ include ../../wip/sot-core-v3/depend.mk
 include ../../wip/tsid/depend.mk
 include ../../wip/parametric-curves/depend.mk
 include ../../wip/ddp-actuator-solver/depend.mk
-include ../../wip/eigen-quadprog/depend.mk
 include ../../wip/sot-torque-control/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../wip/talos-data/depend.mk

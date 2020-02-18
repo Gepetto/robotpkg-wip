@@ -21,8 +21,7 @@ SYSTEM_SEARCH.py-roscontrol-sot=\
   'include/roscontrol/sot/config.hh'						\
   'lib/librcsot_controller.so'							\
   '${PYTHON_SYSLIBSEARCH}/dynamic_graph/sot/test/sot_test_device/__init__.py'	\
-  'lib/pkgconfig/roscontrol_sot.pc:/Version/s/[^0-9.]//gp'			\
-  'share/controller_interface/cmake/controller_interfaceConfig.cmake'
+  'lib/pkgconfig/roscontrol_sot.pc:/Version/s/[^0-9.]//gp'
 
 # headers leak the ros dependency ...
 include ../../middleware/ros-comm/depend.mk

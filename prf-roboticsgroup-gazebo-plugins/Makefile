@@ -40,7 +40,6 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
-include ../../simulation/gazebo-ros-pkgs/depend.mk
 include ../../wip/sysdep/ubuntu-distro.mk
 ifeq (bionic,${UBUNTUDISTRO})
   include ../../wip/prf-gazebo-ros-pkgs-melodic/depend.mk

@@ -22,6 +22,7 @@ CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
 CMAKE_ARGS+=		-DSETUPTOOLS_DEB_LAYOUT=OFF
 # Needed for dynamic_graph_bridge to be installed in site-packages
 CMAKE_ARGS+=		-DPYTHON_STANDARD_LAYOUT=ON
+CMAKE_ARGS+=		-DCXX_DISABLE_WERROR=ON
 
 DYNAMIC_PLIST_DIRS+=	share/doc/doxygen-html
 DYNAMIC_PLIST_DIRS+=	share/gennodejs/ros/${ROSNAME}

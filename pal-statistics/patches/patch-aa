@@ -1,0 +1,18 @@
+if GMOCK is not found, pal_statistics-test target doesn't exist:
+https://github.com/pal-robotics-forks/ros_comm/blob/lunar-devel/tools/rostest/cmake/rostest-extras.cmake.em#L78
+
+--- pal_statistics/CMakeLists.txt.orig	2019-08-28 13:19:58.000000000 +0200
++++ pal_statistics/CMakeLists.txt	2020-02-18 18:55:58.287631522 +0100
+@@ -104,10 +104,12 @@
+                                 ${PROJECT_NAME}
+                                 ${catkin_LIBRARIES})
+ 
++    IF(GMOCK_FOUND)
+     add_rostest_gmock(pal_statistics-test test/pal_statistics.test test/gtest_pal_statistics.cpp)
+     target_link_libraries(pal_statistics-test
+                                 ${PROJECT_NAME}
+                                 ${catkin_LIBRARIES})
++    ENDIF(GMOCK_FOUND)
+ 
+     add_rostest(test/pal_statistics_py.test)
+ endif(CATKIN_ENABLE_TESTING)

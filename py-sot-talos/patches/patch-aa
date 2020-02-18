@@ -1,0 +1,23 @@
+fix for eigenpy v2: use np.array instead of np.matrix
+
+--- src/dynamic_graph/sot/talos/talos.py.orig	2019-11-05 13:00:02.000000000 +0100
++++ src/dynamic_graph/sot/talos/talos.py	2020-02-18 14:58:34.163678024 +0100
+@@ -90,12 +90,12 @@
+         # TODO For position limit, we remove the first value to get
+         # a vector of the good size because SoT use euler angles and not
+         # quaternions...
+-        self.device.setPositionBounds(self.pinocchioModel.lowerPositionLimit.T.tolist()[0][1:],
+-                                      self.pinocchioModel.upperPositionLimit.T.tolist()[0][1:])
+-        self.device.setVelocityBounds((-self.pinocchioModel.velocityLimit).T.tolist()[0],
+-                                      self.pinocchioModel.velocityLimit.T.tolist()[0])
+-        self.device.setTorqueBounds((-self.pinocchioModel.effortLimit).T.tolist()[0],
+-                                    self.pinocchioModel.effortLimit.T.tolist()[0])
++        self.device.setPositionBounds(self.pinocchioModel.lowerPositionLimit.tolist()[1:],
++                                      self.pinocchioModel.upperPositionLimit.tolist()[1:])
++        self.device.setVelocityBounds((-self.pinocchioModel.velocityLimit).tolist(),
++                                      self.pinocchioModel.velocityLimit.tolist())
++        self.device.setTorqueBounds((-self.pinocchioModel.effortLimit).tolist(),
++                                    self.pinocchioModel.effortLimit.tolist())
+         self.halfSitting = initialConfig
+         self.device.set(self.halfSitting)
+         plug(self.device.state, self.dynamic.position)

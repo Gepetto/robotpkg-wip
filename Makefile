@@ -123,6 +123,7 @@ SUBDIR+=	roralink
 SUBDIR+=	ros-aicp-mapping
 SUBDIR+=	ros-baxter-common
 SUBDIR+=	ros-four-wheel-steering-msgs
+SUBDIR+=	ros-image-pipeline
 SUBDIR+=	ros-moveit
 SUBDIR+=	ros-moveit-msgs
 SUBDIR+=	ros-moveit-resources

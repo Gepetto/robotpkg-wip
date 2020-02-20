@@ -7,7 +7,7 @@ ROS_PKG=		ouster-gazebo-simulation
 ROS_VERSION=		2.0.0
 ROS_METAPKG=		yes
 
-PKGNAME=		ros-$(subst _,-,${ROS_PKG})-${ROS_VERSION}
+PKGNAME=		ros-${ROS_PKG}-${ROS_VERSION}
 
 CATEGORIES=		wip
 ROS_COMMENT=		the simulation of Ouster OS1-64 with ros and gazebo

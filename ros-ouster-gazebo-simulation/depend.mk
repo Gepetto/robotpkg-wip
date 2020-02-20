@@ -20,7 +20,8 @@ DEPEND_ABI.ros-ouster-gazebo-simulation?=	ros-ouster-gazebo-simulation>=2.0.0
 DEPEND_DIR.ros-ouster-gazebo-simulation?=	../../wip/ros-ouster-gazebo-simulation
 
 SYSTEM_SEARCH.ros-ouster-gazebo-simulation=\
-	'share/ouster_os1_64/package.xml:/<version>/s/[^0-9.]//gp'
+	'share/ouster_os1_64/package.xml:/<version>/s/[^0-9.]//gp'			\
+	'share/ouster_gazebo_plugins/cmake/ouster_gazebo_pluginsConfig-version.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'
 
 endif # ROS_OUSTER_GAZEBO_SIMULATION_DEPEND_MK --------------------------------------------
 

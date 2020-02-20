@@ -129,6 +129,7 @@ SUBDIR+=	ros-moveit-msgs
 SUBDIR+=	ros-moveit-resources
 SUBDIR+=	ros-object-recognition-msgs
 SUBDIR+=	ros-octomap-msgs
+SUBDIR+=	ros-ouster-gazebo-simulation
 SUBDIR+=	ros-perception-pcl
 SUBDIR+=	ros-pcl-msgs
 SUBDIR+=	ros-py-urdf-parser

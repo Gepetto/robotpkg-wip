@@ -1,0 +1,12 @@
+@comment Thu Feb 20 15:28:00 CET 2020
+include/ouster_gazebo_plugins/GazeboRosOusterLaser.h
+lib/libgazebo_ros_ouster_gpu_laser.so
+lib/libgazebo_ros_ouster_laser.so
+lib/pkgconfig/ouster_gazebo_plugins.pc
+lib/pkgconfig/ouster_os1_64.pc
+share/ouster_gazebo_plugins/cmake/ouster_gazebo_pluginsConfig-version.cmake
+share/ouster_gazebo_plugins/cmake/ouster_gazebo_pluginsConfig.cmake
+share/ouster_gazebo_plugins/package.xml
+share/ouster_os1_64/cmake/ouster_os1_64Config-version.cmake
+share/ouster_os1_64/cmake/ouster_os1_64Config.cmake
+share/ouster_os1_64/package.xml

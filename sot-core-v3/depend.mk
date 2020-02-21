@@ -16,7 +16,8 @@ PREFER.sot-core-v3?=	robotpkg
 SYSTEM_SEARCH.sot-core-v3=\
 	include/sot/core/device.hh				\
 	lib/libsot-core.so					\
-	'lib/pkgconfig/sot-core.pc:/Version/s/[^0-9.]//gp'
+	'lib/pkgconfig/sot-core.pc:/Version/s/[^0-9.]//gp'	\
+	'lib/cmake/sot-core/sot-coreConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'
 
 DEPEND_USE+=		sot-core-v3
 

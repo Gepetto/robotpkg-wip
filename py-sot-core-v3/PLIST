@@ -7,14 +7,14 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/core/clamp_workspace/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/clamp_workspace/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/com_freezer/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/com_freezer/wrap.so
-${PYTHON_SITELIB}/dynamic_graph/sot/core/constraint/__init__.py
-${PYTHON_SITELIB}/dynamic_graph/sot/core/constraint/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/control_gr/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/control_gr/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/control_pd/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/control_pd/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/derivator/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/derivator/wrap.so
+${PYTHON_SITELIB}/dynamic_graph/sot/core/double_constant/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/core/double_constant/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/event/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/event/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/exp_moving_avg/__init__.py
@@ -31,8 +31,8 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_point6d/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_point6d/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_point6d_relative/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_point6d_relative/wrap.so
-${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_pose/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_pose/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_pose/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_position.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_position_relative.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/feature_posture/__init__.py

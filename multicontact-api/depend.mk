@@ -19,7 +19,7 @@ SYSTEM_SEARCH.multicontact-api=\
 
 DEPEND_USE+=				multicontact-api
 
-DEPEND_ABI.multicontact-api?=		multicontact-api>=1.0.0
+DEPEND_ABI.multicontact-api?=		multicontact-api>=2.0.0
 DEPEND_DIR.multicontact-api?=		../../wip/multicontact-api
 
 endif # MULTICONTACT_API_DEPEND_MK ------------------------------------------------

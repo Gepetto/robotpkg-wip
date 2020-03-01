@@ -36,6 +36,7 @@ include/tsid/tasks/fwd.hpp
 include/tsid/tasks/task-actuation-bounds.hpp
 include/tsid/tasks/task-actuation-equality.hpp
 include/tsid/tasks/task-actuation.hpp
+include/tsid/tasks/task-angular-momentum-equality.hpp
 include/tsid/tasks/task-base.hpp
 include/tsid/tasks/task-com-equality.hpp
 include/tsid/tasks/task-contact-force-equality.hpp

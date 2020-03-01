@@ -50,5 +50,5 @@ include ../../wip/sot-core-v3/depend.mk
 include ../../mk/sysdep/bullet.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++.mk
+include ../../mk/language/c++11.mk
 include ../../mk/robotpkg.mk

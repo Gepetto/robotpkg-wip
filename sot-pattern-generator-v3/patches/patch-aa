@@ -1,0 +1,39 @@
+From d6c549f1440ef5b1aef0e3bbba45276210ae7923 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Sun, 1 Mar 2020 22:02:25 +0100
+Subject: [PATCH] [Tests] add missing link to dynamic-graph
+
+fix:
+> /usr/bin/ld: CMakeFiles/testsot-pattern-generator.dir/main.cc.o: undefined reference to symbol '_ZN12dynamicgraph15ExceptionSignalC1ERKNS0_13ErrorCodeEnumERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPKcz'
+---
+ .travis                    | 2 +-
+ cmake                      | 2 +-
+ unitTesting/CMakeLists.txt | 1 +
+ 3 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/.travis b/.travis
+index e1f2f35..dc8b946 160000
+--- .travis
++++ .travis
+@@ -1 +1 @@
+-Subproject commit e1f2f35d92dbac830a3d189200b46a3370bd8327
++Subproject commit dc8b946d456d2c41ad12b819111b005148c68031
+diff --git a/cmake b/cmake
+index 63efaec..8e7bedf 160000
+--- cmake
++++ cmake
+@@ -1 +1 @@
+-Subproject commit 63efaecd7c1fa3f9c190b5365561c38ea33f3236
++Subproject commit 8e7bedfcbd8524c0401a58fd74edc07c3d4308d0
+diff --git a/unitTesting/CMakeLists.txt b/unitTesting/CMakeLists.txt
+index 422533a..533283d 100644
+--- unitTesting/CMakeLists.txt
++++ unitTesting/CMakeLists.txt
+@@ -31,3 +31,4 @@ ADD_TEST(main_test ${EXECUTABLE_NAME})
+ PKG_CONFIG_USE_DEPENDENCY(${EXECUTABLE_NAME} pinocchio)
+ PKG_CONFIG_USE_DEPENDENCY(${EXECUTABLE_NAME} jrl-walkgen)
+ PKG_CONFIG_USE_DEPENDENCY(${EXECUTABLE_NAME} sot-core)
++PKG_CONFIG_USE_DEPENDENCY(${EXECUTABLE_NAME} dynamic-graph)
+-- 
+2.17.1
+

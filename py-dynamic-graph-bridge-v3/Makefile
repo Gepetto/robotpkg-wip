@@ -9,6 +9,11 @@ ROSNAME=		$(subst -,_,${NAME})
 DISTNAME=		${ROSNAME}-v3-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
+# Specifying the source repository
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}.git
+CHECKOUT_VCS_OPTS+=	--recursive
+
 CATEGORIES=		wip
 COMMENT=		This ROS package binds together the ROS framework with the dynamic-graph real-time control architecture.
 LICENSE=		2-clause-bsd

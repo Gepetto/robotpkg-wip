@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			eiquadprog
-VERSION=		1.1.1
+VERSION=		1.1.2
 
 CATEGORIES=		wip
 COMMENT=		algorithm of Goldfarb and Idnani for the solution of a QP

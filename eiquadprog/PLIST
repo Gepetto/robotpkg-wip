@@ -7,4 +7,7 @@ include/eiquadprog/eiquadprog-rt.hpp
 include/eiquadprog/eiquadprog-rt.hxx
 include/eiquadprog/eiquadprog.hpp
 include/eiquadprog/warning.hpp
+lib/cmake/eiquadprog/eiquadprogConfig.cmake
+lib/cmake/eiquadprog/eiquadprogConfigVersion.cmake
+lib/cmake/eiquadprog/eiquadprogTargets.cmake
 lib/pkgconfig/eiquadprog.pc

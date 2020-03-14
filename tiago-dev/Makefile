@@ -14,10 +14,10 @@ META_PACKAGE=	yes
 include ../py-sot-tiago/depend.mk
 include ../tiago-metapkg-ros-control-sot/depend.mk
 include ../../wip/sysdep/ubuntu-distro.mk
-ifeq (bionic,${UBUNTUDISTRO})
-  include ../../wip/prf-gazebo-ros-pkgs-melodic/depend.mk
-else
+ifeq (xenial,${UBUNTUDISTRO})
   include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+else
+  include ../../wip/prf-gazebo-ros-pkgs-melodic/depend.mk
 endif
 include ../tiago-simulation/depend.mk
 include ../pal-wsg-gripper/depend.mk

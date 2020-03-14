@@ -53,20 +53,20 @@ include ../../wip/sysdep/ubuntu-distro.mk
 
 include ../../motion/ros-control-toolbox/depend.mk
 
-ifeq (bionic,${UBUNTUDISTRO})
-  include ../../wip/pal-hardware-gazebo-melodic/depend.mk
-else
+ifeq (xenial,${UBUNTUDISTRO})
   include ../../wip/pal-hardware-gazebo/depend.mk
+else
+  include ../../wip/pal-hardware-gazebo-melodic/depend.mk
 endif
 
 include ../../wip/talos-robot/depend.mk
 include ../../wip/talos-moveit-config/depend.mk
 include ../../wip/prf-roboticsgroup-gazebo-plugins/depend.mk
 include ../../wip/prf-ros-controllers/depend.mk
-ifeq (bionic,${UBUNTUDISTRO})
-  include ../../wip/pal-gazebo-plugins-melodic/depend.mk
-else
+ifeq (xenial,${UBUNTUDISTRO})
   include ../../wip/pal-gazebo-plugins/depend.mk
+else
+  include ../../wip/pal-gazebo-plugins-melodic/depend.mk
 endif
 
 include ../../wip/pal-gazebo-worlds/depend.mk

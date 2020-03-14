@@ -17,8 +17,6 @@ CATEGORIES=	wip
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
 CHECKOUT_VCS_OPTS+=	--recursive
 
-ONLY_FOR_PLATFORM= Ubuntu-18.04-%
-
 # Source file from pal-robotics website
 HOMEPAGE = 	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
 MASTER_SITES=	${HOMEPAGE}/archive/

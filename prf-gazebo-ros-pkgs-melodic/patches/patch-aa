@@ -1,0 +1,20 @@
+fix build on gazebo 10. ref:
+https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/deprecated.html#_deprecated000019
+https://github.com/ros-simulation/gazebo_ros_pkgs/pull/744/files
+
+--- gazebo_plugins/src/gazebo_ros_vacuum_gripper.cpp.orig	2019-11-05 16:53:46.000000000 +0100
++++ gazebo_plugins/src/gazebo_ros_vacuum_gripper.cpp	2020-03-15 00:02:19.149443882 +0100
+@@ -203,13 +203,9 @@
+       double norm = diff.Pos().Length();
+       if (norm < 0.05) {
+ #if GAZEBO_MAJOR_VERSION >= 8
+-        links[j]->SetLinearAccel(link_->WorldLinearAccel());
+-        links[j]->SetAngularAccel(link_->WorldAngularAccel());
+         links[j]->SetLinearVel(link_->WorldLinearVel());
+         links[j]->SetAngularVel(link_->WorldAngularVel());
+ #else
+-        links[j]->SetLinearAccel(link_->GetWorldLinearAccel());
+-        links[j]->SetAngularAccel(link_->GetWorldAngularAccel());
+         links[j]->SetLinearVel(link_->GetWorldLinearVel());
+         links[j]->SetAngularVel(link_->WorldAngularVel());
+ #endif

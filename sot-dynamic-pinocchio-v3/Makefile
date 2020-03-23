@@ -4,15 +4,13 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-dynamic-pinocchio
-VERSION=		3.4.2
+VERSION=		3.4.5
 
 DISTNAME=		${NAME}-v3-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}
 
 CATEGORIES=		wip
 COMMENT=		Create entities to compute a robot dynamics properties using pinocchio
-LICENSE=		2-clause-bsd
-MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		${NAME}
 

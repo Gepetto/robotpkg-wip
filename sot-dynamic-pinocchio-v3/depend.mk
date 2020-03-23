@@ -14,7 +14,7 @@ ifeq (+,$(SOT_DYNAMIC_PINOCCHIO_V3_DEPEND_MK)) # -------------------------------
 PREFER.sot-dynamic-pinocchio-v3?=	robotpkg
 
 SYSTEM_SEARCH.sot-dynamic-pinocchio-v3=\
-	include/sot-dynamic-pinocchio/dynamic-pinocchio.h \
+	include/sot/dynamic-pinocchio/dynamic-pinocchio.h \
 	'lib/pkgconfig/sot-dynamic-pinocchio.pc:Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		sot-dynamic-pinocchio-v3

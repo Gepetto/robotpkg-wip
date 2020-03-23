@@ -4,14 +4,12 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-core
-VERSION=		4.8.0
+VERSION=		4.8.1
 
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
 CATEGORIES=		wip
 COMMENT=		Hierarchical task based control of humanoid robots (python bindings)
-LICENSE=		2-clause-bsd
-MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 

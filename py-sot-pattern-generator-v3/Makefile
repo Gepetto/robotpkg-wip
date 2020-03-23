@@ -4,14 +4,12 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-pattern-generator
-VERSION=		3.2.2
+VERSION=		3.2.3
 
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
 CATEGORIES=		wip
 COMMENT=		Walking Pattern Generator (python bindings)
-LICENSE=		2-clause-bsd
-MAINTAINER=		gepetto@laas.fr
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 

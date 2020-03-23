@@ -4,14 +4,12 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-pattern-generator
-VERSION=		3.2.2
+VERSION=		3.2.3
 
 PKGNAME=		${NAME}-v3-${VERSION}
 
 CATEGORIES=		wip
 COMMENT=		Walking Pattern Generator
-LICENSE=		2-clause-bsd
-MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		${NAME}
 
@@ -24,6 +22,7 @@ include ../../math/pinocchio/depend.mk
 include ../../wip/jrl-walkgen-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
+include ../../wip/talos-data/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

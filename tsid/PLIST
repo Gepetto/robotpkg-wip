@@ -53,5 +53,10 @@ include/tsid/utils/Stdafx.hh
 include/tsid/utils/statistics.hpp
 include/tsid/utils/stop-watch.hpp
 include/tsid/warning.hh
+lib/cmake/tsid/tsidConfig.cmake
+lib/cmake/tsid/tsidConfigVersion.cmake
+lib/cmake/tsid/tsidTargets-release.cmake
+lib/cmake/tsid/tsidTargets.cmake
 lib/libtsid.so
+lib/libtsid.so.${PKGVERSION}
 lib/pkgconfig/tsid.pc

@@ -4,22 +4,16 @@
 
 ORG=			stack-of-tasks
 NAME=			tsid
-VERSION=		1.2.2
+VERSION=		1.2.3
 
 CATEGORIES=		wip
 COMMENT=		Efficient Inverse Dynamics based on Pinocchio (python bindings)
-LICENSE=		2-clause-bsd
-MAINTAINER=		gepetto-soft@laas.fr
 
 USE_BOOST_LIBS=		unit_test_framework
-USE_PYTHON=		yes
+USE_PYTHON_ONLY=	yes
 
 # this does not support multiple parallel python version
 CONFLICTS+=		py[0-9][0-9]-${NAME}-[0-9]*
-
-CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
-CMAKE_ARGS+=		-DINSTALL_GENERATED_HEADERS=OFF
-CMAKE_ARGS+=		-DINSTALL_PKG_CONFIG_FILE=OFF
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../${CATEGORIES}/${NAME}/depend.mk

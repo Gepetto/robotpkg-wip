@@ -4,12 +4,10 @@
 
 ORG=			stack-of-tasks
 NAME=			tsid
-VERSION=		1.2.2
+VERSION=		1.2.3
 
 CATEGORIES=		wip
 COMMENT=		Efficient Inverse Dynamics based on Pinocchio
-LICENSE=		2-clause-bsd
-MAINTAINER=		gepetto-soft@laas.fr
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 

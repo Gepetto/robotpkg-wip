@@ -2,14 +2,12 @@
 # Created:			Olivier Stasse on Wed Feb 21 18:07:40 CET 2018
 #
 
-ORG=				stack-of-tasks
-NAME=				sot-torque-control
-VERSION=			1.5.0
+ORG=			stack-of-tasks
+NAME=			sot-torque-control
+VERSION=		1.5.2
 
-CATEGORIES=			wip
-COMMENT=			Torque control for humanoids
-LICENSE=			2-clause-bsd
-MAINTAINER=			gepetto-soft@laas.fr
+CATEGORIES=		wip
+COMMENT=		Torque control for humanoids
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 CMAKE_ARGS+=		-DqpOASES_PREFIX=${PREFIX.qpoases}

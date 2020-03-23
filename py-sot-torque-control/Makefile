@@ -2,18 +2,16 @@
 # Created:			Olivier Stasse on Wed Feb 21 18:07:40 CET 2018
 #
 
-ORG=				stack-of-tasks
-NAME=				sot-torque-control
-VERSION=			1.5.0
+ORG=			stack-of-tasks
+NAME=			sot-torque-control
+VERSION=		1.5.2
 
-CATEGORIES=			wip
-COMMENT=			Torque control for humanoids (python bindings)
-LICENSE=			2-clause-bsd
-MAINTAINER=			gepetto-soft@laas.fr
+CATEGORIES=		wip
+COMMENT=		Torque control for humanoids (python bindings)
 
-CMAKE_ARGS+=			-DqpOASES_PREFIX=${PREFIX.qpoases}
+CMAKE_ARGS+=		-DqpOASES_PREFIX=${PREFIX.qpoases}
 
-USE_PYTHON_ONLY=		true
+USE_PYTHON_ONLY=	true
 
 include ../../${CATEGORIES}/${NAME}/depend.mk
 include ../../devel/jrl-cmakemodules/Makefile.common

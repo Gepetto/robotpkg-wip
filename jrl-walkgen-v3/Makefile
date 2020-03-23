@@ -4,15 +4,12 @@
 
 ORG=			stack-of-tasks
 NAME=			jrl-walkgen
-VERSION=		4.2.0
-PKGREVISION=		1
+VERSION=		4.2.1
 
 PKGNAME=		${NAME}-v3-${VERSION}
 
 CATEGORIES=		wip
 COMMENT=		Walk pattern generator for the HRP-2 humanoid robot.
-LICENSE=		2-clause-bsd
-MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		${NAME}
 

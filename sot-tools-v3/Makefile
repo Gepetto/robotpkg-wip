@@ -4,14 +4,12 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-tools
-VERSION=		2.2.0
+VERSION=		2.2.2
 
 PKGNAME=		${NAME}-v3-${VERSION}
 
 CATEGORIES=		wip
 COMMENT=		tools for the sot-core package
-LICENSE=		2-clause-bsd
-MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		${NAME}
 
@@ -23,6 +21,8 @@ include ../../wip/sot-core-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../math/eigen3/depend.mk
+include ../../math/pinocchio/depend.mk
+include ../../path/hpp-fcl/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/graphviz.mk

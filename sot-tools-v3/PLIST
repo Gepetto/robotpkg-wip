@@ -1,7 +1,17 @@
 @comment Wed Aug 1 19:27:26 CEST 2018
 include/sot/tools/config.hh
+include/sot/tools/cubic-interpolation-se3.hh
+include/sot/tools/cubic-interpolation.hh
 include/sot/tools/deprecated.hh
+include/sot/tools/kinematic-planner.hh
+include/sot/tools/seqplay.hh
+include/sot/tools/simpleseqplay.hh
 include/sot/tools/warning.hh
+lib/cmake/sot-tools/sot-toolsConfig.cmake
+lib/cmake/sot-tools/sot-toolsConfigVersion.cmake
+lib/cmake/sot-tools/sot-toolsTargets-release.cmake
+lib/cmake/sot-tools/sot-toolsTargets.cmake
 lib/libsot-tools.so
 lib/libsot-tools.so.${PKGVERSION}
 lib/pkgconfig/sot-tools.pc
+share/sot-tools/package.xml

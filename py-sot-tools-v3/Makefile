@@ -4,14 +4,12 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-tools
-VERSION=		2.2.0
+VERSION=		2.2.2
 
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
 CATEGORIES=		wip
 COMMENT=		tools for the sot-core package (python bindings)
-LICENSE=		2-clause-bsd
-MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 
@@ -23,6 +21,11 @@ include ../../wip/sot-core-v3/depend.mk
 include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
+include ../../math/pinocchio/depend.mk
+include ../../math/py-pinocchio/depend.mk
+include ../../math/py-eigenpy/depend.mk
+include ../../path/hpp-fcl/depend.mk
+include ../../path/py-hpp-fcl/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

@@ -23,4 +23,6 @@ endif
 
 include ../../wip/talos-metapkg-ros-control-sot/depend.mk
 include ../../wip/talos-simulation/depend.mk
+include ../../wip/ros-image-pipeline/depend.mk
+include ../../localization/ros-robot-state-publisher/depend.mk
 include ../../mk/robotpkg.mk

@@ -1,0 +1,22 @@
+--- pal_carbon_collector/scripts/carbon_collector_node.py.orig	2019-08-28 13:19:58.000000000 +0200
++++ pal_carbon_collector/scripts/carbon_collector_node.py	2020-03-23 20:58:55.764363209 +0100
+@@ -10,7 +10,7 @@
+     rospy.init_node('carbon_collector_node')
+ 
+     if not rospy.has_param('~topics'):
+-        print "No topics were specified"
++        print("No topics were specified")
+         sys.exit(1)
+ 
+     topics = rospy.get_param('~topics')
+--- pal_carbon_collector/src/pal_carbon_collector/carbon_collector.py.orig	2019-08-28 13:19:58.000000000 +0200
++++ pal_carbon_collector/src/pal_carbon_collector/carbon_collector.py	2020-03-23 20:58:58.974351827 +0100
+@@ -25,7 +25,7 @@
+         result = self.gs.send_list(stats, timestamp.to_sec())
+ 
+         if self.dry_run:
+-            print result
++            print(result)
+ 
+         return result
+ 

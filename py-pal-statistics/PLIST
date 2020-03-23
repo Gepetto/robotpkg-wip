@@ -8,7 +8,7 @@ include/pal_statistics_msgs/Statistic.h
 include/pal_statistics_msgs/Statistics.h
 include/pal_statistics_msgs/StatisticsNames.h
 include/pal_statistics_msgs/StatisticsValues.h
-lib/libpal_statistics${PYTHON_EXT_SUFFIX}
+lib/libpal_statistics.so
 lib/pal_carbon_collector/carbon_collector_node.py
 lib/pkgconfig/pal_carbon_collector.pc
 lib/pkgconfig/pal_statistics.pc

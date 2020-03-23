@@ -25,7 +25,7 @@ include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../wip/backward-ros/depend.mk
-include ../../wip/pal-statistics/depend.mk
+include ../../wip/py-pal-statistics/depend.mk
 
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

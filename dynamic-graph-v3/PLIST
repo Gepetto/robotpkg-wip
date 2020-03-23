@@ -26,8 +26,8 @@ include/dynamic-graph/factory.h
 include/dynamic-graph/fwd.hh
 include/dynamic-graph/linear-algebra.h
 include/dynamic-graph/logger.h
-include/dynamic-graph/null-ptr.hh
 include/dynamic-graph/pool.h
+include/dynamic-graph/real-time-logger-def.h
 include/dynamic-graph/real-time-logger.h
 include/dynamic-graph/signal-array.h
 include/dynamic-graph/signal-base.h
@@ -49,9 +49,11 @@ lib/cmake/dynamic-graph/dynamic-graphConfig.cmake
 lib/cmake/dynamic-graph/dynamic-graphConfigVersion.cmake
 lib/cmake/dynamic-graph/dynamic-graphTargets-release.cmake
 lib/cmake/dynamic-graph/dynamic-graphTargets.cmake
+lib/dynamic-graph-plugins/libtracer-real-time.so
+lib/dynamic-graph-plugins/libtracer-real-time.so.${PKGVERSION}
+lib/dynamic-graph-plugins/libtracer.so
+lib/dynamic-graph-plugins/libtracer.so.${PKGVERSION}
 lib/libdynamic-graph.so
 lib/libdynamic-graph.so.${PKGVERSION}
 lib/pkgconfig/dynamic-graph.pc
-lib/plugin/tracer-real-time.so
-lib/plugin/tracer.so
 share/dynamic-graph/package.xml

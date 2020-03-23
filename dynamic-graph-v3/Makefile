@@ -4,28 +4,20 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph
-VERSION=		3.8.1
+VERSION=		4.0.0
 
 DISTNAME=		${NAME}-v3-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}
 
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
-
 CATEGORIES=		wip
 COMMENT=		Efficient data-flow C++ library for robotics
-LICENSE=		2-clause-bsd
-MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		${NAME}
 
-CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
-CMAKE_ARGS+=		-DCMAKE_INSTALL_LIBDIR=lib
-CMAKE_ARGS+=		-DCXX_DISABLE_WERROR=yes
+CMAKE_ARGS+=		-DCXX_DISABLE_WERROR=ON
+CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
 
-DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
-
+include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../math/eigen3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

@@ -4,14 +4,12 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-python
-VERSION=		3.5.0
+VERSION=		3.5.1
 
 PKGNAME=		${PKGTAG.python-}dynamic-graph-v3-${VERSION}
 
 CATEGORIES=		wip
 COMMENT=		Efficient data-flow C++ library for robotics (python bindings)
-LICENSE=		2-clause-bsd
-MAINTAINER=		gepetto-soft@laas.fr
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 CONFLICTS+=		py[0-9][0-9]-${NAME}-v3  # there is stuff not in ${PYTHON_SITELIB}

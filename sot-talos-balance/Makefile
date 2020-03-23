@@ -2,14 +2,12 @@
 # Created:			Olivier Stasse on Wed Feb 21 18:07:40 CET 2018
 #
 
-ORG=				stack-of-tasks
-NAME=				sot-talos-balance
-VERSION=			1.8.0
+ORG=			stack-of-tasks
+NAME=			sot-talos-balance
+VERSION=		1.8.1
 
-CATEGORIES=			wip
-COMMENT=			Balance for TALOS humanoid robot
-LICENSE=			2-clause-bsd
-MAINTAINER=			gepetto-soft@laas.fr
+CATEGORIES=		wip
+COMMENT=		Balance for TALOS humanoid robot
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF

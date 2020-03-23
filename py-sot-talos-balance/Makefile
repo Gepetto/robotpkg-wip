@@ -2,16 +2,14 @@
 # Created:			Olivier Stasse on Sat May 25 23:01:40 CET 2019
 #
 
-ORG=				stack-of-tasks
-NAME=				sot-talos-balance
-VERSION=			1.8.0
+ORG=			stack-of-tasks
+NAME=			sot-talos-balance
+VERSION=		1.8.1
 
-CATEGORIES=			wip
-COMMENT=			Balance for TALOS humanoid robot (python bindings)
-LICENSE=			2-clause-bsd
-MAINTAINER=			gepetto-soft@laas.fr
+CATEGORIES=		wip
+COMMENT=		Balance for TALOS humanoid robot (python bindings)
 
-USE_PYTHON_ONLY=		true
+USE_PYTHON_ONLY=	true
 
 include ../../${CATEGORIES}/${NAME}/depend.mk
 include ../../devel/jrl-cmakemodules/Makefile.common

@@ -4,12 +4,10 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-tutorial
-VERSION=		1.2.0
+VERSION=		1.2.1
 
 CATEGORIES=		wip
 COMMENT=		Tutorial for the dynamic-graph
-LICENSE=		2-clause-bsd
-MAINTAINER=		gepetto-soft@laas.fr
 
 USE_PYTHON_ONLY=	true
 

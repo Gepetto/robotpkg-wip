@@ -14,13 +14,15 @@ ifeq (+,$(DYNAMIC_GRAPH_TUTORIAL_DEPEND_MK)) # ---------------------------------
 PREFER.dynamic-graph-tutorial?=	robotpkg
 
 SYSTEM_SEARCH.dynamic-graph-tutorial=\
-  'include/dynamic-graph/tutorial/config.hh:/DYNAMIC_GRAPH_TUTORIAL_VERSION/s/[^0-9.]//gp'	\
-  'lib/libdynamic-graph-tutorial.so'							\
-  'lib/pkgconfig/dynamic-graph-tutorial.pc:/Version/s/[^0-9.]//gp'
+  'include/dynamic-graph/tutorial/config.hh:/DYNAMIC_GRAPH_TUTORIAL_VERSION /s/[^0-9.]//gp'			\
+  'lib/libdynamic-graph-tutorial.so'										\
+  'lib/cmake/dynamic-graph-tutorial/dynamic-graph-tutorialConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
+  'lib/pkgconfig/dynamic-graph-tutorial.pc:/Version/s/[^0-9.]//gp'						\
+  'share/dynamic-graph-tutorial/package.xml:/<version>/s/[^0-9.]//gp'
 
 DEPEND_USE+=		dynamic-graph-tutorial
 
-DEPEND_ABI.dynamic-graph-tutorial?=	dynamic-graph-tutorial>=1.1.0
+DEPEND_ABI.dynamic-graph-tutorial?=	dynamic-graph-tutorial>=1.2.1
 DEPEND_DIR.dynamic-graph-tutorial?=	../../wip/dynamic-graph-tutorial
 
 endif # DYNAMIC_GRAPH_TUTORIAL_DEPEND_MK ------------------------------------------------

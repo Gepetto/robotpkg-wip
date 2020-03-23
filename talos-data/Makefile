@@ -4,8 +4,7 @@
 
 ORG=			pyrene-dev
 NAME=			talos-data
-VERSION=		1.2.0
-PKGREVISION=		1
+VERSION=		1.2.1
 
 ROSNAME=		$(subst -,_,${NAME})
 PKGNAME=		${NAME}-${VERSION}
@@ -33,12 +32,10 @@ include ../../middleware/ros-comm/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 
 include ../../wip/sysdep/ubuntu-distro.mk
-ifeq (bionic,${UBUNTUDISTRO})
-  include ../../wip/prf-gazebo-ros-pkgs-melodic/depend.mk
-else ifeq (xenial,${UBUNTUDISTRO})
+ifeq (xenial,${UBUNTUDISTRO})
   include ../../wip/prf-gazebo-ros-pkgs/depend.mk
 else
-  include ../../simulation/gazebo-ros-pkgs/depend.mk
+  include ../../wip/prf-gazebo-ros-pkgs-melodic/depend.mk
 endif
 
 include ../../mk/sysdep/gazebo.mk

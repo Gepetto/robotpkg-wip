@@ -2,6 +2,9 @@
 include/pyrene/motions/config.hh
 include/pyrene/motions/deprecated.hh
 include/pyrene/motions/warning.hh
+lib/cmake/pyrene-motions/pyrene-motionsConfig.cmake
+lib/cmake/pyrene-motions/pyrene-motionsConfigVersion.cmake
+lib/cmake/pyrene-motions/pyrene-motionsTargets.cmake
 lib/pkgconfig/pyrene-motions.pc
 share/pyrene-motions/climb15cmStairsNoHandrail/no_handrail_15cm_1_step.posture
 share/pyrene-motions/grabHandrail15/handrail_grab.posture

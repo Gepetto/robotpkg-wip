@@ -1,19 +1,15 @@
 # robotpkg Makefile for:	wip/pyrene-motions
-# Created:			Olivier Stasse, on Tue. 21th Aug, 2018
+# Created:			Olivier Stasse on Tue, 21 Aug 2018
 #
 
 ORG=			pyrene-dev
 NAME=			pyrene-motions
-VERSION=		0.0.1
+VERSION=		1.0.0
 
 CATEGORIES=		wip
 COMMENT=		This packages provides motions of the humanoid robot Pyrene readable by the SoT framework.
-LICENSE=		2-clause-bsd
-MAINTAINER=		ostasse@laas.fr
 
-CMAKE_PREFIX_PATH+= ${PREFIX}
-WRKSRC=		${WRKDIR}/pyrene-motions-${VERSION}
-
+CMAKE_PREFIX_PATH+=	${PREFIX}
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../pkgtools/pkg-config/depend.mk

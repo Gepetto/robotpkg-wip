@@ -19,10 +19,10 @@ DEPEND_ABI.py-dynamic-graph-bridge-v3?=		${PKGTAG.python-}dynamic-graph-bridge-v
 DEPEND_DIR.py-dynamic-graph-bridge-v3?=		../../wip/py-dynamic-graph-bridge-v3
 
 SYSTEM_SEARCH.py-dynamic-graph-bridge-v3=\
-  'include/dynamic_graph_bridge/config.hh'				\
-  'lib/pkgconfig/dynamic_graph_bridge.pc:/Version/s/[^0-9.]//gp'	\
-  'share/dynamic_graph_bridge/robot_pose_publisher'			\
-  'share/dynamic_graph_bridge/cmake/dynamic_graph_bridgeConfig.cmake' \
+  'include/dynamic_graph_bridge/config.hh:/DYNAMIC_GRAPH_BRIDGE_VERSION /s/[^0-9.]//gp'				\
+  'lib/pkgconfig/dynamic_graph_bridge.pc:/Version/s/[^0-9.]//gp'						\
+  'lib/cmake/dynamic_graph_bridge/dynamic_graph_bridgeConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
+  'share/dynamic_graph_bridge/robot_pose_publisher'								\
   '${PYTHON_SITELIB}/dynamic_graph/ros/ros.py'
 
 

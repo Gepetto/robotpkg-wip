@@ -16,7 +16,7 @@ include ../../mk/sysdep/python.mk
 PREFER.py-sot-talos?=	robotpkg
 
 SYSTEM_SEARCH.py-sot-talos=\
-	include/sot-talos/config.hh				\
+	include/sot/talos/config.hh				\
 	'lib/pkgconfig/sot-talos.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		py-sot-talos

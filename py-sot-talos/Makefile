@@ -4,19 +4,17 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-talos
-VERSION=		1.1.0
+VERSION=		1.1.1
 
 CATEGORIES=		wip
 COMMENT=		This packages provides a generic Stack Of Tasks library for the humanoid robot Pyrene.
-LICENSE=		2-clause-bsd
-MAINTAINER=		ostasse@laas.fr
 
 USE_PYTHON=		true
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/talos-data/depend.mk
+include ../../wip/pyrene-motions/depend.mk
 include ../../wip/py-sot-application-v3/depend.mk
-#include ../../wip/sot-dyninv-v3/depend.mk
 include ../../motion/dynamic-graph-bridge-msgs/depend.mk
 include ../../wip/py-dynamic-graph-bridge-v3/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
@@ -28,6 +26,7 @@ include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../path/hpp-fcl/depend.mk
+include ../../path/py-hpp-fcl/depend.mk
 include ../../mapping/octomap/depend.mk
 include ../../math/py-pinocchio/depend.mk
 include ../../math/py-eigenpy/depend.mk

@@ -1,7 +1,11 @@
 @comment Tue May 9 23:59:20 CEST 2017
-include/sot-talos/config.hh
-include/sot-talos/deprecated.hh
-include/sot-talos/warning.hh
+include/sot/talos/config.hh
+include/sot/talos/deprecated.hh
+include/sot/talos/warning.hh
+lib/cmake/sot-talos/sot-talosConfig.cmake
+lib/cmake/sot-talos/sot-talosConfigVersion.cmake
+lib/cmake/sot-talos/sot-talosTargets-release.cmake
+lib/cmake/sot-talos/sot-talosTargets.cmake
 lib/libsot-pyrene-controller.so
 lib/libsot-talos-device.so
 lib/pkgconfig/sot-talos.pc
@@ -12,7 +16,10 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/talos/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/talos/sot_talos_device/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/talos/sot_talos_device/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/talos/talos.py
+share/sot-talos/package.xml
+share/sot-talos/tests/appli-test-simple-seq-play.py
 share/sot-talos/tests/appli.py
 share/sot-talos/tests/katana_holding.py
 share/sot-talos/tests/kinetalos.py
+share/sot-talos/tests/test-simple-seq-play.py
 share/sot-talos/tests/test.py

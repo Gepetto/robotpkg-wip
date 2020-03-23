@@ -14,7 +14,7 @@ ifeq (+,$(PY_SOT_APPLICATION_V3_DEPEND_MK)) # ----------------------------------
 PREFER.py-sot-application-v3?=	robotpkg
 
 SYSTEM_SEARCH.py-sot-application-v3=\
-	'${PYTHON_SYSLIBSEARCH}/dynamic_graph/sot/dynamics_pinocchio/dynamic/wrap.so'
+	'${PYTHON_SYSLIBSEARCH}/dynamic_graph/sot/dynamic_pinocchio/dynamic/wrap.so'
 
 DEPEND_USE+=		py-sot-application-v3
 

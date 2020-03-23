@@ -30,4 +30,7 @@ include/curves/serialization/fwd.hpp
 include/curves/serialization/registeration.hpp
 include/curves/so3_linear.h
 include/curves/warning.hh
+lib/cmake/curves/curvesConfig.cmake
+lib/cmake/curves/curvesConfigVersion.cmake
+lib/cmake/curves/curvesTargets.cmake
 lib/pkgconfig/curves.pc

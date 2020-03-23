@@ -4,13 +4,10 @@
 
 ORG=			loco-3d
 NAME=			curves
-VERSION=		0.3.2
+VERSION=		0.3.3
 
 CATEGORIES=		wip
 COMMENT=		Library for creating curves
-
-LICENSE=		2-clause-bsd
-MAINTAINER=		gepetto@laas.fr
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 

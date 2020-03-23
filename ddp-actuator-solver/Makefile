@@ -4,14 +4,11 @@
 
 ORG=			stack-of-tasks
 NAME=			ddp-actuator-solver
-VERSION=		1.0.0
+VERSION=		1.1.0
 
 CATEGORIES=		wip
 COMMENT=		Differentiable Dynamics Programming for one actuator
-LICENSE=		2-clause-bsd
-MAINTAINER=		gepetto-soft@laas.fr
 
-CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 CMAKE_ARGS+=		-DqpOASES_PREFIX=${PREFIX.qpoases}
 
 USE_BOOST_LIBS=		unit_test_framework

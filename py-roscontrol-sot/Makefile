@@ -3,7 +3,7 @@
 #
 
 ORG=			stack-of-tasks
-VERSION=		0.3.0
+VERSION=		0.4.0
 NAME=			roscontrol-sot
 PKGNAME=		${PKGTAG.python-}${NAME}-${VERSION}
 ROSNAME=		$(subst -,_,${NAME})
@@ -14,10 +14,8 @@ DIST_SUBDIR=		${NAME}
 CATEGORIES=		wip
 
 COMMENT=		This ROS package binds together the ROS control framework with the dynamic-graph real-time control architecture.
-LICENSE=		2-clause-bsd
-MAINTAINER=		hpp@laas.fr
 
-CMAKE_ARGS+=			-DINSTALL_DOCUMENTATION=OFF
+CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
 
 # disable -Werror because of x86_64 warnings (must be fixed upstream) and
 # boost + gcc that don't cohabit well depending on their respective versions
@@ -31,6 +29,8 @@ CMAKE_ARGS+=		-DMANDIR=${PREFIX}/${PKGMANDIR}
 # http://wiki.ros.org/catkin/what
 CMAKE_PREFIX_PATH+=	${PREFIX}
 USE_PYTHON=		true
+
+DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
 
 
 include ../../devel/jrl-cmakemodules/Makefile.common
@@ -58,7 +58,6 @@ ifeq (erbium,${PREFER.pal-distro})
     SYSTEM_PREFIX+=/opt/pal/erbium
     CXXFLAGS+="-I/opt/pal/erbium/include"
     PKG_CONFIG_DIRS=/opt/pal/erbium/lib/pkgconfig
-    include ../../motion/ros-control-toolbox/depend.mk
   else
     include ../../wip/pal-hardware-interfaces/depend.mk
     include ../../wip/prf-ros-control/depend.mk

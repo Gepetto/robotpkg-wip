@@ -5,7 +5,7 @@ include/sot/talos_balance/warning.hh
 lib/cmake/sot-talos-balance/sot-talos-balanceConfig.cmake
 lib/cmake/sot-talos-balance/sot-talos-balanceConfigVersion.cmake
 lib/cmake/sot-talos-balance/sot-talos-balanceTargets-release.cmake
-l
+lib/cmake/sot-talos-balance/sot-talos-balanceTargets.cmake
 lib/dynamic-graph-plugins/libadmittance-controller-end-effector.so
 lib/dynamic-graph-plugins/libadmittance-controller-end-effector.so.${PKGVERSION}
 lib/dynamic-graph-plugins/libankle-admittance-controller.so
@@ -87,7 +87,6 @@ lib/libsot-talos-balance.so.${PKGVERSION}
 lib/pkgconfig/sot-talos-balance.pc
 share/sot-talos-balance/package.xml
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/CoM.dat
-share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/LeftFoot.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/LeftFoot.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/Phase.dat
 share/sot_talos_balance/data/TestKajita2003StraightWalking64/10cm/Rho.dat

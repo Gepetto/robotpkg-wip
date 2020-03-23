@@ -2,6 +2,9 @@
 include/tiago/data/config.hh
 include/tiago/data/deprecated.hh
 include/tiago/data/warning.hh
+lib/cmake/tiago_data/tiago_dataConfig.cmake
+lib/cmake/tiago_data/tiago_dataConfigVersion.cmake
+lib/cmake/tiago_data/tiago_dataTargets.cmake
 lib/pkgconfig/tiago_data.pc
 share/tiago_data/Media/materials/scripts/markers.material
 share/tiago_data/Media/materials/textures/aruco-26_8cm.png
@@ -9,8 +12,6 @@ share/tiago_data/Media/materials/textures/aruco-582_8cm.png
 share/tiago_data/Media/materials/textures/pal_logo_1_7cm.jpg
 share/tiago_data/Media/materials/textures/pal_logo_2_7cm.jpg
 share/tiago_data/Media/materials/textures/pal_logo_3_7cm.jpg
-share/tiago_data/cmake/tiago_dataConfig-version.cmake
-share/tiago_data/cmake/tiago_dataConfig.cmake
 share/tiago_data/config/collision/collision_parameters.yaml
 share/tiago_data/gazebo/gazebo.urdf.xacro
 share/tiago_data/meshes/arm/arm_1.stl

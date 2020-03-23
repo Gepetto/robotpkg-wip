@@ -39,7 +39,7 @@ include ../../wip/sysdep/ubuntu-distro.mk
 ifeq (bionic,${UBUNTUDISTRO})
   include ../../wip/ros-moveit/depend.mk
 endif
-include ../../wip/prf-ros-control/depend.mk
+include ../../wip/py-prf-ros-control/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

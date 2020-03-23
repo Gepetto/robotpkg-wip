@@ -1,24 +1,24 @@
-# robotpkg depend.mk for:	wip/prf-ros-control
+# robotpkg depend.mk for:	wip/py-prf-ros-control
 # Created:			Olivier Stasse on Wed, 29 Mar 2017
 #
 
 DEPEND_DEPTH:=			${DEPEND_DEPTH}+
-ROS_CONTROL_DEPEND_MK:=	${ROS_CONTROL_DEPEND_MK}+
+PY_PRF_ROS_CONTROL_DEPEND_MK:=	${PY_PRF_ROS_CONTROL_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
-DEPEND_PKG+=			prf-ros-control
+DEPEND_PKG+=			py-prf-ros-control
 endif
 
-ifeq (+,$(ROS_CONTROL_DEPEND_MK)) # ----------------------------------
+ifeq (+,$(PY_PRF_ROS_CONTROL_DEPEND_MK)) # ----------------------------------
 
-PREFER.prf-ros-control?=	robotpkg
+PREFER.py-prf-ros-control?=	robotpkg
 
-DEPEND_USE+=			prf-ros-control
+DEPEND_USE+=			py-prf-ros-control
 
-DEPEND_ABI.prf-ros-control?=	prf-ros-control>=0.2
-DEPEND_DIR.prf-ros-control?=	../../wip/prf-ros-control
+DEPEND_ABI.py-prf-ros-control?=	py-prf-ros-control>=0.2
+DEPEND_DIR.py-prf-ros-control?=	../../wip/py-prf-ros-control
 
-SYSTEM_SEARCH.prf-ros-control=\
+SYSTEM_SEARCH.py-prf-ros-control=\
   'include/controller_manager/controller_loader.h'		\
   'include/controller_interface/controller.h'			\
   'include/controller_interface/controller_base.h'		\
@@ -93,6 +93,7 @@ SYSTEM_SEARCH.prf-ros-control=\
   'lib/libtransmission_interface_loader_plugins.so'	\
   'lib/libtransmission_interface_parser.so'	\
   'share/ros_control/package.xml:/<version>/s/[^0-9.]//gp'	\
+  '${PYTHON_SYSLIBSEARCH}/controller_manager/__init__.py	\
   $(foreach _,							\
 	controller_interface					\
 	rqt_controller_manager					\
@@ -106,6 +107,6 @@ SYSTEM_SEARCH.prf-ros-control=\
   'share/$_/cmake/$_Config.cmake'				\
   'lib/pkgconfig/$_.pc:/Version/s/[^0-9.]//gp')
 
-endif # ROS_CONTROL_DEPEND_MK ----------------------------------------
+endif # PY_PRF_ROS_CONTROL_DEPEND_MK ----------------------------------------
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}

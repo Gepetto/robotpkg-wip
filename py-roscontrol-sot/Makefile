@@ -60,12 +60,12 @@ ifeq (erbium,${PREFER.pal-distro})
     PKG_CONFIG_DIRS=/opt/pal/erbium/lib/pkgconfig
   else
     include ../../wip/pal-hardware-interfaces/depend.mk
-    include ../../wip/prf-ros-control/depend.mk
+    include ../../wip/py-prf-ros-control/depend.mk
     include ../../wip/prf-ros-controllers/depend.mk
   endif
 else
   include ../../wip/pal-hardware-interfaces/depend.mk
-  include ../../wip/prf-ros-control/depend.mk
+  include ../../wip/py-prf-ros-control/depend.mk
   include ../../wip/prf-ros-controllers/depend.mk
 endif
 

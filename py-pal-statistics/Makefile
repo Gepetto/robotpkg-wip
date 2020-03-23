@@ -26,8 +26,6 @@ MASTER_SITES=		${HOMEPAGE}/archive/
 COMMENT=		Provides statistics
 LICENSE=		gnu-gpl-v3
 
-USE_BOOST_LIBS=		thread
-
 ROS_METAPKG=		yes
 USE_BOOST_LIBS=		thread
 

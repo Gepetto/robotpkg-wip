@@ -41,10 +41,10 @@ ifeq (erbium,${PREFER.pal-distro})
   ifeq (palerbium,${PALDISTRO})
     CMAKE_PREFIX_PATH+=/opt/pal/erbium
   else
-    include ../../wip/prf-ros-control/depend.mk
+    include ../../wip/py-prf-ros-control/depend.mk
   endif
 else
-  include ../../wip/prf-ros-control/depend.mk
+  include ../../wip/py-prf-ros-control/depend.mk
 endif
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

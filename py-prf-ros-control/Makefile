@@ -1,30 +1,36 @@
-# robotpkg Makefile for:	wip/pdf-ros-control
+# robotpkg Makefile for:	wip/py-prf-ros-control
 # Created:			Olivier Stasse on Wed, 27 Apr 2018
 #
-ORG=		pal-robotics-forks
-VERSION=	0.2.8
-PRFNAME=        ros-control
-PKGBASE=	prf-${PRFNAME}
-PKGNAME=	${PKGBASE}-${VERSION}
-DISTNAME=	${VERSION}
-ROSNAME=	$(subst -,_,${PRFNAME})
-WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
-DIST_SUBDIR=	${PKGBASE}
+#
+ORG=			pal-robotics-forks
+VERSION=		0.2.8
+PRFNAME=		ros-control
+PKGBASE=		prf-${PRFNAME}
+PKGNAME=		${PKGTAG.python-}${PKGBASE}-${VERSION}
+DISTNAME=		${VERSION}
+ROSNAME=		$(subst -,_,${PRFNAME})
+WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
+DIST_SUBDIR=		${PKGBASE}
+PKGREVISION=		1
 
-CATEGORIES=	wip
+# old package name and other Python versions
+CONFLICTS=		${PKGBBASE}-[0-9]*
+CONFLICTS+=		py[0-9][0-9]-${PKGBBASE}-[0-9]*
+CONFLICTS+=		ros-control-[0-9]*
+
+
+CATEGORIES=		wip
+
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
 CHECKOUT_VCS_OPTS+=	--recursive
 
-HOMEPAGE= 	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/
+HOMEPAGE= 		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
+MASTER_SITES=		${HOMEPAGE}/archive/
+COMMENT=		ros_control package with torque sensors
+LICENSE=		2-clause-bsd
 
-COMMENT=	ros_control package with torque sensors
-LICENSE=	2-clause-bsd
-
-CONFLICTS+=	ros-control-[0-9]*
-
-ROS_METAPKG=	yes
-USE_BOOST_LIBS=	thread
+ROS_METAPKG=		yes
+USE_BOOST_LIBS=		thread
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
@@ -44,6 +50,7 @@ include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
 include ../../net/ros-resource-retriever/depend.mk
 include ../../sysutils/py-rospkg/depend.mk
+include ../../mk/sysdep/python.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

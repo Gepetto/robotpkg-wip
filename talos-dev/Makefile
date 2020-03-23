@@ -12,7 +12,7 @@ META_PACKAGE=	yes
 
 include ../../interfaces/humanoid-nav-msgs/depend.mk
 include ../../wip/py-sot-talos/depend.mk
-include ../../wip/prf-ros-control/depend.mk
+include ../../wip/py-prf-ros-control/depend.mk
 
 include ../../wip/sysdep/ubuntu-distro.mk
 ifeq (xenial,${UBUNTUDISTRO})

@@ -52,7 +52,7 @@ include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
 include ../../sysutils/ros-diagnostics/depend.mk
-include ../../wip/prf-ros-control/depend.mk
+include ../../wip/py-prf-ros-control/depend.mk
 include ../../mk/sysdep/gazebo.mk
 include ../../mk/sysdep/libogre.mk
 include ../../mk/language/c++.mk

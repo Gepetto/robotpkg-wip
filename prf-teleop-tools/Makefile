@@ -32,7 +32,7 @@ CMAKE_PREFIX_PATH+= ${PREFIX}
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
-include ../../wip/prf-ros-control/depend.mk
+include ../../wip/py-prf-ros-control/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-pluginlib/depend.mk
 include ../../devel/ros-ros/depend.mk

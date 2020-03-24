@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse on Tue, 30 April 2019
 #
 
-VERSION=		1.0.2
+VERSION=		1.0.3
 PKGBASE=		tiago-metapkg-ros-control-sot
 PKGNAME=		${PKGBASE}-${VERSION}
 ROSNAME=		$(subst -,_,${PKGBASE})
@@ -16,10 +16,10 @@ HOMEPAGE=		${MASTER_SITE_GITHUB:=stack-of-tasks/${ROSNAME}}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=tiago/${PKGBASE}/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/stack-of-tasks/${ROSNAME}
 
-COMMENT=	ros_control package for the SoT and specifically for Tiago
-LICENSE=	2-clause-bsd
+COMMENT=		ros_control package for the SoT and specifically for Tiago
+LICENSE=		2-clause-bsd
 
-ROS_METAPKG=	yes
+ROS_METAPKG=		yes
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

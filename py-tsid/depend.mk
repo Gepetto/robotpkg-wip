@@ -14,7 +14,7 @@ ifeq (+,$(PY_TSID_DEPEND_MK)) # ------------------------------------------
 PREFER.py-tsid?=	robotpkg
 
 SYSTEM_SEARCH.py-tsid=\
-	'${PYTHON_SYSLIBSEARCH}/tsid.so'
+	'${PYTHON_SYSLIBSEARCH}/tsid/__init__.py'
 
 DEPEND_USE+=		py-tsid
 

@@ -4,12 +4,10 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-tiago
-VERSION=		1.3.0
+VERSION=		1.4.0
 
 CATEGORIES=		wip
 COMMENT=		This packages provides a generic Stack Of Tasks library for the mobile robot Tiago.
-LICENSE=		2-clause-bsd
-MAINTAINER=		ostasse@laas.fr
 
 USE_PYTHON=		true
 

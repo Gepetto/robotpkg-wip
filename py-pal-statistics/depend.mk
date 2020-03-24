@@ -15,7 +15,7 @@ PREFER.py-pal-statistics?=	robotpkg
 
 DEPEND_USE+=			py-pal-statistics
 
-DEPEND_ABI.py-pal-statistics?=	py-pal-statistics>=1.1.0
+DEPEND_ABI.py-pal-statistics?=	${PKGTAG.python-}pal-statistics>=1.1.0
 DEPEND_DIR.py-pal-statistics?=	../../wip/py-pal-statistics
 
 SYSTEM_SEARCH.py-pal-statistics=\
@@ -24,6 +24,8 @@ SYSTEM_SEARCH.py-pal-statistics=\
   'share/pal_statistics/package.xml:/<version>/s/[^0-9.]//gp'	\
   'lib/pkgconfig/pal_statistics.pc:/Version/s/[^0-9.]//gp'	\
   '${PYTHON_SYSLIBSEARCH}/pal_statistics/__init__.py'
+
+include ../../mk/sysdep/python.mk
 
 endif # PY_PAL_STATISTICS_DEPEND_MK ---------------------------------------
 

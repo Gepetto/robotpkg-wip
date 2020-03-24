@@ -15,7 +15,7 @@ PREFER.py-prf-ros-control?=	robotpkg
 
 DEPEND_USE+=			py-prf-ros-control
 
-DEPEND_ABI.py-prf-ros-control?=	py-prf-ros-control>=0.2
+DEPEND_ABI.py-prf-ros-control?=	${PKGTAG.python-}prf-ros-control>=0.2
 DEPEND_DIR.py-prf-ros-control?=	../../wip/py-prf-ros-control
 
 SYSTEM_SEARCH.py-prf-ros-control=\
@@ -93,7 +93,7 @@ SYSTEM_SEARCH.py-prf-ros-control=\
   'lib/libtransmission_interface_loader_plugins.so'	\
   'lib/libtransmission_interface_parser.so'	\
   'share/ros_control/package.xml:/<version>/s/[^0-9.]//gp'	\
-  '${PYTHON_SYSLIBSEARCH}/controller_manager/__init__.py	\
+  '${PYTHON_SYSLIBSEARCH}/controller_manager/__init__.py'	\
   $(foreach _,							\
 	controller_interface					\
 	rqt_controller_manager					\
@@ -106,6 +106,8 @@ SYSTEM_SEARCH.py-prf-ros-control=\
 	transmission_interface,					\
   'share/$_/cmake/$_Config.cmake'				\
   'lib/pkgconfig/$_.pc:/Version/s/[^0-9.]//gp')
+
+include ../../mk/sysdep/python.mk
 
 endif # PY_PRF_ROS_CONTROL_DEPEND_MK ----------------------------------------
 

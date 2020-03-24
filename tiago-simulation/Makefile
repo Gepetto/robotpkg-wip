@@ -43,7 +43,7 @@ else
   include ../../wip/pal-hardware-gazebo-melodic/depend.mk
 endif
 include ../../wip/pal-gazebo-worlds/depend.mk
-include ../../wip/prf-ros-controllers/depend.mk
+include ../../wip/py-prf-ros-controllers/depend.mk
 include ../../wip/tiago-moveit-config/depend.mk
 include ../../wip/tiago-description-calibration/depend.mk
 include ../../wip/simple-grasping-action/depend.mk

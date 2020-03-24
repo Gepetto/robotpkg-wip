@@ -1,28 +1,34 @@
-# robotpkg Makefile for:	wip/prf-ros-controllers
+# robotpkg Makefile for:	wip/py-prf-ros-controllers
 # Created:			Olivier Stasse on Wed, 29 Mar 2017
 #
-ORG=		pal-robotics-forks
-VERSION=	0.3.15
-PRFNAME=	ros-controllers
-PKGBASE=	prf-${PRFNAME}
-PKGNAME=	${PKGBASE}-${VERSION}
-DISTNAME=	${VERSION}
-ROSNAME=	$(subst -,_,${PRFNAME})
-WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 
-CATEGORIES=	wip
+ORG=			pal-robotics-forks
+VERSION=		0.3.15
+PRFNAME=		ros-controllers
+PKGBASE=		prf-${PRFNAME}
+PKGNAME=		${PKGTAG.python-}${PKGBASE}-${VERSION}
+DISTNAME=		${VERSION}
+ROSNAME=		$(subst -,_,${PRFNAME})
+WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
+PKGREVISION=		1
+
+# old package name and other Python versions
+CONFLICTS=		${PKGBBASE}-[0-9]*
+CONFLICTS+=		py[0-9][0-9]-${PKGBBASE}-[0-9]*
+CONFLICTS=		talos-ros-controllers
+
+CATEGORIES=		wip
+
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
 CHECKOUT_VCS_OPTS+=	--recursive
 
-HOMEPAGE=	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/
+HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
+MASTER_SITES=		${HOMEPAGE}/archive/
+COMMENT=		Library of ros controllers
+LICENSE=		2-clause-bsd
 
-COMMENT=	Library of ros controllers
-LICENSE=	2-clause-bsd
+ROS_METAPKG=		yes
 
-ROS_METAPKG=	yes
-
-CONFLICTS=	talos-ros-controllers
 
 # Allows to have robotpkg ros packages with the highest priority
 # over system ros packages.

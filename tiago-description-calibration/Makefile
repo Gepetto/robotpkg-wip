@@ -41,7 +41,7 @@ else
   include ../../wip/pal-gazebo-plugins-melodic/depend.mk
   include ../../wip/pal-hardware-gazebo-melodic/depend.mk
 endif
-include ../../wip/prf-ros-controllers/depend.mk
+include ../../wip/py-prf-ros-controllers/depend.mk
 include ../../wip/tiago-moveit-config/depend.mk
 include ../../wip/play-motion/depend.mk
 include ../../mk/language/c++.mk

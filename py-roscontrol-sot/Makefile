@@ -61,12 +61,12 @@ ifeq (erbium,${PREFER.pal-distro})
   else
     include ../../wip/pal-hardware-interfaces/depend.mk
     include ../../wip/py-prf-ros-control/depend.mk
-    include ../../wip/prf-ros-controllers/depend.mk
+    include ../../wip/py-prf-ros-controllers/depend.mk
   endif
 else
   include ../../wip/pal-hardware-interfaces/depend.mk
   include ../../wip/py-prf-ros-control/depend.mk
-  include ../../wip/prf-ros-controllers/depend.mk
+  include ../../wip/py-prf-ros-controllers/depend.mk
 endif
 
 

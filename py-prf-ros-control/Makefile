@@ -1,7 +1,7 @@
 # robotpkg Makefile for:	wip/py-prf-ros-control
 # Created:			Olivier Stasse on Wed, 27 Apr 2018
 #
-#
+
 ORG=			pal-robotics-forks
 VERSION=		0.2.8
 PRFNAME=		ros-control
@@ -18,13 +18,12 @@ CONFLICTS=		${PKGBBASE}-[0-9]*
 CONFLICTS+=		py[0-9][0-9]-${PKGBBASE}-[0-9]*
 CONFLICTS+=		ros-control-[0-9]*
 
-
 CATEGORIES=		wip
 
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
 CHECKOUT_VCS_OPTS+=	--recursive
 
-HOMEPAGE= 		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
+HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
 MASTER_SITES=		${HOMEPAGE}/archive/
 COMMENT=		ros_control package with torque sensors
 LICENSE=		2-clause-bsd

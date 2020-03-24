@@ -43,7 +43,7 @@ ifeq (erbium,${PREFER.pal-distro})
     CMAKE_PREFIX_PATH+=/opt/pal/erbium
   else
     include ../../wip/pal-hardware-interfaces/depend.mk
-    include ../../wip/prf-ros-controllers/depend.mk
+    include ../../wip/py-prf-ros-controllers/depend.mk
     include ../../motion/ros-control-toolbox/depend.mk
   endif
 
@@ -53,7 +53,7 @@ displaytalosmetapkg:
 
 else
   include ../../wip/pal-hardware-interfaces/depend.mk
-  include ../../wip/prf-ros-controllers/depend.mk
+  include ../../wip/py-prf-ros-controllers/depend.mk
   include ../../motion/ros-control-toolbox/depend.mk
 
 displaytalosmetapkg:

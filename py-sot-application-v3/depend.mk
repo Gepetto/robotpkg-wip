@@ -13,8 +13,11 @@ ifeq (+,$(PY_SOT_APPLICATION_V3_DEPEND_MK)) # ----------------------------------
 
 PREFER.py-sot-application-v3?=	robotpkg
 
-SYSTEM_SEARCH.py-sot-application-v3=\
-	'${PYTHON_SYSLIBSEARCH}/dynamic_graph/sot/dynamic_pinocchio/dynamic/wrap.so'
+SYSTEM_SEARCH.py-sot-application-v3=								\
+  'include/sot/application/config.hh:/SOT_APPLICATION_VERSION /s/[^0-9.]//gp'			\
+  '${PYTHON_SYSLIBSEARCH}/sot_application/__init__.py'						\
+  'lib/cmake/sot-application/sot-applicationConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
+  'lib/pkgconfig/sot-application.pc:/Version/s/[^0-9.]//gp'
 
 DEPEND_USE+=		py-sot-application-v3
 

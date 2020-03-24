@@ -4,14 +4,12 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-application
-VERSION=		1.2.2
+VERSION=		1.2.3
 
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
 CATEGORIES=		wip
 COMMENT=		Application dependent control graph initialization scripts for the Stack of Tasks
-LICENSE=		gnu-lgpl-v3
-MAINTAINER=		gepetto@laas.fr
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 

@@ -2,6 +2,9 @@
 include/sot/application/config.hh
 include/sot/application/deprecated.hh
 include/sot/application/warning.hh
+lib/cmake/sot-application/sot-applicationConfig.cmake
+lib/cmake/sot-application/sot-applicationConfigVersion.cmake
+lib/cmake/sot-application/sot-applicationTargets.cmake
 lib/pkgconfig/sot-application.pc
 ${PYTHON_SITELIB}/sot_application/__init__.py
 ${PYTHON_SITELIB}/sot_application/acceleration/__init__.py

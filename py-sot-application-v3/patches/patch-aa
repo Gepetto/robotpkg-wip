@@ -1,7 +1,0 @@
---- CMakeLists.txt.orig	2019-11-04 17:34:59.000000000 +0100
-+++ CMakeLists.txt	2019-11-04 17:38:46.641239112 +0100
-@@ -24,4 +24,3 @@
- 
- # Add subdirectories.
- ADD_SUBDIRECTORY(${PY_NAME})
--ADD_SUBDIRECTORY(doc)

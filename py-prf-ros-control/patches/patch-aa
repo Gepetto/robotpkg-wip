@@ -1,0 +1,108 @@
+fix syntax for python 3
+
+--- controller_manager/src/controller_manager/controller_manager_interface.py.orig	2019-09-06 13:44:16.000000000 +0200
++++ controller_manager/src/controller_manager/controller_manager_interface.py	2020-03-25 12:44:32.135519217 +0100
+@@ -1,6 +1,8 @@
+ #! /usr/bin/env python
+ # Wrappers around the services provided by MechanismControlNode
+ 
++from __future__ import print_function
++
+ import roslib; roslib.load_manifest('controller_manager')
+ 
+ import sys
+@@ -13,7 +15,7 @@
+     s = rospy.ServiceProxy('controller_manager/list_controller_types', ListControllerTypes)
+     resp = s.call(ListControllerTypesRequest())
+     for t in resp.types:
+-        print t
++        print(t)
+ 
+ def reload_libraries(force_kill, restore = False):
+     rospy.wait_for_service('controller_manager/reload_controller_libraries')
+@@ -23,16 +25,16 @@
+     load_srv = rospy.ServiceProxy('controller_manager/load_controller', LoadController)
+     switch_srv = rospy.ServiceProxy('controller_manager/switch_controller', SwitchController)
+ 
+-    print "Restore:", restore
++    print("Restore:", restore)
+     if restore:
+         originally = list_srv.call(ListControllersRequest())
+ 
+     resp = s.call(ReloadControllerLibrariesRequest(force_kill))
+     if resp.ok:
+-        print "Successfully reloaded libraries"
++        print("Successfully reloaded libraries")
+         result = True
+     else:
+-        print "Failed to reload libraries. Do you still have controllers loaded?"
++        print("Failed to reload libraries. Do you still have controllers loaded?")
+         result = False
+ 
+     if restore:
+@@ -45,7 +47,7 @@
+         switch_srv(start_controllers = to_start,
+                    stop_controllers = [],
+                    strictness = SwitchControllerRequest.BEST_EFFORT)
+-        print "Controllers restored to original state"
++        print("Controllers restored to original state")
+     return result
+ 
+ 
+@@ -54,10 +56,10 @@
+     s = rospy.ServiceProxy('controller_manager/list_controllers', ListControllers)
+     resp = s.call(ListControllersRequest())
+     if len(resp.controller) == 0:
+-        print "No controllers are loaded in mechanism control"
++        print("No controllers are loaded in mechanism control")
+     else:
+         for c in resp.controller:
+-            print '%s - %s ( %s )'%(c.name, c.hardware_interface, c.state)
++            print('%s - %s ( %s )'%(c.name, c.hardware_interface, c.state))
+ 
+ 
+ def load_controller(name):
+@@ -65,10 +67,10 @@
+     s = rospy.ServiceProxy('controller_manager/load_controller', LoadController)
+     resp = s.call(LoadControllerRequest(name))
+     if resp.ok:
+-        print "Loaded", name
++        print("Loaded", name)
+         return True
+     else:
+-        print "Error when loading", name
++        print("Error when loading", name)
+         return False
+ 
+ def unload_controller(name):
+@@ -76,10 +78,10 @@
+     s = rospy.ServiceProxy('controller_manager/unload_controller', UnloadController)
+     resp = s.call(UnloadControllerRequest(name))
+     if resp.ok == 1:
+-        print "Unloaded %s successfully" % name
++        print("Unloaded %s successfully" % name)
+         return True
+     else:
+-        print "Error when unloading", name
++        print("Error when unloading", name)
+         return False
+ 
+ def start_controller(name):
+@@ -107,13 +109,13 @@
+     resp = s.call(SwitchControllerRequest(start, stop, strictness))
+     if resp.ok == 1:
+         if st:
+-            print "Started %s successfully" % names
++            print("Started %s successfully" % names)
+         else:
+-            print "Stopped %s successfully" % names
++            print("Stopped %s successfully" % names)
+         return True
+     else:
+         if st:
+-            print "Error when starting ", names
++            print("Error when starting ", names)
+         else:
+-            print "Error when stopping ", names
++            print("Error when stopping ", names)
+         return False

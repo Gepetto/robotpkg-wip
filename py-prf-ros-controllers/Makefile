@@ -4,26 +4,29 @@
 
 ORG=			pal-robotics-forks
 VERSION=		0.3.15
-PRFNAME=		ros-controllers
-PKGBASE=		prf-${PRFNAME}
-PKGNAME=		${PKGTAG.python-}${PKGBASE}-${VERSION}
-DISTNAME=		${VERSION}
-ROSNAME=		$(subst -,_,${PRFNAME})
-WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
-PKGREVISION=		1
+NAME=			ros-controllers
+PKGREVISION=		2
 
-# old package name and other Python versions
-CONFLICTS=		${PKGBBASE}-[0-9]*
-CONFLICTS+=		py[0-9][0-9]-${PKGBBASE}-[0-9]*
-CONFLICTS=		talos-ros-controllers
+PRFNAME=		prf-${NAME}
+ROSNAME=		$(subst -,_,${NAME})
+
+PKGNAME=		${PKGTAG.python-}${PRFNAME}-${VERSION}
+WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
+DISTNAME=		${VERSION}
+DIST_SUBDIR=		${PRFNAME}
+
+# old package name, other Python versions, and forked package.
+CONFLICTS=		${PRFNAME}-[0-9]*
+CONFLICTS+=		py[0-9][0-9]-${PRFNAME}-[0-9]*
+CONFLICTS+=		${NAME}-[0-9]*
+CONFLICTS+=		talos-${NAME}-[0-9]*
 
 CATEGORIES=		wip
 
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
-
 HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
 MASTER_SITES=		${HOMEPAGE}/archive/
+
 COMMENT=		Library of ros controllers
 LICENSE=		2-clause-bsd
 

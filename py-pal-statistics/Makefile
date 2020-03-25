@@ -4,25 +4,26 @@
 
 ORG=			pal-robotics
 VERSION=		1.3.1
-PKGBASE=		pal-statistics
-PKGNAME=		${PKGTAG.python-}${PKGBASE}-${VERSION}
-DISTNAME=		${VERSION}
-ROSNAME=		$(subst -,_,${PKGBASE})
+NAME=			pal-statistics
+PKGREVISION=		4
+
+ROSNAME=		$(subst -,_,${NAME})
+
+PKGNAME=		${PKGTAG.python-}${NAME}-${VERSION}
 WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
-DIST_SUBDIR=		${PKGBASE}
-PKGREVISION=		3
+DISTNAME=		${VERSION}
+DIST_SUBDIR=		${NAME}
 
 # old package name and other Python versions
-CONFLICTS=		${PKGBBASE}-[0-9]*
-CONFLICTS+=		py[0-9][0-9]-${PKGBBASE}-[0-9]*
+CONFLICTS+=		${NAME}-[0-9]*
+CONFLICTS+=		py[0-9][0-9]-${NAME}-[0-9]*
 
 CATEGORIES=		wip
 
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
-
 HOMEPAGE= 		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
 MASTER_SITES=		${HOMEPAGE}/archive/
+
 COMMENT=		Provides statistics
 LICENSE=		gnu-gpl-v3
 

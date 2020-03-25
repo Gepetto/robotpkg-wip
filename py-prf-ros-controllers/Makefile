@@ -16,7 +16,7 @@ DISTNAME=		${VERSION}
 DIST_SUBDIR=		${PRFNAME}
 
 # old package name, other Python versions, and forked package.
-CONFLICTS=		${PRFNAME}-[0-9]*
+CONFLICTS+=		${PRFNAME}-[0-9]*
 CONFLICTS+=		py[0-9][0-9]-${PRFNAME}-[0-9]*
 CONFLICTS+=		${NAME}-[0-9]*
 CONFLICTS+=		talos-${NAME}-[0-9]*

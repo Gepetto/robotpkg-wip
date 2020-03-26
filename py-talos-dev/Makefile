@@ -11,21 +11,20 @@ COMMENT=	Talos dev Software
 
 META_PACKAGE=	yes
 
-include ../../interfaces/humanoid-nav-msgs/depend.mk
-include ../../wip/py-sot-talos/depend.mk
-include ../../wip/py-prf-ros-control/depend.mk
-
-include ../../wip/sysdep/ubuntu-distro.mk
-ifeq (xenial,${UBUNTUDISTRO})
+ifneq (,$(filter 16.04,${OS_VERSION}))
   include ../../wip/prf-gazebo-ros-pkgs/depend.mk
 else
   include ../../wip/prf-gazebo-ros-pkgs-melodic/depend.mk
 endif
 
+include ../../wip/py-prf-ros-control/depend.mk
+include ../../wip/py-sot-talos/depend.mk
+include ../../wip/py-talos-torque-control/depend.mk
+include ../../wip/ros-image-pipeline/depend.mk
 include ../../wip/talos-metapkg-ros-control-sot/depend.mk
 include ../../wip/talos-simulation/depend.mk
-include ../../wip/ros-image-pipeline/depend.mk
-include ../../wip/py-talos-torque-control/depend.mk
+
+include ../../interfaces/humanoid-nav-msgs/depend.mk
 include ../../localization/ros-robot-state-publisher/depend.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/robotpkg.mk

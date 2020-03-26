@@ -19,7 +19,7 @@ include ../../meta-pkgs/ros-base/Makefile.common
 
 include ../../wip/libnabo/depend.mk
 include ../../wip/libpointmatcher/depend.mk
-include ../../wip/mk/sysdep/pcl.mk
+include ../../mk/sysdep/libpcl.mk
 include ../../wip/ros-perception-pcl/depend.mk
 
 include ../../devel/ros-cmake-modules/depend.mk

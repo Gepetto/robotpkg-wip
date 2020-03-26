@@ -40,7 +40,7 @@ endef
 PKG_OPTION_DESCR.pcl= Enable the conversions from/to PCL types
 define PKG_OPTION_SET.pcl
 	CMAKE_ARGS+= -DWITH_PCL=ON
-	include ../../wip/mk/sysdep/pcl.mk
+	include ../../mk/sysdep/libpcl.mk
 endef
 define PKG_OPTION_UNSET.pcl
 	CMAKE_ARGS+= -DWITH_PCL=OFF

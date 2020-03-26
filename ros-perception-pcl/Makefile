@@ -18,7 +18,7 @@ ROS_COMMENT=		PCL (Point Cloud Library) ROS interface stack
 include ../../meta-pkgs/ros-base/Makefile.common
 
 include ../../wip/ros-pcl-msgs/depend.mk
-include ../../wip/mk/sysdep/pcl.mk
+include ../../mk/sysdep/libpcl.mk
 
 include ../../devel/ros-cmake-modules/depend.mk
 include ../../devel/ros-nodelet-core/depend.mk

@@ -2,12 +2,16 @@
 lib/pkgconfig/talos_moveit_config.pc
 share/talos_moveit_config/cmake/talos_moveit_configConfig-version.cmake
 share/talos_moveit_config/cmake/talos_moveit_configConfig.cmake
+share/talos_moveit_config/config/chomp_planning.yaml
 share/talos_moveit_config/config/controllers_full.yaml
 share/talos_moveit_config/config/fake_controllers.yaml
 share/talos_moveit_config/config/joint_limits.yaml
 share/talos_moveit_config/config/kinematics.yaml
 share/talos_moveit_config/config/ompl_planning.yaml
+share/talos_moveit_config/config/ros_controllers.yaml
+share/talos_moveit_config/config/sensors_3d.yaml
 share/talos_moveit_config/config/talos.srdf
+share/talos_moveit_config/launch/chomp_planning_pipeline.launch.xml
 share/talos_moveit_config/launch/default_warehouse_db.launch
 share/talos_moveit_config/launch/demo.launch
 share/talos_moveit_config/launch/fake_moveit_controller_manager.launch.xml
@@ -18,9 +22,9 @@ share/talos_moveit_config/launch/moveit_rviz.launch
 share/talos_moveit_config/launch/ompl_planning_pipeline.launch.xml
 share/talos_moveit_config/launch/planning_context.launch
 share/talos_moveit_config/launch/planning_pipeline.launch.xml
+share/talos_moveit_config/launch/ros_controllers.launch
 share/talos_moveit_config/launch/run_benchmark_ompl.launch
 share/talos_moveit_config/launch/sensor_manager.launch.xml
-share/talos_moveit_config/launch/setup_assistant.launch
 share/talos_moveit_config/launch/talos_moveit_controller_manager.launch.xml
 share/talos_moveit_config/launch/talos_moveit_sensor_manager.launch.xml
 share/talos_moveit_config/launch/trajectory_execution.launch.xml

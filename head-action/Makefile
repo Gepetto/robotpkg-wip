@@ -2,29 +2,29 @@
 # Created:			Olivier Stasse on Tue, 01 May 2018
 #
 
-ORG=		pal-robotics
-VERSION=	0.0.1
-PKGBASE=	head-action
-DISTNAME=	${VERSION}
-PKGNAME=	${PKGBASE}-${VERSION}
-ROSNAME=	$(subst -,_,${PKGBASE})
-WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
-DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	4
+ORG=			pal-robotics
+NAME=			head-action
+VERSION=		0.0.1
+PKGREVISION=		4
 
-CATEGORIES=	wip
+ROSNAME=		$(subst -,_,${NAME})
 
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
+PKGNAME=		${NAME}-${VERSION}
+WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
+DISTNAME=		${VERSION}
+DIST_SUBDIR=		${NAME}
+
+CATEGORIES=		wip
+
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}.git
+HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
+MASTER_SITES=		${HOMEPAGE}/archive/
+
+COMMENT=		Robot agnostic head action interface
+LICENSE=		2-clause-bsd
 
 
-HOMEPAGE=	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/
-COMMENT=	Robot agnostic head action interface
-LICENSE=	2-clause-bsd
-
-
-USE_BOOST_LIBS=	thread
+USE_BOOST_LIBS=		thread
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

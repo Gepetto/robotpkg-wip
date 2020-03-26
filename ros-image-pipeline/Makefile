@@ -14,14 +14,18 @@ ROS_COMMENT=		An image processing pipeline for ROS
 
 include ../../meta-pkgs/ros-base/Makefile.common
 
-include ../../devel/ros-nodelet-core/depend.mk
-include ../../image/ros-vision-opencv/depend.mk
-include ../../math/ros-geometry2/depend.mk
-include ../../math/ros-geometry/depend.mk
-include ../../middleware/ros-dynamic-reconfigure/depend.mk
+# Replace python interpreter in source files
+SUBST_CLASSES+=		py-interp
+SUBST_FILES.py-interp+=	*/*/*.py */*/*/*.py
+SUBST_FILES.py-interp+=	*/*/*.cfg
 
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-cmake-modules/depend.mk
+include ../../devel/ros-nodelet-core/depend.mk
+include ../../image/ros-vision-opencv/depend.mk
+include ../../math/ros-geometry/depend.mk
+include ../../math/ros-geometry2/depend.mk
+include ../../middleware/ros-dynamic-reconfigure/depend.mk
 include ../../mk/sysdep/gtk.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/robotpkg.mk

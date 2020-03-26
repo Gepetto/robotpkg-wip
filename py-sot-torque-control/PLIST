@@ -9,10 +9,6 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/control_manager/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/create_entities_utils.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/current_controller/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/current_controller/wrap.so
-${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/ddp_actuator_solver/__init__.py
-${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/ddp_actuator_solver/wrap.so
-${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/ddp_pyrene_actuator_solver/__init__.py
-${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/ddp_pyrene_actuator_solver/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/device_torque_ctrl/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/device_torque_ctrl/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/free_flyer_locator/__init__.py

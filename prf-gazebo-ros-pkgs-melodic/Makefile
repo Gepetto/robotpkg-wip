@@ -31,6 +31,7 @@ CMAKE_ARGS+=\
 
 CMAKE_PREFIX_PATH+= ${PREFIX}
 
+include ../../devel/ros-cmake-modules/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../devel/ros-catkin/depend.mk

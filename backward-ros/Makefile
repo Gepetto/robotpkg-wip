@@ -2,23 +2,25 @@
 # Created:			Olivier Stasse on Fr, 27 Apr 2018
 #
 
-ORG=		pal-robotics
-VERSION=	0.1.7
-PKGBASE= 	backward-ros
-PKGNAME=	${PKGBASE}-${VERSION}
-DISTNAME=	${VERSION}
-ROSNAME=	$(subst -,_,${PKGBASE})
-WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
+ORG=			pal-robotics
+NAME=			backward-ros
+VERSION=		0.1.7
 
-CATEGORIES=	wip
-HOMEPAGE=	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/
+ROSNAME=		$(subst -,_,${NAME})
 
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
+PKGNAME=		${NAME}-${VERSION}
+WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
+DISTNAME=		${VERSION}
+DIST_SUBDIR=		${NAME}
 
-COMMENT=	The backward_ros package is a ros wrapper of backward-cpp from https://github.com/bombela/backward-cpp
-LICENSE=	mit
+CATEGORIES=		wip
+
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}.git
+HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
+MASTER_SITES=		${HOMEPAGE}/archive/
+
+COMMENT=		The backward_ros package is a ros wrapper of backward-cpp from https://github.com/bombela/backward-cpp
+LICENSE=		mit
 
 include ../../devel/ros-catkin/depend.mk
 include ../../middleware/ros-comm/depend.mk

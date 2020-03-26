@@ -11,14 +11,18 @@ endif
 
 ifeq (+,$(PAL_GAZEBO_PLUGINS_DEPEND_MK)) # ---------------------------------
 
+include ../../mk/robotpkg.prefs.mk  # for OS_VERSION
+
 PREFER.pal-gazebo-plugins?=	robotpkg
 
 DEPEND_USE+=			pal-gazebo-plugins
+ifneq (,$(filter 16.04,${OS_VERSION}))
+  DEPEND_ABI.pal-gazebo-plugins?=	pal-gazebo-plugins>=1.1.4<2.0.0
+else
+  DEPEND_ABI.pal-gazebo-plugins?=	pal-gazebo-plugins>=2.0.0
+endif
 
-DEPEND_ABI.pal-gazebo-plugins?=\
-	pal-gazebo-plugins>=1.1.4
-DEPEND_DIR.pal-gazebo-plugins?=\
-	../../wip/pal-gazebo-plugins
+DEPEND_DIR.pal-gazebo-plugins?=	../../wip/pal-gazebo-plugins
 
 SYSTEM_SEARCH.pal-gazebo-plugins=\
   'include/pal_gazebo_plugins/gazebo_pal_hand.h'	\

@@ -48,7 +48,6 @@ SUBDIR+=	openhrp3-hrp2
 SUBDIR+=	openhrp3-simulator-wo-rtm
 SUBDIR+=	osg-dae
 SUBDIR+=	pal-gazebo-plugins
-SUBDIR+=	pal-gazebo-plugins-melodic
 SUBDIR+=	pal-gazebo-worlds
 SUBDIR+=	pal-gripper
 SUBDIR+=	pal-hardware-gazebo

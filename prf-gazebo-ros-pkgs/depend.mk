@@ -1,4 +1,4 @@
-# robotpkg depend.mk for:	wip/gazebo_ros_pkgs
+# robotpkg depend.mk for:	wip/prf-gazebo-ros-pkgs
 # Created:			Olivier Stasse on Mer, 3 May 2017
 #
 
@@ -11,11 +11,18 @@ endif
 
 ifeq (+,$(GAZEBO_ROS_PKGS_DEPEND_MK)) # ---------------------------
 
+include ../../mk/robotpkg.prefs.mk  # for OS_VERSION
+
 PREFER.prf-gazebo-ros-pkgs?=	robotpkg
 
 DEPEND_USE+=				prf-gazebo-ros-pkgs
 
-DEPEND_ABI.prf-gazebo-ros-pkgs?=	prf-gazebo-ros-pkgs>=2.6.5
+ifneq (,$(filter 16.04,${OS_VERSION}))
+  DEPEND_ABI.prf-gazebo-ros-pkgs?=	prf-gazebo-ros-pkgs>=2.6.5<3.0.0
+else
+  DEPEND_ABI.prf-gazebo-ros-pkgs?=	prf-gazebo-ros-pkgs>=3.0.1
+endif
+
 DEPEND_DIR.prf-gazebo-ros-pkgs?=	../../wip/prf-gazebo-ros-pkgs
 
 SYSTEM_SEARCH.prf-gazebo-ros-pkgs=\

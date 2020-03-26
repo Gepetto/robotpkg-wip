@@ -37,11 +37,10 @@ $(info $(UBUNTUDISTRO))
 
 ifeq (xenial,${UBUNTUDISTRO})
   include ../../wip/pal-hardware-gazebo/depend.mk
-  include ../../wip/pal-gazebo-plugins/depend.mk
 else
-  include ../../wip/pal-gazebo-plugins-melodic/depend.mk
   include ../../wip/pal-hardware-gazebo-melodic/depend.mk
 endif
+include ../../wip/pal-gazebo-plugins/depend.mk
 include ../../wip/pal-gazebo-worlds/depend.mk
 include ../../wip/py-prf-ros-controllers/depend.mk
 include ../../wip/tiago-moveit-config/depend.mk

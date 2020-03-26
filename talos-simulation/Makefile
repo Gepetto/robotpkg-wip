@@ -63,11 +63,7 @@ include ../../wip/talos-robot/depend.mk
 include ../../wip/talos-moveit-config/depend.mk
 include ../../wip/prf-roboticsgroup-gazebo-plugins/depend.mk
 include ../../wip/py-prf-ros-controllers/depend.mk
-ifeq (xenial,${UBUNTUDISTRO})
-  include ../../wip/pal-gazebo-plugins/depend.mk
-else
-  include ../../wip/pal-gazebo-plugins-melodic/depend.mk
-endif
+include ../../wip/pal-gazebo-plugins/depend.mk
 
 include ../../wip/pal-gazebo-worlds/depend.mk
 include ../../wip/head-action/depend.mk

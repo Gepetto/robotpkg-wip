@@ -22,11 +22,11 @@ MASTER_SITES=		${HOMEPAGE}/archive/
 COMMENT=		Simulation worlds for PAL robots
 LICENSE=		gnu-lgpl-v3
 
-ifneq (,$(filter 16.04,${OS_VERSION}))
-  include ../../wip/prf-gazebo-ros-pkgs/depend.mk
-else
-  include ../../wip/prf-gazebo-ros-pkgs-melodic/depend.mk
-endif
+CMAKE_PREFIX_PATH+=	${PREFIX}
+
+include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+
+CMAKE_PREFIX_PATH+= ${PREFIX}
 
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-roscpp-core/depend.mk

@@ -11,11 +11,7 @@ COMMENT=	Talos dev Software
 
 META_PACKAGE=	yes
 
-ifneq (,$(filter 16.04,${OS_VERSION}))
-  include ../../wip/prf-gazebo-ros-pkgs/depend.mk
-else
-  include ../../wip/prf-gazebo-ros-pkgs-melodic/depend.mk
-endif
+include ../../wip/prf-gazebo-ros-pkgs/depend.mk
 
 include ../../wip/py-prf-ros-control/depend.mk
 include ../../wip/py-sot-talos/depend.mk

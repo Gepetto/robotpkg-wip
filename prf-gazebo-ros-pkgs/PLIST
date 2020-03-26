@@ -155,6 +155,7 @@ lib/libgazebo_ros_force.so
 lib/libgazebo_ros_ft_sensor.so
 lib/libgazebo_ros_gpu_laser.so
 lib/libgazebo_ros_hand_of_god.so
+lib/libgazebo_ros_harness.so
 lib/libgazebo_ros_imu.so
 lib/libgazebo_ros_imu_sensor.so
 lib/libgazebo_ros_joint_pose_trajectory.so

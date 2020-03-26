@@ -11,14 +11,10 @@ COMMENT=	Tiago dev Software
 
 META_PACKAGE=	yes
 
-include ../py-sot-tiago/depend.mk
-include ../tiago-metapkg-ros-control-sot/depend.mk
-include ../../wip/sysdep/ubuntu-distro.mk
-ifeq (xenial,${UBUNTUDISTRO})
-  include ../../wip/prf-gazebo-ros-pkgs/depend.mk
-else
-  include ../../wip/prf-gazebo-ros-pkgs-melodic/depend.mk
-endif
-include ../tiago-simulation/depend.mk
-include ../pal-wsg-gripper/depend.mk
+include ../../wip/py-sot-tiago/depend.mk
+include ../../wip/pal-wsg-gripper/depend.mk
+include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+include ../../wip/tiago-metapkg-ros-control-sot/depend.mk
+include ../../wip/tiago-simulation/depend.mk
+
 include ../../mk/robotpkg.mk

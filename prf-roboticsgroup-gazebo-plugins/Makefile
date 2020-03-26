@@ -27,6 +27,11 @@ CMAKE_ARGS+=\
   -Dgazebo_INCLUDE_DIRS=$(filter include/%,${SYSTEM_SEARCH.gazebo})	\
   -Dgazebo_LIBRARIES=$(filter %.so,${SYSTEM_SEARCH.gazebo})
 
+CMAKE_PREFIX_PATH+= ${PREFIX}
+
+include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+include ../../wip/pal-hardware-interfaces/depend.mk
+
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../devel/ros-catkin/depend.mk
@@ -40,13 +45,6 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
-include ../../wip/sysdep/ubuntu-distro.mk
-ifeq (xenial,${UBUNTUDISTRO})
-  include ../../wip/prf-gazebo-ros-pkgs/depend.mk
-else
-  include ../../wip/prf-gazebo-ros-pkgs-melodic/depend.mk
-endif
-include ../../wip/pal-hardware-interfaces/depend.mk
 include ../../mk/sysdep/gazebo.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk

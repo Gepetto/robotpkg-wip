@@ -106,7 +106,6 @@ share/moveit_resources/panda_moveit_config/launch/stomp_planning_pipeline.launch
 share/moveit_resources/panda_moveit_config/launch/trajectory_execution.launch.xml
 share/moveit_resources/panda_moveit_config/launch/warehouse.launch
 share/moveit_resources/panda_moveit_config/launch/warehouse_settings.launch.xml
-share/moveit_resources/panda_moveit_config/package.xml
 share/moveit_resources/pr2_description/kinect.dae
 share/moveit_resources/pr2_description/srdf/robot.xml
 share/moveit_resources/pr2_description/urdf/materials/textures/pr2_caster_texture.png

@@ -162,6 +162,8 @@ include/pal_interaction_msgs/DirectionOfArrival.h
 include/pal_interaction_msgs/EnablingSoundLocalisation.h
 include/pal_interaction_msgs/I18nArgument.h
 include/pal_interaction_msgs/I18nText.h
+include/pal_interaction_msgs/Input.h
+include/pal_interaction_msgs/InputArgument.h
 include/pal_interaction_msgs/SoundAction.h
 include/pal_interaction_msgs/SoundActionFeedback.h
 include/pal_interaction_msgs/SoundActionGoal.h
@@ -538,6 +540,8 @@ ${PYTHON_SITELIB}/pal_interaction_msgs/msg/_DirectionOfArrival.py
 ${PYTHON_SITELIB}/pal_interaction_msgs/msg/_EnablingSoundLocalisation.py
 ${PYTHON_SITELIB}/pal_interaction_msgs/msg/_I18nArgument.py
 ${PYTHON_SITELIB}/pal_interaction_msgs/msg/_I18nText.py
+${PYTHON_SITELIB}/pal_interaction_msgs/msg/_Input.py
+${PYTHON_SITELIB}/pal_interaction_msgs/msg/_InputArgument.py
 ${PYTHON_SITELIB}/pal_interaction_msgs/msg/_SoundAction.py
 ${PYTHON_SITELIB}/pal_interaction_msgs/msg/_SoundActionFeedback.py
 ${PYTHON_SITELIB}/pal_interaction_msgs/msg/_SoundActionGoal.py
@@ -972,6 +976,8 @@ share/common-lisp/ros/pal_interaction_msgs/msg/DirectionOfArrival.lisp
 share/common-lisp/ros/pal_interaction_msgs/msg/EnablingSoundLocalisation.lisp
 share/common-lisp/ros/pal_interaction_msgs/msg/I18nArgument.lisp
 share/common-lisp/ros/pal_interaction_msgs/msg/I18nText.lisp
+share/common-lisp/ros/pal_interaction_msgs/msg/Input.lisp
+share/common-lisp/ros/pal_interaction_msgs/msg/InputArgument.lisp
 share/common-lisp/ros/pal_interaction_msgs/msg/SoundAction.lisp
 share/common-lisp/ros/pal_interaction_msgs/msg/SoundActionFeedback.lisp
 share/common-lisp/ros/pal_interaction_msgs/msg/SoundActionGoal.lisp
@@ -1019,6 +1025,8 @@ share/common-lisp/ros/pal_interaction_msgs/msg/_package_DirectionOfArrival.lisp
 share/common-lisp/ros/pal_interaction_msgs/msg/_package_EnablingSoundLocalisation.lisp
 share/common-lisp/ros/pal_interaction_msgs/msg/_package_I18nArgument.lisp
 share/common-lisp/ros/pal_interaction_msgs/msg/_package_I18nText.lisp
+share/common-lisp/ros/pal_interaction_msgs/msg/_package_Input.lisp
+share/common-lisp/ros/pal_interaction_msgs/msg/_package_InputArgument.lisp
 share/common-lisp/ros/pal_interaction_msgs/msg/_package_SoundAction.lisp
 share/common-lisp/ros/pal_interaction_msgs/msg/_package_SoundActionFeedback.lisp
 share/common-lisp/ros/pal_interaction_msgs/msg/_package_SoundActionGoal.lisp
@@ -1510,6 +1518,8 @@ share/pal_interaction_msgs/msg/DirectionOfArrival.msg
 share/pal_interaction_msgs/msg/EnablingSoundLocalisation.msg
 share/pal_interaction_msgs/msg/I18nArgument.msg
 share/pal_interaction_msgs/msg/I18nText.msg
+share/pal_interaction_msgs/msg/Input.msg
+share/pal_interaction_msgs/msg/InputArgument.msg
 share/pal_interaction_msgs/msg/SoundAction.msg
 share/pal_interaction_msgs/msg/SoundActionFeedback.msg
 share/pal_interaction_msgs/msg/SoundActionGoal.msg

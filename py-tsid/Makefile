@@ -17,6 +17,9 @@ CONFLICTS+=		py[0-9][0-9]-${NAME}-[0-9]*
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../${CATEGORIES}/${NAME}/depend.mk
+
+include ../../wip/eiquadprog/depend.mk
+
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../graphics/urdfdom/depend.mk

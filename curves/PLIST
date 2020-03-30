@@ -25,8 +25,8 @@ include/curves/quadratic_variable.h
 include/curves/quintic_spline.h
 include/curves/se3_curve.h
 include/curves/serialization/archive.hpp
+include/curves/serialization/curves.hpp
 include/curves/serialization/eigen-matrix.hpp
-include/curves/serialization/fwd.hpp
 include/curves/serialization/registeration.hpp
 include/curves/so3_linear.h
 include/curves/warning.hh

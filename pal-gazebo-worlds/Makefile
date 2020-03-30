@@ -26,8 +26,6 @@ CMAKE_PREFIX_PATH+=	${PREFIX}
 
 include ../../wip/prf-gazebo-ros-pkgs/depend.mk
 
-CMAKE_PREFIX_PATH+= ${PREFIX}
-
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-roscpp-core/depend.mk
 include ../../mk/language/c++.mk

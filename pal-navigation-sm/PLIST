@@ -3,6 +3,8 @@ lib/pal_navigation_sm/map_setup.py
 lib/pal_navigation_sm/navigation.sh
 lib/pal_navigation_sm/pal_navigation_main_sm.py
 lib/pkgconfig/pal_navigation_sm.pc
+${PYTHON_SITELIB}/pal_navigation_sm-0.1.7-py${PYTHON_VERSION}.egg-info
+${PYTHON_SITELIB}/pal_navigation_sm/__init__.py
 share/pal_navigation_sm/cmake/pal_navigation_smConfig-version.cmake
 share/pal_navigation_sm/cmake/pal_navigation_smConfig.cmake
 share/pal_navigation_sm/config/pose.yaml

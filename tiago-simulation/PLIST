@@ -11,9 +11,7 @@ share/tiago_2dnav_gazebo/launch/localization.launch
 share/tiago_2dnav_gazebo/launch/mapping.launch
 share/tiago_2dnav_gazebo/launch/navigation.launch
 share/tiago_2dnav_gazebo/launch/tiago_mapping.launch
-share/tiago_2dnav_gazebo/launch/tiago_mapping_public.launch
 share/tiago_2dnav_gazebo/launch/tiago_navigation.launch
-share/tiago_2dnav_gazebo/launch/tiago_navigation_public.launch
 share/tiago_2dnav_gazebo/package.xml
 share/tiago_controller_configuration_gazebo/cmake/tiago_controller_configuration_gazeboConfig-version.cmake
 share/tiago_controller_configuration_gazebo/cmake/tiago_controller_configuration_gazeboConfig.cmake

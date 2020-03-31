@@ -2,21 +2,31 @@
 # Created:			Olivier Stasse on Tue, 8 May 2018
 #
 
-VERSION=	0.9.14os1
-PKGBASE=	pal-python
-DISTNAME=	${VERSION}
-PKGNAME=	${PKGBASE}-${VERSION}
-ROSNAME=	$(subst -,_,${PKGBASE})
-WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
-DIST_SUBDIR=	${PKGBASE}
+ORG=			olivier-stasse
+NAME=			pal-python
+VERSION=		0.9.14os1
 
-CATEGORIES=	wip
-HOMEPAGE=	${MASTER_SITE_GITHUB:=olivier-stasse/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/
-COMMENT=	PAL python utils
-LICENSE=	2-clause-bsd
+ROSNAME=		$(subst -,_,${NAME})
 
-PYDISTUTILSPKG=	yes
+PKGNAME=		${PKGTAG.python-}${NAME}-${VERSION}
+WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
+DISTNAME=		${VERSION}
+DIST_SUBDIR=		${NAME}
+
+# old package name and other Python versions
+CONFLICTS+=		${NAME}-[0-9]*
+CONFLICTS+=		py[0-9][0-9]-${NAME}-[0-9]*
+
+CATEGORIES=		wip
+
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
+HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
+MASTER_SITES=		${HOMEPAGE}/archive/
+
+COMMENT=		PAL python utils
+LICENSE=		2-clause-bsd
+
+PYDISTUTILSPKG=		yes
 
 # FIXME warning does not seems to prevent installing
 # libyaml is not found or a compiler error: forcing --without-libyaml
@@ -24,5 +34,6 @@ PYDISTUTILSPKG=	yes
 # specify the option --include-dirs or uncomment and
 # modify the parameter include_dirs in setup.cfg)
 
+include ../../sysutils/py-catkin-pkg/depend.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/robotpkg.mk

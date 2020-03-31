@@ -11,7 +11,7 @@ include/tiago_pick_demo/PickUpPoseFeedback.h
 include/tiago_pick_demo/PickUpPoseGoal.h
 include/tiago_pick_demo/PickUpPoseResult.h
 include/tiago_pick_demo/SphericalGraspConfig.h
-lib/libtiago_pcl_tutorial${PYTHON_EXT_SUFFIX}
+lib/libtiago_pcl_tutorial.so
 lib/look_hand/look_hand.py
 lib/look_to_point/look_to_point
 lib/pkgconfig/demo_motions.pc

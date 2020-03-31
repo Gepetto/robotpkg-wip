@@ -29,7 +29,7 @@ CMAKE_ARGS+=\
 
 CMAKE_PREFIX_PATH+= ${PREFIX}
 
-include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+include ../../wip/py-prf-gazebo-ros-pkgs/depend.mk
 include ../../wip/pal-hardware-interfaces/depend.mk
 
 include ../../devel/boost-headers/depend.mk

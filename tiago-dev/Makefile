@@ -13,7 +13,7 @@ META_PACKAGE=	yes
 
 include ../../wip/py-sot-tiago/depend.mk
 include ../../wip/pal-wsg-gripper/depend.mk
-include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+include ../../wip/py-prf-gazebo-ros-pkgs/depend.mk
 include ../../wip/tiago-metapkg-ros-control-sot/depend.mk
 include ../../wip/tiago-simulation/depend.mk
 

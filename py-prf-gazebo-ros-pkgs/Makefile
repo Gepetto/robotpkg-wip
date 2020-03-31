@@ -1,4 +1,4 @@
-# robotpkg Makefile for:	wip/prf-gazebo-ros-pkgs
+# robotpkg Makefile for:	wip/py-prf-gazebo-ros-pkgs
 # Created:			Olivier Stasse on Mer, 28 April 2018
 #
 
@@ -9,12 +9,16 @@ VERSION=		3.0.1
 PRFNAME=		prf-${NAME}
 ROSNAME=		$(subst -,_,${NAME})
 
-PKGNAME=		${PRFNAME}-${VERSION}
+PKGNAME=		${PKGTAG.python-}${PRFNAME}-${VERSION}
 WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
 DISTNAME=		${VERSION}
 DIST_SUBDIR=		${PRFNAME}
 
+# old package name, other Python versions, and forked package.
+CONFLICTS+=		${PRFNAME}-[0-9]*
+CONFLICTS+=		py[0-9][0-9]-${PRFNAME}-[0-9]*
 CONFLICTS+=		${NAME}-[0-9]*
+
 CATEGORIES=		wip
 
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}.git
@@ -35,8 +39,9 @@ CMAKE_PREFIX_PATH+=	${PREFIX}
 include ../../mk/robotpkg.prefs.mk
 ifeq (16.04,${OS_VERSION})
   VERSION=		2.6.9
-  DISTINFO_FILE=	${ROBOTPKG_DIR}/${CATEGORIES}/${PRFNAME}/distinfo.${OS_VERSION}
-  PATCHDIR=		${ROBOTPKG_DIR}/${CATEGORIES}/${PRFNAME}/patches.${OS_VERSION}
+  DISTINFO_FILE=	${ROBOTPKG_DIR}/${CATEGORIES}/py-${PRFNAME}/distinfo.${OS_VERSION}
+  PATCHDIR=		${ROBOTPKG_DIR}/${CATEGORIES}/py-${PRFNAME}/patches.${OS_VERSION}
+  PLIST_SRC=		${ROBOTPKG_DIR}/${CATEGORIES}/py-${PRFNAME}/PLIST.${OS_VERSION}
 endif
 
 include ../../wip/py-prf-ros-control/depend.mk
@@ -64,6 +69,7 @@ include ../../motion/ros-control-toolbox/depend.mk
 include ../../sysutils/ros-diagnostics/depend.mk
 include ../../mk/sysdep/gazebo.mk
 include ../../mk/sysdep/libogre.mk
+include ../../mk/sysdep/python.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

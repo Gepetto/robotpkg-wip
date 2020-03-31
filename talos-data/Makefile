@@ -21,7 +21,7 @@ CMAKE_PREFIX_PATH+= ${PREFIX}
 
 DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
 
-include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+include ../../wip/py-prf-gazebo-ros-pkgs/depend.mk
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/ros-catkin/depend.mk

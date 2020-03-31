@@ -24,7 +24,7 @@ LICENSE=		gnu-lgpl-v3
 
 CMAKE_PREFIX_PATH+=	${PREFIX}
 
-include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+include ../../wip/py-prf-gazebo-ros-pkgs/depend.mk
 
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-roscpp-core/depend.mk

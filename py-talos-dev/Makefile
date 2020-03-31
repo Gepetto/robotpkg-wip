@@ -11,7 +11,7 @@ COMMENT=	Talos dev Software
 
 META_PACKAGE=	yes
 
-include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+include ../../wip/py-prf-gazebo-ros-pkgs/depend.mk
 
 include ../../wip/py-prf-ros-control/depend.mk
 include ../../wip/py-sot-talos/depend.mk

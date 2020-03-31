@@ -30,7 +30,7 @@ ifeq (16.04,${OS_VERSION})
 endif
 
 include ../../wip/pal-msgs/depend.mk
-include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+include ../../wip/py-prf-gazebo-ros-pkgs/depend.mk
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

@@ -37,7 +37,7 @@ endif
 
 include ../../wip/dynamic-introspection/depend.mk
 include ../../wip/pal-hardware-interfaces/depend.mk
-include ../../wip/prf-gazebo-ros-pkgs/depend.mk
+include ../../wip/py-prf-gazebo-ros-pkgs/depend.mk
 include ../../wip/py-pal-statistics/depend.mk
 include ../../wip/py-prf-ros-control/depend.mk
 

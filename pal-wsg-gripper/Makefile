@@ -1,32 +1,31 @@
 # robotpkg Makefile for:	wip/pal-wsg-gripper
 # Created:			Olivier Stasse on Thu, 12 Dec 2018
 #
-ORG=		pal-robotics
-VERSION=	0.0.9
-PKGBASE=	pal-wsg-gripper
-PKGNAME=	${PKGBASE}-${VERSION}
-DISTNAME=	${VERSION}
-ROSNAME=	$(subst -,_,${PKGBASE})
-WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
-DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	1
 
-CATEGORIES=	wip
+ORG=			pal-robotics
+NAME=			pal-wsg-gripper
+VERSION=		0.0.9
+PKGREVISION=		1
 
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
+ROSNAME=		$(subst -,_,${NAME})
 
-HOMEPAGE= 	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/
-COMMENT=	Provides python
-LICENSE=	gnu-gpl-v3
+PKGNAME=		${NAME}-${VERSION}
+WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
+DISTNAME=		${VERSION}
+DIST_SUBDIR=		${NAME}
 
-USE_BOOST_LIBS=	thread
+CATEGORIES=		wip
 
-ROS_METAPKG=	yes
-USE_BOOST_LIBS=	thread
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}.git
+HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
+MASTER_SITES=		${HOMEPAGE}/archive/
 
-ONLY_FOR_PLATFORM=	Ubuntu-16.04-% Ubuntu-18.04-%
+COMMENT=		Meta-package including information of the PAL Schunk WSG gripper
+LICENSE=		gnu-gpl-v3
+
+USE_BOOST_LIBS=		thread
+
+ROS_METAPKG=		yes
 
 CMAKE_PREFIX_PATH+=${PREFIX}
 include ../../devel/boost-headers/depend.mk

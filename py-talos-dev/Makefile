@@ -16,7 +16,7 @@ include ../../wip/py-prf-gazebo-ros-pkgs/depend.mk
 include ../../wip/py-prf-ros-control/depend.mk
 include ../../wip/py-sot-talos/depend.mk
 include ../../wip/py-talos-torque-control/depend.mk
-include ../../wip/ros-image-pipeline/depend.mk
+#include ../../wip/ros-image-pipeline/depend.mk
 include ../../wip/talos-metapkg-ros-control-sot/depend.mk
 include ../../wip/talos-simulation/depend.mk
 

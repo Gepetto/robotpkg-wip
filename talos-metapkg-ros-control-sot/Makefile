@@ -3,24 +3,27 @@
 #
 
 ORG=			stack-of-tasks
+NAME=			talos-metapkg-ros-control-sot
 VERSION=		0.1.0
-PKGBASE=		talos-metapkg-ros-control-sot
-PKGNAME=		${PKGBASE}-${VERSION}
-ROSNAME=		$(subst -,_,${PKGBASE})
-DISTNAME=		${ROSNAME}-${VERSION}
+
+ROSNAME=		$(subst -,_,${NAME})
+
+PKGNAME=		${NAME}-${VERSION}
 WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
-DIST_SUBDIR=		${PKGBASE}
+DISTNAME=		${ROSNAME}-${VERSION}
+DIST_SUBDIR=		${NAME}
 
 CATEGORIES=		wip
+
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}.git
 HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
-MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=talos/${PKGBASE}/}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}/${ORG}/${ROSNAME}
+MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=talos/${NAME}/}
 
-COMMENT=	ros_control package for the SoT and specifically for Talos
-LICENSE=	2-clause-bsd
+COMMENT=		ros_control package for the SoT and specifically for Talos
+LICENSE=		2-clause-bsd
 
 
-ROS_METAPKG=	yes
+ROS_METAPKG=		yes
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
@@ -63,6 +66,7 @@ displaytalosmetapkg:
 endif
 
 include ../../wip/py-roscontrol-sot/depend.mk
+include ../../wip/py-sot-talos/depend.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

@@ -3,6 +3,9 @@ include/example-robot-data/config.hh
 include/example-robot-data/deprecated.hh
 include/example-robot-data/path.hpp
 include/example-robot-data/warning.hh
+lib/cmake/example-robot-data/example-robot-dataConfig.cmake
+lib/cmake/example-robot-data/example-robot-dataConfigVersion.cmake
+lib/cmake/example-robot-data/example-robot-dataTargets.cmake
 lib/pkgconfig/example-robot-data.pc
 share/example-robot-data/package.xml
 share/example-robot-data/robots/anymal_b_simple_description/meshes/base/anymal_base.dae
@@ -92,6 +95,11 @@ share/example-robot-data/robots/icub_description/meshes/upmc/visual/icub_root_li
 share/example-robot-data/robots/icub_description/robots/icub.urdf
 share/example-robot-data/robots/icub_description/robots/icub_reduced.urdf
 share/example-robot-data/robots/icub_description/srdf/icub.srdf
+share/example-robot-data/robots/iris_description/meshes/iris.stl
+share/example-robot-data/robots/iris_description/meshes/iris_prop_ccw.dae
+share/example-robot-data/robots/iris_description/meshes/iris_prop_cw.dae
+share/example-robot-data/robots/iris_description/robots/iris.urdf
+share/example-robot-data/robots/iris_description/robots/iris_simple.urdf
 share/example-robot-data/robots/kinova_description/meshes/arm.dae
 share/example-robot-data/robots/kinova_description/meshes/base.dae
 share/example-robot-data/robots/kinova_description/meshes/finger_distal.dae
@@ -255,7 +263,6 @@ share/example-robot-data/robots/talos_data/meshes/v2/knee_lo_res.stl
 share/example-robot-data/robots/talos_data/robots/talos_left_arm.urdf
 share/example-robot-data/robots/talos_data/robots/talos_reduced.urdf
 share/example-robot-data/robots/talos_data/srdf/talos.srdf
-share/example-robot-data/robots/talos_data/urdf/talos_reduced.urdf
 share/example-robot-data/robots/tiago_description/config/collision/collision_parameters.yaml
 share/example-robot-data/robots/tiago_description/meshes/arm/arm_1.stl
 share/example-robot-data/robots/tiago_description/meshes/arm/arm_1_collision.dae

@@ -1,0 +1,49 @@
+remove deprecated boost::signals, to fix compilation on recent Boost
+ref https://github.com/ros-planning/moveit/pull/1353
+
+--- moveit_ros/move_group//CMakeLists.txt.orig	2018-11-01 11:40:45.000000000 +0100
++++ moveit_ros/move_group//CMakeLists.txt	2020-04-01 10:10:09.049901339 +0200
+@@ -7,7 +7,7 @@
+   set(CMAKE_BUILD_TYPE Release)
+ endif()
+ 
+-find_package(Boost REQUIRED system filesystem date_time program_options signals thread)
++find_package(Boost REQUIRED system filesystem date_time program_options thread)
+ find_package(catkin REQUIRED COMPONENTS
+   moveit_core
+   moveit_ros_planning
+--- moveit_ros/perception//CMakeLists.txt.orig	2018-11-01 11:40:45.000000000 +0100
++++ moveit_ros/perception//CMakeLists.txt	2020-04-01 10:10:13.066545757 +0200
+@@ -9,7 +9,7 @@
+   set(CMAKE_BUILD_TYPE Release)
+ endif()
+ 
+-find_package(Boost REQUIRED thread signals)
++find_package(Boost REQUIRED thread)
+ 
+ if(WITH_OPENGL)
+   find_package(OpenGL REQUIRED)
+--- moveit_ros/planning/CMakeLists.txt.orig	2018-11-01 11:40:45.000000000 +0100
++++ moveit_ros/planning/CMakeLists.txt	2020-04-01 10:10:16.056529195 +0200
+@@ -7,7 +7,7 @@
+   set(CMAKE_BUILD_TYPE Release)
+ endif()
+ 
+-find_package(Boost REQUIRED system filesystem date_time program_options signals thread chrono)
++find_package(Boost REQUIRED system filesystem date_time program_options thread chrono)
+ find_package(catkin REQUIRED COMPONENTS
+   moveit_core
+   moveit_ros_perception
+--- moveit_ros/planning/planning_scene_monitor/include/moveit/planning_scene_monitor/current_state_monitor.h.orig	2018-11-01 11:40:45.000000000 +0100
++++ moveit_ros/planning/planning_scene_monitor/include/moveit/planning_scene_monitor/current_state_monitor.h	2020-04-01 10:10:46.346361448 +0200
+@@ -53,9 +53,7 @@
+     @brief Monitors the joint_states topic and tf to maintain the current state of the robot. */
+ class CurrentStateMonitor
+ {
+-  /* tf changed their interface between indigo and kinetic
+-     from boost::signals::connection to boost::signals2::connection */
+-  typedef decltype(tf2_ros::Buffer()._addTransformsChangedListener(boost::function<void(void)>())) TFConnection;
++  typedef boost::signals2::connection TFConnection;
+ 
+ public:
+   /**

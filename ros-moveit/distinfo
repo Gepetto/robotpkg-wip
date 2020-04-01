@@ -1,3 +1,4 @@
 SHA1 (ros/moveit/0.10.5.tar.gz) = 7e2588c64476de84fa773dc84a3ac029f0097b9c
 RMD160 (ros/moveit/0.10.5.tar.gz) = f99ef77d4402fe887018d9408a982698225f712b
 Size (ros/moveit/0.10.5.tar.gz) = 1942731 bytes
+SHA1 (patch-aa) = 61b468cefd2173c4612179f9cfbc80103efbdfff

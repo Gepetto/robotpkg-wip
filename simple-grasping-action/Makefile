@@ -1,32 +1,32 @@
 # robotpkg Makefile for:	wip/simple-grasping-action
 # Created:			Olivier Stasse on Thu, 12 Dec 2018
 #
-ORG=		pal-robotics
-VERSION=	1.0.1
-PKGBASE=	simple-grasping-action
-PKGNAME=	${PKGBASE}-${VERSION}
-DISTNAME=	${VERSION}
-ROSNAME=	$(subst -,_,${PKGBASE})
-WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
-DIST_SUBDIR=	${PKGBASE}
-PKGREVISION=	2
 
-CATEGORIES=	wip
+ORG=			pal-robotics
+NAME=			simple-grasping-action
+VERSION=		1.0.1
+PKGREVISION=		2
 
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-CHECKOUT_VCS_OPTS+=	--recursive
+ROSNAME=		$(subst -,_,${NAME})
 
-HOMEPAGE= 	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/
-COMMENT=	PAL package providing ros action for simple grasping
-LICENSE=	gnu-gpl-v3
+PKGNAME=		${NAME}-${VERSION}
+WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
+DISTNAME=		${VERSION}
+DIST_SUBDIR=		${NAME}
 
-USE_BOOST_LIBS=	thread
+CATEGORIES=		wip
 
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}.git
+HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
+MASTER_SITES=		${HOMEPAGE}/archive/
 
-ONLY_FOR_PLATFORM=	Ubuntu-16.04-% Ubuntu-18.04-%
+COMMENT=		PAL package providing ros action for simple grasping
+LICENSE=		gnu-gpl-v3
 
-CMAKE_PREFIX_PATH+=${PREFIX}
+USE_BOOST_LIBS=		thread
+
+CMAKE_PREFIX_PATH+=	${PREFIX}
+
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../devel/ros-catkin/depend.mk

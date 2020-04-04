@@ -15,6 +15,9 @@ CONFLICTS+=		py[0-9][0-9]-crocoddyl
 
 USE_PYTHON=		true
 
+# parallel builds exhaust memory - until a better solution is found
+MAKE_JOBS_SAFE=		no
+
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/mk/sysdep/py-scipy.mk
 include ../../wip/example-robot-data/depend.mk

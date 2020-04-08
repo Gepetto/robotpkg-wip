@@ -12,18 +12,7 @@ endif
 ifeq (+,$(CPPAD_DEPEND_MK)) # ------------------------------------------
 
 include ../../mk/robotpkg.prefs.mk # for OPSYS
-ifeq (Ubuntu,${OPSYS})
-  ifneq (,$(filter 12.04 14.04,${OS_VERSION}))
-    PREFER.cppad?=	robotpkg
-  else
-    PREFER.cppad?=	system
-  endif
-else ifeq (Fedora,${OPSYS})
-  PREFER.cppad?=	system
-else ifeq (Debian,${OPSYS})
-  PREFER.cppad?=	system
-endif
-PREFER.cppad?=	robotpkg
+PREFER.cppad?=		robotpkg
 
 SYSTEM_SEARCH.cppad=\
   'include/cppad/configure.hpp:'	\
@@ -35,7 +24,7 @@ SYSTEM_PKG.Fedora.cppad=cppad-devel
 
 DEPEND_USE+=		cppad
 
-DEPEND_ABI.cppad?=	cppad>=20140000.3
+DEPEND_ABI.cppad?=	cppad>=20200000.2
 DEPEND_DIR.cppad?=	../../wip/cppad
 
 endif # CPPAD_DEPEND_MK ------------------------------------------------

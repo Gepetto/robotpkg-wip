@@ -20,6 +20,8 @@ LICENSE=		eclipse
 MAINTAINER=		gsaurel@laas.fr
 
 CMAKE_ARGS+=		-DCREATE_DOXYGEN_DOC=YES
+CMAKE_ARGS+=		-DCPPAD_HOME=${PREFIX.cppad}
+
 DYNAMIC_PLIST_DIRS+=	share/doc/cppadcg
 
 include ../../wip/cppad/depend.mk

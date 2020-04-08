@@ -1,0 +1,16 @@
+--- cmake/FindCppAD.cmake.orig	2020-03-18 19:33:25.000000000 +0100
++++ cmake/FindCppAD.cmake	2020-04-08 15:35:47.121123892 +0200
+@@ -27,7 +27,7 @@
+ IF (DEFINED CPPAD_HOME)
+ 
+     FIND_PATH(CPPAD_INCLUDE_DIR NAMES cppad/cppad.hpp
+-            PATHS "${CPPAD_HOME}"
++            PATHS "${CPPAD_HOME}/include"
+             NO_DEFAULT_PATH)
+ 
+     FIND_LIBRARY(CPPAD_IPOPT_LIBRARY
+@@ -107,4 +107,3 @@
+     ENDIF ()
+ 
+ ENDIF ()
+-

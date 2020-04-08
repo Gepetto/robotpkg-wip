@@ -15,7 +15,7 @@ PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common
 
-include ../../wip/ros-baxter-common/depend.mk
+include ../../wip/py-ros-baxter-common/depend.mk
 
 include ../../mapping/octomap/depend.mk
 include ../../path/py-hpp-corbaserver/depend.mk

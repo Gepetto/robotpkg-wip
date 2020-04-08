@@ -22,6 +22,7 @@ include/cppad/cg/code_handler_vector.hpp
 include/cppad/cg/collect_variable.hpp
 include/cppad/cg/compare.hpp
 include/cppad/cg/cond_exp_op.hpp
+include/cppad/cg/configure.hpp
 include/cppad/cg/cppadcg.hpp
 include/cppad/cg/cppadcg_assert.hpp
 include/cppad/cg/custom_position.hpp
@@ -75,6 +76,7 @@ include/cppad/cg/lang/dot/dot_util.hpp
 include/cppad/cg/lang/dot/language_dot.hpp
 include/cppad/cg/lang/dot/language_dot_arrays.hpp
 include/cppad/cg/lang/dot/language_dot_index_patterns.hpp
+include/cppad/cg/lang/lang_stream_stack.hpp
 include/cppad/cg/lang/language.hpp
 include/cppad/cg/lang/latex/lang_latex_custom_var_name_gen.hpp
 include/cppad/cg/lang/latex/lang_latex_default_var_name_gen.hpp
@@ -133,6 +135,12 @@ include/cppad/cg/model/llvm/v5_0/llvm_model_library_impl.hpp
 include/cppad/cg/model/llvm/v5_0/llvm_model_library_processor.hpp
 include/cppad/cg/model/llvm/v6_0/llvm6_0.hpp
 include/cppad/cg/model/llvm/v6_0/llvm_model_library_processor.hpp
+include/cppad/cg/model/llvm/v7_0/llvm7_0.hpp
+include/cppad/cg/model/llvm/v7_0/llvm_model_library_processor.hpp
+include/cppad/cg/model/llvm/v8_0/llvm8_0.hpp
+include/cppad/cg/model/llvm/v8_0/llvm_model_library_processor.hpp
+include/cppad/cg/model/llvm/v9_0/llvm9_0.hpp
+include/cppad/cg/model/llvm/v9_0/llvm_model_library_processor.hpp
 include/cppad/cg/model/model_c_source_gen.hpp
 include/cppad/cg/model/model_c_source_gen_for0.hpp
 include/cppad/cg/model/model_c_source_gen_for1.hpp
@@ -175,6 +183,7 @@ include/cppad/cg/operation_node.hpp
 include/cppad/cg/operation_node_name_streambuf.hpp
 include/cppad/cg/operation_path.hpp
 include/cppad/cg/operation_path_node.hpp
+include/cppad/cg/operation_stack.hpp
 include/cppad/cg/ordered.hpp
 include/cppad/cg/ostream_config_restore.hpp
 include/cppad/cg/patterns/dependent_pattern_matcher.hpp

@@ -3,10 +3,10 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-bridge
-VERSION=		3.3.1
+VERSION=		3.3.2
 
 ROSNAME=		$(subst -,_,${NAME})
-DISTNAME=		${ROSNAME}-${VERSION}
+DISTNAME=		${ROSNAME}-v3-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}.git

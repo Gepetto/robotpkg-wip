@@ -1,5 +1,4 @@
 @comment Tue Sep 4 16:54:15 CEST 2018
-bin/geometric_simu
 include/dynamic_graph_bridge/config.hh
 include/dynamic_graph_bridge/deprecated.hh
 include/dynamic_graph_bridge/ros_init.hh
@@ -18,6 +17,7 @@ lib/dynamic-graph-plugins/libros_queued_subscribe.so
 lib/dynamic-graph-plugins/libros_subscribe.so
 lib/dynamic-graph-plugins/libros_tf_listener.so
 lib/dynamic-graph-plugins/libros_time.so
+lib/dynamic_graph_bridge/geometric_simu
 lib/libros_bridge.so
 lib/libros_interpreter.so
 lib/libsot_loader.so

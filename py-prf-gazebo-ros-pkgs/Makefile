@@ -37,7 +37,7 @@ CMAKE_PREFIX_PATH+=	${PREFIX}
 
 # According to PAL instructions, we stay on the kinetic branch on 16.04
 include ../../mk/robotpkg.prefs.mk
-ifeq (16.04,${OS_VERSION})
+ifneq (,$(filter 16.04%,${OS_VERSION}))
   VERSION=		2.6.9
   DISTINFO_FILE=	${ROBOTPKG_DIR}/${CATEGORIES}/py-${PRFNAME}/distinfo.${OS_VERSION}
   PATCHDIR=		${ROBOTPKG_DIR}/${CATEGORIES}/py-${PRFNAME}/patches.${OS_VERSION}

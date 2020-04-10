@@ -24,7 +24,7 @@ LICENSE=		2-clause-bsd
 
 # According to PAL instructions, we stay on the kinetic branch on 16.04
 include ../../mk/robotpkg.prefs.mk
-ifeq (16.04,${OS_VERSION})
+ifneq (,$(filter 16.04%,${OS_VERSION}))
   VERSION=		1.1.9
   DISTINFO_FILE=	${ROBOTPKG_DIR}/${CATEGORIES}/${NAME}/distinfo.${OS_VERSION}
 endif

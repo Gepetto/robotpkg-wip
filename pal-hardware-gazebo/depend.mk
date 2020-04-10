@@ -16,7 +16,7 @@ include ../../mk/robotpkg.prefs.mk  # for OS_VERSION
 PREFER.pal-hardware-gazebo?=		robotpkg
 
 DEPEND_USE+=				pal-hardware-gazebo
-ifneq (,$(filter 16.04,${OS_VERSION}))
+ifneq (,$(filter 16.04%,${OS_VERSION}))
   DEPEND_ABI.pal-hardware-gazebo?=	pal-hardware-gazebo>=0.0.9<1.0.0
 else
   DEPEND_ABI.pal-hardware-gazebo?=	pal-hardware-gazebo>=1.0.0

@@ -13,7 +13,7 @@ ifeq (+,$(ROS_UNIVERSAL_ROBOT_DEPEND_MK)) # ------------------------------------
 
 include ../../meta-pkgs/ros-base/depend.common
 include ../../mk/robotpkg.prefs.mk
-ifeq (18.04,${OS_VERSION})
+ifneq (,$(filter 18.04%,${OS_VERSION}))
   PREFER.ros-universal-robot?=		robotpkg
 else
   PREFER.ros-universal-robot?=		${PREFER.ros-base}

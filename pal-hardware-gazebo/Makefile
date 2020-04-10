@@ -30,7 +30,7 @@ CMAKE_PREFIX_PATH+=	${PREFIX}
 
 # According to PAL instructions, we stay on the kinetic branch on 16.04
 include ../../mk/robotpkg.prefs.mk
-ifeq (16.04,${OS_VERSION})
+ifneq (,$(filter 16.04%,${OS_VERSION}))
   VERSION=		0.1.3
   DISTINFO_FILE=	${ROBOTPKG_DIR}/${CATEGORIES}/${NAME}/distinfo.${OS_VERSION}
 endif

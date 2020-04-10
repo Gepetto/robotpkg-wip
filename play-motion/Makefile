@@ -27,7 +27,7 @@ LICENSE=		2-clause-bsd
 ROS_METAPKG=		yes
 USE_BOOST_LIBS=		thread
 
-ifeq (,$(filter 16.04,${OS_VERSION}))
+ifeq (,$(filter 16.04%,${OS_VERSION}))
   include ../../wip/ros-moveit/depend.mk
 endif
 include ../../wip/py-prf-ros-control/depend.mk

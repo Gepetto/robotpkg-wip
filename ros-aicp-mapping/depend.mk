@@ -13,7 +13,7 @@ ifeq (+,$(ROS_AICP_MAPPING_DEPEND_MK)) # --------------------------------------
 
 include ../../meta-pkgs/ros-base/depend.common
 include ../../mk/robotpkg.prefs.mk
-ifeq (18.04,${OS_VERSION})
+ifneq (,$(filter 18.04%,${OS_VERSION}))
   PREFER.ros-aicp-mapping?=		robotpkg
 else
   PREFER.ros-aicp-mapping?=		${PREFER.ros-base}

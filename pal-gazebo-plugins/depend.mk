@@ -16,7 +16,7 @@ include ../../mk/robotpkg.prefs.mk  # for OS_VERSION
 PREFER.pal-gazebo-plugins?=	robotpkg
 
 DEPEND_USE+=			pal-gazebo-plugins
-ifneq (,$(filter 16.04,${OS_VERSION}))
+ifneq (,$(filter 16.04%,${OS_VERSION}))
   DEPEND_ABI.pal-gazebo-plugins?=	pal-gazebo-plugins>=1.1.4<2.0.0
 else
   DEPEND_ABI.pal-gazebo-plugins?=	pal-gazebo-plugins>=2.0.0

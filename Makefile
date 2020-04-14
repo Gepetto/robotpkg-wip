@@ -72,7 +72,6 @@ SUBDIR+=	py-hpp-affordance-corba
 SUBDIR+=	py-hpp-baxter
 SUBDIR+=	py-hpp-bezier-com-traj
 SUBDIR+=	py-hpp-centroidal-dynamics
-SUBDIR+=	py-hpp-environments
 SUBDIR+=	py-hpp-hrp2
 SUBDIR+=	py-hpp-rbprm
 SUBDIR+=	py-hpp-rbprm-corba

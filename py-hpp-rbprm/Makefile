@@ -14,7 +14,7 @@ PYTHON_NOTAG_CONFLICT=	yes
 include ../../meta-pkgs/hpp/Makefile.common
 
 include ../../wip/py-hpp-rbprm-robot-data/depend.mk
-include ../../wip/py-hpp-environments/depend.mk
+include ../../simulation/py-hpp-environments/depend.mk
 include ../../math/curves/depend.mk
 include ../../math/py-curves/depend.mk
 

@@ -32,7 +32,7 @@ include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/py-sot-core-v3/depend.mk
 include ../../optimization/tsid/depend.mk
-include ../../wip/py-tsid/depend.mk
+include ../../optimization/py-tsid/depend.mk
 include ../../wip/parametric-curves/depend.mk
 include ../../wip/py-parametric-curves/depend.mk
 include ../../wip/ddp-actuator-solver/depend.mk

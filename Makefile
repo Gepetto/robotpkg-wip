@@ -110,7 +110,6 @@ SUBDIR+=	py-talos-dev
 SUBDIR+=	py-talos-rbprm
 SUBDIR+=	py-talos-torque-control
 SUBDIR+=	py-tiago-tutorials
-SUBDIR+=	py-tsid
 SUBDIR+=	pyrene-motions
 SUBDIR+=	roralink
 SUBDIR+=	ros-aicp-mapping

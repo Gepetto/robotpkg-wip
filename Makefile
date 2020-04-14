@@ -14,7 +14,6 @@ SUBDIR+=	ddp-actuator-solver
 SUBDIR+=	dynamic-graph-tutorial
 SUBDIR+=	dynamic-graph-v3
 SUBDIR+=	dynamic-introspection
-SUBDIR+=	eigen-quadprog
 SUBDIR+=	eiquadprog
 SUBDIR+=	example-adder
 SUBDIR+=	fcl

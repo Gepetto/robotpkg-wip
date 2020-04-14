@@ -20,7 +20,7 @@ include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/graphviz.mk
 include ../../pkgtools/pkg-config/depend.mk
-include ../../wip/eigen-quadprog/depend.mk
+include ../../math/eigen-quadprog/depend.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/fortran.mk

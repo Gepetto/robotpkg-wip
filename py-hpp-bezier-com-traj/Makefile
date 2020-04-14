@@ -5,8 +5,6 @@
 HPP_PACKAGE=		hpp-bezier-com-traj
 HPP_COMMENT=		trajectory generation for the COM with bezier curves
 
-PKGREVISION=		1
-
 CATEGORIES=		wip
 
 USE_BOOST_LIBS=		python
@@ -17,7 +15,6 @@ include ../../meta-pkgs/hpp/Makefile.common
 include ../../math/curves/depend.mk
 include ../../math/py-curves/depend.mk
 
-include ../../wip/py-hpp-spline/depend.mk
 include ../../wip/py-hpp-centroidal-dynamics/depend.mk
 
 include ../../math/py-eigenpy/depend.mk

@@ -94,7 +94,6 @@ SUBDIR+=	py-prf-ros-control
 SUBDIR+=	py-prf-ros-controllers
 SUBDIR+=	py-qpoases
 SUBDIR+=	py-qt-gepetto-pythonqt
-SUBDIR+=	py-quadprog
 SUBDIR+=	py-ros-baxter-common
 SUBDIR+=	py-roscontrol-sot
 SUBDIR+=	py-skeleton-model

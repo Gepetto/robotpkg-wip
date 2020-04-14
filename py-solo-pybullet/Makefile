@@ -15,7 +15,7 @@ MAINTAINER=		gepetto@laas.fr
 USE_PYTHON_ONLY=	true
 
 include ../../devel/jrl-cmakemodules/Makefile.common
-include ../../wip/py-example-robot-data/depend.mk
+include ../../robots/py-example-robot-data/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../math/py-eigenpy/depend.mk

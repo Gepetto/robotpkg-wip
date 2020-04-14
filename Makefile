@@ -70,7 +70,6 @@ SUBDIR+=	py-dynamic-graph-bridge-v3
 SUBDIR+=	py-dynamic-graph-tutorial
 SUBDIR+=	py-dynamic-graph-v3
 SUBDIR+=	py-example-adder
-SUBDIR+=	py-example-robot-data
 SUBDIR+=	py-hqp
 SUBDIR+=	py-hpp-affordance-corba
 SUBDIR+=	py-hpp-baxter

@@ -14,7 +14,7 @@ MAINTAINER=		gepetto-soft@laas.fr
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
 include ../../devel/jrl-cmakemodules/Makefile.common
-include ../../wip/curves/depend.mk
+include ../../math/curves/depend.mk
 include ../../graphics/assimp/depend.mk
 include ../../graphics/urdfdom/depend.mk
 include ../../mapping/octomap/depend.mk

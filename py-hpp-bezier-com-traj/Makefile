@@ -14,7 +14,7 @@ PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common
 
-include ../../wip/curves/depend.mk
+include ../../math/curves/depend.mk
 include ../../wip/py-curves/depend.mk
 
 include ../../wip/py-hpp-spline/depend.mk

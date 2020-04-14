@@ -15,7 +15,7 @@ include ../../meta-pkgs/hpp/Makefile.common
 
 include ../../wip/py-hpp-rbprm-robot-data/depend.mk
 include ../../wip/py-hpp-environments/depend.mk
-include ../../wip/curves/depend.mk
+include ../../math/curves/depend.mk
 include ../../wip/py-curves/depend.mk
 
 include ../../path/hpp-core/depend.mk

@@ -2,6 +2,9 @@
 include/hpp/rbprm-robot-data/config.hh
 include/hpp/rbprm-robot-data/deprecated.hh
 include/hpp/rbprm-robot-data/warning.hh
+lib/cmake/hpp-rbprm-robot-data/hpp-rbprm-robot-dataConfig.cmake
+lib/cmake/hpp-rbprm-robot-data/hpp-rbprm-robot-dataConfigVersion.cmake
+lib/cmake/hpp-rbprm-robot-data/hpp-rbprm-robot-dataTargets.cmake
 lib/pkgconfig/hpp-rbprm-robot-data.pc
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/hyq/__init__.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/hyq/robot.py

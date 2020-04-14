@@ -18,7 +18,6 @@ SUBDIR+=	dynamic-introspection
 SUBDIR+=	eigen-quadprog
 SUBDIR+=	eiquadprog
 SUBDIR+=	example-adder
-SUBDIR+=	example-robot-data
 SUBDIR+=	fcl
 SUBDIR+=	FRILibrary
 SUBDIR+=	hatponboard-lib

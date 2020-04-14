@@ -6,6 +6,10 @@ include/hpp/corbaserver/affordance/deprecated.hh
 include/hpp/corbaserver/affordance/fwd.hh
 include/hpp/corbaserver/affordance/server.hh
 include/hpp/corbaserver/affordance/warning.hh
+lib/cmake/hpp-affordance-corba/hpp-affordance-corbaConfig.cmake
+lib/cmake/hpp-affordance-corba/hpp-affordance-corbaConfigVersion.cmake
+lib/cmake/hpp-affordance-corba/hpp-affordance-corbaTargets-release.cmake
+lib/cmake/hpp-affordance-corba/hpp-affordance-corbaTargets.cmake
 lib/hppPlugins/affordance-corba.so
 lib/pkgconfig/hpp-affordance-corba.pc
 ${PYTHON_SITELIB}/hpp/corbaserver/affordance/__init__.py

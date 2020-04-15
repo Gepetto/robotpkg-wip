@@ -58,5 +58,9 @@ include/hpp/rbprm/utils/Stdafx.hh
 include/hpp/rbprm/utils/algorithms.h
 include/hpp/rbprm/utils/stop-watch.hh
 include/hpp/rbprm/warning.hh
+lib/cmake/hpp-rbprm/hpp-rbprmConfig.cmake
+lib/cmake/hpp-rbprm/hpp-rbprmConfigVersion.cmake
+lib/cmake/hpp-rbprm/hpp-rbprmTargets-release.cmake
+lib/cmake/hpp-rbprm/hpp-rbprmTargets.cmake
 lib/libhpp-rbprm.so
 lib/pkgconfig/hpp-rbprm.pc

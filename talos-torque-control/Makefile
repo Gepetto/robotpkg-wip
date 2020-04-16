@@ -2,7 +2,7 @@
 # Created:			Guilhem Saurel on Wed, 25 Mar 2020
 #
 
-ORG=			pyrene-dev
+ORG=			stack-of-tasks
 NAME=			talos-torque-control
 VERSION=		1.0.0
 

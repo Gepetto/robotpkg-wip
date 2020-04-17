@@ -21,7 +21,7 @@ DEPEND_ABI.py-talos-rbprm?=	${PKGTAG.python-}talos-rbprm>=4.7.0
 DEPEND_DIR.py-talos-rbprm?=	../../wip/py-talos-rbprm
 
 SYSTEM_SEARCH.py-talos-rbprm=\
-	include/hpp/talos-rbprm/config.hh	i			\
+	include/hpp/talos-rbprm/config.hh				\
 	'lib/pkgconfig/talos-rbprm.pc:/Version/s/[^0-9.]//gp'		\
 	'${PYTHON_SYSLIBSEARCH}/talos_rbprm/__init__.py'
 

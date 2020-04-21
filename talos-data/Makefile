@@ -10,7 +10,7 @@ ROSNAME=		$(subst -,_,${NAME})
 PKGNAME=		${NAME}-${VERSION}
 DISTNAME=		${ROSNAME}-${VERSION}
 
-MASTER_REPOSITORY=	git git@gepgitlab.laas.fr:${ORG}/${ROSNAME}.git
+MASTER_REPOSITORY=	git git@gitlab.laas.fr:${ORG}/${NAME}.git
 LICENSE=		gnu-lgpl-v3
 
 CATEGORIES=		wip

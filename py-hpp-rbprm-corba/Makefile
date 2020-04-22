@@ -25,6 +25,7 @@ include ../../math/eigen3/depend.mk
 include ../../path/hpp-core/depend.mk
 include ../../path/py-hpp-corbaserver/depend.mk
 include ../../path/hpp-util/depend.mk
+include ../../graphics/py-qt-hpp-gepetto-viewer/depend.mk
 include ../../mapping/octomap/depend.mk
 
 include ../../middleware/omniORB/depend.mk

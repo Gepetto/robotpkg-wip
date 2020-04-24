@@ -17,7 +17,6 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/kine_romeo.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/kine_romeo_small.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/mass_apparent/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/mass_apparent/wrap.so
-${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/parser.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/tools.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/waist_attitude_from_sensor/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/waist_attitude_from_sensor/wrap.so

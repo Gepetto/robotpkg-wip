@@ -17,11 +17,12 @@ PREFER.py-hpp-baxter?=	robotpkg
 
 DEPEND_USE+=		py-hpp-baxter
 
-DEPEND_ABI.py-hpp-baxter?=	${PKGTAG.python-}hpp-baxter>=4.7.0
+DEPEND_ABI.py-hpp-baxter?=	${PKGTAG.python-}hpp-baxter>=4.9.0
 DEPEND_DIR.py-hpp-baxter?=	../../wip/py-hpp-baxter
 
-SYSTEM_SEARCH.py-hpp-baxter=\
-	include/hpp/baxter/config.hh	\
+SYSTEM_SEARCH.py-hpp-baxter=									\
+	'include/hpp/baxter/config.hh'								\
+	'lib/cmake/hpp-baxter/hpp-baxterConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
 	'lib/pkgconfig/hpp-baxter.pc:/Version/s/[^0-9.]//gp'
 
 endif # PY_HPP_BAXTER_DEPEND_MK --------------------------------------------

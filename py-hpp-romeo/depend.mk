@@ -17,11 +17,12 @@ PREFER.py-hpp-romeo?=	robotpkg
 
 DEPEND_USE+=		py-hpp-romeo
 
-DEPEND_ABI.py-hpp-romeo?=	${PKGTAG.python-}hpp-romeo>=4.7.0
+DEPEND_ABI.py-hpp-romeo?=	${PKGTAG.python-}hpp-romeo>=4.9.0
 DEPEND_DIR.py-hpp-romeo?=	../../wip/py-hpp-romeo
 
-SYSTEM_SEARCH.py-hpp-romeo=\
-	include/hpp/romeo/config.hh	\
+SYSTEM_SEARCH.py-hpp-romeo=									\
+	'include/hpp/romeo/config.hh'								\
+	'lib/cmake/hpp-romeo/hpp-romeoConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
 	'lib/pkgconfig/hpp_romeo.pc:/Version/s/[^0-9.]//gp'
 
 endif # PY_HPP_ROMEO_DEPEND_MK --------------------------------------------

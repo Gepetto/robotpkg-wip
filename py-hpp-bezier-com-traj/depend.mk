@@ -17,12 +17,13 @@ PREFER.py-hpp-bezier-com-traj?=	robotpkg
 
 DEPEND_USE+=		py-hpp-bezier-com-traj
 
-DEPEND_ABI.py-hpp-bezier-com-traj?=	${PKGTAG.python-}hpp-bezier-com-traj>=4.7.0
+DEPEND_ABI.py-hpp-bezier-com-traj?=	${PKGTAG.python-}hpp-bezier-com-traj>=4.9.0
 DEPEND_DIR.py-hpp-bezier-com-traj?=	../../wip/py-hpp-bezier-com-traj
 
-SYSTEM_SEARCH.py-hpp-bezier-com-traj=\
-	include/hpp/bezier-com-traj/config.hh	\
-	lib/libhpp-bezier-com-traj.so	\
+SYSTEM_SEARCH.py-hpp-bezier-com-traj=										\
+	'include/hpp/bezier-com-traj/config.hh'									\
+	'lib/cmake/hpp-bezier-com-traj/hpp-bezier-com-trajConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
+	'lib/libhpp-bezier-com-traj.so'										\
 	'lib/pkgconfig/hpp-bezier-com-traj.pc:/Version/s/[^0-9.]//gp'
 
 endif # PY_HPP_BEZIER_COM_TRAJ_DEPEND_MK --------------------------------------------

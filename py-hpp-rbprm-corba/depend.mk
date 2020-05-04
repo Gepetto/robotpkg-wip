@@ -17,12 +17,13 @@ PREFER.py-hpp-rbprm-corba?=	robotpkg
 
 DEPEND_USE+=			py-hpp-rbprm-corba
 
-DEPEND_ABI.py-hpp-rbprm-corba?=	${PKGTAG.python-}hpp-rbprm-corba>=4.7.1
+DEPEND_ABI.py-hpp-rbprm-corba?=	${PKGTAG.python-}hpp-rbprm-corba>=4.9.0
 DEPEND_DIR.py-hpp-rbprm-corba?=	../../wip/py-hpp-rbprm-corba
 
-SYSTEM_SEARCH.py-hpp-rbprm-corba=\
-	include/hpp/corbaserver/rbprm/config.hh				\
-	lib/hppPlugins/rbprm-corba.so					\
+SYSTEM_SEARCH.py-hpp-rbprm-corba=									\
+	'include/hpp/corbaserver/rbprm/config.hh'			?				\
+	'lib/cmake/hpp-rbprm-corba/hpp-rbprm-corbaConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
+	'lib/hppPlugins/rbprm-corba.so'									\
 	'lib/pkgconfig/hpp-rbprm-corba.pc:/Version/s/[^0-9.]//gp'
 
 endif # PY_HPP_RBPRM_CORBA_DEPEND_MK --------------------------------------------

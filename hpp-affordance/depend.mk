@@ -15,12 +15,13 @@ PREFER.hpp-affordance?=	robotpkg
 
 DEPEND_USE+=		hpp-affordance
 
-DEPEND_ABI.hpp-affordance?=	hpp-affordance>=4.2.0
+DEPEND_ABI.hpp-affordance?=	hpp-affordance>=4.9.0
 DEPEND_DIR.hpp-affordance?=	../../wip/hpp-affordance
 
-SYSTEM_SEARCH.hpp-affordance=\
-	include/hpp/affordance/config.hh	\
-	lib/libhpp-affordance.so	\
+SYSTEM_SEARCH.hpp-affordance=										\
+	'include/hpp/affordance/config.hh'								\
+	'lib/cmake/hpp-affordance/hpp-affordanceConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
+	'lib/libhpp-affordance.so'									\
 	'lib/pkgconfig/hpp-affordance.pc:/Version/s/[^0-9.]//gp'
 
 endif # HPP_AFFORDANCE_DEPEND_MK --------------------------------------------

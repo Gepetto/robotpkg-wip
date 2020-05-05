@@ -2,6 +2,7 @@
 # Created:			Guilhem Saurel on Wed, 30 Jan 2019
 #
 
+PKGREVISION=		1
 HPP_PACKAGE=		hpp-rbprm
 HPP_COMMENT=		RB-PRM planner in HPP
 
@@ -13,6 +14,7 @@ include ../../meta-pkgs/hpp/Makefile.common
 
 include ../../wip/py-hpp-rbprm-robot-data/depend.mk
 include ../../wip/py-talos-rbprm/depend.mk
+include ../../simulation/hpp-environments/depend.mk
 include ../../simulation/py-hpp-environments/depend.mk
 include ../../math/curves/depend.mk
 include ../../math/py-curves/depend.mk

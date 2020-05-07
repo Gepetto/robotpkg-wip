@@ -1,6 +1,8 @@
 @comment Fri Jul 13 12:13:49 CEST 2018
 ${PYTHON_SITELIB}/dynamic_graph/sot/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/core/admittance_control_op_point/__init__.py
+${PYTHON_SITELIB}/dynamic_graph/sot/core/admittance_control_op_point/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/binary_int_to_uint/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/binary_int_to_uint/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/clamp_workspace/__init__.py

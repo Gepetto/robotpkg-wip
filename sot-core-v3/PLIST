@@ -88,6 +88,8 @@ lib/cmake/sot-core/sot-coreConfig.cmake
 lib/cmake/sot-core/sot-coreConfigVersion.cmake
 lib/cmake/sot-core/sot-coreTargets-release.cmake
 lib/cmake/sot-core/sot-coreTargets.cmake
+lib/dynamic-graph-plugins/libadmittance-control-op-point.so
+lib/dynamic-graph-plugins/libadmittance-control-op-point.so.${PKGVERSION}
 lib/dynamic-graph-plugins/libbinary-int-to-uint.so
 lib/dynamic-graph-plugins/libbinary-int-to-uint.so.${PKGVERSION}
 lib/dynamic-graph-plugins/libclamp-workspace.so

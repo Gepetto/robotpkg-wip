@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-core
-VERSION=		4.8.1
+VERSION=		4.9.0
 
 PKGNAME=		${NAME}-v3-${VERSION}
 
@@ -24,6 +24,7 @@ include ../../path/hpp-fcl/depend.mk
 include ../../mapping/octomap/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
+include ../../robots/example-robot-data/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/graphviz.mk

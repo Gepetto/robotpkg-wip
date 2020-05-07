@@ -19,3 +19,4 @@ lib/cmake/ddp-actuator-solver/ddp-actuator-solverTargets.cmake
 lib/libddp-actuator-solver.so
 lib/libddp-actuator-solver.so.${PKGVERSION}
 lib/pkgconfig/ddp-actuator-solver.pc
+share/ddp-actuator-solver/package.xml

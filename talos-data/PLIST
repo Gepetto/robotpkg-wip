@@ -108,8 +108,6 @@ share/talos_data/robots/talos_reduced.urdf
 share/talos_data/robots/talos_small.urdf.xacro
 share/talos_data/robots/upload.launch
 share/talos_data/robots/upload_talos.launch
-share/talos_data/scripts/start_talos_gazebo.py
-share/talos_data/scripts/start_talos_gazebo_16_04.py
 share/talos_data/srdf/pyrene.srdf
 share/talos_data/srdf/talos.srdf
 share/talos_data/srdf/talos_wpg.srdf

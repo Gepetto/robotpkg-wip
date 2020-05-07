@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-pattern-generator
-VERSION=		3.2.3
+VERSION=		3.3.0
 
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 

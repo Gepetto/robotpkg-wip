@@ -10,3 +10,4 @@ lib/cmake/talos-torque-control/talos-torque-controlTargets.cmake
 lib/libtalos-torque-control.so
 lib/libtalos-torque-control.so.${PKGVERSION}
 lib/pkgconfig/talos-torque-control.pc
+share/talos-torque-control/package.xml

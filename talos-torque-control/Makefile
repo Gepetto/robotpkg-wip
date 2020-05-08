@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			talos-torque-control
-VERSION=		1.0.0
+VERSION=		1.0.1
 
 CATEGORIES=		wip
 COMMENT=		Torque control for Talos

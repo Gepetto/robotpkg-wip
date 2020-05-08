@@ -3,7 +3,7 @@
 #
 
 ORG=			stack-of-tasks
-VERSION=		0.4.0
+VERSION=		0.5.0
 NAME=			roscontrol-sot
 PKGNAME=		${PKGTAG.python-}${NAME}-${VERSION}
 ROSNAME=		$(subst -,_,${NAME})

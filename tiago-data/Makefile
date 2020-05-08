@@ -3,7 +3,7 @@
 #
 
 ORG=			stack-of-tasks
-VERSION=		1.0.4
+VERSION=		1.1.0
 PKGBASE=		tiago-data
 DISTNAME=		${VERSION}
 PKGNAME=		${PKGBASE}-${VERSION}

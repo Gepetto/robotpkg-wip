@@ -58,10 +58,14 @@ share/tiago_data/meshes/torso/torso_lift_without_arm.stl
 share/tiago_data/package.xml
 share/tiago_data/robots/show.launch
 share/tiago_data/robots/tiago.urdf.xacro
+share/tiago_data/robots/tiago_pal_hey5.urdf
 share/tiago_data/robots/tiago_steel.urdf
 share/tiago_data/robots/tiago_steel_without_wheels.urdf
 share/tiago_data/robots/tiago_titanium.urdf
 share/tiago_data/robots/upload.launch
+share/tiago_data/srdf/pal_hey5_gripper.srdf
+share/tiago_data/srdf/schunk_gripper.srdf
+share/tiago_data/srdf/tiago.srdf
 share/tiago_data/urdf/arm/arm.transmission.xacro
 share/tiago_data/urdf/arm/arm.urdf.xacro
 share/tiago_data/urdf/arm/wrist.transmission.xacro

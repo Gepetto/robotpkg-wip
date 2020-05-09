@@ -1,25 +1,35 @@
-From b0a7c68844def9f3da3b66ca6c7a2b305706bc3d Mon Sep 17 00:00:00 2001
+From bbba1aec84d70cafacecd874acd6834c87bdf081 Mon Sep 17 00:00:00 2001
 From: Guilhem Saurel <guilhem.saurel@laas.fr>
 Date: Sat, 9 May 2020 11:40:01 +0200
 Subject: [PATCH] typo
 
 ---
- tests/appli-test-simple-seq-play.py.cmake | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ cmake                                     | 2 +-
+ tests/appli-test-simple-seq-play.py.cmake | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
 
+diff --git a/cmake b/cmake
+index 321eb1c..72cf8cd 160000
+--- cmake
++++ cmake
+@@ -1 +1 @@
+-Subproject commit 321eb1ccf1d94570eb564f3659b13ef3ef82239e
++Subproject commit 72cf8cdefcf8cde818745ad7998122bde0b54734
 diff --git a/tests/appli-test-simple-seq-play.py.cmake b/tests/appli-test-simple-seq-play.py.cmake
-index 5f7b599..3630a03 100644
+index 5f7b599..1209552 100644
 --- tests/appli-test-simple-seq-play.py.cmake
 +++ tests/appli-test-simple-seq-play.py.cmake
-@@ -3,7 +3,7 @@ from dynamic_graph.sot.core.matrix_util import matrixToTuple
+@@ -3,8 +3,8 @@ from dynamic_graph.sot.core.matrix_util import matrixToTuple
  from dynamic_graph.sot.tools import SimpleSeqPlay
  from numpy import eye
  
 -from dynamic_graph.sot.core.sot import import Task
+-from dynamic_graph.sot.core.feature_generic FeatureGeneric
 +from dynamic_graph.sot.core.sot import Task
- from dynamic_graph.sot.core.feature_generic FeatureGeneric
++from dynamic_graph.sot.core.feature_generic import FeatureGeneric
  from dynamic_graph.sot.core.gain_adaptive import GainAdaptive
  from dynamic_graph.sot.core.meta_tasks import setGain
+ from dynamic_graph.sot.core.matrix_util import matrixToTuple
 -- 
 2.26.2
 

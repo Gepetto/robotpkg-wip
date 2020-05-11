@@ -2,6 +2,8 @@
 lib/pkgconfig/roscontrol_sot_talos.pc
 lib/pkgconfig/sot_pyrene_bringup.pc
 lib/roscontrol_sot_talos/republish
+lib/roscontrol_sot_talos/start_talos_gazebo.py
+lib/roscontrol_sot_talos/start_talos_gazebo_16_04.py
 share/roscontrol_sot_talos/cmake/roscontrol_sot_talosConfig-version.cmake
 share/roscontrol_sot_talos/cmake/roscontrol_sot_talosConfig.cmake
 share/roscontrol_sot_talos/config/pids_effort.yaml

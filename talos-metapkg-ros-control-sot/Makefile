@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			talos-metapkg-ros-control-sot
-VERSION=		0.1.0
+VERSION=		0.2.0
 
 ROSNAME=		$(subst -,_,${NAME})
 

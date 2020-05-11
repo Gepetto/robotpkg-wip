@@ -2,7 +2,7 @@
 # Created:			Guilhem Saurel on Mon, 9 Oct 2017
 #
 
-TALOS_DATE=	20200325
+TALOS_DATE=	20200511
 DISTNAME=	talos-dev-${TALOS_DATE}
 PKGNAME=	${PKGTAG.python-}${DISTNAME}
 
@@ -15,6 +15,7 @@ include ../../wip/py-prf-gazebo-ros-pkgs/depend.mk
 
 include ../../wip/py-prf-ros-control/depend.mk
 include ../../wip/py-sot-talos/depend.mk
+include ../../wip/py-sot-talos-balance/depend.mk
 include ../../wip/py-talos-torque-control/depend.mk
 #include ../../wip/ros-image-pipeline/depend.mk
 include ../../wip/talos-metapkg-ros-control-sot/depend.mk

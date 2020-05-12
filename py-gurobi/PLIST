@@ -1,0 +1,24 @@
+@comment Tue May 12 16:52:25 CEST 2020
+bin/grb_ts
+bin/grbcluster
+bin/grbgetkey
+bin/grbprobe
+bin/grbtune
+bin/gurobi.env
+bin/gurobi.sh
+bin/gurobi_cl
+lib/gurobi-javadoc.jar
+lib/gurobi.jar
+lib/gurobi.py
+lib/gurobi90.netstandard20.dll
+lib/gurobi90.netstandard20.xml
+lib/libGurobiJni90.so
+lib/libgurobi.so.${PKGVERSION}
+lib/libgurobi90.so
+lib/libgurobi90_light.so
+lib/libgurobi_c++.a
+lib/libgurobi_g++4.2.a
+lib/libgurobi_g++5.2.a
+${PYTHON_SITELIB}/gurobipy-${PKGVERSION}-py${PYTHON_VERSION}.egg-info
+${PYTHON_SITELIB}/gurobipy/__init__.py
+${PYTHON_SITELIB}/gurobipy/gurobipy.so

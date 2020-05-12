@@ -21,7 +21,7 @@ DEPEND_ABI.py-multiprocess?=	${PKGTAG.python-}multiprocess>=0.6.1
 DEPEND_DIR.py-multiprocess?=	../../wip/py-multiprocess
 
 SYSTEM_SEARCH.py-multiprocess=	\
-  '${PYTHON_SYSLIBSEARCH}/multiprocess*.egg'
+  '${PYTHON_SYSLIBSEARCH}/multiprocess/__init__.py'
 
 endif # PY_MULTIPROCESS_DEPEND_MK ----------------------------------------------
 

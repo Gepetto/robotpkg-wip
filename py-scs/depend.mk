@@ -21,7 +21,7 @@ DEPEND_ABI.py-scs?=		${PKGTAG.python-}scs>=2.1.2
 DEPEND_DIR.py-scs?=		../../wip/py-scs
 
 SYSTEM_SEARCH.py-scs=	\
-  '${PYTHON_SITELIB}/scs*.egg'
+  '${PYTHON_SYSLIBSEARCH}/scs*.egg'
 
 endif # PY_SCS_DEPEND_MK ----------------------------------------------
 

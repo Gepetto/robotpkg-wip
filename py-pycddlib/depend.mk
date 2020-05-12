@@ -21,7 +21,7 @@ DEPEND_ABI.py-pycddlib?=	${PKGTAG.python-}pycddlib>=2.1.1
 DEPEND_DIR.py-pycddlib?=	../../wip/py-pycddlib
 
 SYSTEM_SEARCH.py-pycddlib=	\
-  '${PYTHON_SYSLIBSEARCH}/pycddlib*.egg'
+  '${PYTHON_SYSLIBSEARCH}/cdd*.so'
 
 endif # PY_PYCDDLIB_DEPEND_MK ----------------------------------------------
 

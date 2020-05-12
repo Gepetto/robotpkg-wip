@@ -86,6 +86,7 @@ SUBDIR+=	py-mavlink
 SUBDIR+=	py-morse
 SUBDIR+=	py-mraa
 SUBDIR+=	py-multicontact-api
+SUBDIR+=	py-multiprocess
 SUBDIR+=	py-ospi
 SUBDIR+=	py-osqp
 SUBDIR+=	py-pal

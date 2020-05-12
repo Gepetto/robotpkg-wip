@@ -1,0 +1,7 @@
+@comment Tue May 12 13:22:32 CEST 2020
+bin/f2py
+bin/f2py3
+bin/f2py${PYTHON_VERSION}
+bin/futurize
+bin/pasteurize
+${PYTHON_SITELIB}/osqp-${PKGVERSION}-py${PYTHON_VERSION}-linux-x86_64.egg

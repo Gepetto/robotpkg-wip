@@ -84,6 +84,7 @@ SUBDIR+=	py-morse
 SUBDIR+=	py-mraa
 SUBDIR+=	py-multicontact-api
 SUBDIR+=	py-ospi
+SUBDIR+=	py-osqp
 SUBDIR+=	py-pal
 SUBDIR+=	py-pal-statistics
 SUBDIR+=	py-parametric-curves

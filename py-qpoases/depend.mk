@@ -21,7 +21,7 @@ DEPEND_ABI.py-qpoases?=	${PKGTAG.python-}qpoases>=3.2
 DEPEND_DIR.py-qpoases?=	../../wip/py-qpoases
 
 SYSTEM_SEARCH.py-qpoases=\
-  '${PYTHON_SITELIB}/qpoases.{*.,}so'
+  '${PYTHON_SYSLIBSEARCH}/qpoases.{*.,}so'
 
 endif # PY_QPOASES_DEPEND_MK --------------------------------------------------
 

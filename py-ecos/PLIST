@@ -1,5 +1,10 @@
-@comment Tue May 12 12:23:03 CEST 2020
-bin/f2py
-bin/f2py3
-bin/f2py${PYTHON_VERSION}
-${PYTHON_SITELIB}/ecos-${PKGVERSION}-py${PYTHON_VERSION}-linux-x86_64.egg
+@comment Tue May 12 20:22:24 CEST 2020
+${PYTHON_SITELIB}/_ecos${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/ecos-${PKGVERSION}-py${PYTHON_VERSION}.egg-info/PKG-INFO
+${PYTHON_SITELIB}/ecos-${PKGVERSION}-py${PYTHON_VERSION}.egg-info/SOURCES.txt
+${PYTHON_SITELIB}/ecos-${PKGVERSION}-py${PYTHON_VERSION}.egg-info/dependency_links.txt
+${PYTHON_SITELIB}/ecos-${PKGVERSION}-py${PYTHON_VERSION}.egg-info/requires.txt
+${PYTHON_SITELIB}/ecos-${PKGVERSION}-py${PYTHON_VERSION}.egg-info/top_level.txt
+${PYTHON_SITELIB}/ecos/__init__.py
+${PYTHON_SITELIB}/ecos/ecos.py
+${PYTHON_SITELIB}/ecos/version.py

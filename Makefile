@@ -97,6 +97,7 @@ SUBDIR+=	py-qpoases
 SUBDIR+=	py-qt-gepetto-pythonqt
 SUBDIR+=	py-ros-baxter-common
 SUBDIR+=	py-roscontrol-sot
+SUBDIR+=	py-scs
 SUBDIR+=	py-skeleton-model
 SUBDIR+=	py-solo-pybullet
 SUBDIR+=	py-sot-application-v3

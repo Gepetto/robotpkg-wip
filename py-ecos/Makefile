@@ -18,6 +18,7 @@ LICENSE=		gnu-gpl-v3
 MAINTAINER=		gsaurel@laas.fr
 
 PYDISTUTILSPKG=		yes
+PYSETUPINSTALLARGS+=	--single-version-externally-managed --root=/
 MAKE_ENV+=		PYTHONPATH=${PREFIX}/${PYTHON_SITELIB}
 
 include ../../mk/sysdep/python.mk

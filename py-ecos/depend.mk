@@ -21,7 +21,7 @@ DEPEND_ABI.py-ecos?=		${PKGTAG.python-}ecos>=2.0.7
 DEPEND_DIR.py-ecos?=		../../wip/py-ecos
 
 SYSTEM_SEARCH.py-ecos=	\
-  '${PYTHON_SITELIB}/ecos*.egg'
+  '${PYTHON_SYSLIBSEARCH}/ecos*.egg'
 
 endif # PY_ECOS_DEPEND_MK ----------------------------------------------
 

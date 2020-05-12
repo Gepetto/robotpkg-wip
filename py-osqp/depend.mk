@@ -21,7 +21,7 @@ DEPEND_ABI.py-osqp?=		${PKGTAG.python-}osqp>=0.6.1
 DEPEND_DIR.py-osqp?=		../../wip/py-osqp
 
 SYSTEM_SEARCH.py-osqp=		\
-  '${PYTHON_SITELIB}/osqp*.egg'
+  '${PYTHON_SYSLIBSEARCH}/osqp*.egg'
 
 endif # PY_OSQP_DEPEND_MK ----------------------------------------------
 

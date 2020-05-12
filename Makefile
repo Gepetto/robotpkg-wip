@@ -103,6 +103,7 @@ SUBDIR+=	py-ros-baxter-common
 SUBDIR+=	py-roscontrol-sot
 SUBDIR+=	py-scs
 SUBDIR+=	py-skeleton-model
+SUBDIR+=	py-sl1m
 SUBDIR+=	py-solo-pybullet
 SUBDIR+=	py-sot-application-v3
 SUBDIR+=	py-sot-core-v3

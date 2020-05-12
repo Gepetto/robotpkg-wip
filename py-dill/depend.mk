@@ -21,7 +21,7 @@ DEPEND_ABI.py-dill?=		${PKGTAG.python-}dill>=0.3.1.1
 DEPEND_DIR.py-dill?=		../../wip/py-dill
 
 SYSTEM_SEARCH.py-dill=		\
-  '${PYTHON_SYSLIBSEARCH}/dill*.egg'
+  '${PYTHON_SYSLIBSEARCH}/dill/__init__.py'
 
 endif # PY_DILL_DEPEND_MK ----------------------------------------------
 

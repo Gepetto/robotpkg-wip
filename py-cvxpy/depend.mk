@@ -21,7 +21,7 @@ DEPEND_ABI.py-cvxpy?=		${PKGTAG.python-}cvxpy>=1.0.31
 DEPEND_DIR.py-cvxpy?=		../../wip/py-cvxpy
 
 SYSTEM_SEARCH.py-cvxpy=	\
-  '${PYTHON_SYSLIBSEARCH}/cvxpy*.egg'
+  '${PYTHON_SYSLIBSEARCH}/cvxpy/__init__.py'
 
 endif # PY_CVXPY_DEPEND_MK ----------------------------------------------
 

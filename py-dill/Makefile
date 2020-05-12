@@ -18,6 +18,7 @@ LICENSE=		modified-bsd
 MAINTAINER=		gsaurel@laas.fr
 
 PYDISTUTILSPKG=		yes
+PYSETUPINSTALLARGS+=	--single-version-externally-managed --root=/
 MAKE_ENV+=		PYTHONPATH=${PREFIX}/${PYTHON_SITELIB}
 PYTHON_SELF_CONFLICT=	yes
 

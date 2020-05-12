@@ -65,6 +65,7 @@ SUBDIR+=	py-casadi
 SUBDIR+=	py-dynamic-graph-bridge-v3
 SUBDIR+=	py-dynamic-graph-tutorial
 SUBDIR+=	py-dynamic-graph-v3
+SUBDIR+=	py-ecos
 SUBDIR+=	py-example-adder
 SUBDIR+=	py-hqp
 SUBDIR+=	py-hpp-affordance-corba

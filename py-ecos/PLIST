@@ -1,0 +1,2 @@
+@comment Tue May 12 12:23:03 CEST 2020
+${PYTHON_SITELIB}/ecos-${PKGVERSION}-py${PYTHON_VERSION}-linux-x86_64.egg

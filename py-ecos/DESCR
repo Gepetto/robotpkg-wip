@@ -1,0 +1,17 @@
+ECOS is a numerical software for solving convex second-order cone programs (SOCPs) of type
+
+min  c'*x
+s.t. A*x = b
+     G*x <=_K h
+
+where the last inequality is generalized, i.e. h - G*x belongs to the cone K. ECOS supports the positive orthant R_+, second-order cones Q_n defined as
+
+Q_n = { (t,x) | t >= || x ||_2 }
+
+with t a scalar and x in R_{n-1}, and the exponential cone K_e defined as
+
+K_e = closure{(x,y,z) | exp(x/z) <= y/z, z>0}
+
+where (x,y,z) is in R_3. The cone K is therefore a direct product of the positive orthant, second-order, and exponential cones:
+
+K = R_+ x Q_n1 x ... x Q_nN x K_e x ... x K_e

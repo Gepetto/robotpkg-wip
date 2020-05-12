@@ -18,6 +18,7 @@ LICENSE=		apache-2.0
 MAINTAINER=		gsaurel@laas.fr
 
 PYDISTUTILSPKG=		yes
+PYSETUPINSTALLARGS+=	--single-version-externally-managed --root=/
 MAKE_ENV+=		PYTHONPATH=${PREFIX}/${PYTHON_SITELIB}
 
 include ../../wip/py-ecos/depend.mk

@@ -42,6 +42,7 @@ SUBDIR+=	octovis
 SUBDIR+=	ompl
 SUBDIR+=	openhrp3-hrp2
 SUBDIR+=	openhrp3-simulator-wo-rtm
+SUBDIR+=	openscenegraph
 SUBDIR+=	osg-dae
 SUBDIR+=	pal-gazebo-plugins
 SUBDIR+=	pal-gazebo-worlds

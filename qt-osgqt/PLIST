@@ -1,0 +1,14 @@
+@comment Mon May 25 11:52:48 CEST 2020
+include/osgQOpenGL/CullVisitorEx
+include/osgQOpenGL/Export
+include/osgQOpenGL/GraphicsWindowEx
+include/osgQOpenGL/OSGRenderer
+include/osgQOpenGL/RenderStageEx
+include/osgQOpenGL/StateEx
+include/osgQOpenGL/osgQOpenGLWidget
+include/osgQOpenGL/osgQOpenGLWindow
+lib/libosgQOpenGL.so
+lib/libosgQOpenGL.so.145
+lib/libosgQOpenGL.so.3.6.5
+lib/pkgconfig/openscenegraph-osgQt.pc
+share/OpenSceneGraph/bin/osgviewerQt

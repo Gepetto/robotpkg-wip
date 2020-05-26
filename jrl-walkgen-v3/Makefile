@@ -15,7 +15,7 @@ CONFLICTS+=		${NAME}
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/talos-data/depend.mk
-include ../../wip/eiquadprog/depend.mk
+include ../../math/eiquadprog/depend.mk
 include ../../graphics/simple-humanoid-description/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../mk/sysdep/cmake.mk

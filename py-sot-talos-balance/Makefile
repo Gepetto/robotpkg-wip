@@ -14,7 +14,7 @@ USE_PYTHON_ONLY=	true
 
 include ../../${CATEGORIES}/${NAME}/depend.mk
 include ../../devel/jrl-cmakemodules/Makefile.common
-include ../../wip/eiquadprog/depend.mk
+include ../../math/eiquadprog/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../graphics/simple-humanoid-description/depend.mk

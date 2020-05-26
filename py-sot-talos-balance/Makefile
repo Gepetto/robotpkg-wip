@@ -5,6 +5,7 @@
 ORG=			stack-of-tasks
 NAME=			sot-talos-balance
 VERSION=		1.9.0
+PKGREVISION=		1
 
 CATEGORIES=		wip
 COMMENT=		Balance for TALOS humanoid robot (python bindings)

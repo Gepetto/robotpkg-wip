@@ -1,0 +1,48 @@
+From 61d5bd1d7adcd5208f924d0cfe3d308082b90bb0 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Tue, 26 May 2020 14:56:08 +0200
+Subject: [PATCH] fix compatibility with pinocchio v2.4.5
+
+ref https://github.com/stack-of-tasks/pinocchio/pull/1220
+---
+ include/sot/talos_balance/robot/robot-wrapper.hh | 4 ++--
+ src/robot/robot-wrapper.cpp                      | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/include/sot/talos_balance/robot/robot-wrapper.hh b/include/sot/talos_balance/robot/robot-wrapper.hh
+index c764595..1448020 100644
+--- include/sot/talos_balance/robot/robot-wrapper.hh
++++ include/sot/talos_balance/robot/robot-wrapper.hh
+@@ -116,9 +116,9 @@ class RobotWrapper {
+ 
+   void frameClassicAcceleration(const Data& data, const Model::FrameIndex index, Motion& frameAcceleration) const;
+ 
+-  void frameJacobianWorld(const Data& data, const Model::FrameIndex index, Data::Matrix6x& J) const;
++  void frameJacobianWorld(Data& data, const Model::FrameIndex index, Data::Matrix6x& J) const;
+ 
+-  void frameJacobianLocal(const Data& data, const Model::FrameIndex index, Data::Matrix6x& J) const;
++  void frameJacobianLocal(Data& data, const Model::FrameIndex index, Data::Matrix6x& J) const;
+ 
+  protected:
+   void updateMd();
+diff --git a/src/robot/robot-wrapper.cpp b/src/robot/robot-wrapper.cpp
+index e91467e..88a0cd3 100644
+--- src/robot/robot-wrapper.cpp
++++ src/robot/robot-wrapper.cpp
+@@ -166,11 +166,11 @@ void RobotWrapper::frameClassicAcceleration(const Data& data, const Model::Frame
+   frameAcceleration.linear() += v.angular().cross(v.linear());
+ }
+ 
+-void RobotWrapper::frameJacobianWorld(const Data& data, const Model::FrameIndex index, Data::Matrix6x& J) const {
++void RobotWrapper::frameJacobianWorld(Data& data, const Model::FrameIndex index, Data::Matrix6x& J) const {
+   return pinocchio::getFrameJacobian(m_model, data, index, pinocchio::WORLD, J);
+ }
+ 
+-void RobotWrapper::frameJacobianLocal(const Data& data, const Model::FrameIndex index, Data::Matrix6x& J) const {
++void RobotWrapper::frameJacobianLocal(Data& data, const Model::FrameIndex index, Data::Matrix6x& J) const {
+   return pinocchio::getFrameJacobian(m_model, data, index, pinocchio::LOCAL, J);
+ }
+ 
+-- 
+2.26.2
+

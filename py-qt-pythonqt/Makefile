@@ -32,7 +32,8 @@ PYTHON_SELF_CONFLICT=	yes
 
 do-install:
 	${RUN}cd ${WRKSRC};							\
-	${MKDIR} ${DESTDIR}${PREFIX}/{lib,include/${NAME}/gui};			\
+	${MKDIR} ${DESTDIR}${PREFIX}/lib;					\
+	${MKDIR} ${DESTDIR}${PREFIX}/include/${NAME}/gui;			\
 	${MKDIR} ${DESTDIR}${PREFIX}/include/${NAME}/extensions/${NAME}_QtAll;	\
 	${INSTALL_LIB} lib/*.so							\
 		${DESTDIR}${PREFIX}/lib/;					\
@@ -43,10 +44,14 @@ do-install:
 	${INSTALL_DATA} extensions/${NAME}_QtAll/*.h				\
 		${DESTDIR}${PREFIX}/include/${NAME}/extensions/${NAME}_QtAll/
 
+include ../../wip/mk/sysdep/qt5-qtbase-private.mk
+include ../../wip/mk/sysdep/qt5-svg.mk
 include ../../pkgtools/install-sh/depend.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/sysdep/qmake.mk
-include ../../mk/sysdep/qt.mk
+include ../../mk/sysdep/qt5-qtbase.mk
+include ../../mk/sysdep/qt5-multimedia.mk
+include ../../mk/sysdep/qt5-xmlpatterns.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

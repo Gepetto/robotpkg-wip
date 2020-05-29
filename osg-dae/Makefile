@@ -5,7 +5,7 @@
 ORG=			gepetto
 NAME=			osg-dae
 VERSION=		3.2.1
-PKGREVISION=	2
+PKGREVISION=		3
 
 DISTNAME=		${NAME}-${VERSION}
 

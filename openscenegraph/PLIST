@@ -699,11 +699,7 @@ lib/osgPlugins-${PKGVERSION}/osgdb_deprecated_osgvolume.so
 lib/osgPlugins-${PKGVERSION}/osgdb_deprecated_osgwidget.so
 lib/osgPlugins-${PKGVERSION}/osgdb_dot.so
 lib/osgPlugins-${PKGVERSION}/osgdb_dxf.so
-lib/osgPlugins-${PKGVERSION}/osgdb_exr.so
-lib/osgPlugins-${PKGVERSION}/osgdb_ffmpeg.so
 lib/osgPlugins-${PKGVERSION}/osgdb_freetype.so
-lib/osgPlugins-${PKGVERSION}/osgdb_gdal.so
-lib/osgPlugins-${PKGVERSION}/osgdb_gif.so
 lib/osgPlugins-${PKGVERSION}/osgdb_gles.so
 lib/osgPlugins-${PKGVERSION}/osgdb_glsl.so
 lib/osgPlugins-${PKGVERSION}/osgdb_gz.so
@@ -719,7 +715,6 @@ lib/osgPlugins-${PKGVERSION}/osgdb_md2.so
 lib/osgPlugins-${PKGVERSION}/osgdb_mdl.so
 lib/osgPlugins-${PKGVERSION}/osgdb_normals.so
 lib/osgPlugins-${PKGVERSION}/osgdb_obj.so
-lib/osgPlugins-${PKGVERSION}/osgdb_ogr.so
 lib/osgPlugins-${PKGVERSION}/osgdb_openflight.so
 lib/osgPlugins-${PKGVERSION}/osgdb_osc.so
 lib/osgPlugins-${PKGVERSION}/osgdb_osg.so

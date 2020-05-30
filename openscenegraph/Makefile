@@ -5,6 +5,7 @@
 ORG=			openscenegraph
 NAME=			OpenSceneGraph
 VERSION=		3.6.5
+PKGREVISION=		1
 
 DISTNAME=		${NAME}-${VERSION}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=${ORG}/${NAME}}/archive/

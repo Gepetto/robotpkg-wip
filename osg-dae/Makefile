@@ -5,7 +5,7 @@
 ORG=			gepetto
 NAME=			osg-dae
 VERSION=		3.2.1
-PKGREVISION=		3
+PKGREVISION=		4
 
 DISTNAME=		${NAME}-${VERSION}
 
@@ -22,9 +22,11 @@ DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 PLIST_SRC+=		${PKGDIR}/PLIST
 PLIST_SRC+=		${PKGDIR}/PLIST.${OS_VERSION}
 
-CMAKE_ARGS+=    -DINSTALL_DOCUMENTATION=OFF
+CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
+CMAKE_ARGS+=		-DCOLLADA14DOM_PREFIX=${PREFIX.collada-dom}
 
 USE_BOOST_LIBS=		system filesystem
+#export COLLADA_DIR=	${PREFIX.collada-dom}/include/collada-dom2.4/1.4
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

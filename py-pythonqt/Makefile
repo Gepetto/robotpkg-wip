@@ -1,4 +1,4 @@
-# robotpkg Makefile for:	wip/py38-qt5-PythonQt
+# robotpkg Makefile for:	wip/py38-PythonQt
 # Created:			Guilhem Saurel on Wed, 27 May 2020
 #
 
@@ -7,7 +7,7 @@ NAME=			PythonQt
 VERSION=		3.2
 
 DISTNAME=		${NAME}${VERSION}
-PKGNAME=		${PKGTAG.python-}${PKGTAG.qt-}${NAME}-${VERSION}
+PKGNAME=		${PKGTAG.python-}${NAME}-${VERSION}
 
 HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${NAME}}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
@@ -19,7 +19,6 @@ COMMENT=		Dynamic Python binding for Qt Applications
 LICENSE=		gnu-lgpl-v2.1
 MAINTAINER=		guilhem.saurel@laas.fr
 
-QMAKE_ARGS+=		QT_MAJOR_VERSION=${QT_SELECT}
 QMAKE_ARGS+=		CONFIG+=release
 
 SUBST_CLASSES+=		py-ver

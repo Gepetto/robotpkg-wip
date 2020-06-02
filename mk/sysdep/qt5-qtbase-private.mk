@@ -16,7 +16,7 @@ DEPEND_USE+=			qt5-qtbase-private
 DEPEND_ABI.qt5-qtbase-private?=	qt5-qtbase-private>=5<6
 
 SYSTEM_SEARCH.qt5-qtbase-private=\
-    'include/{,qt{,5}/}QtCore/*/QtCore/private/qmetaobject_p.h:s/[^.0-9]//gp:echo %'
+    'include/{,qt{,5}/}QtCore/*/QtCore/private/qmetaobject_p.h:s@.*/\([.0-9][.0-9]*\)/.*@\1@p:echo %'
 
 SYSTEM_PKG.Arch.qt5-qtbase-private=	qt5-base
 SYSTEM_PKG.Debian.qt5-qtbase-private=	qtbase5-private-dev

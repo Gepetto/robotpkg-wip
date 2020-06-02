@@ -16,11 +16,11 @@ DEPEND_USE+=			qt5-qtbase-private
 DEPEND_ABI.qt5-qtbase-private?=	qt5-qtbase-private>=5<6
 
 SYSTEM_SEARCH.qt5-qtbase-private=\
-  'include/{,qt{,5}/}QtAccessibilitySupport/qtaccessibilitysupportversion.h:/VERSION_STR/s/[^0-9.]//gp'	\
-  'include/{,qt{,5}/}QtCore/*/QtCore/private/qmetaobject_p.h'
+    'include/{,qt{,5}/}QtCore/*/QtCore/private/qmetaobject_p.h:s/[^.0-9]//gp:echo %'
 
 SYSTEM_PKG.Arch.qt5-qtbase-private=	qt5-base
 SYSTEM_PKG.Debian.qt5-qtbase-private=	qtbase5-private-dev
+SYSTEM_PKG.Fedora.qt5-qtbase-private=	qt5-qtbase-private-devel
 
 endif # QT5_QTBASE_PRIVATE_DEPEND_MK -----------------------------------------------
 

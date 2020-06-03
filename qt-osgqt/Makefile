@@ -24,5 +24,5 @@ include ../../wip/openscenegraph/depend.mk
 include ../../mk/sysdep/qt.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++.mk
+include ../../mk/language/c++11.mk
 include ../../mk/robotpkg.mk

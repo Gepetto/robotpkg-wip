@@ -26,8 +26,6 @@ include/PythonQt/PythonQtSystem.h
 include/PythonQt/PythonQtUtils.h
 include/PythonQt/PythonQtVariants.h
 include/PythonQt/extensions/PythonQt_QtAll/PythonQt_QtAll.h
-include/PythonQt/extensions/PythonQt_QtAll/moc_predefs.h
 include/PythonQt/gui/PythonQtScriptingConsole.h
-include/PythonQt/moc_predefs.h
 lib/libPythonQt-Qt5-Python${PYTHON_VERSION}.so
 lib/libPythonQt_QtAll-Qt5-Python${PYTHON_VERSION}.so

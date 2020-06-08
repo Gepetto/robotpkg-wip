@@ -18,7 +18,7 @@ PREFER.py-prf-gazebo-ros-pkgs?=	robotpkg
 
 DEPEND_USE+=				py-prf-gazebo-ros-pkgs
 
-ifneq (,$(filter 16.04,${OS_VERSION}))
+ifneq (,$(filter 16.04 16.04.pal,${OS_VERSION}))
   DEPEND_ABI.py-prf-gazebo-ros-pkgs?=	${PKGTAG.python-}prf-gazebo-ros-pkgs>=2.6.5<3.0.0
 else
   DEPEND_ABI.py-prf-gazebo-ros-pkgs?=	${PKGTAG.python-}prf-gazebo-ros-pkgs>=3.0.1

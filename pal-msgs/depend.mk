@@ -34,11 +34,9 @@ SYSTEM_SEARCH.pal-msgs=\
 	pal_multirobot_msgs						\
 	pal_navigation_msgs						\
 	pal_tablet_msgs							\
-	pal_video_recording_msgs					\
 	pal_vision_msgs							\
 	pal_visual_localization_msgs					\
 	pal_walking_msgs						\
-	pal_web_msgs							\
 	pal_wifi_localization_msgs,					\
   'share/$_/cmake/$_Config.cmake'					\
   'lib/pkgconfig/$_.pc:/Version/s/[^0-9.]//gp')

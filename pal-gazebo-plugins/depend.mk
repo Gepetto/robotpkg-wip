@@ -25,7 +25,6 @@ endif
 DEPEND_DIR.pal-gazebo-plugins?=	../../wip/pal-gazebo-plugins
 
 SYSTEM_SEARCH.pal-gazebo-plugins=					\
-  'include/pal_gazebo_plugins/gazebo_pal_hand.h'			\
   'share/pal_gazebo_plugins/package.xml:/<version>/s/[^0-9.]//gp'	\
   'lib/pkgconfig/pal_gazebo_plugins.pc:/Version/s/[^0-9.]//gp'
 

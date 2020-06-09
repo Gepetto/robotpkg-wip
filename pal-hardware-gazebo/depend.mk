@@ -25,7 +25,6 @@ endif
 DEPEND_DIR.pal-hardware-gazebo?=	../../wip/pal-hardware-gazebo
 
 SYSTEM_SEARCH.pal-hardware-gazebo=					\
-  'include/pal_hardware_gazebo/pal_hardware_gazebo.h'			\
   'share/pal_hardware_gazebo/cmake/pal_hardware_gazeboConfig.cmake'	\
   'share/pal_hardware_gazebo/package.xml:/<version>/s/[^0-9.]//gp'	\
   'lib/pkgconfig/pal_hardware_gazebo.pc:/Version/s/[^0-9.]//gp'

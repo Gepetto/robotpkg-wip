@@ -51,9 +51,6 @@ SYSTEM_SEARCH.py-prf-ros-control=\
   'include/controller_manager_msgs/UnloadController.h'		\
   'include/controller_manager_msgs/UnloadControllerRequest.h'	\
   'include/controller_manager_msgs/UnloadControllerResponse.h'	\
-  'include/controller_manager_tests/effort_test_controller.h'	\
-  'include/controller_manager_tests/my_dummy_controller.h'	\
-  'include/controller_manager_tests/my_robot_hw.h'		\
   'include/hardware_interface/actuator_command_interface.h'	\
   'include/hardware_interface/actuator_state_interface.h'	\
   'include/hardware_interface/controller_info.h'		\
@@ -92,11 +89,10 @@ SYSTEM_SEARCH.py-prf-ros-control=\
   'include/transmission_interface/transmission_parser.h'	\
   'include/transmission_interface/velocity_joint_interface_provider.h'	\
   'lib/libcontroller_manager.so'	\
-  'lib/libcontroller_manager_tests.so'	\
   'lib/libtransmission_interface_loader.so'	\
   'lib/libtransmission_interface_loader_plugins.so'	\
   'lib/libtransmission_interface_parser.so'	\
-  'share/ros_control/package.xml:/<version>/s/[^0-9.]//gp'	\
+  'share/{pal_,}ros_control/package.xml:/<version>/s/[^0-9.]//gp'	\
   '${PYTHON_SYSLIBSEARCH}/controller_manager/__init__.py'	\
   $(foreach _,							\
 	controller_interface					\
@@ -104,7 +100,6 @@ SYSTEM_SEARCH.py-prf-ros-control=\
 	controller_interface					\
 	controller_manager					\
 	controller_manager_msgs					\
-	controller_manager_tests				\
 	hardware_interface					\
 	joint_limits_interface					\
 	transmission_interface,					\

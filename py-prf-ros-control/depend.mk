@@ -11,7 +11,11 @@ endif
 
 ifeq (+,$(PY_PRF_ROS_CONTROL_DEPEND_MK)) # ----------------------------------
 
-PREFER.py-prf-ros-control?=	robotpkg
+ifneq (,$(filter 16.04.pal 18.04.pal,${OS_VERSION}))
+  PREFER.py-prf-ros-control?=	system
+else
+  PREFER.py-prf-ros-control?=	robotpkg
+endif
 
 DEPEND_USE+=			py-prf-ros-control
 

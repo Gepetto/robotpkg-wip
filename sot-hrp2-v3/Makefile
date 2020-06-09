@@ -24,6 +24,7 @@ include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 
 include ../../path/hpp-fcl/depend.mk
+include ../../mapping/octomap/depend.mk
 include ../../math/pinocchio/depend.mk
 
 include ../../pkgtools/pkg-config/depend.mk

@@ -31,6 +31,7 @@ include ../../interfaces/ros-common-msgs/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../math/py-pinocchio/depend.mk
 include ../../path/hpp-fcl/depend.mk
+include ../../mapping/octomap/depend.mk
 include ../../path/py-hpp-fcl/depend.mk
 include ../../math/ros-geometry2/depend.mk
 include ../../math/ros-geometry/depend.mk

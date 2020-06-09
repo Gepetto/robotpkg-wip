@@ -14,7 +14,11 @@ ifeq (+,$(PY_PRF_GAZEBO_ROS_PKGS_DEPEND_MK)) # ---------------------------
 include ../../mk/robotpkg.prefs.mk  # for OS_VERSION
 include ../../mk/sysdep/python.mk   # for PKGTAG.python
 
-PREFER.py-prf-gazebo-ros-pkgs?=	robotpkg
+ifneq (,$(filter 16.04.pal 18.04.pal,${OS_VERSION}))
+  PREFER.py-prf-gazebo-ros-pkgs?=	system
+else
+  PREFER.py-prf-gazebo-ros-pkgs?=	robotpkg
+endif
 
 DEPEND_USE+=				py-prf-gazebo-ros-pkgs
 

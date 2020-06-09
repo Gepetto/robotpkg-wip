@@ -1,0 +1,13 @@
+# robotpkg depend.common for:	wip/py-prf-ros-control
+# Created:			Guilhem Saurel on Tue, 9 Jun 2020
+#
+
+# This file ease the choice for system vs robotpkg packages for PAL & PRF
+
+include ../../mk/robotpkg.prefs.mk  # for OS_VERSION
+
+ifneq (,$(filter %.pal,${OS_VERSION}))
+  PREFER.pal?=		system
+else
+  PREFER.pal?=		robotpkg
+endif

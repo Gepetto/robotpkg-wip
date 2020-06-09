@@ -11,7 +11,9 @@ endif
 
 ifeq (+,$(PAL_MSGS_DEPEND_MK)) # ---------------------------------
 
-PREFER.pal-msgs?=	robotpkg
+include ../../wip/py-prf-ros-control/depend.common
+
+PREFER.pal-msgs?=	${PREFER.pal}
 
 DEPEND_USE+=			pal-msgs
 

@@ -11,7 +11,9 @@ endif
 
 ifeq (+,$(PAL_WSG_GRIPPER_DEPEND_MK)) # ---------------------------------
 
-PREFER.pal-wsg-gripper?=	robotpkg
+include ../../wip/py-prf-ros-control/depend.common
+
+PREFER.pal-wsg-gripper?=	${PREFER.pal}
 
 DEPEND_USE+=			pal-wsg-gripper
 

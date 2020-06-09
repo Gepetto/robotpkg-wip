@@ -11,7 +11,9 @@ endif
 
 ifeq (+,$(PRF_ROBOTICSGRP_GAZEBO_PLUGINS_DEPEND_MK)) # ----------------------------------
 
-PREFER.prf-roboticsgroup-gazebo-plugins?=	robotpkg
+include ../../wip/py-prf-ros-control/depend.common
+
+PREFER.prf-roboticsgroup-gazebo-plugins?=	${PREFER.pal}
 
 DEPEND_USE+=			prf-roboticsgroup-gazebo-plugins
 

@@ -11,7 +11,9 @@ endif
 
 ifeq (+,$(TELEOP_TOOLS_DEPEND_MK)) # ----------------------------------
 
-PREFER.teleop-tools?=	robotpkg
+include ../../wip/py-prf-ros-control/depend.common
+
+PREFER.prf-teleop-tools?=	${PREFER.pal}
 
 DEPEND_USE+=			prf-teleop-tools
 

@@ -11,7 +11,9 @@ endif
 
 ifeq (+,$(PAL_HWIFACES_DEPEND_MK)) # ---------------------------------
 
-PREFER.pal-hardware-interfaces?=	robotpkg
+include ../../wip/py-prf-ros-control/depend.common
+
+PREFER.pal-hardware-interfaces?=	${PREFER.pal}
 
 DEPEND_USE+=			pal-hardware-interfaces
 

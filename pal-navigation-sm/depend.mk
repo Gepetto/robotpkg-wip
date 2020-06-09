@@ -11,7 +11,9 @@ endif
 
 ifeq (+,$(PAL_NAVIGATION_SM_DEPEND_MK)) # ----------------------------------
 
-PREFER.pal-navigation-sm?=	robotpkg
+include ../../wip/py-prf-ros-control/depend.common
+
+PREFER.pal-navigation-sm?=	${PREFER.pal}
 
 DEPEND_USE+=			pal-navigation-sm
 

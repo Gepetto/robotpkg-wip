@@ -11,9 +11,9 @@ endif
 
 ifeq (+,$(PAL_HARDWARE_GAZEBO_DEPEND_MK)) # ---------------------------------
 
-include ../../mk/robotpkg.prefs.mk  # for OS_VERSION
+include ../../wip/py-prf-ros-control/depend.common
 
-PREFER.pal-hardware-gazebo?=		robotpkg
+PREFER.pal-hardware-gazebo?=		${PREFER.pal}
 
 DEPEND_USE+=				pal-hardware-gazebo
 ifneq (,$(filter 16.04%,${OS_VERSION}))

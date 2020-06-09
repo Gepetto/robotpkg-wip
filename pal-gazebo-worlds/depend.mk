@@ -11,7 +11,9 @@ endif
 
 ifeq (+,$(PAL_GAZEBO_WORLDS_DEPEND_MK)) # ---------------------------------
 
-PREFER.pal-gazebo-worlds?=	robotpkg
+include ../../wip/py-prf-ros-control/depend.common
+
+PREFER.pal-gazebo-worlds?=	${PREFER.pal}
 
 DEPEND_USE+=			pal-gazebo-worlds
 

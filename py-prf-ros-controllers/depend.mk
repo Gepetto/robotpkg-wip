@@ -11,7 +11,9 @@ endif
 
 ifeq (+,$(PY_PRF_ROS_CONTROLLERS_DEPEND_MK)) # ----------------------------------
 
-PREFER.ros-controllers?=	robotpkg
+include ../../wip/py-prf-ros-control/depend.common
+
+PREFER.py-prf-ros-controllers?=	${PREFER.pal}
 
 DEPEND_USE+=			py-prf-ros-controllers
 

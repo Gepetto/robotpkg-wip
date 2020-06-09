@@ -22,7 +22,8 @@ SYSTEM_SEARCH.py-prf-ros-controllers=\
   'lib/libjoint_state_controller.so'					\
   'share/joint_state_controller/package.xml:/<version>/s/[^0-9.]//gp'	\
   'lib/pkgconfig/joint_state_controller.pc:/Version/s/[^0-9.]//gp'	\
-  'share/controller_interface/cmake/controller_interfaceConfig.cmake'
+  'share/controller_interface/cmake/controller_interfaceConfig.cmake'	\
+  'share/temperature_sensor_controller/cmake/temperature_sensor_controllerConfig.cmake'
 
 include ../../mk/sysdep/python.mk
 

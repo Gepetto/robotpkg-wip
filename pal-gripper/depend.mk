@@ -13,7 +13,8 @@ ifeq (+,$(PAL_GRIPPER_DEPEND_MK)) # ----------------------------------
 
 include ../../wip/py-prf-ros-control/depend.common
 
-PREFER.pal-gripper?=	${PREFER.pal}
+PREFER.pal-gripper?=		${PREFER.pal}
+SYSTEM_PREFIX.pal-gripper?=	${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=			pal-gripper
 

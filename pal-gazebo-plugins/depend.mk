@@ -13,7 +13,8 @@ ifeq (+,$(PAL_GAZEBO_PLUGINS_DEPEND_MK)) # ---------------------------------
 
 include ../../wip/py-prf-ros-control/depend.common
 
-PREFER.pal-gazebo-plugins?=	${PREFER.pal}
+PREFER.pal-gazebo-plugins?=		${PREFER.pal}
+SYSTEM_PREFIX.pal-gazebo-plugins?=	${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=			pal-gazebo-plugins
 ifneq (,$(filter 16.04%,${OS_VERSION}))

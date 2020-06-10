@@ -13,7 +13,8 @@ ifeq (+,$(PAL_MSGS_DEPEND_MK)) # ---------------------------------
 
 include ../../wip/py-prf-ros-control/depend.common
 
-PREFER.pal-msgs?=	${PREFER.pal}
+PREFER.pal-msgs?=		${PREFER.pal}
+SYSTEM_PREFIX.pal-msgs?=	${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=			pal-msgs
 

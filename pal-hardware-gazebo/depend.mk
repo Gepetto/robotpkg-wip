@@ -14,6 +14,7 @@ ifeq (+,$(PAL_HARDWARE_GAZEBO_DEPEND_MK)) # ---------------------------------
 include ../../wip/py-prf-ros-control/depend.common
 
 PREFER.pal-hardware-gazebo?=		${PREFER.pal}
+SYSTEM_PREFIX.pal-hardware-gazebo?=		${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=				pal-hardware-gazebo
 ifneq (,$(filter 16.04%,${OS_VERSION}))

@@ -14,6 +14,7 @@ ifeq (+,$(PAL_WSG_GRIPPER_DEPEND_MK)) # ---------------------------------
 include ../../wip/py-prf-ros-control/depend.common
 
 PREFER.pal-wsg-gripper?=	${PREFER.pal}
+SYSTEM_PREFIX.pal-wsg-gripper?=	${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=			pal-wsg-gripper
 

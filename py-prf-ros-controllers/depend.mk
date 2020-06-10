@@ -13,7 +13,8 @@ ifeq (+,$(PY_PRF_ROS_CONTROLLERS_DEPEND_MK)) # ---------------------------------
 
 include ../../wip/py-prf-ros-control/depend.common
 
-PREFER.py-prf-ros-controllers?=	${PREFER.pal}
+PREFER.py-prf-ros-controllers?=		${PREFER.pal}
+SYSTEM_PREFIX.py-prf-ros-controllers?=	${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=			py-prf-ros-controllers
 

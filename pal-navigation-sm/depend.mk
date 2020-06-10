@@ -13,7 +13,8 @@ ifeq (+,$(PAL_NAVIGATION_SM_DEPEND_MK)) # ----------------------------------
 
 include ../../wip/py-prf-ros-control/depend.common
 
-PREFER.pal-navigation-sm?=	${PREFER.pal}
+PREFER.pal-navigation-sm?=		${PREFER.pal}
+SYSTEM_PREFIX.pal-navigation-sm?=	${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=			pal-navigation-sm
 

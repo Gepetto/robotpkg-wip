@@ -13,7 +13,8 @@ ifeq (+,$(PAL_GAZEBO_WORLDS_DEPEND_MK)) # ---------------------------------
 
 include ../../wip/py-prf-ros-control/depend.common
 
-PREFER.pal-gazebo-worlds?=	${PREFER.pal}
+PREFER.pal-gazebo-worlds?=		${PREFER.pal}
+SYSTEM_PREFIX.pal-gazebo-worlds?=	${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=			pal-gazebo-worlds
 

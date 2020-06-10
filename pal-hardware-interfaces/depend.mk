@@ -14,6 +14,7 @@ ifeq (+,$(PAL_HWIFACES_DEPEND_MK)) # ---------------------------------
 include ../../wip/py-prf-ros-control/depend.common
 
 PREFER.pal-hardware-interfaces?=	${PREFER.pal}
+SYSTEM_PREFIX.pal-hardware-interfaces?=	${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=			pal-hardware-interfaces
 

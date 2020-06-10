@@ -13,7 +13,8 @@ ifeq (+,$(PRF_ROBOTICSGRP_GAZEBO_PLUGINS_DEPEND_MK)) # -------------------------
 
 include ../../wip/py-prf-ros-control/depend.common
 
-PREFER.prf-roboticsgroup-gazebo-plugins?=	${PREFER.pal}
+PREFER.prf-roboticsgroup-gazebo-plugins?=		${PREFER.pal}
+SYSTEM_PREFIX.prf-roboticsgroup-gazebo-plugins?=	${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=			prf-roboticsgroup-gazebo-plugins
 

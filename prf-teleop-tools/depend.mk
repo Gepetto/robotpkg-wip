@@ -13,7 +13,8 @@ ifeq (+,$(TELEOP_TOOLS_DEPEND_MK)) # ----------------------------------
 
 include ../../wip/py-prf-ros-control/depend.common
 
-PREFER.prf-teleop-tools?=	${PREFER.pal}
+PREFER.prf-teleop-tools?=		${PREFER.pal}
+SYSTEM_PREFIX.prf-teleop-tools?=	${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=			prf-teleop-tools
 

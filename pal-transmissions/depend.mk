@@ -13,7 +13,8 @@ ifeq (+,$(PAL_TRANSMISSIONS_DEPEND_MK)) # --------------------------------
 
 include ../../wip/py-prf-ros-control/depend.common
 
-PREFER.pal-transmissions?=	${PREFER.pal}
+PREFER.pal-transmissions?=		${PREFER.pal}
+SYSTEM_PREFIX.pal-transmissions?=	${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=			pal-transmissions
 

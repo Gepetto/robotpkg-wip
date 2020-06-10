@@ -14,7 +14,8 @@ ifeq (+,$(PY_PRF_GAZEBO_ROS_PKGS_DEPEND_MK)) # ---------------------------
 include ../../wip/py-prf-ros-control/depend.common
 include ../../mk/sysdep/python.mk   # for PKGTAG.python
 
-PREFER.py-prf-gazebo-ros-pkgs?=		${PREFER.pal}
+PREFER.py-prf-gazebo-ros-pkgs?=			${PREFER.pal}
+SYSTEM_PREFIX.py-prf-gazebo-ros-pkgs?=		${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=				py-prf-gazebo-ros-pkgs
 

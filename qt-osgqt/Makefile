@@ -4,7 +4,7 @@
 
 ORG=			gepetto
 NAME=			osgQt
-VERSION=		3.6.0
+VERSION=		3.5.7
 
 DISTNAME=		${VERSION}
 MASTER_SITES=		${MASTER_SITE_GITHUB:=${ORG}/${NAME}}/archive/

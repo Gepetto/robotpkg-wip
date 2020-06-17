@@ -12,13 +12,13 @@ endif
 ifeq (+,$(OSGQT_DEPEND_MK)) # -------------------------------------
 
 DEPEND_USE+=			qt-osgqt
-DEPEND_ABI.qt-osgqt?=		${PKGTAG.qt-}osgQt>=3.6
+DEPEND_ABI.qt-osgqt?=		${PKGTAG.qt-}osgQt>=3.5
 DEPEND_DIR.qt-osgqt?=		../../wip/qt-osgqt
 
 SYSTEM_SEARCH.qt-osgqt=							\
-  'include/osgQOpenGL/Export'						\
-  'lib/libosgQOpenGL.so'						\
-  'lib/pkgconfig/openscenegraph-osgQt.pc:/Version/s/[^0-9.]//gp'
+  'include/osgQt/Export'						\
+  'lib/libosgQt{,5}.so'						\
+  'lib/pkgconfig/openscenegraph-osgQt{,5}.pc:/Version/s/[^0-9.]//gp'
 
 include ../../mk/sysdep/qt.mk
 

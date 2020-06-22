@@ -27,13 +27,13 @@ include ../../graphics/openscenegraph/depend.mk
 include ../../graphics/py-qt-gepetto-viewer/depend.mk
 include ../../graphics/py-qt-gepetto-viewer-corba/depend.mk
 include ../../graphics/py-qt-hpp-gepetto-viewer/depend.mk
+include ../../graphics/qt-osgqt/depend.mk
 include ../../math/hpp-pinocchio/depend.mk
 include ../../middleware/omniORB/depend.mk
 include ../../path/py-hpp-corbaserver/depend.mk
 include ../../path/hpp-constraints/depend.mk
 include ../../path/hpp-core/depend.mk
 include ../../robots/romeo-description/depend.mk
-include ../../mk/sysdep/openscenegraph-qt.mk
 include ../../mk/sysdep/openthreads.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/sysdep/qt.mk

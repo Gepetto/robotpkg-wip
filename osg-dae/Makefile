@@ -32,7 +32,7 @@ include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../graphics/collada-dom/depend.mk
-include ../../mk/sysdep/openscenegraph.mk
+include ../../graphics/openscenegraph/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/language/c.mk

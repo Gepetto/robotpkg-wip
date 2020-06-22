@@ -23,6 +23,7 @@ include ../../meta-pkgs/hpp/Makefile.common
 include ../../wip/py-hpp-baxter/depend.mk
 include ../../wip/py-hpp-romeo/depend.mk
 
+include ../../graphics/openscenegraph/depend.mk
 include ../../graphics/py-qt-gepetto-viewer/depend.mk
 include ../../graphics/py-qt-gepetto-viewer-corba/depend.mk
 include ../../graphics/py-qt-hpp-gepetto-viewer/depend.mk
@@ -32,7 +33,6 @@ include ../../path/py-hpp-corbaserver/depend.mk
 include ../../path/hpp-constraints/depend.mk
 include ../../path/hpp-core/depend.mk
 include ../../robots/romeo-description/depend.mk
-include ../../mk/sysdep/openscenegraph.mk
 include ../../mk/sysdep/openscenegraph-qt.mk
 include ../../mk/sysdep/openthreads.mk
 include ../../mk/sysdep/python.mk

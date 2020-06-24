@@ -34,7 +34,6 @@ include ../../path/py-hpp-corbaserver/depend.mk
 include ../../path/hpp-constraints/depend.mk
 include ../../path/hpp-core/depend.mk
 include ../../robots/romeo-description/depend.mk
-include ../../mk/sysdep/openthreads.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/sysdep/qt.mk
 include ../../mk/language/c.mk

@@ -19,7 +19,6 @@ DEPEND_DIR.sot-tools-v3?=	../../wip/sot-tools-v3
 
 SYSTEM_SEARCH.sot-tools-v3=\
 	include/sot/tools/config.hh				\
-	lib/libsot-tools.so					\
 	'lib/pkgconfig/sot-tools.pc:/Version/s/[^0-9.]//gp'
 
 endif # SOT_TOOLS_DEPEND_MK -----------------------------------------

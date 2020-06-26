@@ -98,7 +98,6 @@ SUBDIR+=	py-prf-ros-controllers
 SUBDIR+=	py-pycddlib
 SUBDIR+=	py-qpoases
 SUBDIR+=	py-qt-gepetto-pythonqt
-SUBDIR+=	py-pythonqt
 SUBDIR+=	py-ros-baxter-common
 SUBDIR+=	py-roscontrol-sot
 SUBDIR+=	py-scs

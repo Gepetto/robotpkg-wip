@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-torque-control
-VERSION=		1.5.2
+VERSION=		1.5.3
 
 CATEGORIES=		wip
 COMMENT=		Torque control for humanoids (python bindings)

@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-talos-balance
-VERSION=		1.9.1
+VERSION=		1.9.2
 
 CATEGORIES=		wip
 COMMENT=		Balance for TALOS humanoid robot
@@ -27,7 +27,6 @@ include ../../wip/sot-core-v3/depend.mk
 include ../../optimization/tsid/depend.mk
 include ../../wip/parametric-curves/depend.mk
 include ../../wip/ddp-actuator-solver/depend.mk
-include ../../wip/sot-torque-control/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../wip/talos-data/depend.mk
 include ../../mk/sysdep/cmake.mk

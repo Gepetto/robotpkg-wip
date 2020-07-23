@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-talos-balance
-VERSION=		1.9.1
+VERSION=		1.9.2
 
 CATEGORIES=		wip
 COMMENT=		Balance for TALOS humanoid robot (python bindings)
@@ -33,8 +33,6 @@ include ../../optimization/py-tsid/depend.mk
 include ../../wip/parametric-curves/depend.mk
 include ../../wip/py-parametric-curves/depend.mk
 include ../../wip/ddp-actuator-solver/depend.mk
-include ../../wip/sot-torque-control/depend.mk
-include ../../wip/py-sot-torque-control/depend.mk
 include ../../wip/sot-talos-balance/depend.mk
 include ../../wip/talos-data/depend.mk
 include ../../mk/sysdep/cmake.mk

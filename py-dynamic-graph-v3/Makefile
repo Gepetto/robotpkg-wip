@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-python
-VERSION=		3.5.2
+VERSION=		3.5.3
 
 PKGNAME=		${PKGTAG.python-}dynamic-graph-v3-${VERSION}
 

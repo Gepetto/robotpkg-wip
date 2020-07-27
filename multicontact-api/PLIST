@@ -3,7 +3,7 @@ include/multicontact-api/bindings/python/geometry/ellipsoid.hpp
 include/multicontact-api/bindings/python/geometry/expose-geometry.hpp
 include/multicontact-api/bindings/python/geometry/linear-cone.hpp
 include/multicontact-api/bindings/python/geometry/second-order-cone.hpp
-include/multicontact-api/bindings/python/scenario/contact-model-planar.hpp
+include/multicontact-api/bindings/python/scenario/contact-model.hpp
 include/multicontact-api/bindings/python/scenario/contact-patch.hpp
 include/multicontact-api/bindings/python/scenario/contact-phase.hpp
 include/multicontact-api/bindings/python/scenario/contact-sequence.hpp
@@ -17,7 +17,7 @@ include/multicontact-api/geometry/ellipsoid.hpp
 include/multicontact-api/geometry/fwd.hpp
 include/multicontact-api/geometry/linear-cone.hpp
 include/multicontact-api/geometry/second-order-cone.hpp
-include/multicontact-api/scenario/contact-model-planar.hpp
+include/multicontact-api/scenario/contact-model.hpp
 include/multicontact-api/scenario/contact-patch.hpp
 include/multicontact-api/scenario/contact-phase.hpp
 include/multicontact-api/scenario/contact-sequence.hpp
@@ -27,4 +27,7 @@ include/multicontact-api/serialization/archive.hpp
 include/multicontact-api/serialization/eigen-matrix.hpp
 include/multicontact-api/serialization/spatial.hpp
 include/multicontact-api/warning.hh
+lib/cmake/multicontact-api/multicontact-apiConfig.cmake
+lib/cmake/multicontact-api/multicontact-apiConfigVersion.cmake
+lib/cmake/multicontact-api/multicontact-apiTargets.cmake
 lib/pkgconfig/multicontact-api.pc

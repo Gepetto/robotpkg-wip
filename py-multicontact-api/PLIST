@@ -1,3 +1,4 @@
 @comment Fri Mar 29 12:11:22 CET 2019
 ${PYTHON_SITELIB}/multicontact_api/__init__.py
 ${PYTHON_SITELIB}/multicontact_api/libmulticontact_api.so
+${PYTHON_SITELIB}/multicontact_api/libmulticontact_api.so.${PKGVERSION}

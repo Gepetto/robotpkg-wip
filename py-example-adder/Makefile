@@ -4,16 +4,16 @@
 
 ORG=			gepetto
 NAME=			example-adder
-VERSION=		3.0.0
+VERSION=		3.0.1
 
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
-
-CMAKE_ARGS+=		-DINSTALL_PYTHON_INTERFACE_ONLY=ON
 
 CATEGORIES=		wip
 COMMENT=		Example Project
 LICENSE=		2-clause-bsd
 MAINTAINER=		gsaurel@laas.fr
+
+USE_PYTHON_ONLY=	true
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/${NAME}/depend.mk

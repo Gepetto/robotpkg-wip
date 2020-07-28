@@ -4,7 +4,7 @@
 
 ORG=			gepetto
 NAME=			example-adder
-VERSION=		2.0.1
+VERSION=		3.0.0
 
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
 

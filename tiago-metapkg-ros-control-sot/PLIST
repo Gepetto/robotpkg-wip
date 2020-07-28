@@ -16,6 +16,6 @@ share/sot_tiago_bringup/cmake/sot_tiago_bringupConfig-version.cmake
 share/sot_tiago_bringup/cmake/sot_tiago_bringupConfig.cmake
 share/sot_tiago_bringup/launch/geometric_simu.launch
 share/sot_tiago_bringup/launch/geometric_simu_context.launch
+share/sot_tiago_bringup/launch/sot_params.launch
 share/sot_tiago_bringup/package.xml
-share/sot_tiago_bringup/sot/tiago.yaml
 share/tiago_metapkg_ros_control_sot/package.xml

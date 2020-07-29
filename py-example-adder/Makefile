@@ -15,6 +15,8 @@ MAINTAINER=		gsaurel@laas.fr
 
 USE_PYTHON_ONLY=	true
 
+USE_BOOST_LIBS=		unit_test_framework python
+
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/${NAME}/depend.mk
 include ../../devel/boost-headers/depend.mk

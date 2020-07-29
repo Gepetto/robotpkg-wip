@@ -13,6 +13,8 @@ MAINTAINER=		gsaurel@laas.fr
 
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
+USE_BOOST_LIBS=		unit_test_framework
+
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

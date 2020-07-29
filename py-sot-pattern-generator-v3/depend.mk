@@ -17,7 +17,7 @@ PREFER.py-sot-pattern-generator-v3?=	robotpkg
 DEPEND_ABI.py-sot-pattern-generator-v3?=	${PKGTAG.python-}sot-pattern-generator-v3>=2.10
 DEPEND_DIR.py-sot-pattern-generator-v3?=	../../wip/py-sot-pattern-generator-v3
 
-SYSTEM_SEARCH.sot-pattern-generator-v3=\
+SYSTEM_SEARCH.py-sot-pattern-generator-v3=\
 	'${PYTHON_SYSLIBSEARCH}/dynamic_graph/sot/pattern_generator/pg/wrap.so'
 
 include ../../mk/sysdep/python.mk

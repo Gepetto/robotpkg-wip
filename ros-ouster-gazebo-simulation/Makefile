@@ -6,6 +6,7 @@ ROS_REPO=		Gepetto
 ROS_PKG=		ouster-gazebo-simulation
 ROS_VERSION=		2.0.1
 ROS_METAPKG=		yes
+PKGREVISION=		1
 
 PKGNAME=		ros-${ROS_PKG}-${ROS_VERSION}
 
@@ -18,7 +19,7 @@ include ../../meta-pkgs/ros-base/Makefile.common
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-comm/depend.mk
-include ../../simulation/gazebo-ros-pkgs/depend.mk
+include ../../wip/py-prf-gazebo-ros-pkgs/depend.mk
 
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-cmake-modules/depend.mk

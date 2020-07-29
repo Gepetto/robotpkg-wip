@@ -4,7 +4,7 @@
 
 ORG=			gepetto
 NAME=			example-adder
-VERSION=		3.0.1
+VERSION=		3.0.2
 
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
 
@@ -22,6 +22,8 @@ include ../../wip/${NAME}/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
+include ../../math/pinocchio/depend.mk
+include ../../math/py-pinocchio/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk

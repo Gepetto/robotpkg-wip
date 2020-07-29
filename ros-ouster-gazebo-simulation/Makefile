@@ -19,6 +19,7 @@ include ../../meta-pkgs/ros-base/Makefile.common
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-comm/depend.mk
+include ../../middleware/ros-dynamic-reconfigure/depend.mk
 include ../../wip/py-prf-gazebo-ros-pkgs/depend.mk
 
 include ../../devel/ros-catkin/depend.mk

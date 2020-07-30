@@ -14,6 +14,7 @@ ifeq (+,$(ROS_IMAGE_PIPELINE_DEPEND_MK)) # ------------------------------------
 include ../../meta-pkgs/ros-base/depend.common
 
 PREFER.ros-image-pipeline?=	${PREFER.ros-base}
+SYSTEM_PREFIX.ros-image-pipeline?=	${SYSTEM_PREFIX.ros-base}
 
 DEPEND_USE+=			ros-image-pipeline
 ROS_DEPEND_USE+=		ros-image-pipeline

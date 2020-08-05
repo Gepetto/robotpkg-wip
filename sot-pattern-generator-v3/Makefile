@@ -5,6 +5,7 @@
 ORG=			stack-of-tasks
 NAME=			sot-pattern-generator
 VERSION=		3.3.0
+PKGREVISION=		1
 
 PKGNAME=		${NAME}-v3-${VERSION}
 
@@ -20,6 +21,7 @@ include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../wip/jrl-walkgen-v3/depend.mk
+include ../../math/eigen-quadprog/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
 include ../../wip/talos-data/depend.mk

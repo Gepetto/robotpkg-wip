@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-tutorial
-VERSION=		1.2.1
+VERSION=		1.2.2
 
 CATEGORIES=		wip
 COMMENT=		Tutorial for the dynamic-graph

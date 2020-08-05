@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			jrl-walkgen
-VERSION=		4.2.3
+VERSION=		4.2.4
 
 PKGNAME=		${NAME}-v3-${VERSION}
 

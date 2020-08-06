@@ -2,7 +2,7 @@
 # Created:			Guilhem Saurel on Wed, 30 Jan 2019
 #
 
-PKGREVISION=		1
+PKGREVISION=		2
 HPP_PACKAGE=		hpp-rbprm-corba
 HPP_COMMENT=		Corba server for RB-PRM
 
@@ -36,7 +36,7 @@ include ../../middleware/py-omniORBpy/depend.mk
 
 include ../../devel/boost-headers/depend.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++.mk
+include ../../mk/language/c++11.mk
 include ../../mk/robotpkg.mk
 
 pre-configure:

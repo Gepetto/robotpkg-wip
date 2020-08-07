@@ -4,7 +4,7 @@
 
 ORG=			loco-3d
 NAME=			sl1m
-VERSION=		0.1.0
+VERSION=		0.1.1
 
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
 
@@ -16,8 +16,6 @@ MAINTAINER=		gsaurel@laas.fr
 PYTHON_SELF_CONFLICT=	yes
 
 include ../../devel/jrl-cmakemodules/Makefile.common
-include ../../wip/py-cvxpy/depend.mk
-include ../../wip/py-gurobi/depend.mk
 include ../../wip/py-pycddlib/depend.mk
 include ../../math/py-quadprog/depend.mk
 include ../../mk/sysdep/cmake.mk

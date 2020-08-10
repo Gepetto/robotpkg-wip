@@ -6,6 +6,7 @@ ORG=			stack-of-tasks
 NAME=			talos-bauzil
 VERSION=		0.1.0
 
+ROSNAME=		$(subst -,_,${NAME})
 DISTNAME=		${NAME}-${VERSION}
 
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}

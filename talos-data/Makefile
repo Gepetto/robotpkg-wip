@@ -2,7 +2,7 @@
 # Created:			Olivier Stasse, on Tue. 9th May, 2017
 #
 
-ORG=			pyrene-dev
+ORG=			stack-of-tasks
 NAME=			talos-data
 VERSION=		1.2.2
 
@@ -10,7 +10,7 @@ ROSNAME=		$(subst -,_,${NAME})
 PKGNAME=		${NAME}-${VERSION}
 DISTNAME=		${ROSNAME}-${VERSION}
 
-MASTER_REPOSITORY=	git git@gitlab.laas.fr:${ORG}/${NAME}.git
+MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}
 LICENSE=		gnu-lgpl-v3
 
 CATEGORIES=		wip

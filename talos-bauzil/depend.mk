@@ -15,7 +15,7 @@ PREFER.talos-bauzil?=		robotpkg
 
 SYSTEM_SEARCH.talos-bauzil=										\
 	'lib/pkgconfig/talos_bauzil.pc:/Version/s/[^0-9.]//gp'						\
-	'share/cmake/talos_bauzil/talos_bauzilConfigVersion.cmake:/PACKAGE_VERSION /s/[^0-9.]//gp'
+	'share/talos_bauzil/cmake/talos_bauzilConfig-version.cmake:/PACKAGE_VERSION /s/[^0-9.]//gp'
 
 DEPEND_USE+=			talos-bauzil
 

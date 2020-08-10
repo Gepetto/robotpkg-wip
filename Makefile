@@ -155,6 +155,7 @@ SUBDIR+=	sot-pattern-generator-v3
 SUBDIR+=	sot-talos-balance
 SUBDIR+=	sot-tools-v3
 SUBDIR+=	sot-torque-control
+SUBDIR+=	talos-bauzil
 SUBDIR+=	talos-data
 SUBDIR+=	talos-metapkg-ros-control-sot
 SUBDIR+=	talos-moveit-config

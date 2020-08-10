@@ -3,7 +3,6 @@ lib/pkgconfig/talos_bauzil.pc
 lib/talos_bauzil/odom_sot.py
 lib/talos_bauzil/odometry.py
 lib/talos_bauzil/publisher_world.py
-share/doc/talos_data/doxygen-html/talos_data.doxytag
 share/talos_bauzil/cmake/talos_bauzilConfig-version.cmake
 share/talos_bauzil/cmake/talos_bauzilConfig.cmake
 share/talos_bauzil/launch/script_talos_gazebo_bauzil.launch

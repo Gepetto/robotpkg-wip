@@ -15,7 +15,7 @@ LICENSE=		gnu-lgpl-v3
 CATEGORIES=		wip
 COMMENT=		Talos simulation in Bauzil
 
-#DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
+DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
 
 include ../../wip/talos-data/depend.mk
 include ../../devel/ros-catkin/depend.mk

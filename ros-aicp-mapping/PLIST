@@ -37,6 +37,13 @@ share/aicp_core/cmake/aicp_coreConfig.cmake
 share/aicp_core/package.xml
 share/aicp_ros/cmake/aicp_rosConfig-version.cmake
 share/aicp_ros/cmake/aicp_rosConfig.cmake
+share/aicp_ros/config/rviz/config_aicp.rviz
+share/aicp_ros/config/rviz/simple_aicp.rviz
+share/aicp_ros/launch/aicp.launch
+share/aicp_ros/launch/aicp_localization_only.launch
+share/aicp_ros/launch/aicp_mapping.launch
+share/aicp_ros/launch/view_recorded_rosbag_aicp.launch
+share/aicp_ros/launch/view_recorded_rosbag_aicp_simple.launch
 share/aicp_ros/package.xml
 share/aicp_srv/cmake/aicp_srv-msg-extras.cmake
 share/aicp_srv/cmake/aicp_srv-msg-paths.cmake

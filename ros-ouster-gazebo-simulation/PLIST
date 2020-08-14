@@ -9,4 +9,10 @@ share/ouster_gazebo_plugins/cmake/ouster_gazebo_pluginsConfig.cmake
 share/ouster_gazebo_plugins/package.xml
 share/ouster_os1_64/cmake/ouster_os1_64Config-version.cmake
 share/ouster_os1_64/cmake/ouster_os1_64Config.cmake
+share/ouster_os1_64/launch/os1_64_alone.launch
+share/ouster_os1_64/meshes/os1_64.stl
+share/ouster_os1_64/meshes/os1_64_reduced.stl
 share/ouster_os1_64/package.xml
+share/ouster_os1_64/urdf/example_robot.urdf.xacro
+share/ouster_os1_64/urdf/os1_64.urdf.xacro
+share/ouster_os1_64/worlds/alone.world

@@ -4,9 +4,8 @@
 
 ROS_REPO=		Gepetto
 ROS_PKG=		ouster-gazebo-simulation
-ROS_VERSION=		2.0.1
+ROS_VERSION=		2.0.2
 ROS_METAPKG=		yes
-PKGREVISION=		1
 
 PKGNAME=		ros-${ROS_PKG}-${ROS_VERSION}
 

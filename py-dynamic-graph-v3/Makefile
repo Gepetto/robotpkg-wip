@@ -5,6 +5,7 @@
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-python
 VERSION=		3.5.3
+PKGREVISION=		1
 
 PKGNAME=		${PKGTAG.python-}dynamic-graph-v3-${VERSION}
 
@@ -17,6 +18,7 @@ CONFLICTS+=		py[0-9][0-9]-${NAME}-v3  # there is stuff not in ${PYTHON_SITELIB}
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../math/eigen3/depend.mk
+include ../../math/py-eigenpy/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

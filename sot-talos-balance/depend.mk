@@ -19,7 +19,7 @@ SYSTEM_SEARCH.sot-talos-balance=\
 
 DEPEND_USE+=		sot-talos-balance
 
-DEPEND_ABI.sot-talos-balance?=	sot-talos-balance>=1.3.1
+DEPEND_ABI.sot-talos-balance?=	sot-talos-balance>=2.0.0
 DEPEND_DIR.sot-talos-balance?=	../../wip/sot-talos-balance
 
 endif # SOT_CORE_DEPEND_MK -------------------------------------------------

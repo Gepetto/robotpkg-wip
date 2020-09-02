@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			jrl-walkgen
-VERSION=		4.2.4
+VERSION=		4.2.5
 
 PKGNAME=		${NAME}-v3-${VERSION}
 
@@ -14,7 +14,6 @@ COMMENT=		Walk pattern generator for the HRP-2 humanoid robot.
 CONFLICTS+=		${NAME}
 
 include ../../devel/jrl-cmakemodules/Makefile.common
-include ../../wip/talos-data/depend.mk
 include ../../math/eiquadprog/depend.mk
 include ../../graphics/simple-humanoid-description/depend.mk
 include ../../math/pinocchio/depend.mk

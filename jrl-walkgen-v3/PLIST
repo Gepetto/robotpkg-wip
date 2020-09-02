@@ -13,6 +13,8 @@ lib/libjrl-walkgen.so
 lib/libjrl-walkgen.so.${PKGVERSION}
 lib/pkgconfig/jrl-walkgen.pc
 share/jrl-walkgen/package.xml
+share/jrl-walkgen/srdf/talos_wpg.srdf
+share/jrl-walkgen/urdf/talos_reduced_wpg.urdf
 share/jrl/dynamics/examples/CommonTools.cpp
 share/jrl/dynamics/examples/CommonTools.hh
 share/jrl/dynamics/examples/TestFootPrintPGInterface.cpp

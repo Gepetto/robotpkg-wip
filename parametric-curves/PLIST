@@ -16,4 +16,7 @@ include/parametric-curves/spline.hpp
 include/parametric-curves/text-file.hpp
 include/parametric-curves/utils/file-io.hpp
 include/parametric-curves/warning.hh
+lib/cmake/parametric-curves/parametric-curvesConfig.cmake
+lib/cmake/parametric-curves/parametric-curvesConfigVersion.cmake
+lib/cmake/parametric-curves/parametric-curvesTargets.cmake
 lib/pkgconfig/parametric-curves.pc

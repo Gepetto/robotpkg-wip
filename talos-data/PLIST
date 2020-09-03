@@ -110,7 +110,6 @@ share/talos_data/robots/upload.launch
 share/talos_data/robots/upload_talos.launch
 share/talos_data/srdf/pyrene.srdf
 share/talos_data/srdf/talos.srdf
-share/talos_data/srdf/talos_wpg.srdf
 share/talos_data/urdf/arm/arm.transmission.xacro
 share/talos_data/urdf/arm/arm_v1.urdf.xacro
 share/talos_data/urdf/arm/arm_v2.urdf.xacro
@@ -149,6 +148,5 @@ share/talos_data/urdf/talos_full_v2.urdf
 share/talos_data/urdf/talos_full_v2.urdf.xacro
 share/talos_data/urdf/talos_reduced.urdf
 share/talos_data/urdf/talos_reduced_v2.urdf
-share/talos_data/urdf/talos_reduced_wpg.urdf
 share/talos_data/urdf/torso/torso.transmission.xacro
 share/talos_data/urdf/torso/torso.urdf.xacro

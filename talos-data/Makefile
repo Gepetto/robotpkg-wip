@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			talos-data
-VERSION=		1.2.2
+VERSION=		1.2.3
 
 ROSNAME=		$(subst -,_,${NAME})
 PKGNAME=		${NAME}-${VERSION}
@@ -39,5 +39,5 @@ include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/graphviz.mk
 include ../../mk/sysdep/pdflatex.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++11.mk
+include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

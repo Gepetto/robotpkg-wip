@@ -176,8 +176,6 @@ lib/dynamic-graph-plugins/libreader.so
 lib/dynamic-graph-plugins/libreader.so.${PKGVERSION}
 lib/dynamic-graph-plugins/librobot-simu.so
 lib/dynamic-graph-plugins/librobot-simu.so.${PKGVERSION}
-lib/dynamic-graph-plugins/libseq-play.so
-lib/dynamic-graph-plugins/libseq-play.so.${PKGVERSION}
 lib/dynamic-graph-plugins/libsequencer.so
 lib/dynamic-graph-plugins/libsequencer.so.${PKGVERSION}
 lib/dynamic-graph-plugins/libsot.so

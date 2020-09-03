@@ -18,7 +18,7 @@ include ../../wip/py-prf-ros-control/depend.mk
 include ../../wip/py-sot-talos/depend.mk
 include ../../wip/py-sot-talos-balance/depend.mk
 include ../../wip/py-talos-torque-control/depend.mk
-include ../../wip/ros-aicp-mapping/depend.mk
+#include ../../wip/ros-aicp-mapping/depend.mk
 include ../../wip/ros-image-pipeline/depend.mk
 include ../../wip/ros-ouster-gazebo-simulation/depend.mk
 include ../../wip/talos-bauzil/depend.mk

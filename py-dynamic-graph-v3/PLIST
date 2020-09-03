@@ -4,11 +4,11 @@ include/dynamic-graph/python/config.hh
 include/dynamic-graph/python/convert-dg-to-py.hh
 include/dynamic-graph/python/deprecated.hh
 include/dynamic-graph/python/dynamic-graph-py.hh
-include/dynamic-graph/python/exception-python.hh
-include/dynamic-graph/python/exception.hh
 include/dynamic-graph/python/interpreter.hh
+include/dynamic-graph/python/module.hh
 include/dynamic-graph/python/python-compat.hh
 include/dynamic-graph/python/signal-wrapper.hh
+include/dynamic-graph/python/signal.hh
 include/dynamic-graph/python/warning.hh
 lib/cmake/dynamic-graph-python/dynamic-graph-pythonConfig.cmake
 lib/cmake/dynamic-graph-python/dynamic-graph-pythonConfigVersion.cmake

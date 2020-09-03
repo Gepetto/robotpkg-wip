@@ -14,7 +14,7 @@ ifeq (+,$(PY_DYNAMIC_GRAPH_V3_DEPEND_MK)) # -----------------------------------
 PREFER.py-dynamic-graph-v3?=	robotpkg
 
 DEPEND_USE+=			py-dynamic-graph-v3
-DEPEND_ABI.py-dynamic-graph-v3?=	${PKGTAG.python-}dynamic-graph-v3>=3.0
+DEPEND_ABI.py-dynamic-graph-v3?=	${PKGTAG.python-}dynamic-graph-v3>=4.0.0
 DEPEND_DIR.py-dynamic-graph-v3?=	../../wip/py-dynamic-graph-v3
 
 SYSTEM_SEARCH.py-dynamic-graph-v3=\

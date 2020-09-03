@@ -4,6 +4,7 @@ include/sot/tools/cubic-interpolation-se3.hh
 include/sot/tools/cubic-interpolation.hh
 include/sot/tools/deprecated.hh
 include/sot/tools/kinematic-planner.hh
+include/sot/tools/oscillator.hh
 include/sot/tools/seqplay.hh
 include/sot/tools/simpleseqplay.hh
 include/sot/tools/warning.hh

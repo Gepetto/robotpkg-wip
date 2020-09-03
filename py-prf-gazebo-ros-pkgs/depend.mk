@@ -33,6 +33,8 @@ SYSTEM_SEARCH.py-prf-gazebo-ros-pkgs=					\
   'lib/pkgconfig/gazebo_ros_control.pc:/Version/s/[^0-9.]//gp'		\
   '${PYTHON_SYSLIBSEARCH}/gazebo_msgs/__init__.py'
 
+CMAKE_PREFIX_PATH.py-prf-gazebo-ros-pkgs?=	${PREFIX.py-prf-gazebo-ros-pkgs}
+
 endif # PY_PRF_GAZEBO_ROS_PKGS_DEPEND_MK ---------------------------------
 
 DEPEND_DEPTH:=				${DEPEND_DEPTH:+=}

@@ -22,7 +22,7 @@ SYSTEM_SEARCH.dynamic-graph-v3=\
 
 DEPEND_USE+=		dynamic-graph-v3
 
-DEPEND_ABI.dynamic-graph-v3?=	dynamic-graph-v3>=3.8.1
+DEPEND_ABI.dynamic-graph-v3?=	dynamic-graph-v3>=4.3.0
 DEPEND_DIR.dynamic-graph-v3?=	../../wip/dynamic-graph-v3
 
 endif # HPP_GIK_DEPEND_MK --------------------------------------------

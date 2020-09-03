@@ -46,4 +46,3 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/utils/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/utils/filter_utils.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/utils/plot_utils.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/utils/sot_utils.py
-${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/wrap.so

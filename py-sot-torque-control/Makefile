@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-torque-control
-VERSION=		1.5.3
+VERSION=		1.6.0
 
 CATEGORIES=		wip
 COMMENT=		Torque control for humanoids (python bindings)
@@ -42,5 +42,5 @@ include ../../mk/sysdep/graphviz.mk
 include ../../mk/sysdep/py-sphinx.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++11.mk
+include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

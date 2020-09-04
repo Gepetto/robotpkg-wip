@@ -4,8 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-pattern-generator
-VERSION=		3.3.0
-PKGREVISION=		1
+VERSION=		3.4.0
 
 PKGNAME=		${NAME}-v3-${VERSION}
 
@@ -28,5 +27,5 @@ include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++11.mk
+include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

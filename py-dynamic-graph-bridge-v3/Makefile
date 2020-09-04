@@ -3,10 +3,10 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-bridge
-VERSION=		3.3.3
+VERSION=		3.4.0
 
 ROSNAME=		$(subst -,_,${NAME})
-DISTNAME=		${ROSNAME}-v3-${VERSION}
+DISTNAME=		${ROSNAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}.git
@@ -44,5 +44,5 @@ include ../../wip/sot-core-v3/depend.mk
 include ../../mk/sysdep/bullet.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++11.mk
+include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

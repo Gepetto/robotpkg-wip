@@ -3,7 +3,7 @@
 #
 
 ORG=			stack-of-tasks
-VERSION=		0.5.0
+VERSION=		0.6.0
 NAME=			roscontrol-sot
 PKGNAME=		${PKGTAG.python-}${NAME}-${VERSION}
 ROSNAME=		$(subst -,_,${NAME})
@@ -76,6 +76,6 @@ include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/bullet.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++11.mk
+include ../../mk/language/c++.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/robotpkg.mk

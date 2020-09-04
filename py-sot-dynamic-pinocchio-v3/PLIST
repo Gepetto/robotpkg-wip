@@ -4,8 +4,6 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/angle_estimator/__init__.p
 ${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/angle_estimator/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/dynamic/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/dynamic/wrap.so
-${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/force_compensation/__init__.py
-${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/force_compensation/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/humanoid_robot.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/integrator_force/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/dynamic_pinocchio/integrator_force/wrap.so

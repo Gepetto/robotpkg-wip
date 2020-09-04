@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-talos
-VERSION=		1.2.2
+VERSION=		1.3.0
 
 CATEGORIES=		wip
 COMMENT=		This packages provides a generic Stack Of Tasks library for the humanoid robot Pyrene.

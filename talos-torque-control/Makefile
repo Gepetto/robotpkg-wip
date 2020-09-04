@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			talos-torque-control
-VERSION=		1.0.1
+VERSION=		1.1.0
 
 CATEGORIES=		wip
 COMMENT=		Torque control for Talos
@@ -32,5 +32,5 @@ include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/graphviz.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++11.mk
+include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

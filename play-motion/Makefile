@@ -30,6 +30,7 @@ USE_BOOST_LIBS=		thread
 ifeq (,$(filter 16.04%,${OS_VERSION}))
   include ../../wip/ros-moveit/depend.mk
 endif
+
 include ../../wip/py-prf-ros-control/depend.mk
 
 include ../../devel/boost-headers/depend.mk

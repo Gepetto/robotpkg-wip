@@ -1,0 +1,17 @@
+lib/hppPlugins/agimus_hpp.so
+lib/pkgconfig/agimus_hpp.pc
+share/agimus_hpp/package.xml
+share/agimus_hpp/launch/hpp_interface.launch
+share/agimus_hpp/cmake/agimus_hppConfig-version.cmake
+share/agimus_hpp/cmake/agimus_hppConfig.cmake
+share/agimus_hpp/scripts/hpp_node.py
+share/agimus_hpp/scripts/estimation.py
+${PYTHON_SITELIB}/agimus_hpp/__init__.py
+${PYTHON_SITELIB}/agimus_hpp/manipulation/__init__.py
+${PYTHON_SITELIB}/agimus_hpp/manipulation/planning_request_adapter.py
+${PYTHON_SITELIB}/agimus_hpp/estimation.py
+${PYTHON_SITELIB}/agimus_hpp/ros_tools.py
+${PYTHON_SITELIB}/agimus_hpp/planning_request_adapter.py
+${PYTHON_SITELIB}/agimus_hpp/trajectory_publisher.py
+${PYTHON_SITELIB}/agimus_hpp/client.py
+${PYTHON_SITELIB}/agimus_hpp/tools.py

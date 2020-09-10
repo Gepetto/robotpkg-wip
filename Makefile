@@ -3,6 +3,12 @@
 
 COMMENT=	WIP packages
 
+SUBDIR+=	agimus
+SUBDIR+=	agimus-demos
+SUBDIR+=	agimus-hpp
+SUBDIR+=	agimus-sot
+SUBDIR+=	agimus-vision
+SUBDIR+=	agimus_sot_msgs
 SUBDIR+=	antlr2
 SUBDIR+=	aruco-ros
 SUBDIR+=	backward-ros
@@ -146,8 +152,8 @@ SUBDIR+=	rviz-plugin-covariance
 SUBDIR+= 	simple-grasping-action
 SUBDIR+=	sot-core-v3
 SUBDIR+=	sot-dynamic-pinocchio-v3
-#SUBDIR+=	sot-dyninv
-#SUBDIR+=	sot-dyninv-v3
+SUBDIR+=	sot-dyninv
+SUBDIR+=	sot-dyninv-v3
 SUBDIR+=	soth
 SUBDIR+=	sot-hrp2
 SUBDIR+=	sot-hrp2-v3
@@ -174,5 +180,6 @@ SUBDIR+=	tiago-metapkg-ros-control-sot
 SUBDIR+=	timeoptimization
 SUBDIR+=	ur5-description
 SUBDIR+=	urg
+
 
 include ../mk/robotpkg.subdir.mk

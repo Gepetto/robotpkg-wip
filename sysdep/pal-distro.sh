@@ -17,6 +17,10 @@
 #
 #                                            Anthony Mallet on Fri Sep  9 2011
 #
+if test -d /opt/pal/ferrum; then
+  echo "palferrum"
+  exit 0
+fi
 if test -d /opt/pal/erbium; then
   echo "palerbium"
   exit 0

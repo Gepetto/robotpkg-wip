@@ -22,7 +22,6 @@ DEPEND_ABI.prf-teleop-tools?=	prf-teleop-tools>=0.3.1
 DEPEND_DIR.prf-teleop-tools?=	../../wip/prf-teleop-tools
 
 SYSTEM_SEARCH.prf-teleop-tools=\
-  'include/joy_teleop/incrementer_server.h'		\
   'share/joy_teleop/package.xml:/<version>/s/[^0-9.]//gp'	\
   'lib/pkgconfig/joy_teleop.pc:/Version/s/[^0-9.]//gp'  \
   'share/joy_teleop/cmake/joy_teleopConfig.cmake'

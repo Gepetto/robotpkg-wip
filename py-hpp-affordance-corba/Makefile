@@ -27,5 +27,5 @@ include ../../mapping/octomap/depend.mk
 
 include ../../devel/boost-headers/depend.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++11.mk
+include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

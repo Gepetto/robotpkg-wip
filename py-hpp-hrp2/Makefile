@@ -12,5 +12,5 @@ PYTHON_NOTAG_CONFLICT=	yes
 include ../../meta-pkgs/hpp/Makefile.common
 
 include ../../mk/language/c.mk
-include ../../mk/language/c++11.mk
+include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

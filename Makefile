@@ -109,6 +109,7 @@ SUBDIR+=	py-qt-gepetto-pythonqt
 SUBDIR+=	py-ros-baxter-common
 SUBDIR+=	py-roscontrol-sot
 SUBDIR+=	py-scs
+SUBDIR+=	py-simple-humanoid-rbprm
 SUBDIR+=	py-skeleton-model
 SUBDIR+=	py-sl1m
 SUBDIR+=	py-solo-pybullet

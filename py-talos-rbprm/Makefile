@@ -11,7 +11,7 @@ USE_PYTHON=	true
 
 include ../../meta-pkgs/hpp/Makefile.common
 
-include ../../wip/talos-data/depend.mk
+include ../../robots/example-robot-data/depend.mk
 
 include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk

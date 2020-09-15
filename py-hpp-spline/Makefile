@@ -4,7 +4,6 @@
 
 HPP_PACKAGE=		hpp-spline
 HPP_COMMENT=		spline and bezier curves
-HPP_VERSION=		4.8.2
 
 CATEGORIES=		wip
 
@@ -20,5 +19,5 @@ include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 
 include ../../mk/language/c.mk
-include ../../mk/language/c++11.mk
+include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

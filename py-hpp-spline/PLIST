@@ -15,5 +15,8 @@ include/hpp/spline/polynom.h
 include/hpp/spline/quintic_spline.h
 include/hpp/spline/spline_deriv_constraint.h
 include/hpp/spline/warning.hh
+lib/cmake/hpp-spline/hpp-splineConfig.cmake
+lib/cmake/hpp-spline/hpp-splineConfigVersion.cmake
+lib/cmake/hpp-spline/hpp-splineTargets.cmake
 lib/pkgconfig/hpp-spline.pc
 ${PYTHON_SITELIB}/hpp_spline.so

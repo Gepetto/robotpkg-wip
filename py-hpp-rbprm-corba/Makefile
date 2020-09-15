@@ -2,7 +2,6 @@
 # Created:			Guilhem Saurel on Wed, 30 Jan 2019
 #
 
-PKGREVISION=		2
 HPP_PACKAGE=		hpp-rbprm-corba
 HPP_COMMENT=		Corba server for RB-PRM
 

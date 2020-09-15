@@ -84,6 +84,7 @@ ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/state_alg.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/__init__.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/affordance_centroids.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/com_constraints.py
+${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/constants_and_tools.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/constraint_to_dae.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/cwc_trajectory.py
 ${PYTHON_SITELIB}/hpp/corbaserver/rbprm/tools/cwc_trajectory_helper.py

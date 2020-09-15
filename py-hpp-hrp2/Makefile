@@ -4,6 +4,7 @@
 
 HPP_PACKAGE=		hpp-hrp2
 HPP_COMMENT=		Data specific to robots hrp2 for hpp-corbaserver
+HPP_VERSION=		4.9.0
 
 CATEGORIES=		wip
 PYTHON_NOTAG_CONFLICT=	yes

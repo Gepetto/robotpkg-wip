@@ -23,5 +23,5 @@ include ../../devel/boost-libs/depend.mk
 
 include ../../wip/mk/sysdep/libcdd.mk
 include ../../mk/language/c.mk
-include ../../mk/language/c++11.mk
+include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

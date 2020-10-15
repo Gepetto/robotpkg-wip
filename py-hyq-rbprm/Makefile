@@ -4,7 +4,8 @@
 
 HPP_PACKAGE=	hyq-rbprm
 HPP_COMMENT=	Database for hyq robot using hpp-rbprm
-PKGREVISION=	1
+
+HPP_VERSION=	4.10.1
 
 CATEGORIES=	wip
 

@@ -29,7 +29,6 @@ include ../../robots/example-robot-data/depend.mk
 include ../../wip/py-hpp-bezier-com-traj/depend.mk
 include ../../wip/py-hpp-centroidal-dynamics/depend.mk
 include ../../wip/hpp-affordance/depend.mk
-include ../../wip/py-hpp-spline/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../math/hpp-pinocchio/depend.mk
 include ../../mapping/octomap/depend.mk

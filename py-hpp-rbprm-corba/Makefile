@@ -21,6 +21,7 @@ include ../../meta-pkgs/hpp/Makefile.common
 include ../../wip/py-hpp-rbprm/depend.mk
 include ../../wip/py-hpp-affordance-corba/depend.mk
 
+include ../../graphics/py-qt-hpp-gepetto-viewer/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../path/hpp-core/depend.mk
 include ../../path/py-hpp-corbaserver/depend.mk

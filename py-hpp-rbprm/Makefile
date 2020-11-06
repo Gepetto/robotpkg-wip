@@ -4,6 +4,7 @@
 
 HPP_PACKAGE=		hpp-rbprm
 HPP_COMMENT=		RB-PRM planner in HPP
+PKGREVISION=		1
 
 CATEGORIES=		wip
 

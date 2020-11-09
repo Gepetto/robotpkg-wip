@@ -11,7 +11,9 @@ endif
 
 ifeq (+,$(BACKWARD_ROS_DEPEND_MK)) # ---------------------------------
 
-PREFER.backward-ros?=	robotpkg
+include ../../meta-pkgs/ros-base/depend.common
+
+PREFER.backward-ros?=		${PREFER.ros-base}
 
 SYSTEM_SEARCH.backward-ros=\
     'lib/pkgconfig/backward_ros.pc:/Version/s/[^0-9.]//gp' \
@@ -19,10 +21,8 @@ SYSTEM_SEARCH.backward-ros=\
 
 DEPEND_USE+=			backward-ros
 
-DEPEND_ABI.backward-ros?=\
-	backward-ros>=0.1.4
-DEPEND_DIR.backward-ros?=\
-	../../wip/backward-ros
+DEPEND_ABI.backward-ros?=	backward-ros>=0.1.4
+DEPEND_DIR.backward-ros?=	../../wip/backward-ros
 
 endif # BACKWARD_ROS_DEPEND_MK ---------------------------------------
 

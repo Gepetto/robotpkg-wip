@@ -5,7 +5,7 @@
 ORG=			pal-robotics
 NAME=			head-action
 VERSION=		0.0.1
-PKGREVISION=		4
+PKGREVISION=		5
 
 ROSNAME=		$(subst -,_,${NAME})
 
@@ -35,7 +35,7 @@ include ../../lang/ros-message-generation/depend.mk
 include ../../lang/ros-message-runtime/depend.mk
 include ../../graphics/ros-kdl-parser/depend.mk
 include ../../interfaces/ros-control-msgs/depend.mk
-include ../../motion/ros-orocos-kinematics-dynamics/depend.mk
+include ../../motion/orocos-kdl/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../mk/language/c++.mk

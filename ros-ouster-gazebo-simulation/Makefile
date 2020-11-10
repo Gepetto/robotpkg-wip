@@ -13,8 +13,6 @@ CATEGORIES=		wip
 ROS_COMMENT=		the simulation of Ouster OS1-64 with ros and gazebo
 
 
-include ../../meta-pkgs/ros-base/Makefile.common
-
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-comm/depend.mk

@@ -13,7 +13,12 @@ ifeq (+,$(BACKWARD_ROS_DEPEND_MK)) # ---------------------------------
 
 include ../../meta-pkgs/ros-base/depend.common
 
-PREFER.backward-ros?=		${PREFER.ros-base}
+include ../../mk/robotpkg.prefs.mk # for OPSYS
+ifeq (Arch,${OPSYS})
+  PREFER.backward-ros?=		robotpkg
+else
+  PREFER.backward-ros?=		${PREFER.ros-base}
+endif
 
 SYSTEM_SEARCH.backward-ros=\
     'lib/pkgconfig/backward_ros.pc:/Version/s/[^0-9.]//gp' \

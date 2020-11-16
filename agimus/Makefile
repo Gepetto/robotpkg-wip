@@ -15,7 +15,7 @@ CATEGORIES=		wip
 COMMENT=		agimus
 
 include ../../devel/jrl-cmakemodules/Makefile.common
-include ../../wip/agimus_sot_msgs/depend.mk
+include ../../wip/agimus-sot-msgs/depend.mk
 include ../../wip/agimus-hpp/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../mk/language/c.mk

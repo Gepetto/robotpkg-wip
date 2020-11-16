@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			talos-data
-VERSION=		1.2.3
+VERSION=		1.2.4
 
 ROSNAME=		$(subst -,_,${NAME})
 PKGNAME=		${NAME}-${VERSION}

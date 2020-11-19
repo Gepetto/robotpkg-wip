@@ -23,6 +23,7 @@ SUBDIR+=	dynamic-introspection
 SUBDIR+=	example-adder
 SUBDIR+=	fcl
 SUBDIR+=	FRILibrary
+SUBDIR+=	gazebo-spring
 SUBDIR+=	hatponboard-lib
 SUBDIR+=	head-action
 SUBDIR+=	hey5-description

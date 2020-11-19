@@ -5,6 +5,7 @@
 ORG=			gepetto
 NAME=			gazebo-spring
 VERSION=		1.0.0
+PKGREVISION=		1
 
 CATEGORIES=		wip
 COMMENT=		A spring plugin for gazebo
@@ -13,6 +14,7 @@ MAINTAINER=		gsaurel@laas.fr
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/ros-catkin/depend.mk
+include ../../devel/ros-roscpp-core
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/gazebo.mk

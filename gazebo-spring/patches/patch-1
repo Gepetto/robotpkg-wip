@@ -1,0 +1,25 @@
+From d6af2713e04d219703c15a20904edd5b9c8c47ba Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Thu, 19 Nov 2020 18:14:43 +0100
+Subject: [PATCH] [CMake] enable C langage
+
+---
+ CMakeLists.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5e6191f..6378af3 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -17,9 +17,9 @@ SET(PROJECT_USE_CMAKE_EXPORT TRUE)
+ include(cmake/base.cmake)
+ 
+ # Project definition
+-COMPUTE_PROJECT_ARGS(PROJECT_ARGS LANGUAGES CXX)
++COMPUTE_PROJECT_ARGS(PROJECT_ARGS LANGUAGES C CXX)
+ project(${PROJECT_NAME} ${PROJECT_ARGS})
+-#CHECK_MINIMAL_CXX_STANDARD(11 ENFORCE)
++CHECK_MINIMAL_CXX_STANDARD(11 ENFORCE)
+ 
+ # Project dependencies
+ find_package(gazebo REQUIRED)

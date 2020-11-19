@@ -4,10 +4,7 @@ include/talos/data/deprecated.hh
 include/talos/data/warning.hh
 lib/cmake/talos_data/talos_dataConfig.cmake
 lib/cmake/talos_data/talos_dataConfigVersion.cmake
-lib/cmake/talos_data/talos_dataTargets-release.cmake
 lib/cmake/talos_data/talos_dataTargets.cmake
-lib/libtalos_data.so
-lib/libtalos_data.so.${PKGVERSION}
 lib/pkgconfig/talos_data.pc
 share/talos_data/config/collision_parameters.yaml
 share/talos_data/config/default_configuration_half_sitting.yaml

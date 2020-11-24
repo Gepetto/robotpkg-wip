@@ -14,7 +14,7 @@ MAINTAINER=		gsaurel@laas.fr
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/ros-catkin/depend.mk
-include ../../devel/ros-roscpp-core
+include ../../devel/ros-roscpp-core/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/gazebo.mk

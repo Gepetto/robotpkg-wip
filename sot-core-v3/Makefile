@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-core
-VERSION=		4.11.2
+VERSION=		4.11.3
 
 PKGNAME=		${NAME}-v3-${VERSION}
 

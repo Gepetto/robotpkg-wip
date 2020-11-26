@@ -11,7 +11,8 @@ endif
 
 ifeq (+,$(HEAD_ACTION_DEPEND_MK)) # ---------------------------------
 
-PREFER.head-action?=	robotpkg
+include ../../wip/py-prf-ros-control/depend.common
+PREFER.head-action?= ${PREFER.pal}
 
 DEPEND_USE+=			head-action
 

@@ -12,6 +12,8 @@ ifneq (,$(filter %.pal,${OS_VERSION}))
     PAL_DISTRO?=		dubnium
   else ifneq (,$(filter 16.04.pal,${OS_VERSION}))
     PAL_DISTRO?=		erbium
+  else ifneq (,$(filter 18.04.pal,${OS_VERSION}))
+    PAL_DISTRO?=		ferrum
   endif
   SYSTEM_PREFIX.pal?=	/opt/pal/${PAL_DISTRO} ${SYSTEM_PREFIX}
 else

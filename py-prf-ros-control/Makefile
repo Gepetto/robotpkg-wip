@@ -3,9 +3,8 @@
 #
 
 ORG=			pal-robotics-forks
-VERSION=		0.2.8
+VERSION=		0.3.0
 NAME=			ros-control
-PKGREVISION=		2
 
 PRFNAME=		prf-${NAME}
 ROSNAME=		$(subst -,_,${NAME})

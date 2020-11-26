@@ -64,11 +64,6 @@ SYSTEM_SEARCH.py-prf-ros-control=\
   'include/hardware_interface/joint_mode_interface.h'	\
   'include/hardware_interface/joint_state_interface.h'	\
   'include/hardware_interface/robot_hw.h'	\
-  'include/joint_limits_interface/joint_limits.h'	\
-  'include/joint_limits_interface/joint_limits_interface.h'	\
-  'include/joint_limits_interface/joint_limits_interface_exception.h'	\
-  'include/joint_limits_interface/joint_limits_rosparam.h'	\
-  'include/joint_limits_interface/joint_limits_urdf.h'	\
   'include/transmission_interface/differential_transmission.h'	\
   'include/transmission_interface/differential_transmission_loader.h'	\
   'include/transmission_interface/effort_joint_interface_provider.h'	\
@@ -100,7 +95,6 @@ SYSTEM_SEARCH.py-prf-ros-control=\
 	controller_manager					\
 	controller_manager_msgs					\
 	hardware_interface					\
-	joint_limits_interface					\
 	transmission_interface,					\
   'share/$_/cmake/$_Config.cmake'				\
   'lib/pkgconfig/$_.pc:/Version/s/[^0-9.]//gp')

@@ -11,7 +11,10 @@ endif
 
 ifeq (+,$(TF_LOOKUP_DEPEND_MK)) # ----------------------------------
 
-PREFER.tf-lookup?=	robotpkg
+include ../../wip/py-prf-ros-control/depend.common
+
+PREFER.tf-lookup?=		${PREFER.pal}
+SYSTEM_PREFIX.tf-lookup?=	${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=			tf-lookup
 

@@ -12,14 +12,14 @@ endif
 ifeq (+,$(HEAD_ACTION_DEPEND_MK)) # ---------------------------------
 
 include ../../wip/py-prf-ros-control/depend.common
-PREFER.head-action?= ${PREFER.pal}
+
+PREFER.head-action?=		${PREFER.pal}
+SYSTEM_PREFIX.head-action?=	${SYSTEM_PREFIX.pal}
 
 DEPEND_USE+=			head-action
 
-DEPEND_ABI.head-action?=\
-	head-action>=0.0.1
-DEPEND_DIR.head-action?=\
-	../../wip/head-action
+DEPEND_ABI.head-action?=	head-action>=0.0.1
+DEPEND_DIR.head-action?=	../../wip/head-action
 
 SYSTEM_SEARCH.head-action=\
   'share/head_action/cmake/head_actionConfig.cmake'	\

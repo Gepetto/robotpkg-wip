@@ -1,0 +1,21 @@
+From e2561f80e27edeb59901346e7244294f8f2e07cc Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Wed, 2 Dec 2020 15:01:58 +0100
+Subject: [PATCH] add missing include
+
+---
+ src/rbprmbuilder.impl.cc | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/rbprmbuilder.impl.cc b/src/rbprmbuilder.impl.cc
+index 04c5471..d77d8dd 100644
+--- src/rbprmbuilder.impl.cc
++++ src/rbprmbuilder.impl.cc
+@@ -50,6 +50,7 @@
+ #include <hpp/rbprm/contact_generation/reachability.hh>
+ #include <hpp/pinocchio/urdf/util.hh>
+ #include "hpp/rbprm/utils/algorithms.h"
++#include <boost/bind.hpp>
+ 
+ #ifdef PROFILE
+ #include "hpp/rbprm/rbprm-profiler.hh"

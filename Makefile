@@ -50,6 +50,7 @@ SUBDIR+=	ompl
 SUBDIR+=	openhrp3-hrp2
 SUBDIR+=	openhrp3-simulator-wo-rtm
 SUBDIR+=	osg-dae
+SUBDIR+=	osqp
 SUBDIR+=	pal-gazebo-plugins
 SUBDIR+=	pal-gazebo-worlds
 SUBDIR+=	pal-gripper

@@ -5,6 +5,7 @@
 ORG=			pal-robotics-forks
 NAME=			gazebo-ros-pkgs
 VERSION=		3.0.1
+PKGREVISION=		1
 
 PRFNAME=		prf-${NAME}
 ROSNAME=		$(subst -,_,${NAME})
@@ -45,6 +46,7 @@ ifneq (,$(filter 16.04%,${OS_VERSION}))
 endif
 
 include ../../wip/py-prf-ros-control/depend.mk
+DEPEND_ABI.opencv+=	opencv<4
 
 include ../../devel/ros-cmake-modules/depend.mk
 include ../../devel/boost-headers/depend.mk
@@ -55,6 +57,7 @@ include ../../middleware/ros-comm/depend.mk
 include ../../devel/ros-pluginlib/depend.mk
 include ../../devel/ros-ros/depend.mk
 include ../../graphics/ros-urdf/depend.mk
+include ../../image/opencv/depend.mk
 include ../../image/ros-image-common/depend.mk
 include ../../image/ros-vision-opencv/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk

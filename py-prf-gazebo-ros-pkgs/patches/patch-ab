@@ -1,0 +1,18 @@
+--- gazebo_plugins/CMakeLists.txt.orig	2019-11-05 16:53:46.000000000 +0100
++++ gazebo_plugins/CMakeLists.txt	2020-12-08 03:11:29.661699947 +0100
+@@ -36,6 +36,7 @@
+   pkg_check_modules(OGRE OGRE)
+   pkg_check_modules(OGRE-Terrain OGRE-Terrain)
+   pkg_check_modules(OGRE-Paging OGRE-Paging)
++  pkg_check_modules(opencv3 opencv3)
+ else()
+   message(FATAL_ERROR "pkg-config is required; please install it")
+ endif()
+@@ -64,6 +65,7 @@
+   ${OGRE_INCLUDE_DIRS}
+   ${OGRE-Terrain_INCLUDE_DIRS}
+   ${OGRE-Paging_INCLUDE_DIRS}
++  ${opencv3_INCLUDE_DIRS}
+ )
+ 
+ link_directories(

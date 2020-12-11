@@ -40,11 +40,11 @@ define PKG_OPTION_SET.ipopt
 endef
 
 #include ../../wip/mk/sysdep/sundials.mk
-include ../../devel/swig/depend.mk
 include ../../math/lapack/depend.mk
 include ../../optimization/qpoases/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/python.mk
+include ../../mk/sysdep/swig.mk
 include ../../mk/sysdep/tinyxml2.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk

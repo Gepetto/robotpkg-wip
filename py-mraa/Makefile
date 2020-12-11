@@ -21,10 +21,10 @@ CMAKE_ARGS+=	-DBUILDSWIGNODE=OFF
 
 include ../../wip/mk/sysdep/libjson-c.mk
 include ../../pkgtools/pkg-config/depend.mk
-include ../../devel/swig/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/git.mk
 include ../../mk/sysdep/python.mk
+include ../../mk/sysdep/swig.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

@@ -4,9 +4,8 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph
-VERSION=		4.3.2
+VERSION=		4.3.3
 
-DISTNAME=		${NAME}-v3-${VERSION}
 PKGNAME=		${NAME}-v3-${VERSION}
 
 CATEGORIES=		wip
@@ -14,15 +13,12 @@ COMMENT=		Efficient data-flow C++ library for robotics
 
 CONFLICTS+=		${NAME}
 
-CMAKE_ARGS+=		-DCXX_DISABLE_WERROR=ON
 CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../math/eigen3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
-include ../../mk/sysdep/doxygen.mk
-include ../../mk/sysdep/graphviz.mk
 include ../../mk/sysdep/gzip.mk
 include ../../mk/sysdep/podlators.mk
 include ../../mk/language/c.mk

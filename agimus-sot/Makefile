@@ -5,11 +5,14 @@
 ORG=			agimus
 NAME=			agimus-sot
 VERSION=		1.0.2
+PKGREVISION=		1
 DISTNAME=		${NAME}-${VERSION}
 
-MASTER_SITES?=      ${MASTER_SITE_GITHUB:=${ORG}/${NAME}}/releases/download/v${VERSION}/
+MASTER_SITES?=		${MASTER_SITE_GITHUB:=${ORG}/${NAME}}/releases/download/v${VERSION}/
 MASTER_REPOSITORY?=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
 LICENSE=		2-clause-bsd
+
+DYNAMIC_PLIST_DIRS+=	share/doc/agimus_sot
 
 CATEGORIES=		wip
 COMMENT=		Package to link SoT to the Agimus framework.

@@ -4,7 +4,7 @@
 
 ORG=			casadi
 NAME=			casadi
-VERSION=		3.4.5
+VERSION=		3.5.5
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
@@ -26,6 +26,12 @@ CMAKE_ARGS+=		-DWITH_PYTHON=ON
 CMAKE_ARGS+=		-DWITH_PYTHON3=$(if $(filter 3,${PYTHON_MAJOR}),ON,OFF)
 CMAKE_ARGS+=		-DWITH_QPOASES=ON
 CMAKE_ARGS+=		-DWITH_THREAD=ON
+
+CONFIGURE_DIRS=		build
+CMAKE_ARG_PATH=		..
+
+pre-configure:
+	${RUN}${MKDIR} ${WRKSRC}/build
 
 # ipopt option
 PKG_SUPPORTED_OPTIONS+=	ipopt

@@ -125,7 +125,7 @@ include/casadi/valgrind-casadi.supp
 include/casadi/valgrind-python.supp
 lib/cmake/casadi/casadi-config-version.cmake
 lib/cmake/casadi/casadi-config.cmake
-lib/cmake/casadi/casadi-targets-debug.cmake
+lib/cmake/casadi/casadi-targets-release.cmake
 lib/cmake/casadi/casadi-targets.cmake
 lib/libcasadi.so
 lib/libcasadi.so.3.6

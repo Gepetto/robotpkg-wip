@@ -5,7 +5,7 @@
 ORG=			casadi
 NAME=			casadi
 VERSION=		3.5.5
-PKGREVISION=		1
+PKGREVISION=		2
 
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${DISTNAME}

@@ -4,6 +4,7 @@
 
 NAME=			gurobi
 VERSION=		9.1.1
+PKGREVISION=		1
 ARCH=			linux64
 DISTNAME=		${NAME}${VERSION}_${ARCH}
 PKGNAME=		${PKGTAG.python-}${NAME}-${VERSION}
@@ -21,12 +22,12 @@ MAKE_ENV+=		PYTHONPATH=${PREFIX}/${PYTHON_SITELIB}
 PYTHON_SELF_CONFLICT=	yes
 
 post-install:
-	${RM} -rf ${WRKSRC}/bin/python* ${WRKSRC}/lib/python* ${WRKSRC}/lib/rootcert.pem;	\
-	${RUN} ${LIBTOOL} --mode=install install -d						\
-	    ${DESTDIR}${PREFIX}/bin ${DESTDIR}${PREFIX}/lib;					\
-	${RUN} ${LIBTOOL} --mode=install install						\
-	    ${WRKSRC}/lib/* ${DESTDIR}${PREFIX}/lib;						\
-	${RUN} ${LIBTOOL} --mode=install install						\
+	${RM} -rf ${WRKSRC}/bin/python* ${WRKSRC}/lib/rootcert.pem;	\
+	${RUN} ${LIBTOOL} --mode=install install -d			\
+	    ${DESTDIR}${PREFIX}/bin ${DESTDIR}${PREFIX}/lib;		\
+	${RUN} ${LIBTOOL} --mode=install install			\
+	    ${WRKSRC}/lib/* ${DESTDIR}${PREFIX}/lib;			\
+	${RUN} ${LIBTOOL} --mode=install install			\
 	    ${WRKSRC}/bin/* ${DESTDIR}${PREFIX}/bin
 
 include ../../pkgtools/libtool/depend.mk

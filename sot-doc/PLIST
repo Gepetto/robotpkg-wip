@@ -1,0 +1,8 @@
+@comment Fri Feb 12 13:42:03 CET 2021
+include/sot/doc/config.hh
+include/sot/doc/deprecated.hh
+include/sot/doc/warning.hh
+lib/cmake/sot-doc/sot-docConfig.cmake
+lib/cmake/sot-doc/sot-docConfigVersion.cmake
+lib/cmake/sot-doc/sot-docTargets.cmake
+lib/pkgconfig/sot-doc.pc

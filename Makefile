@@ -156,6 +156,7 @@ SUBDIR+=	rqt-dynamic-graph
 SUBDIR+=	rviz-plugin-covariance
 SUBDIR+= 	simple-grasping-action
 SUBDIR+=	sot-core-v3
+SUBDIR+=	sot-doc
 SUBDIR+=	sot-dynamic-pinocchio-v3
 #SUBDIR+=	sot-dyninv
 #SUBDIR+=	sot-dyninv-v3

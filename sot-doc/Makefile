@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-doc
-VERSION=		1.0.0
+VERSION=		1.1.0
 
 CATEGORIES=		wip
 COMMENT=		Documentation entry point for the Stack-Of-Tasks

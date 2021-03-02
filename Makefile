@@ -43,6 +43,7 @@ SUBDIR+=	libhatp
 SUBDIR+=	libnabo
 SUBDIR+=	libpointmatcher
 SUBDIR+=	morse-ros
+SUBDIR+=	mpi-cmake-modules
 SUBDIR+=	msgconnector
 SUBDIR+=	multicontact-api
 SUBDIR+=	octovis

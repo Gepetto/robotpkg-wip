@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-talos-balance
-VERSION=		2.0.1
+VERSION=		2.0.2
 
 CATEGORIES=		wip
 COMMENT=		Balance for TALOS humanoid robot
@@ -16,7 +16,6 @@ include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../math/eiquadprog/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
-include ../../graphics/simple-humanoid-description/depend.mk
 include ../../graphics/urdfdom/depend.mk
 include ../../mapping/octomap/depend.mk
 include ../../math/eigen3/depend.mk

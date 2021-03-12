@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			jrl-walkgen
-VERSION=		4.2.6
+VERSION=		4.2.7
 
 PKGNAME=		${NAME}-v3-${VERSION}
 
@@ -15,7 +15,6 @@ CONFLICTS+=		${NAME}
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../math/eiquadprog/depend.mk
-include ../../graphics/simple-humanoid-description/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

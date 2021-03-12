@@ -3,8 +3,7 @@
 
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-bridge
-VERSION=		3.4.0
-PKGREVISION=		1
+VERSION=		3.4.1
 
 ROSNAME=		$(subst -,_,${NAME})
 DISTNAME=		${ROSNAME}-${VERSION}
@@ -42,6 +41,7 @@ include ../../sysutils/ros-rospack/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/sot-core-v3/depend.mk
+include ../../wip/py-sot-core-v3/depend.mk
 include ../../mk/sysdep/bullet.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk

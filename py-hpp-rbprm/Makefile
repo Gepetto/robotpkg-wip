@@ -18,8 +18,8 @@ include ../../wip/py-simple-humanoid-rbprm/depend.mk
 include ../../wip/py-talos-rbprm/depend.mk
 include ../../simulation/hpp-environments/depend.mk
 include ../../simulation/py-hpp-environments/depend.mk
-include ../../math/curves/depend.mk
-include ../../math/py-curves/depend.mk
+include ../../math/ndcurves/depend.mk
+include ../../math/py-ndcurves/depend.mk
 
 include ../../path/hpp-core/depend.mk
 include ../../path/hpp-util/depend.mk

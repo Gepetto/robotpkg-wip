@@ -5,6 +5,7 @@
 ORG=			loco-3d
 NAME=			multicontact-api
 VERSION=		2.1.0
+PKGREVISION=		1
 
 CATEGORIES=		wip
 COMMENT=		Multi-contact locomotion for multi-body systems
@@ -14,7 +15,7 @@ MAINTAINER=		gepetto-soft@laas.fr
 CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
 include ../../devel/jrl-cmakemodules/Makefile.common
-include ../../math/curves/depend.mk
+include ../../math/ndcurves/depend.mk
 include ../../graphics/assimp/depend.mk
 include ../../graphics/urdfdom/depend.mk
 include ../../mapping/octomap/depend.mk

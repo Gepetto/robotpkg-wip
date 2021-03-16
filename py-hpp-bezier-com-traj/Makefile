@@ -13,8 +13,8 @@ PYTHON_NOTAG_CONFLICT=	yes
 
 include ../../meta-pkgs/hpp/Makefile.common
 
-include ../../math/curves/depend.mk
-include ../../math/py-curves/depend.mk
+include ../../math/ndcurves/depend.mk
+include ../../math/py-ndcurves/depend.mk
 
 include ../../wip/py-hpp-centroidal-dynamics/depend.mk
 

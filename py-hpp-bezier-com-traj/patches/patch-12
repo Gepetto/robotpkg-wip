@@ -1,0 +1,397 @@
+From 531c52178faa8843e9e2c89a084d98c8ce949cb8 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Tue, 16 Mar 2021 16:24:52 +0100
+Subject: [PATCH] =?UTF-8?q?curves=20=E2=86=92=20ndcurves?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ CMakeLists.txt                                |  4 +--
+ README.md                                     |  4 +--
+ .../bezier-com-traj/common_solve_methods.hh   |  2 +-
+ include/hpp/bezier-com-traj/data.hh           |  2 +-
+ include/hpp/bezier-com-traj/definitions.hh    |  8 +++---
+ include/hpp/bezier-com-traj/utils.hh          | 15 +++++-----
+ python/test/binding_tests.py                  |  2 +-
+ src/CMakeLists.txt                            |  4 +--
+ src/common_solve_methods.cpp                  |  2 +-
+ src/computeCOMTraj.cpp                        |  8 +++---
+ src/solve_0_step.cpp                          | 10 +++----
+ src/utils.cpp                                 |  6 ++--
+ tests/test-bezier-symbolic.cpp                | 28 +++++++++----------
+ 13 files changed, 48 insertions(+), 47 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 4529abc..693d652 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -34,7 +34,7 @@ ENDIF(BUILD_PYTHON_INTERFACE)
+ # Project dependencies
+ 
+ ADD_PROJECT_DEPENDENCY(hpp-centroidal-dynamics REQUIRED)
+-ADD_PROJECT_DEPENDENCY(curves REQUIRED)
++ADD_PROJECT_DEPENDENCY(ndcurves 1.0.0 REQUIRED)
+ 
+ IF(USE_GLPK)
+   set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake/find-external/glpk")
+@@ -85,7 +85,7 @@ endif(USE_GLPK)
+ ADD_LIBRARY(${PROJECT_NAME} SHARED
+   ${${PROJECT_NAME}_SOURCES} ${${PROJECT_NAME}_HEADERS})
+ TARGET_INCLUDE_DIRECTORIES(${PROJECT_NAME} PUBLIC $<INSTALL_INTERFACE:include>)
+-TARGET_LINK_LIBRARIES(${PROJECT_NAME} curves::curves hpp-centroidal-dynamics::hpp-centroidal-dynamics)
++TARGET_LINK_LIBRARIES(${PROJECT_NAME} ndcurves::ndcurves hpp-centroidal-dynamics::hpp-centroidal-dynamics)
+ 
+ if(USE_GLPK)
+   TARGET_INCLUDE_DIRECTORIES(${PROJECT_NAME} PUBLIC ${glpk_INCLUDE_DIR})
+diff --git a/README.md b/README.md
+index 92cb957..41bfa02 100644
+--- README.md
++++ README.md
+@@ -28,7 +28,7 @@ https://hal.archives-ouvertes.fr/hal-01726155v1
+ 
+ ## Dependencies
+ * [centroidal-dynamics-lib](https://github.com/stonneau/centroidal-dynamics-lib) Centroidal dynamics computation library
+-* [curves](https://github.com/loco-3d/curves) Bezier curves library
++* [ndcurves](https://github.com/loco-3d/ndcurves) Bezier curves library
+ * [glpk](https://www.gnu.org/software/glpk/) GNU Linear Programming Kit
+ 
+ ## Additional dependencies for python bindings
+@@ -77,7 +77,7 @@ to python.
+ For the zero step capturability, we will first define a contact phase using the objects from centroidal_dynamics:
+ ```
+ #importing the libraries of interest
+-import curves  # noqa - necessary to register curves::bezier_curve
++import ndcurves  # noqa - necessary to register ndcurves::bezier_curve
+ import numpy as np
+ from numpy import array
+ from hpp_centroidal_dynamics import Equilibrium, EquilibriumAlgorithm, SolverLP
+diff --git a/include/hpp/bezier-com-traj/common_solve_methods.hh b/include/hpp/bezier-com-traj/common_solve_methods.hh
+index 6f073e8..4719bae 100644
+--- include/hpp/bezier-com-traj/common_solve_methods.hh
++++ include/hpp/bezier-com-traj/common_solve_methods.hh
+@@ -24,7 +24,7 @@ namespace bezier_com_traj {
+  * @return a vector of waypoint representing the discretization of the curve
+  */
+ BEZIER_COM_TRAJ_DLLAPI std::vector<waypoint6_t> ComputeDiscretizedWaypoints(
+-    const std::vector<waypoint6_t>& wps, const std::vector<curves::Bern<double> >& bernstein, int numSteps);
++    const std::vector<waypoint6_t>& wps, const std::vector<ndcurves::Bern<double> >& bernstein, int numSteps);
+ 
+ /**
+  * @brief compute6dControlPointInequalities Given linear and angular control waypoints,
+diff --git a/include/hpp/bezier-com-traj/data.hh b/include/hpp/bezier-com-traj/data.hh
+index 72f2caf..c32ccda 100644
+--- include/hpp/bezier-com-traj/data.hh
++++ include/hpp/bezier-com-traj/data.hh
+@@ -11,7 +11,7 @@
+ #include <hpp/bezier-com-traj/definitions.hh>
+ #include <hpp/bezier-com-traj/utils.hh>
+ #include <hpp/bezier-com-traj/solver/solver-abstract.hpp>
+-#include <curves/bezier_curve.h>
++#include <ndcurves/bezier_curve.h>
+ #include <hpp/centroidal-dynamics/centroidal_dynamics.hh>
+ #include <Eigen/Dense>
+ 
+diff --git a/include/hpp/bezier-com-traj/definitions.hh b/include/hpp/bezier-com-traj/definitions.hh
+index 37a0bab..9f3c647 100644
+--- include/hpp/bezier-com-traj/definitions.hh
++++ include/hpp/bezier-com-traj/definitions.hh
+@@ -7,7 +7,7 @@
+ #define BEZIER_COM_TRAJ_DEFINITIONS_H
+ 
+ #include <hpp/centroidal-dynamics/centroidal_dynamics.hh>
+-#include <curves/bezier_curve.h>
++#include <ndcurves/bezier_curve.h>
+ #include <Eigen/Dense>
+ 
+ namespace bezier_com_traj {
+@@ -51,9 +51,9 @@ typedef std::pair<matrix3_t, point3_t> waypoint3_t;
+ typedef std::pair<Matrix39, point3_t> waypoint9_t;
+ struct waypoint_t;  // forward declaration
+ 
+-typedef curves::bezier_curve<double, double, true, point_t> bezier_t;
+-typedef curves::bezier_curve<double, double, true, waypoint_t> bezier_wp_t;
+-typedef curves::bezier_curve<double, double, true, point6_t> bezier6_t;
++typedef ndcurves::bezier_curve<double, double, true, point_t> bezier_t;
++typedef ndcurves::bezier_curve<double, double, true, waypoint_t> bezier_wp_t;
++typedef ndcurves::bezier_curve<double, double, true, point6_t> bezier6_t;
+ 
+ typedef std::vector<std::pair<double, int> > T_time;
+ typedef T_time::const_iterator CIT_time;
+diff --git a/include/hpp/bezier-com-traj/utils.hh b/include/hpp/bezier-com-traj/utils.hh
+index 94ec423..879322d 100644
+--- include/hpp/bezier-com-traj/utils.hh
++++ include/hpp/bezier-com-traj/utils.hh
+@@ -34,15 +34,16 @@ struct waypoint_t {
+ 
+   static waypoint_t Zero(size_t dim) { return initwp(dim, dim); }
+ 
+-  size_t size() const{return second.size();}
++  size_t size() const { return second.size(); }
+ 
+-  bool isApprox(const waypoint_t& other, const value_type prec = Eigen::NumTraits<value_type>::dummy_precision()) const{
+-    return first.isApprox(other.first,prec) && second.isApprox(other.second,prec);
++  bool isApprox(const waypoint_t& other,
++                const value_type prec = Eigen::NumTraits<value_type>::dummy_precision()) const {
++    return first.isApprox(other.first, prec) && second.isApprox(other.second, prec);
+   }
+ 
+-  bool operator==(const waypoint_t& other) const{ return isApprox(other); }
++  bool operator==(const waypoint_t& other) const { return isApprox(other); }
+ 
+-  bool operator!=(const waypoint_t& other) const{ return !(*this == other); }
++  bool operator!=(const waypoint_t& other) const { return !(*this == other); }
+ };
+ 
+ /**
+@@ -50,7 +51,7 @@ struct waypoint_t {
+  * @param degree required degree
+  * @return the bernstein polynoms
+  */
+-BEZIER_COM_TRAJ_DLLAPI std::vector<curves::Bern<double> > ComputeBersteinPolynoms(const unsigned int degree);
++BEZIER_COM_TRAJ_DLLAPI std::vector<ndcurves::Bern<double> > ComputeBersteinPolynoms(const unsigned int degree);
+ 
+ /**
+  * @brief given the constraints of the problem, and a set of waypoints, return
+@@ -141,7 +142,7 @@ Bezier bezier_com_traj::computeBezierCurve(const ConstraintFlag& flag, const dou
+       i++;
+     }
+   }
+-  return Bezier(wps.begin(), wps.end(), 0.,T);
++  return Bezier(wps.begin(), wps.end(), 0., T);
+ }
+ 
+ #endif
+diff --git a/python/test/binding_tests.py b/python/test/binding_tests.py
+index 44e29eb..f21667a 100644
+--- python/test/binding_tests.py
++++ python/test/binding_tests.py
+@@ -1,4 +1,4 @@
+-import curves  # noqa - necessary to register curves::bezier_curve
++import ndcurves  # noqa - necessary to register ndcurves::bezier_curve
+ import numpy as np
+ from numpy import array
+ from hpp_centroidal_dynamics import Equilibrium, EquilibriumAlgorithm, SolverLP
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index bfb7bf5..a4ffd0e 100644
+--- src/CMakeLists.txt
++++ src/CMakeLists.txt
+@@ -19,11 +19,11 @@ if (USE_GLPK)
+ endif(USE_GLPK)
+ 
+ ADD_LIBRARY(${LIBRARY_NAME} SHARED ${${LIBRARY_NAME}_SOURCES})
++TARGET_LINK_LIBRARIES(${LIBRARY_NAME} ndcurves::ndcurves
++  hpp-centroidal-dynamics::hpp-centroidal-dynamics)
+ 
+ if (USE_GLPK)
+   TARGET_LINK_LIBRARIES(${LIBRARY_NAME} ${glpk_LIBRARY})
+ endif(USE_GLPK)
+-PKG_CONFIG_USE_DEPENDENCY(${LIBRARY_NAME} hpp-centroidal-dynamics)
+-PKG_CONFIG_USE_DEPENDENCY(${LIBRARY_NAME} curves)
+ 
+ INSTALL(TARGETS ${LIBRARY_NAME} DESTINATION lib)
+diff --git a/src/common_solve_methods.cpp b/src/common_solve_methods.cpp
+index 4ea7f7a..a74de59 100644
+--- src/common_solve_methods.cpp
++++ src/common_solve_methods.cpp
+@@ -6,7 +6,7 @@
+ 
+ namespace bezier_com_traj {
+ std::vector<waypoint6_t> ComputeDiscretizedWaypoints(const std::vector<waypoint6_t>& wps,
+-                                                     const std::vector<curves::Bern<double> >& berns, int numSteps) {
++                                                     const std::vector<ndcurves::Bern<double> >& berns, int numSteps) {
+   double dt = 1. / double(numSteps);
+   std::vector<waypoint6_t> res;
+   for (int i = 0; i < numSteps + 1; ++i) {
+diff --git a/src/computeCOMTraj.cpp b/src/computeCOMTraj.cpp
+index 08fed94..f8619e4 100644
+--- src/computeCOMTraj.cpp
++++ src/computeCOMTraj.cpp
+@@ -25,7 +25,7 @@ bezier_wp_t::t_point_t computeDiscretizedWwaypoints(const ProblemData& pData, do
+   bezier_wp_t::t_point_t wps = computeWwaypoints(pData, T);
+   bezier_wp_t::t_point_t res;
+   const int DIM_VAR = (int)dimVar(pData);
+-  std::vector<curves::Bern<double> > berns = ComputeBersteinPolynoms((int)wps.size() - 1);
++  std::vector<ndcurves::Bern<double> > berns = ComputeBersteinPolynoms((int)wps.size() - 1);
+   double t, b;
+   for (CIT_time cit = timeArray.begin(); cit != timeArray.end(); ++cit) {
+     waypoint_t w = initwp(6, DIM_VAR);
+@@ -277,7 +277,7 @@ ResultDataCOMTraj genTraj(ResultData resQp, const ProblemData& pData, const doub
+     res.c_of_t_ = computeBezierCurve<bezier_t, point_t>(pData.constraints_.flag_, T, pis, res.x);
+     computeFinalVelocity(res);
+     computeFinalAcceleration(res);
+-    res.dL_of_t_ = bezier_t::zero(3,T);
++    res.dL_of_t_ = bezier_t::zero(3, T);
+   }
+   return res;
+ }
+@@ -354,9 +354,9 @@ std::pair<MatrixXX, VectorX> computeConstraintsContinuous(const ProblemData& pDa
+   // create the curves for c and w with symbolic waypoints (ie. depend on y)
+   bezier_wp_t::t_point_t wps_c = computeConstantWaypointsSymbolic(pData, T);
+   bezier_wp_t::t_point_t wps_w = computeWwaypoints(pData, T);
+-  bezier_wp_t c(wps_c.begin(), wps_c.end(),0., T);
++  bezier_wp_t c(wps_c.begin(), wps_c.end(), 0., T);
+   bezier_wp_t ddc = c.compute_derivate(2);
+-  bezier_wp_t w(wps_w.begin(), wps_w.end(),0., T);
++  bezier_wp_t w(wps_w.begin(), wps_w.end(), 0., T);
+ 
+   // for each splitted curves : add the constraints for each waypoints
+   const long int num_ineq = computeNumIneqContinuous(pData, Ts, (int)c.degree_, (int)w.degree_, useDD);
+diff --git a/src/solve_0_step.cpp b/src/solve_0_step.cpp
+index 77a4322..309477f 100644
+--- src/solve_0_step.cpp
++++ src/solve_0_step.cpp
+@@ -121,7 +121,7 @@ std::vector<waypoint6_t> ComputeAllWaypoints(point_t_tC p0, point_t_tC dc0, poin
+   wps.push_back(w3(p0, p1, g, p0X, p1X, gX, alpha));
+   wps.push_back(w4(p0, p1, g, p0X, p1X, gX, alpha));
+   if (numSteps > 0) {
+-    std::vector<curves::Bern<double> > berns = ComputeBersteinPolynoms(4);
++    std::vector<ndcurves::Bern<double> > berns = ComputeBersteinPolynoms(4);
+     wps = ComputeDiscretizedWaypoints(wps, berns, numSteps);
+   }
+   return wps;
+@@ -137,7 +137,7 @@ std::vector<waypoint6_t> ComputeAllWaypointsAngularMomentum(point_t_tC l0, const
+   wps.push_back(u3(l0, alpha));
+   wps.push_back(u4(l0, alpha));
+   if (numSteps > 0) {
+-    std::vector<curves::Bern<double> > berns = ComputeBersteinPolynoms(4);
++    std::vector<ndcurves::Bern<double> > berns = ComputeBersteinPolynoms(4);
+     wps = ComputeDiscretizedWaypoints(wps, berns, numSteps);
+   }
+   return wps;
+@@ -196,7 +196,7 @@ void computeC_of_T(const ProblemData& pData, const std::vector<double>& Ts, Resu
+   wps.push_back(pData.dc0_ * Ts[0] / 3 + pData.c0_);
+   wps.push_back(res.x.head(3));
+   wps.push_back(res.x.head(3));
+-  res.c_of_t_ = bezier_t(wps.begin(), wps.end(),0., Ts[0]);
++  res.c_of_t_ = bezier_t(wps.begin(), wps.end(), 0., Ts[0]);
+ }
+ 
+ void computedL_of_T(const ProblemData& pData, const std::vector<double>& Ts, ResultDataCOMTraj& res) {
+@@ -205,9 +205,9 @@ void computedL_of_T(const ProblemData& pData, const std::vector<double>& Ts, Res
+     wps.push_back(3 * (res.x.tail(3) - pData.l0_));
+     wps.push_back(3 * (-res.x.tail(3)));
+     wps.push_back(Vector3::Zero());
+-    res.dL_of_t_ = bezier_t(wps.begin(), wps.end(),0.,Ts[0], 1. / Ts[0]);
++    res.dL_of_t_ = bezier_t(wps.begin(), wps.end(), 0., Ts[0], 1. / Ts[0]);
+   } else
+-    res.dL_of_t_ = bezier_t::zero(3,Ts[0]);
++    res.dL_of_t_ = bezier_t::zero(3, Ts[0]);
+ }
+ 
+ // no angular momentum for now
+diff --git a/src/utils.cpp b/src/utils.cpp
+index 2034708..ea84d2a 100644
+--- src/utils.cpp
++++ src/utils.cpp
+@@ -64,9 +64,9 @@ Matrix3 skew(point_t_tC x) {
+   return res;
+ }
+ 
+-std::vector<curves::Bern<double> > ComputeBersteinPolynoms(const unsigned int degree) {
+-  std::vector<curves::Bern<double> > res;
+-  for (unsigned int i = 0; i <= (unsigned int)degree; ++i) res.push_back(curves::Bern<double>(degree, i));
++std::vector<ndcurves::Bern<double> > ComputeBersteinPolynoms(const unsigned int degree) {
++  std::vector<ndcurves::Bern<double> > res;
++  for (unsigned int i = 0; i <= (unsigned int)degree; ++i) res.push_back(ndcurves::Bern<double>(degree, i));
+   return res;
+ }
+ 
+diff --git a/tests/test-bezier-symbolic.cpp b/tests/test-bezier-symbolic.cpp
+index fe1c487..3154d05 100644
+--- tests/test-bezier-symbolic.cpp
++++ tests/test-bezier-symbolic.cpp
+@@ -23,7 +23,7 @@
+ #include <hpp/bezier-com-traj/data.hh>
+ #include <hpp/centroidal-dynamics/centroidal_dynamics.hh>
+ #include "test_helper.hh"
+-#include <curves/bezier_curve.h>
++#include <ndcurves/bezier_curve.h>
+ 
+ using namespace bezier_com_traj;
+ const double T = 1.5;
+@@ -70,8 +70,8 @@ BOOST_AUTO_TEST_CASE(symbolic_eval_c) {
+   point_t y(1, 0.2, 4.5);
+   pts[2] = y;
+ 
+-  bezier_t c(pts.begin(), pts.end(),0., T);
+-  bezier_wp_t c_sym(wps.begin(), wps.end(),0., T);
++  bezier_t c(pts.begin(), pts.end(), 0., T);
++  bezier_wp_t c_sym(wps.begin(), wps.end(), 0., T);
+ 
+   double t = 0.;
+   while (t < T) {
+@@ -86,9 +86,9 @@ BOOST_AUTO_TEST_CASE(symbolic_eval_dc) {
+   point_t y(1, 0.2, 4.5);
+   pts[2] = y;
+ 
+-  bezier_t c(pts.begin(), pts.end(),0., T);
++  bezier_t c(pts.begin(), pts.end(), 0., T);
+   bezier_t dc = c.compute_derivate(1);
+-  bezier_wp_t c_sym(wps.begin(), wps.end(),0., T);
++  bezier_wp_t c_sym(wps.begin(), wps.end(), 0., T);
+   bezier_wp_t dc_sym = c_sym.compute_derivate(1);
+ 
+   double t = 0.;
+@@ -104,9 +104,9 @@ BOOST_AUTO_TEST_CASE(symbolic_eval_ddc) {
+   point_t y(1, 0.2, 4.5);
+   pts[2] = y;
+ 
+-  bezier_t c(pts.begin(), pts.end(),0., T);
++  bezier_t c(pts.begin(), pts.end(), 0., T);
+   bezier_t ddc = c.compute_derivate(2);
+-  bezier_wp_t c_sym(wps.begin(), wps.end(),0., T);
++  bezier_wp_t c_sym(wps.begin(), wps.end(), 0., T);
+   bezier_wp_t ddc_sym = c_sym.compute_derivate(2);
+ 
+   double t = 0.;
+@@ -122,9 +122,9 @@ BOOST_AUTO_TEST_CASE(symbolic_eval_jc) {
+   point_t y(1, 0.2, 4.5);
+   pts[2] = y;
+ 
+-  bezier_t c(pts.begin(), pts.end(),0., T);
++  bezier_t c(pts.begin(), pts.end(), 0., T);
+   bezier_t jc = c.compute_derivate(3);
+-  bezier_wp_t c_sym(wps.begin(), wps.end(),0., T);
++  bezier_wp_t c_sym(wps.begin(), wps.end(), 0., T);
+   bezier_wp_t jc_sym = c_sym.compute_derivate(3);
+ 
+   double t = 0.;
+@@ -140,8 +140,8 @@ BOOST_AUTO_TEST_CASE(symbolic_split_c) {
+   point_t y(1, 0.2, 4.5);
+   pts[2] = y;
+ 
+-  bezier_t c(pts.begin(), pts.end(),0., T);
+-  bezier_wp_t c_sym(wps.begin(), wps.end(),0., T);
++  bezier_t c(pts.begin(), pts.end(), 0., T);
++  bezier_wp_t c_sym(wps.begin(), wps.end(), 0., T);
+ 
+   double a, b, t, t1, t2;
+   for (size_t i = 0; i < 100; ++i) {
+@@ -169,7 +169,7 @@ BOOST_AUTO_TEST_CASE(symbolic_split_c_bench) {
+   point_t y(1, 0.2, 4.5);
+   pts[2] = y;
+ 
+-  bezier_wp_t c_sym(wps.begin(), wps.end(),0., T);
++  bezier_wp_t c_sym(wps.begin(), wps.end(), 0., T);
+ 
+   std::vector<double> values;
+   for (int i = 0; i < 100000; ++i) values.push_back((double)rand() / RAND_MAX);
+@@ -190,7 +190,7 @@ BOOST_AUTO_TEST_CASE(symbolic_split_w) {
+   bezier_wp_t::t_point_t wps = computeWwaypoints(buildPData(), T);
+   point_t y(1, 0.2, 4.5);
+ 
+-  bezier_wp_t w(wps.begin(), wps.end(),0., T);
++  bezier_wp_t w(wps.begin(), wps.end(), 0., T);
+ 
+   double a, b, t, t1, t2;
+   for (size_t i = 0; i < 100; ++i) {
+@@ -212,7 +212,7 @@ BOOST_AUTO_TEST_CASE(symbolic_split_w_bench) {
+   bezier_wp_t::t_point_t wps = computeWwaypoints(buildPData(), T);
+   point_t y(1, 0.2, 4.5);
+ 
+-  bezier_wp_t w(wps.begin(), wps.end(),0., T);
++  bezier_wp_t w(wps.begin(), wps.end(), 0., T);
+ 
+   std::vector<double> values;
+   for (int i = 0; i < 100000; ++i) values.push_back((double)rand() / RAND_MAX);

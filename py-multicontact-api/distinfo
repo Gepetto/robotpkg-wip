@@ -1,3 +1,5 @@
 SHA1 (multicontact-api-2.1.0.tar.gz) = 7639cefdb28c5eb0f992b6bb604f97a4cf82dec6
 RMD160 (multicontact-api-2.1.0.tar.gz) = 6ae2f6c5214a1da4c4680ed80c7b2c27de32b43d
 Size (multicontact-api-2.1.0.tar.gz) = 82404503 bytes
+SHA1 (patch-21) = 4948a8981ed94c766bf440371f4bd8074042894d
+SHA1 (patch-aa) = 0eaa23c5ef1e463afe91d8b6302f2dd1ef9caecc

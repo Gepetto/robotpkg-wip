@@ -15,8 +15,8 @@ USE_PYTHON_ONLY+=	yes
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/${NAME}/depend.mk
-include ../../math/curves/depend.mk
-include ../../math/py-curves/depend.mk
+include ../../math/ndcurves/depend.mk
+include ../../math/py-ndcurves/depend.mk
 include ../../math/py-eigenpy/depend.mk
 include ../../math/py-pinocchio/depend.mk
 

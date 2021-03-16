@@ -37,6 +37,7 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/tests/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/tests/robot_data_test.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/tests/test_balance_ctrl_openhrp.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/tests/test_control_manager.py
+${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/tests/test_torque_offset_estimator.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/tests/test_velocity_filters.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/torque_offset_estimator/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/torque_offset_estimator/wrap.so

@@ -12,3 +12,4 @@ ${PYTHON_SITELIB}/sot_application/acceleration/precomputed_meta_tasks.py
 ${PYTHON_SITELIB}/sot_application/velocity/__init__.py
 ${PYTHON_SITELIB}/sot_application/velocity/precomputed_meta_tasks.py
 ${PYTHON_SITELIB}/sot_application/velocity/precomputed_tasks.py
+share/sot-application/package.xml

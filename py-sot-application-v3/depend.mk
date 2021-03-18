@@ -17,7 +17,8 @@ SYSTEM_SEARCH.py-sot-application-v3=								\
   'include/sot/application/config.hh:/SOT_APPLICATION_VERSION /s/[^0-9.]//gp'			\
   '${PYTHON_SYSLIBSEARCH}/sot_application/__init__.py'						\
   'lib/cmake/sot-application/sot-applicationConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
-  'lib/pkgconfig/sot-application.pc:/Version/s/[^0-9.]//gp'
+  'lib/pkgconfig/sot-application.pc:/Version/s/[^0-9.]//gp'					\
+  'share/sot-application/package.xml:/<version>/s/[^0-9.]//gp'
 
 DEPEND_USE+=		py-sot-application-v3
 

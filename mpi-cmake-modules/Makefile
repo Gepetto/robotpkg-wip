@@ -5,6 +5,7 @@
 ORG=			machines-in-motion
 NAME=			mpi-cmake-modules
 VERSION=		1.0.0
+PKGREVISION=		1
 
 DIST_SUBDIR=		${NAME}
 DISTNAME=		v${VERSION}
@@ -22,7 +23,6 @@ LICENSE=		modified-bsd
 MAINTAINER=		gsaurel@laas.fr
 
 
-include ../../wip/py-breathe/depend.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk

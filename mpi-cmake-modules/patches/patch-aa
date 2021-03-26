@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2021-02-03 13:08:24.000000000 +0100
++++ CMakeLists.txt	2021-03-26 10:38:52.910700272 +0100
+@@ -80,7 +80,7 @@
+ #
+ # building documentation
+ #
+-add_documentation()
++#add_documentation()
+ 
+ #
+ # put the cmake files at the right place

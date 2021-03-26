@@ -70,7 +70,6 @@ SUBDIR+=	prf-roboticsgroup-gazebo-plugins
 SUBDIR+=	prf-teleop-tools
 SUBDIR+=	py-anymal-rbprm
 SUBDIR+=	py-bmtools
-SUBDIR+=	py-breathe
 SUBDIR+=	py-casadi
 SUBDIR+=	py-cvxpy
 SUBDIR+=	py-dill

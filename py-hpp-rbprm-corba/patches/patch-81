@@ -1,0 +1,60 @@
+From 98126ad1ba94fe339238f308e998844115a1e338 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Wed, 7 Apr 2021 12:00:18 +0200
+Subject: [PATCH] =?UTF-8?q?curves=20=E2=86=92=20ndcurves?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ script/tools/disp_bezier.py                | 7 ++-----
+ src/hpp/corbaserver/rbprm/rbprmfullbody.py | 7 ++++---
+ 2 files changed, 6 insertions(+), 8 deletions(-)
+
+diff --git a/script/tools/disp_bezier.py b/script/tools/disp_bezier.py
+index 6df4215..cf55d98 100644
+--- script/tools/disp_bezier.py
++++ script/tools/disp_bezier.py
+@@ -1,13 +1,10 @@
+-from curves import bezier, polynomial
+-
+ from numpy import matrix
+-from numpy.linalg import norm
+-
+ 
++from ndcurves import bezier, polynomial
+ 
+ 
+ def displayBezierCurve(r,curve,step=0.001,color=[0.85, 0.75, 0.15, 1.0],name=None,offset = None):
+-    if name==None:
++    if name is None:
+         name="bezier_curve"
+         list = r.client.gui.getNodeList()
+         i=0
+diff --git a/src/hpp/corbaserver/rbprm/rbprmfullbody.py b/src/hpp/corbaserver/rbprm/rbprmfullbody.py
+index 2a327ae..014a5fd 100755
+--- src/hpp/corbaserver/rbprm/rbprmfullbody.py
++++ src/hpp/corbaserver/rbprm/rbprmfullbody.py
+@@ -16,10 +16,11 @@
+ # hpp-manipulation-corba.  If not, see
+ # <http://www.gnu.org/licenses/>.
+ 
++from numpy import array, matrix
++
+ from hpp.corbaserver.rbprm import Client as RbprmClient
+ from hpp.corbaserver.robot import Robot
+-from curves import bezier
+-from numpy import array, matrix
++from ndcurves import bezier
+ 
+ 
+ # # Load and handle a RbprmFullbody robot for rbprm planning
+@@ -31,7 +32,7 @@ class FullBody(Robot):
+     def __init__(self, robotName = None, rootJointType = None, load = True, client = None, hppcorbaClient = None, clientRbprm=None):
+         Robot.__init__(self, robotName, rootJointType, False, client, hppcorbaClient)
+         self.tf_root = "base_link"
+-        if clientRbprm == None:
++        if clientRbprm is None:
+             self.clientRbprm = RbprmClient()
+         else:
+             self.clientRbprm = clientRbprm

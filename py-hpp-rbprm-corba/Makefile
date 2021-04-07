@@ -4,7 +4,7 @@
 
 HPP_PACKAGE=		hpp-rbprm-corba
 HPP_COMMENT=		Corba server for RB-PRM
-PKGREVISION=		2
+PKGREVISION=		3
 
 CATEGORIES=		wip
 
@@ -23,13 +23,15 @@ include ../../wip/py-hpp-rbprm/depend.mk
 include ../../wip/py-hpp-affordance-corba/depend.mk
 
 include ../../graphics/py-qt-hpp-gepetto-viewer/depend.mk
+include ../../mapping/octomap/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../path/hpp-core/depend.mk
 include ../../path/py-hpp-corbaserver/depend.mk
 include ../../path/hpp-util/depend.mk
-include ../../mapping/octomap/depend.mk
 include ../../simulation/hpp-environments/depend.mk
 include ../../simulation/py-hpp-environments/depend.mk
+include ../../robots/example-robot-data/depend.mk
+include ../../robots/py-example-robot-data/depend.mk
 
 include ../../middleware/omniORB/depend.mk
 include ../../middleware/py-omniORBpy/depend.mk

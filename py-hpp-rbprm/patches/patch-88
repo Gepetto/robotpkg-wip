@@ -1,0 +1,39 @@
+From 8f4c44a719691c30520abff3b1e835a1992b2aac Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Wed, 7 Apr 2021 12:51:54 +0200
+Subject: [PATCH] fix boost bind placeholders
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+otherwise, with a recent Boost:
+
+/usr/include/boost/bind.hpp:36:1: note: « #pragma message: The practice
+of declaring the Bind placeholders (_1, _2, ...) in the global namespace
+is deprecated. Please use <boost/bind/bind.hpp> + using namespace
+boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain
+the current behavior. »
+---
+ tests/tools-obstacle.hh | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/tests/tools-obstacle.hh b/tests/tools-obstacle.hh
+index 5e4ab6b..1702375 100644
+--- tests/tools-obstacle.hh
++++ tests/tools-obstacle.hh
+@@ -21,6 +21,7 @@
+ #define TOOLSOBSTACLE_HH
+ 
+ #include <pinocchio/parsers/urdf.hpp>
++#include <boost/bind/bind.hpp>
+ #include <hpp/pinocchio/urdf/util.hh>
+ #include <hpp/pinocchio/device.hh>
+ #include <hpp/pinocchio/fwd.hh>
+@@ -40,6 +41,7 @@
+ 
+ using namespace hpp;
+ using namespace hpp::core;
++using namespace boost::placeholders;
+ 
+ void addAffObjects(hpp::core::ProblemSolver& problemSolver, const affordance::OperationBases_t& ops,
+                    const std::vector<affordance::CollisionObjects_t>& affObjs,

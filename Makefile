@@ -86,7 +86,6 @@ SUBDIR+=	py-hpp-rbprm-corba
 #SUBDIR+=	py-hpp-rbprm-robot-data
 SUBDIR+=	py-hpp-romeo
 #SUBDIR+=	py-hpp-spline
-SUBDIR+=	py-hyq-rbprm
 SUBDIR+=	py-libnabo
 SUBDIR+=	py-mavlink
 SUBDIR+=	py-morse

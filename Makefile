@@ -80,7 +80,6 @@ SUBDIR+=	py-gurobi
 SUBDIR+=	py-hqp
 SUBDIR+=	py-hpp-centroidal-dynamics
 SUBDIR+=	py-hpp-hrp2
-SUBDIR+=	py-hpp-rbprm-corba
 #SUBDIR+=	py-hpp-rbprm-robot-data
 #SUBDIR+=	py-hpp-spline
 SUBDIR+=	py-libnabo

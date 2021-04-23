@@ -27,7 +27,6 @@ SUBDIR+=	gazebo-spring
 SUBDIR+=	hatponboard-lib
 SUBDIR+=	head-action
 SUBDIR+=	hey5-description
-SUBDIR+=	hpp-affordance
 SUBDIR+=	hpp-benchmark
 SUBDIR+=	hrp2-14-description
 SUBDIR+=	hrp2-dev

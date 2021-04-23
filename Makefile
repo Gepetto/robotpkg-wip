@@ -120,7 +120,6 @@ SUBDIR+=	py-sot-tiago
 SUBDIR+=	py-sot-tools-v3
 SUBDIR+=	py-sot-torque-control
 SUBDIR+=	py-talos-dev
-SUBDIR+=	py-talos-rbprm
 SUBDIR+=	py-talos-torque-control
 SUBDIR+=	py-tiago-tutorials
 SUBDIR+=	pyrene-motions

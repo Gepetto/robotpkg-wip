@@ -78,7 +78,6 @@ SUBDIR+=	py-ecos
 SUBDIR+=	py-example-adder
 SUBDIR+=	py-gurobi
 SUBDIR+=	py-hqp
-SUBDIR+=	py-hpp-affordance-corba
 SUBDIR+=	py-hpp-centroidal-dynamics
 SUBDIR+=	py-hpp-hrp2
 SUBDIR+=	py-hpp-rbprm-corba

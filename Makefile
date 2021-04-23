@@ -81,7 +81,6 @@ SUBDIR+=	py-hqp
 SUBDIR+=	py-hpp-affordance-corba
 SUBDIR+=	py-hpp-centroidal-dynamics
 SUBDIR+=	py-hpp-hrp2
-SUBDIR+=	py-hpp-rbprm
 SUBDIR+=	py-hpp-rbprm-corba
 #SUBDIR+=	py-hpp-rbprm-robot-data
 SUBDIR+=	py-hpp-romeo

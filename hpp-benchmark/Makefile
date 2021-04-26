@@ -5,6 +5,7 @@
 HPP_PACKAGE=	hpp-benchmark
 HPP_COMMENT=	Benchmark for HPP
 HPP_VERSION=	4.5.0
+PKGREVISION=	1
 
 ROSNAME=	$(subst -,_,${HPP_PACKAGE})
 DISTNAME=	${ROSNAME}-${HPP_VERSION}
@@ -20,8 +21,8 @@ DYNAMIC_PLIST_DIRS+=	share/doc/${ROSNAME}
 
 include ../../meta-pkgs/hpp/Makefile.common
 
-include ../../wip/py-hpp-baxter/depend.mk
-include ../../wip/py-hpp-romeo/depend.mk
+include ../../robots/py-hpp-baxter/depend.mk
+include ../../robots/py-hpp-romeo/depend.mk
 
 include ../../graphics/openscenegraph/depend.mk
 include ../../graphics/py-qt-gepetto-viewer/depend.mk

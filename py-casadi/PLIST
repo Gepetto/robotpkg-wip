@@ -167,6 +167,8 @@ lib/libcasadi_linsol_symbolicqr.so
 lib/libcasadi_linsol_symbolicqr.so.3.6
 lib/libcasadi_linsol_tridiag.so
 lib/libcasadi_linsol_tridiag.so.3.6
+lib/libcasadi_nlpsol_ipopt.so
+lib/libcasadi_nlpsol_ipopt.so.3.6
 lib/libcasadi_nlpsol_qrsqp.so
 lib/libcasadi_nlpsol_qrsqp.so.3.6
 lib/libcasadi_nlpsol_scpgen.so

@@ -19,7 +19,7 @@ CMAKE_ARGS+=		-DBUILD_MAVLINK_SUPPORT=OFF
 CMAKE_ARGS+= 		-DPYMORSE_SUPPORT=OFF
 
 #include ../../interfaces/ros-common-msgs/depend.mk
-include ../../wip/py-yaml/depend.mk
 include ../../sysutils/py-catkin-pkg/depend.mk
 include ../../simulation/morse/depend.mk
+include ../../mk/sysdep/py-yaml.mk
 include ../../mk/robotpkg.mk

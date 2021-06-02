@@ -4,7 +4,7 @@
 
 DISTNAME=		msgconnector-${VERSION}
 VERSION=		2.13.0
-PKGREVISION=    	
+PKGREVISION=		1
 CATEGORIES=		planning
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=msgconnector/}
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_OPENROBOTS}hatp/msgconnector
@@ -43,11 +43,6 @@ endef
 define PKG_OPTION_SET.yarp
   CMAKE_ARGS+= -DCOMPILE_BRIDGE_YARP=ON
   include ../../middleware/yarp/depend.mk
-endef
-
-define PKG_OPTION_SET.liboro
-  CMAKE_ARGS+= -DCOMPILE_BRIDGE_ORO=ON
-  include ../../knowledge/liboro/depend.mk
 endef
 
 #define PKG_OPTION_SET.server

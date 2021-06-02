@@ -34,7 +34,6 @@ SUBDIR+=	infuse-asn1-conversions
 SUBDIR+=	infuse-asn1-types
 SUBDIR+=	infuse-envire
 SUBDIR+=	infuse-idl
-SUBDIR+=	infuse-novatel-gps-driver-ros
 SUBDIR+=	jrl-walkgen-v3
 SUBDIR+=	jsbsim
 SUBDIR+=	libhatp

@@ -2,6 +2,7 @@
 # Created:			Rohan Budhiraja on Wed Dec 16 15:33:40 CET 2015
 #
 
+PKGREVISION=		1
 ORG=			stack-of-tasks
 NAME=			sot-core
 VERSION=		4.11.6

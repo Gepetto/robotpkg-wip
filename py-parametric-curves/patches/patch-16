@@ -1,0 +1,113 @@
+From 262c6f937e2adeccb604fa401aca5d8fb16fada6 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Thu, 3 Jun 2021 16:38:30 +0200
+Subject: [PATCH] remove dynamic exception specifications for C++17
+
+---
+ include/parametric-curves/serialization/archive.hpp | 12 ++++++------
+ include/parametric-curves/spatial/force-curve.hpp   |  4 ++--
+ include/parametric-curves/spline.hpp                |  4 ++--
+ 3 files changed, 10 insertions(+), 10 deletions(-)
+
+diff --git a/include/parametric-curves/serialization/archive.hpp b/include/parametric-curves/serialization/archive.hpp
+index d2f88da..b27cf3f 100644
+--- include/parametric-curves/serialization/archive.hpp
++++ include/parametric-curves/serialization/archive.hpp
+@@ -20,7 +20,7 @@ struct Serializable {
+ 
+  public:
+   /// \brief Loads a Derived object from a text file.
+-  void loadFromText(const std::string& filename) throw(std::invalid_argument) {
++  void loadFromText(const std::string& filename) {
+     std::ifstream ifs(filename.c_str());
+     if (ifs) {
+       boost::archive::text_iarchive ia(ifs);
+@@ -32,7 +32,7 @@ struct Serializable {
+   }
+ 
+   /// \brief Saved a Derived object as a text file.
+-  void saveAsText(const std::string& filename) const throw(std::invalid_argument) {
++  void saveAsText(const std::string& filename) const {
+     std::ofstream ofs(filename.c_str());
+     if (ofs) {
+       boost::archive::text_oarchive oa(ofs);
+@@ -44,7 +44,7 @@ struct Serializable {
+   }
+ 
+   /// \brief Loads a Derived object from an XML file.
+-  void loadFromXML(const std::string& filename, const std::string& tag_name) throw(std::invalid_argument) {
++  void loadFromXML(const std::string& filename, const std::string& tag_name) {
+     assert(!tag_name.empty());
+     std::ifstream ifs(filename.c_str());
+     if (ifs) {
+@@ -57,7 +57,7 @@ struct Serializable {
+   }
+ 
+   /// \brief Saved a Derived object as an XML file.
+-  void saveAsXML(const std::string& filename, const std::string& tag_name) const throw(std::invalid_argument) {
++  void saveAsXML(const std::string& filename, const std::string& tag_name) const {
+     assert(!tag_name.empty());
+     std::ofstream ofs(filename.c_str());
+     if (ofs) {
+@@ -70,7 +70,7 @@ struct Serializable {
+   }
+ 
+   /// \brief Loads a Derived object from an binary file.
+-  void loadFromBinary(const std::string& filename) throw(std::invalid_argument) {
++  void loadFromBinary(const std::string& filename) {
+     std::ifstream ifs(filename.c_str());
+     if (ifs) {
+       boost::archive::binary_iarchive ia(ifs);
+@@ -82,7 +82,7 @@ struct Serializable {
+   }
+ 
+   /// \brief Saved a Derived object as an binary file.
+-  void saveAsBinary(const std::string& filename) const throw(std::invalid_argument) {
++  void saveAsBinary(const std::string& filename) const {
+     std::ofstream ofs(filename.c_str());
+     if (ofs) {
+       boost::archive::binary_oarchive oa(ofs);
+diff --git a/include/parametric-curves/spatial/force-curve.hpp b/include/parametric-curves/spatial/force-curve.hpp
+index e683506..9f20eaa 100644
+--- include/parametric-curves/spatial/force-curve.hpp
++++ include/parametric-curves/spatial/force-curve.hpp
+@@ -118,7 +118,7 @@ struct ForceCurve : public AbstractCurve<Numeric, Eigen::Matrix<Numeric, 6, 1> >
+   BOOST_SERIALIZATION_SPLIT_MEMBER()
+ 
+  public:
+-  bool loadFromFile(const std::string& filename) throw(std::invalid_argument) {
++  bool loadFromFile(const std::string& filename) {
+     std::ifstream ifs(filename.c_str());
+     if (ifs) {
+       boost::archive::text_iarchive ia(ifs);
+@@ -133,7 +133,7 @@ struct ForceCurve : public AbstractCurve<Numeric, Eigen::Matrix<Numeric, 6, 1> >
+   }
+ 
+   /// \brief Saved a Derived object as a text file.
+-  bool saveToFile(const std::string& filename) const throw(std::invalid_argument) {
++  bool saveToFile(const std::string& filename) const {
+     std::ofstream ofs(filename.c_str());
+     if (ofs) {
+       boost::archive::text_oarchive oa(ofs);
+diff --git a/include/parametric-curves/spline.hpp b/include/parametric-curves/spline.hpp
+index 49a98eb..26e4738 100644
+--- include/parametric-curves/spline.hpp
++++ include/parametric-curves/spline.hpp
+@@ -342,7 +342,7 @@ struct Spline : public AbstractCurve<Numeric, Point> {
+   BOOST_SERIALIZATION_SPLIT_MEMBER()
+ 
+  public:
+-  bool loadFromFile(const std::string& filename) throw(std::invalid_argument) {
++  bool loadFromFile(const std::string& filename) {
+     std::ifstream ifs(filename.c_str());
+     if (ifs) {
+       boost::archive::text_iarchive ia(ifs);
+@@ -357,7 +357,7 @@ struct Spline : public AbstractCurve<Numeric, Point> {
+   }
+ 
+   /// \brief Saved a Derived object as a text file.
+-  bool saveToFile(const std::string& filename) const throw(std::invalid_argument) {
++  bool saveToFile(const std::string& filename) const {
+     std::ofstream ofs(filename.c_str());
+     if (ofs) {
+       boost::archive::text_oarchive oa(ofs);

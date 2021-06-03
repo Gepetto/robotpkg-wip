@@ -2,6 +2,7 @@
 # Created:			Olivier Stasse, on Tue. 5th Jan, 2018
 #
 
+PKGREVISION=		1
 ORG=			stack-of-tasks
 NAME=			parametric-curves
 VERSION=		1.4.0

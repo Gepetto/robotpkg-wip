@@ -2,23 +2,20 @@
 # Created:			Guilhem Saurel on Thu, 20 Feb 2020
 #
 
-ROS_REPO=	Gepetto
-ROS_PKG=	ouster-gazebo-simulation
-ROS_VERSION=	2.0.2
-ROS_METAPKG=	yes
-PKGREVISION=	1
-
-PKGNAME=	ros-${ROS_PKG}-${ROS_VERSION}
-DISTNAME?=	${ROS_VERSION}
-ROS_PKGURL?=	${ROS_PKG}/archive/
-MASTER_SITES?=	${MASTER_SITE_GITHUB:=${ROS_REPO}/${ROS_PKGURL}}
-DIST_SUBDIR?=	ros/${ROS_PKG}
-ROS_GITTAG?=	${ROS_VERSION}
-WRKSRC?=	${WRKDIR}/${ROS_PKG}-${ROS_GITTAG}
+ORG=		Gepetto
+NAME=		ouster-gazebo-simulation
+VERSION=	2.1.0
 
 CATEGORIES=	wip
-ROS_COMMENT=	the simulation of Ouster OS1-64 with ros and gazebo
+COMMENT=	the simulation of Ouster OS1-64 with ros and gazebo
 
+CONFIGURE_DIRS=		build
+CMAKE_ARG_PATH=		..
+
+pre-configure:
+	${RUN}${MKDIR} ${WRKSRC}/build
+
+include ../../devel/jrl-cmakemodules/Makefile.common
 
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../math/ros-geometry/depend.mk

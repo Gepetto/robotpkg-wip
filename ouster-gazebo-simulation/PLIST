@@ -1,7 +1,12 @@
-@comment Thu Feb 20 15:28:00 CET 2020
+@comment Thu Aug 5 18:21:09 CEST 2021
+include/ouster/gazebo/simulation/config.hh
+include/ouster/gazebo/simulation/deprecated.hh
+include/ouster/gazebo/simulation/warning.hh
 include/ouster_gazebo_plugins/GazeboRosOusterLaser.h
 lib/libgazebo_ros_ouster_gpu_laser.so
 lib/libgazebo_ros_ouster_laser.so
+lib/ouster_os1_64/test_ouster.py
+lib/pkgconfig/ouster-gazebo-simulation.pc
 lib/pkgconfig/ouster_gazebo_plugins.pc
 lib/pkgconfig/ouster_os1_64.pc
 share/ouster_gazebo_plugins/cmake/ouster_gazebo_pluginsConfig-version.cmake
@@ -10,6 +15,7 @@ share/ouster_gazebo_plugins/package.xml
 share/ouster_os1_64/cmake/ouster_os1_64Config-version.cmake
 share/ouster_os1_64/cmake/ouster_os1_64Config.cmake
 share/ouster_os1_64/launch/os1_64_alone.launch
+share/ouster_os1_64/launch/test_ouster.test
 share/ouster_os1_64/meshes/os1_64.stl
 share/ouster_os1_64/meshes/os1_64_reduced.stl
 share/ouster_os1_64/package.xml

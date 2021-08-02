@@ -1,0 +1,32 @@
+From ff0ef6bcf81e04eb4b9e3ff96d4a25dfc9f35144 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Mon, 2 Aug 2021 14:45:18 +0200
+Subject: [PATCH] [CMake] set INSTALL_RPATH for python on linux
+
+To avoid the need to set `LD_LIBRARY_PATH` when the
+`CMAKE_INSTALL_PREFIX` is not a standard one.
+---
+ src/dynamic_graph/CMakeLists.txt | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/src/dynamic_graph/CMakeLists.txt b/src/dynamic_graph/CMakeLists.txt
+index 19e38cb..139b315 100644
+--- src/dynamic_graph/CMakeLists.txt
++++ src/dynamic_graph/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-# Copyright 2010-2020, Florent Lamiraux, Thomas Moulard, Olivier Stasse, Guilhem Saurel, JRL, CNRS/AIST, LAAS-CNRS
++# Copyright 2010-2021, Florent Lamiraux, Thomas Moulard, Olivier Stasse, Guilhem Saurel, JRL, CNRS/AIST, LAAS-CNRS
+ 
+ SET(PYTHON_MODULE wrap)
+ 
+@@ -17,6 +17,10 @@ TARGET_LINK_BOOST_PYTHON(${PYTHON_MODULE} PRIVATE)
+ # Remove prefix lib
+ SET_TARGET_PROPERTIES(${PYTHON_MODULE} PROPERTIES PREFIX "")
+ 
++IF(UNIX AND NOT APPLE)
++  SET_TARGET_PROPERTIES(${PYTHON_MODULE} PROPERTIES INSTALL_RPATH "\$ORIGIN/../../..")
++ENDIF()
++
+ INSTALL(TARGETS ${PYTHON_MODULE}
+   EXPORT ${TARGETS_EXPORT_NAME}
+   DESTINATION ${PYTHON_SITELIB}/dynamic_graph)

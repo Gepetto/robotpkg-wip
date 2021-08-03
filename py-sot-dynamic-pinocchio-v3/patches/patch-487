@@ -1,0 +1,39 @@
+From b56317919889c9bbde122acb7ae31b12a88fa10f Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Mon, 2 Aug 2021 17:13:01 +0200
+Subject: [PATCH] dynamic-graph: configure RPATH also for installed modules
+
+---
+ python.cmake | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/python.cmake b/python.cmake
+index ebf3aa0..07b02b9 100644
+--- cmake/python.cmake
++++ cmake/python.cmake
+@@ -318,10 +318,13 @@ MACRO(DYNAMIC_GRAPH_PYTHON_MODULE SUBMODULENAME LIBRARYNAME TARGETNAME)
+ 
+   FILE(MAKE_DIRECTORY ${PROJECT_BINARY_DIR}/src/dynamic_graph/${SUBMODULENAME})
+ 
++  SET(PYTHON_INSTALL_DIR "${PYTHON_SITELIB}/dynamic_graph/${SUBMODULENAME}")
++  STRING(REGEX REPLACE "[^/]+" ".." PYTHON_INSTALL_DIR_REVERSE ${PYTHON_INSTALL_DIR})
++
+   SET_TARGET_PROPERTIES(${PYTHON_MODULE}
+     PROPERTIES PREFIX ""
+     OUTPUT_NAME dynamic_graph/${SUBMODULENAME}/wrap
+-    BUILD_RPATH ${DYNAMIC_GRAPH_PLUGINDIR}
++    BUILD_RPATH "${DYNAMIC_GRAPH_PLUGINDIR}:\$ORIGIN/${PYTHON_INSTALL_DIR_REVERSE}/${DYNAMIC_GRAPH_PLUGINDIR}"
+    )
+ 
+   IF (UNIX AND NOT APPLE)
+@@ -340,7 +343,6 @@ MACRO(DYNAMIC_GRAPH_PYTHON_MODULE SUBMODULENAME LIBRARYNAME TARGETNAME)
+   #
+   # Installation
+   #
+-  SET(PYTHON_INSTALL_DIR ${PYTHON_SITELIB}/dynamic_graph/${SUBMODULENAME})
+ 
+   INSTALL(TARGETS ${PYTHON_MODULE}
+     DESTINATION
+-- 
+2.32.0
+

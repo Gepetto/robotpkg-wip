@@ -5,6 +5,7 @@
 ORG=			stack-of-tasks
 NAME=			dynamic-graph
 VERSION=		4.4.0
+PKGREVISION=		1
 
 PKGNAME=		${NAME}-v3-${VERSION}
 

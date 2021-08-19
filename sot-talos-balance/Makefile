@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-talos-balance
-VERSION=		2.0.2
+VERSION=		2.0.3
 
 CATEGORIES=		wip
 COMMENT=		Balance for TALOS humanoid robot

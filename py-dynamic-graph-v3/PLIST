@@ -4,6 +4,7 @@ include/dynamic-graph/python/config.hh
 include/dynamic-graph/python/convert-dg-to-py.hh
 include/dynamic-graph/python/deprecated.hh
 include/dynamic-graph/python/dynamic-graph-py.hh
+include/dynamic-graph/python/fwd.hh
 include/dynamic-graph/python/interpreter.hh
 include/dynamic-graph/python/module.hh
 include/dynamic-graph/python/python-compat.hh

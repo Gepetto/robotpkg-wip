@@ -1,0 +1,1 @@
+PyCppAD is an open source framework which provides bindings for the CppAD Automatic Differentiation C++ library in Python. PyCppAD also includes support for the CppADCodeGen, C++ library, which exploits CppAD functionality to perform code generation.

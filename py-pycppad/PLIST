@@ -1,15 +1,15 @@
 @comment Fri Aug 20 10:58:14 CEST 2021
 include/pycppad/ad.hpp
 include/pycppad/ad_fun.hpp
-include/pycppad/codegen/cg.hpp
-include/pycppad/codegen/cppadcg-scalar.hpp
-include/pycppad/config.hh
+include/pycppad/cast.hpp
+include/pycppad/config.hpp
 include/pycppad/cppad-scalar.hpp
 include/pycppad/cppad.hpp
-include/pycppad/deprecated.hh
+include/pycppad/deprecated.hpp
 include/pycppad/fwd.hpp
 include/pycppad/independent.hpp
-include/pycppad/warning.hh
+include/pycppad/utils/scope.hpp
+include/pycppad/warning.hpp
 lib/cmake/pycppad/pycppadConfig.cmake
 lib/cmake/pycppad/pycppadConfigVersion.cmake
 lib/cmake/pycppad/pycppadTargets-release.cmake

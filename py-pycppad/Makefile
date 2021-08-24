@@ -5,13 +5,14 @@
 ORG=			Simple-Robotics
 NAME=			pycppad
 VERSION=		1.1.0
+PKGREVISION=		1
 
 CATEGORIES=		math
 COMMENT=		CppAD bindings to python
 
 PYTHON_SELF_CONFLICT=	yes
 
-CMAKE_ARGS+=		-DBUILD_CODEGEN_BINDINGS=ON
+CMAKE_ARGS+=		-DBUILD_WITH_CPPAD_CODEGEN_BINDINGS=ON
 
 USE_BOOST_LIBS=		python
 Boost_PYTHON_LIBRARY=	$(filter %.so,${SYSTEM_FILES.boost-lib-python})

@@ -2,6 +2,8 @@
 include/pycppad/ad.hpp
 include/pycppad/ad_fun.hpp
 include/pycppad/cast.hpp
+include/pycppad/codegen/cg.hpp
+include/pycppad/codegen/cppadcg-scalar.hpp
 include/pycppad/config.hpp
 include/pycppad/cppad-scalar.hpp
 include/pycppad/cppad.hpp

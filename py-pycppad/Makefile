@@ -4,8 +4,7 @@
 
 ORG=			Simple-Robotics
 NAME=			pycppad
-VERSION=		1.1.0
-PKGREVISION=		1
+VERSION=		1.2.0
 
 CATEGORIES=		math
 COMMENT=		CppAD bindings to python

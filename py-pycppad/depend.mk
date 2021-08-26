@@ -19,7 +19,8 @@ SYSTEM_SEARCH.py-pycppad=\
   '${PYTHON_SYSLIBSEARCH}/pycppad/*.so'						\
   '${PYTHON_SYSLIBSEARCH}/pycppad/__init__.py'					\
   'lib/cmake/pycppad/pycppadConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
-  'lib/pkgconfig/pycppad.pc:/Version/s/[^0-9.]//gp'
+  'lib/pkgconfig/pycppad.pc:/Version/s/[^0-9.]//gp'				\
+  'share/pycppad/package.xml:/<version>/s/[^0-9.]//gp'
 
 DEPEND_USE+=		py-pycppad
 DEPEND_ABI.py-pycppad?=	${PKGTAG.python-}pycppad>=2.2.0

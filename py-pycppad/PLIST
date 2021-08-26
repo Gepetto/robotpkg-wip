@@ -3,7 +3,10 @@ include/pycppad/ad.hpp
 include/pycppad/ad_fun.hpp
 include/pycppad/cast.hpp
 include/pycppad/codegen/cg.hpp
+include/pycppad/codegen/code-handler.hpp
 include/pycppad/codegen/cppadcg-scalar.hpp
+include/pycppad/codegen/lang/c/lang-c-default-var-name-gen.hpp
+include/pycppad/codegen/lang/c/language-c.hpp
 include/pycppad/config.hpp
 include/pycppad/cppad-scalar.hpp
 include/pycppad/cppad.hpp
@@ -20,4 +23,5 @@ lib/libpycppad.so
 lib/libpycppad.so.${PKGVERSION}
 lib/pkgconfig/pycppad.pc
 ${PYTHON_SITELIB}/pycppad/__init__.py
-${PYTHON_SITELIB}/pycppad/pycppad${PYTHON_EXT_SUFFIX}
+${PYTHON_SITELIB}/pycppad/pycppad_pywrap${PYTHON_EXT_SUFFIX}
+share/pycppad/package.xml

@@ -1,0 +1,577 @@
+From 568a9d40e9a21073e36f8bfc83b1e5ff71efeb4a Mon Sep 17 00:00:00 2001
+From: ahcorde <ahcorde@gmail.com>
+Date: Thu, 26 Mar 2020 11:14:36 +0100
+Subject: [PATCH 01/13] Noetic - changes to make it work with Python3
+
+Signed-off-by: ahcorde <ahcorde@gmail.com>
+---
+ gazebo_plugins/scripts/gazebo_model           | 34 +++++++--------
+ gazebo_plugins/scripts/set_pose.py            | 33 +++++++--------
+ gazebo_plugins/scripts/set_wrench.py          | 22 +++++-----
+ .../gazebo_plugins_interface.py               | 10 ++---
+ .../test/bumper_test/test_bumper.py           |  8 ++--
+ .../test/p3d_test/test_link_pose.py           | 42 +++++++++----------
+ 6 files changed, 71 insertions(+), 78 deletions(-)
+
+diff --git a/gazebo_plugins/scripts/gazebo_model b/gazebo_plugins/scripts/gazebo_model
+index 5f3382f72..36d96297c 100755
+--- gazebo_plugins/scripts/gazebo_model
++++ gazebo_plugins/scripts/gazebo_model
+@@ -15,32 +15,31 @@ from gazebo_plugins.msg import GazeboModel
+ from geometry_msgs.msg import Pose, Point, Quaternion
+ 
+ def usage():
+-    print '''Commands:
+-    load [param|file] [urdf|gazebo] <param/file name> <model name> <initial pose: x y z r p y> <namespace> - Load model
+-    delete <model name>                                                        - Deletes the model named <model name>
+-    '''
++    print('Commands:')
++    print('load [param|file] [urdf|gazebo] <param/file name> <model name> <initial pose: x y z r p y> <namespace> - Load model')
++    print('delete <model name>                                                        - Deletes the model named <model name>')
+     sys.exit(1)
+ 
+ if __name__ == "__main__":
+     if len(sys.argv) < 13:
+-        print usage()
++        usage()
+ 
+     if sys.argv[1] == 'load':
+         if sys.argv[2] == 'param':
+-            print "loading from parameter"
++            print("loading from parameter")
+         elif sys.argv[2] == 'file':
+-            print "loading from file"
++            print("loading from file")
+         else:
+-            print "invalid syntax, first argument has to be either param or file"
+-            print usage()
++            print("invalid syntax, first argument has to be either param or file")
++            usage()
+ 
+         if sys.argv[3] == 'urdf':
+-            print "loading urdf"
++            print("loading urdf")
+         elif sys.argv[3] == 'gazebo':
+-            print "loading gazebo model"
++            print("loading gazebo model")
+         else:
+-            print "invalid syntax, xml type has to be either urdf or gazebo"
+-            print usage()
++            print("invalid syntax, xml type has to be either urdf or gazebo")
++            usage()
+ 
+         param_name = sys.argv[4]
+         model_name = sys.argv[5]
+@@ -57,12 +56,11 @@ if __name__ == "__main__":
+ 
+         model_msg = GazeboModel(model_name,param_name,GazeboModel.URDF_PARAM_NAME,namespace,Pose(Point(lx,ly,lz),Quaternion()))
+         success = gazebo_plugins_interface.load_model(model_msg)
+-        print "spawning success",success
++        print("spawning success", success)
+ 
+     elif sys.argv[1] == 'delete':
+-        print "not implemented yet"
++        print("not implemented yet")
+ 
+     else:
+-        print "unknown command: ",sys.argv[1]
+-        print usage()
+-
++        print("unknown command: ", sys.argv[1])
++        usage()
+diff --git a/gazebo_plugins/scripts/set_pose.py b/gazebo_plugins/scripts/set_pose.py
+index eb5fb16fc..1c57ca536 100755
+--- gazebo_plugins/scripts/set_pose.py
++++ gazebo_plugins/scripts/set_pose.py
+@@ -95,14 +95,14 @@ def __init__(self):
+     rospy.init_node(NAME, anonymous=True)
+ 
+   def setPoseService(self,pose_msg):
+-    print "waiting for service to set pose"
++    print('waiting for service to set pose')
+     rospy.wait_for_service(self.service_name);
+     try:
+       set_pose = rospy.ServiceProxy(self.service_name, SetPose)
+       resp1 = set_pose(pose_msg)
+       return resp1.success
+-    except rospy.ServiceException, e:
+-      print "service call failed: %s"%e
++    except rospy.ServiceException as e:
++      print("service call failed: %s" % e)
+ 
+   def waitTopicInput(self,p3d):
+     #self.p3d_p = [p3d.pose.pose.position.x, p3d.pose.pose.position.y, p3d.pose.pose.position.z]
+@@ -191,20 +191,19 @@ def setPose(self):
+           time.sleep(0.001)
+ 
+ def print_usage(exit_code = 0):
+-    print '''Commands:
+-    -update_rate <Hz> - update rate, default to 10 Hz
+-    -timeout <seconds> - test timeout in seconds. default to 1 seconds
+-    -x <x in meters>
+-    -y <y in meters>
+-    -z <z in meters>
+-    -R <roll in radians>
+-    -P <pitch in radians>
+-    -Y <yaw in radians>
+-    -f target frame_id
+-    -s set pose service name
+-    -t set pose topic name
+-    -p wait for this ros topic to be published first
+-'''
++    print('Commands:')
++    print('-update_rate <Hz> - update rate, default to 10 Hz')
++    print('-timeout <seconds> - test timeout in seconds. default to 1 seconds')
++    print('-x <x in meters>')
++    print('-y <y in meters>')
++    print('-z <z in meters>')
++    print('-R <roll in radians>')
++    print('-P <pitch in radians>')
++    print('-Y <yaw in radians>')
++    print('-f target frame_id')
++    print('-s set pose service name')
++    print('-t set pose topic name')
++    print('-p wait for this ros topic to be published first')
+ 
+ if __name__ == '__main__':
+     #print usage if not arguments
+diff --git a/gazebo_plugins/scripts/set_wrench.py b/gazebo_plugins/scripts/set_wrench.py
+index 7eef8cc4d..e4ffe430d 100755
+--- gazebo_plugins/scripts/set_wrench.py
++++ gazebo_plugins/scripts/set_wrench.py
+@@ -107,17 +107,17 @@ def setWrench(self):
+         time.sleep(0.001)
+ 
+ def print_usage(exit_code = 0):
+-    print '''Commands:
+-    -update_rate <Hz> - update rate, default to 10 Hz
+-    -timeout <seconds> - test timeout in seconds. default to 1 seconds
+-    -x <x in meters>
+-    -y <y in meters>
+-    -z <z in meters>
+-    -R <roll in radians>
+-    -P <pitch in radians>
+-    -Y <yaw in radians>
+-    -t set wrench topic name
+-'''
++    print('Commands:')
++    print('-update_rate <Hz> - update rate, default to 10 Hz')
++    print('-timeout <seconds> - test timeout in seconds. default to 1 seconds')
++    print('-x <x in meters>')
++    print('-y <y in meters>')
++    print('-z <z in meters>')
++    print('-R <roll in radians>')
++    print('-P <pitch in radians>')
++    print('-Y <yaw in radians>')
++    print('-t set wrench topic name')
++
+ 
+ if __name__ == '__main__':
+     #print usage if not arguments
+diff --git a/gazebo_plugins/src/gazebo_plugins/gazebo_plugins_interface.py b/gazebo_plugins/src/gazebo_plugins/gazebo_plugins_interface.py
+index cf83203e6..1451e2599 100644
+--- gazebo_plugins/src/gazebo_plugins/gazebo_plugins_interface.py
++++ gazebo_plugins/src/gazebo_plugins/gazebo_plugins_interface.py
+@@ -12,15 +12,11 @@
+ from geometry_msgs.msg import Pose, Point, Quaternion
+ 
+ def load_model(model_msg):
+-    print "waiting for service spawn_model"
++    print('waiting for service spawn_model')
+     rospy.wait_for_service('spawn_model')
+     try:
+         spawn_model= rospy.ServiceProxy('spawn_model', SpawnModel)
+         resp1 = spawn_model(model_msg)
+         return resp1.success
+-    except rospy.ServiceException, e:
+-        print "Service call failed: %s"%e
+-
+-
+-
+-
++    except rospy.ServiceException as e:
++        print("Service call failed: %s" % e)
+diff --git a/gazebo_plugins/test/bumper_test/test_bumper.py b/gazebo_plugins/test/bumper_test/test_bumper.py
+index 00a591545..2fa0ba0c8 100755
+--- gazebo_plugins/test/bumper_test/test_bumper.py
++++ gazebo_plugins/test/bumper_test/test_bumper.py
+@@ -87,12 +87,12 @@ def checkContact(self):
+         # see if total wrench is close to 98.1N
+         if self.sample_count > 20:
+           if abs(self.fz_avg - 98.1) < 0.01:
+-            print "z force ",self.fz_avg
++            print("z force ", self.fz_avg)
+             self.success = True
+ 
+ 
+     def test_bumper(self):
+-        print "LNK\n"
++        print("LNK")
+         rospy.init_node(NAME, anonymous=True)
+         self.bumper_topic = rospy.get_param(self.bumper_topic_name,self.bumper_topic);
+         self.min_samples = rospy.get_param(self.min_samples_topic,self.min_samples);
+@@ -103,7 +103,7 @@ def test_bumper(self):
+             rospy.stdinfo("Waiting for test to start at time [%s]"% self.test_start_time)
+             time.sleep(0.1)
+ 
+-        print "subscribe"
++        print("subscribe")
+         rospy.Subscriber(self.bumper_topic, ContactsState, self.bumperStateInput)
+ 
+         start_t = time.time()
+@@ -114,7 +114,7 @@ def test_bumper(self):
+         self.assert_(self.success)
+ 
+ if __name__ == '__main__':
+-    print "Waiting for test to start at time "
++    print("Waiting for test to start at time ")
+     rostest.run(PKG, sys.argv[0], BumperTest, sys.argv) #, text_mode=True)
+ 
+ 
+diff --git a/gazebo_plugins/test/p3d_test/test_link_pose.py b/gazebo_plugins/test/p3d_test/test_link_pose.py
+index ced371799..901c6c48c 100755
+--- gazebo_plugins/test/p3d_test/test_link_pose.py
++++ gazebo_plugins/test/p3d_test/test_link_pose.py
+@@ -92,19 +92,19 @@ def __init__(self, *args):
+         self.valid_pose = Pose()
+ 
+     def printLinkPose(self, p3d):
+-        print "P3D pose translan: " + "x: " + str(p3d.pose.pose.position.x)
+-        print "                   " + "y: " + str(p3d.pose.pose.position.y)
+-        print "                   " + "z: " + str(p3d.pose.pose.position.z)
+-        print "P3D pose rotation: " + "x: " + str(p3d.pose.pose.orientation.x)
+-        print "                   " + "y: " + str(p3d.pose.pose.orientation.y)
+-        print "                   " + "z: " + str(p3d.pose.pose.orientation.z)
+-        print "                   " + "w: " + str(p3d.pose.pose.orientation.w)
+-        print "P3D rate translan: " + "x: " + str(p3d.twist.twist.linear.x)
+-        print "                   " + "y: " + str(p3d.twist.twist.linear.y)
+-        print "                   " + "z: " + str(p3d.twist.twist.linear.z)
+-        print "P3D rate rotation: " + "x: " + str(p3d.twist.twist.angular.x)
+-        print "                   " + "y: " + str(p3d.twist.twist.angular.y)
+-        print "                   " + "z: " + str(p3d.twist.twist.angular.z)
++        print("P3D pose translan: " + "x: " + str(p3d.pose.pose.position.x))
++        print("                   " + "y: " + str(p3d.pose.pose.position.y))
++        print("                   " + "z: " + str(p3d.pose.pose.position.z))
++        print("P3D pose rotation: " + "x: " + str(p3d.pose.pose.orientation.x))
++        print("                   " + "y: " + str(p3d.pose.pose.orientation.y))
++        print("                   " + "z: " + str(p3d.pose.pose.orientation.z))
++        print("                   " + "w: " + str(p3d.pose.pose.orientation.w))
++        print("P3D rate translan: " + "x: " + str(p3d.twist.twist.linear.x))
++        print("                   " + "y: " + str(p3d.twist.twist.linear.y))
++        print("                   " + "z: " + str(p3d.twist.twist.linear.z))
++        print("P3D rate rotation: " + "x: " + str(p3d.twist.twist.angular.x))
++        print("                   " + "y: " + str(p3d.twist.twist.angular.y))
++        print("                   " + "z: " + str(p3d.twist.twist.angular.z))
+ 
+ 
+     def linkP3dInput(self, p3d):
+@@ -130,11 +130,11 @@ def validP3dInput(self, p3d):
+ 
+     def checkPose(self):
+         # difference in pose
+-        print  "error: "   + str(self.link_sample_count) \
+-                           + " error:" + str(self.link_error_total) \
+-                           + " avg err:" + str(self.link_error_rms) \
+-                           + " max err:" + str(self.link_error_max) \
+-                           + " count: " + str(self.link_sample_count)
++        print("error: " + str(self.link_sample_count)
++              + " error:" + str(self.link_error_total)
++              + " avg err:" + str(self.link_error_rms)
++              + " max err:" + str(self.link_error_max)
++              + " count: " + str(self.link_sample_count))
+         if self.link_sample_count >= self.min_link_samples:
+           if self.link_error_rms < self.tolerance:
+             if self.link_error_max < self.max_error:
+@@ -142,7 +142,7 @@ def checkPose(self):
+ 
+ 
+     def test_link_pose(self):
+-        print "LNK\n"
++        print("LNK")
+         rospy.init_node(NAME, anonymous=True)
+         self.link_pose_topic = rospy.get_param(self.link_pose_topic_name,self.link_pose_topic);
+         self.valid_pose_topic = rospy.get_param(self.valid_pose_topic_name,self.valid_pose_topic);
+@@ -157,7 +157,7 @@ def test_link_pose(self):
+             rospy.stdinfo("Waiting for test to start at time [%s]"% self.test_start_time)
+             time.sleep(0.1)
+ 
+-        print "subscribe"
++        print("subscribe")
+         rospy.Subscriber(self.link_pose_topic, Odometry, self.linkP3dInput)
+         rospy.Subscriber(self.valid_pose_topic, Odometry, self.validP3dInput)
+ 
+@@ -169,7 +169,7 @@ def test_link_pose(self):
+         self.assert_(self.success)
+ 
+ if __name__ == '__main__':
+-    print "Waiting for test to start at time "
++    print("Waiting for test to start at time")
+     rostest.run(PKG, sys.argv[0], LinkPoseTest, sys.argv) #, text_mode=True)
+
+
+From a8899c8e66161aeb9f8dac88d218122b90cc837b Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Alejandro=20Hern=C3=A1ndez=20Cordero?=
+ <alejandro@openrobotics.org>
+Date: Wed, 22 Apr 2020 08:51:07 +0200
+Subject: [PATCH 04/13] Update gazebo_plugins/scripts/gazebo_model
+
+Co-Authored-By: Mabel Zhang <mabel.m.zhang@gmail.com>
+---
+ gazebo_plugins/scripts/gazebo_model | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gazebo_plugins/scripts/gazebo_model b/gazebo_plugins/scripts/gazebo_model
+index 36d96297c..e6709e40f 100755
+--- gazebo_plugins/scripts/gazebo_model
++++ gazebo_plugins/scripts/gazebo_model
+@@ -56,7 +56,7 @@ if __name__ == "__main__":
+ 
+         model_msg = GazeboModel(model_name,param_name,GazeboModel.URDF_PARAM_NAME,namespace,Pose(Point(lx,ly,lz),Quaternion()))
+         success = gazebo_plugins_interface.load_model(model_msg)
+-        print("spawning success", success)
++        print("spawning success ", success)
+ 
+     elif sys.argv[1] == 'delete':
+         print("not implemented yet")
+
+From d4198f56f4cd8510139aa36ff5693bc97751d21e Mon Sep 17 00:00:00 2001
+From: ahcorde <ahcorde@gmail.com>
+Date: Wed, 22 Apr 2020 08:58:43 +0200
+Subject: [PATCH 05/13] Restored end of line in two tests
+
+Signed-off-by: ahcorde <ahcorde@gmail.com>
+---
+ gazebo_plugins/test/bumper_test/test_bumper.py | 2 +-
+ gazebo_plugins/test/p3d_test/test_link_pose.py | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/gazebo_plugins/test/bumper_test/test_bumper.py b/gazebo_plugins/test/bumper_test/test_bumper.py
+index 2fa0ba0c8..4dc976acd 100755
+--- gazebo_plugins/test/bumper_test/test_bumper.py
++++ gazebo_plugins/test/bumper_test/test_bumper.py
+@@ -92,7 +92,7 @@ def checkContact(self):
+ 
+ 
+     def test_bumper(self):
+-        print("LNK")
++        print("LNK\n")
+         rospy.init_node(NAME, anonymous=True)
+         self.bumper_topic = rospy.get_param(self.bumper_topic_name,self.bumper_topic);
+         self.min_samples = rospy.get_param(self.min_samples_topic,self.min_samples);
+diff --git a/gazebo_plugins/test/p3d_test/test_link_pose.py b/gazebo_plugins/test/p3d_test/test_link_pose.py
+index 901c6c48c..bf5212e7b 100755
+--- gazebo_plugins/test/p3d_test/test_link_pose.py
++++ gazebo_plugins/test/p3d_test/test_link_pose.py
+@@ -142,7 +142,7 @@ def checkPose(self):
+ 
+ 
+     def test_link_pose(self):
+-        print("LNK")
++        print("LNK\n")
+         rospy.init_node(NAME, anonymous=True)
+         self.link_pose_topic = rospy.get_param(self.link_pose_topic_name,self.link_pose_topic);
+         self.valid_pose_topic = rospy.get_param(self.valid_pose_topic_name,self.valid_pose_topic);
+
+From 6cabcc7fd0f370d8c0ca2f0754d836e5d1888c4e Mon Sep 17 00:00:00 2001
+From: ahcorde <ahcorde@gmail.com>
+Date: Fri, 24 Apr 2020 12:37:21 +0200
+Subject: [PATCH 06/13] Install python scripts with catkin_install_python
+
+Signed-off-by: ahcorde <ahcorde@gmail.com>
+---
+ gazebo_plugins/CMakeLists.txt | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+diff --git a/gazebo_plugins/CMakeLists.txt b/gazebo_plugins/CMakeLists.txt
+index 0d5c855a3..a8930928b 100644
+--- gazebo_plugins/CMakeLists.txt
++++ gazebo_plugins/CMakeLists.txt
+@@ -374,9 +374,8 @@ install(DIRECTORY include/
+    FILES_MATCHING PATTERN "*.h"
+ )
+ 
+-install(PROGRAMS scripts/set_wrench.py scripts/set_pose.py scripts/gazebo_model
+-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+-  )
++catkin_install_python(PROGRAMS scripts/set_wrench.py scripts/set_pose.py scripts/gazebo_model
++  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+ 
+ install(DIRECTORY Media
+   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+
+From 8c1cad7ad0c6bf382b2bc8ff12b9db95692c4153 Mon Sep 17 00:00:00 2001
+From: Shane Loretz <sloretz@osrfoundation.org>
+Date: Wed, 13 May 2020 17:57:14 -0700
+Subject: [PATCH 07/13] Restore whitespace in help output
+
+Signed-off-by: Shane Loretz <sloretz@osrfoundation.org>
+---
+ gazebo_plugins/scripts/gazebo_model  |  7 ++++---
+ gazebo_plugins/scripts/set_pose.py   | 27 ++++++++++++++-------------
+ gazebo_plugins/scripts/set_wrench.py | 21 +++++++++++----------
+ 3 files changed, 29 insertions(+), 26 deletions(-)
+
+diff --git a/gazebo_plugins/scripts/gazebo_model b/gazebo_plugins/scripts/gazebo_model
+index e6709e40f..83778ab4b 100755
+--- gazebo_plugins/scripts/gazebo_model
++++ gazebo_plugins/scripts/gazebo_model
+@@ -15,9 +15,10 @@ from gazebo_plugins.msg import GazeboModel
+ from geometry_msgs.msg import Pose, Point, Quaternion
+ 
+ def usage():
+-    print('Commands:')
+-    print('load [param|file] [urdf|gazebo] <param/file name> <model name> <initial pose: x y z r p y> <namespace> - Load model')
+-    print('delete <model name>                                                        - Deletes the model named <model name>')
++    print('''Commands:
++    load [param|file] [urdf|gazebo] <param/file name> <model name> <initial pose: x y z r p y> <namespace> - Load model
++    delete <model name>                                                        - Deletes the model named <model name>
++    ''')
+     sys.exit(1)
+ 
+ if __name__ == "__main__":
+diff --git a/gazebo_plugins/scripts/set_pose.py b/gazebo_plugins/scripts/set_pose.py
+index 1c57ca536..853790534 100755
+--- gazebo_plugins/scripts/set_pose.py
++++ gazebo_plugins/scripts/set_pose.py
+@@ -191,19 +191,20 @@ def setPose(self):
+           time.sleep(0.001)
+ 
+ def print_usage(exit_code = 0):
+-    print('Commands:')
+-    print('-update_rate <Hz> - update rate, default to 10 Hz')
+-    print('-timeout <seconds> - test timeout in seconds. default to 1 seconds')
+-    print('-x <x in meters>')
+-    print('-y <y in meters>')
+-    print('-z <z in meters>')
+-    print('-R <roll in radians>')
+-    print('-P <pitch in radians>')
+-    print('-Y <yaw in radians>')
+-    print('-f target frame_id')
+-    print('-s set pose service name')
+-    print('-t set pose topic name')
+-    print('-p wait for this ros topic to be published first')
++    print('''Commands:
++    -update_rate <Hz> - update rate, default to 10 Hz
++    -timeout <seconds> - test timeout in seconds. default to 1 seconds
++    -x <x in meters>
++    -y <y in meters>
++    -z <z in meters>
++    -R <roll in radians>
++    -P <pitch in radians>
++    -Y <yaw in radians>
++    -f target frame_id
++    -s set pose service name
++    -t set pose topic name
++    -p wait for this ros topic to be published first
++''')
+ 
+ if __name__ == '__main__':
+     #print usage if not arguments
+diff --git a/gazebo_plugins/scripts/set_wrench.py b/gazebo_plugins/scripts/set_wrench.py
+index e4ffe430d..62e6857cf 100755
+--- gazebo_plugins/scripts/set_wrench.py
++++ gazebo_plugins/scripts/set_wrench.py
+@@ -107,16 +107,17 @@ def setWrench(self):
+         time.sleep(0.001)
+ 
+ def print_usage(exit_code = 0):
+-    print('Commands:')
+-    print('-update_rate <Hz> - update rate, default to 10 Hz')
+-    print('-timeout <seconds> - test timeout in seconds. default to 1 seconds')
+-    print('-x <x in meters>')
+-    print('-y <y in meters>')
+-    print('-z <z in meters>')
+-    print('-R <roll in radians>')
+-    print('-P <pitch in radians>')
+-    print('-Y <yaw in radians>')
+-    print('-t set wrench topic name')
++    print('''Commands:
++    -update_rate <Hz> - update rate, default to 10 Hz
++    -timeout <seconds> - test timeout in seconds. default to 1 seconds
++    -x <x in meters>
++    -y <y in meters>
++    -z <z in meters>
++    -R <roll in radians>
++    -P <pitch in radians>
++    -Y <yaw in radians>
++    -t set wrench topic name
++''')
+ 
+ 
+ if __name__ == '__main__':
+
+
+From 4b500829ca824aa012979b74227ff7b9c6110b67 Mon Sep 17 00:00:00 2001
+From: Shane Loretz <sloretz@osrfoundation.org>
+Date: Wed, 13 May 2020 18:10:18 -0700
+Subject: [PATCH 10/13] Remove extra space
+
+Signed-off-by: Shane Loretz <sloretz@osrfoundation.org>
+---
+ gazebo_plugins/scripts/gazebo_model | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gazebo_plugins/scripts/gazebo_model b/gazebo_plugins/scripts/gazebo_model
+index 83778ab4b..477f82f19 100755
+--- gazebo_plugins/scripts/gazebo_model
++++ gazebo_plugins/scripts/gazebo_model
+@@ -57,7 +57,7 @@ if __name__ == "__main__":
+ 
+         model_msg = GazeboModel(model_name,param_name,GazeboModel.URDF_PARAM_NAME,namespace,Pose(Point(lx,ly,lz),Quaternion()))
+         success = gazebo_plugins_interface.load_model(model_msg)
+-        print("spawning success ", success)
++        print("spawning success", success)
+ 
+     elif sys.argv[1] == 'delete':
+         print("not implemented yet")
+
+
+From 17412bf98ca10621d34e6ce6c1a6de47e2129332 Mon Sep 17 00:00:00 2001
+From: Shane Loretz <sloretz@osrfoundation.org>
+Date: Thu, 14 May 2020 14:50:47 -0700
+Subject: [PATCH 12/13] Depend on gazebo11
+
+Signed-off-by: Shane Loretz <sloretz@osrfoundation.org>
+---
+ gazebo_dev/package.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/gazebo_dev/package.xml b/gazebo_dev/package.xml
+index 60ee19427..56d00c676 100644
+--- gazebo_dev/package.xml
++++ gazebo_dev/package.xml
+@@ -19,7 +19,7 @@
+ 
+   <buildtool_depend>catkin</buildtool_depend>
+ 
+-  <build_export_depend>libgazebo9-dev</build_export_depend>
+-  <exec_depend>gazebo</exec_depend>
++  <build_export_depend>libgazebo11-dev</build_export_depend>
++  <exec_depend>gazebo11</exec_depend>
+ 
+ </package>
+
+From 364f5b87362eb5245155dcbc233a6e156bbe2d60 Mon Sep 17 00:00:00 2001
+From: Shane Loretz <sloretz@osrfoundation.org>
+Date: Thu, 14 May 2020 14:50:59 -0700
+Subject: [PATCH 13/13] Avoid collisions with other rostest
+
+Signed-off-by: Shane Loretz <sloretz@osrfoundation.org>
+---
+ gazebo_plugins/test/range/range_plugin.test | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/gazebo_plugins/test/range/range_plugin.test b/gazebo_plugins/test/range/range_plugin.test
+index 3e1ee9657..e53cd606c 100644
+--- gazebo_plugins/test/range/range_plugin.test
++++ gazebo_plugins/test/range/range_plugin.test
+@@ -2,6 +2,9 @@
+ <launch>
+ 
+   <env name="GAZEBO_PLUGIN_PATH" value="$(find gazebo_plugins)/../../../devel/lib"/>
++  <!-- Changed GAZEBO_MASTER_URI to avoid collision with the other tests -->
++  <env name="GAZEBO_MASTER_URI" value="http://localhost:11347" />
++
+ 
+   <include file="$(find gazebo_ros)/launch/range_world.launch">
+     <arg name="gui" value="false"/>

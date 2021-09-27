@@ -1,0 +1,26 @@
+From 38fdd1e07a96eb0880044825d26a4901d881a8e4 Mon Sep 17 00:00:00 2001
+From: ahcorde <ahcorde@gmail.com>
+Date: Thu, 26 Mar 2020 10:45:29 +0100
+Subject: [PATCH] Adpated to OpenCV4
+
+Signed-off-by: ahcorde <ahcorde@gmail.com>
+---
+ gazebo_plugins/src/gazebo_ros_prosilica.cpp | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+diff --git a/gazebo_plugins/src/gazebo_ros_prosilica.cpp b/gazebo_plugins/src/gazebo_ros_prosilica.cpp
+index dce857e21..325d41e65 100644
+--- gazebo_plugins/src/gazebo_ros_prosilica.cpp
++++ gazebo_plugins/src/gazebo_ros_prosilica.cpp
+@@ -44,10 +44,7 @@
+ #include <diagnostic_updater/diagnostic_updater.h>
+ #include <sensor_msgs/RegionOfInterest.h>
+ 
+-#include <opencv/cv.h>
+-#include <opencv/highgui.h>
+-
+-#include <opencv/cvwimage.h>
++#include <opencv2/highgui.hpp>
+ 
+ #include <boost/scoped_ptr.hpp>
+ #include <boost/bind.hpp>

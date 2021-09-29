@@ -4,8 +4,7 @@
 
 ORG=			pal-robotics
 NAME=			play-motion
-VERSION=		0.4.8
-PKGREVISION=		1
+VERSION=		0.4.10
 
 ROSNAME=		$(subst -,_,${NAME})
 

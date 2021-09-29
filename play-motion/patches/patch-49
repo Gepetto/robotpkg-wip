@@ -1,0 +1,22 @@
+From 4a0e07fbf3b6e4fc04ea9cf0f96d63e7120ae52d Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Wed, 29 Sep 2021 17:09:41 +0200
+Subject: [PATCH] update except syntax for python 3
+
+---
+ play_motion/src/play_motion/move_joint.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/play_motion/src/play_motion/move_joint.py b/play_motion/src/play_motion/move_joint.py
+index 576e824..66b56f9 100644
+--- play_motion/src/play_motion/move_joint.py
++++ play_motion/src/play_motion/move_joint.py
+@@ -115,7 +115,7 @@ def move_joint():
+     try:
+         wait_for_clock()
+         client = play_motion_client(play_motion_ns)
+-    except MoveJointException, e:
++    except MoveJointException as e:
+         print_err(str(e))
+ 
+     def cancel(signum, frame):

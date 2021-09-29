@@ -1,0 +1,45 @@
+From 324142ccba772c80ea532d402c08cd71d621d8cc Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Wed, 29 Sep 2021 17:14:19 +0200
+Subject: [PATCH 1/2] update except syntax for python 3
+
+---
+ joy_teleop/scripts/joy_teleop.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/joy_teleop/scripts/joy_teleop.py b/joy_teleop/scripts/joy_teleop.py
+index 18bddf7..ab467d4 100755
+--- joy_teleop/scripts/joy_teleop.py
++++ joy_teleop/scripts/joy_teleop.py
+@@ -264,7 +264,7 @@ def get_service_type(self, service_name):
+         if service_name not in self.service_types:
+             try:
+                 self.service_types[service_name] = rosservice.get_service_class_by_name(service_name)
+-            except ROSServiceException, e:
++            except ROSServiceException as e:
+                 raise JoyTeleopException("service {} could not be loaded: {}".format(service_name, str(e)))
+         return self.service_types[service_name]
+ 
+
+From 369f1d32c28651853a41b435e32b65b6e16ef3b9 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Wed, 29 Sep 2021 17:15:56 +0200
+Subject: [PATCH 2/2] update raise syntax for python 3
+
+---
+ key_teleop/scripts/key_teleop.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/key_teleop/scripts/key_teleop.py b/key_teleop/scripts/key_teleop.py
+index d196c9b..ac70ee4 100755
+--- key_teleop/scripts/key_teleop.py
++++ key_teleop/scripts/key_teleop.py
+@@ -60,7 +60,7 @@ def clear(self):
+ 
+     def write_line(self, lineno, message):
+         if lineno < 0 or lineno >= self._num_lines:
+-            raise ValueError, 'lineno out of bounds'
++            raise ValueError('lineno out of bounds')
+         height, width = self._screen.getmaxyx()
+         y = (height / self._num_lines) * lineno
+         x = 10

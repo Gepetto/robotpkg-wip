@@ -5,6 +5,7 @@
 ORG=		Gepetto
 NAME=		ouster-gazebo-simulation
 VERSION=	2.1.1
+PKGREVISION=	1
 
 CATEGORIES=	wip
 COMMENT=	the simulation of Ouster OS1-64 with ros and gazebo
@@ -18,6 +19,7 @@ pre-configure:
 include ../../devel/jrl-cmakemodules/Makefile.common
 
 include ../../interfaces/ros-common-msgs/depend.mk
+include ../../localization/ros-robot-state-publisher/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../middleware/ros-dynamic-reconfigure/depend.mk

@@ -5,7 +5,7 @@
 ORG=			pal-robotics-forks
 NAME=			gazebo-ros-pkgs
 VERSION=		3.0.1
-PKGREVISION=		4
+PKGREVISION=		5
 
 PRFNAME=		prf-${NAME}
 ROSNAME=		$(subst -,_,${NAME})

@@ -106,3 +106,103 @@ fix syntax for python 3
 -            print "Error when stopping ", names
 +            print("Error when stopping ", names)
          return False
+--- controller_manager/scripts/unspawner.orig	2021-09-04 08:32:58.000000000 +0200
++++ controller_manager/scripts/unspawner	2021-11-26 00:08:48.931317283 +0100
+@@ -31,18 +31,22 @@
+ #
+ # Author: Stuart Glaser
+ 
++from __future__ import print_function
++
+ import time
+ import sys
+ import getopt
+ 
+-import roslib; roslib.load_manifest('controller_manager')
++import roslib
++
++roslib.load_manifest('controller_manager')
+ import rospy
+ from controller_manager_msgs.srv import *
+ 
+-
+ switch_controller = rospy.ServiceProxy('controller_manager/switch_controller', SwitchController)
+ list_controllers = rospy.ServiceProxy('controller_manager/list_controllers', ListControllers)
+ 
++
+ def main():
+     inhibited_controllers = []
+     try:
+@@ -63,24 +67,22 @@
+ 
+             if to_stop:
+                 rospy.logout("Inhibiting controllers: %s" % ', '.join(to_stop))
+-                switch_controller(strictness = SwitchControllerRequest.BEST_EFFORT,
+-                                  stop_controllers = to_stop)
++                switch_controller(strictness=SwitchControllerRequest.BEST_EFFORT, stop_controllers=to_stop)
+                 inhibited.update(to_stop)
+ 
+             time.sleep(3.0)
+ 
+     finally:
+         # Re-starts inhibited controllers
+-        switch_controller(strictness = SwitchControllerRequest.BEST_EFFORT,
+-                          start_controllers = list(inhibited))
+-
++        switch_controller(strictness=SwitchControllerRequest.BEST_EFFORT, start_controllers=list(inhibited))
+ 
+ 
+ def print_help():
+-    print './unspawner name1 name2 name3'
+-    print ''
+-    print '\tStops a set of controllers until killed.'
+-    print '\tUseful in roslaunch files to temporarily stop controllers'
++    print('./unspawner name1 name2 name3')
++    print('')
++    print('\tStops a set of controllers until killed.')
++    print('\tUseful in roslaunch files to temporarily stop controllers')
++
+ 
+ if __name__ == '__main__':
+     if len(sys.argv) == 1 or sys.argv[1] == '-h' or sys.argv[1] == '--help':
+--- controller_manager/scripts/controller_manager.orig	2021-09-04 08:32:58.000000000 +0200
++++ controller_manager/scripts/controller_manager	2021-11-26 00:09:13.594522047 +0100
+@@ -1,6 +1,8 @@
+ #! /usr/bin/env python
+ # Provides quick access to the services exposed by controller_manager_msgs
+ 
++from __future__ import print_function
++
+ import roslib, time
+ roslib.load_manifest('controller_manager')
+ 
+@@ -17,7 +19,7 @@
+         self.msg = msg
+ 
+ def print_usage(exit_code = 0):
+-    print '''Commands:
++    print('''Commands:
+     load <name>          - Load the controller named <name>
+     unload <name>        - Unload the controller named <name>
+     start <name>         - Start the controller named <name>
+@@ -26,7 +28,7 @@
+     kill <name>          - Stop and unload the controller named <name>
+     list                 - List active controllers
+     list-types           - List controller Types
+-    reload-libraries     - Reloads all plugin controller libraries'''
++    reload-libraries     - Reloads all plugin controller libraries''')
+ 
+     sys.exit(exit_code)
+ 
+@@ -40,9 +42,9 @@
+     elif args[1] == 'lc' or args[1] == 'list':
+         controller_manager_interface.list_controllers()
+     elif args[1] == 'reload-libraries':
+-        print "ARGS", args, args[2:]
++        print("ARGS", args, args[2:])
+         if '--restore' in args[2:]:
+-            print "RE1"
++            print("RE1")
+             controller_manager_interface.reload_libraries(True, restore = True)
+         else:
+             controller_manager_interface.reload_libraries(True)

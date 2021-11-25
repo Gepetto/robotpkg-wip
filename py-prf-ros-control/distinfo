@@ -1,4 +1,4 @@
-SHA1 (prf-ros-control/0.3.0.tar.gz) = f4e6f3efae970ff917863267930c6ae99e1bee57
-RMD160 (prf-ros-control/0.3.0.tar.gz) = 7335761a75b8689b5ef1f44071d552de71da0c3e
-Size (prf-ros-control/0.3.0.tar.gz) = 662315 bytes
-SHA1 (patch-aa) = 8a31a5cb213f1e2049b71d425b5cb33b19a5fc12
+SHA1 (prf-ros-control/0.5.0.tar.gz) = 0bfb7b836663b6668f9dd29eeaadfff9634d9942
+RMD160 (prf-ros-control/0.5.0.tar.gz) = 56ec1cb86816873ad765639722cde0fd954d5507
+Size (prf-ros-control/0.5.0.tar.gz) = 665215 bytes
+SHA1 (patch-aa) = 04af9cd26e9fadb3de9cf07248baaddc2239becb

@@ -3,7 +3,7 @@
 #
 
 ORG=			pal-robotics-forks
-VERSION=		0.3.0
+VERSION=		0.5.0
 NAME=			ros-control
 
 PRFNAME=		prf-${NAME}

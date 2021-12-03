@@ -1,3 +1,17 @@
-@comment Tue Jul 10 15:07:29 CEST 2018
+@comment Fri Dec 3 12:54:06 CET 2021
+bin/gepetto-example-adder
+include/example-adder/gepadd.hpp
+include/example-adder/python.hpp
+include/example/adder/config.hh
+include/example/adder/deprecated.hh
+include/example/adder/warning.hh
+lib/cmake/example-adder/example-adderConfig.cmake
+lib/cmake/example-adder/example-adderConfigVersion.cmake
+lib/cmake/example-adder/example-adderTargets-release.cmake
+lib/cmake/example-adder/example-adderTargets.cmake
+lib/libexample-adder.so
+lib/libexample-adder.so.${PKGVERSION}
+lib/pkgconfig/example-adder.pc
 ${PYTHON_SITELIB}/example_adder/__init__.py
-${PYTHON_SITELIB}/example_adder/libexample_adder.so
+${PYTHON_SITELIB}/example_adder/example_adder${PYTHON_EXT_SUFFIX}
+share/example-adder/package.xml

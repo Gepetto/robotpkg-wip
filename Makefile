@@ -20,7 +20,6 @@ SUBDIR+=	ddp-actuator-solver
 SUBDIR+=	dynamic-graph-tutorial
 SUBDIR+=	dynamic-graph-v3
 SUBDIR+=	dynamic-introspection
-SUBDIR+=	example-adder
 SUBDIR+=	fcl
 SUBDIR+=	FRILibrary
 SUBDIR+=	gazebo-spring

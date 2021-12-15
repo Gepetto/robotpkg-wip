@@ -11,6 +11,10 @@ endif
 
 ifeq (+,$(CPPADCODEGEN_DEPEND_MK)) # ------------------------------------------
 
+include ../../mk/robotpkg.prefs.mk # for OPSYS
+ifeq (Arch,${OPSYS})
+  PREFER.cppadcodegen?=	system
+endif
 PREFER.cppadcodegen?=	robotpkg
 
 SYSTEM_SEARCH.cppadcodegen=\

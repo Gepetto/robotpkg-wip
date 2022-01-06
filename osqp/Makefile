@@ -5,6 +5,7 @@
 ORG=			oxfordcontrol
 NAME=			osqp
 VERSION=		0.6.0
+PKGREVISION=		1
 
 DISTNAME=		${NAME}-${VERSION}
 MASTER_SITES=		${MASTER_SITE_OPENROBOTS:=${NAME}/}
@@ -19,6 +20,7 @@ MAINTAINER=		gsaurel@laas.fr
 USE_BOOST_LIBS=		unit_test_framework
 
 CMAKE_ARGS+=		-DDLONG=OFF
+CMAKE_ARGS+=		-DPRINTING=OFF
 
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk

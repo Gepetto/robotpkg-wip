@@ -32,3 +32,4 @@ lib/cmake/multicontact-api/multicontact-apiConfig.cmake
 lib/cmake/multicontact-api/multicontact-apiConfigVersion.cmake
 lib/cmake/multicontact-api/multicontact-apiTargets.cmake
 lib/pkgconfig/multicontact-api.pc
+share/multicontact-api/package.xml

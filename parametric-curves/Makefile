@@ -2,10 +2,9 @@
 # Created:			Olivier Stasse, on Tue. 5th Jan, 2018
 #
 
-PKGREVISION=		1
 ORG=			stack-of-tasks
 NAME=			parametric-curves
-VERSION=		1.4.0
+VERSION=		1.4.1
 
 CATEGORIES=		wip
 COMMENT=		This packages provides a template based parametric curves library.

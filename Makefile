@@ -114,6 +114,7 @@ SUBDIR+=	py-talos-dev
 SUBDIR+=	py-talos-torque-control
 SUBDIR+=	py-tiago-tutorials
 SUBDIR+=	pyrene-motions
+SUBDIR+=	qpmad
 SUBDIR+=	roralink
 SUBDIR+=	ros-aicp-mapping
 SUBDIR+=	ros-four-wheel-steering-msgs

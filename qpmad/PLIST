@@ -1,0 +1,17 @@
+@comment Thu Mar 24 18:41:49 CET 2022
+include/qpmad/active_set.h
+include/qpmad/chosen_constraint.h
+include/qpmad/common.h
+include/qpmad/config.h
+include/qpmad/constraint_status.h
+include/qpmad/cpput_config.h
+include/qpmad/cpput_exception.h
+include/qpmad/factorization_data.h
+include/qpmad/givens.h
+include/qpmad/input_parser.h
+include/qpmad/inverse.h
+include/qpmad/solver.h
+include/qpmad/solver_parameters.h
+include/qpmad/testing.h
+share/qpmad/cmake/qpmadConfig.cmake
+share/qpmad/cmake/qpmadConfigVersion.cmake

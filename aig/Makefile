@@ -5,6 +5,7 @@
 ORG=			gepetto
 NAME=			aig
 VERSION=		1.0.0
+PKGREVISION=		1
 
 CATEGORIES=		wip
 COMMENT=		Stand alone computation of inverse geometry for biped robots or robotic arms.

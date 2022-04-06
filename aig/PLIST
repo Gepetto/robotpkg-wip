@@ -1,0 +1,13 @@
+@comment Wed Apr 6 15:53:16 CEST 2022
+include/aig/arm_ig.hpp
+include/aig/biped_ig.hpp
+include/aig/config.hh
+include/aig/deprecated.hh
+include/aig/leg_ig.hpp
+include/aig/warning.hh
+lib/cmake/aig/aigConfig.cmake
+lib/cmake/aig/aigConfigVersion.cmake
+lib/cmake/aig/aigTargets-release.cmake
+lib/cmake/aig/aigTargets.cmake
+lib/libaig.so
+lib/pkgconfig/aig.pc

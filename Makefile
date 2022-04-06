@@ -9,6 +9,7 @@ SUBDIR+=	agimus-hpp
 SUBDIR+=	agimus-sot
 SUBDIR+=	agimus-vision
 SUBDIR+=	agimus-sot-msgs
+SUBDIR+=	aig
 SUBDIR+=	antlr2
 SUBDIR+=	aruco-ros
 SUBDIR+=	backward-ros

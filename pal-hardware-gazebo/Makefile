@@ -16,8 +16,6 @@ DIST_SUBDIR=		${NAME}
 CATEGORIES=		wip
 
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}.git
-HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
-MASTER_SITES=		${HOMEPAGE}/archive/
 
 COMMENT=		Hardware interfaces developped by PAL-Robotics in Gazebo
 LICENSE=		2-clause-bsd

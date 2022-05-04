@@ -12,8 +12,6 @@ DIST_SUBDIR=	${PKGBASE}
 PKGREVISION=	1
 
 CATEGORIES=	wip
-HOMEPAGE=	${MASTER_SITE_GITHUB:=olivier-stasse/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Dummy public version of PAL Navigation State Machine. It allows saving a map and loading that map for navigation purposes.
 LICENSE=	2-clause-bsd
 

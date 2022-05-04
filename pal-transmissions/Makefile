@@ -12,10 +12,7 @@ WRKSRC=		${WRKDIR}/${ROSNAME}-${VERSION}
 
 CATEGORIES=	wip
 # Source file store in robotpkg website
-#MASTER_SITES=	${MASTER_SITE_JRL:=talos/$(subst -,_,${PKGBASE})/}
 MASTER_REPOSITORY = 	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-HOMEPAGE= 	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/
 
 COMMENT=	Hardware transmissions developped by PAL-Robotics
 LICENSE=	2-clause-bsd

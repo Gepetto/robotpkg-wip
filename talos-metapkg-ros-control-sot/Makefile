@@ -39,30 +39,12 @@ include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../wip/py-dynamic-graph-bridge-v3/depend.mk
 
-include ../../wip/sysdep/pal-distro.mk
-
-ifeq (erbium,${PREFER.pal-distro})
-  ifeq (palerbium,${PALDISTRO})
-    CMAKE_PREFIX_PATH+=/opt/pal/erbium
-  else
-    include ../../wip/pal-hardware-interfaces/depend.mk
-    include ../../wip/py-prf-ros-controllers/depend.mk
-    include ../../motion/ros-control-toolbox/depend.mk
-  endif
-
-displaytalosmetapkg:
-	echo 'PREFER.pal-distro:${PREFER.pal-distro}'
-	echo 'pal-distro-erbium'
-
+ifeq (16.04.pal,${OS_VERSION})
+  CMAKE_PREFIX_PATH+=/opt/pal/erbium
 else
   include ../../wip/pal-hardware-interfaces/depend.mk
   include ../../wip/py-prf-ros-controllers/depend.mk
   include ../../motion/ros-control-toolbox/depend.mk
-
-displaytalosmetapkg:
-	echo 'PREFER.pal-distro:${PREFER.pal-distro}'
-	echo 'pal-distro-xenial'
-
 endif
 
 include ../../wip/py-roscontrol-sot/depend.mk

@@ -36,16 +36,8 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 
-# Check if we on a pal distro
-include ../../wip/sysdep/pal-distro.mk
-
-# PREFER.pal-distro gives the user the choice to compile
-# over PAL packages or not.
-ifeq (erbium,${PREFER.pal-distro})
-  ifeq (palerbium,${PALDISTRO})
-     # If yes then it does not make sense to continue
-     $(error "talos-simulation is useless on PAL erbium.")
-  endif
+ifeq (16.04.pal,${OS_VERSION})
+   $(error "talos-simulation is useless on PAL erbium.")
 endif
 
 

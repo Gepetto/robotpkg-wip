@@ -48,27 +48,18 @@ include ../../wip/sot-core-v3/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../mk/robotpkg.prefs.mk
-include ../../wip/sysdep/pal-distro.mk
 include ../../wip/pal-msgs/depend.mk
 
-include ../../wip/sysdep/pal-distro.mk
-ifeq (erbium,${PREFER.pal-distro})
-  ifeq (palerbium,${PALDISTRO})
-    CMAKE_PREFIX_PATH+=/opt/pal/erbium
-    SYSTEM_PREFIX+=/opt/pal/erbium
-    CXXFLAGS+="-I/opt/pal/erbium/include"
-    PKG_CONFIG_DIRS=/opt/pal/erbium/lib/pkgconfig
-  else
-    include ../../wip/pal-hardware-interfaces/depend.mk
-    include ../../wip/py-prf-ros-control/depend.mk
-    include ../../wip/py-prf-ros-controllers/depend.mk
-  endif
+ifeq (16.04.pal,${OS_VERSION})
+  CMAKE_PREFIX_PATH+=/opt/pal/erbium
+  SYSTEM_PREFIX+=/opt/pal/erbium
+  CXXFLAGS+="-I/opt/pal/erbium/include"
+  PKG_CONFIG_DIRS=/opt/pal/erbium/lib/pkgconfig
 else
   include ../../wip/pal-hardware-interfaces/depend.mk
   include ../../wip/py-prf-ros-control/depend.mk
   include ../../wip/py-prf-ros-controllers/depend.mk
 endif
-
 
 include ../../devel/ros-roscpp-core/depend.mk
 include ../../devel/ros-catkin/depend.mk

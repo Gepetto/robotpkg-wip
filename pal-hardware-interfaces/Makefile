@@ -23,16 +23,8 @@ LICENSE=		gnu-lgpl-v3
 
 USE_BOOST_LIBS=		thread
 
-include ../../wip/sysdep/pal-distro.mk
-
-# PREFER.pal-distro gives the user the choice to compile
-# over PAL packages or not.
-ifeq (erbium,${PREFER.pal-distro})
-  ifeq (palerbium,${PALDISTRO})
-    CMAKE_PREFIX_PATH+=/opt/pal/erbium
-  else
-    include ../../wip/py-prf-ros-control/depend.mk
-  endif
+ifeq (16.04.pal,${OS_VERSION})
+  CMAKE_PREFIX_PATH+=/opt/pal/erbium
 else
   include ../../wip/py-prf-ros-control/depend.mk
 endif

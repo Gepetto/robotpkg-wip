@@ -66,6 +66,7 @@ SUBDIR+=	pmb2-simulation
 SUBDIR+=	prf-roboticsgroup-gazebo-plugins
 SUBDIR+=	prf-teleop-tools
 SUBDIR+=	py-bmtools
+SUBDIR+=	py-bullet3
 SUBDIR+=	py-cvxpy
 SUBDIR+=	py-dill
 SUBDIR+=	py-dynamic-graph-bridge-v3

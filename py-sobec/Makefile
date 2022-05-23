@@ -5,6 +5,7 @@
 ORG=			memory-of-motion
 NAME=			sobec
 VERSION=		1.0.0
+PKGREVISION=		1
 
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
 
@@ -16,6 +17,8 @@ MAINTAINER=		gsaurel@laas.fr
 USE_BOOST_LIBS=		unit_test_framework python
 
 include ../../devel/jrl-cmakemodules/Makefile.common
+
+include ../../wip/py-bullet3/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

@@ -1,0 +1,8 @@
+--- CMakeLists.txt.orig	2022-04-26 04:39:24.000000000 +0200
++++ CMakeLists.txt	2022-05-24 02:43:15.680595808 +0200
+@@ -510,3 +510,5 @@
+ 		DESTINATION ${BULLET_CONFIG_CMAKE_PATH}
+ 	)
+ ENDIF (INSTALL_CMAKE_FILES)
++
++install(DIRECTORY examples/pybullet/gym/pybullet_data DESTINATION ${PYTHON_SITELIB})

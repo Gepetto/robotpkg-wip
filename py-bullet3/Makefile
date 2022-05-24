@@ -5,6 +5,7 @@
 ORG=			bulletphysics
 NAME=			bullet3
 VERSION=		3.24
+PKGREVISION=		1
 
 CATEGORIES=		simulation
 COMMENT=		Bullet Physics SDK
@@ -19,6 +20,8 @@ PYTHON_SELF_CONFLICT=	yes
 CMAKE_ARGS+=		-DBUILD_SHARED_LIBS=ON
 CMAKE_ARGS+=		-DBUILD_PYBULLET=ON
 CMAKE_ARGS+=		-DBUILD_PYBULLET_NUMPY=ON
+CMAKE_ARGS+=		-DPYTHON_SITELIB=${PYTHON_SITELIB}
+
 
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk

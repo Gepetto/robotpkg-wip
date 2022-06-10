@@ -4,8 +4,7 @@
 
 ORG=			memory-of-motion
 NAME=			sobec
-VERSION=		1.0.0
-PKGREVISION=		1
+VERSION=		1.1.0
 
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
 
@@ -15,6 +14,7 @@ LICENSE=		2-clause-bsd
 MAINTAINER=		gsaurel@laas.fr
 
 USE_BOOST_LIBS=		unit_test_framework python
+DEPEND_ABI.python =	python>=3.6
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 

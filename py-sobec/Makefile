@@ -5,7 +5,7 @@
 ORG=			memory-of-motion
 NAME=			sobec
 VERSION=		1.1.0
-PKGREVISION=		1
+PKGREVISION=		2
 
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
 
@@ -27,6 +27,7 @@ include ../../math/py-ndcurves/depend.mk
 include ../../optimization/py-crocoddyl/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/python.mk
+include ../../mk/sysdep/py-matplotlib.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

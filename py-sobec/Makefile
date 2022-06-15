@@ -4,8 +4,7 @@
 
 ORG=			memory-of-motion
 NAME=			sobec
-VERSION=		1.1.0
-PKGREVISION=		2
+VERSION=		1.2.0
 
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
 

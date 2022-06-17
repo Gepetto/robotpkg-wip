@@ -16,6 +16,9 @@ MAINTAINER=		gsaurel@laas.fr
 
 USE_BOOST_LIBS=		unit_test_framework python
 
+# parallel builds exhaust memory - until a better solution is found
+MAKE_JOBS_SAFE=		no
+
 include ../../devel/jrl-cmakemodules/Makefile.common
 
 include ../../wip/py-bullet3/depend.mk

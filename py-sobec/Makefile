@@ -5,6 +5,7 @@
 ORG=			memory-of-motion
 NAME=			sobec
 VERSION=		1.2.0
+PKGREVISION=		1
 
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
 
@@ -20,6 +21,7 @@ include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/py-bullet3/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
+include ../../devel/yaml-cpp/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../math/ndcurves/depend.mk
 include ../../math/py-ndcurves/depend.mk

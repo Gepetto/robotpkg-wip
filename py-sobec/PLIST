@@ -13,6 +13,7 @@ include/sobec/contact/multiple-contacts.hpp
 include/sobec/contact/multiple-contacts.hxx
 include/sobec/deprecated.hh
 include/sobec/designer.hpp
+include/sobec/flexibility_compensation.hpp
 include/sobec/foot_trajectory.hpp
 include/sobec/fwd.hpp
 include/sobec/horizon_manager.hpp
@@ -23,6 +24,8 @@ include/sobec/lowpassfilter/statelpf.hxx
 include/sobec/model_factory.hpp
 include/sobec/mpc-walk.hpp
 include/sobec/mpc-walk.hxx
+include/sobec/ocp-walk.hpp
+include/sobec/py2cpp.hpp
 include/sobec/python.hpp
 include/sobec/residual-com-velocity.hpp
 include/sobec/residual-com-velocity.hxx
@@ -42,6 +45,8 @@ lib/cmake/sobec/sobecTargets-release.cmake
 lib/cmake/sobec/sobecTargets.cmake
 lib/libsobec.so
 lib/libsobec.so.${PKGVERSION}
+lib/libsobec_py2cpp.so
+lib/libsobec_py2cpp.so.${PKGVERSION}
 lib/pkgconfig/sobec.pc
 ${PYTHON_SITELIB}/sobec/__init__.py
 ${PYTHON_SITELIB}/sobec/sobec_pywrap${PYTHON_EXT_SUFFIX}
@@ -51,5 +56,7 @@ ${PYTHON_SITELIB}/sobec/walk/miscdisp.py
 ${PYTHON_SITELIB}/sobec/walk/ocp.py
 ${PYTHON_SITELIB}/sobec/walk/params.py
 ${PYTHON_SITELIB}/sobec/walk/robot_wrapper.py
+${PYTHON_SITELIB}/sobec/walk/talos_collections.py
 ${PYTHON_SITELIB}/sobec/walk/weight_share.py
+${PYTHON_SITELIB}/sobec/walk/yaml_params.py
 share/sobec/package.xml

@@ -16,7 +16,7 @@ PREFER.py-bullet3?=	robotpkg
 SYSTEM_SEARCH.py-bullet3=\
   'include/bullet/Bullet3Common/b3HashMap.h'				\
   'lib/libBullet3Common.so'						\
-  '${PYTHON_SYSLIBSEARCH}/pybullet.so'					\
+  '${PYTHON_SYSLIBSEARCH}/pybullet.{,*.}so'					\
   'lib/cmake/bullet/BulletConfig.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
   'lib/pkgconfig/bullet.pc:/Version/s/[^0-9.]//gp'
 

@@ -3,30 +3,30 @@
 #
 
 DEPEND_DEPTH:=			${DEPEND_DEPTH}+
-PY_EXAMPLE_ADDER_DEPEND_MK:=	${PY_EXAMPLE_ADDER_DEPEND_MK}+
+PY_SOBEC_DEPEND_MK:=		${PY_SOBEC_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
-DEPEND_PKG+=			py-example-adder
+DEPEND_PKG+=			py-sobec
 endif
 
-ifeq (+,$(EXAMPLE_ADDER_DEPEND_MK)) # ------------------------------------------
+ifeq (+,$(SOBEC_DEPEND_MK)) # ------------------------------------------
 
-PREFER.py-example-adder?=	robotpkg
+PREFER.py-sobec?=		robotpkg
 
-SYSTEM_SEARCH.py-example-adder=									\
-  'include/example/adder/config.hh:/EXAMPLE_ADDER_VERSION /s/[^0-9.]//gp'			\
-  'include/example-adder/gepadd.hpp'								\
-  'lib/cmake/example-adder/example-adderConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
-  'lib/libexample-adder.so'									\
-  'lib/pkgconfig/example-adder.pc:/Version/s/[^0-9.]//gp'					\
-  '${PYTHON_SYSLIBSEARCH}/example_adder/libexample-adder.so'					\
-  '${PYTHON_SYSLIBSEARCH}/example_adder/__init__.py'
+SYSTEM_SEARCH.py-sobec=								\
+  'include/sobec/config.hh:/SOBEC_VERSION /s/[^0-9.]//gp'			\
+  'include/sobec/gepadd.hpp'							\
+  'lib/cmake/sobec/sobecConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
+  'lib/libsobec.so'								\
+  'lib/pkgconfig/sobec.pc:/Version/s/[^0-9.]//gp'				\
+  '${PYTHON_SYSLIBSEARCH}/sobec/libsobec.so'					\
+  '${PYTHON_SYSLIBSEARCH}/sobec/__init__.py'
 
-DEPEND_USE+=			py-example-adder
+DEPEND_USE+=			py-sobec
 
-DEPEND_ABI.py-example-adder?=	${PKGTAG.python-}example-adder>=4.0.0
-DEPEND_DIR.py-example-adder?=	../../wip/py-example-adder
+DEPEND_ABI.py-sobec?=		${PKGTAG.python-}sobec>=1.2.0
+DEPEND_DIR.py-sobec?=		../../wip/py-sobec
 
-endif # PY_EXAMPLE_ADDER_DEPEND_MK ------------------------------------------------
+endif # PY_SOBEC_DEPEND_MK ------------------------------------------------
 
-DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}
+DEPEND_DEPTH:=			${DEPEND_DEPTH:+=}

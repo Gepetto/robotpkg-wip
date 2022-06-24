@@ -74,6 +74,7 @@ SUBDIR+=	py-dynamic-graph-tutorial
 SUBDIR+=	py-dynamic-graph-v3
 SUBDIR+=	py-ecos
 SUBDIR+=	py-example-adder
+SUBDIR+=	py-flex-joints
 SUBDIR+=	py-gurobi
 SUBDIR+=	py-hqp
 SUBDIR+=	py-hpp-hrp2

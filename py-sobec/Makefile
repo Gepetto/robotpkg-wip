@@ -26,6 +26,7 @@ include ../../devel/boost-libs/depend.mk
 include ../../devel/yaml-cpp/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../math/ndcurves/depend.mk
+include ../../math/py-eigenpy/depend.mk
 include ../../math/py-ndcurves/depend.mk
 include ../../optimization/py-crocoddyl/depend.mk
 include ../../mk/sysdep/cmake.mk

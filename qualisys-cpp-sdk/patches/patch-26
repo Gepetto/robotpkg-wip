@@ -1,0 +1,323 @@
+From cecc5582979165415854aac55d33a4e6939446da Mon Sep 17 00:00:00 2001
+From: Roberto-R <robert.soor@gmail.com>
+Date: Tue, 15 Feb 2022 09:12:28 +0100
+Subject: [PATCH 1/3] Added install commands for cmake targets and config so
+ ind_package will work
+
+---
+ CMakeLists.txt                  | 98 +++++++++++++++++----------------
+ README.md                       | 22 +++++++-
+ qualisys_cpp_sdkConfig.cmake.in |  7 +++
+ 3 files changed, 78 insertions(+), 49 deletions(-)
+ create mode 100644 qualisys_cpp_sdkConfig.cmake.in
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5ccf80d..7792727 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -1,64 +1,70 @@
+ cmake_minimum_required(VERSION 3.5)
+-include(GNUInstallDirs)
++project(qualisys_cpp_sdk)
+ 
+ option(BUILD_EXAMPLES "Build examples" OFF)
+ 
+-project(qualisys_cpp_sdk)
++add_library(${PROJECT_NAME}
++        Markup.cpp
++        Network.cpp
++        RTPacket.cpp
++        RTProtocol.cpp)
++
++target_include_directories(${PROJECT_NAME} PUBLIC
++        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
++        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}>)
+ 
+-add_library(qualisys_cpp_sdk
+-  Markup.cpp
+-  Network.cpp
+-  RTPacket.cpp
+-  RTProtocol.cpp
+-)
+-target_include_directories( ${PROJECT_NAME} 
+-    PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+-)
+-target_link_libraries( ${PROJECT_NAME}
+-    PRIVATE $<$<STREQUAL:"${CMAKE_CXX_COMPILER_ID}","MSVC">:ws2_32.lib>
+-)
+-# Enable C++11
++target_link_libraries(${PROJECT_NAME}
++        PRIVATE $<$<STREQUAL:"${CMAKE_CXX_COMPILER_ID}","MSVC">:ws2_32.lib>)
++
++# Enable C++14
+ target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_14)
+-set_target_properties(${PROJECT_NAME} 
+-    PROPERTIES 
+-    	CXX_STANDARD_REQUIRED ON
+-    	CXX_EXTENSIONS OFF
+-        DEBUG_POSTFIX "-d"
+-)
++set_target_properties(${PROJECT_NAME}
++        PROPERTIES
++        CXX_STANDARD_REQUIRED ON
++        CXX_EXTENSIONS OFF
++        DEBUG_POSTFIX "-d")
+ 
+ # ----------- INSTALL & EXPORT -----------
+ 
++include(GNUInstallDirs)
++
++set(ConfigPackageLocation ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME})
++
++install(EXPORT ${PROJECT_NAME}Targets
++        FILE ${PROJECT_NAME}Targets.cmake
++        DESTINATION ${ConfigPackageLocation})
++
++include(CMakePackageConfigHelpers)
++configure_package_config_file(${PROJECT_NAME}Config.cmake.in
++        ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake
++        INSTALL_DESTINATION ${ConfigPackageLocation}
++        PATH_VARS CMAKE_INSTALL_INCLUDEDIR)
++
++install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake
++		DESTINATION ${ConfigPackageLocation})
++
+ # 'make install' to the correct locations (provided by GNUInstallDirs).
+ install(
+-	TARGETS ${PROJECT_NAME}
+-	EXPORT ${PROJECT_NAME}-targets
+-    ARCHIVE  DESTINATION ${CMAKE_INSTALL_LIBDIR}
+-    LIBRARY  DESTINATION ${CMAKE_INSTALL_LIBDIR}
+-    RUNTIME  DESTINATION ${CMAKE_INSTALL_BINDIR} # This is for Windows
+-)
++        TARGETS ${PROJECT_NAME}
++        EXPORT ${PROJECT_NAME}Targets
++        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
++        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
++        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}) # This is for Windows
++
+ # Copy along headers
+ set(INSTALL_INCLUDE_DIR "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}")
+ install(
+-    CODE "file( GLOB HEADERS \"${CMAKE_CURRENT_SOURCE_DIR}/*.h*\" )"
+-    CODE "file( INSTALL \${HEADERS} DESTINATION \"${INSTALL_INCLUDE_DIR}\" )"
+-)
++        CODE "file( GLOB HEADERS \"${CMAKE_CURRENT_SOURCE_DIR}/*.h*\" )"
++        CODE "file( INSTALL \${HEADERS} DESTINATION \"${INSTALL_INCLUDE_DIR}\" )")
++
++# ----------- EXAMPLES -----------
+ 
+ # example: RigidBodyStreaming
+-if(BUILD_EXAMPLES)
++if (BUILD_EXAMPLES)
++
+     add_executable(RigidBodyStreaming
+-        RigidBodyStreaming/RigidBodyStreaming.cpp
+-    )
++            RigidBodyStreaming/RigidBodyStreaming.cpp)
+     target_link_libraries(RigidBodyStreaming
+-        qualisys_cpp_sdk
+-    )
+-endif()
+-# # example: RTClientExample
+-# add_executable(RTClientExample
+-#   RTClientExample/Input.cpp
+-#   RTClientExample/Operations.cpp
+-#   RTClientExample/Output.cpp
+-#   RTClientExample/OutputSettings.cpp
+-# )
+-# target_link_libraries(RTClientExample
+-#   qualisys_cpp_sdk
+-# )
++            qualisys_cpp_sdk)
++
++endif ()
+diff --git a/README.md b/README.md
+index 5ae9525..c3d9163 100644
+--- README.md
++++ README.md
+@@ -1,12 +1,12 @@
+-Qualisys Realtime SDK
++# Qualisys Realtime SDK
+ 
+ C++ package with SDK and examples
+ 
+-# Build with Visual Studio
++## Build with Visual Studio
+ 
+ Build RTClientSDK solution in Visual Studio 2017.
+ 
+-# Build with CMake (Windows & Linux)
++## Build with CMake (Windows & Linux)
+ 
+ * _Tested with GCC 7._
+ * _Tested with VS 2017._
+@@ -17,3 +17,19 @@ cd build
+ cmake .. -DBUILD_EXAMPLES=ON
+ cmake --build .
+ ```
++
++## Usage
++
++Include the Qualisys SDK in your cmake application with:
++
++```cmake
++find_package(qualisys_cpp_sdk REQUIRED)
++
++target_link_libraries(myapplication
++        qualisys_cpp_sdk)
++```
++
++### Troubleshooting
++
++ * Error on Windows: *Unresolved link external symbol for `CNetwork` and other classes*
++     * Link your application to `ws2_32.lib` explicitly.
+diff --git a/qualisys_cpp_sdkConfig.cmake.in b/qualisys_cpp_sdkConfig.cmake.in
+new file mode 100644
+index 0000000..07564b5
+--- /dev/null
++++ qualisys_cpp_sdkConfig.cmake.in
+@@ -0,0 +1,7 @@
++#CMake configuration file for qualisys_cpp_sdk library
++@PACKAGE_INIT@
++
++include(CMakeFindDependencyMacro)
++enable_language(C)
++
++include("${CMAKE_CURRENT_LIST_DIR}/qualisys_cpp_sdkTargets.cmake")
+
+From c815d6b2b3a212a4bd18e2e576d928efc49604f8 Mon Sep 17 00:00:00 2001
+From: Roberto-R <robert.soor@gmail.com>
+Date: Tue, 15 Feb 2022 10:22:41 +0100
+Subject: [PATCH 2/3] Made ws2_32 link public and removed note from README
+
+---
+ CMakeLists.txt | 2 +-
+ README.md      | 5 -----
+ 2 files changed, 1 insertion(+), 6 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 7792727..3ef0cf7 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -14,7 +14,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC
+         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}>)
+ 
+ target_link_libraries(${PROJECT_NAME}
+-        PRIVATE $<$<STREQUAL:"${CMAKE_CXX_COMPILER_ID}","MSVC">:ws2_32.lib>)
++        PUBLIC $<$<STREQUAL:"${CMAKE_CXX_COMPILER_ID}","MSVC">:ws2_32.lib>)
+ 
+ # Enable C++14
+ target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_14)
+diff --git a/README.md b/README.md
+index c3d9163..ed7aa26 100644
+--- README.md
++++ README.md
+@@ -28,8 +28,3 @@ find_package(qualisys_cpp_sdk REQUIRED)
+ target_link_libraries(myapplication
+         qualisys_cpp_sdk)
+ ```
+-
+-### Troubleshooting
+-
+- * Error on Windows: *Unresolved link external symbol for `CNetwork` and other classes*
+-     * Link your application to `ws2_32.lib` explicitly.
+
+From a1c4944349e9cd4703b8aa742da1487f82b44f66 Mon Sep 17 00:00:00 2001
+From: Roberto-R <robert.soor@gmail.com>
+Date: Tue, 15 Feb 2022 10:26:11 +0100
+Subject: [PATCH 3/3] Reformated cmakelists to old convention
+
+---
+ CMakeLists.txt | 36 ++++++++++++++++++++++--------------
+ 1 file changed, 22 insertions(+), 14 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 3ef0cf7..e83aee5 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -7,14 +7,16 @@ add_library(${PROJECT_NAME}
+         Markup.cpp
+         Network.cpp
+         RTPacket.cpp
+-        RTProtocol.cpp)
+-
++        RTProtocol.cpp
++)
+ target_include_directories(${PROJECT_NAME} PUBLIC
+         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}>)
++        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}>
++)
+ 
+ target_link_libraries(${PROJECT_NAME}
+-        PUBLIC $<$<STREQUAL:"${CMAKE_CXX_COMPILER_ID}","MSVC">:ws2_32.lib>)
++        PUBLIC $<$<STREQUAL:"${CMAKE_CXX_COMPILER_ID}","MSVC">:ws2_32.lib>
++)
+ 
+ # Enable C++14
+ target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_14)
+@@ -22,7 +24,8 @@ set_target_properties(${PROJECT_NAME}
+         PROPERTIES
+         CXX_STANDARD_REQUIRED ON
+         CXX_EXTENSIONS OFF
+-        DEBUG_POSTFIX "-d")
++        DEBUG_POSTFIX "-d"
++)
+ 
+ # ----------- INSTALL & EXPORT -----------
+ 
+@@ -32,16 +35,19 @@ set(ConfigPackageLocation ${CMAKE_INSTALL_LIBDIR}/${PROJECT_NAME})
+ 
+ install(EXPORT ${PROJECT_NAME}Targets
+         FILE ${PROJECT_NAME}Targets.cmake
+-        DESTINATION ${ConfigPackageLocation})
++        DESTINATION ${ConfigPackageLocation}
++)
+ 
+ include(CMakePackageConfigHelpers)
+ configure_package_config_file(${PROJECT_NAME}Config.cmake.in
+         ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake
+         INSTALL_DESTINATION ${ConfigPackageLocation}
+-        PATH_VARS CMAKE_INSTALL_INCLUDEDIR)
++        PATH_VARS CMAKE_INSTALL_INCLUDEDIR
++)
+ 
+ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake
+-		DESTINATION ${ConfigPackageLocation})
++		DESTINATION ${ConfigPackageLocation}
++)
+ 
+ # 'make install' to the correct locations (provided by GNUInstallDirs).
+ install(
+@@ -49,22 +55,24 @@ install(
+         EXPORT ${PROJECT_NAME}Targets
+         ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+-        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}) # This is for Windows
++        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} # This is for Windows
++)
+ 
+ # Copy along headers
+ set(INSTALL_INCLUDE_DIR "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}")
+ install(
+         CODE "file( GLOB HEADERS \"${CMAKE_CURRENT_SOURCE_DIR}/*.h*\" )"
+-        CODE "file( INSTALL \${HEADERS} DESTINATION \"${INSTALL_INCLUDE_DIR}\" )")
++        CODE "file( INSTALL \${HEADERS} DESTINATION \"${INSTALL_INCLUDE_DIR}\" )"
++)
+ 
+ # ----------- EXAMPLES -----------
+ 
+ # example: RigidBodyStreaming
+ if (BUILD_EXAMPLES)
+-
+     add_executable(RigidBodyStreaming
+-            RigidBodyStreaming/RigidBodyStreaming.cpp)
++            RigidBodyStreaming/RigidBodyStreaming.cpp
++    )
+     target_link_libraries(RigidBodyStreaming
+-            qualisys_cpp_sdk)
+-
++            qualisys_cpp_sdk
++    )
+ endif ()

@@ -1,0 +1,9 @@
+@comment Tue Jul 5 13:05:12 CEST 2022
+include/qualisys_cpp_sdk/Markup.h
+include/qualisys_cpp_sdk/Network.h
+include/qualisys_cpp_sdk/RTPacket.h
+include/qualisys_cpp_sdk/RTProtocol.h
+lib/libqualisys_cpp_sdk.a
+lib/qualisys_cpp_sdk/qualisys_cpp_sdkConfig.cmake
+lib/qualisys_cpp_sdk/qualisys_cpp_sdkTargets-release.cmake
+lib/qualisys_cpp_sdk/qualisys_cpp_sdkTargets.cmake

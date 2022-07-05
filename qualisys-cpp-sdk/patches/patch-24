@@ -1,0 +1,54 @@
+From cbeee2edf2950bbcd205c55f03737d07f7d66089 Mon Sep 17 00:00:00 2001
+From: jnader <joudy.nader@irisa.fr>
+Date: Tue, 11 Jan 2022 08:31:09 +0100
+Subject: [PATCH 1/2] Set C++14 in CMake.
+
+---
+ CMakeLists.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index aaab749..a45cc12 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -5,6 +5,8 @@ option(BUILD_EXAMPLES "Build examples" OFF)
+ 
+ project(qualisys_cpp_sdk)
+ 
++
++
+ add_library(qualisys_cpp_sdk
+   Markup.cpp
+   Network.cpp
+@@ -18,7 +20,7 @@ target_link_libraries( ${PROJECT_NAME}
+     PRIVATE $<$<STREQUAL:"${CMAKE_CXX_COMPILER_ID}","MSVC">:ws2_32.lib>
+ )
+ # Enable C++11
+-target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_11)
++target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_14)
+ set_target_properties(${PROJECT_NAME} 
+     PROPERTIES 
+     	CXX_STANDARD_REQUIRED ON
+
+From d4efae79be7b8ba00de1c38fcafab9e8119e6927 Mon Sep 17 00:00:00 2001
+From: Joudy Nader <Joudy.Nader@irisa.fr>
+Date: Tue, 11 Jan 2022 13:40:08 +0100
+Subject: [PATCH 2/2] Removing new-lines.
+
+---
+ CMakeLists.txt | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index a45cc12..5ccf80d 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -5,8 +5,6 @@ option(BUILD_EXAMPLES "Build examples" OFF)
+ 
+ project(qualisys_cpp_sdk)
+ 
+-
+-
+ add_library(qualisys_cpp_sdk
+   Markup.cpp
+   Network.cpp

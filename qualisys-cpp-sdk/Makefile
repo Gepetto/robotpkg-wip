@@ -14,6 +14,8 @@ CATEGORIES=		wip
 LICENSE=		mit
 COMMENT=		C++ sdk for talking to Qualisys Track Manager software
 
+DEPEND_ABI.cmake+=	cmake>=3.8
+
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk

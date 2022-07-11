@@ -4,8 +4,7 @@
 
 ORG=		Gepetto
 NAME=		ouster-gazebo-simulation
-VERSION=	2.1.1
-PKGREVISION=	1
+VERSION=	2.1.2
 
 CATEGORIES=	wip
 COMMENT=	the simulation of Ouster OS1-64 with ros and gazebo

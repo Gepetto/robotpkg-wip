@@ -2,23 +2,17 @@
 # Created:			Guilhem Saurel on Wed, 17 Oct 2018
 #
 
-ORG=			coin-or
-NAME=			cppad
-VERSION=		20210000.8
-
-DISTNAME=		${VERSION}
-PKGNAME=		${NAME}-${VERSION}
-WRKSRC=			${WRKDIR}/CppAD-${VERSION}
-
-HOMEPAGE=			${MASTER_SITE_GITHUB:=${ORG}/${NAME}}
-MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}
+VERSION=		20220000.4
+DISTNAME=		CppAD-${VERSION}
+PKGNAME=		cppad-${VERSION}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=coin-or/}
 
 CATEGORIES=		wip
 COMMENT=		CppAD
 LICENSE=		eclipse
 MAINTAINER=		gsaurel@laas.fr
 
-CMAKE_ARGS+=	-Dcppad_prefix=${PREFIX}
+CMAKE_ARGS+=		-Dcppad_prefix=${PREFIX}
 DEPEND_ABI.cmake=	cmake>=3.1
 
 include ../../mk/sysdep/cmake.mk

@@ -3,7 +3,7 @@
 #
 
 PKGNAME=		qualisys-cpp-sdk-2021.2
-PKGREVISION=		1
+PKGREVISION=		2
 
 GITHUB_TAG=		rt_protocol_1.23
 DISTNAME=		qualisys_cpp_sdk

@@ -15,7 +15,7 @@ PREFER.qualisys-cpp-sdk?=	robotpkg
 
 SYSTEM_SEARCH.qualisys-cpp-sdk=				\
   'include/qualisys_cpp_sdk/RTPacket.h'			\
-  'lib/libqualisys_cpp_sdk.a'				\
+  'lib/libqualisys_cpp_sdk.so'				\
   'lib/qualisys_cpp_sdk/qualisys_cpp_sdkConfig.cmake'
 
 DEPEND_USE+=			qualisys-cpp-sdk

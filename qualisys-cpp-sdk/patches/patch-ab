@@ -1,0 +1,11 @@
+--- CMakeLists.txt.orig	2022-07-19 00:37:40.000000000 +0200
++++ CMakeLists.txt	2022-07-19 00:37:50.702873124 +0200
+@@ -5,7 +5,7 @@
+ 
+ include(GNUInstallDirs)
+ 
+-add_library(${PROJECT_NAME}
++add_library(${PROJECT_NAME} SHARED
+         Markup.cpp
+         Network.cpp
+         RTPacket.cpp

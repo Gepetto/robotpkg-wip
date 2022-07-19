@@ -132,6 +132,7 @@ SUBDIR+=	ros-octomap-msgs
 SUBDIR+=	ros-perception-pcl
 SUBDIR+=	ros-pcl-msgs
 SUBDIR+=	ros-py-urdf-parser
+SUBDIR+=	ros-qualisys
 SUBDIR+=	ros-srdfdom
 SUBDIR+=	ros-swri-math-util
 SUBDIR+=	ros-swri-nodelet

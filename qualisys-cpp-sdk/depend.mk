@@ -20,6 +20,7 @@ SYSTEM_SEARCH.qualisys-cpp-sdk=				\
 
 DEPEND_USE+=			qualisys-cpp-sdk
 
+DEPEND_ABI.qualisys-cpp-sdk?=	qualisys-cpp-sdk>=2021.2
 DEPEND_DIR.qualisys-cpp-sdk?=	../../wip/qualisys-cpp-sdk
 
 endif # QUALISYS_CPP_SDK_DEPEND_MK ------------------------------

@@ -1,0 +1,16 @@
+@comment Tue Jul 19 19:30:57 CEST 2022
+include/ros-qualisys/config.hh
+include/ros-qualisys/deprecated.hh
+include/ros-qualisys/qualisys-to-ros.hpp
+include/ros-qualisys/warning.hh
+lib/cmake/ros-qualisys/ros-qualisysConfig.cmake
+lib/cmake/ros-qualisys/ros-qualisysConfigVersion.cmake
+lib/cmake/ros-qualisys/ros-qualisysTargets-release.cmake
+lib/cmake/ros-qualisys/ros-qualisysTargets.cmake
+lib/libros-qualisys.so
+lib/libros-qualisys.so.${PKGVERSION}
+lib/pkgconfig/ros-qualisys.pc
+lib/ros-qualisys/ros-qualisys
+share/ros-qualisys/config/bauzil-qualisys.yaml
+share/ros-qualisys/launch/qualisys_bauzil_bringup.launch
+share/ros-qualisys/package.xml

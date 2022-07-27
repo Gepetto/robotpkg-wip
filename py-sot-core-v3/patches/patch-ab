@@ -1,0 +1,49 @@
+From 432dfe73cbcf4a9bba238f650f0ef191c79496a3 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Thu, 28 Jul 2022 08:39:58 +0200
+Subject: [PATCH] dynamic-graph: public links
+
+fix:
+
+CMake Error at cmake/boost.cmake:296 (target_include_directories):
+target_include_directories called with invalid arguments
+Call Stack (most recent call first):
+cmake/python.cmake:445 (target_link_boost_python)
+src/CMakeLists.txt:3 (dynamic_graph_python_module)
+---
+ python.cmake | 16 +++++++---------
+ 1 file changed, 7 insertions(+), 9 deletions(-)
+
+diff --git a/python.cmake b/python.cmake
+index ab38c80..7a4ecac 100644
+--- cmake/python.cmake
++++ cmake/python.cmake
+@@ -437,18 +437,16 @@ macro(DYNAMIC_GRAPH_PYTHON_MODULE SUBMODULENAME LIBRARYNAME TARGETNAME)
+   )
+ 
+   if(UNIX AND NOT APPLE)
+-    target_link_libraries(${PYTHON_MODULE} ${PUBLIC_KEYWORD}
+-                          "-Wl,--no-as-needed")
++    target_link_libraries(${PYTHON_MODULE} PUBLIC "-Wl,--no-as-needed")
+   endif(UNIX AND NOT APPLE)
+-  target_link_libraries(${PYTHON_MODULE} ${PUBLIC_KEYWORD} ${LIBRARYNAME}
+-                        dynamic-graph::dynamic-graph)
+-  target_link_boost_python(${PYTHON_MODULE} ${PUBLIC_KEYWORD})
++  target_link_libraries(${PYTHON_MODULE} PUBLIC ${LIBRARYNAME}
++                                                dynamic-graph::dynamic-graph)
++  target_link_boost_python(${PYTHON_MODULE} PUBLIC)
+   if(PROJECT_NAME STREQUAL "dynamic-graph-python")
+-    target_link_libraries(${PYTHON_MODULE} ${PUBLIC_KEYWORD}
+-                          dynamic-graph-python)
++    target_link_libraries(${PYTHON_MODULE} PUBLIC dynamic-graph-python)
+   else()
+-    target_link_libraries(${PYTHON_MODULE} ${PUBLIC_KEYWORD}
+-                          dynamic-graph-python::dynamic-graph-python)
++    target_link_libraries(${PYTHON_MODULE}
++                          PUBLIC dynamic-graph-python::dynamic-graph-python)
+   endif()
+ 
+   target_include_directories(${PYTHON_MODULE} SYSTEM
+-- 
+2.25.1
+

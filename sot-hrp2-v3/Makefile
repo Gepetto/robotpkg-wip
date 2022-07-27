@@ -19,7 +19,7 @@ include ../../wip/py-dynamic-graph-bridge-v3/depend.mk
 include ../../motion/dynamic-graph-bridge-msgs/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
 include ../../wip/py-sot-tools-v3/depend.mk
-include ../../wip/sot-core-v3/depend.mk
+include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 

@@ -22,7 +22,7 @@ include ../../math/eigen3/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../path/hpp-fcl/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
-include ../../wip/sot-core-v3/depend.mk
+include ../../wip/py-sot-core-v3/depend.mk
 include ../../optimization/tsid/depend.mk
 include ../../wip/parametric-curves/depend.mk
 include ../../wip/ddp-actuator-solver/depend.mk

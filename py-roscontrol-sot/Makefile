@@ -44,7 +44,7 @@ include ../../math/ros-geometry/depend.mk
 include ../../motion/ros-control-toolbox/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
-include ../../wip/sot-core-v3/depend.mk
+include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../mk/robotpkg.prefs.mk

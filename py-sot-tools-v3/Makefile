@@ -17,7 +17,6 @@ USE_PYTHON_ONLY=	true
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../${CATEGORIES}/${NAME}-v3/depend.mk
-include ../../wip/sot-core-v3/depend.mk
 include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk

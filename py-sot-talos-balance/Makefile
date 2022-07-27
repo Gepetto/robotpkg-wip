@@ -25,7 +25,6 @@ include ../../path/hpp-fcl/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
-include ../../wip/sot-core-v3/depend.mk
 include ../../wip/py-sot-core-v3/depend.mk
 include ../../optimization/tsid/depend.mk
 include ../../optimization/py-tsid/depend.mk

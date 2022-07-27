@@ -24,7 +24,7 @@ include ../../math/pinocchio/depend.mk
 include ../../path/hpp-fcl/depend.mk
 include ../../mapping/octomap/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
-include ../../wip/sot-core-v3/depend.mk
+include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/sot-tools-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

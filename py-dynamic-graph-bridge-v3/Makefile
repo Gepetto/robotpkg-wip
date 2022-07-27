@@ -40,7 +40,6 @@ include ../../pkgtools/pkg-config/depend.mk
 include ../../sysutils/ros-rospack/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
-include ../../wip/sot-core-v3/depend.mk
 include ../../wip/py-sot-core-v3/depend.mk
 include ../../mk/sysdep/bullet.mk
 include ../../mk/sysdep/cmake.mk

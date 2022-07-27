@@ -2,10 +2,9 @@
 # Created:			Rohan Budhiraja on Wed Dec 16 15:33:40 CET 2015
 #
 
-PKGREVISION=		1
 ORG=			stack-of-tasks
 NAME=			sot-core
-VERSION=		4.11.6
+VERSION=		4.11.7
 
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
@@ -13,11 +12,9 @@ CATEGORIES=		wip
 COMMENT=		Hierarchical task based control of humanoid robots (python bindings)
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
-
-USE_PYTHON_ONLY=	true
+CONFLICTS+=		${NAME}  # Old packages
 
 include ../../devel/jrl-cmakemodules/Makefile.common
-include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../math/eigen3/depend.mk

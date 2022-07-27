@@ -22,7 +22,6 @@ include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../wip/soth/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
-include ../../wip/sot-core-v3/depend.mk
 include ../../wip/py-sot-core-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk

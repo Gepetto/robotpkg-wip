@@ -22,7 +22,7 @@ include ../../math/pinocchio/depend.mk
 include ../../wip/jrl-walkgen-v3/depend.mk
 include ../../math/eigen-quadprog/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
-include ../../wip/sot-core-v3/depend.mk
+include ../../wip/py-sot-core-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

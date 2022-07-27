@@ -17,7 +17,7 @@ CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF  # doxygen segfaults on 14.04
 
 include ../../devel/jrl-cmakemodules/Makefile.common
-include ../../wip/sot-core-v3/depend.mk
+include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../math/eigen3/depend.mk

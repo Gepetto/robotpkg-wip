@@ -28,7 +28,6 @@ include ../../robots/example-robot-data/depend.mk
 include ../../robots/py-example-robot-data/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
-include ../../wip/sot-core-v3/depend.mk
 include ../../wip/py-sot-core-v3/depend.mk
 include ../../optimization/tsid/depend.mk
 include ../../optimization/py-tsid/depend.mk

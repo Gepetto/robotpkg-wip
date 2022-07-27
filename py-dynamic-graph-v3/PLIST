@@ -11,6 +11,7 @@ include/dynamic-graph/python/python-compat.hh
 include/dynamic-graph/python/signal-wrapper.hh
 include/dynamic-graph/python/signal.hh
 include/dynamic-graph/python/warning.hh
+lib/cmake/dynamic-graph-python/cxx-standard.cmake
 lib/cmake/dynamic-graph-python/dynamic-graph-pythonConfig.cmake
 lib/cmake/dynamic-graph-python/dynamic-graph-pythonConfigVersion.cmake
 lib/cmake/dynamic-graph-python/dynamic-graph-pythonTargets-release.cmake

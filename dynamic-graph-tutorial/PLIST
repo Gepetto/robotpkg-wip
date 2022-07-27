@@ -4,6 +4,7 @@ include/dynamic-graph/tutorial/deprecated.hh
 include/dynamic-graph/tutorial/feedback-controller.hh
 include/dynamic-graph/tutorial/inverted-pendulum.hh
 include/dynamic-graph/tutorial/warning.hh
+lib/cmake/dynamic-graph-tutorial/cxx-standard.cmake
 lib/cmake/dynamic-graph-tutorial/dynamic-graph-tutorialConfig.cmake
 lib/cmake/dynamic-graph-tutorial/dynamic-graph-tutorialConfigVersion.cmake
 lib/cmake/dynamic-graph-tutorial/dynamic-graph-tutorialTargets-release.cmake

@@ -4,7 +4,7 @@
 
 ORG=			gepetto
 NAME=			flex-joints
-VERSION=		1.0.0
+VERSION=		1.0.1
 
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
 

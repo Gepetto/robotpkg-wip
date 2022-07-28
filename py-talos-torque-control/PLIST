@@ -1,4 +1,17 @@
-@comment Wed Mar 25 17:05:52 CET 2020
+@comment Thu Jul 28 13:00:46 CEST 2022
+include/sot/torque-control/config.hh
+include/sot/torque-control/deprecated.hh
+include/sot/torque-control/talos-common.hh
+include/sot/torque-control/warning.hh
+lib/cmake/talos-torque-control/cxx-standard.cmake
+lib/cmake/talos-torque-control/talos-torque-controlConfig.cmake
+lib/cmake/talos-torque-control/talos-torque-controlConfigVersion.cmake
+lib/cmake/talos-torque-control/talos-torque-controlTargets-release.cmake
+lib/cmake/talos-torque-control/talos-torque-controlTargets.cmake
+lib/libtalos-torque-control.so
+lib/libtalos-torque-control.so.1.1.0
+lib/libtalos-torque-control.so.${PKGVERSION}
+lib/pkgconfig/talos-torque-control.pc
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/talos/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/talos/admittance_ctrl_conf.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/talos/balance_ctrl_conf.py
@@ -23,3 +36,4 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/talos/main_sim_com_vel.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/talos/motors_parameters.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/talos/motors_parameters_sim.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/talos/sot_utils_talos.py
+share/talos-torque-control/package.xml

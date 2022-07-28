@@ -4,14 +4,11 @@
 
 ORG=			pyrene-dev
 NAME=			talos-torque-control
-VERSION=		1.1.0
+VERSION=		1.1.1
 
 CATEGORIES=		wip
 COMMENT=		Torque control for Talos (python bindings)
 
-USE_PYTHON_ONLY=	true
-
-include ../../${CATEGORIES}/${NAME}/depend.mk
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/sot-torque-control/depend.mk
 include ../../wip/py-sot-torque-control/depend.mk

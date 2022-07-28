@@ -14,9 +14,15 @@ ifeq (+,$(PY_TALOS_TORQUE_CONTROL_DEPEND_MK)) # --------------------------------
 PREFER.py-talos-torque-control?=	robotpkg
 
 SYSTEM_SEARCH.py-talos-torque-control=\
-	'${PYTHON_SYSLIBSEARCH}/dynamic_graph/sot/torque_control/talos/__init__.py'
+  'include/sot/torque-control/config.hh:/TALOS_TORQUE_CONTROL_VERSION /s/[^0-9.]//gp'				\
+  'lib/libtalos-torque-control.so'										\
+  'lib/cmake/talos-torque-control/talos-torque-controlConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
+  'lib/pkgconfig/talos-torque-control.pc:/Version/s/[^0-9.]//gp'						\
+  '${PYTHON_SYSLIBSEARCH}/dynamic_graph/sot/torque_control/talos/__init__.py'
 
 DEPEND_USE+=				py-talos-torque-control
+
+include ../../mk/sysdep/python.mk
 
 DEPEND_ABI.py-talos-torque-control?=	${PKGTAG.python-}talos-torque-control>=1.0.0
 DEPEND_DIR.py-talos-torque-control?=	../../wip/py-talos-torque-control

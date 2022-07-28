@@ -1,10 +1,10 @@
---- CMakeLists.txt.orig	2020-03-19 22:29:08.000000000 +0100
-+++ CMakeLists.txt	2020-03-20 01:46:50.075110462 +0100
-@@ -80,6 +80,7 @@
-   add_definitions(-DTEMPERATURE_SENSOR_CONTROLLER)
- endif(temperature_sensor_controller_FOUND)
+--- CMakeLists.txt.orig	2022-07-28 16:56:14.000000000 +0200
++++ CMakeLists.txt	2022-07-28 16:59:18.281485273 +0200
+@@ -64,6 +64,7 @@
+ # Detect if temperature sensor controller package is found if yes then it is a
+ # PAL Robotics Forked code.
  
-+LINK_DIRECTORIES(${catkin_LIBRARY_DIRS})
- add_library(rcsot_controller
-   src/roscontrol-sot-controller.cpp
-   src/log.cpp
++link_directories(${catkin_LIBRARY_DIRS})
+ add_library(rcsot_controller src/roscontrol-sot-controller.cpp src/log.cpp)
+ target_include_directories(
+   rcsot_controller SYSTEM PUBLIC ${catkin_INCLUDE_DIRS}

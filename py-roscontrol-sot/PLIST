@@ -3,6 +3,7 @@ bin/roscontrol-sot-parse-log
 include/roscontrol/sot/config.hh
 include/roscontrol/sot/deprecated.hh
 include/roscontrol/sot/warning.hh
+lib/cmake/roscontrol_sot/cxx-standard.cmake
 lib/cmake/roscontrol_sot/roscontrol_sotConfig.cmake
 lib/cmake/roscontrol_sot/roscontrol_sotConfigVersion.cmake
 lib/cmake/roscontrol_sot/roscontrol_sotTargets-release.cmake

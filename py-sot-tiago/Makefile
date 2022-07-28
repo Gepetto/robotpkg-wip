@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			sot-tiago
-VERSION=		1.5.0
+VERSION=		1.5.1
 
 CATEGORIES=		wip
 COMMENT=		This packages provides a generic Stack Of Tasks library for the mobile robot Tiago.

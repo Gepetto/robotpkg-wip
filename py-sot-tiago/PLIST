@@ -2,6 +2,7 @@
 include/sot-tiago/config.hh
 include/sot-tiago/deprecated.hh
 include/sot-tiago/warning.hh
+lib/cmake/sot-tiago/cxx-standard.cmake
 lib/cmake/sot-tiago/sot-tiagoConfig.cmake
 lib/cmake/sot-tiago/sot-tiagoConfigVersion.cmake
 lib/cmake/sot-tiago/sot-tiagoTargets-release.cmake

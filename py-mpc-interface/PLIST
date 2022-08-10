@@ -1,0 +1,21 @@
+@comment Wed Aug 10 23:04:03 CEST 2022
+include/mpc-interface/config.hpp
+include/mpc-interface/deprecated.hpp
+include/mpc-interface/dynamics.hh
+include/mpc-interface/tools.hh
+include/mpc-interface/warning.hpp
+lib/cmake/mpc-interface/cxx-standard.cmake
+lib/cmake/mpc-interface/mpc-interfaceConfig.cmake
+lib/cmake/mpc-interface/mpc-interfaceConfigVersion.cmake
+lib/cmake/mpc-interface/mpc-interfaceTargets-release.cmake
+lib/cmake/mpc-interface/mpc-interfaceTargets.cmake
+lib/libmpc-interface.so
+lib/pkgconfig/mpc-interface.pc
+${PYTHON_SITELIB}/mpc_interface/__init__.py
+${PYTHON_SITELIB}/mpc_interface/body.py
+${PYTHON_SITELIB}/mpc_interface/combinations.py
+${PYTHON_SITELIB}/mpc_interface/dynamics.py
+${PYTHON_SITELIB}/mpc_interface/goal.py
+${PYTHON_SITELIB}/mpc_interface/restrictions.py
+${PYTHON_SITELIB}/mpc_interface/tools.py
+share/mpc-interface/package.xml

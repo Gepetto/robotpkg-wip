@@ -1,0 +1,2 @@
+This package provides a structure to formulate QP based MPC problems with any linear dynamics, cost functions and constraint.
+All required QP matrices are generated automatically with the structure considered in [qpsolvers](https://scaron.info/doc/qpsolvers/).

@@ -82,6 +82,7 @@ SUBDIR+=	py-hpp-hrp2
 #SUBDIR+=	py-hpp-spline
 SUBDIR+=	py-libnabo
 SUBDIR+=	py-morse
+SUBDIR+=	py-mpc-interface
 SUBDIR+=	py-mraa
 SUBDIR+=	py-multicontact-api
 SUBDIR+=	py-multiprocess

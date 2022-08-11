@@ -115,6 +115,7 @@ SUBDIR+=	py-sot-talos-balance
 SUBDIR+=	py-sot-tiago
 SUBDIR+=	py-sot-tools-v3
 SUBDIR+=	py-sot-torque-control
+SUBDIR+=	py-sympy
 SUBDIR+=	py-talos-dev
 SUBDIR+=	py-talos-torque-control
 SUBDIR+=	py-tiago-tutorials

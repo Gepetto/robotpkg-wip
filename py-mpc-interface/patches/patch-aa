@@ -1,0 +1,20 @@
+fix build on Rocky 8
+
+--- cpp/CMakeLists.txt.orig	2022-08-10 22:59:29.000000000 +0200
++++ cpp/CMakeLists.txt	2022-08-11 09:22:29.389031550 +0200
+@@ -8,7 +8,14 @@
+ # Create library
+ add_library(${PROJECT_NAME} SHARED ${${PROJECT_NAME}_HEADERS}
+                                    ${${PROJECT_NAME}_SOURCES})
+-target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen)
++modernize_target_link_libraries(
++  ${PROJECT_NAME}
++  SCOPE
++  PUBLIC
++  TARGETS
++  Eigen3::Eigen
++  INCLUDE_DIRS
++  ${EIGEN3_INCLUDE_DIR})
+ target_include_directories(
+   ${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+                          $<INSTALL_INTERFACE:include>)

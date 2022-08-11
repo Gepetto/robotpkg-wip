@@ -5,8 +5,10 @@
 ORG=			gepetto
 NAME=			mpc-interface
 VERSION=		1.0.0
+PKGREVISION=		1
 
 USE_PYTHON=		true
+DEPEND_ABI.python=	python>=3.6
 
 CATEGORIES=		wip
 COMMENT=		A fast and flexible formulation of QP Probl

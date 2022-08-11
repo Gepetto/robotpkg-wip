@@ -1,0 +1,14 @@
+@comment Sat Jun 25 00:03:07 CEST 2022
+include/flex-joints/config.hh
+include/flex-joints/deprecated.hh
+include/flex-joints/flexi-hips.hpp
+include/flex-joints/fwd.hpp
+include/flex-joints/warning.hh
+lib/cmake/flex-joints/flex-jointsConfig.cmake
+lib/cmake/flex-joints/flex-jointsConfigVersion.cmake
+lib/cmake/flex-joints/flex-jointsTargets-release.cmake
+lib/cmake/flex-joints/flex-jointsTargets.cmake
+lib/libflex-joints.so
+lib/libflex-joints.so.${PKGVERSION}
+lib/pkgconfig/flex-joints.pc
+share/flex-joints/package.xml

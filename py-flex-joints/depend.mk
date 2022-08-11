@@ -14,12 +14,6 @@ ifeq (+,$(FLEX_JOINTS_DEPEND_MK)) # ------------------------------------------
 PREFER.py-flex-joints?=	robotpkg
 
 SYSTEM_SEARCH.py-flex-joints=								\
-  'include/flex-joints/config.hh:/FLEX_JOINTS_VERSION /s/[^0-9.]//gp'			\
-  'include/flex-joints/flexi-hips.hpp'							\
-  'lib/cmake/flex-joints/flex-jointsConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
-  'lib/libflex-joints.so'								\
-  'lib/pkgconfig/flex-joints.pc:/Version/s/[^0-9.]//gp'					\
-  'share/flex-joints/package.xml:/<version>/s/[^0-9.]//gp'				\
   '${PYTHON_SYSLIBSEARCH}/flex_joints/flex_joints.{,*.}so'				\
   '${PYTHON_SYSLIBSEARCH}/flex_joints/__init__.py'
 

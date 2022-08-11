@@ -23,6 +23,7 @@ SUBDIR+=	dynamic-graph-v3
 SUBDIR+=	dynamic-introspection
 SUBDIR+=	fcl
 SUBDIR+=	FRILibrary
+SUBDIR+=	flex-joints
 SUBDIR+=	gazebo-spring
 SUBDIR+=	hatponboard-lib
 SUBDIR+=	head-action

@@ -5,7 +5,7 @@
 ORG=			gepetto
 NAME=			mpc-interface
 VERSION=		1.0.0
-PKGREVISION=		1
+PKGREVISION=		2
 
 USE_PYTHON=		true
 DEPEND_ABI.python=	python>=3.6
@@ -13,6 +13,7 @@ DEPEND_ABI.python=	python>=3.6
 CATEGORIES=		wip
 COMMENT=		A fast and flexible formulation of QP Probl
 
+include ../../wip/py-sympy/depend.mk
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../math/eigen3/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

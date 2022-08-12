@@ -1,0 +1,18 @@
+--- CMakeLists.txt.orig	2022-08-11 22:40:17.000000000 +0200
++++ CMakeLists.txt	2022-08-12 11:55:44.228428883 +0200
+@@ -63,7 +63,14 @@
+ 
+ add_library(${PROJECT_NAME} SHARED ${${PROJECT_NAME}_SOURCES}
+                                    ${${PROJECT_NAME}_HEADERS})
+-target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen)
++modernize_target_link_libraries(
++  ${PROJECT_NAME}
++  SCOPE
++  PUBLIC
++  TARGETS
++  Eigen3::Eigen
++  INCLUDE_DIRS
++  ${EIGEN3_INCLUDE_DIR})
+ target_include_directories(${PROJECT_NAME} PUBLIC $<INSTALL_INTERFACE:include>)
+ 
+ if(SUFFIX_SO_VERSION)

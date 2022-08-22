@@ -18,7 +18,6 @@ CATEGORIES=		wip
 
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}.git
 HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
-MASTER_SITES=		${HOMEPAGE}/archive/
 
 COMMENT=		Centralizes tf lookups for nodes that do not rely heavily  on tf and thus do not need a dedicated tfListener
 LICENSE=		2-clause-bsd

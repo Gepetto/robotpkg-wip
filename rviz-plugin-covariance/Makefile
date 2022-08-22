@@ -13,7 +13,6 @@ PKGREVISION=	1
 
 CATEGORIES=	wip
 HOMEPAGE=	${MASTER_SITE_GITHUB:=olivier-stasse/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	Plugin providing covariance display
 LICENSE=	2-clause-bsd
 

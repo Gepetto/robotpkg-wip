@@ -17,7 +17,6 @@ CATEGORIES=		wip
 
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${ROSNAME}.git
 HOMEPAGE=		${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
-MASTER_SITES=		${HOMEPAGE}/archive/
 
 COMMENT=		The backward_ros package is a ros wrapper of backward-cpp from https://github.com/bombela/backward-cpp
 LICENSE=		mit

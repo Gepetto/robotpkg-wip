@@ -7,7 +7,6 @@ PKGNAME=	can-utils-${VERSION}
 DISTNAME=	v${VERSION}
 CATEGORIES=	hardware
 
-MASTER_SITES=		https://github.com/linux-can/can-utils/archive/
 MASTER_REPOSITORY=	git https://github.com/linux-can/can-utils.git
 
 MAINTAINER=	matthieu.herrb@laas.fr

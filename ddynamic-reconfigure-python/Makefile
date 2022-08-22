@@ -13,7 +13,6 @@ DIST_SUBDIR=	${PKGBASE}
 
 CATEGORIES=	wip
 MASTER_REPOSITORY=	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	The ddynamic_reconfigure_python package contains a class to instantiate dynamic reconfigure servers on the fly
 LICENSE=	2-clause-bsd
 

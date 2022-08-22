@@ -10,7 +10,6 @@ PKGREVISION=		1
 PKGNAME=		${PKGTAG.python-}ros-$(subst _,-,${ROS_PKG})-${ROS_VERSION}
 
 HOMEPAGE=		${MASTER_SITE_GITHUB:=${ROS_REPO}/${ROS_PKG}}
-MASTER_SITES=		${HOMEPAGE}/archive/v
 MASTER_REPOSITORY=	git ${HOMEPAGE}.git
 
 # old package name and other Python versions.

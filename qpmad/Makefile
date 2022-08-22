@@ -11,7 +11,6 @@ PKGNAME=		${NAME}-${VERSION}
 WRKSRC=			${WRKDIR}/${PKGNAME}
 HOMEPAGE=		https://${ORG}.github.io/${NAME}/
 MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
-MASTER_SITES=		${MASTER_SITE_GITHUB:=${ORG}/${NAME}}/archive/refs/tags/
 
 CATEGORIES=		optimization
 COMMENT=		Goldfarb-Idnani quadratic programming solver

@@ -7,7 +7,6 @@ DISTNAME=	v${PKGVERSION_NOREV}
 PKGNAME=	octoviz-${PKGVERSION}
 
 CATEGORIES=		mapping
-MASTER_SITES=	https://github.com/OctoMap/octomap/archive/
 
 HOMEPAGE=	http://http://octomap.github.io/
 

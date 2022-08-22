@@ -17,7 +17,6 @@ MASTER_REPOSITORY=	${MASTER_REPOSITORY_GITHUB}${ORG}/${NAME}.git
 CHECKOUT_VCS_OPTS+=	--recursive
 
 HOMEPAGE=	${MASTER_SITE_GITHUB:=${ORG}/${ROSNAME}}
-MASTER_SITES=	${HOMEPAGE}/archive/
 COMMENT=	PMB2 robot description and launch files
 LICENSE=	apache-2.0
 

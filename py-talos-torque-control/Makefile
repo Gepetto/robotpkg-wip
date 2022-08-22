@@ -6,6 +6,8 @@ ORG=			pyrene-dev
 NAME=			talos-torque-control
 VERSION=		1.1.1
 
+PKGNAME=		${PKGTAG.python-}${DISTNAME}
+
 CATEGORIES=		wip
 COMMENT=		Torque control for Talos (python bindings)
 

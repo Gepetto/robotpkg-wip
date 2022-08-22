@@ -4,8 +4,7 @@
 
 ORG=			gepetto
 NAME=			mpc-interface
-VERSION=		1.0.0
-PKGREVISION=		2
+VERSION=		1.0.1
 
 USE_PYTHON=		true
 DEPEND_ABI.python=	python>=3.6

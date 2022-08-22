@@ -1,0 +1,13 @@
+@comment Mon Aug 22 17:53:57 CEST 2022
+include/biped-stabilizer/config.hh
+include/biped-stabilizer/cop_stabilizer.hpp
+include/biped-stabilizer/deprecated.hh
+include/biped-stabilizer/warning.hh
+lib/cmake/biped-stabilizer/biped-stabilizerConfig.cmake
+lib/cmake/biped-stabilizer/biped-stabilizerConfigVersion.cmake
+lib/cmake/biped-stabilizer/biped-stabilizerTargets-release.cmake
+lib/cmake/biped-stabilizer/biped-stabilizerTargets.cmake
+lib/libbiped-stabilizer.so
+lib/libbiped-stabilizer.so.${PKGVERSION}
+lib/pkgconfig/biped-stabilizer.pc
+share/biped-stabilizer/package.xml

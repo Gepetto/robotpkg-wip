@@ -1,0 +1,3 @@
+@comment Mon Aug 22 18:16:01 CEST 2022
+${PYTHON_SITELIB}/biped_stabilizer/__init__.py
+${PYTHON_SITELIB}/biped_stabilizer/biped_stabilizer_cpp${PYTHON_EXT_SUFFIX}

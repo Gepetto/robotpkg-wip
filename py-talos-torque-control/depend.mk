@@ -6,7 +6,7 @@ DEPEND_DEPTH:=				${DEPEND_DEPTH}+
 PY_TALOS_TORQUE_CONTROL_DEPEND_MK:=	${PY_TALOS_TORQUE_CONTROL_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
-DEPEND_PKG+=				sot-torque-control
+DEPEND_PKG+=				py-talos-torque-control
 endif
 
 ifeq (+,$(PY_TALOS_TORQUE_CONTROL_DEPEND_MK)) # -------------------------------------------

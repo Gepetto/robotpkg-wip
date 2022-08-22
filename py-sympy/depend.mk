@@ -9,7 +9,7 @@ ifeq (+,$(DEPEND_DEPTH))
 DEPEND_PKG+=			py-sympy
 endif
 
-ifeq (+,$(SYMPY_DEPEND_MK)) # ------------------------------------------
+ifeq (+,$(PY_SYMPY_DEPEND_MK)) # ------------------------------------------
 
 PREFER.py-sympy?=		system
 

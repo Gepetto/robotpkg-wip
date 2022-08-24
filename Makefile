@@ -123,6 +123,7 @@ SUBDIR+=	py-talos-dev
 SUBDIR+=	py-talos-torque-control
 SUBDIR+=	py-tiago-tutorials
 SUBDIR+=	pyrene-motions
+SUBDIR+=	qhull
 SUBDIR+=	qpmad
 SUBDIR+=	qualisys-cpp-sdk
 SUBDIR+=	roralink

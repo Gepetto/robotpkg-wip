@@ -13,6 +13,8 @@ CATEGORIES=		optimization
 COMMENT=		Convex hull, Delaunay triangulation, Voronoi diagrams, Halfspace intersection
 LICENSE=		apache-2.0
 
+DEPEND_ABI.cmake +=	cmake>=3.0
+
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk

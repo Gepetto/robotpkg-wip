@@ -16,7 +16,7 @@ PREFER.matio?=			robotpkg
 
 SYSTEM_SEARCH.matio=\
   'bin/matdump'								\
-  'include/eigenpy/config.hpp:/MATIO_VERSION_STR /s/[^0-9.]//gp'	\
+  'include/matio_pubconf.h:/MATIO_VERSION_STR /s/[^0-9.]//gp'		\
   'lib/libmatio.so'
 
 DEPEND_USE+=			matio

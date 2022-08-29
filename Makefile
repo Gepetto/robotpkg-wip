@@ -40,6 +40,7 @@ SUBDIR+=	jrl-walkgen-v3
 SUBDIR+=	libhatp
 SUBDIR+=	libnabo
 SUBDIR+=	libpointmatcher
+SUBDIR+=	matio
 SUBDIR+=	morse-ros
 SUBDIR+=	mpi-cmake-modules
 SUBDIR+=	msgconnector

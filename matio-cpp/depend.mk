@@ -11,7 +11,7 @@ endif
 
 ifeq (+,$(MATIO_CPP_DEPEND_MK)) # ------------------------------------------
 
-PREFER.matio-cpp?=		system
+PREFER.matio-cpp?=		robotpkg
 
 SYSTEM_SEARCH.matio-cpp=\
   'include/matioCpp/Config.h:/MATIOCPP_VER /s/[^0-9.]//gp'				\

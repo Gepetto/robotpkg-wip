@@ -1,0 +1,100 @@
+From ff82156c8a760c7e9b3b94a08e2ebc12635695a6 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Mon, 29 Aug 2022 18:13:10 +0200
+Subject: [PATCH] add missing includes
+
+---
+ examples/cpp/loading_sparse_qp.cpp            | 1 +
+ examples/cpp/solve_without_api.cpp            | 1 +
+ examples/cpp/solve_without_api_and_option.cpp | 1 +
+ examples/cpp/update_sparse_qp.cpp             | 1 +
+ test/src/sparse_qp.cpp                        | 1 +
+ test/src/sparse_qp_solve.cpp                  | 1 +
+ test/src/sparse_qp_wrapper.cpp                | 1 +
+ test/src/sparse_ruiz_equilibration.cpp        | 1 +
+ 8 files changed, 8 insertions(+)
+
+diff --git a/examples/cpp/loading_sparse_qp.cpp b/examples/cpp/loading_sparse_qp.cpp
+index ea798647..15af589e 100644
+--- examples/cpp/loading_sparse_qp.cpp
++++ examples/cpp/loading_sparse_qp.cpp
+@@ -1,3 +1,4 @@
++#include <iostream>
+ #include <proxsuite/proxqp/sparse/sparse.hpp> // get the sparse API of ProxQP
+ #include <proxsuite/proxqp/utils/random_qp_problems.hpp> // used for generating a random convex Qp
+ 
+diff --git a/examples/cpp/solve_without_api.cpp b/examples/cpp/solve_without_api.cpp
+index 9bd60367..ac36ed78 100644
+--- examples/cpp/solve_without_api.cpp
++++ examples/cpp/solve_without_api.cpp
+@@ -1,3 +1,4 @@
++#include <iostream>
+ #include "proxsuite/proxqp/sparse/sparse.hpp" // get the sparse backend of ProxQP
+ #include "proxsuite/proxqp/dense/dense.hpp"   // get the dense backend of ProxQP
+ #include <proxsuite/proxqp/utils/random_qp_problems.hpp> // used for generating a random convex Qp
+diff --git a/examples/cpp/solve_without_api_and_option.cpp b/examples/cpp/solve_without_api_and_option.cpp
+index d170b709..7bd01f22 100644
+--- examples/cpp/solve_without_api_and_option.cpp
++++ examples/cpp/solve_without_api_and_option.cpp
+@@ -1,3 +1,4 @@
++#include <iostream>
+ #include <proxsuite/proxqp/sparse/sparse.hpp> // get the sparse backend of ProxQP
+ #include <proxsuite/proxqp/dense/dense.hpp>   // get the dense backend of ProxQP
+ #include <proxsuite/proxqp/utils/random_qp_problems.hpp> // used for generating a random convex Qp
+diff --git a/examples/cpp/update_sparse_qp.cpp b/examples/cpp/update_sparse_qp.cpp
+index 05cd1fa0..abee0754 100644
+--- examples/cpp/update_sparse_qp.cpp
++++ examples/cpp/update_sparse_qp.cpp
+@@ -1,3 +1,4 @@
++#include <iostream>
+ #include <proxsuite/proxqp/sparse/sparse.hpp> // get the sparse API of ProxQP
+ #include <proxsuite/proxqp/utils/random_qp_problems.hpp> // used for generating a random convex Qp
+ 
+diff --git a/test/src/sparse_qp.cpp b/test/src/sparse_qp.cpp
+index e0c5e12e..2aa5af41 100644
+--- test/src/sparse_qp.cpp
++++ test/src/sparse_qp.cpp
+@@ -1,6 +1,7 @@
+ //
+ // Copyright (c) 2022 INRIA
+ //
++#include <iostream>
+ #include <proxsuite/proxqp/sparse/wrapper.hpp>
+ #include <proxsuite/proxqp/utils/random_qp_problems.hpp>
+ #include <doctest.hpp>
+diff --git a/test/src/sparse_qp_solve.cpp b/test/src/sparse_qp_solve.cpp
+index 11bd690c..2f9417ae 100644
+--- test/src/sparse_qp_solve.cpp
++++ test/src/sparse_qp_solve.cpp
+@@ -1,6 +1,7 @@
+ //
+ // Copyright (c) 2022 INRIA
+ //
++#include <iostream>
+ #include <doctest.hpp>
+ #include <proxsuite/proxqp/sparse/sparse.hpp>
+ #include <proxsuite/proxqp/utils/random_qp_problems.hpp>
+diff --git a/test/src/sparse_qp_wrapper.cpp b/test/src/sparse_qp_wrapper.cpp
+index 43f1b169..9889dbc7 100644
+--- test/src/sparse_qp_wrapper.cpp
++++ test/src/sparse_qp_wrapper.cpp
+@@ -1,6 +1,7 @@
+ //
+ // Copyright (c) 2022 INRIA
+ //
++#include <iostream>
+ #include <proxsuite/proxqp/sparse/sparse.hpp>
+ #include <proxsuite/proxqp/utils/random_qp_problems.hpp>
+ #include <doctest.hpp>
+diff --git a/test/src/sparse_ruiz_equilibration.cpp b/test/src/sparse_ruiz_equilibration.cpp
+index d9deb957..6b8c5582 100644
+--- test/src/sparse_ruiz_equilibration.cpp
++++ test/src/sparse_ruiz_equilibration.cpp
+@@ -1,6 +1,7 @@
+ //
+ // Copyright (c) 2022 INRIA
+ //
++#include <iostream>
+ #include <proxsuite/proxqp/sparse/solver.hpp>
+ #include <proxsuite/proxqp/dense/preconditioner/ruiz.hpp>
+ #include <proxsuite/proxqp/utils/random_qp_problems.hpp>

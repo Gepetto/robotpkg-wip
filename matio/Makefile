@@ -17,6 +17,7 @@ COMMENT=	MATLAB MAT File I/O Library
 LICENSE=	modified-bsd
 MAINTAINER=	gsaurel@laas.fr
 
+include ../../archivers/zlib/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk

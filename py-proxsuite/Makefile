@@ -20,6 +20,8 @@ USE_PYTHON=	true
 
 CMAKE_ARGS+=	-DBUILD_WITH_VECTORIZATION_SUPPORT=OFF
 
+DEPEND_ABI.python=	python>=3.6
+
 # TODO: require meson build
 #include ../../wip/simde/depend.mk
 

@@ -1,0 +1,35 @@
+From 761448f2d1bda5c06c6377d468867c2dc8beb4f3 Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Tue, 30 Aug 2022 18:16:16 +0200
+Subject: [PATCH] [CMake] Search for Python & Boost::Python
+
+as eigenpy doesn't need the interpreter, rely on it is not enough
+---
+ CMakeLists.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index a71832e..76227c4 100644
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -21,6 +21,7 @@ set(DOXYGEN_USE_MATHJAX YES)
+ # JRL-cmakemodule setup
+ include(cmake/base.cmake)
+ include(cmake/boost.cmake)
++include(cmake/python.cmake)
+ 
+ # Project definition
+ compute_project_args(PROJECT_ARGS LANGUAGES CXX)
+@@ -28,9 +29,11 @@ project(${PROJECT_NAME} ${PROJECT_ARGS})
+ check_minimal_cxx_standard(14 ENFORCE)
+ 
+ # Project dependencies
++set(PYTHON_COMPONENTS Interpreter Development NumPy)
++findpython()
++search_for_boost_python(REQUIRED)
+ add_project_dependency(dynamic-graph 4.4.0 REQUIRED)
+ add_project_dependency(eigenpy 2.7.10 REQUIRED)
+-include(cmake/python.cmake) # TODO: overwriting eigenpy/python.cmake
+ if(BUILD_TESTING)
+   find_package(Boost REQUIRED COMPONENTS unit_test_framework)
+ endif(BUILD_TESTING)

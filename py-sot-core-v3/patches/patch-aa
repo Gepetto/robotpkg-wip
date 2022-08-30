@@ -1,30 +1,9 @@
-From ed96339571c29ebf4fb301ed4708b5387b37189b Mon Sep 17 00:00:00 2001
-From: Guilhem Saurel <guilhem.saurel@laas.fr>
-Date: Thu, 28 Jul 2022 00:40:49 +0200
-Subject: [PATCH] fix boost::python link for python 2
-
----
- boost.cmake | 7 ++++---
- 1 file changed, 4 insertions(+), 3 deletions(-)
-
-diff --git a/boost.cmake b/boost.cmake
-index f5d0bd6..64951f1 100644
---- cmake/boost.cmake
-+++ cmake/boost.cmake
-@@ -287,9 +287,10 @@ macro(TARGET_LINK_BOOST_PYTHON target)
-     target_include_directories(${target} SYSTEM ${PUBLIC_KEYWORD}
-                                ${Boost_INCLUDE_DIR})
-   else(APPLE)
--    if(TARGET Boost::python3${Python3_VERSION_MINOR})
--      target_link_libraries(${target} ${PUBLIC_KEYWORD}
--                            Boost::python3${Python3_VERSION_MINOR})
-+    if(TARGET Boost::python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR})
-+      target_link_libraries(
-+        ${target} ${PUBLIC_KEYWORD}
-+        Boost::python${PYTHON_VERSION_MAJOR}${PYTHON_VERSION_MINOR})
-     else()
-       target_link_libraries(${target} ${PUBLIC_KEYWORD}
-                             ${Boost_PYTHON_LIBRARIES})
--- 
-2.25.1
-
+--- doc/CMakeLists.txt.orig	2022-08-25 09:45:43.000000000 +0200
++++ doc/CMakeLists.txt	2022-08-30 17:33:55.137886461 +0200
+@@ -9,5 +9,5 @@
+   INSTALL (FILES
+     pictures/feature.png
+     pictures/task.png
+-    DESTINATION ${_PKG_CONFIG_DOXYGENDOCDIR}/pictures)
++    DESTINATION ${CMAKE_INSTALL_DOCDIR}/doxygen-html/pictures)
+ ENDIF(INSTALL_DOCUMENTATION)

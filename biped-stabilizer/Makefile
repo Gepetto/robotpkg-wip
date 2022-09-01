@@ -4,8 +4,7 @@
 
 ORG=			gepetto
 NAME=			biped-stabilizer
-VERSION=		1.0.0
-PKGREVISION=		2
+VERSION=		1.1.0
 
 CATEGORIES=		wip
 COMMENT=		Stabilizer for biped locomotion
@@ -22,9 +21,7 @@ include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../math/eigen3/depend.mk
-include ../../middleware/ros-comm/depend.mk
 include ../../mk/sysdep/cmake.mk
-include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

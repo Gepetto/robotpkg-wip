@@ -28,6 +28,7 @@ include/multicontact-api/serialization/archive.hpp
 include/multicontact-api/serialization/eigen-matrix.hpp
 include/multicontact-api/serialization/spatial.hpp
 include/multicontact-api/warning.hh
+lib/cmake/multicontact-api/cxx-standard.cmake
 lib/cmake/multicontact-api/multicontact-apiConfig.cmake
 lib/cmake/multicontact-api/multicontact-apiConfigVersion.cmake
 lib/cmake/multicontact-api/multicontact-apiTargets.cmake

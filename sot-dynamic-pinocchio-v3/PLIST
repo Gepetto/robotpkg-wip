@@ -12,6 +12,7 @@ include/sot/dynamic-pinocchio/matrix-inertia.h
 include/sot/dynamic-pinocchio/waist-attitude-from-sensor.h
 include/sot/dynamic-pinocchio/warning.hh
 include/sot/dynamic-pinocchio/zmpreffromcom.h
+lib/cmake/sot-dynamic-pinocchio/cxx-standard.cmake
 lib/cmake/sot-dynamic-pinocchio/sot-dynamic-pinocchioConfig.cmake
 lib/cmake/sot-dynamic-pinocchio/sot-dynamic-pinocchioConfigVersion.cmake
 lib/cmake/sot-dynamic-pinocchio/sot-dynamic-pinocchioTargets-release.cmake

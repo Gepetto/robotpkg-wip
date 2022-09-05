@@ -25,6 +25,7 @@ include/sot/torque_control/utils/quad-estimator.hh
 include/sot/torque_control/utils/trajectory-generators.hh
 include/sot/torque_control/utils/vector-conversions.hh
 include/sot/torque_control/warning.hh
+lib/cmake/sot-torque-control/cxx-standard.cmake
 lib/cmake/sot-torque-control/sot-torque-controlConfig.cmake
 lib/cmake/sot-torque-control/sot-torque-controlConfigVersion.cmake
 lib/cmake/sot-torque-control/sot-torque-controlTargets-release.cmake

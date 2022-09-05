@@ -8,6 +8,7 @@ include/sot/tools/oscillator.hh
 include/sot/tools/seqplay.hh
 include/sot/tools/simpleseqplay.hh
 include/sot/tools/warning.hh
+lib/cmake/sot-tools/cxx-standard.cmake
 lib/cmake/sot-tools/sot-toolsConfig.cmake
 lib/cmake/sot-tools/sot-toolsConfigVersion.cmake
 lib/cmake/sot-tools/sot-toolsTargets-release.cmake

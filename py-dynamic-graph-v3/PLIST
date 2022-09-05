@@ -11,11 +11,14 @@ include/dynamic-graph/python/python-compat.hh
 include/dynamic-graph/python/signal-wrapper.hh
 include/dynamic-graph/python/signal.hh
 include/dynamic-graph/python/warning.hh
+lib/cmake/dynamic-graph-python/boost.cmake
+lib/cmake/dynamic-graph-python/boost/FindBoost.cmake
 lib/cmake/dynamic-graph-python/cxx-standard.cmake
 lib/cmake/dynamic-graph-python/dynamic-graph-pythonConfig.cmake
 lib/cmake/dynamic-graph-python/dynamic-graph-pythonConfigVersion.cmake
 lib/cmake/dynamic-graph-python/dynamic-graph-pythonTargets-release.cmake
 lib/cmake/dynamic-graph-python/dynamic-graph-pythonTargets.cmake
+lib/cmake/dynamic-graph-python/python.cmake
 lib/libdynamic-graph-python.so
 lib/libdynamic-graph-python.so.${PKGVERSION}
 lib/pkgconfig/dynamic-graph-python.pc

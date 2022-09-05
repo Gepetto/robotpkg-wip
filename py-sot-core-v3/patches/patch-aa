@@ -1,9 +1,9 @@
---- doc/CMakeLists.txt.orig	2022-08-25 09:45:43.000000000 +0200
-+++ doc/CMakeLists.txt	2022-08-30 17:33:55.137886461 +0200
-@@ -9,5 +9,5 @@
-   INSTALL (FILES
-     pictures/feature.png
-     pictures/task.png
--    DESTINATION ${_PKG_CONFIG_DOXYGENDOCDIR}/pictures)
-+    DESTINATION ${CMAKE_INSTALL_DOCDIR}/doxygen-html/pictures)
- ENDIF(INSTALL_DOCUMENTATION)
+--- doc/CMakeLists.txt.orig	2022-09-05 12:51:46.000000000 +0200
++++ doc/CMakeLists.txt	2022-09-05 13:27:18.233475501 +0200
+@@ -6,5 +6,5 @@
+ 
+ if(INSTALL_DOCUMENTATION)
+   install(FILES pictures/feature.png pictures/task.png
+-          DESTINATION ${_PKG_CONFIG_DOXYGENDOCDIR}/pictures)
++          DESTINATION share/doc/doxygen-html/pictures)
+ endif(INSTALL_DOCUMENTATION)

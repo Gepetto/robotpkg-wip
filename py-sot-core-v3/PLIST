@@ -1,6 +1,4 @@
 @comment Wed Jul 27 23:31:11 CEST 2022
-/share/doc/sot-core/doxygen-html/pictures/feature.png
-/share/doc/sot-core/doxygen-html/pictures/task.png
 include/sot/core/abstract-sot-external-interface.hh
 include/sot/core/additional-functions.hh
 include/sot/core/api.hh
@@ -345,4 +343,6 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/core/vector_to_rotation/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/visual_point_projecter/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/visual_point_projecter/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/wrap.so
+share/doc/doxygen-html/pictures/feature.png
+share/doc/doxygen-html/pictures/task.png
 share/sot-core/package.xml

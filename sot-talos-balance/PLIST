@@ -2,6 +2,7 @@
 include/sot/talos_balance/config.hh
 include/sot/talos_balance/deprecated.hh
 include/sot/talos_balance/warning.hh
+lib/cmake/sot-talos-balance/cxx-standard.cmake
 lib/cmake/sot-talos-balance/sot-talos-balanceConfig.cmake
 lib/cmake/sot-talos-balance/sot-talos-balanceConfigVersion.cmake
 lib/cmake/sot-talos-balance/sot-talos-balanceTargets-release.cmake

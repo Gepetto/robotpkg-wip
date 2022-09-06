@@ -2,6 +2,7 @@
 include/sot/talos/config.hh
 include/sot/talos/deprecated.hh
 include/sot/talos/warning.hh
+lib/cmake/sot-talos/cxx-standard.cmake
 lib/cmake/sot-talos/sot-talosConfig.cmake
 lib/cmake/sot-talos/sot-talosConfigVersion.cmake
 lib/cmake/sot-talos/sot-talosTargets-release.cmake

@@ -40,3 +40,4 @@ lib/dynamic-graph-plugins/libzmpreffromcom.so.${PKGVERSION}
 lib/libsot-dynamic-pinocchio.so
 lib/libsot-dynamic-pinocchio.so.${PKGVERSION}
 lib/pkgconfig/sot-dynamic-pinocchio.pc
+share/sot-dynamic-pinocchio/package.xml

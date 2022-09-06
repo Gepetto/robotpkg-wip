@@ -9,6 +9,7 @@ include/dynamic_graph_bridge/sot_loader_basic.hh
 include/dynamic_graph_bridge/warning.hh
 include/src/converter.hh
 include/src/sot_to_ros.hh
+lib/cmake/dynamic_graph_bridge/cxx-standard.cmake
 lib/cmake/dynamic_graph_bridge/dynamic_graph_bridgeConfig.cmake
 lib/cmake/dynamic_graph_bridge/dynamic_graph_bridgeConfigVersion.cmake
 lib/cmake/dynamic_graph_bridge/dynamic_graph_bridgeTargets-release.cmake

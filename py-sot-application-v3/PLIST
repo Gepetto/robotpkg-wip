@@ -2,6 +2,7 @@
 include/sot/application/config.hh
 include/sot/application/deprecated.hh
 include/sot/application/warning.hh
+lib/cmake/sot-application/cxx-standard.cmake
 lib/cmake/sot-application/sot-applicationConfig.cmake
 lib/cmake/sot-application/sot-applicationConfigVersion.cmake
 lib/cmake/sot-application/sot-applicationTargets.cmake

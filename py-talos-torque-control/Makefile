@@ -11,6 +11,8 @@ PKGNAME=		${PKGTAG.python-}${DISTNAME}
 CATEGORIES=		wip
 COMMENT=		Torque control for Talos (python bindings)
 
+CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
+
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/sot-torque-control/depend.mk
 include ../../wip/py-sot-torque-control/depend.mk

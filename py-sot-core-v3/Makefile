@@ -5,6 +5,7 @@
 ORG=			stack-of-tasks
 NAME=			sot-core
 VERSION=		4.11.8
+PKGREVISION=		1
 
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
@@ -13,6 +14,8 @@ COMMENT=		Hierarchical task based control of humanoid robots (python bindings)
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
 CONFLICTS+=		${NAME}  # Old packages
+
+CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/boost-headers/depend.mk

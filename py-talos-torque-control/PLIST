@@ -9,7 +9,6 @@ lib/cmake/talos-torque-control/talos-torque-controlConfigVersion.cmake
 lib/cmake/talos-torque-control/talos-torque-controlTargets-release.cmake
 lib/cmake/talos-torque-control/talos-torque-controlTargets.cmake
 lib/libtalos-torque-control.so
-lib/libtalos-torque-control.so.1.1.0
 lib/libtalos-torque-control.so.${PKGVERSION}
 lib/pkgconfig/talos-torque-control.pc
 ${PYTHON_SITELIB}/dynamic_graph/sot/torque_control/talos/__init__.py

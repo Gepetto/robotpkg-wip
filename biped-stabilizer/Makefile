@@ -4,7 +4,7 @@
 
 ORG=			gepetto
 NAME=			biped-stabilizer
-VERSION=		1.1.0
+VERSION=		1.2.0
 
 CATEGORIES=		wip
 COMMENT=		Stabilizer for biped locomotion

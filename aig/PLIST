@@ -9,5 +9,6 @@ lib/cmake/aig/aigConfig.cmake
 lib/cmake/aig/aigConfigVersion.cmake
 lib/cmake/aig/aigTargets-release.cmake
 lib/cmake/aig/aigTargets.cmake
+lib/cmake/aig/cxx-standard.cmake
 lib/libaig.so
 lib/pkgconfig/aig.pc

@@ -343,6 +343,4 @@ ${PYTHON_SITELIB}/dynamic_graph/sot/core/vector_to_rotation/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/visual_point_projecter/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/visual_point_projecter/wrap.so
 ${PYTHON_SITELIB}/dynamic_graph/sot/core/wrap.so
-share/doc/doxygen-html/pictures/feature.png
-share/doc/doxygen-html/pictures/task.png
 share/sot-core/package.xml

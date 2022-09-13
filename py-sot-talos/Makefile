@@ -11,6 +11,8 @@ COMMENT=		This packages provides a generic Stack Of Tasks library for the humano
 
 USE_PYTHON=		true
 
+CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
+
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/talos-data/depend.mk
 include ../../wip/pyrene-motions/depend.mk

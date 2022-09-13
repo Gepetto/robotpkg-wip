@@ -4,13 +4,13 @@
 
 ORG=			stack-of-tasks
 NAME=			talos-metapkg-ros-control-sot
-VERSION=		0.2.0
+VERSION=		0.3.1
 
 ROSNAME=		$(subst -,_,${NAME})
 
 PKGNAME=		${NAME}-${VERSION}
-WRKSRC=			${WRKDIR}/${ROSNAME}-${VERSION}
-DISTNAME=		${ROSNAME}-${VERSION}
+WRKSRC=			${WRKDIR}/${NAME}-${VERSION}
+DISTNAME=		${NAME}-${VERSION}
 DIST_SUBDIR=		${NAME}
 
 CATEGORIES=		wip

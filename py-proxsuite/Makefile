@@ -4,7 +4,7 @@
 
 ORG=		Simple-Robotics
 NAME=		proxsuite
-VERSION=	0.1.0
+VERSION=	0.1.1
 
 DISTNAME=	${NAME}-${VERSION}
 GITHUB_RELEASE=	v${VERSION}

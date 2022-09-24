@@ -1,4 +1,5 @@
-SHA1 (proxsuite-0.1.0.tar.gz) = e8bcc2a8ee27ea0619a2c86d22b092c871a118eb
-RMD160 (proxsuite-0.1.0.tar.gz) = 9f78b5694cd3a5f8d5cc586c18ed133eedd378a5
-Size (proxsuite-0.1.0.tar.gz) = 57312079 bytes
-SHA1 (patch-21) = 8195e97a2f79ba6c7d78188d1411207e1eb3da18
+SHA1 (proxsuite-0.1.1.tar.gz) = 5d91748d2565cbe83532e5864ba1150f0d27a215
+RMD160 (proxsuite-0.1.1.tar.gz) = 9139ccbb9fee2c3d238206d9714a4f794c2e055d
+Size (proxsuite-0.1.1.tar.gz) = 57503667 bytes
+SHA1 (patch-aa) = ea4b120b656dcf5aebde955955c5506fe331532b
+SHA1 (patch-ab) = a1e56ab8a9707b2ca9a8df55c9fe6ea1df0a788f

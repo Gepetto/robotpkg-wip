@@ -1,0 +1,26 @@
+don't install stuff already installed by wip/proxsuite
+
+--- CMakeLists.txt.orig	2022-09-26 18:25:41.000000000 +0200
++++ CMakeLists.txt	2022-09-26 18:25:55.644482036 +0200
+@@ -122,13 +122,6 @@
+   list(APPEND EXPORTED_TARGETS_LIST proxsuite-vectorized)
+ endif()
+ 
+-install(
+-  TARGETS ${EXPORTED_TARGETS_LIST}
+-  EXPORT ${TARGETS_EXPORT_NAME}
+-  LIBRARY DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}
+-  ARCHIVE DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}
+-  RUNTIME DESTINATION ${CMAKE_INSTALL_FULL_BINDIR})
+-
+ # Activate only for advanced users to profile and benchmark the code
+ if(ADVANCED_USERS)
+   include(cmake/compiler_warnings.cmake)
+@@ -149,7 +142,3 @@
+ endif()
+ 
+ add_subdirectory(bindings)
+-if(BUILD_TESTING)
+-  add_subdirectory(test)
+-  add_subdirectory(examples)
+-endif()

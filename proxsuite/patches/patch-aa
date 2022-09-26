@@ -1,0 +1,14 @@
+--- CMakeLists.txt.orig	2022-09-09 10:50:12.000000000 +0200
++++ CMakeLists.txt	2022-09-24 15:51:23.385335976 +0200
+@@ -72,11 +72,7 @@
+ endif(INITIALIZE_EIGEN_WITH_NAN)
+ 
+ # set CXX standard
+-if(DEFINED CMAKE_CXX_STANDARD)
+   check_minimal_cxx_standard(17 ENFORCE)
+-else()
+-  set(CMAKE_CXX_STANDARD 17)
+-endif()
+ 
+ # Handle Windows context
+ if(MSVC)

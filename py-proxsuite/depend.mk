@@ -14,10 +14,7 @@ ifeq (+,$(PY_PROXSUITE_DEPEND_MK)) # ------------------------------------------
 PREFER.py-proxsuite?=		robotpkg
 
 SYSTEM_SEARCH.py-proxsuite=\
-  'include/proxsuite/config.hpp:/PROXSUITE_VERSION /s/[^0-9.]//gp'			\
-  '${PYTHON_SYSLIBSEARCH}/proxsuite/__init__.py'					\
-  'lib/cmake/proxsuite/proxsuiteConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
-  'lib/pkgconfig/proxsuite.pc:/Version/s/[^0-9.]//gp'
+  '${PYTHON_SYSLIBSEARCH}/proxsuite/__init__.py'
 
 DEPEND_USE+=			py-proxsuite
 

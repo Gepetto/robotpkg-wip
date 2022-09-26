@@ -5,6 +5,7 @@
 ORG=			gepetto
 NAME=			aig
 VERSION=		1.1.0
+PKGREVISION=		1
 
 CATEGORIES=		wip
 COMMENT=		Stand alone computation of inverse geometry for biped robots or robotic arms.
@@ -13,7 +14,12 @@ MAINTAINER=		gsaurel@laas.fr
 
 USE_BOOST_LIBS=		unit_test_framework
 
+CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
+
 include ../../devel/jrl-cmakemodules/Makefile.common
+
+include ../../wip/proxsuite/depend.mk
+
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

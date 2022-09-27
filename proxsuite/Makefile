@@ -17,13 +17,11 @@ LICENSE=		modified-bsd
 MAINTAINER=		gsaurel@laas.fr
 
 CMAKE_ARGS+=		-DBUILD_WITH_VECTORIZATION_SUPPORT=OFF
+CMAKE_ARGS+=		-DBUILD_TESTING=OFF
 
 
 # TODO: require meson build
 #include ../../wip/simde/depend.mk
-
-include ../../wip/matio/depend.mk
-include ../../wip/matio-cpp/depend.mk
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../math/eigen3/depend.mk

@@ -5,7 +5,7 @@
 ORG=			Simple-Robotics
 NAME=			proxsuite
 VERSION=		0.1.1
-PKGREVISION=	1
+PKGREVISION=		1
 
 DISTNAME=		${NAME}-${VERSION}
 GITHUB_RELEASE=		v${VERSION}
@@ -20,6 +20,7 @@ MAINTAINER=		gsaurel@laas.fr
 USE_PYTHON_ONLY=	true
 
 CMAKE_ARGS+=		-DBUILD_WITH_VECTORIZATION_SUPPORT=OFF
+CMAKE_ARGS+=		-DBUILD_TESTING=OFF
 
 DEPEND_ABI.python=	python>=3.6
 
@@ -27,9 +28,6 @@ DEPEND_ABI.python=	python>=3.6
 #include ../../wip/simde/depend.mk
 
 include ../../wip/proxsuite/depend.mk
-
-include ../../wip/matio/depend.mk
-include ../../wip/matio-cpp/depend.mk
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../math/eigen3/depend.mk

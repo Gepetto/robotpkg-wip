@@ -18,6 +18,8 @@ DEPEND_ABI.py-sot-tools-v3?=	${PKGTAG.python-}sot-tools-v3>=2.0
 DEPEND_DIR.py-sot-tools-v3?=	../../wip/py-sot-tools-v3
 
 SYSTEM_SEARCH.py-sot-tools-v3=\
+	include/sot/tools/config.hh				\
+	'lib/pkgconfig/sot-tools.pc:/Version/s/[^0-9.]//gp'	\
 	'${PYTHON_SYSLIBSEARCH}/dynamic_graph/sot/tools/wrap.so'
 
 include ../../mk/sysdep/python.mk

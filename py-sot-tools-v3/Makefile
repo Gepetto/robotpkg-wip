@@ -5,19 +5,17 @@
 ORG=			stack-of-tasks
 NAME=			sot-tools
 VERSION=		2.3.5
-PKGREVISION=		1
+PKGREVISION=		2
 
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
 CATEGORIES=		wip
-COMMENT=		tools for the sot-core package (python bindings)
+COMMENT=		tools for the sot-core package
 
 CONFLICTS+=		py[0-9][0-9]-${NAME}
-
-USE_PYTHON_ONLY=	true
+CONFLICTS+=		${NAME}
 
 include ../../devel/jrl-cmakemodules/Makefile.common
-include ../../${CATEGORIES}/${NAME}-v3/depend.mk
 include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk

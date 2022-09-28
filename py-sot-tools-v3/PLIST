@@ -1,5 +1,23 @@
-@comment Wed Jun 29 12:35:43 CEST 2016
+@comment Wed Sep 28 16:38:42 CEST 2022
+include/sot/tools/config.hh
+include/sot/tools/cubic-interpolation-se3.hh
+include/sot/tools/cubic-interpolation.hh
+include/sot/tools/deprecated.hh
+include/sot/tools/kinematic-planner.hh
+include/sot/tools/oscillator.hh
+include/sot/tools/seqplay.hh
+include/sot/tools/simpleseqplay.hh
+include/sot/tools/warning.hh
+lib/cmake/sot-tools/cxx-standard.cmake
+lib/cmake/sot-tools/sot-toolsConfig.cmake
+lib/cmake/sot-tools/sot-toolsConfigVersion.cmake
+lib/cmake/sot-tools/sot-toolsTargets-release.cmake
+lib/cmake/sot-tools/sot-toolsTargets.cmake
+lib/libsot-tools.so
+lib/libsot-tools.so.${PKGVERSION}
+lib/pkgconfig/sot-tools.pc
 ${PYTHON_SITELIB}/dynamic_graph/sot/tools/__init__.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/tools/quaternion.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/tools/se3.py
 ${PYTHON_SITELIB}/dynamic_graph/sot/tools/wrap.so
+share/sot-tools/package.xml

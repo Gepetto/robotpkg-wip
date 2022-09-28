@@ -14,7 +14,7 @@ ifeq (+,$(SOT_TOOLS_V3_DEPEND_MK)) # -----------------------------------
 PREFER.sot-tools-v3?=	robotpkg
 
 DEPEND_USE+=			sot-tools-v3
-DEPEND_ABI.sot-tools-v3?=	sot-tools-v3>=2.0
+DEPEND_ABI.sot-tools-v3?=	sot-tools-v3>=2.3.5
 DEPEND_DIR.sot-tools-v3?=	../../wip/sot-tools-v3
 
 SYSTEM_SEARCH.sot-tools-v3=\

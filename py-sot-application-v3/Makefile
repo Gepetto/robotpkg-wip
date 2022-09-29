@@ -5,6 +5,7 @@
 ORG=			stack-of-tasks
 NAME=			sot-application
 VERSION=		1.2.8
+PKGREVISION=		1
 
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
@@ -16,7 +17,6 @@ CONFLICTS+=		py[0-9][0-9]-${NAME}
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/sot-dynamic-pinocchio-v3/depend.mk
 include ../../wip/py-sot-dynamic-pinocchio-v3/depend.mk
-include ../../wip/sot-tools-v3/depend.mk
 include ../../wip/py-sot-tools-v3/depend.mk
 include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk

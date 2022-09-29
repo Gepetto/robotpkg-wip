@@ -19,6 +19,7 @@ MAINTAINER=		gsaurel@laas.fr
 CMAKE_ARGS+=		-DBUILD_WITH_VECTORIZATION_SUPPORT=OFF
 CMAKE_ARGS+=		-DBUILD_TESTING=OFF
 
+DEPEND_ABI.cmake=	cmake>=3.10
 
 # TODO: require meson build
 #include ../../wip/simde/depend.mk

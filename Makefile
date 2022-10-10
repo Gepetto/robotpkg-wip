@@ -183,6 +183,7 @@ SUBDIR+=	tiago-simulation
 SUBDIR+=	tiago-metapkg-ros-control-sot
 SUBDIR+=	timeoptimization
 SUBDIR+=	ur5-description
+SUBDIR+=	visit-struct
 
 
 include ../mk/robotpkg.subdir.mk

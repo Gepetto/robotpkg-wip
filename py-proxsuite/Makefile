@@ -24,12 +24,11 @@ CMAKE_ARGS+=		-DBUILD_TESTING=OFF
 DEPEND_ABI.cmake=	cmake>=3.10
 DEPEND_ABI.python=	python>=3.6
 
-# TODO: require meson build
-#include ../../wip/simde/depend.mk
 
 include ../../wip/proxsuite/depend.mk
 
 include ../../devel/jrl-cmakemodules/Makefile.common
+include ../../wip/simde/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/python.mk

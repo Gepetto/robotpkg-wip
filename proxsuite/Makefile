@@ -16,15 +16,13 @@ COMMENT=		The Advanced Proximal Optimization Toolbox
 LICENSE=		modified-bsd
 MAINTAINER=		gsaurel@laas.fr
 
-CMAKE_ARGS+=		-DBUILD_WITH_VECTORIZATION_SUPPORT=OFF
 CMAKE_ARGS+=		-DBUILD_TESTING=OFF
 
 DEPEND_ABI.cmake=	cmake>=3.10
 
-# TODO: require meson build
-#include ../../wip/simde/depend.mk
 
 include ../../devel/jrl-cmakemodules/Makefile.common
+include ../../wip/simde/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk

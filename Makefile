@@ -154,6 +154,7 @@ SUBDIR+=	ros-urdf-geometry-parser
 SUBDIR+=	ros-warehouse-ros
 SUBDIR+=	rqt-dynamic-graph
 SUBDIR+=	rviz-plugin-covariance
+SUBDIR+=	simde
 SUBDIR+= 	simple-grasping-action
 SUBDIR+=	sot-doc
 SUBDIR+=	sot-dynamic-pinocchio-v3

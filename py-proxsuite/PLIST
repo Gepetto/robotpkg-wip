@@ -2,3 +2,5 @@
 ${PYTHON_SITELIB}/proxsuite/__init__.py
 ${PYTHON_SITELIB}/proxsuite/instructionset.so
 ${PYTHON_SITELIB}/proxsuite/proxsuite_pywrap.so
+${PYTHON_SITELIB}/proxsuite/proxsuite_pywrap_avx2.so
+${PYTHON_SITELIB}/proxsuite/proxsuite_pywrap_avx512.so

@@ -85,6 +85,7 @@ include/proxsuite/proxqp/utils/prints.hpp
 include/proxsuite/proxqp/utils/random_qp_problems.hpp
 include/proxsuite/warning.hpp
 lib/cmake/proxsuite/cxx-standard.cmake
+lib/cmake/proxsuite/find-external/Simde/FindSimde.cmake
 lib/cmake/proxsuite/proxsuiteConfig.cmake
 lib/cmake/proxsuite/proxsuiteConfigVersion.cmake
 lib/cmake/proxsuite/proxsuiteTargets.cmake

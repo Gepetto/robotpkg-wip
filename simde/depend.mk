@@ -15,7 +15,7 @@ PREFER.simde?=			robotpkg
 
 # '/define SIMDE_VERSION_/s/[^0-9]//gp'
 SYSTEM_SEARCH.simde=		\
-	'include/simde-common.h'
+	'include/simde/simde-common.h'
 
 DEPEND_USE+=			simde
 

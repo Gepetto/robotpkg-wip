@@ -1,0 +1,19 @@
+--- CMakeLists.txt.orig	2022-07-06 12:18:37.000000000 +0200
++++ CMakeLists.txt	2022-10-10 22:23:35.878241236 +0200
+@@ -97,7 +97,8 @@
+ 
+ # Fetching visit_struct
+ include(CMakeDependentOption)
+-find_package(visit_struct QUIET)
++set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_LIST_DIR})
++find_package(visit_struct REQUIRED)
+ cmake_dependent_option(USE_SYSTEM_visit_struct "Use system visit_struct" ON "visit_struct_FOUND" OFF)
+ if(USE_SYSTEM_visit_struct)
+      find_package(visit_struct REQUIRED)
+--- /dev/null	2022-10-03 17:16:33.866783460 +0200
++++ Findvisit_struct.cmake	2022-10-10 22:35:40.695070755 +0200
+@@ -0,0 +1,4 @@
++include(FindPackageHandleStandardArgs)
++find_path(visit_struct_INCLUDE_DIR NAMES visit_struct/visit_struct.hpp)
++find_package_handle_standard_args(visit_struct REQUIRED_VARS visit_struct_INCLUDE_DIR)
++mark_as_advanced(visit_struct_INCLUDE_DIR)

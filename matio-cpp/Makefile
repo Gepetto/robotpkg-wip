@@ -5,6 +5,7 @@
 ORG=		ami-iit
 NAME=		matio-cpp
 VERSION=	0.2.1
+PKGREVISION=
 
 DISTNAME=	${NAME}-${VERSION}
 GITHUB_TAG=	v${VERSION}
@@ -18,6 +19,7 @@ LICENSE=	modified-bsd
 MAINTAINER=	gsaurel@laas.fr
 
 include ../../wip/matio/depend.mk
+include ../../wip/visit-struct/depend.mk
 
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk

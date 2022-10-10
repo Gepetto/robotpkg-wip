@@ -27,17 +27,10 @@ include/matioCpp/impl/MultiDimensionalArray.tpp
 include/matioCpp/impl/StructArrayElement.tpp
 include/matioCpp/impl/Vector.tpp
 include/matioCpp/matioCpp.h
-include/visit_struct/visit_struct.hpp
-include/visit_struct/visit_struct_boost_fusion.hpp
-include/visit_struct/visit_struct_boost_hana.hpp
-include/visit_struct/visit_struct_intrusive.hpp
 lib/cmake/matioCpp/matioCppConfig.cmake
 lib/cmake/matioCpp/matioCppConfigVersion.cmake
 lib/cmake/matioCpp/matioCppTargets-release.cmake
 lib/cmake/matioCpp/matioCppTargets.cmake
-lib/cmake/visit_struct/visit_structConfig.cmake
-lib/cmake/visit_struct/visit_structConfigVersion.cmake
-lib/cmake/visit_struct/visit_structTargets.cmake
 lib/libmatioCpp.so
 lib/libmatioCpp.so.${PKGVERSION}
 share/matioCpp/cmake/FindMATIO.cmake

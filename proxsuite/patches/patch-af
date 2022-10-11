@@ -1,0 +1,18 @@
+--- CMakeLists.txt.orig	2022-10-11 08:32:52.056436091 +0000
++++ CMakeLists.txt	2022-10-11 08:33:05.404521800 +0000
+@@ -110,15 +110,12 @@
+   add_library(proxsuite-vectorized INTERFACE)
+   target_link_libraries(
+     proxsuite-vectorized
+-    PUBLIC
+     INTERFACE proxsuite)
+   target_link_libraries(
+     proxsuite-vectorized
+-    PUBLIC
+     INTERFACE simde)
+   target_compile_definitions(
+     proxsuite-vectorized
+-    PUBLIC
+     INTERFACE PROXSUITE_VECTORIZE)
+   list(APPEND EXPORTED_TARGETS_LIST proxsuite-vectorized)
+ endif()

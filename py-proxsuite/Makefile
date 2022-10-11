@@ -5,7 +5,7 @@
 ORG=			Simple-Robotics
 NAME=			proxsuite
 VERSION=		0.2.0
-PKGREVISION=		1
+PKGREVISION=		2
 
 DISTNAME=		${NAME}-${VERSION}
 GITHUB_RELEASE=		v${VERSION}
@@ -21,8 +21,9 @@ USE_PYTHON_ONLY=	true
 
 CMAKE_ARGS+=		-DBUILD_TESTING=OFF
 
-DEPEND_ABI.cmake=	cmake>=3.10
+DEPEND_ABI.cmake=	cmake>=3.12
 DEPEND_ABI.python=	python>=3.6
+CMAKE_ARGS+=		-DEigen3_INCLUDE_DIR=${PREFIX.eigen3}/include/eigen3
 
 
 include ../../wip/proxsuite/depend.mk

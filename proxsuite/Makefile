@@ -5,7 +5,7 @@
 ORG=			Simple-Robotics
 NAME=			proxsuite
 VERSION=		0.2.0
-PKGREVISION=		1
+PKGREVISION=		2
 
 DISTNAME=		${NAME}-${VERSION}
 GITHUB_RELEASE=		v${VERSION}
@@ -18,6 +18,7 @@ LICENSE=		modified-bsd
 MAINTAINER=		gsaurel@laas.fr
 
 DEPEND_ABI.cmake=	cmake>=3.10
+CMAKE_ARGS+=		-DEigen3_INCLUDE_DIR=${PREFIX.eigen3}/include/eigen3
 
 
 include ../../devel/jrl-cmakemodules/Makefile.common

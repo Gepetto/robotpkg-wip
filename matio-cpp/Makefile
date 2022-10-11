@@ -13,6 +13,8 @@ PKGNAME=	${PKGTAG.python-}${DISTNAME}
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=${ORG}/}
 
+CMAKE_ARGS+=	-DCMAKE_INSTALL_LIBDIR=lib
+
 CATEGORIES=	math
 COMMENT=	c++ wrapper of matio
 LICENSE=	modified-bsd

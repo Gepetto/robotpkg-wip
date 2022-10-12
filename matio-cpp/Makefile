@@ -20,9 +20,11 @@ COMMENT=	c++ wrapper of matio
 LICENSE=	modified-bsd
 MAINTAINER=	gsaurel@laas.fr
 
+DEPEND_ABI.cmake +=	cmake>=3.10
+
 include ../../wip/matio/depend.mk
 include ../../wip/visit-struct/depend.mk
-
+include ../../math/eigen3/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk

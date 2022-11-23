@@ -1,5 +1,5 @@
-# robotpkg Makefile for:	math/matio
-# Created:			Guilhem Saurel on Mon, 29 Aug 2022
+# robotpkg Makefile for:	simulation/py38-opensim-core
+# Created:			Guilhem Saurel on Wed, 23 Nov 2022
 #
 
 ORG=			opensim-org

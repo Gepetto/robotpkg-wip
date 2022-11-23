@@ -1,32 +1,31 @@
-# robotpkg depend.mk for:	math/matio
-# Created:			Guilhem Saurel on Mon, 29 Aug 2022
+# robotpkg depend.mk for:	simulation/py38-opensim-core
+# Created:			Guilhem Saurel on Wed, 23 Nov 2022
 #
 
 DEPEND_DEPTH:=			${DEPEND_DEPTH}+
-MATIO_DEPEND_MK:=		${MATIO_DEPEND_MK}+
+OPENSIM_CORE_DEPEND_MK:=	${OPENSIM_CORE_DEPEND_MK}+
 
 ifeq (+,$(DEPEND_DEPTH))
-DEPEND_PKG+=			matio
+DEPEND_PKG+=			opensim-core
 endif
 
-ifeq (+,$(MATIO_DEPEND_MK)) # ------------------------------------------
+ifeq (+,$(OPENSIM_CORE_DEPEND_MK)) # ------------------------------------------
 
 # TODO: system is available, we just need to install it on the buildfarm
-PREFER.matio?=			robotpkg
+PREFER.opensim-core?=		robotpkg
 
-SYSTEM_SEARCH.matio=\
-  'bin/matdump'								\
-  'include/matio_pubconf.h:/MATIO_VERSION_STR /s/[^0-9.]//gp'		\
-  'lib/libmatio.so'
+SYSTEM_SEARCH.opensim-core=\
+  'bin/opensim-cmd'							\
+  'etc/OpenSim_buildinfo.txt:/Version/s/[^0-9.]//gp'			\
+  'include/OpenSim/OpenSim.h'						\
+  'lib/cmake/OpenSim/OpenSimConfigVersion.cmake/Version/s/[^0-9.]//gp'	\
+  'lib/libosimCommon.so'
 
-DEPEND_USE+=			matio
+DEPEND_USE+=			opensim-core
 
-DEPEND_ABI.matio?=		matio>=1.5.17
-DEPEND_DIR.matio?=		../../wip/matio
+DEPEND_ABI.opensim-core?=	opensim-core>=4.4
+DEPEND_DIR.opensim-core?=	../../wip/opensim-core
 
-SYSTEM_PKG.Arch.matio=		libmatio
-SYSTEM_PKG.Debian.matio=	libmatio-dev
-
-endif # MATIO_DEPEND_MK ------------------------------------------------
+endif # OPENSIM_CORE_DEPEND_MK ------------------------------------------------
 
 DEPEND_DEPTH:=		${DEPEND_DEPTH:+=}

@@ -51,6 +51,7 @@ SUBDIR+=	octovis
 SUBDIR+=	ompl
 SUBDIR+=	openhrp3-hrp2
 SUBDIR+=	openhrp3-simulator-wo-rtm
+SUBDIR+=	opensim-core
 SUBDIR+=	osg-dae
 SUBDIR+=	osqp
 SUBDIR+=	ouster-gazebo-simulation

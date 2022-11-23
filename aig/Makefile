@@ -5,7 +5,7 @@
 ORG=			gepetto
 NAME=			aig
 VERSION=		1.1.0
-PKGREVISION=		1
+PKGREVISION=		2
 
 CATEGORIES=		wip
 COMMENT=		Stand alone computation of inverse geometry for biped robots or robotic arms.
@@ -23,6 +23,7 @@ include ../../wip/proxsuite/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
+include ../../math/eiquadprog/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../robots/example-robot-data/depend.mk
 include ../../mk/sysdep/cmake.mk

@@ -20,7 +20,6 @@ LICENSE=		mit
 MAINTAINER=		gsaurel@laas.fr
 
 include ../../wip/simbody/depend.mk
-include ../../optimization/py-casadi/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk

@@ -17,6 +17,7 @@ SUBDIR+=	biped-stabilizer
 SUBDIR+=	can-utils
 SUBDIR+=	cppad
 SUBDIR+=	cppadcodegen
+SUBDIR+=	docopt-cpp
 SUBDIR+=	dptu-genom3
 SUBDIR+=	ddp-actuator-solver
 SUBDIR+=	dynamic-graph-tutorial

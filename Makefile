@@ -42,7 +42,6 @@ SUBDIR+=	libhatp
 SUBDIR+=	libnabo
 SUBDIR+=	libpointmatcher
 SUBDIR+=	matio
-SUBDIR+=	matio-cpp
 SUBDIR+=	morse-ros
 SUBDIR+=	mpi-cmake-modules
 SUBDIR+=	msgconnector

@@ -4,8 +4,7 @@
 
 ORG=			Simple-Robotics
 NAME=			proxsuite
-VERSION=		0.2.0
-PKGREVISION=		2
+VERSION=		0.2.13
 
 DISTNAME=		${NAME}-${VERSION}
 GITHUB_RELEASE=		v${VERSION}
@@ -31,7 +30,6 @@ include ../../wip/proxsuite/depend.mk
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/simde/depend.mk
 include ../../wip/matio/depend.mk
-include ../../wip/matio-cpp/depend.mk
 include ../../wip/visit-struct/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../mk/sysdep/cmake.mk

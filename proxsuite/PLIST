@@ -1,7 +1,11 @@
 @comment Mon Aug 29 18:20:26 CEST 2022
 include/proxsuite/config.hpp
 include/proxsuite/deprecated.hpp
+include/proxsuite/fwd.hpp
+include/proxsuite/helpers/common.hpp
 include/proxsuite/helpers/instruction-set.hpp
+include/proxsuite/helpers/optional.hpp
+include/proxsuite/helpers/tl-optional.hpp
 include/proxsuite/helpers/version.hpp
 include/proxsuite/linalg/dense/core.hpp
 include/proxsuite/linalg/dense/factorize.hpp

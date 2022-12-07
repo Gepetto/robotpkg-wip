@@ -4,8 +4,7 @@
 
 ORG=			Simple-Robotics
 NAME=			proxsuite
-VERSION=		0.2.0
-PKGREVISION=		2
+VERSION=		0.2.13
 
 DISTNAME=		${NAME}-${VERSION}
 GITHUB_RELEASE=		v${VERSION}
@@ -24,7 +23,6 @@ CMAKE_ARGS+=		-DEigen3_INCLUDE_DIR=${PREFIX.eigen3}/include/eigen3
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../wip/simde/depend.mk
 include ../../wip/matio/depend.mk
-include ../../wip/matio-cpp/depend.mk
 include ../../wip/visit-struct/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../mk/sysdep/cmake.mk

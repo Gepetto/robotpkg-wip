@@ -16,6 +16,8 @@ MAINTAINER=		gsaurel@laas.fr
 USE_BOOST_LIBS=		unit_test_framework python
 USE_PYTHON_ONLY=	true
 
+DEPEND_ABI.python+=	python>=3
+
 include ../../devel/jrl-cmakemodules/Makefile.common
 
 include ../../wip/aig/depend.mk

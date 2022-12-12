@@ -71,6 +71,7 @@ SUBDIR+=	pmb2-simulation
 SUBDIR+=	prf-roboticsgroup-gazebo-plugins
 SUBDIR+=	prf-teleop-tools
 SUBDIR+=	proxsuite
+SUBDIR+=	py-aig
 SUBDIR+=	py-bmtools
 SUBDIR+=	py-bullet3
 SUBDIR+=	py-biped-stabilizer

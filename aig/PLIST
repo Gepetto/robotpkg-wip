@@ -2,8 +2,12 @@
 include/aig/arm_ig.hpp
 include/aig/biped_ig.hpp
 include/aig/config.hh
+include/aig/configuration.hpp
+include/aig/contact6d.hpp
 include/aig/deprecated.hh
+include/aig/dyna_com.hpp
 include/aig/leg_ig.hpp
+include/aig/python.hpp
 include/aig/warning.hh
 lib/cmake/aig/aigConfig.cmake
 lib/cmake/aig/aigConfigVersion.cmake
@@ -11,4 +15,6 @@ lib/cmake/aig/aigTargets-release.cmake
 lib/cmake/aig/aigTargets.cmake
 lib/cmake/aig/cxx-standard.cmake
 lib/libaig.so
+lib/libaig.so.${PKGVERSION}
 lib/pkgconfig/aig.pc
+share/aig/package.xml

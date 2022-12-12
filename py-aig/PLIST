@@ -1,0 +1,3 @@
+@comment Mon Dec 12 14:21:14 CET 2022
+${PYTHON_SITELIB}/aig/__init__.py
+${PYTHON_SITELIB}/aig/aig${PYTHON_EXT_SUFFIX}

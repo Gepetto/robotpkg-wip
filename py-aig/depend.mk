@@ -14,7 +14,7 @@ ifeq (+,$(PY_AIG_DEPEND_MK)) # ------------------------------------------
 PREFER.py-aig?=	robotpkg
 
 SYSTEM_SEARCH.py-aig=							\
-  '${PYTHON_SYSLIBSEARCH}/aig/aig.*.so'					\
+  '${PYTHON_SYSLIBSEARCH}/aig/aig*.so'					\
   '${PYTHON_SYSLIBSEARCH}/aig/__init__.py'
 
 DEPEND_USE+=			py-aig

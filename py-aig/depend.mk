@@ -19,7 +19,7 @@ SYSTEM_SEARCH.py-aig=							\
 
 DEPEND_USE+=			py-aig
 
-DEPEND_ABI.py-aig?=		py-aig>=1.0.0
+DEPEND_ABI.py-aig?=		${PKGTAG.python-}aig>=1.0.0
 DEPEND_DIR.py-aig?=		../../wip/py-aig
 
 endif # PY_AIG_DEPEND_MK ------------------------------------------------

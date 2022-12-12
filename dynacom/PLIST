@@ -1,0 +1,16 @@
+@comment Mon Dec 12 14:37:35 CET 2022
+include/dynacom/config.hh
+include/dynacom/contact6d.hpp
+include/dynacom/deprecated.hh
+include/dynacom/dyna_com.hpp
+include/dynacom/python.hpp
+include/dynacom/warning.hh
+lib/cmake/dynacom/cxx-standard.cmake
+lib/cmake/dynacom/dynacomConfig.cmake
+lib/cmake/dynacom/dynacomConfigVersion.cmake
+lib/cmake/dynacom/dynacomTargets-release.cmake
+lib/cmake/dynacom/dynacomTargets.cmake
+lib/libdynacom.so
+lib/libdynacom.so.${PKGVERSION}
+lib/pkgconfig/dynacom.pc
+share/dynacom/package.xml

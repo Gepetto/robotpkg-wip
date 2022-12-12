@@ -1,0 +1,10 @@
+Stand alone computation of inverse geometry for biped robots or robotic arms.
+
+Here inverse geometry refer to function that compute the robot joint configuration from SE3 poses of it's end-effectors. Much similar to the classical inverse kinematics though at the position level and not at the velocity level.
+
+This code is decomposed in 3 parts:
+
+    Leg inverse geometry.
+    Arm inverse geometry.
+    Biped inverse geometry. This part uses the 2 previous ones for computing the whole body inverse geometry assuming a constant level arm between the center of mass of the robot and its base.
+

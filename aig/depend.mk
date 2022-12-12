@@ -15,7 +15,7 @@ PREFER.aig?=	robotpkg
 
 SYSTEM_SEARCH.aig=							\
   'include/aig/config.hh:/AIG_VERSION /s/[^0-9.]//gp'			\
-  'include/aig/biped_ig.hpp.hpp'					\
+  'include/aig/biped_ig.hpp'					\
   'lib/cmake/aig/aigConfigVersion.cmake:/PACKAGE_VERSION/s/[^0-9.]//gp'	\
   'lib/libaig.so'							\
   'lib/pkgconfig/aig.pc:/Version/s/[^0-9.]//gp'

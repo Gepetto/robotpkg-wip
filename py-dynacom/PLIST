@@ -1,0 +1,3 @@
+@comment Mon Dec 12 14:42:20 CET 2022
+${PYTHON_SITELIB}/dynacom/__init__.py
+${PYTHON_SITELIB}/dynacom/dynacom${PYTHON_EXT_SUFFIX}

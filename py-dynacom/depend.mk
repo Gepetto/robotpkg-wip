@@ -14,7 +14,7 @@ ifeq (+,$(PY_DYNACOM_DEPEND_MK)) # ------------------------------------------
 PREFER.py-dynacom?=		robotpkg
 
 SYSTEM_SEARCH.py-dynacom=							\
-  '${PYTHON_SYSLIBSEARCH}/dynacom/dynacom.*.so'					\
+  '${PYTHON_SYSLIBSEARCH}/dynacom/dynacom*.so'					\
   '${PYTHON_SYSLIBSEARCH}/dynacom/__init__.py'
 
 DEPEND_USE+=			py-dynacom

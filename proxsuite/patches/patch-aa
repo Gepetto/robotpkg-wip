@@ -9,7 +9,7 @@
 -else()
 -  set(CMAKE_CXX_STANDARD 17)
 -endif()
-+check_minimal_cxx_standard(17 ENFORCE)
++check_minimal_cxx_standard(14 ENFORCE)
  
  # Handle Windows context
  if(MSVC)

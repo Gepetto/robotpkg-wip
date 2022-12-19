@@ -5,6 +5,7 @@
 ORG=			loco-3d
 NAME=			quadruped-walkgen
 VERSION=		1.1.0
+PKGREVISION=		1
 
 CATEGORIES=		optimization
 COMMENT=		MPC Controller using Crocoddyl

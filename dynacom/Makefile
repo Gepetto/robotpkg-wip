@@ -5,7 +5,7 @@
 ORG=			gepetto
 NAME=			dynacom
 VERSION=		1.2.0
-PKGREVISION=		1
+PKGREVISION=		2
 
 CATEGORIES=		wip
 COMMENT=		DYNAmics of the Center of Mass
@@ -18,6 +18,7 @@ CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 
+include ../../wip/aig/depend.mk
 include ../../devel/boost-headers/depend.mk
 include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk

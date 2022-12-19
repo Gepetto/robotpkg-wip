@@ -5,6 +5,7 @@
 ORG=			gepetto
 NAME=			dynacom
 VERSION=		1.2.0
+PKGREVISION=		1
 
 CATEGORIES=		wip
 COMMENT=		DYNAmics of the Center of Mass
@@ -22,6 +23,7 @@ include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../math/eiquadprog/depend.mk
 include ../../math/pinocchio/depend.mk
+include ../../robots/example-robot-data/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk

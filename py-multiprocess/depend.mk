@@ -1,4 +1,4 @@
-# robotpkg depend.mk for:	wip/py38-multiprocess
+# robotpkg depend.mk for:	wip/py-multiprocess
 # Created:			Guilhem Saurel on Tue, 12 May 2020
 #
 

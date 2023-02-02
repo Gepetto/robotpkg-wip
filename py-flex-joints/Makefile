@@ -4,7 +4,7 @@
 
 ORG=			gepetto
 NAME=			flex-joints
-VERSION=		1.0.3
+VERSION=		1.1.0
 
 CATEGORIES=		wip
 COMMENT=		adaptation for rigid control on flexible devices

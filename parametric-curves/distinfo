@@ -1,3 +1,4 @@
 SHA1 (parametric-curves-1.4.3.tar.gz) = aeab1f52b0dae06cdce8da01004e186f913a37c2
 RMD160 (parametric-curves-1.4.3.tar.gz) = 06719274ca445862ecd065a3bed2077adb3ade13
 Size (parametric-curves-1.4.3.tar.gz) = 865048 bytes
+SHA1 (patch-cmake-fetch) = 2860a863c57a5bac5234cb4273896fd4e7ccdab6

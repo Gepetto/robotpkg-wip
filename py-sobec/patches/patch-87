@@ -1,0 +1,75 @@
+From a29537b7b5c0f4ae2b5e3e5d9eec8d3c4587fc1d Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Sun, 21 May 2023 21:45:33 +0200
+Subject: [PATCH 1/2] fix abs path
+
+---
+ benchmark/bench-mpc-walk.cpp | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+diff --git a/benchmark/bench-mpc-walk.cpp b/benchmark/bench-mpc-walk.cpp
+index 88a23d97..10350930 100644
+--- benchmark/bench-mpc-walk.cpp
++++ benchmark/bench-mpc-walk.cpp
+@@ -1,3 +1,4 @@
++#include <example-robot-data/path.hpp>
+ #include <iostream>
+ #include <pinocchio/algorithm/model.hpp>
+ #include <pinocchio/parsers/srdf.hpp>
+@@ -17,11 +18,9 @@ int main() {
+   // --- LOAD FROM URDF+SRDF
+   // Load full Talos model
+   const std::string urdf =
+-      "/opt/openrobots/share/example-robot-data/robots/talos_data/robots/"
+-      "talos_reduced.urdf";
++      EXAMPLE_ROBOT_DATA_MODEL_DIR "/talos_data/robots/talos_reduced.urdf";
+   const std::string srdf =
+-      "/opt/openrobots/share/example-robot-data/robots/talos_data/srdf/"
+-      "talos.srdf";
++      EXAMPLE_ROBOT_DATA_MODEL_DIR "/talos_data/srdf/talos.srdf";
+   auto fullmodel = boost::make_shared<pinocchio::Model>();
+   pinocchio::urdf::buildModel(urdf, pinocchio::JointModelFreeFlyer(),
+                               *fullmodel);
+
+From 8fcd48946a17737e59340dfa053059a740df1eec Mon Sep 17 00:00:00 2001
+From: Guilhem Saurel <guilhem.saurel@laas.fr>
+Date: Sun, 21 May 2023 21:48:40 +0200
+Subject: [PATCH 2/2] CMake: fix links
+
+---
+ benchmark/CMakeLists.txt | 5 +++--
+ tests/CMakeLists.txt     | 5 +++--
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/benchmark/CMakeLists.txt b/benchmark/CMakeLists.txt
+index feceaa72..9ed97f4c 100644
+--- benchmark/CMakeLists.txt
++++ benchmark/CMakeLists.txt
+@@ -2,8 +2,9 @@ set(${PROJECT_NAME}_BENCHMARK bench-mpc-walk)
+ 
+ foreach(BENCHMARK_NAME ${${PROJECT_NAME}_BENCHMARK})
+   add_executable(${BENCHMARK_NAME} ${BENCHMARK_NAME}.cpp)
+-  target_link_libraries(${BENCHMARK_NAME} PUBLIC ${PROJECT_NAME}
+-                                                 crocoddyl::crocoddyl)
++  target_link_libraries(
++    ${BENCHMARK_NAME} PUBLIC ${PROJECT_NAME}
++                             example-robot-data::example-robot-data)
+ endforeach(BENCHMARK_NAME ${${PROJECT_NAME}_BENCHMARK})
+ 
+ if(BUILD_PY2CPP_INTERFACE)
+diff --git a/tests/CMakeLists.txt b/tests/CMakeLists.txt
+index 74fafc8c..e3d12fb3 100644
+--- tests/CMakeLists.txt
++++ tests/CMakeLists.txt
+@@ -24,8 +24,9 @@ set(${PROJECT_NAME}_FACTORY_TEST
+     factory/contact1d.cpp)
+ 
+ add_library(${PROJECT_NAME}_unittest SHARED ${${PROJECT_NAME}_FACTORY_TEST})
+-target_link_libraries(${PROJECT_NAME}_unittest PUBLIC ${PROJECT_NAME}
+-                                                      crocoddyl::crocoddyl)
++target_link_libraries(
++  ${PROJECT_NAME}_unittest PUBLIC ${PROJECT_NAME}
++                                  example-robot-data::example-robot-data)
+ 
+ add_unit_test(test_costs test_costs.cpp)
+ target_link_libraries(test_costs PUBLIC ${PROJECT_NAME}_unittest yaml-cpp)

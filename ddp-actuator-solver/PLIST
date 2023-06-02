@@ -12,6 +12,7 @@ include/ddp-actuator-solver/romeo_actuator/romeotorqueactuator.hh
 include/ddp-actuator-solver/temperature_control/costtemp.hh
 include/ddp-actuator-solver/temperature_control/dctemp.hh
 include/ddp-actuator-solver/warning.hh
+lib/cmake/ddp-actuator-solver/cxx-standard.cmake
 lib/cmake/ddp-actuator-solver/ddp-actuator-solverConfig.cmake
 lib/cmake/ddp-actuator-solver/ddp-actuator-solverConfigVersion.cmake
 lib/cmake/ddp-actuator-solver/ddp-actuator-solverTargets-release.cmake

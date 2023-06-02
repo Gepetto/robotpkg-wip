@@ -4,7 +4,7 @@
 
 ORG=			stack-of-tasks
 NAME=			ddp-actuator-solver
-VERSION=		1.2.2
+VERSION=		1.2.3
 
 CATEGORIES=		wip
 COMMENT=		Differentiable Dynamics Programming for one actuator

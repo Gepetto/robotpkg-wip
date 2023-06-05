@@ -17,6 +17,7 @@ include/sot/pattern-generator/step-queue.h
 include/sot/pattern-generator/step-time-line.h
 include/sot/pattern-generator/warning.hh
 include/sot/pattern-generator/which-foot-upper.h
+lib/cmake/sot-pattern-generator/cxx-standard.cmake
 lib/cmake/sot-pattern-generator/sot-pattern-generatorConfig.cmake
 lib/cmake/sot-pattern-generator/sot-pattern-generatorConfigVersion.cmake
 lib/cmake/sot-pattern-generator/sot-pattern-generatorTargets-release.cmake

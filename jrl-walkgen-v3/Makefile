@@ -2,10 +2,9 @@
 # Created:			Anthony Mallet on Tue, 15 May 2007
 #
 
-PKGREVISION=		1
 ORG=			stack-of-tasks
 NAME=			jrl-walkgen
-VERSION=		4.2.7
+VERSION=		4.2.8
 
 PKGNAME=		${NAME}-v3-${VERSION}
 

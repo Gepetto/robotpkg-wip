@@ -3,12 +3,11 @@
 #
 
 NAME=			gurobi
-VERSION=		9.1.1
-PKGREVISION=		1
+VERSION=		9.5.2
 ARCH=			linux64
 DISTNAME=		${NAME}${VERSION}_${ARCH}
 PKGNAME=		${PKGTAG.python-}${NAME}-${VERSION}
-MASTER_SITES=		https://packages.gurobi.com/9.1/
+MASTER_SITES=		https://packages.gurobi.com/9.5/
 
 WRKSRC=			${WRKDIR}/${NAME}$(subst .,,${VERSION})/${ARCH}
 

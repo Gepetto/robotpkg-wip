@@ -9,12 +9,12 @@ bin/gurobi_cl
 lib/gurobi-javadoc.jar
 lib/gurobi.jar
 lib/gurobi.py
-lib/gurobi91.netstandard20.dll
-lib/gurobi91.netstandard20.xml
-lib/libGurobiJni91.so
+lib/gurobi95.netstandard20.dll
+lib/gurobi95.netstandard20.xml
+lib/libGurobiJni95.so
 lib/libgurobi.so.${PKGVERSION}
-lib/libgurobi91.so
-lib/libgurobi91_light.so
+lib/libgurobi95.so
+lib/libgurobi95_light.so
 ${PYTHON_SITELIB}/gurobipy-${PKGVERSION}-py${PYTHON_VERSION}.egg-info
 ${PYTHON_SITELIB}/gurobipy/__init__.py
 ${PYTHON_SITELIB}/gurobipy/gurobipy.so

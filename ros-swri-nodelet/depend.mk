@@ -20,15 +20,6 @@ ROS_DEPEND_USE+=    ros-swri-nodelet
 
 DEPEND_ABI.ros-swri-nodelet?=  ros-swri-nodelet>=2.3.0
 DEPEND_DIR.ros-swri-nodelet= ../../wip/ros-swri-nodelet
-
-DEPEND_ABI.ros-swri-nodelet.groovy += ros-swri-nodelet>=2.3.0
-DEPEND_ABI.ros-swri-nodelet.hydro += ros-swri-nodelet>=2.3.0
-DEPEND_ABI.ros-swri-nodelet.indigo += ros-swri-nodelet>=2.3.0
-DEPEND_ABI.ros-swri-nodelet.jade += ros-swri-nodelet>=2.3.0
-DEPEND_ABI.ros-swri-nodelet.kinetic += ros-swri-nodelet>=2.3.0
-DEPEND_ABI.ros-swri-nodelet.lunar += ros-swri-nodelet>=2.3.0
-DEPEND_ABI.ros-swri-nodelet.melodic += ros-swri-nodelet>=2.3.0
-
 SYSTEM_SEARCH.ros-swri-nodelet=\
   'share/swri_nodelet/nodelet.cpp.in' \
   'share/swri_nodelet/package.xml' \
@@ -43,4 +34,3 @@ SYSTEM_SEARCH.ros-swri-nodelet=\
 endif # ROS_SWRI_NODELET_DEPEND_MK ---------------------------------------------
 
 DEPEND_DEPTH:=    ${DEPEND_DEPTH:+=}
-

@@ -9,7 +9,7 @@ ifeq (+,$(DEPEND_DEPTH))
 DEPEND_PKG+=      ros-swri-serial-util
 endif
 
-ifeq (+,$(ROS_SWRI_SERIAL_UTIL_DEPEND_MK)) # ---------------------------------------
+ifeq (+,$(ROS_SWRI_SERIAL_UTIL_DEPEND_MK)) # -------------------------------
 
 include ../../meta-pkgs/ros-base/depend.common
 PREFER.ros-swri-serial-util?=    ${PREFER.ros-base}
@@ -20,15 +20,6 @@ ROS_DEPEND_USE+=    ros-swri-serial-util
 
 DEPEND_ABI.ros-swri-serial-util?=  ros-swri-serial-util>=2.3.0
 DEPEND_DIR.ros-swri-serial-util= ../../wip/ros-swri-serial-util
-
-DEPEND_ABI.ros-swri-serial-util.groovy += ros-swri-serial-util>=2.3.0
-DEPEND_ABI.ros-swri-serial-util.hydro += ros-swri-serial-util>=2.3.0
-DEPEND_ABI.ros-swri-serial-util.indigo += ros-swri-serial-util>=2.3.0
-DEPEND_ABI.ros-swri-serial-util.jade += ros-swri-serial-util>=2.3.0
-DEPEND_ABI.ros-swri-serial-util.kinetic += ros-swri-serial-util>=2.3.0
-DEPEND_ABI.ros-swri-serial-util.lunar += ros-swri-serial-util>=2.3.0
-DEPEND_ABI.ros-swri-serial-util.melodic += ros-swri-serial-util>=2.3.0
-
 SYSTEM_SEARCH.ros-swri-serial-util=\
   'share/swri_serial_util/package.xml' \
   'share/swri_serial_util/cmake/swri_serial_utilConfig.cmake' \
@@ -38,7 +29,6 @@ SYSTEM_SEARCH.ros-swri-serial-util=\
   'lib/libswri_serial_util.so'
 
 
-endif # ROS_SWRI_SERIAL_UTIL_DEPEND_MK ---------------------------------------------
+endif # ROS_SWRI_SERIAL_UTIL_DEPEND_MK -------------------------------------
 
 DEPEND_DEPTH:=    ${DEPEND_DEPTH:+=}
-

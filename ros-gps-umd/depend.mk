@@ -20,15 +20,6 @@ ROS_DEPEND_USE+=    ros-gps-umd
 
 DEPEND_ABI.ros-gps-umd?=  ros-gps-umd>=0.2.0
 DEPEND_DIR.ros-gps-umd= ../../wip/ros-gps-umd
-
-DEPEND_ABI.ros-gps-umd.groovy += ros-gps-umd>=0.2.0
-DEPEND_ABI.ros-gps-umd.hydro += ros-gps-umd>=0.2.0
-DEPEND_ABI.ros-gps-umd.indigo += ros-gps-umd>=0.2.0
-DEPEND_ABI.ros-gps-umd.jade += ros-gps-umd>=0.2.0
-DEPEND_ABI.ros-gps-umd.kinetic += ros-gps-umd>=0.2.0
-DEPEND_ABI.ros-gps-umd.lunar += ros-gps-umd>=0.2.0
-DEPEND_ABI.ros-gps-umd.melodic += ros-gps-umd>=0.2.0
-
 # Files from gps_common and from gpsd_client
 SYSTEM_SEARCH.ros-gps-umd=\
   'include/gps_common/conversions.h'                        \
@@ -46,9 +37,3 @@ SYSTEM_SEARCH.ros-gps-umd=\
 endif # ROS_GPS_UMD_DEPEND_MK ---------------------------------------------
 
 DEPEND_DEPTH:=    ${DEPEND_DEPTH:+=}
-
-
-
-
-
-

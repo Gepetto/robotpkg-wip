@@ -20,15 +20,6 @@ ROS_DEPEND_USE+=    ros-swri-roscpp
 
 DEPEND_ABI.ros-swri-roscpp?=  ros-swri-roscpp>=2.3.0
 DEPEND_DIR.ros-swri-roscpp= ../../wip/ros-swri-roscpp
-
-DEPEND_ABI.ros-swri-roscpp.groovy += ros-swri-roscpp>=2.3.0
-DEPEND_ABI.ros-swri-roscpp.hydro += ros-swri-roscpp>=2.3.0
-DEPEND_ABI.ros-swri-roscpp.indigo += ros-swri-roscpp>=2.3.0
-DEPEND_ABI.ros-swri-roscpp.jade += ros-swri-roscpp>=2.3.0
-DEPEND_ABI.ros-swri-roscpp.kinetic += ros-swri-roscpp>=2.3.0
-DEPEND_ABI.ros-swri-roscpp.lunar += ros-swri-roscpp>=2.3.0
-DEPEND_ABI.ros-swri-roscpp.melodic += ros-swri-roscpp>=2.3.0
-
 SYSTEM_SEARCH.ros-swri-roscpp=\
   'share/swri_roscpp/package.xml' \
   'share/swri_roscpp/cmake/swri_roscppConfig-version.cmake' \
@@ -54,4 +45,3 @@ SYSTEM_SEARCH.ros-swri-roscpp=\
 endif # ROS_SWRI_ROSCPP_DEPEND_MK ---------------------------------------------
 
 DEPEND_DEPTH:=    ${DEPEND_DEPTH:+=}
-

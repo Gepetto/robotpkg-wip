@@ -148,7 +148,6 @@ SUBDIR+=	sot-doc
 SUBDIR+=	sot-dynamic-pinocchio-v3
 #SUBDIR+=	sot-dyninv-v3
 SUBDIR+=	soth
-SUBDIR+=	sot-hrp2
 SUBDIR+=	sot-hrp2-v3
 SUBDIR+=	sot-pattern-generator-v3
 SUBDIR+=	sot-talos-balance

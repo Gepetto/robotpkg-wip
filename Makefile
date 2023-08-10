@@ -33,7 +33,6 @@ SUBDIR+=	hey5-description
 SUBDIR+=	hpp-benchmark
 SUBDIR+=	hrp2-14-description
 SUBDIR+=	hrp2-dev
-SUBDIR+=	infuse-asn1-conversions
 SUBDIR+=	infuse-asn1-types
 SUBDIR+=	infuse-envire
 SUBDIR+=	infuse-idl

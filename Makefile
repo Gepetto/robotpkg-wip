@@ -43,7 +43,6 @@ SUBDIR+=	libpointmatcher
 SUBDIR+=	matio
 SUBDIR+=	morse-ros
 SUBDIR+=	mpi-cmake-modules
-SUBDIR+=	msgconnector
 SUBDIR+=	multicontact-api
 SUBDIR+=	octovis
 SUBDIR+=	ompl

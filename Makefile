@@ -174,7 +174,6 @@ SUBDIR+=	tiago-navigation
 SUBDIR+=	tiago-robot
 SUBDIR+=	tiago-simulation
 SUBDIR+=	tiago-metapkg-ros-control-sot
-SUBDIR+=	timeoptimization
 SUBDIR+=	ur5-description
 SUBDIR+=	visit-struct
 

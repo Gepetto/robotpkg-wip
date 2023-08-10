@@ -81,7 +81,6 @@ SUBDIR+=	py-ecos
 SUBDIR+=	py-example-adder
 SUBDIR+=	py-flex-joints
 SUBDIR+=	py-gurobi
-#SUBDIR+=	py-hpp-spline
 SUBDIR+=	py-libnabo
 SUBDIR+=	py-morse
 SUBDIR+=	py-mpc-interface

@@ -85,7 +85,6 @@ SUBDIR+=	py-ecos
 SUBDIR+=	py-example-adder
 SUBDIR+=	py-flex-joints
 SUBDIR+=	py-gurobi
-SUBDIR+=	py-hqp
 SUBDIR+=	py-hpp-hrp2
 #SUBDIR+=	py-hpp-rbprm-robot-data
 #SUBDIR+=	py-hpp-spline

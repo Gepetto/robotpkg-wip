@@ -94,7 +94,6 @@ SUBDIR+=	py-mpc-interface
 SUBDIR+=	py-mraa
 SUBDIR+=	py-multicontact-api
 SUBDIR+=	py-multiprocess
-SUBDIR+=	py-ospi
 SUBDIR+=	py-osqp
 SUBDIR+=	py-pal
 SUBDIR+=	py-pal-statistics

@@ -32,7 +32,6 @@ SUBDIR+=	head-action
 SUBDIR+=	hey5-description
 SUBDIR+=	hpp-benchmark
 SUBDIR+=	hrp2-14-description
-SUBDIR+=	infuse-asn1-types
 SUBDIR+=	infuse-envire
 SUBDIR+=	infuse-idl
 SUBDIR+=	jrl-walkgen-v3

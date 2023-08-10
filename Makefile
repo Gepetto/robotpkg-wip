@@ -28,7 +28,6 @@ SUBDIR+=	fcl
 SUBDIR+=	FRILibrary
 SUBDIR+=	flex-joints
 SUBDIR+=	gazebo-spring
-SUBDIR+=	hatponboard-lib
 SUBDIR+=	head-action
 SUBDIR+=	hey5-description
 SUBDIR+=	hpp-benchmark

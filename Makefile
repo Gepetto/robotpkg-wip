@@ -146,7 +146,6 @@ SUBDIR+=	simbody
 SUBDIR+= 	simple-grasping-action
 SUBDIR+=	sot-doc
 SUBDIR+=	sot-dynamic-pinocchio-v3
-#SUBDIR+=	sot-dyninv
 #SUBDIR+=	sot-dyninv-v3
 SUBDIR+=	soth
 SUBDIR+=	sot-hrp2

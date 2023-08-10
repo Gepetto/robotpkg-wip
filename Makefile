@@ -98,7 +98,6 @@ SUBDIR+=	py-proxsuite
 SUBDIR+=	py-pycddlib
 SUBDIR+=	py-pycppad
 SUBDIR+=	py-qpoases
-SUBDIR+=	py-qt-gepetto-pythonqt
 SUBDIR+=	py-quadruped-walkgen
 SUBDIR+=	py-ros-baxter-common
 SUBDIR+=	py-roscontrol-sot

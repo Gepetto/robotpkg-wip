@@ -115,7 +115,6 @@ SUBDIR+=	py-solo-pybullet
 SUBDIR+=	py-sot-application-v3
 SUBDIR+=	py-sot-core-v3
 SUBDIR+=	py-sot-dynamic-pinocchio-v3
-#SUBDIR+=	py-sot-dyninv-v3
 SUBDIR+=	py-sot-pattern-generator-v3
 SUBDIR+=	py-sot-talos
 SUBDIR+=	py-sot-talos-balance

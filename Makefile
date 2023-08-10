@@ -150,7 +150,6 @@ SUBDIR+=	ros-swri-math-util
 SUBDIR+=	ros-swri-nodelet
 SUBDIR+=	ros-swri-roscpp
 SUBDIR+=	ros-swri-serial-util
-SUBDIR+=	ros-swri-string-util
 SUBDIR+=	ros-universal-robot
 SUBDIR+=	ros-urdf-geometry-parser
 SUBDIR+=	ros-warehouse-ros

@@ -1,7 +1,0 @@
-@comment Wed Aug 1 13:40:41 UTC 2018
-include/swri_string_util/string_util.h
-lib/libswri_string_util.so
-lib/pkgconfig/swri_string_util.pc
-share/swri_string_util/cmake/swri_string_utilConfig-version.cmake
-share/swri_string_util/cmake/swri_string_utilConfig.cmake
-share/swri_string_util/package.xml

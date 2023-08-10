@@ -35,7 +35,6 @@ SUBDIR+=	hrp2-14-description
 SUBDIR+=	infuse-envire
 SUBDIR+=	infuse-idl
 SUBDIR+=	jrl-walkgen-v3
-SUBDIR+=	libhatp
 SUBDIR+=	libnabo
 SUBDIR+=	libpointmatcher
 SUBDIR+=	matio

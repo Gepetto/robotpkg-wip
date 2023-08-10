@@ -1,5 +1,0 @@
-libhatp is library that helps in HATP plan handling.
-
-It provide tools to handle a plan generated with HATP. It includes a parser
-that build a plan from a string (the one returned by HATP as answer to a 
-plan request). 

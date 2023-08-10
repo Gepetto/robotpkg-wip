@@ -143,7 +143,6 @@ SUBDIR+=	ros-swri-roscpp
 SUBDIR+=	ros-swri-serial-util
 SUBDIR+=	ros-urdf-geometry-parser
 SUBDIR+=	ros-warehouse-ros
-SUBDIR+=	rqt-dynamic-graph
 SUBDIR+=	rviz-plugin-covariance
 SUBDIR+=	simde
 SUBDIR+=	simbody

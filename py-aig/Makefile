@@ -4,7 +4,7 @@
 
 ORG=			gepetto
 NAME=			aig
-VERSION=		1.2.0
+VERSION=		1.2.1
 
 PKGNAME=		${PKGTAG.python-}${DISTNAME}
 

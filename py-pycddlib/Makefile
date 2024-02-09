@@ -4,8 +4,8 @@
 
 ORG=			mcmtroffaes
 NAME=			pycddlib
-PYPI_PATH=		8d/b1/5bcf723c08eb1180bb40c753597e6525b90f986ef093ed8e1152887fe1d2/
-VERSION=		2.1.4
+PYPI_PATH=		d6/90/9f4c63ffafa72b799de01ec8b8d68867aca144f31e559a4622c1271a6a70/
+VERSION=		2.1.7
 DISTNAME=		${NAME}-${VERSION}
 PKGNAME=		${PKGTAG.python-}${NAME}-${VERSION}
 MASTER_SITES=		https://files.pythonhosted.org/packages/${PYPI_PATH}

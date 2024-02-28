@@ -14,12 +14,12 @@ CMAKE_ARGS+=		-DqpOASES_PREFIX=${PREFIX.qpoases}
 USE_BOOST_LIBS=		unit_test_framework
 
 include ../../devel/jrl-cmakemodules/Makefile.common
-include ../../devel/boost-headers/depend.mk
-include ../../devel/boost-libs/depend.mk
 include ../../optimization/qpoases/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../mapping/octomap/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
+include ../../mk/sysdep/boost-headers.mk
+include ../../mk/sysdep/boost-libs.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/language/c.mk

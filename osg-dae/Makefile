@@ -28,11 +28,11 @@ CMAKE_ARGS+=		-DCOLLADA14DOM_PREFIX=${PREFIX.collada-dom}
 USE_BOOST_LIBS=		system filesystem
 #export COLLADA_DIR=	${PREFIX.collada-dom}/include/collada-dom2.4/1.4
 
-include ../../devel/boost-headers/depend.mk
-include ../../devel/boost-libs/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../graphics/collada-dom/depend.mk
 include ../../graphics/openscenegraph/depend.mk
+include ../../mk/sysdep/boost-headers.mk
+include ../../mk/sysdep/boost-libs.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/language/c.mk

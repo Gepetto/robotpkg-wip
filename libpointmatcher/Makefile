@@ -26,9 +26,9 @@ CMAKE_ARGS+=		-DGENERATE_API_DOC=ON
 DYNAMIC_PLIST_DIRS+=	share/doc/${NAME}
 
 include ../../wip/libnabo/depend.mk
-include ../../devel/boost-headers/depend.mk
-include ../../devel/boost-libs/depend.mk
 include ../../math/eigen3/depend.mk
+include ../../mk/sysdep/boost-headers.mk
+include ../../mk/sysdep/boost-libs.mk
 
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

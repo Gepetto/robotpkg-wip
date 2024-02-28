@@ -22,17 +22,17 @@ MAKE_JOBS_SAFE=		no
 include ../../devel/jrl-cmakemodules/Makefile.common
 
 include ../../wip/py-bullet3/depend.mk
-include ../../devel/boost-headers/depend.mk
-include ../../devel/boost-libs/depend.mk
 include ../../devel/yaml-cpp/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../math/ndcurves/depend.mk
 include ../../math/py-eigenpy/depend.mk
 include ../../math/py-ndcurves/depend.mk
 include ../../optimization/py-crocoddyl/depend.mk
+include ../../mk/sysdep/boost-headers.mk
+include ../../mk/sysdep/boost-libs.mk
 include ../../mk/sysdep/cmake.mk
-include ../../mk/sysdep/python.mk
 include ../../mk/sysdep/py-matplotlib.mk
+include ../../mk/sysdep/python.mk
 include ../../mk/language/c.mk
 include ../../mk/language/c++.mk
 include ../../mk/robotpkg.mk

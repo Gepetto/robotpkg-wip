@@ -22,9 +22,9 @@ include ../../devel/ros-roscpp-core/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../math/ros-geometry/depend.mk
 
-include ../../devel/boost-headers/depend.mk
-include ../../devel/boost-libs/depend.mk
 include ../../devel/ros-catkin/depend.mk
+include ../../mk/sysdep/boost-headers.mk
+include ../../mk/sysdep/boost-libs.mk
 include ../../mk/sysdep/googletest.mk
 include ../../mk/sysdep/python.mk
 include ../../mk/robotpkg.mk

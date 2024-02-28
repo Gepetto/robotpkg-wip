@@ -21,8 +21,6 @@ LICENSE=		2-clause-bsd
 
 ROS_METAPKG=		yes
 
-include ../../devel/boost-headers/depend.mk
-include ../../devel/boost-libs/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-pluginlib/depend.mk
 include ../../devel/ros-ros/depend.mk
@@ -34,6 +32,8 @@ include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
 include ../../wip/py-dynamic-graph-bridge-v3/depend.mk
+include ../../mk/sysdep/boost-headers.mk
+include ../../mk/sysdep/boost-libs.mk
 
 ifeq (16.04.pal,${OS_VERSION})
   CMAKE_PREFIX_PATH+=/opt/pal/erbium

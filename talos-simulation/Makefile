@@ -22,8 +22,6 @@ COMMENT=	Talos simulation components.
 
 ROS_METAPKG=	yes
 
-include ../../devel/boost-headers/depend.mk
-include ../../devel/boost-libs/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-pluginlib/depend.mk
 include ../../devel/ros-ros/depend.mk
@@ -34,6 +32,8 @@ include ../../lang/ros-message-runtime/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../middleware/ros-actionlib/depend.mk
 include ../../middleware/ros-comm/depend.mk
+include ../../mk/sysdep/boost-headers.mk
+include ../../mk/sysdep/boost-libs.mk
 
 ifeq (16.04.pal,${OS_VERSION})
    $(error "talos-simulation is useless on PAL erbium.")

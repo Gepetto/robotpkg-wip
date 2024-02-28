@@ -14,8 +14,6 @@ CMAKE_ARGS+=		-DINSTALL_DOCUMENTATION=OFF
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../math/eiquadprog/depend.mk
-include ../../devel/boost-headers/depend.mk
-include ../../devel/boost-libs/depend.mk
 include ../../graphics/urdfdom/depend.mk
 include ../../mapping/octomap/depend.mk
 include ../../math/eigen3/depend.mk
@@ -27,6 +25,8 @@ include ../../optimization/tsid/depend.mk
 include ../../wip/parametric-curves/depend.mk
 include ../../wip/ddp-actuator-solver/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
+include ../../mk/sysdep/boost-headers.mk
+include ../../mk/sysdep/boost-libs.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk
 include ../../mk/sysdep/graphviz.mk

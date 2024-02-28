@@ -29,8 +29,6 @@ CONFLICTS=	talos-ros-controllers
 # http://wiki.ros.org/catkin/what
 CMAKE_PREFIX_PATH+= ${PREFIX}
 
-include ../../devel/boost-headers/depend.mk
-include ../../devel/boost-libs/depend.mk
 include ../../wip/py-prf-ros-control/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-pluginlib/depend.mk
@@ -49,6 +47,8 @@ include ../../motion/ros-control-toolbox/depend.mk
 include ../../wip/pal-hardware-interfaces/depend.mk
 include ../../wip/ros-four-wheel-steering-msgs/depend.mk
 include ../../wip/ros-urdf-geometry-parser/depend.mk
+include ../../mk/sysdep/boost-headers.mk
+include ../../mk/sysdep/boost-libs.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

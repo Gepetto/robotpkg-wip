@@ -24,8 +24,6 @@ LICENSE=	2-clause-bsd
 ROS_METAPKG=	yes
 USE_BOOST_LIBS=	thread
 
-include ../../devel/boost-headers/depend.mk
-include ../../devel/boost-libs/depend.mk
 include ../../devel/ros-catkin/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../interfaces/ros-std-msgs/depend.mk
@@ -38,6 +36,8 @@ include ../../wip/pal-wsg-gripper/depend.mk
 include ../../wip/head-action/depend.mk
 include ../../wip/hey5-description/depend.mk
 include ../../wip/tf-lookup/depend.mk
+include ../../mk/sysdep/boost-headers.mk
+include ../../mk/sysdep/boost-libs.mk
 include ../../mk/language/c++.mk
 include ../../mk/language/c.mk
 include ../../mk/robotpkg.mk

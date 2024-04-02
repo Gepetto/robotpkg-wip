@@ -11,11 +11,10 @@ endif
 
 ifeq (+,$(MATIO_DEPEND_MK)) # ------------------------------------------
 
-# TODO: system is available, we just need to install it on the buildfarm
-PREFER.matio?=			robotpkg
+# system is available. TODO: check it's ok everywhere and remove this pkg
+PREFER.matio?=			system
 
 SYSTEM_SEARCH.matio=\
-  'bin/matdump'								\
   'include/matio_pubconf.h:/MATIO_VERSION_STR /s/[^0-9.]//gp'		\
   'lib/libmatio.so'
 

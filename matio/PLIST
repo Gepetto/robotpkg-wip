@@ -4,4 +4,4 @@ include/matio.h
 include/matio_pubconf.h
 lib/libmatio.so
 lib/libmatio.so.11
-lib/libmatio.so.11.0.4
+lib/libmatio.so.11.1.1

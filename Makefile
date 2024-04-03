@@ -90,7 +90,6 @@ SUBDIR+=	py-parametric-curves
 SUBDIR+=	py-prf-gazebo-ros-pkgs
 SUBDIR+=	py-prf-ros-control
 SUBDIR+=	py-prf-ros-controllers
-SUBDIR+=	py-proxsuite
 SUBDIR+=	py-pycddlib
 SUBDIR+=	py-pycppad
 SUBDIR+=	py-qpoases

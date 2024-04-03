@@ -141,7 +141,6 @@ SUBDIR+=	ros-swri-serial-util
 SUBDIR+=	ros-urdf-geometry-parser
 SUBDIR+=	ros-warehouse-ros
 SUBDIR+=	rviz-plugin-covariance
-SUBDIR+=	simde
 SUBDIR+=	simbody
 SUBDIR+= 	simple-grasping-action
 SUBDIR+=	sot-doc

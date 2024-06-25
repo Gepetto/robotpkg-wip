@@ -15,13 +15,13 @@ CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../math/ndcurves/depend.mk
-include ../../graphics/assimp/depend.mk
 include ../../graphics/urdfdom/depend.mk
 include ../../mapping/octomap/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../path/hpp-fcl/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
+include ../../mk/sysdep/assimp.mk
 include ../../mk/sysdep/boost-headers.mk
 include ../../mk/sysdep/boost-libs.mk
 include ../../mk/sysdep/cmake.mk

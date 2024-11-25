@@ -2,10 +2,10 @@
 # Created:			Olivier Stasse on Mon, 15 Apr 2013
 #
 
+PKGREVISION=		4
 ORG=			stack-of-tasks
 NAME=			sot-tools
 VERSION=		2.3.5
-PKGREVISION=		3
 
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
@@ -22,9 +22,9 @@ include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../math/py-pinocchio/depend.mk
 include ../../math/py-eigenpy/depend.mk
-include ../../path/hpp-fcl/depend.mk
+include ../../path/coal/depend.mk
 include ../../mapping/octomap/depend.mk
-include ../../path/py-hpp-fcl/depend.mk
+include ../../path/py-coal/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/cmake.mk
 include ../../mk/sysdep/doxygen.mk

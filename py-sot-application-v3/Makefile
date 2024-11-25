@@ -2,10 +2,10 @@
 # Created:			Rohan Budhiraja on Thu, 25 Aug 2016
 #
 
+PKGREVISION=		2
 ORG=			stack-of-tasks
 NAME=			sot-application
 VERSION=		1.2.8
-PKGREVISION=		1
 
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
@@ -22,7 +22,7 @@ include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../math/pinocchio/depend.mk
-include ../../path/hpp-fcl/depend.mk
+include ../../path/coal/depend.mk
 include ../../mapping/octomap/depend.mk
 include ../../math/py-pinocchio/depend.mk
 include ../../math/py-eigenpy/depend.mk

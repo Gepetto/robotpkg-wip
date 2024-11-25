@@ -2,10 +2,10 @@
 # Created:			Rohan Budhiraja on Wed Dec 16 15:33:40 CET 2015
 #
 
+PKGREVISION=		2
 ORG=			stack-of-tasks
 NAME=			sot-core
 VERSION=		4.11.8
-PKGREVISION=		1
 
 PKGNAME=		${PKGTAG.python-}${NAME}-v3-${VERSION}
 
@@ -21,7 +21,7 @@ include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../math/eigen3/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../math/py-pinocchio/depend.mk
-include ../../path/hpp-fcl/depend.mk
+include ../../path/coal/depend.mk
 include ../../robots/example-robot-data/depend.mk
 include ../../robots/py-example-robot-data/depend.mk
 include ../../mapping/octomap/depend.mk

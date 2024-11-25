@@ -2,6 +2,7 @@
 # Created:			Olivier Stasse on Sat May 25 23:01:40 CET 2019
 #
 
+PKGREVISION=		1
 ORG=			stack-of-tasks
 NAME=			sot-talos-balance
 VERSION=		2.0.5
@@ -19,7 +20,7 @@ include ../../mapping/octomap/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../math/py-pinocchio/depend.mk
-include ../../path/hpp-fcl/depend.mk
+include ../../path/coal/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk

@@ -2,6 +2,7 @@
 # Created:			Rohan Budhiraja, on Wed. 14th April 2016
 #
 
+PKGREVISION=		1
 ORG=			stack-of-tasks
 NAME=			sot-hrp2
 VERSION=		2.1.3
@@ -23,7 +24,7 @@ include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 
-include ../../path/hpp-fcl/depend.mk
+include ../../path/coal/depend.mk
 include ../../mapping/octomap/depend.mk
 include ../../math/pinocchio/depend.mk
 

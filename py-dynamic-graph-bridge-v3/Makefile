@@ -1,6 +1,7 @@
 # robotpkg Makefile for:	wip/dynamic-graph-bridge-v3
 #
 
+PKGREVISION=		1
 ORG=			stack-of-tasks
 NAME=			dynamic-graph-bridge
 VERSION=		3.4.5
@@ -30,9 +31,9 @@ include ../../devel/ros-roscpp-core/depend.mk
 include ../../interfaces/ros-common-msgs/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../math/py-pinocchio/depend.mk
-include ../../path/hpp-fcl/depend.mk
+include ../../path/coal/depend.mk
 include ../../mapping/octomap/depend.mk
-include ../../path/py-hpp-fcl/depend.mk
+include ../../path/py-coal/depend.mk
 include ../../math/ros-geometry2/depend.mk
 include ../../math/ros-geometry/depend.mk
 include ../../motion/dynamic-graph-bridge-msgs/depend.mk

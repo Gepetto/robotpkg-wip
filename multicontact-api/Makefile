@@ -2,6 +2,7 @@
 # Created:			Guilhem Saurel on Thu, 28 Mar 2019
 #
 
+PKGREVISION=		1
 ORG=			loco-3d
 NAME=			multicontact-api
 VERSION=		3.0.3
@@ -19,7 +20,7 @@ include ../../graphics/urdfdom/depend.mk
 include ../../mapping/octomap/depend.mk
 include ../../math/eigen3/depend.mk
 include ../../math/pinocchio/depend.mk
-include ../../path/hpp-fcl/depend.mk
+include ../../path/coal/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../mk/sysdep/assimp.mk
 include ../../mk/sysdep/boost-headers.mk

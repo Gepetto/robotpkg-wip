@@ -2,10 +2,10 @@
 # Created:			Rohan Budhiraja on Fri, 8 Apr 2016
 #
 
+PKGREVISION=		2
 ORG=			stack-of-tasks
 NAME=			sot-dynamic-pinocchio
 VERSION=		3.6.5
-PKGREVISION=		1
 
 PKGNAME=		${NAME}-v3-${VERSION}
 
@@ -22,7 +22,7 @@ CMAKE_ARGS+=		-DBUILD_PYTHON_INTERFACE=OFF
 include ../../devel/jrl-cmakemodules/Makefile.common
 include ../../devel/tinyxml/depend.mk
 include ../../math/pinocchio/depend.mk
-include ../../path/hpp-fcl/depend.mk
+include ../../path/coal/depend.mk
 include ../../mapping/octomap/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-sot-core-v3/depend.mk

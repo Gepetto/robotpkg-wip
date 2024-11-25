@@ -2,6 +2,7 @@
 # Created:			Guilhem Saurel on Wed, 25 Mar 2020
 #
 
+PKGREVISION=		2
 ORG=			stack-of-tasks
 NAME=			talos-torque-control
 VERSION=		1.1.1
@@ -23,8 +24,8 @@ include ../../math/eigen3/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../math/py-pinocchio/depend.mk
 include ../../optimization/qpoases/depend.mk
-include ../../path/hpp-fcl/depend.mk
-include ../../path/py-hpp-fcl/depend.mk
+include ../../path/coal/depend.mk
+include ../../path/py-coal/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk

@@ -2,6 +2,7 @@
 # Created:			Guilhem Saurel on Fri, 16 Dec 2022
 #
 
+PKGREVISION=		1
 ORG=			loco-3d
 NAME=			quadruped-walkgen
 VERSION=		1.1.0
@@ -28,7 +29,7 @@ include ../../math/pinocchio/depend.mk
 include ../../math/py-eigenpy/depend.mk
 include ../../math/py-pinocchio/depend.mk
 include ../../optimization/py-crocoddyl/depend.mk
-include ../../path/hpp-fcl/depend.mk
+include ../../path/coal/depend.mk
 include ../../pkgtools/pkg-config/depend.mk
 include ../../robots/example-robot-data/depend.mk
 include ../../robots/py-example-robot-data/depend.mk

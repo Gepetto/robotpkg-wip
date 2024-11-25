@@ -2,6 +2,7 @@
 # Created:			Olivier Stasse, on Tue. 9th May, 2017
 #
 
+PKGREVISION=		1
 ORG=			stack-of-tasks
 NAME=			sot-talos
 VERSION=		1.3.2
@@ -26,8 +27,8 @@ include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../math/pinocchio/depend.mk
-include ../../path/hpp-fcl/depend.mk
-include ../../path/py-hpp-fcl/depend.mk
+include ../../path/coal/depend.mk
+include ../../path/py-coal/depend.mk
 include ../../mapping/octomap/depend.mk
 include ../../math/py-pinocchio/depend.mk
 include ../../math/py-eigenpy/depend.mk

@@ -2,6 +2,7 @@
 # Created:			Olivier Stasse, on Wed. 1st May, 2019
 #
 
+PKGREVISION=		1
 ORG=			stack-of-tasks
 NAME=			sot-tiago
 VERSION=		1.5.2
@@ -24,7 +25,7 @@ include ../../wip/py-sot-core-v3/depend.mk
 include ../../wip/py-dynamic-graph-v3/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk
 include ../../math/pinocchio/depend.mk
-include ../../path/hpp-fcl/depend.mk
+include ../../path/coal/depend.mk
 include ../../mapping/octomap/depend.mk
 include ../../math/py-pinocchio/depend.mk
 include ../../math/py-eigenpy/depend.mk

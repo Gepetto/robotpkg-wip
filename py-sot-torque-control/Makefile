@@ -2,6 +2,7 @@
 # Created:			Olivier Stasse on Wed Feb 21 18:07:40 CET 2018
 #
 
+PKGREVISION=		1
 ORG=			stack-of-tasks
 NAME=			sot-torque-control
 VERSION=		1.6.5
@@ -21,7 +22,7 @@ include ../../math/eigen3/depend.mk
 include ../../math/pinocchio/depend.mk
 include ../../math/py-pinocchio/depend.mk
 include ../../optimization/qpoases/depend.mk
-include ../../path/hpp-fcl/depend.mk
+include ../../path/coal/depend.mk
 include ../../robots/example-robot-data/depend.mk
 include ../../robots/py-example-robot-data/depend.mk
 include ../../wip/dynamic-graph-v3/depend.mk

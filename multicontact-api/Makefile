@@ -2,10 +2,9 @@
 # Created:			Guilhem Saurel on Thu, 28 Mar 2019
 #
 
-PKGREVISION=		1
 ORG=			loco-3d
 NAME=			multicontact-api
-VERSION=		3.0.3
+VERSION=		4.0.0
 
 CATEGORIES=		wip
 COMMENT=		Multi-contact locomotion for multi-body systems

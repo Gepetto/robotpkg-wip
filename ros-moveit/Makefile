@@ -22,6 +22,8 @@ include ../../wip/ros-srdfdom/depend.mk
 include ../../wip/ompl/depend.mk
 include ../../wip/ros-warehouse-ros/depend.mk
 
+DEPEND_ABI.fcl +=	fcl>=0.5.0
+
 include ../../devel/ros-catkin/depend.mk
 include ../../devel/ros-class-loader/depend.mk
 include ../../devel/ros-pluginlib/depend.mk
@@ -51,14 +53,13 @@ include ../../middleware/ros-dynamic-reconfigure/depend.mk
 include ../../motion/orocos-kdl/depend.mk
 include ../../motion/py-orocos-kdl/depend.mk
 include ../../motion/ros-control/depend.mk
+include ../../path/fcl/depend.mk
 include ../../sysutils/ros-console/depend.mk
 include ../../sysutils/ros-rviz/depend.mk
 
 
 include ../../mk/sysdep/glew.mk
-include ../../wip/fcl/depend.mk
 
-DEPEND_ABI.fcl +=	fcl>=0.5.0
 PREFER.fcl=		robotpkg
 #DEPEND_ABI.octomap +=	octomap>=1.8.0
 
